@@ -1,0 +1,144 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "1_Basic_information": {
+      "name": "1_Basic_information",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "2_Command": {
+      "name": "2_Command",
+      "isOrdered": true,
+      "folders": {},
+      "files": {
+        "11_lvson": 0,
+        "10_arcdv": 1,
+        "12_trjlog": 2,
+        "13_atdc": 3,
+        "14_caltvsft": 4,
+        "15_arcrsv1": 5,
+        "16_arcrsv2": 6,
+        "17_hsenson": 7,
+        "18_hsensoff": 8,
+        "19_arccond": 9,
+        "1_arcon": 10,
+        "20_multipass": 11,
+        "21_posical": 12,
+        "22_touchsen": 13,
+        "23_stitch": 14,
+        "2_arcof": 15,
+        "3_weavon": 16,
+        "4_weavcmd": 17,
+        "5_weavof": 18,
+        "6_refp": 19,
+        "7_arccur": 20,
+        "8_arcvol": 21,
+        "9_arcdc": 22,
+        "README": 23
+      }
+    },
+    "3_Quick_open": {
+      "name": "3_Quick_open",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "4_Setting": {
+      "name": "4_Setting",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "5_Condition_editing": {
+      "name": "5_Condition_editing",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "6_Weaving_function": {
+      "name": "6_Weaving_function",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "7_Monitoring": {
+      "name": "7_Monitoring",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "8_Application_function": {
+      "name": "8_Application_function",
+      "isOrdered": true,
+      "folders": {
+        "1_Arc_sensing": {
+          "name": "1_Arc_sensing",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "2_Touch_sensing": {
+          "name": "2_Touch_sensing",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "3_Height_sensing": {
+          "name": "3_Height_sensing",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "4_Cooperation_control": {
+          "name": "4_Cooperation_control",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "5_LVS_tracking": {
+          "name": "5_LVS_tracking",
+          "isOrdered": true,
+          "folders": {},
+          "files": {
+            "README": 0
+          }
+        },
+        "6_LVS_condition": {
+          "name": "6_LVS_condition",
+          "isOrdered": true,
+          "folders": {},
+          "files": {
+            "README": 0
+          }
+        },
+        "7_Stitch": {
+          "name": "7_Stitch",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
+      "files": {
+        "README": 0
+      }
+    },
+    "9_Appendices": {
+      "name": "9_Appendices",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    },
+    "images": {
+      "name": "images",
+      "isOrdered": true,
+      "folders": {},
+      "files": {}
+    }
+  },
+  "files": {
+    "SUMMARY": 0,
+    "README": 1
+  }
+}
