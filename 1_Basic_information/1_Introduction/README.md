@@ -4,7 +4,7 @@
 
 
 <p align="center">
- <img src="../../images/1_1.png" width="60%"></img>
+ <img src="../../.gitbook/assets/1_1.png" width="60%"></img>
  <em><p align="center">그림 1.1 기본 Arc 용접 티칭</p></em>
 </p>
 
