@@ -13,9 +13,9 @@
 
 - 사용 예
   
-   - ```HSensOFF```   높이센싱 실행을 종료
+   - ```HSensOFF```   <span style="color: red"># 높이센싱 실행을 종료</span>
 
 
 - 세부 설명
   
-  -	'8.2 높이센싱(Height Sensing)' 참고
+  [[8.3 높이센싱(Height Sensing)]](../8_Application_function/3_Height_sensing/README.md) 참고

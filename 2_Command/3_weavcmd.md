@@ -16,20 +16,20 @@
 
 - 사용 예
   
-   - ```WEAVON WEV#=1```  위빙 조건 1번을 로딩 함.
-   - ```WEAVCmd.Freq=5``` 위빙 조건 중 주파수만 5Hz로 변경.
-   - ```WEAVCmd.FwdAngle=10```	위빙 조건 중 진행각도를 10도 변경
-   - ```MOVE L,S=100cm/min,A=0,T=0``` 위의 위빙 조건대로 실행하며 로봇 이동
+   - ```WEAVON WEV#=1```  <span style="color: red"># 위빙 조건 1번을 로딩</span>
+   - ```WEAVCmd.Freq=5``` <span style="color: red"># 위빙 조건 중 주파수만 5Hz로 변경</span>
+   - ```WEAVCmd.FwdAngle=10```	<span style="color: red"># 위빙 조건 중 진행각도를 10도 변경</span>
+   - ```MOVE L,S=100cm/min,A=0,T=0``` <span style="color: red"># 위의 위빙 조건대로 실행하며 로봇 이동</span>
 
 
-- 세부 설명
-  
-  '6장 위빙기능(Weaving)' 참고
+- 세부 설명  
+  [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 참고
 
 
 </br>
 </br>
 
->[!WARNING]
->
-> -	WEAVCmd 대입문 중 일부 명령들은 위빙 동작 중 변경 시 반영이 되지 않습니다. 위빙 동작 중 변경이 가능한 명령어 목록은 ‘6장 위빙기능(Weaving)’을 참고하십시오.
+{% hint style="warning" %}
+[**주의**]
+ -	WEAVCmd 대입문 중 일부 명령들은 위빙 동작 중 변경 시 반영이 되지 않습니다. 위빙 동작 중 변경이 가능한 명령어 목록은 [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 을 참고하십시오.
+{% endhint %}

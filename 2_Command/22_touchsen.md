@@ -44,9 +44,9 @@
 - 사용 예
   
   -	```TOUCHSEN TSC#=2, +TX, +TZ, 3, P10, V1!```  
-\#2번 조건, 툴좌표계 방향, 바닥센싱 후3mm 상승
+<span style="color: red"># 2번 조건, 툴좌표계 방향, 바닥센싱 후3mm 상승</span>
   - ```TOUCHSEN TSC#=1, TF, TD, 0, P10, 0```      
-\#1번 조건, 툴프로젝션 방향, 2점 터치
+<span style="color: red"># 1번 조건, 툴프로젝션 방향, 2점 터치</span>
   - ```TOUCHSEN TSC#=1, +X, -Y, -Z, P10, 0```     
-\#1번 조건, 베이스좌표 방향, 3점 터치
+<span style="color: red"># 1번 조건, 베이스좌표 방향, 3점 터치</span>
 

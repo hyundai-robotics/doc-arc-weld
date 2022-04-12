@@ -43,5 +43,5 @@
 
 - arcon 명령어 형태 중 전류, 전압 값을 별도로 지정한 형태의 명령어인 경우 용접 조건에만 변경내용이 저장됩니다.
 
-예시) ```ARCON C=200,V=20,ASF#=1``` <span style = "color:green"># 용접시작조건 1번에 변경된 전류, 전압이 저장</span>
+예시) ```arcon cnd=1,cur=200,vol=20``` <span style = "color:green"># 용접시작조건 1번에 변경된 전류, 전압이 저장</span>
 {% endhint %}

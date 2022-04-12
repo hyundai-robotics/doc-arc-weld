@@ -19,5 +19,5 @@
 
 - 세부 설명
   
-  '6장 위빙기능(Weaving)' 참고
+  [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 참고
 
