@@ -33,6 +33,6 @@ Arc 발생 시 굴곡전류 조정값을 설정합니다. 이 값을 통하여 A
 
 
 <p align="center">
- <img src="../../images/5_5.png"></img>
+ <img src="../../.gitbook/assets/5_5.png" width="80%"></img>
  <em><p align="center">그림 5.5 정밀파형제어 파라미터</p></em>
 </p>

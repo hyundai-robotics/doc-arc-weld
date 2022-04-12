@@ -4,7 +4,7 @@
 
  
 <p align="center">
- <img src="../../images/5_1.png"></img>
+ <img src="../../.gitbook/assets/5_1.png" width="80%"></img>
  <em><p align="center">그림 5.1 디지털 Arc용접 타임차트</p></em>
 </p>
 
