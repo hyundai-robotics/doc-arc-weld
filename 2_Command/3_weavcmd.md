@@ -16,10 +16,10 @@
 
 - 사용 예
   
-   - ```WEAVON WEV#=1```  <span style="color: red"># 위빙 조건 1번을 로딩</span>
-   - ```WEAVCmd.Freq=5``` <span style="color: red"># 위빙 조건 중 주파수만 5Hz로 변경</span>
-   - ```WEAVCmd.FwdAngle=10```	<span style="color: red"># 위빙 조건 중 진행각도를 10도 변경</span>
-   - ```MOVE L,S=100cm/min,A=0,T=0``` <span style="color: red"># 위의 위빙 조건대로 실행하며 로봇 이동</span>
+   - ```WEAVON WEV#=1```  <span style="color: green"># 위빙 조건 1번을 로딩</span>
+   - ```WEAVCmd.Freq=5``` <span style="color: green"># 위빙 조건 중 주파수만 5Hz로 변경</span>
+   - ```WEAVCmd.FwdAngle=10```	<span style="color: green"># 위빙 조건 중 진행각도를 10도 변경</span>
+   - ```MOVE L,S=100cm/min,A=0,T=0``` <span style="color: green"># 위의 위빙 조건대로 실행하며 로봇 이동</span>
 
 
 - 세부 설명  

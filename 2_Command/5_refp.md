@@ -22,9 +22,9 @@
 
 - 사용 예
   
-   - ```REFP 1,P1```  <span style="color: red"># 위빙의 벽방향을 P1을 이용하여 지정</span>
-   - ```REFP 1```    <span style="color: red"># 위빙의 벽방향을 숨은 포즈를 이용하여 지정</span>
-   - ```REFP 2, (-1073.33, 739.01, 258.30, 0, 76, 23)```   <span style="color: red"># 위빙면의 위치를 지정</span>
+   - ```REFP 1,P1```  <span style="color: green"># 위빙의 벽방향을 P1을 이용하여 지정</span>
+   - ```REFP 1```    <span style="color: green"># 위빙의 벽방향을 숨은 포즈를 이용하여 지정</span>
+   - ```REFP 2, (-1073.33, 739.01, 258.30, 0, 76, 23)```   <span style="color: green"># 위빙면의 위치를 지정</span>
 
 
 

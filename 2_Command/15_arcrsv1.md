@@ -20,7 +20,7 @@
 
 - 사용 예
   
-   - ```ARCRSV1 RSV1=100  ``` <span style="color: red"># 100에 해당하는 아날로그 출력 실행.
+   - ```ARCRSV1 RSV1=100  ``` <span style="color: green"># 100에 해당하는 아날로그 출력 실행.
 이 값이 ‘예비 아날로그 출력1’ 테이블에 의해
 BD584의 아날로그 전압으로 출력. </span>
 

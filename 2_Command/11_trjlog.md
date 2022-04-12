@@ -32,7 +32,7 @@
 
 - 사용 예
   
-   - ```TRJLOG ST=1,SC=5,LSP=100,LCV=10```   <span style="color: red">#   궤적 저장 시작, 5 위빙사이클마다 궤적을 P100부터 순서대로 저장 LV10%값이 최대 저장 개수. 저장 시 LV1%값 1씩 감소. </span>
+   - ```TRJLOG ST=1,SC=5,LSP=100,LCV=10```   <span style="color: green">#   궤적 저장 시작, 5 위빙사이클마다 궤적을 P100부터 순서대로 저장 LV10%값이 최대 저장 개수. 저장 시 LV1%값 1씩 감소. </span>
 
 
 - 세부 설명

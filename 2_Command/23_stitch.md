@@ -20,6 +20,6 @@
 
 - 사용 예
   
-   - ```STITCH ON#=2```  <span style="color: red">#  스티치 2번 조건 실행</span>
-   - ```STITCH OFF ```   <span style="color: red">#  스티치 기능 종료</span>
+   - ```STITCH ON#=2```  <span style="color: green">#  스티치 2번 조건 실행</span>
+   - ```STITCH OFF ```   <span style="color: green">#  스티치 기능 종료</span>
 

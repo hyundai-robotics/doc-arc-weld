@@ -28,8 +28,8 @@
 
 - 사용 예
   
-   - ```LVSON COND#=1,OPT=SEAMF,SN=10``` <span style="color: red"># 조건번호 1번, seam번호 10번으로 seam 파인딩 기능 수행</span>
-   - ```LVSON COND#=1,OPT=TRK,SN=10``` <span style="color: red"># 조건번호 1번, seam번호 10번으로 LVS 용접선 추종 시작</span>
+   - ```LVSON COND#=1,OPT=SEAMF,SN=10``` <span style="color: green"># 조건번호 1번, seam번호 10번으로 seam 파인딩 기능 수행</span>
+   - ```LVSON COND#=1,OPT=TRK,SN=10``` <span style="color: green"># 조건번호 1번, seam번호 10번으로 LVS 용접선 추종 시작</span>
 
 
 

@@ -20,9 +20,9 @@
 
 - 사용 예
   
-   - ```HSensON AVC#=1```  <span style="color: red"># 높이센싱 1번 조건으로 높이센싱을 시작</span>
+   - ```HSensON AVC#=1```  <span style="color: green"># 높이센싱 1번 조건으로 높이센싱을 시작</span>
 
 
 - 세부 설명
   
-  -	[[8.3 높이센싱(Height Sensing)]](../8_Application_function/3_Height_sensing/README.md) 참고
+  [[8.3 높이센싱(Height Sensing)]](../8_Application_function/3_Height_sensing/README.md) 참고

@@ -23,4 +23,4 @@
 - 사용 예
   
    ```PosiCal Prog=9997,Station=2 ```   
-   <span style="color: red">#  9997.JOB 의 작업 프로그램, 2번 Station을 캘리브레이션 함.</span>
+   <span style="color: green">#  9997.JOB 의 작업 프로그램, 2번 Station을 캘리브레이션 함.</span>

@@ -49,7 +49,7 @@
   
      ```WEAVON WEV#=1```  
      ```MULTPASS SAVE,TrjNo=1,SampDist=10```  
-     <span style="color: red"># 1번 궤적에 10mm 간격으로 저장  </span>  
+     <span style="color: green"># 1번 궤적에 10mm 간격으로 저장  </span>  
      ```ARCON ASF#=1```   
 **S10**  ```MOVE L,R2,S=LV1!cm/min,A=3,T=1```  
 **S11**  ```MOVE L,R2,S=LV1!cm/min,A=3,T=1```  
@@ -60,9 +60,9 @@
 **S13**  ```MOVE L,S=50%,A=3,T=1```  
 **S14**  ```MOVE L,S=50%,A=3,T=1```  
      ```MULTPASS LOAD,TrjNo=1,Side=3,Updown=3,Reverse=0,TAS=0,WAS=0```  
-     <span style="color: red">#  1번 궤적을 읽어 우측 3mm, 위로 3mm 시프트, 정방향, 각도 시프트 없음.  </span>  
+     <span style="color: green">#  1번 궤적을 읽어 우측 3mm, 위로 3mm 시프트, 정방향, 각도 시프트 없음.  </span>  
 **S15**  ```MOVE L,R2,S=50%,A=0,T=1```  
-     <span style="color: red">#  멀티패스 시작 위치로 시프트하며 이동할 스텝  </span>  
+     <span style="color: green">#  멀티패스 시작 위치로 시프트하며 이동할 스텝  </span>  
      ```WEAVON WEV#=11```  
      ```ARCON ASF#=1 ```  
 **S16**  ```MOVE L,R2,S=LV1!cm/min,A=3,T=1```  

@@ -13,7 +13,7 @@
 
 - 사용 예
   
-   - ```HSensOFF```   <span style="color: red"># 높이센싱 실행을 종료</span>
+   - ```HSensOFF```   <span style="color: green"># 높이센싱 실행을 종료</span>
 
 
 - 세부 설명

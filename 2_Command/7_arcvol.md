@@ -25,8 +25,8 @@
 - 사용 예
   
    - ```ARCVOL V=20```
-   - ```ARCVOL VP=100```  <span style="color: red"># 시너직 전압값 100%</span>
-   - ```ARCVOL VP=2```    <span style="color: red"># 기준 시너직전압에 옵셋 전압 +2V (GB2, GZ4, GE2인 경우)</span>
+   - ```ARCVOL VP=100```  <span style="color: green"># 시너직 전압값 100%</span>
+   - ```ARCVOL VP=2```    <span style="color: green"># 기준 시너직전압에 옵셋 전압 +2V (GB2, GZ4, GE2인 경우)</span>
 
 
 
