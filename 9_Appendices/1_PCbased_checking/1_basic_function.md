@@ -7,7 +7,7 @@
 -	클릭 후 ‘Arc Welding Data’ 대화상자가 띄워짐.
 
 <p align="center">
- <img src="../../images/9_1.png" width="450"></img>
+ <img src="../../.gitbook/assets/9_1.png" width="70%"></img>
  <em><p align="center">그림 9.1 용접 데이터 그래프</p></em>
 </p>
 
@@ -18,8 +18,8 @@
 -	아래와 같이 확인하고자 하는 Arc 용접 데이터 파일을 선택.  
 
 <p align="center">
- <img src="../../images/9_2.png" width="500"></img>
- <em><p align="center">그림 2.2 용접 데이터 파일</p></em>
+ <img src="../../.gitbook/assets/9_2.png" width="70%"></img>
+ <em><p align="center">그림 9.2 용접 데이터 파일</p></em>
 </p>
 
 (3) 검색 조건 설정
@@ -28,7 +28,7 @@
 -	‘List up’ 버튼을 누르면 아래와 같이 용접 정보가 표기됨.
 
 <p align="center">
- <img src="../../images/9_3.png" width="500"></img>
+ <img src="../../.gitbook/assets/9_3.png" width="70%"></img>
  <em><p align="center">그림 9.3 용접 정보 리스트</p></em>
 </p>
 
@@ -39,6 +39,6 @@
 -	엑셀의 그래프에 해당 용접 그래프가 표기됨
 
 <p align="center">
- <img src="../../images/9_4.png" width="500"></img>
+ <img src="../../.gitbook/assets/9_4.png" width="70%"></img>
  <em><p align="center">그림 9.4 용접 데이터 선택</p></em>
 </p>

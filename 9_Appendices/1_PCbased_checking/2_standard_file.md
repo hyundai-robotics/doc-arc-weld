@@ -11,7 +11,7 @@
 
 
 <p align="center">
- <img src="../../images/9_5.png" width="500"></img>
+ <img src="../../.gitbook/assets/9_5.png" width="70%"></img>
  <em><p align="center">그림 9.5 기준 파일 선택</p></em>
 </p>
 
@@ -22,6 +22,6 @@
 
 
 <p align="center">
- <img src="../../images/9_6.png" width="500"></img>
+ <img src="../../.gitbook/assets/9_6.png" width="70%"></img>
  <em><p align="center">그림 9.6 비교 데이터 선택</p></em>
 </p>

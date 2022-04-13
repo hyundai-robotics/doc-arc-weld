@@ -2,18 +2,18 @@
 
 본 기능은 LVS로 측정한 gap의 너비를 기반으로 용접 전류, 전압을 변경할 수 있는 기능입니다. LVS로 용접선 추적 중 측정된 gap을 기반으로 용접 조건을 최적화 합니다. 작업물에 열 변형이 있어 용접선의 gap이 일정하지 않을 경우 gap에 따라 용접조건을 변경하여 안정적인 용접 품질을 얻을 수 있도록 본 기능을 제공합니다.
 
+
 <p align="center">
- <img src="../../images/8_18.png"></img>
- <em>그림 8.18 LVS기반 용접조건 가변 기능</em>
+ <img src="../../.gitbook/assets/8_18.png" width="80%"></img>
+ <em><p align="center">그림 8.18 LVS기반 용접조건 가변 기능</p></em>
 </p>
 
-</br>
 
 최적의 용접 조건을 찾기 위해 미리 설정된 조건을 이용하며, 그것을 위한 사용자 인터페이스를 제공합니다.
 
 <p align="center">
- <img src="../../images/8_16.png"></img>
- <em>그림 8.19 최적 조건 설정을 위한 사용자 인터페이스(좌: 테이블 설정방식, 우: 관계식 설정방식)</em>
+ <img src="../../.gitbook/assets/8_18__.png" width="80%"></img>
+ <em><p align="center">그림 8.19 최적 조건 설정을 위한 사용자 인터페이스(좌: 테이블 설정방식, 우: 관계식 설정방식)</p></em>
 </p>
 
 
@@ -24,4 +24,12 @@ LVS기반 용접조건 가변 기능에서 가변 조건을 설정하기 위해�
 <p align="center">
  <img src="../../images/8_20.png"></img>
  <em>그림 8.20 설정 방법에 따른 조건 변화</em>
+ 
+</p>
+
+
+
+<p align="center">
+ <img src="../../.gitbook/assets/8_20.png" width="60%"></img>
+ <em><p align="center">그림 8.20 설정 방법에 따른 조건 변화</p></em>
 </p>
