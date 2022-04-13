@@ -2,7 +2,7 @@
 
 
 <p align="center">
- <img src="../../.gitbook/assets/8_25.png" width="80%"></img>
+ <img src="../../_assets/8_25.png" width="80%"></img>
  <em><p align="center">그림 8.25 스티치 용접 과정에 따른 Profile</p></em>
 </p>
 

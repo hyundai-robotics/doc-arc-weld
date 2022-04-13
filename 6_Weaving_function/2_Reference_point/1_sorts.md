@@ -2,7 +2,7 @@
 
  
 <p align="center">
- <img src="../../.gitbook/assets/6_7.png" width="50%"></img>
+ <img src="../../_assets/6_7.png" width="50%"></img>
  <em><p align="center">그림 6.7 위빙 좌표계</p></em>
 </p> 
 
@@ -27,14 +27,14 @@
 
     
 <p align="center">
- <img src="../../.gitbook/assets/6_8.png" width="65%"></img>
+ <img src="../../_assets/6_8.png" width="65%"></img>
  <em><p align="center">그림 6.8 위빙 방향과 참조점</p></em>
 </p> 
     
 
  <p align="center">
- <img src="../../.gitbook/assets/6_9_1.png" width="65%"></img>
- <img src="../../.gitbook/assets/6_9_2.png" width="65%"></img>
+ <img src="../../_assets/6_9_1.png" width="65%"></img>
+ <img src="../../_assets/6_9_2.png" width="65%"></img>
  <em><p align="center">그림 6.9 참조점 종류별 활용</p></em>
 </p>   
 

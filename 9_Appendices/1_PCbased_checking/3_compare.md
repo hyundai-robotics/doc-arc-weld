@@ -9,7 +9,7 @@
 -	리스트에서 고정될 첫번째 데이터 선택
 
 <p align="center">
- <img src="../../.gitbook/assets/9_7.png" width="70%"></img>
+ <img src="../../_assets/9_7.png" width="70%"></img>
  <em><p align="center">그림 9.7 첫 번째 데이터 선택</p></em>
 </p>
 
@@ -19,6 +19,6 @@
 -	선택 시 엑셀 그래프에 두 데이터를 비교한 결과가 표기.
 
 <p align="center">
- <img src="../../.gitbook/assets/9_8.png" width="70%"></img>
+ <img src="../../_assets/9_8.png" width="70%"></img>
  <em><p align="center">그림 9.8 두 번째 데이터 선택</p></em>
 </p>

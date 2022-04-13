@@ -52,7 +52,7 @@ Arc용접 설정이 디지털일 때 용접시작조건 대화상자에서 [F1: 
     
 
 <p align="center">
- <img src="../../.gitbook/assets/5_10.png" width="80%"></img>
+ <img src="../../_assets/5_10.png" width="80%"></img>
  <em><p align="center">그림 5.10 재시도 기능 순서</p></em>
 </p>
 

@@ -53,7 +53,7 @@ Arc용접 설정이 디지털이고 용접시작조건 대화상자에서 [F2: �
     본 조건과 종료조건 사이에 전류 변화를 슬로프로 처리하는 시간을 설정합니다.  
 
 <p align="center">
- <img src="../../.gitbook/assets/5_8.png" width="30%"></img>
+ <img src="../../_assets/5_8.png" width="30%"></img>
  <em><p align="center">그림 5.8 DownSlope 시간과 Crate 시간 차트</p></em>
 </p>
 

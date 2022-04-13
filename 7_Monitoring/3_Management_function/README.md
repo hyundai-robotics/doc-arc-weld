@@ -14,7 +14,7 @@ Arc 용접 데이터 관리 대화상자는 아래 그림과 같이 구성되어
 
 
 <p align="center">
- <img src="../../.gitbook/assets/7_8.png" width="70%"></img>
+ <img src="../../_assets/7_8.png" width="70%"></img>
  <em><p align="center">그림 7.8 Arc 용접 데이터 관리 기능 진입 화면</p></em>
 </p>
 

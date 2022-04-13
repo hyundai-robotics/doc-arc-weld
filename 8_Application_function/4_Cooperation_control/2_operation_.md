@@ -4,7 +4,7 @@
 
  
 <p align="center">
- <img src="../../.gitbook/assets/8_14.png" width="60%"></img>
+ <img src="../../_assets/8_14.png" width="60%"></img>
  <em><p align="center">그림 8.14 협조제어 Arc용접기능 개념도</p></em>
 </p>
 

@@ -4,7 +4,7 @@
 
  
 <p align="center">
- <img src="../../.gitbook/assets/6_2.png" width="60%"></img>
+ <img src="../../_assets/6_2.png" width="60%"></img>
  <em><p align="center">그림 6.2 위빙 패턴 종류</p></em>
 </p>
 

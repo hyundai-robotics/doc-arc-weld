@@ -51,6 +51,6 @@
      아래와 같이 보간조건인 4개 점을 설정해 놓으면 설정한 좌우위빙폭이 아닌 센싱한 gap에 따라 가변적으로 선형보간하여 위빙폭과 용접속도를 변경시킬 수 있습니다. 그림에서 circle은 현재 갭에 대해 점선으로 표시된 기준조건에 대해 보간된 용접속도 및 폭을 나타냅니다.
 
 <p align="center">
- <img src="../.gitbook/assets/arc_cond.png" width="70%"></img>
+ <img src="../_assets/arc_cond.png" width="70%"></img>
 </p>
 

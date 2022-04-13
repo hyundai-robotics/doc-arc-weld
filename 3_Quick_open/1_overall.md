@@ -10,7 +10,7 @@ Arc 용접 관련 조건들을 설정하거나 스텝과 보조점의 정보를 
 
  
 <p align="center">
- <img src="../.gitbook/assets/3_1.png" width="75%"></img>
+ <img src="../_assets/3_1.png" width="75%"></img>
  <em><p align="center">그림 3.1 로봇 프로그램에서 Quick open</p></em>
 </p>
 

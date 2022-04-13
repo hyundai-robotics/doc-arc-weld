@@ -26,14 +26,14 @@
 
  
 <p align="center">
- <img src="../../.gitbook/assets/7_10.png" width="70%"></img>
+ <img src="../../_assets/7_10.png" width="70%"></img>
  <em><p align="center">그림 7.10 센서기반 Arc 용접 데이터 모니터링 구조도(디지털 통신)</p></em>
 </p>
 
 </br>
 
 <p align="center">
- <img src="../../.gitbook/assets/7_11.png" width="70%"></img>
+ <img src="../../_assets/7_11.png" width="70%"></img>
  <em><p align="center">그림 7.11 센서기반 Arc 용접 데이터 모니터링 구조도(아날로그 통신)</p></em>
 </p>
 
@@ -75,7 +75,7 @@
 아래 그림은 고전압 터치 센싱 유닛을 사용 시 연결과 설정 예시입니다. (고전압 터치 센싱 유닛과 통신 모듈의 사양에 따라 상이할 수 있습니다.)
 
 <p align="center">
- <img src="../../.gitbook/assets/7_13.png" width="70%"></img>
+ <img src="../../_assets/7_13.png" width="70%"></img>
  <em><p align="center">그림 7.13 고전압 터치 센싱 유닛과 센서기반 Arc 용접 데이터 모니터링 </p></em>
 </p>
  

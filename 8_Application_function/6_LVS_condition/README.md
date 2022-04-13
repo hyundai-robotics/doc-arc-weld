@@ -4,7 +4,7 @@
 
 
 <p align="center">
- <img src="../../.gitbook/assets/8_18.png" width="80%"></img>
+ <img src="../../_assets/8_18.png" width="80%"></img>
  <em><p align="center">그림 8.18 LVS기반 용접조건 가변 기능</p></em>
 </p>
 
@@ -12,7 +12,7 @@
 최적의 용접 조건을 찾기 위해 미리 설정된 조건을 이용하며, 그것을 위한 사용자 인터페이스를 제공합니다.
 
 <p align="center">
- <img src="../../.gitbook/assets/8_18__.png" width="80%"></img>
+ <img src="../../_assets/8_18__.png" width="80%"></img>
  <em><p align="center">그림 8.19 최적 조건 설정을 위한 사용자 인터페이스(좌: 테이블 설정방식, 우: 관계식 설정방식)</p></em>
 </p>
 
@@ -30,6 +30,6 @@ LVS기반 용접조건 가변 기능에서 가변 조건을 설정하기 위해�
 
 
 <p align="center">
- <img src="../../.gitbook/assets/8_20.png" width="60%"></img>
+ <img src="../../_assets/8_20.png" width="60%"></img>
  <em><p align="center">그림 8.20 설정 방법에 따른 조건 변화</p></em>
 </p>

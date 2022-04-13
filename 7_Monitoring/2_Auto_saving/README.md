@@ -6,7 +6,7 @@
 
  
 <p align="center">
- <img src="../../.gitbook/assets/7_5.png" width="55%" ></img>
+ <img src="../../_assets/7_5.png" width="55%" ></img>
  <em><p align="center">그림 7.5 저장된 Arc 용접 데이터</p></em>
 </p>
 
@@ -25,7 +25,7 @@
 PC용 Arc 용접 데이터 확인 프로그램은 엑셀을 이용하여 사용자가 백업한 파일을 PC나 노트북에서 손쉽게 확인할 수 있도록 합니다. 해당 프로그램에서 원하는 용접 파일을 선택 후 용접시간, 용접조건, 프로그램, 스텝 등의 검색조건으로 원하는 용접을 검색할 수 있습니다. 또한 검색된 용접을 그래프로 가시화 하여 쉽게 직관적으로 확인할 수 있도록 지원합니다. 또한 용접 데이터를 비교하여 그려주는 기능으로 과거의 데이터를 서로 비교할 수 있습니다.
  
 <p align="center">
- <img src="../../.gitbook/assets/7_6.png" width="70%" ></img>
+ <img src="../../_assets/7_6.png" width="70%" ></img>
  <em><p align="center">그림 7.6 PC용 Arc 용접 데이터 확인 프로그램</p></em>
 </p>
 

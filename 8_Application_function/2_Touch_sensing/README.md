@@ -3,7 +3,7 @@
 터치센싱이란 작업물의 위치 및 용접시작점 혹은 용접끝점 검출을 위해 사용하는 기능입니다.
 
 <p align="center">
- <img src="../../.gitbook/assets/8_41.png" width="35%"></img>
+ <img src="../../_assets/8_41.png" width="35%"></img>
  <em><p align="center">그림 8.41 터치센싱의 예</p></em>
 </p>
 
@@ -13,7 +13,7 @@
 
        
 <p align="center">
- <img src="../../.gitbook/assets/8_52.png" ></img>
+ <img src="../../_assets/8_52.png" ></img>
  <em><p align="center">그림 8.52 터치센싱 타입</p></em>
 </p>
 
@@ -83,7 +83,7 @@
 [1] Fillet 타입
 
 <p align="center">
- <img src="../../.gitbook/assets/8_74.png" width="60%"></img>
+ <img src="../../_assets/8_74.png" width="60%"></img>
  <em><p align="center">그림 8.74 터치센싱 예 Fillet 타입</p></em>
 </p>
 
@@ -103,7 +103,7 @@
 [2] V Groove 타입
 
 <p align="center">
- <img src="../../.gitbook/assets/8_85.png" width="70%"></img>
+ <img src="../../_assets/8_85.png" width="70%"></img>
  <em><p align="center">그림 8.85 터치센싱 예 V Groove 타입</p></em>
 </p>   
 
@@ -121,7 +121,7 @@
 [3] BUTT 타입
 
 <p align="center">
- <img src="../../.gitbook/assets/8_96.png" width="30%"></img>
+ <img src="../../_assets/8_96.png" width="30%"></img>
  <em><p align="center">그림 8.96 터치센싱 예 Butt 타입</p></em>
 </p>   
 
@@ -140,7 +140,7 @@
 
 
 <p align="center">
- <img src="../../.gitbook/assets/8_107.png" width="40%"></img>
+ <img src="../../_assets/8_107.png" width="40%"></img>
  <em><p align="center">그림 8.107 터치센싱 시퀀스 Butt 타입</p></em>
 </p>   
 
@@ -157,7 +157,7 @@ V그루브와 Butt의 경우 하단 좌우센싱 중점에서 작업물 방향�
 그림 8.18은 필렛과 DetectGroove작업물에서 Y축 또는 TL축으로 30도 회전한 예입니다.
 
 <p align="center">
- <img src="../../.gitbook/assets/8_118.png" width="300"></img>
+ <img src="../../_assets/8_118.png" width="300"></img>
  <em><p align="center">그림 8.118 터치센싱 예 각도설정</p></em>
 </p>       
 

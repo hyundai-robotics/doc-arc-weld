@@ -6,7 +6,7 @@
 </br>
 
 <p align="center">
- <img src="../../.gitbook/assets/8_21.png" width="40%"></img>
+ <img src="../../_assets/8_21.png" width="40%"></img>
  <em><p align="center">그림 8.21 스티치 기능 기본 파라미터</p></em>
 </p> 
 
@@ -15,7 +15,7 @@
 
 
 <p align="center">
- <img src="../../.gitbook/assets/8_22.png" width="50%"></img>
+ <img src="../../_assets/8_22.png" width="50%"></img>
  <em><p align="center">그림 8.22 스티치 용접 시험 시편</p></em>
 </p> 
  
@@ -23,7 +23,7 @@
 
 
 <p align="center">
- <img src="../../.gitbook/assets/8_23.png" width="60%"></img>
+ <img src="../../_assets/8_23.png" width="60%"></img>
  <em><p align="center">그림 8.23 스티치 용접 프로세스</p></em>
 </p> 
 

@@ -3,11 +3,11 @@
 다음 그림에서의 각 요소를 설정합니다. 
   
 <p align="center">
- <img src="../../.gitbook/assets/6_3_1.png" width="60%"></img>
+ <img src="../../_assets/6_3_1.png" width="60%"></img>
 </p>
 
 <p align="center">
- <img src="../../.gitbook/assets/6_3_2.png" width="45%"></img>
+ <img src="../../_assets/6_3_2.png" width="45%"></img>
  <em><p align="center">그림 6.3 벽방향에 따른 위빙 요소</p></em>
 </p>
 
@@ -32,7 +32,7 @@
     용접선에 대한 위빙 진동 방향의 각도입니다. 설정 가능한 범위는 -90.0 ~ 90.0도입니다. 0도 설정 시 용접선과 직각으로 위빙이 동작합니다.
 
 <p align="center">
- <img src="../../.gitbook/assets/6_4.png" width="60%"></img>
+ <img src="../../_assets/6_4.png" width="60%"></img>
  <em><p align="center">그림 6.4 위빙 진행 각도</p></em>
 </p>
 
@@ -43,6 +43,6 @@
 
  
 <p align="center">
- <img src="../../.gitbook/assets/6_4_1.png" width="60%"></img>
+ <img src="../../_assets/6_4_1.png" width="60%"></img>
  <em><p align="center">그림 6.4.1 위빙 경계 제한</p></em>
 </p> 

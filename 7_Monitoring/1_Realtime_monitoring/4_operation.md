@@ -12,7 +12,7 @@
 세밀한 파형을 보기 위한 확장은 [SHIFT]+[상]을 누르고, 전체적인 개괄 파형을 보기 위한 축소는 [SHIFT]+[하]를 누르면 됩니다. 과거 데이터를 보는 중 바로 현재 데이터로 이동하기 위해서는 [ENTER]를 누르면 현재 화면으로 복귀합니다.
 
  <p align="center">
- <img src="../../.gitbook/assets/7_4.png" width="50%" ></img>
+ <img src="../../_assets/7_4.png" width="50%" ></img>
  <em><p align="center">그림 7.4 Arc 용접 파형 모니터링 확장 기능</p></em>
 </p>
 

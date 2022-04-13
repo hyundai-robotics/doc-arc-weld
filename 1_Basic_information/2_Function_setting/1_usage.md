@@ -12,6 +12,6 @@
 
 
 <p align="center">
- <img src="../../.gitbook/assets/1_7.png" width="70%"></img>
+ <img src="../../_assets/1_7.png" width="70%"></img>
  <em><p align="center">그림 1.7 용도설정 대화상자</p></em>
 </p>

@@ -59,7 +59,7 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 
  
 <p align="center">
- <img src="../../.gitbook/assets/5_12.png" width="80%"></img>
+ <img src="../../_assets/5_12.png" width="80%"></img>
  <em><p align="center">그림 5.12 재기동 동작 과정</p></em>
 </p>
 
