@@ -4,9 +4,11 @@
 
  
 
-
+<p align="center">
+ <img src="../../../_assets/1_8.png" width="70%"></img>
+ <em><p align="center">그림 1.8 Arc용접 응용조건 대화상자</p></em>
+</p>
  
-그림 1.8 Arc용접 응용조건 대화상자
 
 각 항목별 내용은 다음과 같습니다.
 

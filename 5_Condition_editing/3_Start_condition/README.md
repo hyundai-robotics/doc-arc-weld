@@ -5,24 +5,25 @@ Arc용접 설정이 디지털이고, ARCON ASF#= 명령라인에 커서가 있�
 
 
  
-
+<p align="center">
+ <img src="../../_assets/5_2.png" width="70%"></img>
+ <em><p align="center">그림 5.2 Fronius 용접기 조건 설정</p></em>
+</p>
+  
  
+<p align="center">
+ <img src="../../_assets/5_3.png" width="70%"></img>
+ <em><p align="center">그림 5.3 효성 용접기 조건 설정</p></em>
+</p>
 
-그림 5.2 용접시작조건 대화상자 (디지털 용접기 중 GB2 의 예)
  
  
-
-
- 
-
-그림 5.3 EWM 용접기의 용접시작조건 대화상자
- 
- 
-
+<p align="center">
+ <img src="../../_assets/5_3.png" width="70%"></img>
+ <em><p align="center">그림 5.4 EWM 용접기 조건 설정</p></em>
+</p>
 
  
-
-그림 5.4 Megmeet 용접기의 용접시작조건 대화상자
 
 
 조건들을 편집 후 [ESC]키를 누르면 저장하지 않고 대화상자가 종료되며 [F7: 완료] 키를 누르면 설정 내용이 저장한 후 대화상자가 종료됩니다.

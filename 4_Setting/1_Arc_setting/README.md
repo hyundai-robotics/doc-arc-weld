@@ -4,16 +4,25 @@
 
 우선 사용하고자 하는 용접기는 『시스템』 → 『5: 초기화』 → 『3: 용도설정』 메뉴에서 ‘용접기 번호’항목으로 설정할 수 있습니다. 이 화면에서『용접기』를 선택하면 해당 용접기의 조건 편집화면이 나타납니다.
 
- 
-그림 4.1 용도설정 대화상자
 
+<p align="center">
+ <img src="../../_assets/1_7.png" width="70%"></img>
+ <em><p align="center">그림 4.1 용도설정 대화상자</p></em>
+</p> 
 
-  
+</br>
 
-그림 4.2 용접기 설정 대화상자 (BD574+CAN 통신 사용 시)
+<p align="center">
+ <img src="../../_assets/4_2.png" width="70%"></img>
+ <em><p align="center">그림 4.2 현대 용접기 조건 설정</p></em>
+</p>   
 
+</br>
 
-
+<p align="center">
+ <img src="../../_assets/4_3.png" width="70%"></img>
+ <em><p align="center">그림 4.3 현대 용접기 입출력 신호 할당</p></em>
+</p>   
   
 그림 4.3 용접기 설정 대화상자 (BD574+DeviceNet 통신 사용 시)
 

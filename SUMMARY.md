@@ -47,10 +47,15 @@
 * [4. Arc 용접기 설정](4_Setting/README.md)
   * [4.1 Arc 용접기 설정](4_Setting/1_Arc_setting/README.md)
   * [4.2 HRWI 특성 파일 편집](4_Setting/2_HRWI/README.md)
+  * [4.3 ESAB/Fronius/EWM 용접기 특성 파일 편집](4_Setting/4_ESAB_Fronius_EWM/README.md)
+  * [4.4 Arc 용접기 범용 인터페이스](4_Setting/6_General_interface/README.md)
+<!--  
   * [4.3 Panasonic 용접기 특성 파일 편집](4_Setting/3_Panasonic_welder/README.md)
-  * [4.4 ESAB/Fronius/EWM 용접기 특성 파일 편집](4_Setting/4_ESAB_Fronius_EWM/README.md)
+-->
+<!--  
   * [4.5 Megmeet 용접기 특성 파일 편집](4_Setting/5_Megmeet/README.md)
-  * [4.6 Arc 용접기 범용 인터페이스](4_Setting/6_General_interface/README.md)
+-->
+  
 * [5. Arc 용접 조건 편집](5_Condition_editing/README.md)
   * [5.1 Arc 용접 조건 구성](5_Condition_editing/1_Condition_config/README.md)
   * [5.2 Arc 용접 타임차트](5_Condition_editing/2_Time_chart/README.md)
@@ -99,16 +104,21 @@
   * [8.2 터치센싱 기능](8_Application_function/2_Touch_sensing/README.md)
   * [8.3 높이센싱(Height Sensing) 기능](8_Application_function/3_Height_sensing/README.md)
     * [8.3.1 높이센싱 조건](8_Application_function/3_Height_sensing/1_hsen_condition.md)
+  * [8.4 LVS(Laser Vision Sensor) 용접선 추적 및 검출 기능](8_Application_function/4_LVS_tracking/README.md)
+  * [8.5 LVS기반 용접조건 가변 기능](8_Application_function/5_LVS_condition/README.md)
+  * [8.6 STITCH 기능](8_Application_function/6_Stitch/README.md)
+    * [8.6.1 STITCH 기능 개요](8_Application_function/6_Stitch/1_overall_.md)
+    * [8.6.2 STITCH 명령어 작성](8_Application_function/6_Stitch/2_command.md)
+    * [8.6.3 STITCH 기능 파라미터 설정](8_Application_function/6_Stitch/3_parameter.md)
+    * [8.6.4 STITCH 기능 부가 사양](8_Application_function/6_Stitch/4_aux_spec.md)
+  
+ <!--  
   * [8.4 협조제어 Arc 기능](8_Application_function/4_Cooperation_control/README.md)
     * [8.4.1 개요](8_Application_function/4_Cooperation_control/1_overall_.md)
     * [8.4.2 조작](8_Application_function/4_Cooperation_control/2_operation_.md)
-  * [8.5 LVS(Laser Vision Sensor) 용접선 추적 및 검출 기능](8_Application_function/5_LVS_tracking/README.md)
-  * [8.6 LVS기반 용접조건 가변 기능](8_Application_function/6_LVS_condition/README.md)
-  * [8.7 STITCH 기능](8_Application_function/7_Stitch/README.md)
-    * [8.7.1 STITCH 기능 개요](8_Application_function/7_Stitch/1_overall_.md)
-    * [8.7.2 STITCH 명령어 작성](8_Application_function/7_Stitch/2_command.md)
-    * [8.7.3 STITCH 기능 파라미터 설정](8_Application_function/7_Stitch/3_parameter.md)
-    * [8.7.4 STITCH 기능 부가 사양](8_Application_function/7_Stitch/4_aux_spec.md)
+  
+  -->
+
 * [9. 부록](9_Appendices/README.md)
   * [9.1 PC용 용접 데이터 확인 기능 사용법](9_Appendices/1_PCbased_checking/README.md)
     * [9.1.1 기본 기능](9_Appendices/1_PCbased_checking/1_basic_function.md)

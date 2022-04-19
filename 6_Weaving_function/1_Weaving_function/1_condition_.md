@@ -3,8 +3,11 @@
 ```weaving ... ``` 명령어 위에 커서가 있을 때, [QuickOpen]키를 누르면 다음과 같은 위빙 조건 편집화면이 나타납니다.
 
  
+<p align="center">
+ <img src="../../_assets/6_1.png" width="70%"></img>
+ <em><p align="center">그림 6.1 위빙조건 설정</p></em>
+</p>
 
-그림 6.1 위빙조건 대화상자
 
 
 ---

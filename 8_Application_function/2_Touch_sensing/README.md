@@ -3,8 +3,8 @@
 터치센싱이란 작업물의 위치 및 용접시작점 혹은 용접끝점 검출을 위해 사용하는 기능입니다.
 
 <p align="center">
- <img src="../../_assets/8_41.png" width="35%"></img>
- <em><p align="center">그림 8.41 터치센싱의 예</p></em>
+ <img src="../../_assets/8_4.png" width="35%"></img>
+ <em><p align="center">그림 8.4 터치센싱의 예</p></em>
 </p>
 
 
@@ -13,15 +13,19 @@
 
        
 <p align="center">
- <img src="../../_assets/8_52.png" ></img>
- <em><p align="center">그림 8.52 터치센싱 타입</p></em>
+ <img src="../../_assets/8_5.png" width="90%"></img>
+ <em><p align="center">그림 8.5 터치센싱 타입</p></em>
 </p>
 
 
 터치센싱은 총 8개의 조건들이 존재하며 명령어에서 Quick Open을 누르면 그림 8.13과 같은 편집화면이 뜨고 편집한 내용들은 ROBOT.TSC파일에 탐색속도, 퇴피속도, 탐색거리, 진행거리, 오차보정량, 터치방식 등과 같은 조건들이 저장됩니다. 
 
-     
-그림 8.63 터치센싱 조건 편집화면
+
+<p align="center">
+ <img src="../../_assets/8_6.png" width="70%" ></img>
+ <em><p align="center">그림 8.6 터치센싱 조건 편집화면</p></em>
+</p>
+
 
 
 터치센싱 명령은 T.P화면에서‘명령입력’-‘아크’-‘TOUCHSEN’을 입력하여 기록할 수 있습니다.
@@ -83,7 +87,7 @@
 [1] Fillet 타입
 
 <p align="center">
- <img src="../../_assets/8_74.png" width="60%"></img>
+ <img src="../../_assets/8_7.png" width="60%"></img>
  <em><p align="center">그림 8.74 터치센싱 예 Fillet 타입</p></em>
 </p>
 
@@ -103,7 +107,7 @@
 [2] V Groove 타입
 
 <p align="center">
- <img src="../../_assets/8_85.png" width="70%"></img>
+ <img src="../../_assets/8_8.png" width="70%"></img>
  <em><p align="center">그림 8.85 터치센싱 예 V Groove 타입</p></em>
 </p>   
 
@@ -121,7 +125,7 @@
 [3] BUTT 타입
 
 <p align="center">
- <img src="../../_assets/8_96.png" width="30%"></img>
+ <img src="../../_assets/8_9.png" width="30%"></img>
  <em><p align="center">그림 8.96 터치센싱 예 Butt 타입</p></em>
 </p>   
 
@@ -140,7 +144,7 @@
 
 
 <p align="center">
- <img src="../../_assets/8_107.png" width="40%"></img>
+ <img src="../../_assets/8_10.png" width="40%"></img>
  <em><p align="center">그림 8.107 터치센싱 시퀀스 Butt 타입</p></em>
 </p>   
 
@@ -157,7 +161,7 @@ V그루브와 Butt의 경우 하단 좌우센싱 중점에서 작업물 방향�
 그림 8.18은 필렛과 DetectGroove작업물에서 Y축 또는 TL축으로 30도 회전한 예입니다.
 
 <p align="center">
- <img src="../../_assets/8_118.png" width="300"></img>
+ <img src="../../_assets/8_11.png" width="300"></img>
  <em><p align="center">그림 8.118 터치센싱 예 각도설정</p></em>
 </p>       
 
