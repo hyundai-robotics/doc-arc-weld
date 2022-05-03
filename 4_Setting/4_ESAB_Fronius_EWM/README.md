@@ -1,4 +1,4 @@
-﻿# 4.3 ESAB/Fronius/EWM 용접기 특성 파일 편집
+﻿# 4.3 Fronius/EWM 용접기 특성 파일 편집
 
 (1)	QuickStop: {사용, 미사용}  
 Arc 용접 진행 중 중도 종료 시 QuickStop 기능의 사용 여부를 설정합니다. QuickStop을 사용으로 설정하면 중도 종료 시 크레이터 처리를 하지 않고 용접을 종료합니다. 용접기마다 지원 여부가 다릅니다. (ESAB 지원, Fronius, EWM 미지원)

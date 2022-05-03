@@ -1,4 +1,4 @@
-# 2.4. WEAVOF
+# 2.4. weaving off
 
 
 - 설명 
@@ -8,13 +8,13 @@
 
 - 문법
   
-    - WEAVOF
+    - weaving off
   
 </br>  
 
 - 사용 예
   
-   - ```WEAVOF``` 
+   - ```weaving off``` 
 
 
 - 세부 설명

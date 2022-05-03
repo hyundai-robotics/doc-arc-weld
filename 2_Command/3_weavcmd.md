@@ -1,24 +1,22 @@
-﻿# 2.3. WEAVCmd
+﻿# 2.3. weaving on
 
 
 - 설명 
     
-    WEAVCmd 는 위빙 조건을 세부항목별로 외부 설정하는 명령어 입니다. 이를 통해 위빙 조건 개수 제한(32개)보다 많은 수의 위빙 조건을 설정할 수 있습니다.
+    weaving on cnd=1은 위빙조건을 실행하는 명령어 입니다. quick open창에 진입하여 해당조건번호에 해당하는 위빙조건을 설정할 수 있습니다.
 
 
 
 - 문법
   
-    - WEAVON WEV#=<위빙조건번호>	← 위빙 조건을 로딩
-    - WEAVCmd.Freq=5		← 위빙 조건 중 변경할 항목을 설정 
+    - WEAVON cnd=<위빙조건번호>	← 위빙 조건을 로딩하여 실행
   
 </br>  
 
 - 사용 예
   
-   - ```WEAVON WEV#=1```  <span style="color: green"># 위빙 조건 1번을 로딩</span>
-   - ```WEAVCmd.Freq=5``` <span style="color: green"># 위빙 조건 중 주파수만 5Hz로 변경</span>
-   - ```WEAVCmd.FwdAngle=10```	<span style="color: green"># 위빙 조건 중 진행각도를 10도 변경</span>
+   - ```weaving on, cnd=1```  <span style="color: green"># 위빙 조건 1번을 로딩하여 실행</span>
+   - ```arcon cnd=1``` <span style="color: green"># arcon 1번 조건으로 실행</span>
    - ```MOVE L,S=100cm/min,A=0,T=0``` <span style="color: green"># 위의 위빙 조건대로 실행하며 로봇 이동</span>
 
 
@@ -28,8 +26,3 @@
 
 </br>
 </br>
-
-{% hint style="warning" %}
-[**주의**]
- -	WEAVCmd 대입문 중 일부 명령들은 위빙 동작 중 변경 시 반영이 되지 않습니다. 위빙 동작 중 변경이 가능한 명령어 목록은 [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 을 참고하십시오.
-{% endhint %}

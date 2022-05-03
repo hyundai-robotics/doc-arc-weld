@@ -1,4 +1,4 @@
-﻿# 2.5. REFP
+﻿# 2.5. refp
 
 - 설명 
     
@@ -6,8 +6,8 @@
 
 - 문법
   
-    - REFP <참조점 번호>,<포즈(번호)>
-    - REFP <참조점 번호>
+    - refp <참조점 번호>,<포즈(번호)>
+    - refp <참조점 번호>
 
 - 파라미터
   
@@ -22,9 +22,9 @@
 
 - 사용 예
   
-   - ```REFP 1,P1```  <span style="color: green"># 위빙의 벽방향을 P1을 이용하여 지정</span>
-   - ```REFP 1```    <span style="color: green"># 위빙의 벽방향을 숨은 포즈를 이용하여 지정</span>
-   - ```REFP 2, (-1073.33, 739.01, 258.30, 0, 76, 23)```   <span style="color: green"># 위빙면의 위치를 지정</span>
+   - ```refp 1,P1```  <span style="color: green"># 위빙의 벽방향을 P1을 이용하여 지정</span>
+   - ```refp 1```    <span style="color: green"># 위빙의 벽방향을 숨은 포즈를 이용하여 지정</span>
+   - ```refp 2, (-1073.33, 739.01, 258.30, 0, 76, 23)```   <span style="color: green"># 위빙면의 위치를 지정</span>
 
 
 
@@ -38,7 +38,7 @@
 
 {% hint style="warning" %}
 [**주의**]
- -	REFP문은 MOVE문처럼 스텝에 속합니다.
- - 사용자키의 <REFP>키를 이용해 REFP 명령문을 입력한 경우 숨은 포즈 형식이 됩니다.
+ -	refp문은 MOVE문처럼 스텝에 속합니다.
+ - 사용자키의 <refp>키를 이용해 refp 명령문을 입력한 경우 숨은 포즈 형식이 됩니다.
  - 실행단위를 Cmd, Step로 설정 후 스텝전진을 실행하여 티칭 된 위치로 이동할 수 있습니다.
 {% endhint %}

@@ -39,7 +39,7 @@
     - 변수 확인 및 변경
 - 상세 내용
     - 변수 유형에 따라 해당 변수를 모니터링하고 값을 변경
-    - V%, V!, V$, P, R, LV%, LV!, LV$, LP, LR, 시스템변수 등
+
 
 
 (5) ```arcon```
@@ -91,13 +91,13 @@
   - Gap 적응형 용접 조건
     - 조건 테이블 작성
 
-(9) ```weavon```
+(9) ```heightsen```
 - 파일, 내용
     - 높이센싱 조건 확인 및 변경
 - 상세 내용
   - 조건번호, Input data type for height sensing, Reference data setting method, ...
 
-(10) ```weavon```
+(10) ```arccond```
 - 파일, 내용
     - 용접조건 데이터베이스
 
