@@ -75,7 +75,6 @@
     * [7.3.5 용접 데이터 목록(화면의 E)](7_Monitoring/3_Management_function/5_data_contents.md)
     * [7.3.6 용접 데이터 비교](7_Monitoring/3_Management_function/6_data_compare.md)
   * [7.4 Arc 용접 결과 정량화 기능](7_Monitoring/4_Result_quantification/README.md)
-  * [7.5 센서기반 Arc 용접 데이터 모니터링 기능](7_Monitoring/5_Sensor_based/README.md)
 * [8. Arc 용접 응용기능](8_Application_function/README.md)
   * [8.1 Arc 센싱 기능](8_Application_function/1_Arc_sensing/README.md)
     * [8.1.1 아크센싱 조건](8_Application_function/1_Arc_sensing/1_arcsen_condition.md)
