@@ -9,7 +9,7 @@
 
 
 작업물은 지그 또는 포지셔너의 오차, 작업물의 갭들이 다르기 때문에 항상 일정한 위치에 있다고 볼 수 없습니다. 이러한 경우 터치센싱을 이용해 용접 시작점과 용접 끝점을 검출하여 용접할 수 있습니다. 또는 터치센싱을 이용하여 기준 위치를 기록해 놓으면 작업물이 들어왔을 때 기준위치에서 얼만큼 쉬프트 되어있는지 계산할 수 있습니다. 이러한 쉬프트량이 자동으로 계산되어 보정되는 기능 또한 사용 가능합니다.
- 터치센싱은 그림 8.12와 같이 총 8가지 타입 (필렛, VGroove, Butt, LRCen, 응용필렛1, 응용필렛 2, DetectGroove, Wall) 을 지원합니다. 
+ 터치센싱은 그림 8.5와 같이 총 8가지 타입 (필렛, VGroove, Butt, LRCen, 응용필렛1, 응용필렛 2, DetectGroove, Wall) 을 지원합니다. 
 
        
 <p align="center">
@@ -18,7 +18,7 @@
 </p>
 
 
-터치센싱은 총 8개의 조건들이 존재하며 명령어에서 Quick Open을 누르면 그림 8.13과 같은 편집화면이 뜨고 편집한 내용들은 ROBOT.TSC파일에 탐색속도, 퇴피속도, 탐색거리, 진행거리, 오차보정량, 터치방식 등과 같은 조건들이 저장됩니다. 
+터치센싱은 총 8개의 조건들이 존재하며 명령어에서 Quick Open을 누르면 그림 8.5와 같은 편집화면이 뜨고 탐색속도, 퇴피속도, 탐색거리, 진행거리, 오차보정량, 터치방식 등과 같은 조건들이 제어기에 저장됩니다. 
 
 
 <p align="center">
@@ -28,7 +28,7 @@
 
 
 
-터치센싱 명령은 T.P화면에서‘명령입력’-‘아크’-‘TOUCHSEN’을 입력하여 기록할 수 있습니다.
+터치센싱 명령은 T.P화면에서‘명령입력’-‘아크’-‘touchsen’을 입력하여 기록할 수 있습니다.
 
 - 명령어 구성
    - ```touchsen``` cnd=조건번호, crd=좌표계, dir=[탐색방향1, 탐색방향2, 탐색방향3], pose=결과포즈 저장변수, gap=butt gap 변수
@@ -83,7 +83,7 @@
 
 <p align="center">
  <img src="../../_assets/8_7.png" width="60%"></img>
- <em><p align="center">그림 8.74 터치센싱 예 Fillet 타입</p></em>
+ <em><p align="center">그림 8.7 터치센싱 예 Fillet 타입</p></em>
 </p>
 
 - 명령어 구성
@@ -102,7 +102,7 @@
 
 <p align="center">
  <img src="../../_assets/8_8.png" width="70%"></img>
- <em><p align="center">그림 8.85 터치센싱 예 V Groove 타입</p></em>
+ <em><p align="center">그림 8.8 터치센싱 예 V Groove 타입</p></em>
 </p>   
 
 
@@ -120,7 +120,7 @@
 
 <p align="center">
  <img src="../../_assets/8_9.png" width="30%"></img>
- <em><p align="center">그림 8.96 터치센싱 예 Butt 타입</p></em>
+ <em><p align="center">그림 8.9 터치센싱 예 Butt 타입</p></em>
 </p>   
 
 
@@ -138,7 +138,7 @@
 
 <p align="center">
  <img src="../../_assets/8_10.png" width="40%"></img>
- <em><p align="center">그림 8.107 터치센싱 시퀀스 Butt 타입</p></em>
+ <em><p align="center">그림 8.10 터치센싱 시퀀스 Butt 타입</p></em>
 </p>   
 
 V그루브와 Butt의 경우 하단 좌우센싱 중점에서 작업물 방향으로 내린 점이 계산된 포즈가 됩니다. DetectGroove의 경우 하단센싱→상승량만큼 상승→전진을 반복합니다. 사용자가 지정한 탐지기준보다 더 내려갈 경우 하단센싱중에 멈추게 되고 그 점이 찾은 포즈가 됩니다. 
@@ -155,14 +155,14 @@ V그루브와 Butt의 경우 하단 좌우센싱 중점에서 작업물 방향�
 
 <p align="center">
  <img src="../../_assets/8_11.png" width="300"></img>
- <em><p align="center">그림 8.118 터치센싱 예 각도설정</p></em>
+ <em><p align="center">그림 8.11 터치센싱 예 각도설정</p></em>
 </p>       
 
 - 명령어 구성
     - ```touchsen``` cnd=1, crd="robot", dir=[+x,-z], angle=Y30, pose=P100
     - ```touchsen``` cnd=1, crd="robot", dir=[+x,-z], angle=TL30, pose=P100
     - ```touchsen``` cnd=2, crd="robot", dir=[td,tf], lift_up=5, angle=Y30, pose=P100
-    - ```touchsen``` cnd=2, crd="robot", dir=[td,tf], angle=TL30, pose=P100 !‘DetectGroove
+    - ```touchsen``` cnd=2, crd="robot", dir=[td,tf], angle=TL30, pose=P100 ‘DetectGroove
 
 작업물 타입과 명령어에 지정된 센싱방향 지정좌표계에 따라 지정이 가능한 각도회전 축은 아래 표와 같습니다.
 
@@ -180,6 +180,6 @@ Master/Execution Mode와 연동하는 터치센싱 사용법은 다음과 같습
 Master 모드에선 사용자가 mpose 입력인자에 지정한 변수에 센싱한 포즈가 저장되며, Execution 모드에선 현재 센싱한 포즈를 Master 모드에서 센싱했던 포즈와 비교하여 쉬프트량을 계산하고 사용자가 mshift 입력인자에 지정한 변수에 시프트량이 기록됩니다.
 
 - 명령어 구성
-    - ```touchsen``` cnd=1, crd="robot", dir=[+x,-z], mpose=P10, mshift=sft_var1+X, -Z, 0, X0, PAR=10, %V1!
+    - ```touchsen``` cnd=1, crd="robot", dir=[+x,-z], mpose=P10, mshift=sft_var1
 
 위 명령어는 Master 모드에서 P10포즈변수에 센싱한 포즈가 저장되고 Execution 모드에서 센싱했을 때 Master 모드와의 시프트 양이 자동으로 계산되어 sft_var1변수에 저장됩니다.

@@ -14,15 +14,15 @@
 
 높이센싱용 명령어가 입력된 작업프로그램의 예시는 다음과 같습니다.
 
-    S1   MOVE L,S=100%,A=1,T=0
-    S2   MOVE L,S=20%,A=1,T=0
-    S3   MOVE L,S=100mm/s,A=1,T=0
+    S1   move L,spd=100%,accu=1,tool=0
+    S2   move L,spd=20%,accu=1,tool=0
+    S3   move L,spd=100mm/s,accu=1,tool=0
          heightsen on, cnd=1		  # 높이센싱 시작
          arcon cnd=2		       # Arc 용접 시작
-    S4   MOVE L,S=10mm/s,A=1,T=0
+    S4   move L,spd=10mm/s,accu=1,tool=0
          arcoff			       # Arc 용접 종료
          heigghtsen off			  # 높이센싱 종료
-    S5   MOVE L,S=20%,A=1,T=0
+    S5   move L,spd=20%,accu=1,tool=0
          END 
 
 (2)	높이센싱기능 동작순서

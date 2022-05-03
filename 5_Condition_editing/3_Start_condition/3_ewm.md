@@ -1,4 +1,4 @@
-﻿# 5.3.6. 용접 시작 조건 – EWM 전용 설정
+﻿# 5.3.3 용접 시작 조건 – EWM 전용 설정
 
 (1)	JOB mode: <Job mode off, Job mode active>  
 EWM AlphaQ 용접기에서 지원하는 용접모드를 설정합니다. 각 모드에 대한 설명은 아래와 같습니다.

@@ -1,4 +1,4 @@
-﻿# 2.3. weaving on
+﻿# 2.3 weaving on
 
 
 - 설명 

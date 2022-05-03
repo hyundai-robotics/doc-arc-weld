@@ -1,15 +1,15 @@
-﻿# 8.6.3 STITCH 기능 Prameter 설정
+﻿# 8.5.3 stitch 기능 Prameter 설정
 
 
 <p align="center">
- <img src="../../_assets/8_23.png" width="80%"></img>
- <em><p align="center">그림 8.23 스티치 용접 과정에 따른 Profile</p></em>
+ <img src="../../_assets/8_20.png" width="80%"></img>
+ <em><p align="center">그림 8.20 스티치 용접 과정에 따른 Profile</p></em>
 </p>
 
 
 
-그림 8.24은 STITCH 명령어에서 Quick Open 버튼을 눌러서 접근하는 화면이고, 그림 8.27은 그림 8.24화면에서 Signal Port(PF1) 버튼으로 접근합니다. 그림 8.26은 Job 프로그램 화면입니다.
-그림 8.24 – 8.26 에 붉은색으로 표시한 번호는 아래 설명에 해당하는 파라미터입니다.
+그림 8.21은 stitch 명령어에서 Quick Open 버튼을 눌러서 접근하는 화면이고, 그림 8.22은 그림 8.21화면에서 '구분' 버튼으로 접근합니다. 그림 8.23은 Job 프로그램 화면입니다.
+그림 8.21 – 8.22 의 파라미터에 대한 설명은 다음과 같습니다.
 
 - 조건 번호 : Shift + 방향키로 선택  
 - 설명 : 소프트 키보드로 입력
@@ -36,11 +36,19 @@ Stitch Enable/Equipment Enable/Equipment Output
 
 {% endhint %}
 
- 
-그림 8.24 스티치 용접 Parameter 설정1
+<p align="center">
+ <img src="../../_assets/8_21.png" width="70%"></img>
+ <em><p align="center">그림 8.21 스티치 용접 Parameter 설정1</p></em>
+</p>
 
+<p align="center">
+ <img src="../../_assets/8_22.png" width="70%"></img>
+ <em><p align="center">그림 8.22 스티치 용접 Parameter 설정3</p></em>
+</p>
 
+<p align="center">
+ <img src="../../_assets/8_23.png" width="40%"></img>
+ <em><p align="center">그림 8.23 스티치 용접 Parameter 설정2</p></em>
+</p>
  
-그림 8.25 스티치 용접 Parameter 설정3
- 
-그림 8.26 스티치 용접 Parameter 설정2
+

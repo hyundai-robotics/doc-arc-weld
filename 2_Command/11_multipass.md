@@ -51,22 +51,22 @@
      ```multipass save, trj=1, period=10```  
      <span style="color: green"># 1번 궤적에 10mm 간격으로 저장  </span>  
      ```arcon cnd=1```   
-**S10**  ```MOVE L,R2,S=LV1!cm/min,A=3,T=1```  
-**S11**  ```MOVE L,R2,S=LV1!cm/min,A=3,T=1```  
+**S10**  ```move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1```  
+**S11**  ```move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1```  
      ```arcoff```  
      ```weaving off```  
      ```multipass off```  
-**S12**  ```MOVE L,S=50%,A=3,T=1```  
-**S13**  ```MOVE L,S=50%,A=3,T=1```  
-**S14**  ```MOVE L,S=50%,A=3,T=1```  
+**S12**  ```move L,spd=50%,accu=3,tool=1```  
+**S13**  ```move L,spd=50%,accu=3,tool=1```  
+**S14**  ```move L,spd=50%,accu=3,tool=1```  
      ```multipass load,trj=1,side=3,height=3,reverse=0,tas=0,was=0```  
      <span style="color: green">#  1번 궤적을 읽어 우측 3mm, 위로 3mm 시프트, 정방향, 각도 시프트 없음.  </span>  
-**S15**  ```MOVE L,R2,S=50%,A=0,T=1```  
+**S15**  ```move L,R2,spd=50%,accu=0,tool=1```  
      <span style="color: green">#  멀티패스 시작 위치로 시프트하며 이동할 스텝  </span>  
      ```weaving on, cnd=11```  
      ```arcon cnd=1 ```  
-**S16**  ```MOVE L,R2,S=LV1!cm/min,A=3,T=1```  
-**S17**  ```MOVE L,R2,S=LV1!cm/min,A=3,T=1```  
+**S16**  ```move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1```  
+**S17**  ```move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1```  
      ```arcoff```  
      ```weaving off```  
      ```multipass off```
