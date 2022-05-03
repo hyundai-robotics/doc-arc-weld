@@ -9,19 +9,19 @@
 
 (1)	명령어 입력
 
-높이센싱 시작을 위해서 HSensON 명령을 사용합니다. 명령어에는 뒤에는 조건번호를 입력합니다. 높이센싱 조건은 총 8개가 있습니다.
-높이센싱 종료를 위해서 HSensOFF 명령을 사용합니다. 종료 명령어는 특별히 인수를 필요로 하지 않습니다.
+높이센싱 시작을 위해서 heightsen on, cnd=1 명령을 사용합니다. 명령어에는 뒤에는 조건번호를 입력합니다. 높이센싱 조건은 총 8개가 있습니다.
+높이센싱 종료를 위해서 heightsen off 명령을 사용합니다. 종료 명령어는 특별히 인수를 필요로 하지 않습니다.
 
 높이센싱용 명령어가 입력된 작업프로그램의 예시는 다음과 같습니다.
 
     S1   MOVE L,S=100%,A=1,T=0
     S2   MOVE L,S=20%,A=1,T=0
     S3   MOVE L,S=100mm/s,A=1,T=0
-         HSensON AVC#=1		       # 높이센싱 시작
-         ARCON ASF#=2		       # Arc 용접 시작
+         heightsen on, cnd=1		  # 높이센싱 시작
+         arcon cnd=2		       # Arc 용접 시작
     S4   MOVE L,S=10mm/s,A=1,T=0
-         ARCOF ASF#			       # Arc 용접 종료
-         HSensOFF			       # 높이센싱 종료
+         arcoff			       # Arc 용접 종료
+         heigghtsen off			  # 높이센싱 종료
     S5   MOVE L,S=20%,A=1,T=0
          END 
 

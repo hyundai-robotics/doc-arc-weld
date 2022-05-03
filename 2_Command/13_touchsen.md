@@ -1,4 +1,4 @@
-﻿# 2.22 touchsen
+﻿# 2.13 touchsen
 
 - 설명
     
@@ -7,10 +7,10 @@
 
 - 문법
   
-    - TOUCHSEN cnd=<조건번호>, crd=<좌표계>, dir=<방향>, pose=<저장할 포즈>
-    - TOUCHSEN cnd=<조건번호>, crd=<좌표계>, dir=<방향>, angle=<탐색각도>, pose=<저장할 포즈>
-    - TOUCHSEN cnd=<조건번호>, crd=<좌표계>, dir=<방향>, lift_up=<들어올릴 양>, pose=<저장할 포즈>, gap=<butt gap 변수>
-    - TOUCHSEN cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모드 저장할 기준포즈>, mshift=<양산모드 계산된 쉬프트 변수>
+    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, pose=<저장할 포즈>
+    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, angle=<탐색각도>, pose=<저장할 포즈>
+    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, lift_up=<들어올릴 양>, pose=<저장할 포즈>, gap=<butt gap 변수>
+    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모드 저장할 기준포즈>, mshift=<양산모드 계산된 쉬프트 변수>
 
 
 - 파라미터

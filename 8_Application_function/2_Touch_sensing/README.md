@@ -31,16 +31,17 @@
 터치센싱 명령은 T.P화면에서‘명령입력’-‘아크’-‘TOUCHSEN’을 입력하여 기록할 수 있습니다.
 
 - 명령어 구성
-   - ```touchsen``` TSC#=조건번호, 탐색방향1, 탐색방향2, 탐색방향3, 계산된 포즈, butt gap 변수
-   - ```touchsen``` TSC#=조건번호, 탐색방향1, 탐색방향2, 탐색방향3, 탐색방향각도, 계산된 포즈, butt gap 변수
-   - ```touchsen``` TSC#=조건번호, 탐색방향1, 탐색방향2, 탐색방향3, 탐색방향각도, PAR=포즈시프트번호 butt gap 변수
+   - ```touchsen``` cnd=조건번호, crd=좌표계, dir=[탐색방향1, 탐색방향2, 탐색방향3], pose=결과포즈 저장변수, gap=butt gap 변수
+   - ```touchsen``` cnd=조건번호, crd=좌표계, dir=[탐색방향1, 탐색방향2, 탐색방향3], angle=탐색방향각도, pose=결과포즈 저장변수, gap=butt gap 변수
+   - ```touchsen``` cnd=조건번호, crd=좌표계, dir=[탐색방향1, 탐색방향2, 탐색방향3], angle=탐색방향각도, mpose=결과포즈 저장변수, mshift=계산된시프트 변수, gap=butt gap 변수
 
-   - ```touchsen``` TSC#1, +TX, +TZ, 3, P10, V1!
-      - TSC#1		: 터치센싱 옵션번호 (ROBOT.TSC 파일의 조건에 해당하는 인덱스 번호)
-      - +TX, +TZ	: 탐색방향 파라미터 (직교, 포즈, 툴좌표, 툴프로젝션 입력 가능)
-      - 3		: 바닥찍고 들어올릴 량 [mm] (Butt, V그루브), 탐지기준거리 (DetectGroove)
-      - P10		: 센싱하여 계산된 포즈가 저장될 포즈변수.
-      - V1! 		: BUTT 작업물일 경우 gap이 저장될 변수 (소수점 첫째 자리에서 반올림됨)
+   - ```touchsen``` cnd=1, crd="robot", dir=[+tx, +tz], lift_up=3, pose=P10, gap=var_gap
+      - cnd=1		: 터치센싱 옵션번호 (ROBOT.TSC 파일의 조건에 해당하는 인덱스 번호)
+      - crd="robot" : 터치센싱 좌표계
+      - dir=[+tx, +tz]	: 탐색방향 파라미터 (직교, 포즈, 툴좌표, 툴프로젝션 입력 가능)
+      - lift_up=3		: 바닥찍고 들어올릴 량 [mm] (Butt, V그루브), 탐지기준거리 (DetectGroove)
+      - pose=P10		: 센싱하여 계산된 포즈가 저장될 포즈변수.
+      - gap=var_gap 	: BUTT 작업물일 경우 gap이 저장될 변수 (소수점 첫째 자리에서 반올림됨)
       - QuickOpen 키 	: 탐색속도, 퇴피속도, 탐색거리, 진행거리, 오차보정량, 터치방식(닿을 때, 땔 때) 지정가능
 
 센싱방향은 작업물 타입에 따라 다음과 같이 지정할 수 있습니다.
@@ -49,9 +50,7 @@
 - Butt 	: 포즈방향, 툴방향
 - V Groove 	: 포즈방향, 툴방향
 - LRCen 	: 툴방향
-- AP_Fille	: 툴프로젝션 방향
 - DetectGroove: 툴방향, 툴프로젝션방향
-- Wall 	: 직교방향, 툴방향, 툴프로젝션방향
 
 <center>
 
@@ -61,8 +60,6 @@
 |Butt	|2 |	X	|O	|X	|O	|오차보정량 |
 |VGroove |	2 |	X |	O	|X	|O	| |
 |LRCen |	1	|O |	O	|X |	X |  |	
-|AP_Fillet |	2	|X |	X |	 O	| X |	진행거리 1,2 |
-|AP_Fillet2	|  2 |	X	|X	|O	  |X	| 진행거리 1,2 |
 |DetectGroove|	2 |	X |	O |	O |	X	| 진행거리1 </br> 후퇴거리1 |
 
 </center>
@@ -70,14 +67,12 @@
 1번 터치센싱조건 (명령어에서 Quick Open으로 사용자가 설정해놓은 조건들)에는 필렛, 2번 조건에는 버트, 3번 조건에는 V그루브로 작업물 타입이 지정되어있다고 가정할 때 예시는 아래와 같습니다. 
 
 - 명령어 구성
-  - ```touchsen``` TSC#=1, TF, TD, 0, P10, 0      1번 조건, 툴프로젝션 방향, 2점 터치
-  - ```touchsen``` TSC#=1, +X, -Y, -Z, P10, 0     1번 조건, 베이스좌표 방향, 3점 터치
-  - ```touchsen``` TSC#=1, P1, P2, 0, P10, 0      1번 조건, 포즈 방향, 2점 터치
-  - ```touchsen``` TSC#=1, +TZ, 0, 0, P10, 0      1번 조건, +TZ방향, 1점 터치
-  - ```touchsen``` TSC#=2, +TX, +TZ, 3, P10, V1!  2번 조건, 툴좌표계 방향, 바닥터치 후3mm 상승
-  - ```touchsen``` TSC#=2, P1, P2, 2, P10, V1!    2번 조건, 포즈 방향, 바닥터치 후2mm 상승
-  - ```touchsen``` TSC#=3, -TY, +TZ, 3, P10, 0    3번 조건, 툴좌표계 방향
-  - ```touchsen``` TSC#=3, P1, P2, 3, P10, 0      3번 조건, 포즈 방향
+  - ```touchsen``` cnd=1, crd="robot", dir=[tf,td], pose=P10      1번 조건, 툴프로젝션 방향, 2점 터치
+  - ```touchsen``` cnd=1, crd="robot", dir=[+x,-y,-z], pose=P10     1번 조건, 베이스좌표 방향, 3점 터치
+  - ```touchsen``` cnd=1, crd="robot", dir[+tz], pose=P10     1번 조건, +TZ방향, 1점 터치
+  - ```touchsen``` cnd=2, crd="robot", dir=[+tx,+tz], lift_up=3, pose=P10, gap=var1  2번 조건, 툴좌표계 방향, 바닥터치 후3mm 상승
+  - ```touchsen``` cnd=3, crd="robot", dir=[-ty,+tz], lift_up=3, pose=P10    3번 조건, 툴좌표계 방향
+
 
 </br>
 
@@ -92,10 +87,9 @@
 </p>
 
 - 명령어 구성
-  - ```touchsen``` TSC#=1,P1,P2,P3,P10, 0
-  - ```touchsen``` TSC#=1,+X,-Y,-Z,P10, 0
-  - ```touchsen``` TSC#=1,TF,TD,0,P10 0
-  - ```touchsen``` TSC#=1,+TZ,0,0,P10 0  
+  - ```touchsen``` cnd=1, crd="robot", dir=[+x,-y, -z], pose=P10
+  - ```touchsen``` cnd=1, crd="robot", dir=[tf, td], pose=P10
+  - ```touchsen``` cnd=1, crd="robot", dir=[+tz], pose=P10
 
 
 - 툴프로젝션방식 : 툴좌표계의 Z축을 베이스 XYZ평면에 사영시켜 전진, 좌우, 하강방향을 결정하는 방식으로 TF(전진), TD(하강), TL(좌), TR(우) 를 조합하여 사용합니다. TL은 TF*RotZ(90), TR은 TF*RotZ(-90) 방향입니다.
@@ -115,8 +109,8 @@
 
 
 - 명령어 구성
-    - ```touchsen``` TSC#=3, -TY, +TZ, 3, P10, 0    3번 조건, 툴좌표계 방향
-    - ```touchsen``` TSC#=3, P1, P2, 5, P10, 0      3번 조건, 포즈 방향
+    - ```touchsen``` cnd=3, crd="tool", dir=[-ty,+tz], lift_up=3, pose=P10    3번 조건, 툴좌표계 방향
+
 - V그루브 타입은 V그루브 센싱에 사용할 수 있습니다. 단, 이때 툴의 위치와 방향은 위 그림과 유사하게 각의 2등분선 상에 위치해야 합니다.
 - 센싱을 위한 상승량은 최소 3mm이상이 되는 것이 안정적입니다.
 
@@ -131,8 +125,7 @@
 
 
 - 명령어 구성
-    - ```touchsen``` TSC#=2, +TX, +TZ, 3, P10, V1!  2번 조건, 툴좌표계 방향, 바닥센싱 후3mm 상승
-    - ```touchsen``` TSC#=2, P1, P2, 5, P10, V1!    2번 조건, 포즈 방향, 바닥센싱 후5mm 상승
+    - ```touchsen``` cnd=2, crd="tool", dir=[+tx,+tz], lift_up=3, pose=P10, gap=var_gap  2번 조건, 툴좌표계 방향, 바닥센싱 후3mm 상승
 
 - BUTT 타입은 그림과 같이 바닥면에 수직이게 툴을 위치시키는 것이 중요합니다.  
 - 센싱을 위한 바닥센싱 후 상승량은 최소 3mm이상이 되는 것이 안정적입니다.  
@@ -166,10 +159,10 @@ V그루브와 Butt의 경우 하단 좌우센싱 중점에서 작업물 방향�
 </p>       
 
 - 명령어 구성
-    - ```touchsen``` TSC#=1, +X, -Z, 0, Y30, P100, %V1!
-    - ```touchsen``` TSC#=1, +X, -Z, 0, TL30, P100, %V1!
-    - ```touchsen``` TSC#=2, TD, TF, 5, Y30, P100, %V1! ‘DetectGroove
-    - ```touchsen``` TSC#=2, TD, TF, 5, TL30, P100, %V1!‘DetectGroove
+    - ```touchsen``` cnd=1, crd="robot", dir=[+x,-z], angle=Y30, pose=P100
+    - ```touchsen``` cnd=1, crd="robot", dir=[+x,-z], angle=TL30, pose=P100
+    - ```touchsen``` cnd=2, crd="robot", dir=[td,tf], lift_up=5, angle=Y30, pose=P100
+    - ```touchsen``` cnd=2, crd="robot", dir=[td,tf], angle=TL30, pose=P100 !‘DetectGroove
 
 작업물 타입과 명령어에 지정된 센싱방향 지정좌표계에 따라 지정이 가능한 각도회전 축은 아래 표와 같습니다.
 
@@ -184,9 +177,9 @@ V그루브와 Butt의 경우 하단 좌우센싱 중점에서 작업물 방향�
 </center>
 
 Master/Execution Mode와 연동하는 터치센싱 사용법은 다음과 같습니다. 
-Master 모드에선 PAR 번호에 해당하는 포즈번호에 센싱한 포즈가 저장되며, Execution 모드에선 현재 센싱한 포즈를 Master 모드에서 센싱했던 포즈와 비교하여 쉬프트량을 계산하고 PAR번호에 해당하는 쉬프트변수에 시프트량이 기록됩니다.
+Master 모드에선 사용자가 mpose 입력인자에 지정한 변수에 센싱한 포즈가 저장되며, Execution 모드에선 현재 센싱한 포즈를 Master 모드에서 센싱했던 포즈와 비교하여 쉬프트량을 계산하고 사용자가 mshift 입력인자에 지정한 변수에 시프트량이 기록됩니다.
 
 - 명령어 구성
-    - ```touchsen``` TSC#=1, +X, -Z, 0, X0, PAR=10, %V1!
+    - ```touchsen``` cnd=1, crd="robot", dir=[+x,-z], mpose=P10, mshift=sft_var1+X, -Z, 0, X0, PAR=10, %V1!
 
-PAR은 Pose And Shift의 약자로 포즈 또는 쉬프트변수의 번호를 할당합니다. 위 명령어는 Master 모드에서 P10포즈변수에 센싱한 포즈가 저장되고 Execution 모드에서 센싱했을 때 Master 모드와의 시프트 양이 자동으로 계산되어 R0번에 저장됩니다.
+위 명령어는 Master 모드에서 P10포즈변수에 센싱한 포즈가 저장되고 Execution 모드에서 센싱했을 때 Master 모드와의 시프트 양이 자동으로 계산되어 sft_var1변수에 저장됩니다.

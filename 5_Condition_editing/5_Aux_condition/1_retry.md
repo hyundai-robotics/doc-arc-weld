@@ -7,8 +7,8 @@ Arc용접 설정이 디지털일 때 용접시작조건 대화상자에서 [F1: 
 
   
 <p align="center">
- <img src="../../_assets/5_9.png" width="70%"></img>
- <em><p align="center">그림 5.9 용접보조조건(재시도) 설정(EWM 용접기)</p></em>
+ <img src="../../_assets/5_7.png" width="70%"></img>
+ <em><p align="center">그림 5.7 용접보조조건(재시도) 설정(EWM 용접기)</p></em>
 </p>
 
  {% hint style="info" %}
@@ -54,7 +54,7 @@ Arc용접 설정이 디지털일 때 용접시작조건 대화상자에서 [F1: 
     
 
 <p align="center">
- <img src="../../_assets/5_10.png" width="80%"></img>
- <em><p align="center">그림 5.10 재시도 기능 순서</p></em>
+ <img src="../../_assets/5_8.png" width="80%"></img>
+ <em><p align="center">그림 5.8 재시도 기능 순서</p></em>
 </p>
 

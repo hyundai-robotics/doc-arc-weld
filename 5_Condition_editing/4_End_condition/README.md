@@ -3,8 +3,8 @@
 Arc용접 설정이 디지털이고 용접시작조건 대화상자에서 [F2: 종료조건] 키를 누르면 다음과 같은 용접종료조건 편집화면이 나타납니다.
 
 <p align="center">
- <img src="../../_assets/5_7.png" width="70%"></img>
- <em><p align="center">그림 5.7 용접종료조건 설정 (디지털 EWM 용접기 예)</p></em>
+ <img src="../../_assets/5_5.png" width="70%"></img>
+ <em><p align="center">그림 5.5 용접종료조건 설정 (디지털 EWM 용접기 예)</p></em>
 </p> 
 
 
@@ -54,8 +54,8 @@ Arc용접 설정이 디지털이고 용접시작조건 대화상자에서 [F2: �
     본 조건과 종료조건 사이에 전류 변화를 슬로프로 처리하는 시간을 설정합니다.  
 
 <p align="center">
- <img src="../../_assets/5_8.png" width="30%"></img>
- <em><p align="center">그림 5.8 DownSlope 시간과 Crate 시간 차트</p></em>
+ <img src="../../_assets/5_6.png" width="30%"></img>
+ <em><p align="center">그림 5.6 DownSlope 시간과 Crate 시간 차트</p></em>
 </p>
 
 (5)	조건유지시간: [1] 초 (범위: 0.1 ~ 10.0)   

@@ -13,5 +13,5 @@ STITCH 명령어 입력
 - ```S3 MOVE L, S=10mm/s, A3, T1```  
 	 - L : 반드시 직선 보간을 선택  
 	 - 10mm/s : 용접 속도, Stitch 용접의 ON 구간에서 속도, 반드시 단위를 mm/s로 선택
-- ARCON / ARCOF 명령어 함께 사용 → 용접 
+- arcon / arcoff 명령어 함께 사용 → 용접 
 {% endhint %}

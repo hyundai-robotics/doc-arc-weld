@@ -9,7 +9,7 @@
 
 - 문법
   
-    - WEAVON cnd=<위빙조건번호>	← 위빙 조건을 로딩하여 실행
+    - weaving on=<위빙조건번호>	← 위빙 조건을 로딩하여 실행
   
 </br>  
 
@@ -17,7 +17,7 @@
   
    - ```weaving on, cnd=1```  <span style="color: green"># 위빙 조건 1번을 로딩하여 실행</span>
    - ```arcon cnd=1``` <span style="color: green"># arcon 1번 조건으로 실행</span>
-   - ```MOVE L,S=100cm/min,A=0,T=0``` <span style="color: green"># 위의 위빙 조건대로 실행하며 로봇 이동</span>
+   - ```move L,spd=100cm/min,accu=0,tool=0``` <span style="color: green"># 위의 위빙 조건대로 실행하며 로봇 이동</span>
 
 
 - 세부 설명  
