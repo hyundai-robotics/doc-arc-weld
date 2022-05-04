@@ -1,7 +1,7 @@
-﻿# 5.3 용접시작조건 - arcon cnd=X 에서 [Quick Open]으로 실행
+﻿# 5.3 용접시작조건 - arcon cnd=X 에서 [quick open]으로 실행
 
 
-Arc용접 설정이 디지털이고, arcon cnd=X 명령라인에 커서가 있을 때, [Quick Open]키를 누르면 다음과 같이 용접시작조건의 편집화면이 나타납니다.
+Arc용접 설정이 디지털이고, ```arcon cnd=X``` 명령라인에 커서가 있을 때, [quick open]키를 누르면 다음과 같이 용접시작조건의 편집화면이 나타납니다.
 
 
  

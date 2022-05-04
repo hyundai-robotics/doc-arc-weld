@@ -2,7 +2,7 @@
 
 - 설명 
   
-    heightsen off문은 높이센싱(AVC,Arc 길이제어)을 종료하는 명령문입니다.
+    ```heightsen off``` 문은 높이센싱(AVC,Arc 길이제어)을 종료하는 명령문입니다.
 
 
 - 문법

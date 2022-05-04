@@ -42,7 +42,7 @@
 * [5. Arc 용접 조건 편집](5_Condition_editing/README.md)
   * [5.1 Arc 용접 조건 구성](5_Condition_editing/1_Condition_config/README.md)
   * [5.2 Arc 용접 타임차트](5_Condition_editing/2_Time_chart/README.md)
-  * [5.3 용접시작조건 - arcon cond=x에서 'Quick Open'으로 실행](5_Condition_editing/3_Start_condition/README.md)
+  * [5.3 용접시작조건 - arcon cond=x에서 'quick open'으로 실행](5_Condition_editing/3_Start_condition/README.md)
     * [5.3.1 용접 시작 조건 – HRWI 전용 설정](5_Condition_editing/3_Start_condition/1_hrwi_.md)
     * [5.3.2 용접 시작 조건 – Fronius 전용 설정](5_Condition_editing/3_Start_condition/2_fronius_.md)
     * [5.3.3 용접 시작 조건 – EWM 전용 설정](5_Condition_editing/3_Start_condition/3_ewm.md)
