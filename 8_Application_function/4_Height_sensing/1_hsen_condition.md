@@ -5,7 +5,7 @@
  
 <p align="center">
  <img src="../../_assets/8_17.png" width="70%"></img>
- <em><p align="center">8.17 높이센싱 조건 대화상자</p></em>
+ <em><p align="center">그림 8.17 높이센싱 조건 대화상자</p></em>
 </p>
 
 ---

@@ -1,4 +1,4 @@
-﻿# 8.5.2 stitch 명령어 작성 
+﻿# 8.6.2 stitch 명령어 작성 
  
 
 <p align="center">

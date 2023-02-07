@@ -1,4 +1,4 @@
-﻿# 8.5.3 stitch 기능 Prameter 설정
+﻿# 8.6.3 stitch 기능 Prameter 설정
 
 
 <p align="center">
