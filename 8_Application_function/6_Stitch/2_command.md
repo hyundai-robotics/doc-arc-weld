@@ -1,7 +1,10 @@
 ﻿# 8.5.2 stitch 명령어 작성 
  
-그림 8.22 스티치 명령어 작성 예시
 
+<p align="center">
+ <img src="../../_assets/8_23.png" width="60%"></img>
+ <em><p align="center">그림 8.23 스티치 명령어 작성 예시</p></em>
+</p>  
 
 
 ```stitch``` 명령어 입력

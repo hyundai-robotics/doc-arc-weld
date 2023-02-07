@@ -3,8 +3,8 @@
 터치센싱이란 작업물의 위치 및 용접시작점 혹은 용접끝점 검출을 위해 사용하는 기능입니다.
 
 <p align="center">
- <img src="../../_assets/8_4.png" width="35%"></img>
- <em><p align="center">그림 8.4 터치센싱의 예</p></em>
+ <img src="../../_assets/8_6.png"></img>
+ <em><p align="center">그림 8.6 터치센싱의 예</p></em>
 </p>
 
 
@@ -13,8 +13,8 @@
 
        
 <p align="center">
- <img src="../../_assets/8_5.png" width="90%"></img>
- <em><p align="center">그림 8.5 터치센싱 타입</p></em>
+ <img src="../../_assets/8_7.png" width="90%"></img>
+ <em><p align="center">그림 8.7 터치센싱 타입</p></em>
 </p>
 
 
@@ -22,8 +22,8 @@
 
 
 <p align="center">
- <img src="../../_assets/8_6.png" width="70%" ></img>
- <em><p align="center">그림 8.6 터치센싱 조건 편집화면</p></em>
+ <img src="../../_assets/8_8.png" width="70%" ></img>
+ <em><p align="center">그림 8.8 터치센싱 조건 편집화면</p></em>
 </p>
 
 
@@ -82,8 +82,8 @@
 [1] Fillet 타입
 
 <p align="center">
- <img src="../../_assets/8_7.png" width="60%"></img>
- <em><p align="center">그림 8.7 터치센싱 예 Fillet 타입</p></em>
+ <img src="../../_assets/8_9.png" width="60%"></img>
+ <em><p align="center">그림 8.9 터치센싱 예 Fillet 타입</p></em>
 </p>
 
 - 명령어 구성
@@ -101,8 +101,8 @@
 [2] V Groove 타입
 
 <p align="center">
- <img src="../../_assets/8_8.png" width="70%"></img>
- <em><p align="center">그림 8.8 터치센싱 예 V Groove 타입</p></em>
+ <img src="../../_assets/8_10.png" width="70%"></img>
+ <em><p align="center">그림 8.10 터치센싱 예 V Groove 타입</p></em>
 </p>   
 
 
@@ -119,8 +119,8 @@
 [3] BUTT 타입
 
 <p align="center">
- <img src="../../_assets/8_9.png" width="30%"></img>
- <em><p align="center">그림 8.9 터치센싱 예 Butt 타입</p></em>
+ <img src="../../_assets/8_11.png" width="30%"></img>
+ <em><p align="center">그림 8.11 터치센싱 예 Butt 타입</p></em>
 </p>   
 
 
@@ -137,8 +137,8 @@
 
 
 <p align="center">
- <img src="../../_assets/8_10.png" width="40%"></img>
- <em><p align="center">그림 8.10 터치센싱 시퀀스 Butt 타입</p></em>
+ <img src="../../_assets/8_12.png" width="40%"></img>
+ <em><p align="center">그림 8.12 터치센싱 시퀀스 Butt 타입</p></em>
 </p>   
 
 V그루브와 Butt의 경우 하단 좌우센싱 중점에서 작업물 방향으로 내린 점이 계산된 포즈가 됩니다. DetectGroove의 경우 하단센싱→상승량만큼 상승→전진을 반복합니다. 사용자가 지정한 탐지기준보다 더 내려갈 경우 하단센싱중에 멈추게 되고 그 점이 찾은 포즈가 됩니다. 
@@ -154,8 +154,8 @@ V그루브와 Butt의 경우 하단 좌우센싱 중점에서 작업물 방향�
 그림 8.18은 필렛과 DetectGroove작업물에서 Y축 또는 TL축으로 30도 회전한 예입니다.
 
 <p align="center">
- <img src="../../_assets/8_11.png" width="300"></img>
- <em><p align="center">그림 8.11 터치센싱 예 각도설정</p></em>
+ <img src="../../_assets/8_13.png" width="300"></img>
+ <em><p align="center">그림 8.13 터치센싱 예 각도설정</p></em>
 </p>       
 
 - 명령어 구성
