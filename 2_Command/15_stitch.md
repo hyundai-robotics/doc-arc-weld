@@ -1,4 +1,4 @@
-﻿# 2.14 stitch
+﻿# 2.15 stitch
 
 - 설명 
     
@@ -7,8 +7,8 @@
 
 - 문법
   
-    - stitch on#=<조건번호>
-    - stitch off
+    - ```stitch``` on, cnd=<조건번호>
+    - ```stitch``` off
 
 - 파라미터
   
@@ -19,7 +19,7 @@
 </br>  
 
 - 사용 예
-  
-   - ```stitch on#=2```  <span style="color: green">#  스티치 2번 조건 실행</span>
-   - ```stitch off ```   <span style="color: green">#  스티치 기능 종료</span>
-
+```python
+   stitch on, cnd=2         #  스티치 2번 조건 실행
+   stitch off               #  스티치 기능 종료
+```

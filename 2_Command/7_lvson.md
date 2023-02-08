@@ -1,4 +1,4 @@
-﻿# 2.6 lvs
+﻿# 2.7 lvs
 
 - 설명 
     
@@ -6,8 +6,8 @@
 
 - 문법
   
-    - lvs track, cnd=<조건 번호>,seam=<seam번호>,sp=<포즈변수>
-    - lvs seamf, cnd=<조건 번호>,seam=<seam번호>
+    - ```lvs``` track, cnd=<조건 번호>,seam=<seam번호>,sp=<포즈변수>
+    - ```lvs``` seamf, cnd=<조건 번호>,seam=<seam번호>
 
 
 - 파라미터
@@ -30,9 +30,12 @@
 </br>  
 
 - 사용 예
-  
-   - ```lvs seamf, cnd=1, seam=10, sp=p10``` <span style="color: green"># 조건번호 1번, seam번호 10번으로 seam 파인딩 기능 수행, 결과포즈는 p10에 저장</span>
-   - ```lvs track, cnd=1 ,seam=10``` <span style="color: green"># 조건번호 1번, seam번호 10번으로 LVS 용접선 추종 시작</span>
+```python
+   lvs seamf, cnd=1, seam=10, sp=p10    
+   # 조건번호 1번, seam번호 10번으로 seam 파인딩 기능 수행, 결과포즈는 p10에 저장
+   lvs track, cnd=1 ,seam=10            
+   # 조건번호 1번, seam번호 10번으로 LVS 용접선 추종 시작
+```
 
 
 - 세부 설명

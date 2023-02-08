@@ -3,18 +3,19 @@
 
 - 설명 
     
-    위빙 동작을 종료하기 위한 명령어 입니다.
+    ```weaving off```는 위빙 동작을 종료하기 위한 명령어 입니다.
 
 
 - 문법
   
-    - weaving off
+    - ```weaving off```
   
 </br>  
 
 - 사용 예
-  
-   - ```weaving off``` 
+```python
+   weaving off
+```
 
 
 - 세부 설명

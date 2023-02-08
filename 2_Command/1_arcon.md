@@ -8,10 +8,10 @@
 
 - 문법
   
-    - arcon 
-    - arcon cnd=<조건번호> 
-    - arcon cnd=<조건번호>,job=<용접 Job번호>,cur=<전류값>,vol=<전압값>, vol_offset=<전압 옵셋값>
-    - arcon cnd=<조건번호>,job=<용접 Job번호>  
+    - ```arcon``` 
+    - ```arcon``` cnd=<조건번호> 
+    - ```arcon``` cnd=<조건번호>,job=<용접 Job번호>,cur=<전류값>,vol=<전압값>, vol_offset=<전압 옵셋값>
+    - ```arcon``` cnd=<조건번호>,job=<용접 Job번호>  
         → Job 모드 지원 용접기 전용
 
 - 파라미터
@@ -38,12 +38,12 @@
 </br>  
 
 - 사용 예
-  
-   - ```arcon``` <span style="color: green"> # 이전에 수행했던 용접조건으로 설정한 조건대로 용접개시. 재시도, 재 기동은 미 실행. </span>
-  - ```arcon cnd=1``` <span style="color: green"> # 지정한 용접시작조건 설정대로 용접개시.</span>
-  - ```arcon cnd=1,cur=200,vol=22``` <span style="color: green"> # 전류, 전압은 입력된 값으로 적용하고 그 외의 용접 조건은 용접시작조건번호의 조건으로 용접개시.</span>
-  - ```arcon cnd=1,job=5``` <span style="color: green"> # 용접 모드는 Job모드로 적용. 5번 job번호 사용. 그 외의 용접 조건은 용접시작조건번호의 조건으로 용접개시.</span>
-
+```python
+   arcon  # 이전에 수행했던 용접조건으로 설정한 조건대로 용접개시. 재시도, 재 기동은 미 실행
+   arcon cnd=1  # 지정한 용접시작조건 설정대로 용접개시
+   arcon cnd=1,cur=200,vol=22  # 전류, 전압은 입력된 값으로 적용하고 그 외의 용접 조건은 용접시작조건번호의 조건으로 용접개시
+   arcon cnd=1,job=5 # 용접 모드는 Job모드로 적용. 5번 job번호 사용. 그 외의 용접 조건은 용접시작조건번호의 조건으로 용접개시
+```
 
 - 세부 설명  
   [[5장 Arc용접 조건 편집]](../5_Condition_editing/README.md) 참고

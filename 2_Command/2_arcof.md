@@ -9,8 +9,8 @@
 
 - 문법
   
-    - arcoff  
-    - arcoff welder=2, delay=30
+    - ```arcoff```  
+    - ```arcoff``` welder=2, delay=30
 
 - 파라미터
   
@@ -24,9 +24,11 @@
 </br>  
 
 - 사용 예
-  
-   - ```arcoff``` <span style="color:green"> #특별한 종료처리 없이 Arc 용접을 종료 함.</span>
-   - ```arcoff welder=2, delay=1``` <span style="color:green">#2번째 용접기 아크를 1초 후 off </span>
+
+ ```python
+    arcoff  #특별한 종료처리 없이 Arc 용접을 종료 함
+    arcoff welder=2, delay=1#2번째 용접기 아크를 1초 후 off 
+```
 
 - 세부 설명  
   [[5장 Arc용접 조건 편집]](../5_Condition_editing/README.md) 참고

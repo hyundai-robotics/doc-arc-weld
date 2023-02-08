@@ -1,4 +1,4 @@
-﻿# 2.13 touchsen
+﻿# 2.14 touchsen
 
 - 설명
     
@@ -7,10 +7,10 @@
 
 - 문법
   
-    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, pose=<저장할 포즈>
-    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, angle=<탐색각도>, pose=<저장할 포즈>
-    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, lift_up=<들어올릴 양>, pose=<저장할 포즈>, gap=<butt gap 변수>
-    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모드 저장할 기준포즈>, mshift=<양산모드 계산된 쉬프트 변수>
+    - ```touchsen``` cnd=<조건번호>, crd=<좌표계>, dir=<방향>, pose=<저장할 포즈>
+    - ```touchsen``` cnd=<조건번호>, crd=<좌표계>, dir=<방향>, angle=<탐색각도>, pose=<저장할 포즈>
+    - ```touchsen``` cnd=<조건번호>, crd=<좌표계>, dir=<방향>, lift_up=<들어올릴 양>, pose=<저장할 포즈>, gap=<butt gap 변수>
+    - ```touchsen``` cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모드 저장할 기준포즈>, mshift=<양산모드 계산된 쉬프트 변수>
 
 
 - 파라미터
@@ -42,14 +42,14 @@
 </br>  
 
 - 사용 예
-  -	```var var1=0```  
-<span style="color: green"># butt 작업물 센싱시 측정된 gap을 저장할 변수를 선언한다.</span>
-  -	```var P10=cpo()```  
-<span style="color: green"># 포즈변수 P10을 선언하고 현재포즈를 저장해둔다.</span>  
-  -	```touchsen cnd=2, crd="tool", dir=[+y], lift_up=3, pose=P10, gap=var1```  
-<span style="color: green"># 2번 조건, 툴좌표계 방향, 바닥센싱 후3mm 상승, 갭은 var1변수에 저장</span>
-  - ```touchsen cnd=1, crd="tool", dir=[tf, td], pose=P10, 0```      
-<span style="color: green"># 1번 조건, 툴프로젝션 방향, 2점 터치</span>
-  - ```touchsen cnd=1, crd="base", dir=[+x,-y,-z], pose=P10, 0```     
-<span style="color: green"># 1번 조건, 베이스좌표 방향, 3점 터치</span>
+```python
+  var var1=0      # butt 작업물 센싱시 측정된 gap을 저장할 변수를 선언한다.
+  var P10=cpo()   # 포즈변수 P10을 선언하고 현재포즈를 저장해둔다.
+  touchsen cnd=2, crd="tool", dir=[+y], lift_up=3, pose=P10, gap=var1
+  # 2번 조건, 툴좌표계 방향, 바닥센싱 후3mm 상승, 갭은 var1변수에 저장
+  touchsen cnd=1, crd="tool", dir=[tf, td], pose=P10, 0
+  # 1번 조건, 툴프로젝션 방향, 2점 터치
+  touchsen cnd=1, crd="base", dir=[+x,-y,-z], pose=P10, 0     
+  # 1번 조건, 베이스좌표 방향, 3점 터치
+```
 

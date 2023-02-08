@@ -1,4 +1,4 @@
-﻿# 2.9 heightsen off
+﻿# 2.10 heightsen off
 
 - 설명 
   
@@ -7,14 +7,14 @@
 
 - 문법
   
-    - heightsen off
+    - ```heightsen off```
       
 </br>  
 
 - 사용 예
-  
-   - ```heightsen off```   <span style="color: green"># 높이센싱 실행을 종료</span>
-
+```python   
+   heightsen off            # 높이센싱 실행을 종료
+```
 
 - 세부 설명
   

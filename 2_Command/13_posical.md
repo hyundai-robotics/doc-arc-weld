@@ -1,4 +1,4 @@
-﻿# 2.12 posi_calib
+﻿# 2.13 posi_calib
 
 - 설명 
     
@@ -6,7 +6,7 @@
 
 - 문법
   
-  	posi_calib job=<프로그램 번호>, p_=<포지셔너 그룹번호>
+  	```posi_calib``` job=<프로그램 번호>, p_=<포지셔너 그룹번호>
 
 - 파라미터
   
@@ -21,6 +21,6 @@
 </br>
 
 - 사용 예
-  
-   ```posi_calib job=9997,p_=2 ```   
-   <span style="color: green">#  9997.JOB 의 작업 프로그램, 2번 Station을 캘리브레이션 함.</span>
+```python
+   posi_calib job=9997,p_=2     #  9997.JOB 의 작업 프로그램, 2번 Station을 캘리브레이션 함
+```

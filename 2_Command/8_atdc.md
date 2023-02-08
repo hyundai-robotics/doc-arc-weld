@@ -1,4 +1,4 @@
-﻿# 2.7 atdc
+﻿# 2.8 atdc
 
 - 설명 
   
@@ -23,9 +23,9 @@
 </br>  
 
 - 사용 예
-  
-   - ```atdc T=1,OrgP=P1,NewP=P2```
-
+ ```python 
+   atdc T=1,OrgP=P1,NewP=P2
+```
 
 - 세부 설명
   

@@ -1,14 +1,14 @@
-﻿# 2.8 heightsen on
+﻿# 2.9 heightsen on
 
 - 설명 
   
-    ```heightsen``` 문은 높이센싱(AVC, Arc 길이제어)을 시작하는 명령문입니다.
+    ```heightsen on``` 문은 높이센싱(AVC, Arc 길이제어)을 시작하는 명령문입니다.
 자세한 내용은 ‘높이 센싱’ 부분을 참고하십시오.
 
 
 - 문법
   
-    - heightsen on, cnd=<높이센싱 조건번호>
+    - ```heightsen on```, cnd=<높이센싱 조건번호>
 
 - 파라미터
   
@@ -19,9 +19,9 @@
 </br>  
 
 - 사용 예
-  
-   - ```heightsen on, cnd=1```  <span style="color: green"># 높이센싱 1번 조건으로 높이센싱을 시작</span>
-
+```python   
+   heightsen on, cnd=1        # 높이센싱 1번 조건으로 높이센싱을 시작
+```
 
 - 세부 설명
   
