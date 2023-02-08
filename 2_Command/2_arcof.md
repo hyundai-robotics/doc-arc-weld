@@ -26,8 +26,8 @@
 - 사용 예
 
  ```python
-    arcoff  #특별한 종료처리 없이 Arc 용접을 종료 함
-    arcoff welder=2, delay=1#2번째 용접기 아크를 1초 후 off 
+    arcoff                    #특별한 종료처리 없이 Arc 용접을 종료 함
+    arcoff welder=2, delay=1  #2번째 용접기 아크를 1초 후 off 
 ```
 
 - 세부 설명  
