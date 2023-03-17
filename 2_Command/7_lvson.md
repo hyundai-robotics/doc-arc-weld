@@ -1,17 +1,63 @@
 ﻿# 2.7 lvs
 
-- 설명 
-    
-    ```lvs``` 문은 LVS 용접선 추종 기능을 시작하는 명령어입니다.
+### 설명 
+```lvs``` 문은 LVS 용접선 추종 기능을 시작하는 명령어입니다.
 
-- 문법
-  
-    - ```lvs``` track, cnd=<조건 번호>,seam=<seam번호>,sp=<포즈변수>
-    - ```lvs``` seamf, cnd=<조건 번호>,seam=<seam번호>
+### 문법
+```python
+lvs track, cnd=<조건 번호>,seam=<seam번호>,sp=<seam포즈>
+lvs seamf, cnd=<조건 번호>,seam=<seam번호>
+```
+
+### 파라미터
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">항목</th>
+      <th style="text-align:left">의미</th>
+      <th style="text-align:left">기타</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">track/seamf</td>
+      <td style="text-align:left">
+        track: 트래킹. LVS를 이용하여 실시간 트래킹을 수행하는 명령어입니다. <br>
+        seamf : 심파인딩. LVS를 이용하여 현재 수신하고 있는 위치를 포즈로 변환하여 저장합니다.
+      </td>
+      <td style="text-align:left">문자열</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">조건 번호</td>
+      <td style="text-align:left">
+        LVS 기능 실행 시 사용되는 LVS조건번호
+        (1 ~ 32)
+      <td style="text-align:left">변수</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">seam번호</td>
+      <td style="text-align:left">
+        seam 번호를 지정합니다. 해당 번호는 LVS 컨트롤러에 전송되어 LVS센서가 해당번호의 seam으로 센싱을 하도록 합니다.
+      <td style="text-align:left">변수</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">seam포즈</td>
+      <td style="text-align:left">
+        시작점, 종료점, seamf 로 찾은 포즈를 저장할 포즈변수를 지정합니다.
+      <td style="text-align:left">포즈변수</td>
+    </tr>
+  </tbody>
+</table>
 
 
-- 파라미터
-  
+
+
+
+
+
+
+
+- 
    ① 조건 번호
      - 내용 : LVS 기능 실행 시 사용되는 LVS조건번호
      - 범위 : 1~32
@@ -29,7 +75,7 @@
  
 </br>  
 
-- 사용 예
+### 사용 예
 ```python
    lvs seamf, cnd=1, seam=10, sp=p10    
    # 조건번호 1번, seam번호 10번으로 seam 파인딩 기능 수행, 결과포즈는 p10에 저장
