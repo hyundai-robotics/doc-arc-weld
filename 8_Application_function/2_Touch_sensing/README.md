@@ -37,7 +37,7 @@
 
    - ```touchsen``` cnd=1, crd="robot", dir=[+tx, +tz], lift_up=3, pose=P10, gap=var_gap
       - cnd=1		: 터치센싱 조건번호
-      - crd="robot" : 터치센싱 좌표계
+      - crd="robot" : 터치센싱 좌표계 ("robot", "tool", "tool_prj")
       - dir=[+tx, +tz]	: 탐색방향 파라미터 (직교, 포즈, 툴좌표, 툴프로젝션 입력 가능)
       - lift_up=3		: 바닥찍고 들어올릴 량 [mm] (Butt, V그루브), 탐지기준거리 (DetectGroove)
       - pose=P10		: 센싱하여 계산된 포즈가 저장될 포즈변수.
@@ -67,7 +67,7 @@
 1번 터치센싱조건 (명령어에서 [quick open]으로 사용자가 설정해놓은 조건들)에는 필렛, 2번 조건에는 버트, 3번 조건에는 V그루브로 작업물 타입이 지정되어있다고 가정할 때 예시는 아래와 같습니다. 
 
  ```python
-   touchsen cnd=1, crd="robot", dir=[tf,td], pose=P10        #1번 조건, 툴프로젝션 방향, 2점 터치
+   touchsen cnd=1, crd="tool_prj", dir=[tf,td], pose=P10        #1번 조건, 툴프로젝션 방향, 2점 터치
    touchsen cnd=1, crd="robot", dir=[+x,-y,-z], pose=P10     #1번 조건, 베이스좌표 방향, 3점 터치
    touchsen cnd=1, crd="robot", dir[+tz], pose=P10           #1번 조건, +TZ방향, 1점 터치
    touchsen cnd=2, crd="robot", dir="+tx", lift_up=3, pose=P10, gap=var1 #2번 조건, 툴좌표계 방향, 바닥터치 후3mm 상승
@@ -89,8 +89,8 @@
 - 명령어 작성 예시
 ```python
   touchsen cnd=1, crd="robot", dir=["+x","-y", "-z"], pose=P10
-  touchsen cnd=1, crd="robot", dir=["tf", "td"], pose=P10
-  touchsen cnd=1, crd="robot", dir=["+tz"], pose=P10
+  touchsen cnd=1, crd="tool_prj", dir=["tf", "td"], pose=P10
+  touchsen cnd=1, crd="tool", dir=["+tz"], pose=P10
 ```
 - 1점 센싱은 탐색방향을 한 개만 지정하고 2점 센싱은 탐색방향을 순차적으로 2개 지정, 3점 센싱은 탐색방향을 순차적으로 3개 지정합니다.
 - 툴 프로젝션 방식 : +ToolZ축을 베이스 XYZ 평면에 사영시켜 전진, 좌우, 하강 방향을 결정하는 방식입니다. TF(전진), TD(하강), TL(좌), TR(우)로 방향을 지정할 수 있습니다. TL은 TFRotZ(90), TR은 TFRotZ(-90) 방향입니다.
@@ -169,8 +169,8 @@ VGroove와 Butt의 경우 하단 좌우센싱 중점에서 작업물 방향으�
 ```python
    touchsen cnd=1, crd="robot", dir=["+x","-z"], angle=Y30, pose=P100
    touchsen cnd=1, crd="robot", dir=["+x","-z"], angle=TL30, pose=P100
-   touchsen cnd=2, crd="robot", dir=["td","tf"], lift_up=5, angle=Y30, pose=P100
-   touchsen cnd=2, crd="robot", dir=["td","tf"], angle=TL30, pose=P100   #DetectGroove
+   touchsen cnd=2, crd="tool_prj", dir=["td","tf"], lift_up=5, angle=Y30, pose=P100
+   touchsen cnd=2, crd="tool_prj", dir=["td","tf"], angle=TL30, pose=P100   #DetectGroove
 ```
 
 작업물 타입과 명령어에 지정된 센싱방향 지정좌표계에 따라 지정이 가능한 각도회전 축은 아래 표와 같습니다.
