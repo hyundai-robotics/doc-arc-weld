@@ -69,9 +69,9 @@
  ```python
    touchsen cnd=1, crd="tool_prj", dir=[tf,td], pose=P10        #1번 조건, 툴프로젝션 방향, 2점 터치
    touchsen cnd=1, crd="robot", dir=[+x,-y,-z], pose=P10     #1번 조건, 베이스좌표 방향, 3점 터치
-   touchsen cnd=1, crd="robot", dir[+tz], pose=P10           #1번 조건, +TZ방향, 1점 터치
-   touchsen cnd=2, crd="robot", dir="+tx", lift_up=3, pose=P10, gap=var1 #2번 조건, 툴좌표계 방향, 바닥터치 후3mm 상승
-   touchsen cnd=3, crd="robot", crd="robot", dir="-ty", lift_up=3, pose=P10   #3번 조건, 툴좌표계 방향
+   touchsen cnd=1, crd="tool", dir="+tz", pose=P10           #1번 조건, +TZ방향, 1점 터치
+   touchsen cnd=2, crd="tool", dir="+tx", lift_up=3, pose=P10, gap=var1 #2번 조건, 툴좌표계 방향, 바닥터치 후3mm 상승
+   touchsen cnd=3, crd="tool", dir="-ty", lift_up=3, pose=P10   #3번 조건, 툴좌표계 방향
  ```
 
 </br>
