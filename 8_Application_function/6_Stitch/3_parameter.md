@@ -29,7 +29,6 @@ Stitch Enable/Equipment Enable/Equipment Output
 
 
 {% hint style="warning" %}
-[**주의**]  
 - (4) ON 속력 : Stitch 구간에서 용접(ON) 구간의 속도 설정은 스텝 속도로 지정
 - (7) ON_dst, (8) OFF_dst, (9) Count 모두 입력 되어야 section2의 조건을 입력할 수 있음
 - (10) STITCH enable Port, (11) Equipment enable Port, (12) Equipment Output Port 모두 1을 입력해야 playback에서 stitch 용접이 됨. 그렇지 않을 경우 stitch 모션만 진행됨(용접X)
