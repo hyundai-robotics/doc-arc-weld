@@ -13,7 +13,7 @@ Hi6 제어기는 자동캘리브레이션을 지원합니다.
 
 <p align="center">
  <img src="../../_assets/8_28.png" width="90%"></img>
- <em><p align="center">그림 8.19 LVS 자동 캘리브레이션 티칭</p></em>
+ <em><p align="center">그림 8.20 LVS 자동 캘리브레이션 티칭</p></em>
 </p>
 
 이때 seam 인자는 LVS제어기에 등록한 형상정보 데이터베이스의 번호입니다.
