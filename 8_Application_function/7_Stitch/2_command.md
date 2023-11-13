@@ -9,7 +9,6 @@
 
 
 {% hint style="warning" %}
-[**주의**]  
 - ```S3 move L, spd=10mm/s, accu=3, tool=1```  
 	 - L : 반드시 직선 보간을 선택  
 	 - 10mm/s : 용접 속도, Stitch 용접의 ON 구간에서 속도, 반드시 단위를 mm/s로 선택
