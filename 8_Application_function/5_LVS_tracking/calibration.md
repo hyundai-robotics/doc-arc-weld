@@ -12,8 +12,8 @@ Hi6 제어기는 자동캘리브레이션을 지원합니다.
 다음과 같이 [명령입력]-[arcweld]-[lvs] 를 입력하여 티칭하십시오.
 
 ```python
-move L,spd=60%,accu=0,tool=0  # 캘리브레이션 시편 기준점 위치<br>
-lvs auto_calib, cnd=1, seam=1<br>
+move L,spd=60%,accu=0,tool=0  # 캘리브레이션 시편 기준점 위치
+lvs auto_calib, cnd=1, seam=1
 end
 ```
 
