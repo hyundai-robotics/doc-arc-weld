@@ -9,12 +9,13 @@ Hi6 제어기는 자동캘리브레이션을 지원합니다.
 테스트용도로 우선 사용하고자 한다면 당사에 문의하여 캘리브레이션 시편을 준비하십시오.
 
 2) 명령어 입력
-다음 그림과 같이 [명령입력]-[arcweld]-[lvs] 를 입력하여 티칭하십시오.
+다음과 같이 [명령입력]-[arcweld]-[lvs] 를 입력하여 티칭하십시오.
 
-<p align="center">
- <img src="../../_assets/8_28.png" width="90%"></img>
- <em><p align="center">그림 8.20 LVS 자동 캘리브레이션 티칭</p></em>
-</p>
+```python
+move L,spd=60%,accu=0,tool=0  # 캘리브레이션 시편 기준점 위치<br>
+lvs auto_calib, cnd=1, seam=1<br>
+end
+```
 
 이때 seam 인자는 LVS제어기에 등록한 형상정보 데이터베이스의 번호입니다.
 
