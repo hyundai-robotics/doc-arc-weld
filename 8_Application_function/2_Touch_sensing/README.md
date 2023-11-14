@@ -35,14 +35,14 @@
    - ```touchsen``` cnd=조건번호, crd=좌표계, dir=[탐색방향1, 탐색방향2, 탐색방향3], rotation=탐색방향각도, pose=결과포즈 저장변수, gap=butt gap 변수
    - ```touchsen``` cnd=조건번호, crd=좌표계, dir=[탐색방향1, 탐색방향2, 탐색방향3], rotation=탐색방향각도, mpose=결과포즈 저장변수, mshift=계산된시프트 변수, gap=butt gap 변수
 
-   - ```touchsen``` cnd=1, crd="robot", dir=[+tx, +tz], lift_up=3, pose=P10, gap=var_gap
+   - ```touchsen``` cnd=1, crd="robot", dir=[+x, -z], lift_up=3, pose=P10, gap=var_gap
       - cnd=1		: 터치센싱 조건번호
       - crd="robot" : 터치센싱 좌표계 ("robot", "tool", "tool_prj")
       - dir=[+tx, +tz]	: 탐색방향 파라미터 (직교, 포즈, 툴좌표, 툴프로젝션 입력 가능)
       - lift_up=3		: 바닥찍고 들어올릴 량 [mm] (Butt, V그루브), 탐지기준거리 (DetectGroove)
-      - pose=P10		: 센싱하여 계산된 포즈가 저장될 포즈변수.
+      - pose=P10		: 센싱하여 계산된 포즈가 저장될 포즈변수
       - gap=var_gap 	: BUTT 작업물일 경우 gap이 저장될 변수 (소수점 첫째 자리에서 반올림됨)
-      - [quick open] 키 	: 탐색속도, 퇴피속도, 탐색거리, 진행거리, 오차보정량, 터치방식(닿을 때, 땔 때) 지정가능
+      - [quick open] 키 	: 탐색속도, 퇴피속도, 탐색거리, 진행거리, 오차보정량, 터치방식(접촉시, 접촉해제시) 지정
 
 센싱방향은 작업물 타입에 따라 다음과 같이 지정할 수 있습니다.
 
@@ -93,7 +93,7 @@
   touchsen cnd=1, crd="tool", dir=["+tz"], pose=P10
 ```
 - 1점 센싱은 탐색방향을 한 개만 지정하고 2점 센싱은 탐색방향을 순차적으로 2개 지정, 3점 센싱은 탐색방향을 순차적으로 3개 지정합니다.
-- 툴 프로젝션 방식 : +ToolZ축을 베이스 XYZ 평면에 사영시켜 전진, 좌우, 하강 방향을 결정하는 방식입니다. TF(전진), TD(하강), TL(좌), TR(우)로 방향을 지정할 수 있습니다. TL은 TFRotZ(90), TR은 TFRotZ(-90) 방향입니다.
+- 툴 프로젝션 방식 : +ToolZ 벡터를 베이스 XYZ 평면에 사영시켜 전진, 좌우, 하강 방향을 결정하는 방식입니다. tf(전진), td(하강), tl(좌), tr(우)로 방향을 지정할 수 있습니다. tl=RotZ(90)*tf, tr=RotZ(-90)*tf 방향입니다.
 - 용접점이 너무 많아 포즈변수 관리가 어려울 경우 툴프로젝션 방식 (TPM)을 사용합니다.
 - 작업물에 회전량(RX, RY, RZ)이 존재하는 틀어진 Fillet의 경우 각도지정 옵션을 이용해 탐색방향을 변경할 수 있습니다.
 
@@ -144,7 +144,7 @@ Fillet의 경우 4가지 옵션에 따라 직교방향, 포즈방향, 툴프로�
 
 
 <p align="center">
- <img src="../../_assets/8_12.png" width="40%"></img>
+ <img src="../../_assets/8_12.png" width="60%"></img>
  <em><p align="center">그림 8.12 터치센싱 시퀀스 VGroove, Butt 타입</p></em>
 </p>   
 
