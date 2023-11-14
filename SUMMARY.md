@@ -77,6 +77,7 @@
   * [8.2 터치센싱 기능](8_Application_function/2_Touch_sensing/README.md)
   * [8.3 Arc 센싱 기능](8_Application_function/3_Arc_sensing/README.md)
     * [8.3.1 아크센싱 조건](8_Application_function/3_Arc_sensing/1_arcsen_condition.md)
+    * [8.3.2 아크센싱 캘리브레이션](8_Application_function/3_Arc_sensing/2_arcsen_calibration.md)
   * [8.4 높이센싱(Height Sensing) 기능](8_Application_function/4_Height_sensing/README.md)
     * [8.4.1 높이센싱 조건](8_Application_function/4_Height_sensing/1_hsen_condition.md)
   * [8.5 LVS(Laser Vision Sensor) 용접선 추적 및 검출 기능](8_Application_function/5_LVS_tracking/settings.md)
