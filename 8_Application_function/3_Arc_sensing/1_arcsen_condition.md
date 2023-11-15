@@ -79,7 +79,7 @@
     아래 그림과 같이 한구간의 전류에 대해 Q1-1.5*IQR, Q3+1.5*IQR 범위를 기본으로 합니다.
 
 <p align="center">
- <img src="../../_assets/8_28.png" width="70%"></img>
+ <img src="../../_assets/8_28.png" width="40%"></img>
  <em><p align="center">그림 8.16 비정상 판별 마진</p></em>
 </p>
 <br>
