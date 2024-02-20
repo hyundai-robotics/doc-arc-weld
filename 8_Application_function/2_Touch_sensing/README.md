@@ -55,13 +55,13 @@
 
 <center>
 
-|타입|	최대탐색 </br>방향개수 |	직교XYZ </br>(모든타입 </br>지원예정)	| 툴좌표계|	툴프로젝션</br>좌표계 |	포즈 |기타 입력인자|
-|:---:|	:---: |	:---:	| :---:|	:---: |	:---: |:---:|
-|Fillet|	3	|O|	O (1타점)|	O	|O|	후퇴거리|
-|Butt	|1 |	X	|O	|X	|O	|오차보정량 |
-|VGroove |	1 |	X |	O	|X	|O	| |
-|LRCen |	1	|O |	O	|X |	X |  |	
-|DetectGroove|	2 |	X |	O |	O |	X	| 진행거리1 </br> 후퇴거리1 |
+|타입|	최대탐색 </br>방향개수 |	직교XYZ </br>(모든타입 </br>지원예정)	| 툴좌표계|	툴프로젝션</br>좌표계 | 기타 입력인자 |
+|:---:|	:---: |	:---:	| :---:|	:---: |:---:|
+|Fillet|	3	|O|	O |	O	|	후퇴거리|
+|Butt	|1 |	X	|O	|X	| 오차보정량 |
+|VGroove |	1 |	X |	O	|X | |
+|LRCen |	1	|O |	O	|X |  |	
+|DetectGroove|	2 |	O |	O |	O | 진행거리1 </br> 후퇴거리1 </br> criteria |
 
 </center>
 
@@ -181,7 +181,7 @@ VGroove와 Butt의 경우 하단 좌우센싱 중점에서 작업물 방향으�
 | 타입	| 센싱방향 </br> 지정좌표계	| 각도지정축|
 |:---:|:---:|:---:|
 |Fillet	| 모든 좌표계	| 직교 XYZ축 </br>TL축 |
-|Detect Groove |	툴 (crd="tool") |	불가능 |
+|Detect Groove |	툴 (crd="tool") |	직교 XYZ축</br>TL축 |
 |Detect Groove	|툴 프로젝션 (crd="tool_prj")	|직교 XYZ축</br>TL축 |
 
 </center>
