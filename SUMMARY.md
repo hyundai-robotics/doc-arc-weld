@@ -31,7 +31,6 @@
   * [2.12 posi_calib](2_Command/12_posical.md)
   * [2.13 touchsen](2_Command/13_touchsen.md)
   * [2.14 stitch](2_Command/14_stitch.md)
-  * [2.15 calc_shift](2_Command/15_calcshift.md)
 * [3. QUICK OPEN 기능](3_Quick_open/README.md)
   * [3.1 개요](3_Quick_open/1_overall.md)
   * [3.2 상세 내용](3_Quick_open/2_details.md)
