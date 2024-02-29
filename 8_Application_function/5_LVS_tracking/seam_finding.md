@@ -18,8 +18,8 @@ lvs seam_find, cnd=1, seam=1, sp=po_100
 즉, 아래 그림과 같이 센싱 전 툴의 자세에 따라 저장된 포즈에서의 자세가 결정됩니다.
 
 <p align="center">
- <img src="../../_assets/lvs_seamfind_ex.png" width="30%"></img>
- <em><p align="center">그림. lvs 센싱 자세에 따른 포즈에서의 자세/p></em>
+ <img src="../../_assets/lvs_seamfind_ex.png" width="80%"></img>
+ <em><p align="center">그림. lvs 센싱 자세에 따른 포즈에서의 자세</p></em>
 </p>   
 </br>
 

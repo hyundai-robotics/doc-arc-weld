@@ -31,8 +31,8 @@ end
 이때 lvs 명령어의 seam 인자는 LVS controller에 등록한 형상정보 데이터베이스의 번호입니다.
 
 <p align="center">
- <img src="../../_assets/lvs_autocalib.png" width="30%"></img>
- <em><p align="center">그림. lvs 자동 캘리브레이션/p></em>
+ <img src="../../_assets/lvs_autocalib.png" width="80%"></img>
+ <em><p align="center">그림. lvs 자동 캘리브레이션</p></em>
 </p>   
 </br>
 
