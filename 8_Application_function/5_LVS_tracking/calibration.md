@@ -31,11 +31,11 @@ end
 이때 lvs 명령어의 seam 인자는 LVS controller에 등록한 형상정보 데이터베이스의 번호입니다.
 
 <p align="center">
- <img src="../../_assets/8_11.png" width="30%"></img>
+ <img src="../../_assets/lvs_autocalib.png" width="30%"></img>
  <em><p align="center">그림 8.11 터치센싱 예 Butt 타입</p></em>
 </p>   
 </br>
 
-4) 자동모드로 재생합니다.
+3) 자동모드로 재생합니다.
 
 이때 lvs 모니터링을 열어서 테이블의 info 항목에서 캘리브레이션이 모두 끝나면 표시가 됩니다.
