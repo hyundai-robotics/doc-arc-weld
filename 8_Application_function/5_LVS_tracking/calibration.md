@@ -32,7 +32,7 @@ end
 
 <p align="center">
  <img src="../../_assets/lvs_autocalib.png" width="30%"></img>
- <em><p align="center">그림 8.11 터치센싱 예 Butt 타입</p></em>
+ <em><p align="center">그림. lvs 자동 캘리브레이션/p></em>
 </p>   
 </br>
 
