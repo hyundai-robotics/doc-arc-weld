@@ -69,3 +69,21 @@ lvs 명령어에서 [속성] 창에 진입하면 seam finding parameter항목에
  <em><p align="center">그림. seam finding parameter 검사기능의 설정</p></em>
 </p>   
 </br>
+
+seam finding 수행 시 이 설정범위를 벗어나면 에러가 발생합니다.
+
+(3) lvs seamfinding 재시도 기능
+
+seam finding을 수행하였는데 센서에서 seam 인식이 불가능하다면 재시도를 수행합니다.
+
+재시도 횟수는 seam finding parameter의 no of retry 항목에 기입합니다.
+
+재시도 횟수만큼 센싱을 시도하여도 센싱이 불가능할 경우 에러가 발생합니다.
+
+재시도는 다음과 같은 위치로 이동하면서 수행합니다.
+
+<p align="center">
+ <img src="../../_assets/lvs_seamfind_retry.png" width="60%"></img>
+ <em><p align="center">그림. seam finding 재시도 기능</p></em>
+</p>   
+</br>
