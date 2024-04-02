@@ -12,7 +12,7 @@ LVS센서 제어기와 로봇 제어기간에 이더넷선을 이용해 접속�
 Communication 탭에서 다음항목을 설정합니다.
 
 
-LVS 브랜드 : Oxford(Meta), Scansonic(향후 지원예정)
+LVS 브랜드 : Scansonic, Oxford (or Meta)
 
 IP 주소 : 센서 제어기의 IP를 입력합니다.
 
@@ -24,8 +24,11 @@ IP 주소 : 센서 제어기의 IP를 입력합니다.
 2) 기본설정
 
 Tracking 탭에서 다음항목을 설정합니다. 디폴트값 사용을 권장합니다.
+
 P gain : 변환할 위치 및 방위로 TCP가 추종하는 세기를 지정합니다.
+
 D gain : 변환할 위치 및 방위에 TCP가 반응하는 속도를 지정합니다.
+
 Max tracking distance/sec : 초당 최대 추종량을 [mm]로 지정합니다.
 
 
