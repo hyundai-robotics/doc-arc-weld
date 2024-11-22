@@ -47,32 +47,7 @@ lvs seam_find, cnd=1, seam=1, side=10, height=10, sp=po_100
 
 위 명령어는 센싱한 위치에서 센싱시 툴의 자세로 tool_y 방향으로 10mm, tool_z 방향으로 10mm 이동된 포즈를 계산합니다.
 
-
-(2) Seam finding 시 파라미터 검사기능
-
-seam finding시 현재 lvs센서가 보고있는 seam의 형상에서 사용자가 설정해놓은 범위내에 각종 수치가 존재하는지 판단할 수 있습니다.
-
-수치는 gap, depth, side, height, left angle, right angle 등을 의미하며 다음 그림과 같습니다.
-
-<p align="center">
- <img src="../../_assets/lvs_seamfind_param_range.png" width="60%"></img>
- <em><p align="center">그림. seam finding 파라미터의 의미</p></em>
-</p>   
-</br>
-
-이 기능을 이용하면 로봇의 위치 비정상, 부재의 형상 비정상을 미리 판단하므로 용접 전에 미리 불량을 탐지하고 방지할 수 있습니다.
-
-lvs 명령어에서 [속성] 창에 진입하면 seam finding parameter항목에 아래 그림과 같이 사용자가 수치의 범위를 설정합니다.
-
-<p align="center">
- <img src="../../_assets/lvs_seamfind_param.png" width="60%"></img>
- <em><p align="center">그림. seam finding parameter 검사기능의 설정</p></em>
-</p>   
-</br>
-
-seam finding 수행 시 이 설정범위를 벗어나면 에러가 발생합니다.
-
-(3) lvs seamfinding 재시도 기능
+(2) lvs seamfinding 재시도 기능
 
 seam finding을 수행하였는데 센서에서 seam 인식이 불가능하다면 재시도를 수행합니다.
 

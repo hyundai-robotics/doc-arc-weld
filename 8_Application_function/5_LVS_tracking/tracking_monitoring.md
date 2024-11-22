@@ -57,7 +57,7 @@ lvs모니터링은 [창조정]-[분할]-[lvs 모니터링] 항목으로 활성�
 
 <p align="center">
  <img src="../../_assets/lvs_tracking_monitoring.png" width="80%"></img>
- <em><p align="center">그림. lvs 자동 캘리브레이션</p></em>
+ <em><p align="center">그림. lvs 모니터링</p></em>
 </p>   
 </br>
 
