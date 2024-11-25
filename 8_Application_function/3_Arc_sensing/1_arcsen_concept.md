@@ -6,8 +6,19 @@
 
 - 좌우 방향 보정 : 좌우 전류차 및 용접선 추출 알고리즘에 의해 로봇이 자동으로 용접선을 추종하여 이동합니다.
 - 상하 방향 보정 : 용접 시작시 높이 (CTWD)를 기준으로하여 이 값을 계속 유지합니다.
-                  만약 용접 도중 높이변화가 필요할 경우 job에 다음 명령어를 이용하여 사용자가 기준 전류값을 입력할 수 있습니다. _weaving.height_sensing_reference_current = 300 
-
+                  만약 용접 도중 높이변화가 필요할 경우 job에 다음 명령어를 이용하여 사용자가 기준 전류값을 입력할 수 있습니다. 
+```python
+move L, spd=30cm/min,accu=3,tool=0  # 진입스텝
+move L, spd=30cm/min,accu=3,tool=0  # 용접 시작스텝
+weaving on, cnd=1
+arc on, cnd=1
+move L, spd=30cm/min,accu=3,tool=0
+_weaving.height_sensing_reference_current = 300 # 높이 기준값을 300A로 설정
+move L, spd=30cm/min,accu=3,tool=0
+weaving off
+arc off
+end
+``` 
 
 <p align="center">
  <img src="../../_assets/8_30.png" width="70%"></img>
