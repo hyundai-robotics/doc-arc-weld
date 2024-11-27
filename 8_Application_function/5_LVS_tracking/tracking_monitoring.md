@@ -85,6 +85,15 @@ arcof
 end
 ```
 
+search 명령어 수행과정은 다음 그림과 같습니다. (탐색 유효, 방향 0 설정시)<br>
+유효 하지 않은 점을 시작점으로 찾아 sp에 저장한 후 시작점으로 이동하면서 데이터 버퍼를 채웁니다.
+
+<p align="center">
+ <img src="../../_assets/8_19_4.png" width="80%"></img>
+ <em><p align="center">그림. lvs search 과정</p></em>
+</p>   
+</br>
+
 (2) offset량을 지정한 tracking 사용법
 
 만약 용접선(seam)을 정확히 추종하는 것이 아닌 좌우 offset이나 높이 offset을 두고 추종하고자 한다면 lvs 명령어의 side와 height에 
