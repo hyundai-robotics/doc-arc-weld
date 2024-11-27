@@ -76,7 +76,7 @@ var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
 lvs search, cnd=1, seam=1, sp=po_100
 weavon cnd=1  
 arcon cnd=1
-lvs track, cnd=1, seam=1
+lvs track, cnd=1, seam=1, sp=po_100
 move L, spd=30cm/min, accu=3, tool=1
 move L, spd=36cm/min, accu=3, tool=1
 move L, spd=40cm/min, accu=3, tool=1
@@ -97,7 +97,7 @@ var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
 lvs search, cnd=1, seam=1, sp=po_100
 weavon cnd=1  
 arcon cnd=1
-lvs track, cnd=1, seam=1, side=5, height=-5 #ToolX방향으로 5mm, ToolZ방향으로 -5mm 옵셋 트래킹
+lvs track, cnd=1, seam=1, sp=po_100, side=5, height=-5 #ToolX방향으로 5mm, ToolZ방향으로 -5mm 옵셋 트래킹
 move L, spd=30cm/min, accu=3, tool=1
 move L, spd=36cm/min, accu=3, tool=1
 move L, spd=40cm/min, accu=3, tool=1
@@ -140,7 +140,8 @@ lvs모니터링은 [창조정]-[분할]-[lvs 모니터링] 항목으로 활성�
       센서
       </td>
       <td style="text-align:left">
-      qual은 센싱 무효,유효를 나타내며 Y, Z 값은 센서 이미지좌표계(2D)에서의 현재 센싱중인 seam의 위치 좌표입니다.
+      qual :  현재 레이저의 seam 센싱 무효,유효를 나타냅니다.<br> 
+      Y, Z : 센서 이미지좌표계(2D)에서의 현재 센싱중인 seam의 위치입니다.
       </td>
     </tr>
     <tr>
@@ -169,7 +170,7 @@ lvs모니터링은 [창조정]-[분할]-[lvs 모니터링] 항목으로 활성�
     </tr>
     <tr>
       <td style="text-align:left">실시간 이미지</td>
-      <td style="text-align:left">빨간 원들을 버퍼에 저장된 따라갈 점들이며 파란선은 현재 TCP에서 지금 센싱한 위치를 이은 직선입니다. </td>
+      <td style="text-align:left">빨간 원들을 버퍼에 저장된 따라갈 점들입니다.</td>
     </tr>
   </tbody>
 </table>
