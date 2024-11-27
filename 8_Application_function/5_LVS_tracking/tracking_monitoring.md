@@ -20,7 +20,7 @@ lvs 명령어의 [속성] 창에 진입하여 탐색 항목에 다음 항목을 
 
 <p align="center">
  <img src="../../_assets/8_19_3.png" width="80%"></img>
- <em><p align="center">그림. lvs 모니터링</p></em>
+ <em><p align="center">그림. lvs 명령어의 속성창</p></em>
 </p>   
 </br>
 
@@ -118,18 +118,59 @@ lvs모니터링은 [창조정]-[분할]-[lvs 모니터링] 항목으로 활성�
 </p>   
 </br>
 
-[1] 전체 누적 보정량 (X, Y, Z) : 위빙 미사용 시에는 base좌표 기준 누적 보정량, 위빙 사용시에는 위빙좌표계 기준 누적보정량을 의미합니다.
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">항목</th>
+      <th style="text-align:left">설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">
+      전체 누적 보정량 (X, Y, Z)
+      </td>
+      <td style="text-align:left">
+        위빙 미사용 시에는 base좌표계 기준 누적 보정량, 위빙 사용시에는 위빙 좌표계 기준 누적보정량을 의미합니다.
+      </td>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">
+      센서
+      </td>
+      <td style="text-align:left">
+      qual은 센싱 무효,유효를 나타내며 Y, Z 값은 센서 이미지좌표계(2D)에서의 현재 센싱중인 seam의 위치 좌표입니다.
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">툴 끝</td>
+      <td style="text-align:left">
+        현재 TCP의 base좌표계 기준 위치 입니다.
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">추종점</td>
+      <td style="text-align:left">
+        현재 TCP가 트래킹하고 있는 base좌표계 기준 점입니다.
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">센싱점</td>
+      <td style="text-align:left">현재 레이저가 보고있는 곳의 base좌표 값 입니다. </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">버퍼사이즈</td>
+      <td style="text-align:left">따라갈 점들이 저장되어 있는 버퍼의 개수입니다. 이 값이 계속 늘어나거나 계속 줄어들거나 0이 되면 tracking, 통신 혹은 설정상에 문제가 있는 것 입니다.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">정보</td>
+      <td style="text-align:left">자동캘리브레이션 진행상황 및 기타 정보를 표시합니다. </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">실시간 이미지</td>
+      <td style="text-align:left">빨간 원들을 버퍼에 저장된 따라갈 점들이며 파란선은 현재 TCP에서 지금 센싱한 위치를 이은 직선입니다. </td>
+    </tr>
+  </tbody>
+</table>
 
-[2] 센서 : qual은 센싱 무효,유효를 나타내며 Y, Z 값은 센서 이미지좌표계(2D)에서의 현재 센싱중인 seam의 위치 좌표입니다.
-
-[3] 툴끝 : 현재 TCP의 base좌표 입니다.
-
-[4] 추종점 : 현재 TCP가 트래킹하고 있는 점입니다.
-
-[5] 센싱점 : 현재 레이저가 보고있는 곳의 base좌표 값 입니다.
-
-[6] 버퍼사이즈 : 따라갈 점들이 저장되어 있는 버퍼의 개수입니다. 이 값이 계속 늘어나거나 계속 줄어들거나 0이 되면 tracking, 통신 혹은 설정상에 문제가 있는 것 입니다.
-
-[7] 정보 : 자동캘리브레이션 진행상황 및 기타 정보를 표시합니다.
-
-[8] 실시간 이미지 : 빨간 원들을 버퍼에 저장된 따라갈 점들이며 파란선은 현재 TCP에서 지금 센싱한 위치를 이은 직선입니다.
