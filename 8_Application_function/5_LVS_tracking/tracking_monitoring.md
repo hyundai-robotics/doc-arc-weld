@@ -2,13 +2,70 @@
 
 (1) tracking 개요
 
-LVS로 tracking을 하려면 search가 선행되어야 합니다.
+LVS 트래킹은 티칭된 궤적과 실제 용접선의 차이를 보정해주는 기능입니다.
 
-search는 시점(또는 종점)을 찾고 그 위치로 이동하면서 따라갈 점들을 버퍼에 저장하기 때문입니다.
+{% hint style="warning" %}
+기준 작업물에 대한 기준티칭은 정밀하게 수행되어야 합니다.<br>
+작업물의 위치 오차를 보정하기 위한 쉬프트를 적용한 후 LVS 기능을 사용하십시오.<br>
+해당내용은 8.5.5 LVS master mode 기능을 참고하십시오.
+{% endhint %}
 
-search 무효일 경우 명령어 실행 시 레이저가 보고있는 위치로 이동하며 버퍼를 채웁니다.
+레이저는 TCP보다 앞에 장착되어 있으므로 트래킹을 수행하기 위해서는 search 를 먼저 수행하여야 합니다. 
 
-search 유효일 경우 조건에 설정한 탐색방향(ToolX 또는 -ToolX방향)으로 이동하면서 시점(또는 종점)을 찾고 찾은 위치로 이동하면서 버퍼를 채웁니다.
+{% hint style="info" %}
+search는 시점(또는 종점)을 찾고 그 위치로 이동하면서 추종할 점들을 버퍼에 저장합니다.
+{% endhint %}
+
+lvs 명령어의 [속성] 창에 진입하여 탐색 항목에 다음 항목을 설정하십시오.
+
+<p align="center">
+ <img src="../../_assets/8_19_3.png" width="80%"></img>
+ <em><p align="center">그림. lvs 모니터링</p></em>
+</p>   
+</br>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">항목</th>
+      <th style="text-align:left">설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">search 기능 무효</td>
+      <td style="text-align:left">
+        레이저 라인의 seam을 시작점으로 하여 TCP가 시작점으로 이동하면서 추종할 점들을 버퍼에 저장합니다.
+      </td>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">search 기능 유효</td>
+      <td style="text-align:left">
+        방향이 0인 경우 : +ToolX 방향으로 시작점을 탐색한 후 버퍼를 채우며 시작점으로 이동합니다.<br>
+        방향이 1인 경우 : -ToolX 방향으로 시작점을 탐색한 후 버퍼를 채우며 시작점으로 이동합니다.
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">거리</td>
+      <td style="text-align:left">
+        탐색이 유효로 설정되어 있을 경우 시점을 탐색할 최대거리를 입력합니다. [mm]
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">속도</td>
+      <td style="text-align:left">
+        탐색시 이동속도 [mm/sec] 를 입력합니다.
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">옵셋</td>
+      <td style="text-align:left">찾은 시작점에서 용접선 방향으로 쉬프트할 거리를 입력합니다. [mm]
+        찾은 시작점
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 따라서 LVS명령어의 구성은 다음과 같이 구성하여야 합니다.
 
