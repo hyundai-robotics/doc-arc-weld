@@ -31,7 +31,7 @@
   * [2.12 posi_calib](2_Command/12_posical.md)
   * [2.13 touchsen](2_Command/13_touchsen.md)
   * [2.14 stitch](2_Command/14_stitch.md)
-* [3. QUICK OPEN 기능](3_Quick_open/README.md)
+* [3. 명령어 [속성]창 (QUICK OPEN)](3_Quick_open/README.md)
   * [3.1 개요](3_Quick_open/1_overall.md)
   * [3.2 상세 내용](3_Quick_open/2_details.md)
 * [4. Arc 용접기 설정](4_Setting/README.md)
