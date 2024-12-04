@@ -94,6 +94,6 @@
     * [8.6.2 STITCH 명령어 작성](8_Application_function/6_Stitch/2_command.md)
     * [8.6.3 STITCH 기능 파라미터 설정](8_Application_function/6_Stitch/3_parameter.md)
     * [8.6.4 STITCH 기능 부가 사양](8_Application_function/6_Stitch/4_aux_spec.md)
-
+  * [8.7 Arc trajectory 모니터링](8_Application_function/8_Arc_trj_mgr/README.md)
 
 
