@@ -62,6 +62,7 @@
   * [6.2 참조점 기능](6_Weaving_function/2_Reference_point/README.md)
     * [6.2.1 참조점 종류](6_Weaving_function/2_Reference_point/1_sorts.md)
     * [6.2.2 참조점 편집](6_Weaving_function/2_Reference_point/2_editing.md)
+  * [6.3 Weav sync out 기능](6_Weaving_function/3_Weav_sync_out/README.md)
 * [7. 용접 데이터 모니터링](7_Monitoring/README.md)
   * [7.1 Arc 용접 데이터 실시간 모니터링](7_Monitoring/1_Realtime_monitoring/README.md)
     * [7.1.1 세부 정보 모니터링](7_Monitoring/1_Realtime_monitoring/1_detail_mon.md)
