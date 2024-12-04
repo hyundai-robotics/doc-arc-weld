@@ -122,7 +122,7 @@ lvs모니터링은 [창조정]-[분할]-[lvs 모니터링] 항목으로 활성�
 모니터링에서는 다음과 같은 항목을 확인할 수 있습니다.
 
 <p align="center">
- <img src="../../_assets/lvs_tracking_monitoring.png" width="80%"></img>
+ <img src="../../_assets/tracking_monitoring.png" width="80%"></img>
  <em><p align="center">그림. lvs 모니터링</p></em>
 </p>   
 </br>
