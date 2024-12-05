@@ -10,7 +10,7 @@
 ```python
 move L, spd=30cm/min,accu=3,tool=0  # 진입스텝
 move L, spd=30cm/min,accu=3,tool=0  # 용접 시작스텝
-weaving on, cnd=1
+weaving on, cnd=1 # [속성] 창의 아크센싱 기능 '유효'로 설정
 arc on, cnd=1
 move L, spd=30cm/min,accu=3,tool=0
 _weaving.height_sensing_reference_current = 300 # 높이 기준값을 300A로 설정
