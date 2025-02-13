@@ -32,7 +32,6 @@
   * [2.13 touchsen](2_Command/13_touchsen.md)
   * [2.14 stitch](2_Command/14_stitch.md)
   * [2.15 calcshift](2_Command/15_calcshift.md)
-  * [2.16 lps](2_Command/16_lps.md)
 * [3. 명령어 속성창](3_Quick_open/README.md)
   * [3.1 개요](3_Quick_open/1_overall.md)
   * [3.2 상세 내용](3_Quick_open/2_details.md)
@@ -98,9 +97,4 @@
     * [8.6.3 STITCH 기능 파라미터 설정](8_Application_function/6_Stitch/3_parameter.md)
     * [8.6.4 STITCH 기능 부가 사양](8_Application_function/6_Stitch/4_aux_spec.md)
   * [8.7 Arc trajectory 모니터링](8_Application_function/8_Arc_trj_mgr/README.md)
-  * [8.9 LPS 기능](8_Application_function/9_LPS/README.md)
-    * [8.9.1 레이저 센서 기본설정](8_Application_function/9_LPS/1_settings.md)
-    * [8.9.2 TCP-센서 캘리브레이션](8_Application_function/9_LPS/2_calibration.md)
-    * [8.9.3 lps 사용](8_Application_function/9_LPS/3_function.md)
-
 
