@@ -1,4 +1,4 @@
-﻿# 8.5.1 LVS(Laser Vision Sensor) 기본설정
+﻿# 8.5.2 LVS(Laser Vision Sensor) 기본설정
 
 LVS기능을 사용하기 위해서는 통신설정 및 센서 설치가 필요합니다.<br>
 지금부터 해당 과정을 살펴보겠습니다.<br><br>

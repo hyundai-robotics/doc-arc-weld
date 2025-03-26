@@ -1,4 +1,4 @@
-﻿# 8.5.2 LVS(Laser Vision Sensor) TCP-센서 캘리브레이션
+﻿# 8.5.3 LVS(Laser Vision Sensor) TCP-센서 캘리브레이션
 
 LVS기능을 사용하기 위해서 TCP와 센서좌표계 간 캘리브레이션이 선행되어야 합니다. 
 
