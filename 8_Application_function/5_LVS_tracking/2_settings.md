@@ -44,7 +44,7 @@ IP 주소 : 센서 제어기의 IP를 입력합니다.<br>
 Full-V 센서 설정 예시<br>
 
 <p align="center">
- <img src="../../_assets/lvs_setting_fullv.PNG" width="90%"></img>
+ <img src="../../_assets/lvs_setting_fullv_1.png" width="90%"></img>
  <em><p align="center">Full-V 센서 연결 설정</p></em>
 </p>
 
