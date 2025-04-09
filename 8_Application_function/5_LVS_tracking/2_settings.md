@@ -41,6 +41,23 @@ IP 주소 : 센서 제어기의 IP를 입력합니다.<br>
 포트의 경우 브랜드를 선택할 경우 디폴트 값으로 변경되므로 사용자가 수정할 필요가 없습니다.
 {% endhint %}
 
+Full-V 센서 설정 예시<br>
+
+<p align="center">
+ <img src="../../_assets/lvs_setting_fullv.png" width="90%"></img>
+ <em><p align="center">Full-V 센서 연결 설정</p></em>
+</p>
+
+위 그림과 같이 brand를 FULL로 선택한 후 Full-V S/W에서 LVS 센서의 IP를 확인한 후 [시스템]-[응용파라미터]-[lvs tracking]-[Environment setting] 창의 IP에 입력하십시오. 그 후 하단의 "연결" 버튼을 눌러 연결 상태가 "연결됨"이 되는지 확인하십시오.<br>
+"연결 실패"라고 뜨는 경우에는 하드웨어 연결 및 IP를 확인하십시오.<br>
+
+Full-V S/W에서 사용하고자 하는 seam을 Full-V사에서 제공하는 메뉴얼과 하기 그림을 참조하여 등록하십시오.
+
+<p align="center">
+ <img src="../../_assets/lvs_setting_fullv_2.png" width="90%"></img>
+ <em><p align="center">Full-V S/W에서 seam 설정 예시</p></em>
+</p>
+
 
 (3) 기본설정
 
