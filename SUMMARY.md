@@ -84,7 +84,7 @@
   * [8.4 높이센싱(Height Sensing) 기능](8_Application_function/4_Height_sensing/README.md)
     * [8.4.1 높이센싱 조건](8_Application_function/4_Height_sensing/1_hsen_condition.md)
   * [8.5 LVS(Laser Vision Sensor) 용접선 추적 및 검출 기능](8_Application_function/5_LVS_tracking/README.md)
-    * [8.5.1 LVS 개요](8_Application_function/5_LVS_tracking/1_overall.md)
+    * [8.5.1 LVS 개요 및 사양](8_Application_function/5_LVS_tracking/1_overall.md)
     * [8.5.2 LVS 기본설정](8_Application_function/5_LVS_tracking/2_settings.md)
     * [8.5.3 LVS 캘리브레이션](8_Application_function/5_LVS_tracking/3_calibration.md)
     * [8.5.4 LVS seam finding 기능](8_Application_function/5_LVS_tracking/4_seam_finding.md)

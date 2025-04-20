@@ -1,6 +1,7 @@
 ﻿# 8.5.2 LVS(Laser Vision Sensor) 기본설정
 
-LVS기능을 사용하기 위해서는 센서 설치 및 통신 설정이 필요합니다.<br>
+LVS기능을 사용하기 위해서는 센서 설치 및 통신 설정이 필요합니다.
+
 지금부터 해당 과정을 살펴보겠습니다.
 
 (1) 연결 브라켓을 이용한 LVS센서의 장착
@@ -35,11 +36,11 @@ LVS 센서는 직선인 용접선을 기준으로 수직으로 레이저가 위�
 
 (2) 통신설정
 
-LVS센서 제어기와 로봇 제어기간에 이더넷선을 이용해 접속합니다.<br>
+LVS센서 제어기와 로봇 제어기간에 이더넷 케이블을 이용해 접속합니다.<br>
 [System]-[Application parameter]-[LVS tracking]-[Environment setting]에 진입합니다.<br>
 Communication 탭에서 다음항목을 설정합니다.
 
-LVS 브랜드 : Scansonic, Oxford (or Meta)<br>
+LVS 브랜드 : Scansonic, Oxford (or Meta), Full-v<br>
 IP 주소 : 센서 제어기의 IP를 입력합니다.<br>
 로컬 포트 : 로봇 제어기의 포트입니다. (Oxford의 경우 8000)<br>
 원격 포트 : 센서 제어기의 포트입니다. (Oxford의 경우 8002)
@@ -47,34 +48,17 @@ IP 주소 : 센서 제어기의 IP를 입력합니다.<br>
 위 내용을 입력 후 [연결] 을 눌러 '연결됨' 이라고 표시될 경우 정상 개통된 것입니다.
 
 {% hint style="info" %}
-[IP 주소] LVS제어기에서 로봇 제어기로 데이터를 보내기위한 IP설정은 LVS제어기에서 설정합니다. <br>
-이 부분은 LVS 브랜드의 메뉴얼을 참고하십시오. <br>
-포트의 경우 브랜드를 선택할 경우 디폴트 값으로 변경되므로 사용자가 수정할 필요가 없습니다.
+[IP 주소] : LVS제어기에서 로봇 제어기로 데이터를 보내기위한 IP설정은 LVS제어기에서 설정합니다. <br>
+설정이 잘못되면 연결이 되지 않을 수 있으므로 이 경우에는 LVS 제조사의 메뉴얼을 참고하십시오. <br>
+[포트] : 브랜드를 선택할 경우 디폴트 값으로 변경되므로 사용자가 수정할 필요가 없습니다.<br>
+포트가 잘못되면 연결이 되지 않을 수 있으므로 이 경우에는 LVS 제조사의 메뉴얼을 참고하십시오.
 {% endhint %}
-
-Full-V 센서 설정 예시<br>
-
-<p align="center">
- <img src="../../_assets/lvs_setting_fullv_1.png" width="90%"></img>
- <em><p align="center">Full-V 센서 연결 설정</p></em>
-</p>
-
-위 그림과 같이 brand를 FULL로 선택한 후 Full-V S/W에서 LVS 센서의 IP를 확인한 후 [시스템]-[응용파라미터]-[lvs tracking]-[Environment setting] 창의 IP에 입력하십시오. 그 후 하단의 "연결" 버튼을 눌러 연결 상태가 "연결됨"이 되는지 확인하십시오.<br>
-"연결 실패"라고 뜨는 경우에는 하드웨어 연결 및 IP를 확인하십시오.<br>
-
-Full-V S/W에서 사용하고자 하는 seam을 Full-V사에서 제공하는 메뉴얼과 하기 그림을 참조하여 등록하십시오.
-
-<p align="center">
- <img src="../../_assets/lvs_setting_fullv_2.png" width="90%"></img>
- <em><p align="center">Full-V S/W에서 seam 설정 예시</p></em>
-</p>
-
 
 (3) 기본설정
 
-Tracking 탭에서 다음항목을 설정합니다. 디폴트값 사용을 권장합니다. <br>
+Tracking 탭에서 다음항목을 설정합니다. <br>
 P gain : 변환할 위치 및 방위로 TCP가 추종하는 세기를 지정합니다. <br>
-D gain : 변환할 위치 및 방위에 TCP가 반응하는 속도를 지정합니다. <br>
+D gain : 변환할 위치 및 방위에 TCP가 반응하는 속도를 지정합니다.  <br>
 Max tracking distance [mm/sec] : 초당 최대 추종량을 [mm]로 지정합니다. 
 
 <table>
@@ -82,7 +66,7 @@ Max tracking distance [mm/sec] : 초당 최대 추종량을 [mm]로 지정합니
     <tr>
       <th style="text-align:left">항목</th>
       <th style="text-align:left">권장 설정값</th>
-      <th style="text-align:left">기타</th>
+      <th style="text-align:left">설명</th>
     </tr>
   </thead>
   <tbody>
@@ -104,7 +88,25 @@ Max tracking distance [mm/sec] : 초당 최대 추종량을 [mm]로 지정합니
       <td style="text-align:left">LVS 추종 기능은 티칭궤적에서 벗어나는 작은 차이를 보정해주기 위한 기능이므로 최대 추종량을 크게 놓을 필요가 없습니다.
       </td>
     </tr>
-  </tbody>
+  </tbody
 </table>
 
 위 과정을 통해 기본설정이 끝났습니다. 
+
+
+Full-V 센서 설정 예시<br>
+
+<p align="center">
+ <img src="../../_assets/lvs_setting_fullv_1.png" width="90%"></img>
+ <em><p align="center">Full-V 센서 연결 설정</p></em>
+</p>
+
+위 그림과 같이 brand를 FULL로 선택한 후 Full-V S/W에서 LVS 센서의 IP를 확인한 후 [시스템]-[응용파라미터]-[lvs tracking]-[Environment setting] 창의 IP에 입력하십시오. 그 후 하단의 "연결" 버튼을 눌러 연결 상태가 "연결됨"이 되는지 확인하십시오.<br>
+"연결 실패"라고 뜨는 경우에는 하드웨어 연결 및 IP를 확인하십시오.<br>
+
+Full-V S/W에서 사용하고자 하는 seam을 Full-V사에서 제공하는 메뉴얼과 하기 그림을 참조하여 등록하십시오.
+
+<p align="center">
+ <img src="../../_assets/lvs_setting_fullv_2.png" width="90%"></img>
+ <em><p align="center">Full-V S/W에서 seam 설정 예시</p></em>
+</p>
