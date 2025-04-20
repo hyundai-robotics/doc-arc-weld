@@ -110,37 +110,37 @@ lvs 기능 사양
     <tr>
       <td style="text-align:left">seam_find / seam_find_p</td>
       <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
-      <td style="text-align:left">좌우 : 0.1 mm (기준 +- 30mm 높이),  0.4mm,  높이 : 0.4mm (기준 +- 30mm 높이), 2mm,  앞뒤 : 0.4mm (기준 +- 30mm 높이), 1.5mm</td>
+      <td style="text-align:left">좌우 : 0.1 mm (기준 +- 30mm 높이),  0.4mm<br>높이 : 0.4mm (기준 +- 30mm 높이), 2mm<br>앞뒤 : 0.4mm (기준 +- 30mm 높이), 1.5mm</td>
       <td style="text-align:left">0.05 mm</td>
     </tr>
     <tr>
       <td style="text-align:left">seam_find / seam_find_p</td>
       <td style="text-align:left">OXFORD (OSL-50)</td>
-      <td style="text-align:left">좌우 : 0.4 mm (기준 +- 30mm 높이),  0.7mm,  높이 : 0.6mm (기준 +- 30mm 높이), 3mm,  앞뒤 : 0.6mm (기준 +- 30mm 높이), 2.5mm</td>
+      <td style="text-align:left">좌우 : 0.4 mm (기준 +- 30mm 높이),  0.7mm<br>높이 : 0.6mm (기준 +- 30mm 높이), 3mm<br>앞뒤 : 0.6mm (기준 +- 30mm 높이), 2.5mm</td>
       <td style="text-align:left">0.2 mm</td>
     </tr>
     <tr>
       <td style="text-align:left">seam_find / seam_find_p</td>
       <td style="text-align:left">Full-v</td>
-      <td style="text-align:left">좌우 : 0.6 mm (기준 +- 30mm 높이),  2mm,  높이 : 0.8mm (기준 +- 30mm 높이), 4.5mm,  앞뒤 : 0.6mm (기준 +- 30mm 높이), 4mm</td>
+      <td style="text-align:left">좌우 : 0.6 mm (기준 +- 30mm 높이),  2mm<br>높이 : 0.8mm (기준 +- 30mm 높이), 4.5mm<br>앞뒤 : 0.6mm (기준 +- 30mm 높이), 4mm</td>
       <td style="text-align:left">0.35 mm</td>
     </tr>
     <tr>
       <td style="text-align:left">track</td>
       <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
-      <td style="text-align:left">0.2mm (직선), 0.4mm (위빙), 0.25mm (포지셔너 동기),  0.5mm (위빙 + 포지셔너동기)</td>
+      <td style="text-align:left">0.2mm (직선)<br>0.4mm (위빙)<br>0.25mm (포지셔너 동기)<br>0.5mm (위빙 + 포지셔너동기)</td>
       <td style="text-align:left">0.05 mm</td>
     </tr>
     <tr>
       <td style="text-align:left">track</td>
       <td style="text-align:left">OXFORD (OSL-50)</td>
-      <td style="text-align:left">0.3mm (직선), 0.5mm (위빙), 0.4mm (포지셔너 동기),  0.6mm (위빙 + 포지셔너동기)</td>
+      <td style="text-align:left">0.3mm (직선)<br>0.5mm (위빙)<br>0.4mm (포지셔너 동기)<br>0.6mm (위빙 + 포지셔너동기)</td>
       <td style="text-align:left">0.2 mm</td>
     </tr>
     <tr>
       <td style="text-align:left">track</td>
       <td style="text-align:left">Full-v</td>
-      <td style="text-align:left">0.3mm (직선), 0.6mm (위빙), 0.4mm (포지셔너 동기),  0.7mm (위빙 + 포지셔너동기)</td>
+      <td style="text-align:left">0.3mm (직선)<br>0.6mm (위빙)<br>0.4mm (포지셔너 동기)<br>0.7mm (위빙 + 포지셔너동기)</td>
       <td style="text-align:left">0.35 mm</td>
     </tr>
   </tbody>
