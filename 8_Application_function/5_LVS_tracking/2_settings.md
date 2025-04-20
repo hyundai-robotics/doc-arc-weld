@@ -8,8 +8,8 @@ LVS기능을 사용하기 위해서는 센서 설치 및 통신 설정이 필요
 연결 브라켓은 직접 설계하여 사용하거나 HD현대로보틱스 또는 LVS 제조사로부터 받아 사용하십시오.<br>
 
 <p align="center">
- <img src="../../_assets/lvs_mount_setup.png" width="90%"></img>
- <em><p align="center">TCP와 센서설치, 툴좌표계의 설정</p></em>
+ <img src="../../_assets/lvs_mount_setup.png" width="60%"></img>
+ <em><p align="center">LVS 장착시 주의점</p></em>
 </p>
 
 {% hint style="warning" %}

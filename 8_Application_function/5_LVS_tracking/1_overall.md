@@ -91,7 +91,7 @@ lvs 기능인자 cnd=조건번호, seam=센싱하고자 하는 프로파일 번�
 ```lvs``` 명령어를 이용한 트래킹기능은 다음과 같이 사용할 수 있습니다.
 
 <p align="center">
- <img src="../../_assets/8_19.png" width="90%"></img>
+ <img src="../../_assets/8_19.png" width="60%"></img>
  <em><p align="center">그림 8.19 LVS 용접선 추적을 위한 명령어 실행</p></em>
 </p>
 
