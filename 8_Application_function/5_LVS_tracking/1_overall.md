@@ -94,3 +94,54 @@ lvs 기능인자 cnd=조건번호, seam=센싱하고자 하는 프로파일 번�
  <img src="../../_assets/8_19.png" width="90%"></img>
  <em><p align="center">그림 8.19 LVS 용접선 추적을 위한 명령어 실행</p></em>
 </p>
+
+lvs 기능 사양
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">항목</th>
+      <th style="text-align:left">제조사</th>
+      <th style="text-align:left">반복 정확도</th>
+      <th style="text-align:left">반복 정밀도</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">seam_find / seam_find_p</td>
+      <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
+      <td style="text-align:left">좌우 : 0.1 mm (기준 +- 30mm 높이),  0.4mm,  높이 : 0.4mm (기준 +- 30mm 높이), 2mm,  앞뒤 : 0.4mm (기준 +- 30mm 높이), 1.5mm</td>
+      <td style="text-align:left">0.05 mm</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">seam_find / seam_find_p</td>
+      <td style="text-align:left">OXFORD (OSL-50)</td>
+      <td style="text-align:left">좌우 : 0.4 mm (기준 +- 30mm 높이),  0.7mm,  높이 : 0.6mm (기준 +- 30mm 높이), 3mm,  앞뒤 : 0.6mm (기준 +- 30mm 높이), 2.5mm</td>
+      <td style="text-align:left">0.2 mm</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">seam_find / seam_find_p</td>
+      <td style="text-align:left">Full-v</td>
+      <td style="text-align:left">좌우 : 0.6 mm (기준 +- 30mm 높이),  2mm,  높이 : 0.8mm (기준 +- 30mm 높이), 4.5mm,  앞뒤 : 0.6mm (기준 +- 30mm 높이), 4mm</td>
+      <td style="text-align:left">0.35 mm</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">track</td>
+      <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
+      <td style="text-align:left">0.2mm (직선), 0.4mm (위빙), 0.25mm (포지셔너 동기),  0.5mm (위빙 + 포지셔너동기)</td>
+      <td style="text-align:left">0.05 mm</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">track</td>
+      <td style="text-align:left">OXFORD (OSL-50)</td>
+      <td style="text-align:left">0.3mm (직선), 0.5mm (위빙), 0.4mm (포지셔너 동기),  0.6mm (위빙 + 포지셔너동기)</td>
+      <td style="text-align:left">0.2 mm</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">track</td>
+      <td style="text-align:left">Full-v</td>
+      <td style="text-align:left">0.3mm (직선), 0.6mm (위빙), 0.4mm (포지셔너 동기),  0.7mm (위빙 + 포지셔너동기)</td>
+      <td style="text-align:left">0.35 mm</td>
+    </tr>
+  </tbody>
+</table>
