@@ -26,10 +26,13 @@ master mode 기능은 기준위치(마스터 포즈)를 저장해 놓고 실제 
 
 이 쉬프트 변수를 move문의 tg 인자에 적용하여 용접 위치에 쉬프트를 보정하여 용접 작업을 수행할 수 있습니다.
 
+{% hint style="warning" %}
 마스터포즈 등록시에는 하기 내용을 주의하십시오.
 
 * 센싱하는 위치에서 LVS S/W에서 센싱된 seam의 side 및 height는 모두 0 근처에 오도록 티칭하시오.<br>
 * 위와 같이 티칭하여 센싱을 안정적으로 수행할 수 있으며, 마스터 포즈 관리 및 LVS 또는 툴의 틀어짐에 인식을 손쉽게 할 수 있습니다.
+{% endhint %}
+
 
 <p align="center">
  <img src="../../_assets/lvs_seamfind_mastermode_warn.png" width="90%"></img>
