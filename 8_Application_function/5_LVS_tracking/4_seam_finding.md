@@ -17,6 +17,12 @@ lvs seam_find, cnd=1, seam=1, sp=po_100 # sp에 입력한 이름의 변수가 �
 
 위 명령어를 수행하면 po_100 변수에 lvs로 센싱한 위치가 저장됩니다.
 
+{% hint style="warning" %}
+sp인자가 선언되어 있지 않다면 지역 포즈로 선언됩니다.<br>
+mp인자가 선언되어 있지 않다면 전역 포즈로 선언됩니다.<br>
+ms인자가 선언되어 있지 않다면 전역 쉬프트로 생성됩니다.
+{% endhint %}
+
 {% hint style="info" %}
 seam_find 명령어로 sp 인자에 저장된 포즈의 자세는 센싱 전 툴의 자세 (RX, RY, RZ) 를 유지합니다.
 {% endhint %}

@@ -1,4 +1,4 @@
-﻿# 8.5.1 LVS 개요 및 사양
+# 8.5.1 LVS 개요 및 사양
 
 {% hint style="info" %}
 해당 기능은 60.30-03 이후 버전에서 지원합니다.
@@ -93,7 +93,7 @@ lvs 기능인자 cnd=조건번호, seam=센싱하고자 하는 프로파일 번�
 
 <p align="center">
  <img src="../../_assets/8_19.png" width="60%"></img>
- <em><p align="center">그림 8.19 LVS 용접선 추적을 위한 명령어 실행</p></em>
+ <em><p align="center">그림 8.19 LVS 용접선 추적을 위한 티칭 방법</p></em>
 </p>
 
 
