@@ -18,9 +18,9 @@ LVS기능을 사용하기 위해서는 센서 설치 및 통신 설정이 필요
 즉, 플랜지 - LVS 마운트 및 LVS센서 - 쇼크센서(사용시) - 토치 의 기구부를 갖도록 설치하십시오.
 {% endhint %}
 
-툴 좌표계는 아래 그림과 같이 용접 진행 반대 방향이 +Tool X 방향이어야 하며 와이어 방향을 +Tool Z 방향으로 설정해야합니다. 
+툴 좌표계는 아래 그림과 같이 용접 진행 반대 방향을 +Tool X 방향, 와이어 방향을 +Tool Z 방향으로 설정해야합니다. 
 
-LVS 센서는 직선인 용접선을 기준으로 수직으로 레이저가 위치하도록 설치해야 합니다. 
+LVS 센서는 직선인 용접선을 기준으로 수직으로 레이저가 위치하도록 설치해야 합니다. (그림 참조)
 
 <p align="center">
  <img src="../../_assets/8_19_2.png" width="90%"></img>
@@ -32,8 +32,10 @@ LVS 센서는 직선인 용접선을 기준으로 수직으로 레이저가 위�
 {% endhint %}
 
 {% hint style="warning" %}
-레이저는 용접방향에 선행하여 위치하여야 하며, 툴 좌표계는 위 그림과 같이 설정되어야 LVS를 사용할 수 있습니다.
+LVS를 사용하기 위해서 레이저는 용접방향에 선행하여 위치하여야 하며, 툴 좌표계는 위 그림과 같이 설정되어야 합니다.
 {% endhint %}
+
+---
 
 (2) 통신설정
 
@@ -55,12 +57,14 @@ IP 주소 : 센서 제어기의 IP를 입력합니다.<br>
 포트가 잘못되면 연결이 되지 않을 수 있으므로 이 경우에는 LVS 제조사의 메뉴얼을 참고하십시오.
 {% endhint %}
 
+---
+
 (3) 기본설정
 
 Tracking 탭에서 다음항목을 설정합니다. <br>
 P gain : 변환할 위치 및 방위로 TCP가 추종하는 세기를 지정합니다. <br>
-D gain : 변환할 위치 및 방위에 TCP가 반응하는 속도를 지정합니다.  <br>
-Max tracking distance [mm/sec] : 초당 최대 추종량을 [mm]로 지정합니다. 
+D gain : 변환할 위치 및 방위로 TCP가 반응하는 속도를 지정합니다.  <br>
+Max tracking distance [mm/sec] : 초당 최대 추종량을 [mm/sec]로 지정합니다. 
 
 <table>
   <thead>
@@ -74,10 +78,10 @@ Max tracking distance [mm/sec] : 초당 최대 추종량을 [mm]로 지정합니
     <tr>
       <td style="text-align:left">P, D gain</td>
       <td style="text-align:left">
-        일반 트래킹 (위빙 미사용) : 0.5 ~ 3 범위 내에서 설정하십시오. <br>
-        위빙 트래킹 (위빙 사용) : 0.5 ~ 1.5 범위 내에서 설정하십시오.
+        일반 트래킹 (위빙 미사용) : 1~10 범위 내에서 설정하십시오. <br>
+        위빙 트래킹 (위빙 사용) : default 값인 10을 사용하십시오.
       </td>
-      <td style="text-align:left">디폴트값은 P gain 1, D gain 1 입니다. <br> 
+      <td style="text-align:left">디폴트값은 P gain 10, D gain 10 입니다. <br> 
       실제 작업물에 적합한 값을 찾아 적용하십시오.
       </td>
     </tr>
@@ -86,7 +90,8 @@ Max tracking distance [mm/sec] : 초당 최대 추종량을 [mm]로 지정합니
       <td style="text-align:left">
         1 ~ 5 범위로 설정하십시오.
       </td>
-      <td style="text-align:left">LVS 추종 기능은 티칭궤적에서 벗어나는 작은 차이를 보정해주기 위한 기능이므로 최대 추종량을 크게 놓을 필요가 없습니다.
+      <td style="text-align:left">디폴트값은 10 입니다.<br>
+      LVS 용접선 추종은 티칭된 궤적에서 벗어나는 작은 차이를 보정하기 위한 기능이므로 크게 설정할 필요가 없습니다.
       </td>
     </tr>
   </tbody>
@@ -94,6 +99,7 @@ Max tracking distance [mm/sec] : 초당 최대 추종량을 [mm]로 지정합니
 
 위 과정을 통해 기본설정이 끝났습니다. 
 
+---
 
 Full-V 센서 설정 예시<br>
 
