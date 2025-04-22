@@ -96,7 +96,7 @@ search 명령어 수행과정은 다음 그림과 같습니다. (탐색 유효, 
 
 (2) offset량을 지정한 tracking 사용법
 
-만약 용접선(seam)을 정확히 추종하는 것이 아닌 좌우 offset이나 높이 offset을 두고 추종하고자 한다면 lvs 명령어의 side와 height에 
+만약 용접선(seam)을 정확히 추종하는 것이 아닌 좌우 또는 높이 offset을 두고 추종하고자 한다면 lvs 명령어의 side와 height에 
 옵셋값을 mm 단위로 지정하면 됩니다. 이 때 ofsset량은 툴좌표계 방향으로 적용됩니다.
 
 ```python
@@ -114,6 +114,10 @@ weavoff
 arcof
 end
 ```
+
+{% hint style="info" %}
+* weaving을 사용할 경우 각도 및 진폭에 따라 stickout 길이가 길어지므로 search 및 track에 height를 -값으로 지정하여 이를 해소할 수 있습니다.
+{% endhint %}
 
 (3) lvs 모니터링
 
