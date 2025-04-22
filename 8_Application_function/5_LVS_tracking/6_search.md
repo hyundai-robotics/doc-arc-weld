@@ -1,15 +1,17 @@
-﻿# 8.5.6 LVS(Laser Vision Sensor) search 기능
+# 8.5.6 LVS(Laser Vision Sensor) search 기능
 
 1. Search 기능 사용법
 
 LVS는 search 기능을 제공하며 다음과 같은 목적으로 사용합니다.
 
-- 시작점 탐색 후 시작점 위치로 이동하면서 추종할 위치를 버퍼에 저장
-- 다단비드 검출 (step_search 기능)
+- search : 시작점을 탐색하고 시작점으로 TCP가 이동하면서 추종할 위치를 설정 간격마다 버퍼에 저장하고 트래킹을 준비합니다.
+- step_search : 다단비드 검출, 단차 검출 
 
-search를 수행하면 탐색을 수행하며 무효점이 검출되면 가장 최근의 유효점을 sp 인자에 포즈로 저장합니다.<br>
-그 후 tracking을 준비하기 위해 찾은 점으로 TCP가 이동하면서 추종할 점들을 버퍼에 저장합니다.<br>
-search 기능을 수행하면 seam tracking을 수행할 수 있는 상태가 됩니다.<br>
+search를 수행하면 탐색을 수행하며 무효점이 검출되면 가장 최근의 유효점을 sp 인자에 포즈로 저장합니다.
+
+그 후 tracking을 준비하기 위해 찾은 점으로 TCP가 이동하면서 추종할 점들을 버퍼에 저장합니다.
+
+search 기능을 수행하면 seam tracking을 수행할 수 있는 상태가 됩니다.
 
 {% hint style="info" %}
 탐색 방법 : 유효하지 않은 seam (LVS 제어기가 seam을 검출하지 못하는 상태)을 검지하여 시작점을 탐색합니다.
@@ -95,6 +97,7 @@ arcof
 end
 ```
 
+---
 
 2. 다단비드 검출 기능 (step_search) 사용법
 

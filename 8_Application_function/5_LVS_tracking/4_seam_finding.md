@@ -1,6 +1,6 @@
 ﻿# 8.5.4 LVS(Laser Vision Sensor) seam finding 기능
 
-1. Seam finding 기능의 개요
+(1) Seam finding 기능의 개요
 
 이 기능은 LVS를 이용하여 센싱한 위치를 포즈로 저장하는 기능으로 터치센싱 대용으로 사용 가능합니다. 
 
@@ -56,12 +56,15 @@ lvs seam_find, cnd=1, seam=1, side=10, height=10, sp=po_100
 
 ---
 
-2. lvs seamfinding 재시도 기능
+(2) lvs seamfinding 재시도 기능
 
-seam finding을 수행하였는데 센서에서 seam 인식이 불가능하다면 재시도를 수행합니다. <br>
-재시도 횟수는 seam finding parameter의 no of retry 항목에 기입합니다.<br>
-재시도 횟수만큼 센싱을 시도하여도 센싱이 불가능할 경우 에러가 발생합니다.<br>
-재시도는 다음과 같은 위치로 이동하면서 수행합니다.<br>
+Seam finding 시 seam 인식이 불가능할 경우 재시도를 수행합니다. 
+
+재시도 횟수는 lvs명령어의 속성창에서 seam finding parameter의 no of retry 항목에 기입합니다.
+
+재시도 횟수만큼 센싱을 시도한 뒤에도 센싱이 불가능할 경우 에러가 발생합니다.
+
+재시도는 다음과 같은 시퀀스로 수행됩니다.
 
 <p align="center">
  <img src="../../_assets/lvs_seamfind_retry.png" width="60%"></img>
@@ -75,7 +78,7 @@ seam finding을 수행하였는데 센서에서 seam 인식이 불가능하다�
 
 ---
 
-3. lvs seamfinding 모니터링 기능
+(3) lvs seamfinding 모니터링 기능
 
 TP 우측의 [창조절] 버튼을 눌러 LVS 용접점 추출 항목을 선택하면 lvs seamfinding 모니터링을 볼 수 있습니다.
 
