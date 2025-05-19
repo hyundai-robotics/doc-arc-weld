@@ -11,7 +11,7 @@
     * [1.3.1 가스 체크, 와이어 인칭(Inching) 및 역인칭(Retract)](1_Basic_information/3_Convenient_functions/1_gas_check.md)
     * [1.3.2 고속 이동 기능](1_Basic_information/3_Convenient_functions/2_high_speed.md)
     * [1.3.3 용접 중 전류/전압 변경 기능](1_Basic_information/3_Convenient_functions/3_change_current_voltage/README.md)
-      * [1.3.3.1 조작](1_Basic_information/3_Convenient_functions/3_3_change_current_voltage/1_operation_.md)
+      * [1.3.3.1 조작](1_Basic_information/3_Convenient_functions/3_change_current_voltage/1_operation/README.md)
     * [1.3.4 수동모드 아크용접](1_Basic_information/3_Convenient_functions/4_manual_mode.md)
     * [1.3.5 고중량 아크토치 진동 저감 기능](1_Basic_information/3_Convenient_functions/5_vibration_reduction.md)
     * [1.3.6 Arc 용접 신호 시험 기능](1_Basic_information/3_Convenient_functions/6_signal_test.md)
