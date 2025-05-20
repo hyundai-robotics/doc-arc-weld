@@ -15,14 +15,30 @@ multipass off
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
+      <th style="text-align:left">대항목</th>
+      <th style="text-align:left">소항목</th>
       <th style="text-align:left">의미</th>
       <th style="text-align:left">기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">멀티패스 궤적 번호</td>
+      <td style="text-align:left" rowspan="4">multipass</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">save</td>
+      <td style="text-align:left">멀티패스 궤적 저장</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">load</td>
+      <td style="text-align:left">멀티패스 궤적 재현</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">off</td>
+      <td style="text-align:left">멀티패스 off</td>
+    </tr>
+    <tr>
+      <td style="text-align:left" colspan="2">멀티패스 궤적 번호</td>
       <td style="text-align:left">
         저장/로딩 할 멀티패스 궤적 번호
         (1 ~ 50)
@@ -30,42 +46,42 @@ multipass off
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">궤적 저장 주기 거리</td>
+      <td style="text-align:left" colspan="2">궤적 저장 주기 거리</td>
       <td style="text-align:left">
         멀티패스 궤적을 저장할 샘플링 거리
         (5 ~ 100)[mm]
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">좌우 시프트 거리</td>
+      <td style="text-align:left" colspan="2">좌우 시프트 거리</td>
       <td style="text-align:left">
         멀티패스 재현 시 원래 아크센싱 궤적에서 좌우 방향으로 시프트 할 거리
         (-20 ~ 20)[mm]
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">상하 시프트 거리</td>
+      <td style="text-align:left" colspan="2">상하 시프트 거리</td>
       <td style="text-align:left">
         멀티패스 재현 시 원래 아크센싱 궤적에서 좌우 방향으로 시프트 할 거리
         (-20 ~ 20)[mm]
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">멀티패스 재생방향</td>
+      <td style="text-align:left" colspan="2">멀티패스 재생방향</td>
       <td style="text-align:left">
         멀티패스 재현 시 원래 아크센싱 궤적과 반대 방향부터 재생할 것인지 설정
         (0: 정방향, 1: 역방향)
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">토치 전후방향 각도 시프트</td>
+      <td style="text-align:left" colspan="2">토치 전후방향 각도 시프트</td>
       <td style="text-align:left">
         멀티패스 재현 시 토치를 전후 방향으로 기울이는 시프트 각도
         (-20 ~ 20)[deg]
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">토치 좌우방향 각도 시프트</td>
+      <td style="text-align:left" colspan="2">토치 좌우방향 각도 시프트</td>
       <td style="text-align:left">
         멀티패스 재현 시 토치를 좌우 방향으로 기울이는 시프트 각도
         (-20 ~ 20)[deg]

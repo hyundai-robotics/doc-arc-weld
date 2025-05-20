@@ -6,7 +6,7 @@
 ### 문법
 ```python
 arcoff
-arcoff welder=2, delay=30
+arcoff welder=<조건번호>, delay=<지연시간>
 ```
 
 ### 파라미터
@@ -20,7 +20,7 @@ arcoff welder=2, delay=30
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">welder 조건번호</td>
+      <td style="text-align:left">조건번호</td>
       <td style="text-align:left">
         용접기를 2대 사용하는 경우 off시킬 용접기 번호를 설정합니다.
         (1 ~ 2)
@@ -28,7 +28,7 @@ arcoff welder=2, delay=30
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">delay 지연시간</td>
+      <td style="text-align:left">지연시간</td>
       <td style="text-align:left">
         용접기를 2대 사용하는 경우 off시킬 지연시간을 설정합니다.
         (0 ~ 2)
