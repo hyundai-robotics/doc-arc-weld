@@ -14,19 +14,19 @@ stitch off
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">조건 번호</td>
-      <td style="text-align:left">
+      <td>조건 번호</td>
+      <td>
         스티치 조건 번호
         (1 ~ 20)
       </td>
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
   </tbody>
 </table>

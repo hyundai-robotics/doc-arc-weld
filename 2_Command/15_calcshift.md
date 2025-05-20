@@ -17,32 +17,32 @@
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">포즈변수 인자</td>
-      <td style="text-align:left">
+      <td>포즈변수 인자</td>
+      <td>
         포즈변수를 입력합니다.(1 ~ 9999)
       </td>
-      <td style="text-align:left">포즈변수</td>
+      <td>포즈변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">쉬프트변수 인자</td>
-      <td style="text-align:left">
+      <td>쉬프트변수 인자</td>
+      <td>
         쉬프트 값을 저장 할 쉬프트 변수를 입력합니다.
       </td>
-      <td style="text-align:left">쉬프트변수</td>
+      <td>쉬프트변수</td>
     </tr>    
     <tr>
-      <td style="text-align:left">TV</td>
-      <td style="text-align:left">
+      <td>TV</td>
+      <td>
         툴에 수직인 방향으로 쉬프트를 계산합니다.
       </td>
-      <td style="text-align:left">문자열</td>
+      <td>문자열</td>
     </tr>
   </tbody>
 </table>  

@@ -625,47 +625,47 @@ arcon cnd=<조건번호>,job=<용접 Job번호>
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">Arc용접 조건번호</td>
-      <td style="text-align:left">
+      <td>Arc용접 조건번호</td>
+      <td>
         Arc용접 시작 및 본 조건에 사용되는 용접조건의 번호
         (1~100)
       </td>
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">전류 값</td>
-      <td style="text-align:left">
+      <td>전류 값</td>
+      <td>
         Arc용접용 출력 전류 값<br>
         (0 ~ 500)[A]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">전압 값</td>
-      <td style="text-align:left">
+      <td>전압 값</td>
+      <td>
         Arc용접 시 실제 출력할 전압 값<br>
         (20 ~ 40)[V]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
         <tr>
-      <td style="text-align:left">전압 옵셋값</td>
-      <td style="text-align:left">
+      <td>전압 옵셋값</td>
+      <td>
         Arc용접 시 시너직 전압의 옵셋 전압 값<br>
         (-200 ~ 200)[V]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">용접기의 Job번호</td>
-      <td style="text-align:left">
+      <td>용접기의 Job번호</td>
+      <td>
         용접기 쪽에 저장된 Job번호 중 사용할 Job번호(Job 모드 지원 용접기 전용)
         (0 ~ 9999)
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
   </tbody>
 </table>
@@ -704,26 +704,26 @@ arcoff welder=<조건번호>, delay=<지연시간>
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">조건번호</td>
-      <td style="text-align:left">
+      <td>조건번호</td>
+      <td>
         용접기를 2대 사용하는 경우 off시킬 용접기 번호를 설정합니다.
         (1 ~ 2)
       </td>
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">지연시간</td>
-      <td style="text-align:left">
+      <td>지연시간</td>
+      <td>
         용접기를 2대 사용하는 경우 off시킬 지연시간을 설정합니다.
         (0 ~ 2)
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
   </tbody>
 </table>
@@ -755,19 +755,19 @@ weaving on <위빙조건번호>
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">위빙조건번호</td>
-      <td style="text-align:left">
+      <td>위빙조건번호</td>
+      <td>
         불러올 위빙 조건 번호
         (1 ~ 1000)
       </td>
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
   </tbody>
 </table>
@@ -816,75 +816,75 @@ arccond <보간종류>, cnd=<조건번호>, gap=<gap>, spd=<용접속도>, rd=<�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">보간종류</td>
-      <td style="text-align:left">
+      <td>보간종류</td>
+      <td>
         보간조건 설정
         (D:즉시변경, L:선형보간변경)
       </td>
-      <td style="text-align:left">문자</td>
+      <td>문자</td>
     </tr>
     <tr>
-      <td style="text-align:left">조건번호</td>
-      <td style="text-align:left">
+      <td>조건번호</td>
+      <td>
         용접 DB (WDB) 및 보간조건을 저장하는 조건번호<br>
         (1 ~ 1000)
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">gap</td>
-      <td style="text-align:left">
+      <td>gap</td>
+      <td>
         gap을 입력합니다.<br>
         (-1 ~ 1000)[mm]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">용접속도</td>
-      <td style="text-align:left">
+      <td>용접속도</td>
+      <td>
         즉시변경시 용접속도입니다.<br>
         (1 ~ 1000) [cm/min]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">벽방향</td>
-      <td style="text-align:left">
+      <td>벽방향</td>
+      <td>
         즉시변경시 위빙 벽방향 폭입니다.<br>
         (1 ~ 50)[mm]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">타방향</td>
-      <td style="text-align:left">
+      <td>타방향</td>
+      <td>
         즉시변경시 위빙 타방향 폭입니다.<br>
         (1 ~ 50)[mm]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">위빙주파수</td>
-      <td style="text-align:left">
+      <td>위빙주파수</td>
+      <td>
         즉시변경시 위빙주파수 입니다.<br>
         (1 ~ 10)[Hz]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">전류</td>
-      <td style="text-align:left">
+      <td>전류</td>
+      <td>
         즉시변경시 용접 전류입니다.<br>
         (1 ~ 1000)[A]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">전압</td>
-      <td style="text-align:left">
+      <td>전압</td>
+      <td>
         즉시변경시 용접 전압입니다.<br>
         (1 ~ 200)[V]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
   </tbody>
 </table>
@@ -910,25 +910,25 @@ refp <참조점 번호>
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">참조점 번호</td>
-      <td style="text-align:left">
+      <td>참조점 번호</td>
+      <td>
         참조점의 종류를 설정하는 번호
         (1 ~ 4)
       </td>
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">포즈번호</td>
-      <td style="text-align:left">
+      <td>포즈번호</td>
+      <td>
         참조점의 포즈를 입력합니다.(단, 숨은 포즈로 입력한 경우는 생략됨)
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
   </tbody>
 </table>
@@ -970,87 +970,87 @@ lvs auto_calib, cnd=<조건번호>, seam=<seam번호>, sp=<seam포즈>, opt=0
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">대항목</th>
-      <th style="text-align:left">소항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>대항목</th>
+      <th>소항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left" rowspan="10">lvs</td>
+      <td rowspan="10">lvs</td>
       <tr>
-      <td style="text-align:left">laser_on</td>
-      <td style="text-align:left">
+      <td>laser_on</td>
+      <td>
         레이저를 켭니다.
       </td>
       </tr>
       <tr>
-      <td style="text-align:left">laser_off</td>
-      <td style="text-align:left">
+      <td>laser_off</td>
+      <td>
         레이저를 끕니다.
       </td>
       </tr>
       <tr>
-      <td style="text-align:left">search</td>
-      <td style="text-align:left">
+      <td>search</td>
+      <td>
         track 기능을 수행하기 전 시점을 찾고 tracking을 위한 준비를 시작합니다.
       </td>
       </tr>
       <tr>
-      <td style="text-align:left">step_search</td>
-      <td style="text-align:left">
+      <td>step_search</td>
+      <td>
         모재의 단차를 찾아 sp에 포즈로 저장합니다.
       </td>
       </tr>
       <tr>
-      <td style="text-align:left">track</td>
-      <td style="text-align:left">
+      <td>track</td>
+      <td>
         arcon을 만나면 용접선 추종을 시작합니다.(search가 선행되어야 함)
       </td>
       </tr>
       <tr>
-      <td style="text-align:left">track_stationary</td>
-      <td style="text-align:left">
+      <td>track_stationary</td>
+      <td>
         정지 트래킹 기능을 수행합니다.
       </td>
       </tr>
       <tr>
-      <td style="text-align:left">seam_find</td>
-      <td style="text-align:left">
+      <td>seam_find</td>
+      <td>
         현재 레이저가 센싱하고 있는 위치에 현재 자세를 반영하여 포즈로 변환 후 sp 인자에 저장합니다.
       </td>
       </tr>
       <tr>
-      <td style="text-align:left">seam_find_p</td>
-      <td style="text-align:left">
+      <td>seam_find_p</td>
+      <td>
         현재 레이저가 센싱하고 있는 위치를 포즈로 변환 후 sp 인자에 저장합니다.
       </td>
       </tr>
       <tr>
-      <td style="text-align:left">auto_calib</td>
-      <td style="text-align:left">
+      <td>auto_calib</td>
+      <td>
         툴-센서 간 자동 캘리브레이션을 수행합니다.
       </td>
       </tr>
     </tr>
     <tr>
-      <td style="text-align:left" colspan="2">조건 번호</td>
-      <td style="text-align:left">
+      <td colspan="2">조건 번호</td>
+      <td>
         LVS 기능 수행 시 사용되는 조건번호 (1 ~ 32), 각 조건번호 마다 명령어의 속성창에 있는 정보가 달라지며 트래킹시 이 정보를 사용합니다. 
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left" colspan="2">seam번호</td>
-      <td style="text-align:left">
+      <td colspan="2">seam번호</td>
+      <td>
         seam 번호를 지정합니다. 해당 번호는 LVS 컨트롤러에 전송되어 LVS센서가 해당번호의 seam으로 센싱을 하도록 합니다.
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left" colspan="2">seam포즈</td>
-      <td style="text-align:left">
+      <td colspan="2">seam포즈</td>
+      <td>
         seam_find 로 찾은 포즈를 저장하거나 search후 찾은 시점을 저장할 포즈변수를 지정합니다.
-      <td style="text-align:left">포즈변수</td>
+      <td>포즈변수</td>
     </tr>
   </tbody>
 </table>
@@ -1087,21 +1087,20 @@ heightsen on, cnd=<높이센싱 조건번호>
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">높이센싱 조건번호</td>
-      <td style="text-align:left">
+      <td>높이센싱 조건번호</td>
+      <td>
         높이센싱 실행 시 사용하는 조건 번호
         (1 ~ 8)
       </td>
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
-
   </tbody>
 </table>
 
@@ -1150,77 +1149,77 @@ multipass off
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">대항목</th>
-      <th style="text-align:left">소항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>대항목</th>
+      <th>소항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left" rowspan="4">multipass</td>
+      <td rowspan="4">multipass</td>
     </tr>
     <tr>
-      <td style="text-align:left">save</td>
-      <td style="text-align:left">멀티패스 궤적 저장</td>
+      <td>save</td>
+      <td>멀티패스 궤적 저장</td>
     </tr>
     <tr>
-      <td style="text-align:left">load</td>
-      <td style="text-align:left">멀티패스 궤적 재현</td>
+      <td>load</td>
+      <td>멀티패스 궤적 재현</td>
     </tr>
     <tr>
-      <td style="text-align:left">off</td>
-      <td style="text-align:left">멀티패스 off</td>
+      <td>off</td>
+      <td>멀티패스 off</td>
     </tr>
     <tr>
-      <td style="text-align:left" colspan="2">멀티패스 궤적 번호</td>
-      <td style="text-align:left">
+      <td colspan="2">멀티패스 궤적 번호</td>
+      <td>
         저장/로딩 할 멀티패스 궤적 번호
         (1 ~ 50)
       </td>
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left" colspan="2">궤적 저장 주기 거리</td>
-      <td style="text-align:left">
+      <td colspan="2">궤적 저장 주기 거리</td>
+      <td>
         멀티패스 궤적을 저장할 샘플링 거리
         (5 ~ 100)[mm]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left" colspan="2">좌우 시프트 거리</td>
-      <td style="text-align:left">
+      <td colspan="2">좌우 시프트 거리</td>
+      <td>
         멀티패스 재현 시 원래 아크센싱 궤적에서 좌우 방향으로 시프트 할 거리
         (-20 ~ 20)[mm]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left" colspan="2">상하 시프트 거리</td>
-      <td style="text-align:left">
+      <td colspan="2">상하 시프트 거리</td>
+      <td>
         멀티패스 재현 시 원래 아크센싱 궤적에서 좌우 방향으로 시프트 할 거리
         (-20 ~ 20)[mm]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left" colspan="2">멀티패스 재생방향</td>
-      <td style="text-align:left">
+      <td colspan="2">멀티패스 재생방향</td>
+      <td>
         멀티패스 재현 시 원래 아크센싱 궤적과 반대 방향부터 재생할 것인지 설정
         (0: 정방향, 1: 역방향)
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left" colspan="2">토치 전후방향 각도 시프트</td>
-      <td style="text-align:left">
+      <td colspan="2">토치 전후방향 각도 시프트</td>
+      <td>
         멀티패스 재현 시 토치를 전후 방향으로 기울이는 시프트 각도
         (-20 ~ 20)[deg]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left" colspan="2">토치 좌우방향 각도 시프트</td>
-      <td style="text-align:left">
+      <td colspan="2">토치 좌우방향 각도 시프트</td>
+      <td>
         멀티패스 재현 시 토치를 좌우 방향으로 기울이는 시프트 각도
         (-20 ~ 20)[deg]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
   </tbody>
 </table>
@@ -1275,74 +1274,74 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">조건번호</td>
-      <td style="text-align:left">
+      <td>조건번호</td>
+      <td>
         터치센싱 조건 번호 (1 ~ 8)
       </td>
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">좌표계</td>
-      <td style="text-align:left">
+      <td>좌표계</td>
+      <td>
         센싱방향 지정좌표계("robot", "base", "tool", "tool_prj")
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">방향</td>
-      <td style="text-align:left">
+      <td>방향</td>
+      <td>
         터치센싱 방향 (센싱 타입별 지원 방향 상이함)
         ("+x", ["+x","-z"], ["+ty", "+tz"])
-      <td style="text-align:left">문자열 배열</td>
+      <td>문자열 배열</td>
     </tr>
     <tr>
-      <td style="text-align:left">저장할 포즈</td>
-      <td style="text-align:left">
+      <td>저장할 포즈</td>
+      <td>
         포즈변수를 지정합니다.
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">센싱각도</td>
-      <td style="text-align:left">
+      <td>센싱각도</td>
+      <td>
         베이스/툴 (X+30 또는 Y-20 등..) 또는 툴프로젝션 (TL+30, TL-10 등..) 좌표계에 대한 축으로 모든 센싱방향을 회전
         (Y+30, Y-30, X+30, X-30, TL+30, TL-30, TY+30, TY-30)
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">들어올릴 양</td>
-      <td style="text-align:left">
+      <td>들어올릴 양</td>
+      <td>
         바닥 탐색 후 상승량[mm]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">탐지기준거리</td>
-      <td style="text-align:left">
-        detect groove 탐지기준거리[mm]
-      <td style="text-align:left">변수</td>
+      <td>탐지기준거리</td>
+      <td>
+        Detect groove 탐지기준거리[mm]
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">Butt gap 변수</td>
-      <td style="text-align:left">
+      <td>Butt gap</td>
+      <td>
         Butt, VGroove 센싱 타입에서 터치센싱으로 측정한 하단 gap이 저장될 변수
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">mpose<br>(마스터모드)</td>
-      <td style="text-align:left">
+      <td>mpose<br>(마스터모드)</td>
+      <td>
         마스터모드에서는 mpose에 센싱결과를 저장하며, 양산모드에서 mpose는 mshift를 계산할 때 사용됩니다.
-      <td style="text-align:left">포즈변수</td>
+      <td>포즈변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">mshift<br>(양산모드)</td>
-      <td style="text-align:left">
+      <td>mshift<br>(양산모드)</td>
+      <td>
        양산모드에서 사용되는 쉬프트 변수. mshift에 할당된 변수에 쉬프트값(현재센싱포즈 - 마스터포즈의벡터)이 계산되어 저장됩니다.
-      <td style="text-align:left">시프트변수</td>
+      <td>시프트변수</td>
     </tr>
   </tbody>
 </table>
@@ -1372,19 +1371,19 @@ stitch off
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">조건 번호</td>
-      <td style="text-align:left">
+      <td>조건 번호</td>
+      <td>
         스티치 조건 번호
         (1 ~ 20)
       </td>
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
   </tbody>
 </table>
@@ -1413,32 +1412,32 @@ stitch off
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">포즈변수 인자</td>
-      <td style="text-align:left">
+      <td>포즈변수 인자</td>
+      <td>
         포즈변수를 입력합니다.(1 ~ 9999)
       </td>
-      <td style="text-align:left">포즈변수</td>
+      <td>포즈변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">쉬프트변수 인자</td>
-      <td style="text-align:left">
+      <td>쉬프트변수 인자</td>
+      <td>
         쉬프트 값을 저장 할 쉬프트 변수를 입력합니다.
       </td>
-      <td style="text-align:left">쉬프트변수</td>
+      <td>쉬프트변수</td>
     </tr>    
     <tr>
-      <td style="text-align:left">TV</td>
-      <td style="text-align:left">
+      <td>TV</td>
+      <td>
         툴에 수직인 방향으로 쉬프트를 계산합니다.
       </td>
-      <td style="text-align:left">문자열</td>
+      <td>문자열</td>
     </tr>
   </tbody>
 </table>  
@@ -1453,135 +1452,155 @@ stitch off
     sft_1=calshift(pose_1,pose_2)   
     # pose_1 – pose_2 의 벡터 쉬프트량을 계산하여 sft_1에 저장
 ```
-  # 3. Quick Open 기능# 3.1 개요
+  # 3. 명령어 속성 창# 3.1 개요
 
-Arc용접을 위한 작업 프로그램을 티칭할 때 전압, 전류 등 용접조건뿐만 아니라 위빙과 재시도/오버랩, 용접기의 특성 등 Arc 용접 기능의 세부적인 설정이 필요합니다. 또한 Arc 용접뿐만 아니라 로봇을 사용하는 일반적인 상황에서 티칭된 스텝이나 보조점의 위치의 정보(좌표 및 자세 등)를 확인해야 하는 경우도 있습니다. 명령어에 커서를 위치한 후 T.P의 좌측에 위치한 [속성]키를 누르면 이러한 파일들을 쉽고 빠르게 편집할 수 있는 기능을 제공합니다.
+Arc용접을 위한 작업 프로그램을 티칭할 때 전압, 전류 등 용접조건뿐만 아니라 위빙과 재시도/오버랩, 용접기의 특성 등 Arc 용접 기능의 세부적인 설정이 필요합니다. 또한 Arc 용접뿐만 아니라 로봇을 사용하는 일반적인 상황에서 티칭된 스텝이나 보조점의 위치의 정보(좌표 및 자세 등)를 확인해야 하는 경우도 있습니다.  
+명령어에 커서를 위치한 후, 티칭 펜던트의 좌측에 위치한 [**속성**] 버튼을 누르면 이러한 파일들을 쉽고 빠르게 편집할 수 있는 기능을 제공합니다.
 
 명령어 [속성]창 예시)<br>
-1. arcon 명령어에서 전류, 전압, 시너직, 초기조건, 종료조건, 재시도조건, 재기동조건 등을 설정합니다.<br>
-2. weaving on 명령어에서 위빙형상, 위빙 주파수, 위빙 폭, 위빙방향 등을 설정합니다.<br>
-3. lvs 명령어에서 추종관련 정보, seam finding 관련 설정 등을 할 수 있습니다.<br>
-4. arccond 명령어에서 WDB(용접조건 데이터베이스)를 전류, 전압, 주파수, 위빙폭 등을 관리할 수 있습니다.<br>
-5. move 명령어에서 현재 기록된 위치를 베이스좌표계, 로봇좌표계, 축좌표계 등으로 바꿀 수 있습니다.<br>
+- `arcon` 명령어에서 전류, 전압, 시너직, 초기조건, 종료조건, 재시도조건, 재기동조건 등을 설정합니다.  
+- `weaving on` 명령어에서 위빙형상, 위빙 주파수, 위빙 폭, 위빙방향 등을 설정합니다.  
+- `lvs` 명령어에서 추종관련 정보, seam finding 관련 설정 등을 할 수 있습니다.  
+- `arccond` 명령어에서 WDB(용접조건 데이터베이스)를 전류, 전압, 주파수, 위빙폭 등을 관리할 수 있습니다.  
+- `move` 명령어에서 현재 기록된 위치를 베이스좌표계, 로봇좌표계, 축좌표계 등으로 바꿀 수 있습니다.  
 등...
 
-용접시작조건의 편집을 예로 들면, 아크를 on 시키는 ```arcon``` 명령문에 커서가 있을 때 [속성] 키를 누르면 용접시작조건 중 현재 명령문에서 사용하는 조건번호의 내용이 표시됩니다. 이 화면에서 용접시작조건의 세부내용을 확인하거나 변경할 수 있습니다.
+용접시작조건의 편집을 예로 들면, 아크를 on 시키는 ```arcon``` 명령문에 커서가 있을 때 [**속성**] 버튼을 누르면 용접시작조건 중 현재 명령문에서 사용하는 조건번호의 내용이 표시됩니다. 이 화면에서 용접시작조건의 세부내용을 확인하거나 변경할 수 있습니다.
 
-이처럼 ```특정한 명령문```에 커서를 위치시킨 후 [속성] 창에 진입하면 조건을 설정하거나 스텝에 기록된 위치 등 세부내용을 쉽고 빠르게 확인 및 변경을 할 수 있습니다.
+이처럼 특정 명령문에 커서를 위치시킨 후 [**속성**] 창에 진입하면 조건을 설정하거나 스텝에 기록된 위치 등 세부내용을 쉽고 빠르게 확인 및 변경 할 수 있습니다.
 
  
 <p align="center">
  <img src="../_assets/3_1.png" width="75%"></img>
- <em><p align="center">그림 3.1 로봇 프로그램에서 'quick open'</p></em>
+ <em><p align="center">그림 3.1 로봇 프로그램에서 '속성'</p></em>
 </p>
 
-특정 명령문에서 [속성]을 누르면 관련된 파일이나 상세 내용을 화면에 표시합니다. 변경된 내용을 파일에 저장 후 종료를 원할 경우 <완료>를, 저장하지 않고 종료를 원할 경우 [취소]키를 누릅니다.
+특정 명령문에서 [**속성**]을 누르면 관련된 파일이나 상세 내용을 화면에 표시합니다. 변경된 내용을 파일에 저장 후 종료를 원할 경우 [**완료**]를, 저장하지 않고 종료를 원할 경우 티칭 펜던트의 [`ESC`]키를 누릅니다.
  
 # 3.2 상세 내용
 
-각 명령문에서 [quick open]을 누를 때 나타나는 내용은 다음과 같습니다.
+각 명령문에서 [**속성**] 버튼을 누를 때 나타나는 내용은 다음과 같습니다.
 
+<style>
+  table th,
+  table td {
+    text-align: left;
+  }
+</style>
 
-
-(1) ```move```
-- 파일, 내용
-    - 기록된 위치
-- 상세 내용
-    - 현 위치 (로봇좌표계, 베이스좌표계, 축좌표계, 엔코더 등)
-    - X Y Z(mm) Rx Ry Rz(deg)
-    - 로봇 Configuration
-
-- 비고
-    - 지령치 수정 가능
-
-(2) ```call```
-- 파일, 내용
-    - 호출되는 Program
-- 상세 내용
-    - 호출 대상 프로그램으로 이동
-
-- 비고
-    - [스텝]+’-1입력’을 통하여 이전에 CALL한 위치로 이동 가능
-
-(3) ```jmpp```
-- 파일, 내용
-    - 호출되는 Program
-- 상세 내용
-    - 호출 대상 프로그램으로 이동
-
-
-  
-(4) ```대입문```
-- 파일, 내용
-    - 변수 확인 및 변경
-- 상세 내용
-    - 변수 유형에 따라 해당 변수를 모니터링하고 값을 변경
-
-
-
-(5) ```arcon```
-- 파일, 내용
-    - arcon cnd=XX
-    - arcon cnd=XX,cur=XX,vol=XX
-    - arcon cnd=XX,job=XX
-
-- 상세 내용
-  - 용접시작 및 본조건 
-    - 조건번호, 설명, 시너직 코드, 가스예출, 전류/송급속도, 용접전압(보정)/ Arc길이, WCR 대기시간, 로봇지연시간, ...
-  - 용접보조조건  
-    - 재시도: 횟수, 재시도조건, 동작모드, 속도, Retract시간, Retract속도, 후퇴/용접선 이동량, 시프트 이동량
-    - 재기동: 횟수, 재기동조건, 중첩량, 이동속도, 용접속도
-  - 용접종료조건
-    - 전류비율, Downslope시간, 조건 유지시간, 가스후출, ...
-  - 용접보조조건(종료조건 진입)
-    - 자동 용착 해제: 횟수, 용착해제 조건, 조건유지시간 
-
-(6) ```weaving on```
-- 파일, 내용
-    - 위빙 조건 확인 및 변경
-
-- 상세 내용
-  - 조건번호, 위빙형태, 주파수, 기본패턴, 진행각도, 경계제한, 이동시간, 타이머
-
-(7) ```refp```
-- 파일, 내용
-    - 참조점 확인 및 변경
-- 상세 내용
-    - 현 위치, 지령치
-    - X Y Z(mm) Rx Ry Rz(deg) 로봇 Configuration
-
-- 비고
-    - 지령치 수정 가능, “위치”화면과 동일
-
-(8) ```lvs```
-- 파일, 내용
-    - LVS 조건 확인 및 변경
-
-- 상세 내용
-  - 기능 설정
+<table>
+  <thead>
+    <tr>
+      <th>항목</th>
+      <th>내용</th>
+      <th>상세</th>
+      <th>비고</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>move</th>
+      <td>기록된 위치</td>
+      <td>
+        - 현 위치 (로봇좌표계, 베이스좌표계, 축좌표계, 엔코더 등)<br>
+        - X Y Z(mm) Rx Ry Rz(deg)<br>
+        - 로봇 Configuration
+      </td>
+      <td>지령치 수정 가능</td>
+    </tr>
+    <tr>
+      <th>대입문</th>
+      <td>변수 확인 및 변경</td>
+      <td>
+        변수 유형에 따라 해당 변수를 모니터링하고 값을 변경
+      </td>
+    </tr>
+    <tr>
+      <th>arcon</th>
+      <td>
+        용접 조건 확인 및 변경<br>
+        - 용접 시작조건<br>
+        - 용접 본조건<br>
+        - 용접 보조조건<br>
+        - 용접 종료조건<br>
+      </td>
+      <td>
+        - 용접시작 및 본조건 <br>
+        조건번호, 설명, 시너직 코드, 가스예출, 전류/송급속도, 용접전압(보정)/ Arc길이, WCR 대기시간, 로봇지연시간, ...<br><br>
+        - 용접보조조건  <br>
+        - 재시도: 횟수, 재시도조건, 동작모드, 속도, Retract시간, Retract속도, 후퇴/용접선 이동량, 시프트 이동량<br>
+        - 재기동: 횟수, 재기동조건, 중첩량, 이동속도, 용접속도<br><br>
+        - 용접종료조건<br>
+        - 전류비율, Downslope시간, 조건 유지시간, 가스후출, ...<br>
+        - 용접보조조건(종료조건 진입)<br>
+        - 자동 용착 해제: 횟수, 용착해제 조건, 조건유지시간 <br>
+      </td>
+    </tr>
+    <tr>
+      <th>weaving on</th>
+      <td>
+        위빙 조건 확인 및 변경
+      </td>
+      <td>
+        조건번호, 위빙형태, 주파수, 기본패턴, 진행각도, 경계제한, 이동시간, 타이머
+      </td>
+    </tr>
+    <tr>
+      <th>refp</th>
+      <td>
+        참조점 확인 및 변경
+      </td>
+      <td>
+        현 위치, 지령치<br>
+        - X Y Z(mm) Rx Ry Rz(deg) 로봇 Configuration
+      </td>
+      <td>
+        지령치 수정 가능<br>
+        “위치”화면과 동일
+      </td>
+    </tr>
+    <tr>
+      <th>lvs</th>
+      <td>
+        LVS 조건 확인 및 변경
+      </td>
+      <td>
+        기능 설정
     - 조건번호, Joint형상, 동작모드, 시작점 검출, 용접점 파인딩 설정
   - 탐색 조건 
     - 탐색량 [mm], 탐색방향 (+tx, -tx), 탐색속도 (mm/s)
+      </td>
+    </tr>
+    <tr>
+      <th>heightsen</th>
+      <td>
+        높이센싱 조건 확인 및 변경
+      </td>
+      <td>
+        조건번호, Input data type for height sensing, Reference data setting method, ...
+      </td>
+    </tr>
+    <tr>
+      <th>arccond</th>
+      <td>
+        용접조건 데이터베이스
+      </td>
+      <td>
+        용접속도, 전류, 전압, 위빙 폭, 위빙 주파수로 이루어진 데이터 베이스 확인 및 편집
+      </td>
+    </tr>
+    <tr>
+      <th>touchsen</th>
+      <td>
+        터치센싱 기능 설정
+      </td>
+      <td>
+        용접속도, 전류, 전압, 위빙 폭, 위빙 주파수로 이루어진 데이터 베이스 확인 및 편집
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-(9) ```heightsen```
-- 파일, 내용
-    - 높이센싱 조건 확인 및 변경
-- 상세 내용
-  - 조건번호, Input data type for height sensing, Reference data setting method, ...
-
-(10) ```arccond```
-- 파일, 내용
-    - 용접조건 데이터베이스
-
-- 상세 내용
-  - 용접속도, 전류, 전압, 위빙 폭, 위빙 주파수로 이루어진 데이터 베이스 확인 및 편집
-
-(11) ```touchsen```
-- 파일, 내용
-    - 터치센싱 기능 설정
-
-- 상세 내용
-  - 센싱종류, 탐색거리, 후퇴거리, 탐색속도, 퇴피속도, 오차보정량, 센싱시점 (접촉시/접촉해제시), 포즈 및 쉬프트 계산 좌표계 설정
 # 4. Arc용접기 설정# 4.1 Arc 용접기 통신 연결
 
 
