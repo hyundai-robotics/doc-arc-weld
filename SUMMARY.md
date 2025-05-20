@@ -38,8 +38,6 @@
 * [4. Arc 용접기 설정](4_Setting/README.md)
   * [4.1 Arc 용접기 통신 연결](4_Setting/1_Arc_communication/README.md)
   * [4.2 Arc 용접기 설정](4_Setting/2_Arc_setting/README.md)
-  * [4.3 HRWI 특성 파일 편집](4_Setting/3_HRWI/README.md)
-  * [4.4 Fronius/EWM 용접기 특성 파일 편집](4_Setting/4_ESAB_Fronius_EWM/README.md)
   
 * [5. Arc 용접 조건 편집](5_Condition_editing/README.md)
   * [5.1 Arc 용접 조건 구성](5_Condition_editing/1_Condition_config/README.md)
