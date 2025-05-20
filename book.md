@@ -2,29 +2,45 @@
 
 이 매뉴얼은 8개의 장으로 이루어져 있습니다.
 
-### 1장: Arc 용접 기본사항
+### 1장 Arc 용접 기본사항
 Arc 용접 로봇을 처음 사용할 때 필요한 설정, 기본 교시 방법과 편의 기능에 대해 설명합니다.
 
-### 2장: 명령어 삽입
+---  
+
+### 2장 명령어 삽입
 다양한 Arc 용접 관련 명령어의 소개와 간단한 설정 방법에 대해 소개합니다. 이 장을 통해 당사 Arc 용접 로봇이 지원하는 기본 기능을 한 눈에 볼 수 있습니다.
 
-### 3장: 명령어 속성창
+---  
+
+### 3장 명령어 속성창
 2장에서 소개한 일부 명령어들의 세부 설정을 위한 Quick Open 기능에 대해 소개합니다. Arc 용접 로봇 사용 시 필수로 설정해야 하는 Arc 용접조건 편집 방법과 응용 기능 명령어의 편집 방법에 대해 설명하고 있습니다.
 
-### 4장: Arc 용접기 설정
+---  
+
+### 4장 Arc 용접기 설정
 사용하고자 하는 Arc 용접기를 선택하는 방법과 용접기별로 설정해야 하는 항목을 소개합니다.
 
-### 5장: Arc 용접 조건 편집
+---  
+
+### 5장 Arc 용접 조건 편집
 Arc 용접 조건 편집 방법에 대해 설명합니다. 용접 시 필수로 설정해야 할 전류, 전압, 용접 모드, 가스 예/후출 등에 대한 설정 방법이 소개되고 있습니다. 용접 조건은 용접기마다 다르기 때문에, 사용하고자 하는 용접기에 대한 내용만 숙지하여도 무방합니다.
 
-### 6장: 위빙 기능 (WEAVING)
+---  
+
+### 6장 위빙 기능 (WEAVING)
 위빙에 대한 기능 설명과 세부 설정 방법에 대해 설명합니다. 위빙 동작을 사용하지 않을 경우 생략하여도 무방합니다.
 
-### 7장: 용접 데이터 모니터링
+---  
+
+### 7장 용접 데이터 모니터링
  Arc 용접기가 용접 중에 보내는 데이터를 활용하는 기능에 대해 소개하고 있습니다. 용접 중에 용접기가 보내주는 데이터를 실시간으로 모니터링 할 수 있는 방법과 그 데이터를 파일로 저장하는 기능 등을 설명합니다. 또한 저장된 이전 데이터를 그래프로 그리고 편리하게 확인할 수 있는 기능과 용접 품질을 수치화 하는 기능을 설명합니다.
 
-### 8장: Arc 용접 응용기능
+---  
+
+### 8장 Arc 용접 응용기능
 Arc 용접 응용 기능으로 특수한 상황에서 유용하게 사용될 수 있는 기능에 대해 소개를 합니다. 용접 대상물의 용접선이 균일하지 않거나, 용접 대상물 위치에 오차가 발생하여 용접 품질에 문제가 있을 경우 적용 가능한 기능들의 간단한 소개를 하고 있습니다.
+
+---  
 
 당사 Arc 용접 로봇을 처음 사용할 경우 1~5장은 필독을 권장하고, 6~8장은 필요한 기능들을 선택적으로 읽어보는 것을 권장합니다.
 
@@ -209,8 +225,8 @@ Arc 용접 응용 기능으로 특수한 상황에서 유용하게 사용될 수
 ### TCP 속도 변화율 모니터링
 : [**무효**, **유효**]  
 TCP 속도 변화율 모니터링 여부를 설정합니다.
-  
-<br>
+
+---  
 
 ## [터치센싱]
 ### 터치센싱 정지설정
@@ -681,7 +697,7 @@ arcon cnd=<조건번호>,job=<용접 Job번호>
 ### 문법
 ```python
 arcoff
-arcoff welder=2, delay=30
+arcoff welder=<조건번호>, delay=<지연시간>
 ```
 
 ### 파라미터
@@ -695,7 +711,7 @@ arcoff welder=2, delay=30
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">welder 조건번호</td>
+      <td style="text-align:left">조건번호</td>
       <td style="text-align:left">
         용접기를 2대 사용하는 경우 off시킬 용접기 번호를 설정합니다.
         (1 ~ 2)
@@ -703,7 +719,7 @@ arcoff welder=2, delay=30
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">delay 지연시간</td>
+      <td style="text-align:left">지연시간</td>
       <td style="text-align:left">
         용접기를 2대 사용하는 경우 off시킬 지연시간을 설정합니다.
         (0 ~ 2)
@@ -947,70 +963,97 @@ lvs laser_off, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
 lvs search, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
 lvs track, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
 lvs seam_find, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
+lvs auto_calib, cnd=<조건번호>, seam=<seam번호>, sp=<seam포즈>, opt=0
 ``` 
 
 ### 파라미터
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
+      <th style="text-align:left">대항목</th>
+      <th style="text-align:left">소항목</th>
       <th style="text-align:left">의미</th>
       <th style="text-align:left">기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">laser_on / laser_off / search / track / seam_find</td>
+      <td style="text-align:left" rowspan="10">lvs</td>
+      <tr>
+      <td style="text-align:left">laser_on</td>
       <td style="text-align:left">
-        laser_on : 레이저를 켭니다. <br>
-        laser_off : 레이저를 끕니다. <br>
-        search : track 기능을 수행하기 전 시점을 찾고 tracking을 위한 준비를 시작합니다. <br>
-        track : arcon을 만나면 용접선 추종을 시작합니다. <br>
-        seam_find : 현재 레이저가 센싱하고 있는 위치를 포즈로 변환하여 sp 인자에 저장합니다.
+        레이저를 켭니다.
       </td>
+      </tr>
+      <tr>
+      <td style="text-align:left">laser_off</td>
+      <td style="text-align:left">
+        레이저를 끕니다.
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left">search</td>
+      <td style="text-align:left">
+        track 기능을 수행하기 전 시점을 찾고 tracking을 위한 준비를 시작합니다.
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left">step_search</td>
+      <td style="text-align:left">
+        모재의 단차를 찾아 sp에 포즈로 저장합니다.
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left">track</td>
+      <td style="text-align:left">
+        arcon을 만나면 용접선 추종을 시작합니다.(search가 선행되어야 함)
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left">track_stationary</td>
+      <td style="text-align:left">
+        정지 트래킹 기능을 수행합니다.
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left">seam_find</td>
+      <td style="text-align:left">
+        현재 레이저가 센싱하고 있는 위치에 현재 자세를 반영하여 포즈로 변환 후 sp 인자에 저장합니다.
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left">seam_find_p</td>
+      <td style="text-align:left">
+        현재 레이저가 센싱하고 있는 위치를 포즈로 변환 후 sp 인자에 저장합니다.
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left">auto_calib</td>
+      <td style="text-align:left">
+        툴-센서 간 자동 캘리브레이션을 수행합니다.
+      </td>
+      </tr>
     </tr>
     <tr>
-      <td style="text-align:left">조건 번호</td>
+      <td style="text-align:left" colspan="2">조건 번호</td>
       <td style="text-align:left">
         LVS 기능 수행 시 사용되는 조건번호 (1 ~ 32), 각 조건번호 마다 명령어의 속성창에 있는 정보가 달라지며 트래킹시 이 정보를 사용합니다. 
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">seam번호</td>
+      <td style="text-align:left" colspan="2">seam번호</td>
       <td style="text-align:left">
         seam 번호를 지정합니다. 해당 번호는 LVS 컨트롤러에 전송되어 LVS센서가 해당번호의 seam으로 센싱을 하도록 합니다.
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">seam포즈</td>
+      <td style="text-align:left" colspan="2">seam포즈</td>
       <td style="text-align:left">
         seam_find 로 찾은 포즈를 저장하거나 search후 찾은 시점을 저장할 포즈변수를 지정합니다.
       <td style="text-align:left">포즈변수</td>
     </tr>
   </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-- 
-   ① 조건 번호
-     - 내용 : LVS 기능 실행 시 사용되는 LVS조건번호
-     - 범위 : 1~32
-   
-   ② 옵션
-     - seam : seam 번호를 지정합니다. 해당 번호는 LVS 컨트롤러에 전송되어 LVS센서가 해당번호의 seam으로 센싱을 하도록 합니다.
-     - sp : search, seam_find 로 찾은 포즈를 저장할 포즈변수를 지정합니다.
-     - seam_find : 심파인딩, LVS를 이용하여 현재 센싱하고 있는 위치를 포즈로 변환하여 저장합니다.
-     - track : 트래킹, LVS를 이용하여 실시간 트래킹을 수행하는 명령어입니다. track을 수행하기전에 search가 선행되어야 합니다.
-     
-
-</br>  
 
 ### 사용 예
 ```python
@@ -1019,11 +1062,9 @@ lvs seam_find, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
    lvs track, cnd=1 ,seam=10 , sp=p10           
    # 조건번호 1번, seam번호 10번으로 LVS 용접선 추종 시작
 ```
-
-
-- 세부 설명
-  
-  •	옵션 기능으로 사용을 위해서는 당사에 문의하시기 바랍니다.
+{% hint style="info" %}
+옵션 기능으로 사용을 위해서는 당사에 문의하시기 바랍니다.
+{% endhint %}
 # 2.8 atdc
 
 ### 설명 
@@ -1074,7 +1115,7 @@ heightsen on, cnd=<높이센싱 조건번호>
   [[8.3 높이센싱(Height Sensing)]](../8_Application_function/3_Height_sensing/README.md) 참고# 2.10 heightsen off
 
 ### 설명 
-```heightsen off``` 문은 높이센싱(AVC,Arc 길이제어)을 종료하는 명령문입니다.
+```heightsen off``` 문은 높이센싱(AVC, Arc 길이제어)을 종료하는 명령문입니다.
 
 
 ### 문법
@@ -1109,14 +1150,30 @@ multipass off
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
+      <th style="text-align:left">대항목</th>
+      <th style="text-align:left">소항목</th>
       <th style="text-align:left">의미</th>
       <th style="text-align:left">기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">멀티패스 궤적 번호</td>
+      <td style="text-align:left" rowspan="4">multipass</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">save</td>
+      <td style="text-align:left">멀티패스 궤적 저장</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">load</td>
+      <td style="text-align:left">멀티패스 궤적 재현</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">off</td>
+      <td style="text-align:left">멀티패스 off</td>
+    </tr>
+    <tr>
+      <td style="text-align:left" colspan="2">멀티패스 궤적 번호</td>
       <td style="text-align:left">
         저장/로딩 할 멀티패스 궤적 번호
         (1 ~ 50)
@@ -1124,42 +1181,42 @@ multipass off
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">궤적 저장 주기 거리</td>
+      <td style="text-align:left" colspan="2">궤적 저장 주기 거리</td>
       <td style="text-align:left">
         멀티패스 궤적을 저장할 샘플링 거리
         (5 ~ 100)[mm]
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">좌우 시프트 거리</td>
+      <td style="text-align:left" colspan="2">좌우 시프트 거리</td>
       <td style="text-align:left">
         멀티패스 재현 시 원래 아크센싱 궤적에서 좌우 방향으로 시프트 할 거리
         (-20 ~ 20)[mm]
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">상하 시프트 거리</td>
+      <td style="text-align:left" colspan="2">상하 시프트 거리</td>
       <td style="text-align:left">
         멀티패스 재현 시 원래 아크센싱 궤적에서 좌우 방향으로 시프트 할 거리
         (-20 ~ 20)[mm]
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">멀티패스 재생방향</td>
+      <td style="text-align:left" colspan="2">멀티패스 재생방향</td>
       <td style="text-align:left">
         멀티패스 재현 시 원래 아크센싱 궤적과 반대 방향부터 재생할 것인지 설정
         (0: 정방향, 1: 역방향)
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">토치 전후방향 각도 시프트</td>
+      <td style="text-align:left" colspan="2">토치 전후방향 각도 시프트</td>
       <td style="text-align:left">
         멀티패스 재현 시 토치를 전후 방향으로 기울이는 시프트 각도
         (-20 ~ 20)[deg]
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">토치 좌우방향 각도 시프트</td>
+      <td style="text-align:left" colspan="2">토치 좌우방향 각도 시프트</td>
       <td style="text-align:left">
         멀티패스 재현 시 토치를 좌우 방향으로 기울이는 시프트 각도
         (-20 ~ 20)[deg]
@@ -1194,13 +1251,13 @@ S17  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
 ```# 2.12 posi_calib
 
 ### 설명 
-포지셔너가 로봇과 동기동작을 하기 위해 필요한 포지셔너 캘리브레이션을 수행하는 명령입니다. 일반적으로 포지셔너 캘리브레이션은 설정 대화상자를 통해 수행합니다. 그러나, 서보툴 체인지로 포지셔너가 변경되는 경우에는 로봇 운전 중 캘리브레이션이 변경되어야 합니다. 이를 로봇 프로그램 상에서 수행하기 위한 명령어가 포지셔너 캘리브레이션입니다.
+`posi_calib`문은 포지셔너가 로봇과 동기동작을 하기 위해 필요한 포지셔너 캘리브레이션을 수행하는 명령입니다. 일반적으로 포지셔너 캘리브레이션은 설정 대화상자를 통해 수행합니다. 그러나, 서보툴 체인지로 포지셔너가 변경되는 경우에는 로봇 운전 중 캘리브레이션이 변경되어야 합니다. 이를 로봇 프로그램 상에서 수행하기 위한 명령어가 포지셔너 캘리브레이션입니다.
 
 
 자세한 명령어 사용법은 [posi_calib 명령어](https://hrbook-hrc.web.app/#/view/doc-positioner-sync/korean/2-system_settings/2-3-positioner-calibration/4-posi_calib)를 참고하시기 바랍니다.# 2.13 touchsen
 
 ### 설명
-```touchsen``` 문은 와이어 터치센싱을 수행하는 명령어 입니다. 속성창에서 센싱타입 및 센싱조건을 설정할 수 있습니다. 터치센싱 하려는 위치로 move를 수행하고 touchsen문을 수행하면 해당 위치에서 센싱타입 및 조건에 맞추어 자동으로 터치센싱 합니다.
+```touchsen``` 문은 와이어 터치센싱을 수행하는 명령어 입니다. 속성창에서 센싱타입 및 센싱조건을 설정할 수 있습니다. 터치센싱 하려는 위치로 move를 수행하고 `touchsen`문을 수행하면 해당 위치에서 센싱타입 및 조건에 맞추어 자동으로 터치센싱 합니다.
 
 - 세부 설명  
   [[8.2 터치센싱 기능]](../8_Application_function/2_Touch_sensing/README.md) 참고
@@ -1209,7 +1266,7 @@ S17  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
 ### 문법
 ```python
 touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, pose=<저장할 포즈>
-touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, angle=<탐색각도>, pose=<저장할 포즈>
+touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, rotation=<센싱각도>, pose=<저장할 포즈>
 touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, lift_up=<들어올릴 양>, pose=<저장할 포즈>, gap=<butt gap 변수>
 touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모드 저장할 기준포즈>, mshift=<양산모드 계산된 쉬프트 변수>
 ```
@@ -1232,6 +1289,12 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
+      <td style="text-align:left">좌표계</td>
+      <td style="text-align:left">
+        센싱방향 지정좌표계("robot", "base", "tool", "tool_prj")
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left">방향</td>
       <td style="text-align:left">
         터치센싱 방향 (센싱 타입별 지원 방향 상이함)
@@ -1244,12 +1307,6 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
         포즈변수를 지정합니다.
       <td style="text-align:left">변수</td>
     </tr>
-        <tr>
-      <td style="text-align:left">Butt gap 변수</td>
-      <td style="text-align:left">
-        Butt, VGroove 센싱 타입에서 터치센싱으로 측정한 하단 gap이 저장될 변수
-      <td style="text-align:left">변수</td>
-    </tr>
     <tr>
       <td style="text-align:left">센싱각도</td>
       <td style="text-align:left">
@@ -1258,10 +1315,34 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
       <td style="text-align:left">변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">mpose/mshift</td>
+      <td style="text-align:left">들어올릴 양</td>
       <td style="text-align:left">
-       마스터모드에서 사용되는 포즈, 쉬프트 변수, 마스터모드에서는 mpose에 센싱결과를 저장하며, 실행모드에서는  mshift에 할당된 변수에 쉬프트값 (현재센싱포즈 - 마스터포즈 의 벡터)이 계산되어 저장됩니다.
-      <td style="text-align:left">포즈변수/시프트변수</td>
+        바닥 탐색 후 상승량[mm]
+      <td style="text-align:left">변수</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">탐지기준거리</td>
+      <td style="text-align:left">
+        detect groove 탐지기준거리[mm]
+      <td style="text-align:left">변수</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Butt gap 변수</td>
+      <td style="text-align:left">
+        Butt, VGroove 센싱 타입에서 터치센싱으로 측정한 하단 gap이 저장될 변수
+      <td style="text-align:left">변수</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">mpose<br>(마스터모드)</td>
+      <td style="text-align:left">
+        마스터모드에서는 mpose에 센싱결과를 저장하며, 양산모드에서 mpose는 mshift를 계산할 때 사용됩니다.
+      <td style="text-align:left">포즈변수</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">mshift<br>(양산모드)</td>
+      <td style="text-align:left">
+       양산모드에서 사용되는 쉬프트 변수. mshift에 할당된 변수에 쉬프트값(현재센싱포즈 - 마스터포즈의벡터)이 계산되어 저장됩니다.
+      <td style="text-align:left">시프트변수</td>
     </tr>
   </tbody>
 </table>
@@ -1270,7 +1351,7 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
 ```python
   var var1=0      # butt 작업물 센싱시 측정된 gap을 저장할 변수를 선언한다.
   var P10=cpo()   # 포즈변수 P10을 선언하고 현재포즈를 저장해둔다.
-  touchsen cnd=2, crd="tool", dir=["+y"], lift_up=3, pose=P10, gap=var1  # 2번 조건, 툴좌표계 방향, 바닥센싱 후3mm 상승, 갭은 var1변수에 저장
+  touchsen cnd=2, crd="tool", dir=["+y"], lift_up=3, pose=P10, gap=var1  # 2번 조건, 툴좌표계 방향, 바닥센싱 후 3mm 상승, 갭은 var1변수에 저장
   touchsen cnd=1, crd="tool", dir=["tf", "td"], pose=P10, 0  # 1번 조건, 툴프로젝션 방향, 2점 터치
   touchsen cnd=1, crd="base", dir=["+x","-y","-z"], pose=P10, 0  # 1번 조건, 베이스좌표 방향, 3점 터치
 ```
@@ -1278,7 +1359,7 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
 # 2.14 stitch
 
 ### 설명 
-```stitch``` 문은 스티치 용접을 수행하는 명령어 입니다. 퀵 오픈창으로 스티치 조건을 설정할 수 있으며 이 정보들은 ROBOT.STC에 저장됩니다. 스티치 용접을 하려는 위치로 ```move``` 수행하고 ```arc on```문과 함께 사용해야 하며 스티치 기능을 수행하면 해당 위치에서 스티치 용접을 시작하며,  스티치 기능이 종료 되는 지점까지 스티치 용접을 진행 합니다.
+```stitch``` 문은 스티치 용접을 수행하는 명령어 입니다. 명령어에 커서를 둔 상태에서 [**속성**] 버튼을 눌러 스티치 조건을 설정할 수 있습니다. 스티치 용접을 하려는 위치로 ```move``` 수행 후 ```arcon```문과 함께 사용해야 합니다. 스티치 기능을 수행하면 해당 위치에서 스티치 용접을 시작하며,  스티치 기능이 종료 되는 지점까지 스티치 용접을 진행 합니다.
 
 
 ### 문법
@@ -1313,18 +1394,19 @@ stitch off
    stitch on, cnd=2         #  스티치 2번 조건 실행
    stitch off               #  스티치 기능 종료
 ```
-# 2.15 calc_shift
+# 2.15 calshift
 
 
 
 ### 설명     
-```calc_shift``` 문은 2개의 포즈변수를 이용해 쉬프트를 계산하는 함수입니다.
+```calshift``` 문은 2개의 포즈변수를 이용해 쉬프트를 계산하는 함수입니다.
 터치센싱으로 저장한 포즈 변수들을 이용해 쉬프트를 계산할 때 많이 사용됩니다.
 
 
 ### 문법
 ```python
-```calc_shift``` p1=<포즈변수인자>, p2=<포즈변수인자>, sft=<쉬프트변수인자>
+<쉬프트변수인자>=calshift(<포즈변수인자1>, <포즈변수인자2>)
+<쉬프트변수인자>=calshift(<포즈변수인자1>, <포즈변수인자2>,"TV")
 ```
 
 ### 파라미터
@@ -1340,8 +1422,7 @@ stitch off
     <tr>
       <td style="text-align:left">포즈변수 인자</td>
       <td style="text-align:left">
-        포즈변수를 입력합니다.
-        (1 ~ 9999)
+        포즈변수를 입력합니다.(1 ~ 9999)
       </td>
       <td style="text-align:left">포즈변수</td>
     </tr>
@@ -1349,7 +1430,15 @@ stitch off
       <td style="text-align:left">쉬프트변수 인자</td>
       <td style="text-align:left">
         쉬프트 값을 저장 할 쉬프트 변수를 입력합니다.
+      </td>
       <td style="text-align:left">쉬프트변수</td>
+    </tr>    
+    <tr>
+      <td style="text-align:left">TV</td>
+      <td style="text-align:left">
+        툴에 수직인 방향으로 쉬프트를 계산합니다.
+      </td>
+      <td style="text-align:left">문자열</td>
     </tr>
   </tbody>
 </table>  
@@ -1360,9 +1449,9 @@ stitch off
     var pose_1 = cpo()
     move L, spd=30%, …
     var pose_2 = cpo()
-    var sft_1 = Shift(0,0,0,0,0,0,”robot”)
-    calc_shift p1=pose_1, p2=pose_2, sft=sft_1      
-    # pose_1 – pose_2 의 벡터 쉬프트량을 sft_1에 계산하여 저장
+    var sft_1
+    sft_1=calshift(pose_1,pose_2)   
+    # pose_1 – pose_2 의 벡터 쉬프트량을 계산하여 sft_1에 저장
 ```
   # 3. Quick Open 기능# 3.1 개요
 
