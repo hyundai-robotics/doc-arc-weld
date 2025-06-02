@@ -13,8 +13,8 @@
 {% endhint %}
 
 <p align="center">
- <img src="../../_assets/arc_trj_mgr.png" width="90%"></img>
- <em><p align="center">그림 </p></em>
+ <img src="../../_assets/8_28_arc_trj_mgr.png" width="90%"></img>
+ <em><p align="center">그림 8.28 실시간 용접 궤적 모니터링</p></em>
 </p>
 
 arcon 부터 arcoff 구간 까지의 궤적 및 용접정보를 실시간으로 확인할 수 있습니다.

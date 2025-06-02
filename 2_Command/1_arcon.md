@@ -18,47 +18,47 @@ arcon cnd=<조건번호>,job=<용접 Job번호>
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">Arc용접 조건번호</td>
-      <td style="text-align:left">
+      <td>Arc용접 조건번호</td>
+      <td>
         Arc용접 시작 및 본 조건에 사용되는 용접조건의 번호
         (1~100)
       </td>
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">전류 값</td>
-      <td style="text-align:left">
+      <td>전류 값</td>
+      <td>
         Arc용접용 출력 전류 값<br>
         (0 ~ 500)[A]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">전압 값</td>
-      <td style="text-align:left">
+      <td>전압 값</td>
+      <td>
         Arc용접 시 실제 출력할 전압 값<br>
         (20 ~ 40)[V]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
         <tr>
-      <td style="text-align:left">전압 옵셋값</td>
-      <td style="text-align:left">
+      <td>전압 옵셋값</td>
+      <td>
         Arc용접 시 시너직 전압의 옵셋 전압 값<br>
         (-200 ~ 200)[V]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">용접기의 Job번호</td>
-      <td style="text-align:left">
+      <td>용접기의 Job번호</td>
+      <td>
         용접기 쪽에 저장된 Job번호 중 사용할 Job번호(Job 모드 지원 용접기 전용)
         (0 ~ 9999)
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
   </tbody>
 </table>

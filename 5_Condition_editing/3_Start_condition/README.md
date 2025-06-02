@@ -19,7 +19,7 @@ Arc용접 설정이 디지털이고, ```arcon cnd=X``` 명령라인에 커서가
  
  
 <p align="center">
- <img src="../../_assets/5_3.png" width="70%"></img>
+ <img src="../../_assets/5_4.png" width="70%"></img>
  <em><p align="center">그림 5.4 EWM 용접기 조건 설정</p></em>
 </p>
 

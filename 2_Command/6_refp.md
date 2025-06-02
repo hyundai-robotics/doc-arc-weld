@@ -13,25 +13,25 @@ refp <참조점 번호>
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">참조점 번호</td>
-      <td style="text-align:left">
+      <td>참조점 번호</td>
+      <td>
         참조점의 종류를 설정하는 번호
         (1 ~ 4)
       </td>
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">포즈번호</td>
-      <td style="text-align:left">
+      <td>포즈번호</td>
+      <td>
         참조점의 포즈를 입력합니다.(단, 숨은 포즈로 입력한 경우는 생략됨)
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
   </tbody>
 </table>

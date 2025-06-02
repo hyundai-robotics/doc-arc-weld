@@ -14,75 +14,75 @@ arccond <보간종류>, cnd=<조건번호>, gap=<gap>, spd=<용접속도>, rd=<�
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">의미</th>
-      <th style="text-align:left">기타</th>
+      <th>항목</th>
+      <th>의미</th>
+      <th>기타</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">보간종류</td>
-      <td style="text-align:left">
+      <td>보간종류</td>
+      <td>
         보간조건 설정
         (D:즉시변경, L:선형보간변경)
       </td>
-      <td style="text-align:left">문자</td>
+      <td>문자</td>
     </tr>
     <tr>
-      <td style="text-align:left">조건번호</td>
-      <td style="text-align:left">
+      <td>조건번호</td>
+      <td>
         용접 DB (WDB) 및 보간조건을 저장하는 조건번호<br>
         (1 ~ 1000)
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">gap</td>
-      <td style="text-align:left">
+      <td>gap</td>
+      <td>
         gap을 입력합니다.<br>
         (-1 ~ 1000)[mm]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">용접속도</td>
-      <td style="text-align:left">
+      <td>용접속도</td>
+      <td>
         즉시변경시 용접속도입니다.<br>
         (1 ~ 1000) [cm/min]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">벽방향</td>
-      <td style="text-align:left">
+      <td>벽방향</td>
+      <td>
         즉시변경시 위빙 벽방향 폭입니다.<br>
         (1 ~ 50)[mm]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">타방향</td>
-      <td style="text-align:left">
+      <td>타방향</td>
+      <td>
         즉시변경시 위빙 타방향 폭입니다.<br>
         (1 ~ 50)[mm]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">위빙주파수</td>
-      <td style="text-align:left">
+      <td>위빙주파수</td>
+      <td>
         즉시변경시 위빙주파수 입니다.<br>
         (1 ~ 10)[Hz]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">전류</td>
-      <td style="text-align:left">
+      <td>전류</td>
+      <td>
         즉시변경시 용접 전류입니다.<br>
         (1 ~ 1000)[A]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
     <tr>
-      <td style="text-align:left">전압</td>
-      <td style="text-align:left">
+      <td>전압</td>
+      <td>
         즉시변경시 용접 전압입니다.<br>
         (1 ~ 200)[V]
-      <td style="text-align:left">변수</td>
+      <td>변수</td>
     </tr>
   </tbody>
 </table>
