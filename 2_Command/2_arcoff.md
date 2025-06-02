@@ -1,15 +1,19 @@
 ﻿# 2.2 arcoff
 
 ### 설명
-```arcoff```는 Arc용접을 종료하는 명령어 입니다. 이 명령어는 4가지 형태로 사용될 수 있습니다. 단, 설정된 용접기에서 지원하지 않는 명령어는 사용할 수 없습니다.
+```arcoff```는 Arc용접을 종료하는 명령어 입니다. 이 명령어는 4가지 형태로 사용될 수 있습니다. 단, 설정된 용접기에서 지원하지 않는 명령어는 사용할 수 없습니다.  
+<br/>
 
 ### 문법
+
 ```python
 arcoff
 arcoff welder=<조건번호>, delay=<지연시간>
-```
+```  
+<br/>
 
 ### 파라미터
+
 <table>
   <thead>
     <tr>
@@ -35,15 +39,18 @@ arcoff welder=<조건번호>, delay=<지연시간>
       <td>변수</td>
     </tr>
   </tbody>
-</table>
-
+</table>  
+<br/>
 
 
 ### 사용 예
+
 ```python
     arcoff                    #특별한 종료처리 없이 Arc 용접을 종료 함
     arcoff welder=2, delay=1  #2번째 용접기 아크를 1초 후 off 
-```
+```  
+<br/>
 
 ### 세부 설명  
+
   [[5장 Arc용접 조건 편집]](../5_Condition_editing/README.md) 참고

@@ -1,21 +1,22 @@
 ﻿# 2.13 touchsen
 
 ### 설명
-```touchsen``` 문은 와이어 터치센싱을 수행하는 명령어 입니다. 속성창에서 센싱타입 및 센싱조건을 설정할 수 있습니다. 터치센싱 하려는 위치로 move를 수행하고 `touchsen`문을 수행하면 해당 위치에서 센싱타입 및 조건에 맞추어 자동으로 터치센싱 합니다.
-
-- 세부 설명  
-  [[8.2 터치센싱 기능]](../8_Application_function/2_Touch_sensing/README.md) 참고
+```touchsen``` 문은 와이어 터치센싱을 수행하는 명령어 입니다. 속성창에서 센싱타입 및 센싱조건을 설정할 수 있습니다. 터치센싱 하려는 위치로 move를 수행하고 `touchsen`문을 수행하면 해당 위치에서 센싱타입 및 조건에 맞추어 자동으로 터치센싱 합니다.  
+<br/>
 
 
 ### 문법
+
 ```python
 touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, pose=<저장할 포즈>
 touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, rotation=<센싱각도>, pose=<저장할 포즈>
 touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, lift_up=<들어올릴 양>, pose=<저장할 포즈>, gap=<butt gap 변수>
 touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모드 저장할 기준포즈>, mshift=<양산모드 계산된 쉬프트 변수>
-```
+```  
+<br/>
 
 ### 파라미터
+
 <table>
   <thead>
     <tr>
@@ -89,7 +90,8 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
       <td>시프트변수</td>
     </tr>
   </tbody>
-</table>
+</table>  
+<br/>
 
 ### 사용 예
 ```python
@@ -98,5 +100,11 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
   touchsen cnd=2, crd="tool", dir=["+y"], lift_up=3, pose=P10, gap=var1  # 2번 조건, 툴좌표계 방향, 바닥센싱 후 3mm 상승, 갭은 var1변수에 저장
   touchsen cnd=1, crd="tool", dir=["tf", "td"], pose=P10, 0  # 1번 조건, 툴프로젝션 방향, 2점 터치
   touchsen cnd=1, crd="base", dir=["+x","-y","-z"], pose=P10, 0  # 1번 조건, 베이스좌표 방향, 3점 터치
-```
+```  
+<br/>
+
+
+### 세부 설명  
+  [[8.2 터치센싱 기능]](../8_Application_function/2_Touch_sensing/README.md) 참고  
+<br/>
 

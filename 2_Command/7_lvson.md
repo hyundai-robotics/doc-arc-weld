@@ -1,9 +1,12 @@
 ﻿# 2.7 lvs
 
 ### 설명 
-```lvs``` 문은 LVS(레이저비전센서)를 이용하여 레이저가 위치한 곳의 포즈를 얻어내거나 (seam_find), 시점 탐색 (search), 용접선 추종 (track) 기능을 수행하는 명령어입니다.
+
+```lvs``` 문은 LVS(레이저비전센서)를 이용하여 레이저가 위치한 곳의 포즈를 얻어내거나 (seam_find), 시점 탐색 (search), 용접선 추종 (track) 기능을 수행하는 명령어입니다.  
+<br/>
 
 ### 문법
+
 ```python
 lvs laser_on, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
 lvs laser_off, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
@@ -11,9 +14,11 @@ lvs search, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
 lvs track, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
 lvs seam_find, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
 lvs auto_calib, cnd=<조건번호>, seam=<seam번호>, sp=<seam포즈>, opt=0
-``` 
+```   
+<br/>
 
 ### 파라미터
+
 <table>
   <thead>
     <tr>
@@ -100,15 +105,20 @@ lvs auto_calib, cnd=<조건번호>, seam=<seam번호>, sp=<seam포즈>, opt=0
       <td>포즈변수</td>
     </tr>
   </tbody>
-</table>
+</table>  
+<br/>
 
 ### 사용 예
+
 ```python
    lvs seam_find, cnd=1, seam=10, sp=p10    
    # 조건번호 1번, seam번호 10번으로 seam 파인딩 기능 수행, 결과포즈는 p10에 저장
    lvs track, cnd=1 ,seam=10 , sp=p10           
    # 조건번호 1번, seam번호 10번으로 LVS 용접선 추종 시작
-```
+```  
+<br/><br/>
+
+
 {% hint style="info" %}
 옵션 기능으로 사용을 위해서는 당사에 문의하시기 바랍니다.
 {% endhint %}

@@ -35,6 +35,7 @@
       <td>
         변수 유형에 따라 해당 변수를 모니터링하고 값을 변경
       </td>
+      <td></td>
     </tr>
     <tr>
       <th>arcon</th>
@@ -56,6 +57,7 @@
         - 용접보조조건(종료조건 진입)<br>
         - 자동 용착 해제: 횟수, 용착해제 조건, 조건유지시간 <br>
       </td>
+      <td></td>
     </tr>
     <tr>
       <th>weaving on</th>
@@ -65,6 +67,7 @@
       <td>
         조건번호, 위빙형태, 주파수, 기본패턴, 진행각도, 경계제한, 이동시간, 타이머
       </td>
+      <td></td>
     </tr>
     <tr>
       <th>refp</th>
@@ -91,6 +94,7 @@
   - 탐색 조건 
     - 탐색량 [mm], 탐색방향 (+tx, -tx), 탐색속도 (mm/s)
       </td>
+      <td></td>
     </tr>
     <tr>
       <th>heightsen</th>
@@ -100,6 +104,7 @@
       <td>
         조건번호, Input data type for height sensing, Reference data setting method, ...
       </td>
+      <td></td>
     </tr>
     <tr>
       <th>arccond</th>
@@ -109,6 +114,7 @@
       <td>
         용접속도, 전류, 전압, 위빙 폭, 위빙 주파수로 이루어진 데이터 베이스 확인 및 편집
       </td>
+      <td></td>
     </tr>
     <tr>
       <th>touchsen</th>
@@ -118,6 +124,7 @@
       <td>
         용접속도, 전류, 전압, 위빙 폭, 위빙 주파수로 이루어진 데이터 베이스 확인 및 편집
       </td>
+      <td></td>
     </tr>
   </tbody>
 </table>

@@ -1,15 +1,18 @@
 ﻿# 2.11 multipass
 
 ### 설명  
-```multipass``` 는 아크센싱의 경로를 재현하기 위한 멀티패스 용 명령어 입니다. 이 명령어를 이용하면 원래 아크용접 경로에서 원하는 만큼 시프트 시킨 경로를 재현하여 용접할 수 있습니다. 
+```multipass``` 는 아크센싱의 경로를 재현하기 위한 멀티패스 용 명령어 입니다. 이 명령어를 이용하면 원래 아크용접 경로에서 원하는 만큼 시프트 시킨 경로를 재현하여 용접할 수 있습니다.   
+<br/>
 
 
 ### 문법
+
 ```python  
 multipass save, trj=<멀티패스 궤적 번호>, period=<궤적 저장 주기 거리>
 multipass load, trj=<멀티패스 궤적 번호>, side=<좌우 시프트 거리>, height=<상하 시프트 거리>, reverse=<멀티패스 재생방향>, tas=<토치 전후방향 각도 시프트>, was=<토치 좌우방향 각도 시프트>
 multipass off
-```
+```  
+<br/>
 
 ### 파라미터
 <table>
@@ -88,9 +91,11 @@ multipass off
       <td>변수</td>
     </tr>
   </tbody>
-</table>
+</table>  
+<br/>
 
 ### 사용 예
+
 ```python
      weaving on, cnd=1 
      multipass save, trj=1, period=10       # 1번 궤적에 10mm 간격으로 저장  
@@ -113,4 +118,5 @@ S17  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
      arcoff
      weaving off  
      multipass off
-```
+```  
+<br/>
