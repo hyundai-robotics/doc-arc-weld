@@ -4,8 +4,8 @@
 
 
 <p align="center">
- <img src="../../_assets/1_1.png" width="60%"></img>
- <em><p align="center">그림 1.1 기본 Arc 용접 티칭</p></em>
+ <img src="../../_assets/1_1_1.png" width="60%"></img>
+ <em><p align="center">그림 1.1.1. 기본 Arc 용접 티칭</p></em>
 </p>
 
 </br>
@@ -19,8 +19,8 @@
 (4)	여기까지 진행하면 티치펜던트 화면은 아래 그림과 같이 표시됩니다.
 
 <p align="center">
- <img src="../../_assets/1_2.png" width="70%"></img>
- <em><p align="center">그림 1.2 신규 프로그램 번호가 선택된 화면</p></em>
+ <img src="../../_assets/1_1_2.png" width="70%"></img>
+ <em><p align="center">그림 1.1.2. 신규 프로그램 번호가 선택된 화면</p></em>
 </p>
 
 </br>
@@ -36,8 +36,8 @@
 
 
 <p align="center">
- <img src="../../_assets/1_3.png" width="40%"></img>
- <em><p align="center">그림 1.3 기록조건 표시내용</p></em>
+ <img src="../../_assets/1_1_3.png" width="40%"></img>
+ <em><p align="center">그림 1.1.3. 기록조건 표시내용</p></em>
 </p>
 
 </br>
@@ -45,8 +45,8 @@
 - `[기록]`키를 누르면 아래 그림과 같이 스텝이 기록됩니다.
 
 <p align="center">
- <img src="../../_assets/1_4.png" width="70%"></img>
- <em><p align="center">그림 1.4 스텝 기록 화면 (1)</p></em>
+ <img src="../../_assets/1_1_4.png" width="70%"></img>
+ <em><p align="center">그림 1.1.4. 스텝 기록 화면 (1)</p></em>
 </p>
 
 </br>
@@ -56,8 +56,8 @@
  
 
 <p align="center">
- <img src="../../_assets/1_5.png" width="70%"></img>
- <em><p align="center">그림 1.5 스텝 기록 화면 (2)</p></em>
+ <img src="../../_assets/1_1_5.png" width="70%"></img>
+ <em><p align="center">그림 1.1.5. 스텝 기록 화면 (2)</p></em>
 </p>
 
 (9) 용접구간이 스텝2 ~ 스텝3이므로, 스텝2로 커서를 이동합니다. 
@@ -79,6 +79,6 @@
 **[명령입력] → [FLOW제어] → [end]** 키를 누르면 **[end]** 명령이 입력됩니다.
 
 <p align="center">
- <img src="../../_assets/1_6.png" width="70%"></img>
- <em><p align="center">그림 1.6 티칭이 완료된 화면</p></em>
+ <img src="../../_assets/1_1_6.png" width="70%"></img>
+ <em><p align="center">그림 1.1.6. 티칭이 완료된 화면</p></em>
 </p>

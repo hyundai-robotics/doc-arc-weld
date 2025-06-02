@@ -11,8 +11,8 @@ Arc 용접작업을 티칭할 때 적절한 용접 전류/전압을 찾기 위�
 ### Arc 용접 전류/전압 변경 대화상자 진입
 
 <p align="center">
- <img src="../../../_assets/1_9.png" width="70%"></img>
- <em><p align="center">그림 1.9 Arc용접 프로그램 및 전류전압 변경</p></em>
+ <img src="../../../_assets/1_3_1.png" width="70%"></img>
+ <em><p align="center">그림 1.3.1. Arc용접 프로그램 및 전류전압 변경</p></em>
 </p>
 
 <br>

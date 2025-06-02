@@ -3,8 +3,8 @@
 자동모드에서 Arc 용접 중 **[창조정] – [선택] – [아크IV변경]** 을 선택합니다.
 
 <p align="center">
- <img src="../../../../_assets/1_10.png" width="70%"></img>
- <em><p align="center">그림 1.10 Arc 용접 전류/전압 변경 대화상자</p></em>
+ <img src="../../../../_assets/1_3_2.png" width="70%"></img>
+ <em><p align="center">그림 1.3.2. Arc 용접 전류/전압 변경 대화상자</p></em>
 </p>   
 
 <br>
