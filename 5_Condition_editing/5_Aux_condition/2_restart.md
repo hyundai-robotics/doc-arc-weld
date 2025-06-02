@@ -6,8 +6,8 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 
  
 <p align="center">
- <img src="../../_assets/5_9.png" width="70%"></img>
- <em><p align="center">그림 5.9 용접보조조건(재기동) 설정(EWM 용접기)</p></em>
+ <img src="../../_assets/5_5_3.png" width="70%"></img>
+ <em><p align="center">그림 5.5.3. 용접보조조건(재기동) 설정(EWM 용접기)</p></em>
 </p>
 
 
@@ -60,8 +60,8 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 
  
 <p align="center">
- <img src="../../_assets/5_10.png" width="80%"></img>
- <em><p align="center">그림 5.10 재기동 동작 과정</p></em>
+ <img src="../../_assets/5_5_4.png" width="80%"></img>
+ <em><p align="center">그림 5.5.4. 재기동 동작 과정</p></em>
 </p>
 
  

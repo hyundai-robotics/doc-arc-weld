@@ -7,11 +7,11 @@ Arc용접 설정이 디지털일 때 용접시작조건 대화상자에서 [보�
 
   
 <p align="center">
- <img src="../../_assets/5_7.png" width="70%"></img>
- <em><p align="center">그림 5.7 용접보조조건(재시도) 설정(EWM 용접기)</p></em>
+ <img src="../../_assets/5_5_1.png" width="70%"></img>
+ <em><p align="center">그림 5.5.1. 용접보조조건(재시도) 설정(EWM 용접기)</p></em>
 </p>
 
- {% hint style="info" %}
+{% hint style="info" %}
 [참고 사항]   
 재시도 기능은 Arc 점화 시도 후 점화에 실패했을 때 수행되는 기능이고, 재기동 기능은 Arc 용접 중 용접이 중단된 후 다시 재개될 때 수행되는 기능입니다. 
 {% endhint %}
@@ -54,7 +54,7 @@ Arc용접 설정이 디지털일 때 용접시작조건 대화상자에서 [보�
     
 
 <p align="center">
- <img src="../../_assets/5_8.png" width="80%"></img>
- <em><p align="center">그림 5.8 재시도 기능 순서</p></em>
+ <img src="../../_assets/5_5_2.png" width="80%"></img>
+ <em><p align="center">그림 5.5.2 재시도 기능 순서</p></em>
 </p>
 

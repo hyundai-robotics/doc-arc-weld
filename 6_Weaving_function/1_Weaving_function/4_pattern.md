@@ -3,12 +3,9 @@
 다음 그림에서의 각 요소를 설정합니다. 
   
 <p align="center">
- <img src="../../_assets/6_3_1.png" width="60%"></img>
-</p>
-
-<p align="center">
- <img src="../../_assets/6_3_2.png" width="45%"></img>
- <em><p align="center">그림 6.3 벽방향에 따른 위빙 요소</p></em>
+ <img src="../../_assets/6_1_3.png" width="60%"></img>
+ <img src="../../_assets/6_1_3_1.png" width="45%"></img>
+ <em><p align="center">그림 6.1.3 벽방향에 따른 위빙 요소</p></em>
 </p>
 
 
@@ -32,17 +29,17 @@
     용접선에 대한 위빙 진동 방향의 각도입니다. 설정 가능한 범위는 -90.0 ~ 90.0도입니다. 0도 설정 시 용접선과 직각으로 위빙이 동작합니다.
 
 <p align="center">
- <img src="../../_assets/6_4.png" width="60%"></img>
- <em><p align="center">그림 6.4 위빙 진행 각도</p></em>
+ <img src="../../_assets/6_1_4.png" width="60%"></img>
+ <em><p align="center">그림 6.1.4. 위빙 진행 각도</p></em>
 </p>
 
     
 
 (7)	경계제한
-    진행각도가 0도가 아닌 위빙은 위빙 구간의 시작 밑 끝 부분에서 구간 경계를 넘어가는 경우가 발생할 수 있습니다. 경계제한 설정으로 구간 경계를 제한하여 구간 경계를 넘어가지 않게 위빙 동작을 수행할 것인지 제한 없이 위빙 동작을 수행할 것인지를 설정합니다.
+    진행각도가 0도가 아닌 위빙은 위빙 구간의 시작 밑 끝 부분에서 구간 경계를 넘어가는 경우가 발생할 수 있습니다. 경계제한 설정으로 구간 경계를 제한하여 구간 경계를 넘어가지 않게 위빙 동작을 수행할 것인지 제한 없이 위빙 동작을 수행할 것인지를 설정합니다.<br/>  
 
  
 <p align="center">
- <img src="../../_assets/6_4_1.png" width="60%"></img>
- <em><p align="center">그림 6.4.1 위빙 경계 제한</p></em>
+ <img src="../../_assets/6_1_5.png" width="60%"></img>
+ <em><p align="center">그림 6.1.5 위빙 경계 제한</p></em>
 </p> 

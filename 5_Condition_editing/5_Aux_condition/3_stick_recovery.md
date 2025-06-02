@@ -7,8 +7,8 @@ Arc용접 설정이 디지털이고 『[용접시작조건] → [용접종료조
 
  
 <p align="center">
- <img src="../../_assets/5_11.png" width="70%"></img>
- <em><p align="center">그림 5.11 자동 용착해제 설정</p></em>
+ <img src="../../_assets/5_5_5.png" width="70%"></img>
+ <em><p align="center">그림 5.5.4 자동 용착해제 설정</p></em>
 </p>
 
 

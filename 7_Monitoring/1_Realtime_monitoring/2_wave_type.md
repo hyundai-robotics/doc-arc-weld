@@ -4,8 +4,8 @@
 
  
 <p align="center">
- <img src="../../_assets/7_3.png" width="70%"></img>
- <em><p align="center">그림 7.3 Arc용접 파형 모니터링</p></em>
+ <img src="../../_assets/7_1_2.png" width="70%"></img>
+ <em><p align="center">그림 7.1.2. Arc용접 파형 모니터링</p></em>
 </p>
 
 

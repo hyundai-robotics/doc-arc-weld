@@ -4,8 +4,8 @@
 
  
 <p align="center">
- <img src="../../_assets/6_1.png" width="70%"></img>
- <em><p align="center">그림 6.1 위빙조건 설정</p></em>
+ <img src="../../_assets/6_1_1.png" width="70%"></img>
+ <em><p align="center">그림 6.1.1. 위빙조건 설정</p></em>
 </p>
 
 
