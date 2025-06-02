@@ -50,8 +50,8 @@ lvs 명령어의 seam 인자는 LVS controller에 등록한 형상 및 조건에
 {% endhint %}
 
 <p align="center">
- <img src="../../_assets/lvs_autocalib.png" width="80%"></img>
- <em><p align="center">그림. lvs 자동 캘리브레이션</p></em>
+ <img src="../../_assets/8_5_7_lvs_autocalib.png" width="80%"></img>
+ <em><p align="center">그림 8.5.7. lvs 자동 캘리브레이션</p></em>
 </p>   
 </br>
 
@@ -85,7 +85,7 @@ lvs 명령어의 seam 인자는 LVS controller에 등록한 형상 및 조건에
 [시스템]-[응용파라미터]-[lvs 추종]-[캘리브레이션]
 
 <p align="center">
- <img src="../../_assets/lvs_tool_calibmat.png" width="80%"></img>
- <em><p align="center">그림. lvs 자동 캘리브레이션</p></em>
+ <img src="../../_assets/8_5_8_lvs_tool_calibmat.png" width="80%"></img>
+ <em><p align="center">그림 8.5.8. lvs 자동 캘리브레이션</p></em>
 </p>   
 </br>

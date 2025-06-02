@@ -3,8 +3,8 @@
 weaving 명령어에서 [속성]을 누르면 위빙 파일 조건편집화면이 나타납니다. 이 창의 두 번째 탭은 아래와 같이 위빙 중에 사용이 가능한 아크센싱에 관한 설정을 하는 부분입니다. 
 
 <p align="center">
- <img src="../../_assets/8_14.png" width="70%"></img>
- <em><p align="center">그림 8.14 아크센싱 조건-일반 대화상자</p></em>
+ <img src="../../_assets/8_3_2.png" width="70%"></img>
+ <em><p align="center">그림 8.3.2. 아크센싱 조건-일반 대화상자</p></em>
 </p>
 
 
@@ -52,8 +52,8 @@ weaving 명령어에서 [속성]을 누르면 위빙 파일 조건편집화면�
 ```이 탭의 내용은 가급적이면 default 값을 사용하십시오.```
 
 <p align="center">
- <img src="../../_assets/8_15.png" width="70%"></img>
- <em><p align="center">그림 8.15 아크센싱 조건-고급 대화상자</p></em>
+ <img src="../../_assets/8_3_3.png" width="70%"></img>
+ <em><p align="center">그림 8.3.3. 아크센싱 조건-고급 대화상자</p></em>
 </p>
 
 
@@ -84,8 +84,8 @@ weaving 명령어에서 [속성]을 누르면 위빙 파일 조건편집화면�
     아래 그림과 같이 한구간의 전류에 대해 Q1-1.5*IQR, Q3+1.5*IQR 범위를 기본으로 합니다.
 
 <p align="center">
- <img src="../../_assets/8_28.png" width="40%"></img>
- <em><p align="center">그림 8.16 비정상 판별 마진</p></em>
+ <img src="../../_assets/8_3_4.png" width="40%"></img>
+ <em><p align="center">그림 8.3.4. 비정상 판별 마진</p></em>
 </p>
 <br>
 
@@ -109,8 +109,8 @@ weaving 명령어에서 [속성]을 누르면 위빙 파일 조건편집화면�
 
 
 <p align="center">
- <img src="../../_assets/8_16.png" width="70%"></img>
- <em><p align="center">그림 8.17 아크센싱 조건-추종게인 대화상자</p></em>
+ <img src="../../_assets/8_3_5.png" width="70%"></img>
+ <em><p align="center">그림 8.3.5. 아크센싱 조건-추종게인 대화상자</p></em>
 </p>
 
 <br>

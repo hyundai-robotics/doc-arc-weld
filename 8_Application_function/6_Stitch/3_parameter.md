@@ -2,8 +2,8 @@
 
 
 <p align="center">
- <img src="../../_assets/8_24.png" width="80%"></img>
- <em><p align="center">그림 8.24 스티치 용접 과정에 따른 Profile</p></em>
+ <img src="../../_assets/8_6_5.png" width="80%"></img>
+ <em><p align="center">그림 8.6.5. 스티치 용접 과정에 따른 Profile</p></em>
 </p>
 
 
@@ -36,18 +36,18 @@ Stitch Enable/Equipment Enable/Equipment Output
 {% endhint %}
 
 <p align="center">
- <img src="../../_assets/8_25.png" width="70%"></img>
- <em><p align="center">그림 8.25 스티치 용접 조건 대화상자1</p></em>
+ <img src="../../_assets/8_6_6.png" width="70%"></img>
+ <em><p align="center">그림 8.6.6. 스티치 용접 조건 대화상자1</p></em>
 </p>
 
 <p align="center">
- <img src="../../_assets/8_26.png" width="70%"></img>
- <em><p align="center">그림 8.26 스티치 용접 조건 대화상자2</p></em>
+ <img src="../../_assets/8_6_7.png" width="70%"></img>
+ <em><p align="center">그림 8.6.7. 스티치 용접 조건 대화상자2</p></em>
 </p>
 
 <p align="center">
- <img src="../../_assets/8_27.png" width="40%"></img>
- <em><p align="center">그림 8.27 스티치 용접 명령어 입력</p></em>
+ <img src="../../_assets/8_6_8.png" width="40%"></img>
+ <em><p align="center">그림 8.6.8. 스티치 용접 명령어 입력</p></em>
 </p>
  
 

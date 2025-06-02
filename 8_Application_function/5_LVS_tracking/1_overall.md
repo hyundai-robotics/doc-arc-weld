@@ -12,8 +12,8 @@ LVS는 로봇의 플렌지에 직결되어야 하며, 센서는 용접선을 인
 
 
 <p align="center">
- <img src="../../_assets/8_18.png" width="90%"></img>
- <em><p align="center">그림 8.18 LVS 용접선 추적 데이터 흐름도</p></em>
+ <img src="../../_assets/8_5_1.png" width="90%"></img>
+ <em><p align="center">그림 8.5.1. LVS 용접선 추적 데이터 흐름도</p></em>
 </p>
 
 </br>
@@ -92,8 +92,8 @@ lvs 기능인자 cnd=조건번호, seam=센싱하고자 하는 프로파일 번�
 ```lvs``` 명령어를 이용한 트래킹기능은 다음과 같이 사용할 수 있습니다.
 
 <p align="center">
- <img src="../../_assets/8_19.png" width="60%"></img>
- <em><p align="center">그림 8.19 LVS 용접선 추적을 위한 티칭 방법</p></em>
+ <img src="../../_assets/8_5_2.png" width="60%"></img>
+ <em><p align="center">그림 8.5.2. LVS 용접선 추적을 위한 티칭 방법</p></em>
 </p>
 
 

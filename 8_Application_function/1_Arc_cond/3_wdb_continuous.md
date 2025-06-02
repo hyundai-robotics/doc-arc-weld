@@ -4,8 +4,8 @@
 예를들면, 해당기능은 용접 시작위치에서 Butt gap이 5mm이고 용접 종료위치에서 Butt gap이 25mm인 작업물을 용접할 때, 용접을 하면서 전류, 전압, 용접속도, 위빙폭, 위빙주파수 등을 선형적으로 보간하며 용접이 가능합니다. 이때, 용접조건의 연속변경(L, 보간)은 다음과 같이 직선형태로 이루어집니다.
  
 <p align="center">
- <img src="../../_assets/8_2.png" width="70%"></img>
- <em><p align="center">그림 8.2 용접조건의 직선보간</p></em>
+ <img src="../../_assets/8_1_2.png" width="70%"></img>
+ <em><p align="center">그림 8.1.2. 용접조건의 직선보간</p></em>
 </p> 
 
 <br>

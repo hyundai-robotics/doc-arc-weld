@@ -18,7 +18,8 @@
 4. 아크센싱으로 용접중 용접선 추종 (실시간 용접선 추종)
 
 {% hint style="info" %}
-용접점 센싱은 시작점, 경유점, 끝점 등의 위치를 말하며 터치센싱, LVS seamfinding, LPS(Laser Point Sensing) 기능을 이용하여 수행할 수 있습니다.
+용접점 센싱은 용접 구간의 시작점, 경유점, 끝점 등의 위치를 찾는 과정을 말합니다.<br>
+터치센싱, LVS seamfinding, LPS(Laser Point Sensing) 기능을 이용하여 수행할 수 있습니다.
 {% endhint %}
 
 {% hint style="info" %}

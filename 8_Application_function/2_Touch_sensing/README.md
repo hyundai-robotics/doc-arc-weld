@@ -9,8 +9,8 @@
 마스터모드 기능을 사용하면 기준 티칭을 통해 마스터포즈를 저장해놓고 실제 기동시 터치센싱을 통해 쉬프트량을 자동으로 계산할 수 있습니다.
 
 <p align="center">
- <img src="../../_assets/8_6.png"></img>
- <em><p align="center">그림 8.6 터치센싱의 예</p></em>
+ <img src="../../_assets/8_2_1.png"></img>
+ <em><p align="center">그림 8.2.1. 터치센싱의 예</p></em>
 </p>
 
 (1) 터치센싱 타입
@@ -18,8 +18,8 @@
  터치센싱은 그림 8.5와 같이 총 8가지 타입 (필렛, VGroove, Butt, LRCen, DetectGroove, Wall) 을 지원합니다. 
        
 <p align="center">
- <img src="../../_assets/8_7.png" width="90%"></img>
- <em><p align="center">그림 8.7 터치센싱 타입</p></em>
+ <img src="../../_assets/8_2_2.png" width="90%"></img>
+ <em><p align="center">그림 8.2.2. 터치센싱 타입</p></em>
 </p>
 
 (2) 터치센싱 명령어 및 설정 파라미터
@@ -28,27 +28,27 @@
 
 터치센싱 명령어에서 [속성]을 누르면 그림 8.8와 같은 창에 진입합니다. 
 
-탐색속도, 퇴피속도, 탐색거리, 진행거리, 오차보정량, 터치방식 등과 같은 조건들이 제어기에 저장됩니다. 
+센싱 거리, 후퇴 거리, 진행 거리, 센싱 속도, 퇴피 속도, 검지 타입 등과 같은 조건들이 제어기에 저장됩니다. 
 
 <p align="center">
- <img src="../../_assets/8_8.png" width="70%" ></img>
- <em><p align="center">그림 8.8 터치센싱 조건 편집화면</p></em>
+ <img src="../../_assets/8_2_3.png" width="70%" ></img>
+ <em><p align="center">그림 8.2.3. 터치센싱 조건 편집화면</p></em>
 </p>
 
 - 명령어 구성
-   - ```touchsen``` cnd=조건번호, crd=좌표계, dir=[탐색방향1, 탐색방향2, 탐색방향3], pose=결과포즈 저장변수, gap=butt gap 변수
-   - ```touchsen``` cnd=조건번호, crd=좌표계, dir=[탐색방향1, 탐색방향2, 탐색방향3], rotation=탐색방향각도, pose=결과포즈 저장변수, gap=butt gap 변수
-   - ```touchsen``` cnd=조건번호, crd=좌표계, dir=[탐색방향1, 탐색방향2, 탐색방향3], rotation=탐색방향각도, mpose=결과포즈 저장변수, mshift=계산된시프트 변수, gap=butt gap 변수
+   - ```touchsen``` cnd=조건번호, crd=좌표계, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], pose=결과포즈 저장변수, gap=butt gap 변수
+   - ```touchsen``` cnd=조건번호, crd=좌표계, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=센싱 방향 각도, pose=결과포즈 저장변수, gap=butt gap 변수
+   - ```touchsen``` cnd=조건번호, crd=좌표계, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=센싱 방향 각도, mpose=결과포즈 저장변수, mshift=계산된시프트 변수, gap=butt gap 변수
 
    - ```touchsen``` cnd=1, crd="robot", dir=[+x, -z], lift_up=3, pose=P10, gap=var_gap
       - 터치센싱 조건번호 (cnd) : cnd=1	
       - 터치센싱 좌표계 (crd) : "robot", "base", "tool", "tool_prj" 
-      - 탐색방향 파라미터 (dir) : "+x", ["+x","-z"], [+tx, +tz], ["tf","td"],  
-      - butt,groove 바닥 탐색 후 상승량 [mm] : lift_up=3		
-      - detect groove 탐지기준거리 [mm] : criteria=5
+      - 센싱 방향 파라미터 (dir) : "+x", ["+x","-z"], [+tx, +tz], ["tf","td"],  
+      - butt, groove 바닥 탐색 후 상승량 [mm] : lift_up=3		
+      - detect groove 탐지 기준 거리 [mm] : criteria=5
       - 센싱 결과 포즈변수 : pose=var_po10
       - butt 하단 갭 변수 (소숫점 첫째 자리에서 반올림) : gap=var_gap 
-      - touchsen 명령어의 속성창 설정항목 	: 탐색속도, 퇴피속도, 탐색거리, 진행거리, 오차보정량, 터치방식(접촉시, 접촉해제시)
+      - touchsen 명령어의 속성창 설정항목 : 센싱 거리, 후퇴 거리, 진행 거리, 센싱 속도, 퇴피 속도, 검지 타입(접촉 시, 접촉 해제 시)
 
 센싱방향(dir)은 작업물 타입에 따라 다음과 같이 지정할 수 있습니다.
 
@@ -71,11 +71,11 @@
 
 |타입|	최대탐색 </br>방향개수 |	직교XYZ </br>(모든타입 </br>지원예정)	| 툴좌표계|	툴프로젝션</br>좌표계 | 기타 입력인자 |
 |:---:|	:---: |	:---:	| :---:|	:---: |:---:|
-|Fillet|	3	|O|	O |	O	|	후퇴거리|
-|Butt	|1 |	X	|O	|X	| 오차보정량 |
+|Fillet|	3	|O|	O |	O	|	후퇴 거리|
+|Butt	|1 |	X	|O	|X	| ~~오차보정량~~ |
 |VGroove |	1 |	X |	O	|X | |
 |LRCen |	1	|O |	O	|X |  |	
-|DetectGroove|	2 |	O |	O |	O | 진행거리1 </br> 후퇴거리1 </br> criteria |
+|DetectGroove|	2 |	O |	O |	O | 진행거리1 </br> 후퇴 거리1 </br> criteria |
 
 </center>
 
@@ -101,8 +101,8 @@
 [1] Fillet 타입
 
 <p align="center">
- <img src="../../_assets/8_9.png" width="60%"></img>
- <em><p align="center">그림 8.9 터치센싱 예 Fillet 타입</p></em>
+ <img src="../../_assets/8_2_4.png" width="60%"></img>
+ <em><p align="center">그림 8.2.4. 터치센싱 예 Fillet 타입</p></em>
 </p>
 
 - 명령어 작성 예시
@@ -111,12 +111,12 @@
   touchsen cnd=1, crd="tool_prj", dir=["tf", "td"], pose=P10
   touchsen cnd=1, crd="tool", dir=["+tz"], pose=P10
 ```
-- 1점 센싱 : 탐색방향을 한 개만 지정
-- 2점 센싱 : 탐색방향을 순차적으로 2개 지정
-- 3점 센싱 : 탐색방향을 순차적으로 3개 지정
+- 1점 센싱 : 센싱 방향을 한 개만 지정
+- 2점 센싱 : 센싱 방향을 순차적으로 2개 지정
+- 3점 센싱 : 센싱 방향을 순차적으로 3개 지정
 - 툴 프로젝션 방식 (crd="tool_prj"): 사용 편리상 토치 자세를 기준으로 전진, 하강, 좌우 방향을 결정하는 방식
   tf(전진), td(하강), tl(좌), tr(우)로 방향을 지정할 수 있습니다. (tl=RotZ(90)*tf, tr=RotZ(-90)*tf 방향입니다)
-- 작업물에 회전량(RX, RY, RZ)이 존재하는 틀어진 Fillet의 경우 각도지정 옵션을 이용해 탐색방향을 변경할 수 있습니다. 
+- 작업물에 회전량(RX, RY, RZ)이 존재하는 틀어진 Fillet의 경우 각도지정 옵션을 이용해 센싱 방향을 변경할 수 있습니다. 
   사용법은 메뉴얼 하단을 참고하십시오.
 
 
@@ -125,8 +125,8 @@
 [2] V Groove 타입
 
 <p align="center">
- <img src="../../_assets/8_10.png" width="70%"></img>
- <em><p align="center">그림 8.10 터치센싱 예 V Groove 타입</p></em>
+ <img src="../../_assets/8_2_5.png" width="70%"></img>
+ <em><p align="center">그림 8.2.5. 터치센싱 예 V Groove 타입</p></em>
 </p>   
 
 - 명령어 작성 예시
@@ -140,8 +140,8 @@
 - 센싱 시퀀스
 
 <p align="center">
- <img src="../../_assets/8_12.png" width="60%"></img>
- <em><p align="center">그림 8.12 터치센싱 시퀀스 VGroove 타입</p></em>
+ <img src="../../_assets/8_2_6.png" width="60%"></img>
+ <em><p align="center">그림 8.2.6. 터치센싱 시퀀스 VGroove 타입</p></em>
 </p>   
 
 센싱은 상단 좌우 - 중간 복귀 - 하단 - 하단 좌우 - 중간 으로 진행됩니다.
@@ -151,8 +151,8 @@
 [3] BUTT 타입
 
 <p align="center">
- <img src="../../_assets/8_11.png" width="30%"></img>
- <em><p align="center">그림 8.11 터치센싱 예 Butt 타입</p></em>
+ <img src="../../_assets/8_2_7.png" width="30%"></img>
+ <em><p align="center">그림 8.2.7. 터치센싱 예 Butt 타입</p></em>
 </p>   
 
 
@@ -164,13 +164,13 @@
 
 - Butt 타입은 그림과 같이 센싱시작 전 툴 자세를 바닥면에 수직으로 티칭하는 것을 권장합니다.
 - 방향인자는 좌우 시퀀스에 해당하는 방향으로 1가지 입니다. 하강 시퀀스 방향은 +tz 방향으로 고정됩니다.
--	센싱을 위해 바닥센싱 후 상승량(lift_up)은 최소 3mm이상 설정하는 것을 권장합니다. 상승량에 따라서 센싱한 gap의 크기가 바뀔 수 있습니다. 이 경우에는 명령어의 [속성] 창에 진입하여 오차보정량을 입력하면 이 값을 뺀 값으로 butt gap을 계산할 수 있습니다.
+-	센싱을 위해 바닥센싱 후 상승량(lift_up)은 최소 3mm이상 설정하는 것을 권장합니다. 상승량에 따라서 센싱한 gap의 크기가 바뀔 수 있습니다.
 
 - 센싱 시퀀스
 
 <p align="center">
- <img src="../../_assets/8_12_2.png" width="60%"></img>
- <em><p align="center">그림 8.12 터치센싱 시퀀스 Butt 타입</p></em>
+ <img src="../../_assets/8_2_8.png" width="60%"></img>
+ <em><p align="center">그림 8.2.8. 터치센싱 시퀀스 Butt 타입</p></em>
 </p>   
 
 센싱은 상단 좌우 - 중간 복귀 - 하단 - 하단 좌우 - 중간 으로 진행됩니다.
@@ -181,18 +181,17 @@
 
 터치센싱 명령어에서 [속성]을 누르면 해당 조건번호에 대한 터치센싱 조건들을 편집할 수 있습니다.
 
-- 탐색거리 : 탐색방향에 대한 거리[mm]이며 이 거리에 도달해도 작업물을 감지하지 못할 경우 에러가 발생합니다.  
-- 탐색속도와 퇴피속도 : 탐색 또는 후퇴시 속도를 지정할 수 있습니다.  
-- 오차보정량 : butt gap 보정시 사용됩니다. 
-- 후퇴거리 : 필렛에선 처음 센싱 후 퇴피할 거리이고  DetectGroove 타입에서는 바닥을 찍고 들어올릴 거리입니다.  
-- 센싱시점 : 접촉시와 접촉해제시를 지원합니다. 일반적으로 접촉시 센싱을 많이 사용하며 오차는 거의 없습니다. 
-            만약 센싱시 와이어 휘어짐에 의한 미세오차까지도 고려해 센싱해야 하는 상황에서만 후퇴시 센싱을 사용하십시오.  
+- 센싱 거리 : 센싱 방향에 대한 거리[mm]이며 이 거리에 도달해도 작업물을 감지하지 못할 경우 에러가 발생합니다.  
+- 센싱 속도와 퇴피 속도 : 탐색 또는 후퇴 시 속도를 지정할 수 있습니다.  
+- 후퇴 거리 : 필렛에선 처음 센싱 후 퇴피할 거리이고, **DetectGroove 타입에서는 바닥을 찍고 들어올릴 거리**입니다.  
+- 검지 타입 : 접촉 시와 접촉 해제 시를 지원합니다. 일반적으로 접촉 시 센싱을 많이 사용하며 오차는 거의 없습니다. 
+            만약 센싱시 와이어 휘어짐에 의한 미세오차까지도 고려해 센싱해야 하는 상황에서만 후퇴 시 센싱을 사용하십시오.  
 
-(6) 탐색방향 각도 변환
+(6) 센싱 방향 각도 변환
 
-탐색방향 각도 변환은 Fillet과 DetectGroove 타입에서 지원합니다. 
+센싱 방향 각도 변환은 Fillet과 DetectGroove 타입에서 지원합니다. 
 
-탐색방향에 대한 각도를 지정하여 탐색 진행방향을 변경 할 수 있습니다. 
+센싱 방향에 대한 각도를 지정하여 탐색 진행방향을 변경 할 수 있습니다. 
 
 명령어의 rotation 인자에 "X30", "Y-30", "TL20" 등과 같이 입력합니다.
 
@@ -201,8 +200,8 @@
 그림 8.13은 필렛과 DetectGroove작업물에서 Y축 또는 TL축으로 30도 회전한 예입니다.
 
 <p align="center">
- <img src="../../_assets/8_13.png" width="300"></img>
- <em><p align="center">그림 8.13 터치센싱 예 각도설정</p></em>
+ <img src="../../_assets/8_2_9.png" width="300"></img>
+ <em><p align="center">그림 8.2.9. 터치센싱 예 각도설정</p></em>
 </p>       
 
 - 명령어 작성 예시

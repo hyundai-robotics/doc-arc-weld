@@ -18,11 +18,12 @@ move L, spd=30cm/min,accu=3,tool=0
 weaving off
 arc off
 end
-``` 
+```  
+<br/>
 
 <p align="center">
- <img src="../../_assets/8_30.png" width="70%"></img>
- <em><p align="center">그림. 아크센싱 개념도</p></em>
+ <img src="../../_assets/8_3_1.png" width="70%"></img>
+ <em><p align="center">그림 8.3.1. 아크센싱 개념도</p></em>
 </p>
 
 

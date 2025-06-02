@@ -30,8 +30,8 @@ lvs 명령어에서 [속성]에 진입하면 다음과 같이 search 설정을 �
 
 
 <p align="center">
- <img src="../../_assets/lvs_search_setting.png" width="80%"></img>
- <em><p align="center">그림. lvs search 설정화면</p></em>
+ <img src="../../_assets/8_5_14_lvs_search_setting.png" width="80%"></img>
+ <em><p align="center">그림 8.5.14. lvs search 설정화면</p></em>
 </p>   
 </br>
 
@@ -74,8 +74,8 @@ lvs 명령어에서 [속성]에 진입하면 다음과 같이 search 설정을 �
 </table>
 
 <p align="center">
- <img src="../../_assets/lvs_search_example.png" width="80%"></img>
- <em><p align="center">그림. lvs search 예시</p></em>
+ <img src="../../_assets/8_5_15_lvs_search_example.png" width="80%"></img>
+ <em><p align="center">그림 8.5.15. lvs search 예시</p></em>
 </p>   
 </br>
 

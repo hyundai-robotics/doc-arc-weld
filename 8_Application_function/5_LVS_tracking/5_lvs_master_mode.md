@@ -7,8 +7,8 @@ master mode 기능은 기준위치(마스터 포즈)를 저장해 놓고 실제 
 이를 위해서는 [사용자키] - [master mode] 를 활성화 하여 기준위치(마스터포즈)를 미리 등록해 두어야 합니다.
 
 <p align="center">
- <img src="../../_assets/lvs_seamfind_mastermode.png" width="90%"></img>
- <em><p align="center">그림. 마스터모드와 실제 기동시의 동작의 예</p></em>
+ <img src="../../_assets/8_5_12_lvs_seamfind_mastermode.png" width="90%"></img>
+ <em><p align="center">그림 8.5.12. 마스터모드와 실제 기동시의 동작의 예</p></em>
 </p>   
 </br>
 
@@ -35,8 +35,8 @@ master mode 기능은 기준위치(마스터 포즈)를 저장해 놓고 실제 
 
 
 <p align="center">
- <img src="../../_assets/lvs_seamfind_mastermode_warn.png" width="90%"></img>
- <em><p align="center">그림. 마스터 포즈 등록시 유의점</p></em>
+ <img src="../../_assets/8_5_13_lvs_seamfind_mastermode_warn.png" width="90%"></img>
+ <em><p align="center">그림 8.5.13. 마스터 포즈 등록시 유의점</p></em>
 </p>   
 </br>
 

@@ -20,8 +20,8 @@ Step 2. <br>
 weaving 명령어의 속성창의 아크센싱(일반)탭에 진입하여 타입을 "용접선 추정 & 전류차" 로 설정한 후 좌우/상하 민감도를 모두 0으로 설정하십시오.
 
 <p align="center">
- <img src="../../_assets/8_29.png" width="70%"></img>
- <em><p align="center">그림 8.18 아크센싱 캘리브레이션</p></em>
+ <img src="../../_assets/8_3_6.png" width="70%"></img>
+ <em><p align="center">그림 8.3.6. 아크센싱 캘리브레이션</p></em>
 </p>
 <br>
 

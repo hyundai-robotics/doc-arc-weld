@@ -36,7 +36,7 @@
 
  
 <p align="center">
- <img src="../../_assets/8_17_0.png" width="40%"></img>
- <em><p align="center">그림 8.17_0 높이센싱 기능 동작 순서</p></em>
+ <img src="../../_assets/8_4_1.png" width="40%"></img>
+ <em><p align="center">그림 8.4.1. 높이센싱 기능 동작 순서</p></em>
 </p>
 

@@ -2,8 +2,8 @@
  
 
 <p align="center">
- <img src="../../_assets/8_23.png" width="60%"></img>
- <em><p align="center">그림 8.23 스티치 명령어 작성 예시</p></em>
+ <img src="../../_assets/8_6_4.png" width="60%"></img>
+ <em><p align="center">그림 8.6.4. 스티치 명령어 작성 예시</p></em>
 </p>  
 
 

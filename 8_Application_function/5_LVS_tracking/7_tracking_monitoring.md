@@ -19,8 +19,8 @@ search는 시점(또는 종점)을 찾고 그 위치로 이동하면서 추종�
 lvs 명령어의 [속성] 창에 진입하여 탐색 항목에 다음 항목을 설정하십시오.
 
 <p align="center">
- <img src="../../_assets/8_19_3.png" width="80%"></img>
- <em><p align="center">그림. lvs 명령어의 속성창</p></em>
+ <img src="../../_assets/8_5_16.png" width="80%"></img>
+ <em><p align="center">그림 8.5.16. lvs 명령어의 속성창</p></em>
 </p>   
 </br>
 
@@ -89,8 +89,8 @@ search 명령어 수행과정은 다음 그림과 같습니다. (탐색 유효, 
 유효 하지 않은 점을 시작점으로 찾아 sp에 저장한 후 시작점으로 이동하면서 데이터 버퍼를 채웁니다.
 
 <p align="center">
- <img src="../../_assets/8_19_4.png" width="80%"></img>
- <em><p align="center">그림. lvs search 과정</p></em>
+ <img src="../../_assets/8_5_17.png" width="80%"></img>
+ <em><p align="center">그림 8.5.17. lvs search 과정</p></em>
 </p>   
 </br>
 
@@ -126,8 +126,8 @@ lvs모니터링은 [창조정]-[분할]-[lvs 모니터링] 항목으로 활성�
 모니터링에서는 다음과 같은 항목을 확인할 수 있습니다.
 
 <p align="center">
- <img src="../../_assets/tracking_monitoring.png" width="80%"></img>
- <em><p align="center">그림. lvs 모니터링</p></em>
+ <img src="../../_assets/8_5_18_tracking_monitoring.png" width="80%"></img>
+ <em><p align="center">그림 8.5.18. lvs 모니터링</p></em>
 </p>   
 </br>
 

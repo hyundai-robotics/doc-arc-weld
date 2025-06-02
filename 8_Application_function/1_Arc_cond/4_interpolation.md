@@ -4,13 +4,13 @@
 ```arccond``` 명령어의 속성창에서 “Gap correction” 항목 탭에 진입하면 조건별로 Gap에 따른 속도와 폭을 설정할 수 있습니다. 창분할에서 “아크보간”을 클릭하면 여기서 설정한 것을 그래프로 볼 수 있습니다.
 
 <p align="center">
- <img src="../../_assets/8_3.png" width="70%"></img>
- <em><p align="center">그림 8.3 용접 조건(갭 보간) 대화상자</p></em>
+ <img src="../../_assets/8_1_3.png" width="70%"></img>
+ <em><p align="center">그림 8.1.3. 용접 조건(갭 보간) 대화상자</p></em>
 </p> 
 
 <p align="center">
- <img src="../../_assets/8_4.png" width="70%"></img>
- <em><p align="center">그림 8.4 아크보간 모니터링</p></em>
+ <img src="../../_assets/8_1_4.png" width="70%"></img>
+ <em><p align="center">그림 8.1.4. 아크보간 모니터링</p></em>
 </p> 
 
 
@@ -18,8 +18,8 @@
 이 기능의 동작은 다음과 같습니다.
 
  <p align="center">
- <img src="../../_assets/8_5.png" width="70%"></img>
- <em><p align="center">그림 8.5 용접 조건의 보간 동작</p></em>
+ <img src="../../_assets/8_1_5.png" width="70%"></img>
+ <em><p align="center">그림 8.1.5. 용접 조건의 보간 동작</p></em>
 </p> 
 
 <br>

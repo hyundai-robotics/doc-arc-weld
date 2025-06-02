@@ -6,8 +6,8 @@
 </br>
 
 <p align="center">
- <img src="../../_assets/8_20.png" width="40%"></img>
- <em><p align="center">그림 8.20 스티치 기능 기본 파라미터</p></em>
+ <img src="../../_assets/8_6_1.png" width="40%"></img>
+ <em><p align="center">그림 8.6.1. 스티치 기능 기본 파라미터</p></em>
 </p> 
 
 </br>
@@ -15,16 +15,16 @@
 
 
 <p align="center">
- <img src="../../_assets/8_21.png" width="50%"></img>
- <em><p align="center">그림 8.21 스티치 용접 시험 시편</p></em>
+ <img src="../../_assets/8_6_2.png" width="50%"></img>
+ <em><p align="center">그림 8.6.2. 스티치 용접 시험 시편</p></em>
 </p> 
  
 </br>
 
 
 <p align="center">
- <img src="../../_assets/8_22.png" width="60%"></img>
- <em><p align="center">그림 8.22 스티치 용접 프로세스</p></em>
+ <img src="../../_assets/8_6_3.png" width="60%"></img>
+ <em><p align="center">그림 8.6.3. 스티치 용접 프로세스</p></em>
 </p> 
 
 
