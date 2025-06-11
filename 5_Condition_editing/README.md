@@ -1,1 +1,1 @@
-﻿# 5. Arc 용접 조건 편집
+﻿# 5. Editing Arc Welding Conditions

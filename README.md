@@ -1,39 +1,40 @@
-﻿# Hi6 로봇제어기 기능설명서 - 아크 용접
+﻿# Hi6 Robot Controller Functional Manual - Arc Welding
 
-이 매뉴얼은 8개의 장으로 이루어져 있습니다.
+This manual consist of 8 chapters.
 
-### 1장 Arc 용접 기본사항
-Arc 용접 로봇을 처음 사용할 때 필요한 설정, 기본 교시 방법과 편의 기능에 대해 설명합니다.
+### Chapter 1: Arc Welding Basics
+This chapter explains the settings, basic teaching methods, and convenience function required when using an Arc welding robot for the first time.
 <br/><br/>
 
-### 2장 명령어 삽입
-다양한 Arc 용접 관련 명령어의 소개와 간단한 설정 방법에 대해 소개합니다. 이 장을 통해 당사 Arc 용접 로봇이 지원하는 기본 기능을 한 눈에 볼 수 있습니다.
+### Chapter 2: Inserting Commands
+This chapter introduces various Arc welding related commands and their simple setup methods. Through this chapter, you can get a quick overview of the basic functions supported by our company Arc Welidng Robots.
 <br/><br/>
 
-### 3장 명령어 속성창
-2장에서 소개한 일부 명령어들의 세부 설정을 위한 속성 기능에 대해 소개합니다. Arc 용접 로봇 사용 시 필수로 설정해야 하는 Arc 용접조건 편집 방법과 응용 기능 명령어의 편집 방법에 대해 설명하고 있습니다.
+### Chapter 3: Command Property
+This chapter explains the property functions for detailed settings of some commands introduced in Chapter 2. It explains how to edit Arc welding conditions, which are essential settings when using an Arc welding robot, and how to edit application function commands.
 <br/><br/>
 
-### 4장 Arc 용접기 설정
-사용하고자 하는 Arc 용접기를 선택하는 방법과 용접기별로 설정해야 하는 항목을 소개합니다.
+### Chapter 4: Arc Welder Settings
+This chapter introduces how to select the Arc Welder you want to use and the items that need to be set for each welder.
 <br/><br/>
 
-### 5장 Arc 용접 조건 편집
-Arc 용접 조건 편집 방법에 대해 설명합니다. 용접 시 필수로 설정해야 할 전류, 전압, 용접 모드, 가스 예/후출 등에 대한 설정 방법이 소개되고 있습니다. 용접 조건은 용접기마다 다르기 때문에, 사용하고자 하는 용접기에 대한 내용만 숙지하여도 무방합니다.
+### Chapter 5: Editing Arc Welding Conditions
+This chapter explains how to edit Arc welding conditions. It introduces how to set essential parameters for welding, such as current, voltage, welding mode, and gas pre/post-flow. Since welding conditions vary by welder, you can only understand the content about the welder you want to use.
 <br/><br/>
 
-### 6장 위빙 기능 (WEAVING)
-위빙에 대한 기능 설명과 세부 설정 방법에 대해 설명합니다. 위빙 동작을 사용하지 않을 경우 생략하여도 무방합니다.
+### Chapter 6: Weaving Function
+This chapter introduces the weaving function and its detailed settings. You can skip this chapter if you are not using the weaving operation.
 <br/><br/>
 
-### 7장 용접 데이터 모니터링
- Arc 용접기가 용접 중에 보내는 데이터를 활용하는 기능에 대해 소개하고 있습니다. 용접 중에 용접기가 보내주는 데이터를 실시간으로 모니터링 할 수 있는 방법과 그 데이터를 파일로 저장하는 기능 등을 설명합니다. 또한 저장된 이전 데이터를 그래프로 그리고 편리하게 확인할 수 있는 기능과 용접 품질을 수치화 하는 기능을 설명합니다.
+### Chapter 7: Arc Welding Data Monitoring
+This chapter explains functions that utilize data sent by the welder during welding process. It describes how to monitor real-time data from the welder and how to save that data to a file. It also describes features for plotting and conveniently reviewing previously saved data as graphs, as well as functions for quantifying welding quality.
 <br/><br/>
 
-### 8장 Arc 용접 응용기능
-Arc 용접 응용 기능으로 특수한 상황에서 유용하게 사용될 수 있는 기능에 대해 소개를 합니다. 용접 대상물의 용접선이 균일하지 않거나, 용접 대상물 위치에 오차가 발생하여 용접 품질에 문제가 있을 경우 적용 가능한 기능들의 간단한 소개를 하고 있습니다.
+### Chapter 8: Arc Welding Application Functions
+This chapter introduces Arc welding application functions that can be useful in special situations.
+It provides a brief overview of functions that can be applied when the welding line of the workpiece is uneven, or when errors in the workpiece position lead to issues with welding quality.
 <br/><br/>
 
-당사 Arc 용접 로봇을 처음 사용할 경우 1~5장은 필독을 권장하고, 6~8장은 필요한 기능들을 선택적으로 읽어보는 것을 권장합니다.
+When using our Arc Welding Robots for the first time, we recommend reading Chapters 1 ~ 5. For Chapters 6 ~ 8, we suggest selectively reading about the functions you need.
 
 <br>

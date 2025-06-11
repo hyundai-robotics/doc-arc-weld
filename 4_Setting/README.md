@@ -1,1 +1,1 @@
-﻿# 4. Arc용접기 설정
+﻿# 4. Arc Welder Settings

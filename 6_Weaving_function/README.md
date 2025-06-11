@@ -1,1 +1,1 @@
-﻿# 6. 위빙 기능 (WEAVING)
+﻿# 6. Weaving Function

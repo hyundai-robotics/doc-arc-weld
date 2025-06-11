@@ -1,2 +1,2 @@
-﻿# 2. 명령어 삽입
+﻿# 2. Inserting Commands
 

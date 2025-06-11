@@ -1,1 +1,1 @@
-﻿# 3. 명령어 속성 창
+﻿# 3. Command Property
