@@ -20,7 +20,7 @@ move L, spd=40cm/min, …
 arccond L, cnd=1  	    #용접 DB 1번 -> 2번 조건으로 연속보간 변경
 move L, spd=30cm/min, …    #이 스텝에서 연속적으로 cnd=1에서 cnd=2의 값으로 조건이 선형변경된다.
 arccond L, cnd=2  	    #다음 스텝에선 arcof가 있어야 한다.
-arcof
+arcoff
 move L, spd=10%, …	    #용접점 탈출 스텝
 end
 ```

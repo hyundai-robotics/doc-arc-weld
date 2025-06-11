@@ -8,7 +8,7 @@
 
 
 ```stitch``` 명령어 입력
-1.	명령입력 → 2. 아크 → 3. stitch (onf/off 선택 후 ENTER[YES] 버튼 클릭)
+**[명령입력]-[아크]-[stitch]** (on/off 선택 후 **[ENTER[YES]]** 버튼 클릭)
 
 
 {% hint style="warning" %}

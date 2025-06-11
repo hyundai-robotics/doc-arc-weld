@@ -86,7 +86,7 @@
     * [8.5.2 LVS 기본설정](8_Application_function/5_LVS_tracking/2_settings.md)
     * [8.5.3 LVS 캘리브레이션](8_Application_function/5_LVS_tracking/3_calibration.md)
     * [8.5.4 LVS seam finding 기능](8_Application_function/5_LVS_tracking/4_seam_finding.md)
-    * [8.5.5 LVS master mode 기능](8_Application_function/5_LVS_tracking/5_lvs_master_mode.md)
+    * [8.5.5 LVS 마스터 모드 기능](8_Application_function/5_LVS_tracking/5_lvs_master_mode.md)
     * [8.5.6 LVS search 기능](8_Application_function/5_LVS_tracking/6_search.md)
     * [8.5.7 LVS tracking 기능과 모니터링](8_Application_function/5_LVS_tracking/7_tracking_monitoring.md)
   * [8.6 STITCH 기능](8_Application_function/6_Stitch/README.md)

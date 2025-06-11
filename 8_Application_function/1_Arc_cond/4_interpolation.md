@@ -26,10 +26,10 @@
  
 
 gap-속도 그래프로 예를 들어 보면 다음과 같습니다.
-arccond 명령어의 속성창의 Gap correction 탭에 입력된 gap-Spd그래프를 생성합니다.
+`arccond` 명령어의 속성창의 Gap correction 탭에 입력된 gap-Spd그래프를 생성합니다.
 용접 시점에서는 WDB의 용접속도와 WDB의 기준 spd(그래프에서 기준 gap에서 spd값)에서의 속도의 차이를 dSpd라 할때, 현재 gap에서 원 그래프의 Spd 값에 dSpd를 적용한 값이 시작 Spd가 됩니다.
 마찬가지로, 용접 종료점에서 WDB의 용접속도와 WDB의 기준 spd(그래프에서 기준 gap에서 spd값)에서의 속도차이를 dSpd2라 할때, 현재 gap에서 원 그래프의 Spd값에 dSpd2를 적용한 값이 종료 Spd가 됩니다.
-위 그림과 같이 최종적으로 2개의 arccond 명령어 사이의 스텝에서 선형적으로 용접속도가 증가합니다.
+위 그림과 같이 최종적으로 2개의 `arccond` 명령어 사이의 스텝에서 선형적으로 용접속도가 증가합니다.
 
 JOB 구성예시는 다음과 같습니다.
 
@@ -42,7 +42,7 @@ move L, spd=40cm/min, …
 arccond L, cnd=1, gap=20  
 move L, spd=30cm/min, …    #이 스텝에서 연속적으로 용접속도와 위빙폭이 선형변경된다.
 arccond L, cnd=2, gap=10   
-arcof
+arcoff
 move L, spd=10%, …	    #용접점 탈출 스텝
 end
 ```
