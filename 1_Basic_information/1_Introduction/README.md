@@ -1,84 +1,82 @@
-﻿# 1.1 개요
+﻿# 1.1 Overview
 
-다음 그림과 같은 Arc용접 작업을 티칭 합니다.
+Teach the Arc welding operation as shown in the following figure.
 
 
 <p align="center">
- <img src="../../_assets/1_1_1.png" width="60%"></img>
- <em><p align="center">그림 1.1.1. 기본 Arc 용접 티칭</p></em>
+  <img src="../../_assets/1_1_1.png" width="60%"></img>
+  <em><p align="center">Figure 1.1.1. Basic Arc Weld Teaching</p></em>
 </p>
 
 </br>
 
-(1)	제어기 전면부의 전원 스위치를 켭니다.
+(1) Turn on the power switch on the front of the Controller.
 
-(2)	티치펜던트의 `[모드 스위치]`를 수동모드로 선택합니다.
+(2) Select the `[mode witch]` on the (Teach Pendant)TP in manual mode.
 
-(3)	티치펜던트의 `[프로그램]`을 누른 후 프로그램 번호를 입력합니다.
+(3) Press the `[Program]` on the TP and enter the program number.
 
-(4)	여기까지 진행하면 티치펜던트 화면은 아래 그림과 같이 표시됩니다.
+(4) If you proceed this far, the TP screen will be displayed as shown below.
 
 <p align="center">
- <img src="../../_assets/1_1_2.png" width="70%"></img>
- <em><p align="center">그림 1.1.2. 신규 프로그램 번호가 선택된 화면</p></em>
+  <img src="../../_assets/1_1_2.png" width="70%"></img>
+  <em><p align="center">Figure 1.1.2. Screen with new program number selected</p></em>
 </p>
 
 </br>
 
-(5)	티치펜던트의 `[Motor On]` 버튼을 눌러 로봇의 모터에 전원을 투입합니다.
+(5) Press the `[Motor On]` button on the TP to power the robot's motor.
 
-(6)	축 조작키를 사용해 로봇의 토치를 스텝1의 위치로 이동합니다.
+(6) Use the axis control key to move the robot's torch to the position in Step 1.
 
-(7)	`[기록조건]` 키를 누른 후 원하는 보간 종류, 속도, accuracy, 툴 번호를 지정합니다.  
-            
-- 방향키를 이용하여 원하는 항목으로 이동 후 값을 설정하고 `[ENTER]` 키를 누르면 설정이 저장됩니다.
-- 툴 번호는 `[툴]` 키를 누른 후 원하는 툴 번호를 입력합니다. (`[툴]`키는 `[SHIFT] + [좌표계]`키를 눌러 선택합니다.) 
+(7) Press the `[rec. cond]` key, then specify the desired interpolation type, speed, accuracy, and tool number.  
+
+- After moving to the desired item using the direction key, set the value and press the `[ENTER]` key to save the setting
+- press the `[tool]` key and enter the desired tool number.
 
 
 <p align="center">
  <img src="../../_assets/1_1_3.png" width="40%"></img>
- <em><p align="center">그림 1.1.3. 기록조건 표시내용</p></em>
+ <em><p align="center">Figure 1.1.3. Recording Conditions</p></em>
 </p>
 
 </br>
 
-- `[기록]`키를 누르면 아래 그림과 같이 스텝이 기록됩니다.
+- Press the `[rec. cond]` key to record the step as shown below.
 
 <p align="center">
  <img src="../../_assets/1_1_4.png" width="70%"></img>
- <em><p align="center">그림 1.1.4. 스텝 기록 화면 (1)</p></em>
+ <em><p align="center">Figure 1.1.4. Program with recorded Step (1)</p></em>
 </p>
 
 </br>
 
-(8)	스텝2~4에 대해서도 (5) ~ (7)의 과정을 반복합니다. 
-
+(8)	Repeat steps 5 through 7 for steps 2 through 4.
  
 
 <p align="center">
  <img src="../../_assets/1_1_5.png" width="70%"></img>
- <em><p align="center">그림 1.1.5. 스텝 기록 화면 (2)</p></em>
+ <em><p align="center">Figure 1.1.5. Program with recorded Step (2)</p></em>
 </p>
 
-(9) 용접구간이 스텝2 ~ 스텝3이므로, 스텝2로 커서를 이동합니다. 
+(9) Since the welding area is from Step 2 to Step 3, move the cursor to Step 2.
 
-- **[명령입력]-[아크용접]-[weaving]** 을 입력, 조건번호를 입력하고 `[ENTER]`키를 누릅니다.
-- 같은 방법으로 **[ARCON]** 을 입력합니다. 조건번호를 입력하고 `[ENTER]`키를 누릅니다.  
-(Arc용접 조건설정은 [5장 Arc용접 조건 편집](../../5_Condition_editing/README.md)을 참고하십시오.)
+- Enter the **[cmd. Input] > [arcweld] > [weaving]**, input the condition number, and press the `[ENTER]` key.
+- In the same way, enter the **[arcon]**, input the condition number, and press the `[ENTER]` key.
+(For Arc Welding condition settings, refer to [5. Editing Arc Welding Conditions](../../5_Condition_editing/README.md).)
 
 
-(10) Arc용접이 종료되는 스텝인 스텝3으로 커서를 이동합니다.
+(10) Move the cursor to Step 3, which is the step where Arc Welding ends.
  
-- 다시 **[명령입력]-[아크용접]-[arcon]** 을 입력하고 off로 설정합니다.
-- 같은 방법으로 **[weaving]** 을 입력하여 off로 설정합니다.
+- Again, enter the **[weaving]** and set it to off.
+- Also, enter the **[arcoff]**.
 
 
-(11) 스텝3의 속도를 원하는 용접속도로 수정합니다. (Ex. 12mm/s)
+(11) Modify the speed of Step 3 to your desired welding speed (e.g., 20mm/s).
 
-(12) 마지막으로 프로그램을 종료하는 **[end]** 명령을 입력합니다.
-**[명령입력] → [FLOW제어] → [end]** 키를 누르면 **[end]** 명령이 입력됩니다.
+(12) Finally, enter the **[cmd. input] > [flowctrl] > [end]** command to terminate the program.
 
 <p align="center">
  <img src="../../_assets/1_1_6.png" width="70%"></img>
- <em><p align="center">그림 1.1.6. 티칭이 완료된 화면</p></em>
+ <em><p align="center">Figure 1.1.6. Teaching Completion Screen</p></em>
 </p>

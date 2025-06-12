@@ -1,25 +1,26 @@
-﻿# 1.3.2 고속 이동 기능
+﻿# 1.3.2 High-speed mobility function
 
-Arc 용접이 포함된 프로그램이 재생될 때 용접 구간에서는 로봇의 이동속도가 매우 느리기 때문에, 로봇의 작업 위치 확인을 위한 시험 운전을 할 때에 그 소요시간이 오래 걸리는 문제가 있습니다.  
-이를 해결하기 위해 용접 구간을 기록된 속도보다 더 빠르게 고속으로 이동할 수 있는 고속 이동 기능을 제공합니다.  
+When an Arc welding program runs, the robot's movement speed in welding sections is very slow. This leads to a significant amount of time being consumed during test runs to verify the robot's working position.
+
+To address this, we offer a high-speed movement function that allows the robot to run through welding sections faster than their recorded speed.
 
 {% hint style="info" %}
-이 기능은 수동모드의 스텝 전/후진 시에만 동작되도록 제한됩니다.
+This function is limited to operating only during step forward/backward movements in manual mode.
 {% endhint %}  
 
-고속 이동 기능이 실행될 때의 로봇 이동 속도는 조건설정의 **『스텝 전/후진시의 최고속』** 에 제한되지 않습니다. 또한 고속 이동 기능 적용 상태에 상관 없이 용접 구간에서 기능의 설정과 해제가 가능합니다. (예, 용접 구간에서 고속 이동 기능 실행 중 고속 이동 기능 실행 해제 가능)
+The robot's movement speed when the high-speed movement function is active is not limited by the **"Maximum speed during step forward/backward"** in the condition settings. Furthermore, you can enable or disable the high-speed movement function within a welding section, regardless of its current application status(e.g., you can disable it even while it's currently running within a welding section).
 
-조작 방법은 다음과 같습니다.
+The operation method is as follows:
 
 
-### 수동 최고속 스텝 전/후진
+### Manual Max-speed Step FWD/BWD
 
-| 항목              | 내용              |
+| Item              | Description              |
 | --------------- | --------------- |
-| **단축키**         | `[Shift]+[FWD]` <br> `[Shift]+[BWD]` |
-| **용도**          | 수동 최고속으로 전/후진   |
+| **Dedicated Key**         | `[Shift]+[FWD]` <br> `[Shift]+[BWD]` |
+| **Function**          | Move the robot FWD/BWD at manual maximum speed. |
 
-### 고속 이동 중 `[SHIFT]`키 변화 처리
-|      | 고속 이동 중 `[SHIFT]`키 해제                   |티칭 속도로 스텝 전/후진 중 `[SHIFT]`키 입력 |
+### Handling `[SHIFT]` Key Changes During High-speed Movement
+|        | `[SHIFT]` Key Released During High-speed Movement | `[SHIFT]` Key Pressed During Teaching Speed Step FWD/BWD |
 | ------ | --------------------- |--------------------- |
-| **동작** | 수동 최고속으로 전/후진         |로봇 정지 후 수동 최고속 이동|
+| **Operation** | Move the robot forward/backward at manual maximum speed. | Robot stops, then moves at manual maximum speed |

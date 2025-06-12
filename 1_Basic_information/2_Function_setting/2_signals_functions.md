@@ -1,86 +1,87 @@
-﻿# 1.2.2 Arc 용접 각종 신호 및 기능 설정
+﻿# 1.2.2 Arc Welding various signals and funtion settings
 
-수동모드 화면에서 **『시스템』 → 『4: 응용 파라미터』 → 『2: 아크용접』** 을 누르면 다음 화면과 같이 Arc용접의 응용을 위한 각종 조건들을 설정할 수 있는 화면이 나타납니다.
+On the manual mode screen, press **[System > 4: Application parameter > 2: Arc welding]** to bring up a screen where you can set various conditions for Arc welding applications, as shown below.
 
 
 <p align="center">
  <img src="../../_assets/1_2_2.png" width="70%"></img>
- <em><p align="center">그림 1.2.2. Arc용접 응용조건 대화상자</p></em>
+ <em><p align="center">Figure 1.2.2. Arc Welding Application parameter Dialog</p></em>
 </p>
  
 
-각 항목별 내용은 다음과 같습니다.
-## [일반]
-### 인칭 속도(%)
-| 항목 | 설명 |
-|------|------|
-|**(저속)**[1 ~ 50] %<br>**(고속)**[10 ~ 100] %| `[SHIFT]+[2]` (인칭), `[SHIFT]+[3]` (역인칭)키를 사용한 와이어의 인칭 및 역인칭 실행 시 와이어 송급 속도입니다.<br> 저속 및 고속(3초 이상 키를 누르고 있을 때) 동작 시 송급 속도를 설정합니다.|
+The details for each item are as follows:
 
-### `[GUN]`키 상태 출력신호
-| 항목 | 설명 |
+## [General]
+### Inching speed(%)
+| Item | Description |
 |------|------|
-|출력신호|티치펜던트 `[GUN]`키의 현재 상태를 출력하기 위한 신호를 설정합니다.|
+|**(Low)**[1 ~ 50] %<br>**(High)**[10 ~ 100] %| This refers to the wire feed speed when jogging the wire forward(`[SHIFT]+[2]` (wire inching)) or backward(`[SHIFT]+[3]` (wire retreat)).<br> You can set the feed speed for both low-speed and high-speed operation (when the key is pressed for 3 seconds or more).|
 
-### `[GUN]`키 제어 불능 입력신호
-| 항목 | 설명 |
+### `[GUN]` key status output signal
+| Item | Description |
 |------|------|
-|입력신호|외부에서 `[GUN]`키의 on/off를 설정할 수 있는 입력신호를 할당합니다. 해당 신호가 할당되면 티치펜던트의 `[GUN]`키를 눌러 아크용접 on/off 상태를 변경할 수 없습니다. 이 기능을 이용하면 사용자 실수로 `[GUN]`키를 눌러 용접구간에서 용접을 하지 않는 문제를 방지할 수 있습니다.<br>(할당된 신호가 입력되면 `[GUN]`키의 LED가 off되며 로봇이 재생되는 경우 Arc 용접 구간에서 용접을 수행하지 않는 **Dry Run** 상태로 작업이 진행됨)|
+|output signal| Set the signal to output the current status of the `[GUN]` key on the TP.|
 
-### 냉각수 에러 입력신호
-| 항목 | 설명 |
+### `[GUN]` key control disable input
+| Item | Description |
 |------|------|
-|입력신호|수냉식 Arc용접 토치를 사용하는 경우 냉각수 순환에 문제 발생 상태를 입력 받기 위한 신호를 설정합니다. 용접 중 본 신호가 입력되면 에러로 판단하여 로봇 기동과 용접 작업을 정지합니다.|
+|Input signal| Assign an input signal to externally control the `[Gun]` key's on/off status. Once this signal is assigned, you won't be able to change the arc welding on/off status by pressing the `[GUN]` key on the TP. This function helps prevent issues where welding might be skipped in a welding section due to accidential presses of the `[GUN]` key.<br> (When the assigned signal is received, the LED of the `[GUN]` key turns off, and the robot enters a **Dry Run** state where no welding is performed in the arc welding section, despite the robot running.)|
 
-
-### 용접기 에러처리
-| 항목 | 설명 |
+### Coolant Error Input Signal
+| Item | Description |
 |------|------|
-|[**무효**, **경고**, **에러**]|용접기 에러를 처리하는 방법을 설정합니다.|
+|Input Signal| For water-cooled Arc welding torches, a signal is configured to detect issues with coolant circulation. When this signal is received during welding, it is considered an error, which triggers the robot's operation and welding process to stop.|
 
-### 와이어 사용 불가 시 처리
-| 항목 | 설명 |
-|------|------|
-|[**무효**, **경고**, **에러**]|용접 와이어가 없을 때 에러처리 방법을 설정합니다.|
 
-### 가스 압력 에러 처리
-| 항목 | 설명 |
+### Welder Error treat
+| Item | Description |
 |------|------|
-|[**무효**,**경고**, **에러**]|가스 압력 상태 이상 시 에러처리 방법을 설정합니다.|
+|[**Disable**, **Error**, **Error**]| Set how to handle welder errors.|
 
-### Arc 용접 I/V 변경 자동저장 설정
-| 항목 | 설명 |
+### Wire Empty error treat
+| Item | Description |
 |------|------|
-|[**무효**, **유효**]|**Arc용접 전류전압 변경** 대화상자에서 전류와 전압 값을 변경할 경우 그 값을 자동 저장할 것인지 여부를 결정합니다. 자세한 내용은 [[1.3.3 용접 중 전류/전압 변경기능]](../3_Convenient_functions/3_change_current_voltage/README.md)을 참조하십시오.|
+|[**Disable**, **Error**, **Error**]| Set the error handling method when no welding wire is present.|
 
-### 고중량 토치용 진동 저감 기능 설정
-| 항목 | 설명 |
+### Gas Pressure Error treat
+| Item | Description |
 |------|------|
-|[**무효**, **용접점**, **전 구간**]|고중량 Arc 토치용 사용 시 진동을 줄이는 방법을 설정합니다. 수냉식 토치나 push-pull 토치와 같은 중량이 큰 토치를 사용할 때 발생할 수 있는 진동을 감소시킬 수 있습니다. <br>**용접점**으로 설정 시 로봇 작업속도에 큰 변화 없이 용접점 진입구간에서 상당량의 진동을 줄일 수 있습니다. <br>**전 구간**으로 설정 시 고중량 Arc 토치용 필터가 반영되어 전 구간에서 진동을 거의 발생하지 않습니다. 하지만, 로봇의 작업속도가 느려질 수 있습니다.|
+|[**Disable**,**Error**, **Error**]| Set the error handling method in case of gas pressure abnormalities.|
 
-### 수동모드 아크용접 설정
-| 항목 | 설명 |
+### Arc Welding I/V change auto saving
+| Item | Description |
 |------|------|
-|[**무효**, **유효**]|수동모드에서 스텝 전진을 통해 용접을 가능하게 할 것인지에 대한 설정입니다. <br>**유효**로 설정 시 실행단위가 **End**로 설정된 상태에서 Arc용접 구간으로 스텝 전진을 하면 용접이 가능합니다. 자세한 내용은 [[1.3.4 수동모드 아크용접]](../3_Convenient_functions/4_manual_mode.md)을 참고하십시오.|
+|[**Disable**, **Enable**]| This setting determines whether to automatically save changes to current and voltage values when they are changed within the **arc change IV(Arc Welding Current/Voltage Adjustment dialog box)**. For more details, please refer to [[1.3.3 Change the Current/Voltage during Welding]](../3_Convenient_functions/3_change_current_voltage/README.md).|
 
-### 로봇 기동 시 용착 검사
-| 항목 | 설명 |
+### Vibration reduction for heavy torch
+| Item | Description |
 |------|------|
-|[**검사**, **생략**]|로봇이 처음으로 사이클을 시작할 때 와이어 용착 검사를 수행할 것인지 설정합니다. <br>**검사**를 수행하는 경우 초반에 0.2초 정도 검사 후 로봇이 이동합니다.|
+|[**Disable**, **Welding point**, **All range**]| This setting is designed to reduce vibrations when using heavy torches. It helps to minimize vibrations that may occur when using heavy torches such as water-cooled or push-pull torches.<br> When set to **Welding Points**, a significant reduction in vibrations can be achieved in the welding point entry section without substantial changes in the robot's operating speed.<br> When set to **All range**, a filter specifically designed for heavy Arc torches is applied, virtually eliminating vibrations throughout the entire preocess. However, this may result in a decrease in the robot's operating speed.|
 
-### TCP 속도 변화율 모니터링
-| 항목 | 설명 |
+### Arc welding enable during manual mode
+| Item | Description |
 |------|------|
-|[**무효**, **유효**]|TCP 속도 변화율 모니터링 여부를 설정합니다.|
+|[**Disable**, **Enable**]| This setting determines whether welding can be performed through ste-forward in manual mode.<br> When set to **Enable**, welding can be performed by stepping forward to the Arc welding section, with the execution unit set to **End**. For more details, please refer to [[1.3.4 Manual mode Arc Welding]](../3_Convenient_functions/4_manual_mode.md).|
 
-## [터치센싱]
-### 터치센싱 정지설정
-| 항목 | 설명 |
+### Stick check at cycle start
+| Item | Description |
 |------|------|
-|[**즉시**, **일반**]|터치센싱이 작업물을 감지할 때 **즉시정지** 할것인지 **일반정지** 할 것인지 설정합니다. <br>일반정지 시 와이어 휘어짐이 커질 경우, **즉시정지**로 설정하여 사용합니다.|
+|[**Check**, **Ignore**]| This setting determines whether a wire stick check will be performed when the robot starts its first cycle.<br> When **"check"** is enabled, the robot will perform a check for approximately 0.2 seconds at the beginning before proceeding with movement.|
 
-## [아크 궤적 모니터링]
-### 활성화
-| 항목 | 설명 |
+### TCP speed ratio monitoring
+| Item | Description |
 |------|------|
-|[**꺼짐**, **켜짐**]|아크 궤적 모니터링 여부를 설정합니다.|
+|[**Disable**, **Enable**]| This setting determines whether to monitor the rate of change in the TCP speed.|
+
+## [Touch Sensing]
+### Touch Sensing Stop Setting
+| Item | Description |
+|------|------|
+|[**Immediately**, **Normal**]|Set whether to **immediately stop** or **normal stop** when Touch Sensing detects a work piece.<br>If wire bending increases during a normal stop, set it to **immediately stop**|
+
+## [Arc trajectory Monitoring]
+### Activation
+| Item | Description |
+|------|------|
+|[**Disable**, **Enable**]|Sets whether to monitor the Arc trajectory.|
 

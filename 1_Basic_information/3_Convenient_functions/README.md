@@ -1,1 +1,1 @@
-﻿# 1.3 Arc 용접 편의 기능
+﻿# 1.3 Arc Welding Convenience Functions

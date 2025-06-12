@@ -1,16 +1,18 @@
-﻿# 1.3.6 Arc 용접 신호 시험 기능
+﻿# 1.3.6 Arc Welding signal test function
 
-Arc 용접 신호 시험 기능은 용접에 필요한 주요한 신호의 입출력 상태를 테스트하고, 수동으로 용착 해제할 수 있는 기능입니다. 본 기능은 특정 신호의 동작 여부를 확인할 수 있기 때문에 용접기 및 통신의 이상 상태를 점검할 때 유용하게 사용할 수 있습니다.
 
-본 기능을 사용하기 위해서는 티칭 펜던트 기본화면에서 **[창조정]** 을 눌러 **[선택]** 에서 **[아크용접]** 을 선택합니다. 아크 용접 패널에서 스크롤을 하단으로 움직여 입력/출력 신호 항목을 확인할 수 있습니다.  
+The Arc Welding Signal Test function lets you test the input/output status of key welding signals and manually release wire stick-out. This feature is useful for checking the status of welder and communication as it confirms wheter specific signals are operating correctly.
+
+To use this feature, on TP, press **[pane layout > select > arc welding]** sequentially. In the Arc Welding panel, scroll down to see the input/output signal items.
+
 
 <p align="center">
  <img src="../../_assets/1_3_3.png" width="70%"></img>
- <em><p align="center">그림 1.3.3. Arc 용접 모니터링</p></em>
+ <em><p align="center">Figure 1.3.3. Arc Welding Monitoring</p></em>
 </p>
 
-| 항목          | 설명                                                        |
+| Item | Description |
 | ------------- | ---------------------------------------------------------- |
-| **출력 신호** | 원하는 출력신호를 선택한 상태에서 **\[수동 출력]** 버튼을 클릭하여 신호를 on/off 테스트 할 수 있습니다. |
-| **입력 신호**| 입력 신호가 동작에 맞게 입력되고 있는지를 확인 할 수 있습니다.                              |
-| **지령값**| <li><b>수동 용착해제</b>: 와이어 용착 해제를 선택한 상태에서 **\[수동 출력]** 버튼 클릭</li> <li><b>수동 용접기 에러 리셋</b>: 용접기 에러 리셋을 선택한 상태에서 **\[수동 출력]** 버튼 클릭</li>|
+| **Output Signal** | With the desired output signal selected, click the **[Manual Output]** button to test turnning the signal on/off. |
+| **Input Signal**| You can verify whether input signals are being recieved correctly according to their operation. |
+| **Command Value**| <li>**Manual Wire Stick-out Release**: Select "Stick check" and click the **[Manual Output]** button. </li> <li>**Manual Welder Error Reset**: Select "Welder Error Reset" and click the **[Manual Output]** button. </li>|

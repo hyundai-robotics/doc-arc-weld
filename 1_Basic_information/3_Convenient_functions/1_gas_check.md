@@ -1,8 +1,8 @@
-﻿# 1.3.1 가스 체크, 와이어 인칭(Inching) 및 역인칭(Retract)
+﻿# 1.3.1 Gas Check, Wire Inching, and Wire Retract
 
-Arc 용접장치 중 실드 가스 밸브와 와이어 송급장치(wire feeder)의 모터를 제어하는 기능입니다. 가스 체크 기능을 이용하여 현재 실드가스 유량을 확인할 수 있고, 인칭 및 역인칭 기능을 이용하면 용접 토치 밖으로 돌출되는 와이어 길이를 조절할 수 있습니다.
+This describes the functionality for controlling the shield gas valve and the wire feeder motor in an arc welding system. You can check the current shield gas flow rate using the gas check function. The inching and reverse inching(retreat) functions let you adjust the length of the wire protruding from the welding torch.
 
-용도 및 조작 방법은 다음과 같습니다. 
+Here are the functions and how to use them: 
 
 <style>
   table {
@@ -12,33 +12,33 @@ Arc 용접장치 중 실드 가스 밸브와 와이어 송급장치(wire feeder)
   }
 </style>
 
-### 가스 체크 기능
+### Gas Check
 
-| 항목      | 내용                     |
+| Item      | Description                     |
 | ------- | ---------------------- |
-| **단축키** | `[Shift]+[1]`          |
-| **전용키** | 사용자키 `GAS CHK`         |
-| **용도**  | 실드가스 밸브를 열어 실드가스 유량 확인 |
+| **HotKey** | `[Shift]+[1]`          |
+| **Dedicated Key** | User Key `GAS CHK`         |
+| **Function**  | Open the shield gas valve to verify the gas flow rate |
 
-### 인칭 기능
+### Wire Inching
 
-| 항목      | 내용                          |
+| Item      | Description                          |
 | ------- | --------------------------- |
-| **단축키** | `[Shift]+[2]`               |
-| **전용키** | 사용자키 `inching`              |
-| **용도**  | 와이어를 토치 앞쪽으로 송급하여 와이어 길이 조절 <li>저속 인칭: 키를 누른 후 3초 이내</li> <li>고속 인칭: 키를 누른 후 3초 이상</li> |
+| **HotKey** | `[Shift]+[2]`               |
+| **Dedicated Key** | User Key `inching`              |
+| **Function**  | Feed the wire forward out of the torch to adjust its length <li>Slow Inching: Press the key for less than 3 seconds</li> <li>Fast Inching: Press the key for 3 seconds or more</li> |
 
-### 역인칭 기능
+### Wire Retract
 
-| 항목      | 내용                 |
+| Item      | Description                 |
 | ------- | ------------------ |
-| **단축키** | `[Shift]+[3]`      |
-| **전용키** | 사용자키 `retract`     |
-| **용도**  | 와이어를 되감아 와이어 길이 조절 <li>저속 역인칭: 키를 누른 후 3초 이내</li>  <li>고속 역인칭: 키를 누른 후 3초 이상</li> |
+| **HotKey** | `[Shift]+[3]`      |
+| **Dedicated Key** | User Key `retract`     |
+| **Function**  | Rewind the wire to adjust its length <li>Slow Inching: Press the key for less than 3 seconds</li> <li>Fast Inching: Press the key for 3 seconds or more</li> |
+<br/>
 
-
-### 인칭 속도 설정
- >- 수동설정 화면에서 **『시스템』 → 『4: 응용 파라미터』 → 『2: 아크용접』** 을 선택합니다.
- >- Arc 용접 설정메뉴 중에서 **『1: Inching 속도: 저속=[---]%, 고속=[---]%』** 의 값을 원하는 저속 및 고속 값으로 설정합니다. 속도는 최대 인칭속도에 대한 비율(%)로 표시됩니다.
- >- 용접기 모델에 따라 인칭속도 변경이 반영되지 않을 수 있습니다.
-
+### Inching Speed Setting
+ >- Navigate to **[System > 4: Application parameter > 2: Arc welding]**
+ >- Within the Arc welding settings menu, Set your values for both low and high speeds: **Inching speed(%): Low=[---]%, High=[---]%**
+ >- The speed is displayed as a percentage of the maximum inching speed.
+ >- Depending on your specific welder model, changes to the inching speed may not be reflected.

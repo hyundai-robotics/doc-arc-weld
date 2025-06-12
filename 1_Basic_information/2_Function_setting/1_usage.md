@@ -1,15 +1,15 @@
-﻿# 1.2.1 Arc 용접 용도 설정
+﻿# 1.2.1 Arc Welding application settings
 
-(1)	로봇의 종류에 따라 Arc용접기능이 활성화 되어있지 않는 경우가 있습니다. 이때는 다음의 과정에 따라 Arc용접기능을 설정하십시오. (Arc용접 기능 설정은 엔지니어 권한이 필요합니다.)
+(1) Depending on the Robot model, the Arc welding function might not be active. If in this the case, follow the steps below to enable. (Note: Engineer authority is required to set up the Arc welding function)
 
-(2)	수동모드에서 **『시스템』 → 『5: 초기화』 → 『3: 용도설정』** 을 누르면 [그림 1-7]과 같이 로봇의 용도, 사용하고자 하는 용접기, 사용자키 및 입출력신호 할당을 설정할 수 있는 대화상자가 나타납니다.
+(2) In manual mode, press **[System > 5: Initialization > 3: Usage setting]**. A dialog box will appear, as shown in [Figure 1.2.1.], allowing you to configure the robot's application, the welder you want to use, user keys, and I/O signal assignments.
 
-(3)	[그림 1.7]은 아크 용접 설정 유효로, **『용접기 정보』** 에서 확인한 용접기 번호를 1번('**효성**')으로 선택한 경우입니다. 이 화면에서 **[용접기 설정]** 을 누르면 사용하고자 하는 용접기의 조건을 설정하는 대화상자로 진입합니다.
+(3) [Figure 1.2.1] shows an active Arc welding steps, where the welder number in welder information has been selected as **No.4(Fronius)**. From this screen, pressing **welder setting** will take you to a dialog box where you can configure the conditions for the desired welder.
 
-(4)	용접기 특성 파일의 자세한 설정은 [[4장 Arc용접기 설정](../../4_Setting/)]을 참고하시기 바랍니다.
+(4) For detailed settings of the welder characteristic file, please refer to [4. Arc Welder Settings](../../4_Setting/README.md).
 
 
 <p align="center">
  <img src="../../_assets/1_2_1.png" width="70%"></img>
- <em><p align="center">그림 1.2.1. 용도설정 대화상자</p></em>
+ <em><p align="center">Figure 1.2.1. Usage Setting Dialog</p></em>
 </p>

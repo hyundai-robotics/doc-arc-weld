@@ -1,13 +1,14 @@
-﻿# 1.3.4 수동모드 아크용접
+﻿# 1.3.4 Manual Mode Arc Welding
 
-일반적으로 Arc 용접은 로봇이 자동/원격 모드로 운행될 경우에만 가능합니다.  
-수동모드 Arc 용접은 로봇이 수동모드인 경우에도 용접이 가능하도록 지원하는 기능으로 용접 조건 설정 시 다양한 조건으로 용접을 반복할 때 편리하게 사용할 수 있습니다.
+Generally, Arc Welding is only possible when the robot operates in automatic or remote mode.
 
-수동모드 Arc 용접을 사용하기 위해서는 아래와 같이 설정되어 있어야 합니다.
+Manual Mode Arc Welding is a function that allows welding even when the robot is in manual mode. This is convenient for repeatedly testing various welding conditions during setup.
 
- (1)	**『시스템』 → 『4: 응용 파라미터』 → 『2: 아크용접』 → 『12: 수동모드 아크용접 설정』→ '유효'**  
+To use Manual Mode Arc Welding, it should be set as below.
 
- (2)	**『실행단위』 → [End]** (티칭 펜던트 기본화면 좌측 2번째 매뉴)
+ (1) Go to **[System > 4: Application parameter > 2: Arc welding > Arc welding enable during manual mode]** and check enable.
 
- (3)	스텝 전진으로 ```arcon``` 실행(용접 중 ```arcoff``` 전에 스텝 전진이 중단되어 용접이 중단된 상태에서, 다시 스텝 전진을 할 경우 ```arcon```이 실행되지 않기 때문에 다음 교시점으로 용접하지 않고 이동) 
- 
+ (2) Set the **[run to(execution unit)] to "End"** (the second menu on the left side of the TP).
+
+ (3) Execute ```arcon``` using step forward.  <br/>
+ * NOTE: If the robot stops during welding(before ```arcoff```) due to a paused step forward movement, ```arcon``` won't execute when you step forward again. In this case, the robot will move to the next teaching point without welding.

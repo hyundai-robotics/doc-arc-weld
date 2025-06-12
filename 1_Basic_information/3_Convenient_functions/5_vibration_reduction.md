@@ -1,13 +1,14 @@
-﻿# 1.3.5 고중량 아크토치 진동 저감 기능
+﻿# 1.3.5 High weight arc torch vibration reduction function
 
-본 기능은 소형 로봇에 고중량의 토치(수냉식 토치, push-pull 토치)를 사용할 때 발생할 수 있는 진동을 줄이기 위한 것입니다. 본 기능은 아래와 같이 설정할 수 있습니다.
+This function aims to reduce vibrations that can occur when using heavy torches (such as water-cooled torches or push-pull torches) on a small robot. You can configure this feature as described below.
 
--	**[시스템] → [4: 응용 파라미터] → [아크용접] → [고중량 토치용 진동 저감 기능 설정] → ‘무효’, ‘용접점’, ‘전 구간’** 중 택일
+- **[System > 4: Application parameter > 2: Arc welding > Vibration reduction for heavy torch]**: Disable / Welding Point / All range
 
-진동을 줄이기 위해 2가지 방법을 제공하며, 각각의 방법은 아래와 같은 장단점이 있습니다. 아래 장단점을 참고하여 상황에 맞게 선택하여 사용할 수 있습니다.
+To reduce vibrations, two methods are provided, each with its own advantages and disadvantages. You can refer to the pros and cons below to choose the method that best suits your situation.
 
 
-| 항목           | 내용                               |
-| ------------ | -------------------------------- |
-| **용접점**  | 진동의 상당량 감소. 로봇 작업 시간에 영향이 거의 없음. |
-| **전 구간** | 진동의 대부분 감소. 로봇 작업 시간이 증가함.       |
+| Item | Description |
+| --- | --- |
+| **Disable**  |  |
+| **Welding Point**  | Significantly reduces a considerable amount of vibrations. No impact on robot cycle time. |
+| **All range** | Reduces most vibrations. Increases robot cycle time. |

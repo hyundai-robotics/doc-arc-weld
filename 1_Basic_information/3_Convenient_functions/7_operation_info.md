@@ -1,19 +1,20 @@
-﻿# 1.3.7 아크용접 가동정보
+﻿# 1.3.7 Arc Welding Operation Information
 
-Arc 용접을 수행한 가동정보를 모니터링 창을 이용하여 확인하는 기능입니다. 이 기능을 이용하여 아래와 같은 사항을 쉽게 확인하고 관리할 수 있습니다.  
+This function allows you to monitor the operational information of arc welding. With this feature, you can easily check and manage the following aspects:
 
-본 기능을 사용하기 위해서는 티칭 펜던트 기본화면에서 **[창조정]** 을 눌러 **[선택]** 에서 **[아크 가동정보]** 를 선택합니다. 
+To use this feature, on TP, press **[pane layout > select > arc operation info.]** sequentially. 
+
 
 <p align="center">
  <img src="../../_assets/1_3_4.png" width="70%"></img>
- <em><p align="center">그림 1.3.4. 아크용접 가동정보 모니터링 창</p></em>
+ <em><p align="center">Figure 1.3.4. Arc Welding Operation Information Monitoring</p></em>
 </p>  
 
-| 항목                | 설명                                                                                                         |
-| ----------------- | ---------------------------------------------------------------------------------------------------------- |
-| **통산(초기화후)**      | 시스템 초기화부터 용접 시간 및 자동으로 수행된 재시도/자동용착해제 횟수를 확인할 수 있습니다.                                                      |
-| **통산(전원투입후)**     | 시스템 전원 투입 후부터 용접 시간 및 자동으로 수행된 재시도/자동용착해제 횟수를 확인할 수 있습니다.                                                  |
-| **마지막 사이클**       | 바로 직전 사이클의 용접 시간 및 자동으로 수행된 재시도/자동용착해제 횟수를 확인할 수 있습니다.                                                     |
-| **현재 사이클**        | 현재 사이클의 용접 시간 및 자동으로 수행된 재시도/자동용착해제 횟수를 확인할 수 있습니다.                                                        |
-| **오버랩 횟수 (원인별)**  | 용접 중 로봇이 정지하는 경우 수행되는 오버랩의 횟수를 발생 원인 별로 확인할 수 있습니다.                                                        |
-| **아크용접 가동정보 초기화** | 아크용접 가동정보 창이 활성화 되면 **\[초기화]** 버튼이 나타나며, 이를 누르면 가동정보 클리어 대화상자가 표시됩니다. 클리어를 원하는 항목의 버튼을 클릭하면 원하는 동작이 수행됩니다. |
+| Item | Description |
+| --- | --- |
+| **since init.** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **since system initialization**. |
+| **since pow.** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **since the system was powered on**. |
+| **last cycle** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **of the immediately previous cycle**. |
+| **current cycle** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **for the current cycle**. |
+| **overlap count(by cause)**  | Displays the number of overlaps that occur when the robot stops during welding, categorized by the cause of the stop. |
+| **clear(on fbt)** | When the Arc welding operation info window is activated, the **[clear]** button appears. Clicking this button will display the operation info clear dialog. You can click the button for the item you wish to clear to perform the desired action. |
