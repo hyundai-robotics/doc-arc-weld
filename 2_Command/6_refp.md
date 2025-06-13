@@ -1,64 +1,43 @@
 ﻿# 2.6 refp
 
-### 설명
+### Description
 
-```refp``` 명령어는 위빙 동작 시 필요한 참조점을 입력하기 위한 명령어 입니다. 위빙 벽, 진입방향 등의 참조점을 입력합니다.  
+```refp``` command is used to input reference points for the weaving motion. It inputs reference points such as weaving wall and entry direction.
 <br/>
 
-### 문법
+### Syntax
 
 ```python
-refp <참조점 번호>,<포즈(번호)>
-refp <참조점 번호>
+refp <Reference Point Number>
+refp <Reference Point Number>,<Pose(Num)>
 ```  
 <br/>
 
-### 파라미터
+### Parameter
 
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>참조점 번호</td>
-      <td>
-        참조점의 종류를 설정하는 번호
-        (1 ~ 4)
-      </td>
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>포즈번호</td>
-      <td>
-        참조점의 포즈를 입력합니다.(단, 숨은 포즈로 입력한 경우는 생략됨)
-      <td>변수</td>
-    </tr>
-  </tbody>
-</table>  
-<br/>
+| Item | Meaning | Remarks |
+| --- | --- | --- |
+| **Reference Point Number** | Set the number for the type of reference points (1 ~ 8) | Variable |
+| **Pose** | Input the pose of the reference points (However, if a hidden pose is used, it will be omitted) | Variable |
 
-### 사용 예
+
+### Example
 
 ```python
-   refp 1,P1                   # 위빙의 벽방향을 P1을 이용하여 지정
-   refp 1                      # 위빙의 벽방향을 숨은 포즈를 이용하여 지정
-   refp 2, (-1073.33, 739.01, 258.30, 0, 76, 23)  # 위빙면의 위치를 지정
+   refp 1,P1                   # Specify the wall direction of the weaving using P1
+   refp 1                      # Specify the wall direction of the weaving hidden pose
+   refp 2, (-1073.33, 739.01, 258.30, 0, 76, 23)  # Specify the position of the weaving surface
 ```  
 <br/>
 
-### 세부 설명
-  [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 참고
-  
+### Details
+  Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)  
 <br/>  
 <br/>
 
+
 {% hint style="warning" %}
--	```refp``` 문은 ```move``` 문처럼 스텝에 속합니다.
-- 사용자키의 <refp>키를 이용해 refp 명령문을 입력한 경우 숨은 포즈 형식이 됩니다.
-- 실행단위를 Cmd, Step로 설정 후 스텝전진을 실행하여 티칭 된 위치로 이동할 수 있습니다.
+-	```refp``` command, likes ```move``` command, belongs to the step category.
+- When the ```refp``` command is entered using a user key, it takes the form of a hidden pose.
+- After setting the execution unit to Cmd or Step, you can move to the taught position.  
 {% endhint %}

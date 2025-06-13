@@ -1,10 +1,13 @@
 ﻿# 2.10 heightsen off
 
-### 설명 
-```heightsen off``` 문은 높이센싱(AVC, Arc 길이제어)을 종료하는 명령문입니다.  
+### Description
+
+```heightsen off``` command is used to stop the height sensing function (AVC, Arc Voltage Control).
+
 <br/>
 
-### 문법
+
+### Syntax
   
 ```python
 heightsen off
@@ -12,15 +15,16 @@ heightsen off
 <br/>
 
 
-### 사용 예
+### Example
 
 ```python   
-   heightsen off            # 높이센싱 실행을 종료
+   heightsen off            # End height sensing execution
 ```  
 <br/>
 
-### 세부 설명
-  [[8.3 높이센싱(Height Sensing)]](../8_Application_function/3_Height_sensing/README.md) 참고  
+
+### Details
+  Refer to [[8.4 Height Sensing]](../8_Application_function/4_Height_sensing/README.md)
 <br/>
 
 

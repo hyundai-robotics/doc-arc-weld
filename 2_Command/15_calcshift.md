@@ -1,56 +1,32 @@
 ﻿# 2.15 calshift
 
+### Description  
 
-### 설명     
-```calshift``` 문은 2개의 포즈변수를 이용해 쉬프트를 계산하는 함수입니다.
-터치센싱으로 저장한 포즈 변수들을 이용해 쉬프트를 계산할 때 많이 사용됩니다.  
+```calshift``` command calculates the shift using two Pose variables.
+It is frequently used to calculate shifts based on pose variables saved from touch sensing.  
 <br/>
 
 
-### 문법
+### Syntax
+
 ```python
-<쉬프트변수인자>=calshift(<포즈변수인자1>, <포즈변수인자2>)
-<쉬프트변수인자>=calshift(<포즈변수인자1>, <포즈변수인자2>,"TV")
+<Shift Val>=calshift(<Pose Val 1>, <Pose Val 2>)
+<Shift Val>=calshift(<Pose Val 1>, <Pose Val 2>,"TV")
 ```  
 <br/>
 
-### 파라미터
 
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>포즈변수 인자</td>
-      <td>
-        포즈변수를 입력합니다.(1 ~ 9999)
-      </td>
-      <td>포즈변수</td>
-    </tr>
-    <tr>
-      <td>쉬프트변수 인자</td>
-      <td>
-        쉬프트 값을 저장 할 쉬프트 변수를 입력합니다.
-      </td>
-      <td>쉬프트변수</td>
-    </tr>    
-    <tr>
-      <td>TV</td>
-      <td>
-        툴에 수직인 방향으로 쉬프트를 계산합니다.
-      </td>
-      <td>문자열</td>
-    </tr>
-  </tbody>
-</table>   
-<br/>
+### Parameter
 
-### 사용 예
+| Item | Meaning | Remarks |
+| --- | --- | --- |
+| **Shift Variable Input** | Enter the shift variable to store the calculated shift | Shift Variable |
+| **Pose Variable Input** | Enter the pose variable (1 ~ 9999) | Pose Variable |
+| **TV** | Calculates the shift in the direction perpendicular to the tool (1 ~ 9999) | string |
+
+
+### Example
+
 ```python
     move L, spd=30%, …
     var pose_1 = cpo()

@@ -1,88 +1,49 @@
 ﻿# 2.1 arcon
 
 
-### 설명
+### Description
 
-```arcon``` 문은 Arc용접을 시작하는 명령어 입니다. 이 명령어는 4가지 형태로 사용될 수 있습니다. 단, 설정된 용접기에서 지원하지 않는 명령어는 사용할 수 없습니다.  
+```arcon``` command is used to start the Arc Welding process. This command can be used in four different forms. However, commands not supported by the configured welder cannot be used.
 <br/>
 
-### 문법
+### Syntax
   
 ```python
 arcon
-arcon cnd=<조건번호> 
-arcon cnd=<조건번호>,job=<용접 Job번호>,cur=<전류값>,vol=<전압값>, vol_offset=<전압 옵셋값>
-arcon cnd=<조건번호>,job=<용접 Job번호>  
+arcon cnd=<Condition Number> 
+arcon cnd=<Condition Number>,job=<Job Number of the Welder>,cur=<Current>,vol=<Voltage>, vol_offset=<Voltage Offset>
+arcon cnd=<Condition Number>,job=<Job Number of the Welder>  
 ```  
 <br/>
 
-### 파라미터
+### Parameter
 
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Arc용접 조건번호</td>
-      <td>
-        Arc용접 시작 및 본 조건에 사용되는 용접조건의 번호
-        (1~100)
-      </td>
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>전류 값</td>
-      <td>
-        Arc용접용 출력 전류 값<br>
-        (0 ~ 500)[A]
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>전압 값</td>
-      <td>
-        Arc용접 시 실제 출력할 전압 값<br>
-        (20 ~ 40)[V]
-      <td>변수</td>
-    </tr>
-        <tr>
-      <td>전압 옵셋값</td>
-      <td>
-        Arc용접 시 시너직 전압의 옵셋 전압 값<br>
-        (-200 ~ 200)[V]
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>용접기의 Job번호</td>
-      <td>
-        용접기 쪽에 저장된 Job번호 중 사용할 Job번호(Job 모드 지원 용접기 전용)
-        (0 ~ 9999)
-      <td>변수</td>
-    </tr>
-  </tbody>
-</table>  
-<br/>
+| Item | Meaning | Remarks |
+| --- | --- | --- |
+| **Arc Welding Condition Number** | The number of the welding condition used to starting Arc Welding and the specific condition (1~100) | Variable |
+| **Job Number of the Welder** | The Job number stored in the welder to be used(only for welders supporting job mode) (0 ~ 9999) | Variable |
+| **Current** | The output current value for Arc Welding (0 ~ 500)[A] | Variable |
+| **Voltage** | The output voltage value for Arc Welding (20 ~ 40)[V] | Variable |
+| **Voltage Offset** | The voltage offset value for the synergic voltage during Arc Welding (-200 ~ 200)[V] | Variable |
 
-### 사용 예
+
+### Example
 
 ```python
-   arcon  # 이전에 수행했던 용접조건으로 설정한 조건대로 용접개시. 재시도, 재 기동은 미 실행
-   arcon cnd=1  # 지정한 용접시작조건 설정대로 용접개시
-   arcon cnd=1,cur=200,vol=22  # 전류, 전압은 입력된 값으로 적용하고 그 외의 용접 조건은 용접시작조건번호의 조건으로 용접개시
-   arcon cnd=1,job=5 # 용접 모드는 Job모드로 적용. 5번 job번호 사용. 그 외의 용접 조건은 용접시작조건번호의 조건으로 용접개시
+   arcon  # Starts Welding using the previously set welding conditions. Retry or Restart is not executed.
+   arcon cnd=1  # Starts welding according to the specified welding start condition(cnd=1)
+   arcon cnd=1,cur=200,vol=22  # Starts welding with the specified current and voltage(200A, 22V), while other welding conditions follow the settings of the specified welding start condition number(cnd=1)
+   arcon cnd=1,job=5 # Starts welding in Job mode, using Job number 5. Other welding conditions follow the settings of the specified welding start condition number(cnd=1)
 ```  
 <br/>
 
-### 세부 설명  
-[[5장 Arc용접 조건 편집]](../5_Condition_editing/README.md) 참고  
+### Details  
+
+Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md) 
 <br/>
 
 
 {% hint style="warning" %}
-[**주의**]  
- - ‘용접기 중 일부 모델은 각종 용접설정들을 미리 설정하여 Job으로 내부에 저장하는 기능이 있습니다. 이 경우 '용접기의 Job번호' 항목을 사용할 수 있습니다.
+[**Caution**]  
+ - Some welder models can store various welding settings as jobs internally. In this case, you can use 'Job number of the Welder' item.
 {% endhint %}

@@ -1,26 +1,26 @@
 ﻿# 2.4 weaving off
 
 
-### 설명
+### Description
 
-```weaving off```는 위빙 동작을 종료하기 위한 명령어 입니다.  
+```weaving off``` command is used to stop the weaving motion.  
 <br/>
 
-### 문법
+### Syntax
 
 ```python
 weaving off
 ```  
 <br/>
 
-### 사용 예
+### Example
 
 ```python
    weaving off
 ```  
 <br/>
 
-### 세부 설명
+### Details
 
-  [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 참고
+  Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)
 

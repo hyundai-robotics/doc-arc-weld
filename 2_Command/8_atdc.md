@@ -1,6 +1,7 @@
 ﻿# 2.8 atdc
 
-### 설명 
-```atdc``` 문은 자동 툴 데이터 보정 기능을 실행하는 명령어 입니다.
+### Description 
 
-자세한 명령어 사용법은 툴 데이터 보정 기능설명서를 참고하시기 바랍니다.
+```atdc``` command is used to execute the automatic tool data calibration function.  
+
+For detailed instructions on how to use this command, please refer to the Tool Data Calibration manual.

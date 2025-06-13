@@ -1,40 +1,25 @@
 ﻿# 2.3 weaving on
 
 
-### 설명
-```weaving on```은 위빙조건을 실행하는 명령어 입니다. 속성 창에 진입하여 해당 조건번호에 해당하는 위빙조건을 설정할 수 있습니다.  
+### Description
+```weaving on``` command is used to enable the weaving condition. You can enter the properties window to set the corresponding weaving condition for the specified condition number.  
 <br/>
 
-### 문법
+### Syntax
 
 ```python
-weaving on <위빙조건번호>
+    weaving on, cnd=<Weaving Condition number>
 ```  
 <br/>
 
-### 파라미터
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>위빙조건번호</td>
-      <td>
-        불러올 위빙 조건 번호
-        (1 ~ 1000)
-      </td>
-      <td>변수</td>
-    </tr>
-  </tbody>
-</table>  
-<br/>
+### Parameter
 
-### 사용 예
+| Item | Meaning | Remarks |
+| --- | --- | --- |
+| **Weaving Condition number** | 불러올 위빙 조건 번호 (1 ~ 1000) | Variable |
+
+
+### Example
 
 ```python  
    weaving on, cnd=1    # 위빙 조건 1번을 로딩하여 실행
@@ -44,5 +29,5 @@ weaving on <위빙조건번호>
 <br/>
 
 
-### 세부 설명  
-  [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 참고
+### Details  
+  Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)
