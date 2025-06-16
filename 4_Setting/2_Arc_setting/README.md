@@ -1,40 +1,38 @@
-﻿# 4.2 Arc 용접기 설정 
+﻿# 4.2 Arc Welder Settings
 
-사용자는 당사 Arc 용접 로봇과 함께 다양한 용접기를 사용 가능합니다. 이를 위해 용접기 특성을 편집할 수 있는 기능을 제공합니다. 용접기 설정 화면은 다음과 같이 접근 가능합니다.  
-**『시스템』 → 『5: 초기화』 → 『3: 용도설정』** 메뉴로 진입합니다.
+User can operate various welders together with our Arc Welding Robots. To support this, a function is provided to edit welder-specific settings. The welder configuration screen can be accessed as follows: **[System > 5: Initialization > 3: Usage setting]**
 
 
-###	용접기 번호  
->현재 설정하고 있는 용접기 제조사 번호를 나타냅니다. 각 제조사별 용접기 번호는 [**용접기 정보**] 버튼을 눌러 확인할 수 있습니다.
-
-이 화면에서 [**용접기 설정**] 버튼을 누르면 해당 용접기의 조건 편집화면이 나타납니다.
+###	Welder Maker Number
+> The currently selected welder maker number is displayed. You can check the welder numbers for each maker by clicking the **[Welder information]** button. By clicking the **[Welder setting]** button on this screen, the condition editing screen for the selected welder will appear.
 
 
 <p align="center">
  <img src="../../_assets/1_2_1.png" width="70%"></img>
- <em><p align="center">그림 4.2.1. 용도설정 대화상자</p></em>
+ <em><p align="center">Figure 4.2.1. Usage Setting Dialog box</p></em>
 </p> 
 
 </br>
 
 <p align="center">
  <img src="../../_assets/4_2_2.png" width="70%"></img>
- <em><p align="center">그림 4.2.2. 현대 용접기 조건 설정</p></em>
+ <em><p align="center">Figure 4.2.2. Hyundai Welder Condition Settings</p></em>
 </p>   
 
 </br>
 
 <p align="center">
  <img src="../../_assets/4_2_3.png" width="70%"></img>
- <em><p align="center">그림 4.2.3. 현대 용접기 입출력 신호 할당</p></em>
+ <em><p align="center">Figure 4.2.3. Hyundai Welder I/O Signal Assignment</p></em>
 </p>   
 
 
-용접기 조건 화면에서는 용접기와 관련된 특성에 대한 편집 기능을 제공하기 때문에 편집 가능한 항목은 용접기 별로 차이가 있습니다. 다음 항목들은 용접기 조건 화면에서 공통적으로 편집 가능한 항목들입니다.  
+The welder condition screen provides editing functions related to welder characteristics, so the editable items differ by welder. The following items are commonly editable in the welder condition screen.
 
-|항목|기본값|설명|
+| Item | Default Value | Description |
 |---|------|---|
-|명칭|당사 지원 용접기 모델명 |용접기의 모델명을 기록합니다.|
-|설명|용접기 메이커명|용접기에 대한 설명을 기록합니다. |
-|용착 검출시간|[0.2]초 <br>(범위: 0.1 ~ 10.0)|Arc 용접 종료 후 설정된 시간 동안 와이어 용착을 검사합니다.|
-|ARC OFF 검출시간|[0.6]초 <br>(범위: 0.0 ~ 10.0)|Arc용접 중 Arc 꺼짐에 대한 기준 시간을 설정합니다. 해당 시간 이상 Arc가 꺼질 경우 Arc off로 인식합니다.<br> 이 값이 작은 경우 Arc점화 실패가 자주 발생할 수 있습니다. 반면에 설정된 값이 너무 크면 Arc off 후에도 로봇 이동과 와이어 인칭이 계속 되는 시간이 증가하기 때문에 Arc off 후 로봇이 이동하는 거리와 와이어 돌출되는 길이가 증가합니다.|
+| Name                   | Supported welder model name | Records the model name of the welder |
+| Comment                | Welder Maker name | Records a description of the welder |
+| Stick detection time   | [0.2] seconds <br>(Range: 0.1 ~ 10.0) | Checks wire fusion during setting time after arc welding ends |
+| ARC OFF detection time | [0.3] seconds <br>(Range: 0.0 ~ 10.0) | Sets the reference time for detecting arc off during arc welding. If the arc is off longer than this time, it is recognized as arc off.<br> It set too low, arc ignition failures may occur frequently.<br> If set too high, robot movement and wire inching continue longer after arc off, increasing the robot travel distance and wire protrusion length after arc off. |
+

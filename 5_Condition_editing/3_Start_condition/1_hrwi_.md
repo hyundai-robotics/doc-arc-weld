@@ -1,12 +1,10 @@
-﻿# 5.3.1 용접 시작 조건 – HRWI 전용 설정
+﻿# 5.3.1 Welding Start condition – HRWI-only settings
 
+### (1) Welding Mode: [**Normal, Pulse**]  
+Set the Arc Welding method.
 
+### (2)	Slowdown Adjuctment: [ 100 ] % (range: 0 ~ 255)  
+Adjust the offset for the wire feed speed before the arc is initiated.
 
-### (1) 용접모드 선택: [**일반, 펄스**]  
-Arc 용접 방법을 설정합니다.
-
-### (2)	슬로우다운 조정: [  100] % (범위: 0 ~ 255)  
-Arc 발생전까지 와이어를 송급하는 기본 속도의 옵셋을 설정합니다.
-
-### (3)	인덕터 효과: [  100] % (범위: 0 ~ 255)  
-인덕터 효과를 설정합니다.
+### (3)	Inductor Effect: [  100] % (range: 0 ~ 255)  
+Set the inductor effect.

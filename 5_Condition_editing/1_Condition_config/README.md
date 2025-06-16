@@ -1,9 +1,11 @@
-﻿# 5.1 Arc 용접 조건 구성
+﻿# 5.1 Configure Arc Welding Condition
 
-당사 제어기를 이용하여 Arc 용접을 수행하기 위해서는 용접기와 용접조건 설정이 필요합니다. 기본적인 Arc 용접 외에 위빙이나 Arc 센싱과 같은 특별한 기능을 사용하기 위해서는 해당 기능의 세부 설정을 필요로 합니다. 당사에서는 다양한 용접기를 이용하여 사용자가 원하는 설정으로 다양한 환경에서 용접할 수 있게 용접기 특성 파일 편집([[4장. Arc용접기 설정]](../../4_Setting/README.md)), Arc 용접 응용 기능 편집([[1.2.2 Arc 용접 각종 신호 및 기능 설정]](../../1_Basic_information/2_Function_setting/2_signals_functions.md))과 Arc 용접조건 편집 기능을 제공합니다. 
+To perform Arc Welding our controller, it is necessary to configure both the welder and the welding conditions. In addition to basic arc welding, special functions such as weaving or arc sensing require detailed settings for each respective feature.
+Our company provides the ability to edit Arc welder characteristic files([[4. Arc Welder Settings]](../../4_Setting/README.md)), arc welding application functions([[1.2.2 Arc Welding various signals and funtion settings]](../../1_Basic_information/2_Function_setting/2_signals_functions.md)), and arc welding condition settings, enabling users to weld in various environments with desired configurations using a variety of welder.
 
-Arc 용접 조건은 다음과 같이 구성되어 있습니다.
-  -	Arc 용접시작조건: 용접 시작 및 본 조건 용접 설정 편집
-      - Arc 용접시작 보조조건: 재시도와 재시작 기능 편집
-  -	Arc 용접종료조건: 용접 종료 시 설정 편집
-      - Arc 용접종료 보조조건: 자동용착해제 기능 편집
+Arc welding conditions are structed as follows:
+- Arc welding Start Conditions: Editing settings for welding initiation and main welding parameters
+  - Auxiliary Arc welding Start conditions: Editing retry and restart functions
+- Arc welding End Conditions: Editing settings for welding termination
+  - Auxiliary Arc welding End condiitons: Editing the automatic wire stick-out release
+
