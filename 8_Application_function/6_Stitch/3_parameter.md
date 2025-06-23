@@ -1,58 +1,58 @@
-﻿# 8.6.3 stitch 기능 파라미터 설정
+﻿# 8.6.3 STITCH Func. Parameter setting
 
 
 <p align="center">
  <img src="../../_assets/8_6_5.png" width="80%"></img>
- <em><p align="center">그림 8.6.5. 스티치 용접 과정에 따른 Profile</p></em>
+ <em><p align="center">Figure 8.6.5. Stitch Welding Process Profile</p></em>
 </p>
 
 
+[그림 8.6.5]는 스티치 용접 과정을 보여줍니다. 이 차트에 따라 `stitch` 명령어의 옵션들을 설정할 수 있습니다.
 
-그림 8.21은 ```stitch``` 명령어에서 **[속성]** 버튼을 눌러서 접근하는 화면이고, 그림 8.22은 그림 8.21화면에서 '구분' 버튼으로 접근합니다. 그림 8.23은 Job 프로그램 화면입니다.
-그림 8.21 – 8.22 의 파라미터에 대한 설명은 다음과 같습니다.
-
-- 조건 번호 : 우측 조건 목록에서 선택 
-- 설명 : 소프트 키보드로 입력
-- 일반
-  - (1) On 유지 시간 : 용접 신호가 미리 켜지는 시간
-  - (2) Off 유지 시간 : 용접 신호가 미리 꺼지는 시간
-  - (3) 시작 거리 : 스티치 시작 전 On 구간 속도 진입 구간 길이
-  - (4) OFF 속력 : 비용접 구간 용접 속력
-- 구분
-  - (5) 구분 : 스티치 용접 조건  
-    Ex) section1 조건의 스티치 용접이 해당 count만큼 진행되면 section2의 조건에 해당하는 스티치 용접이 진행됨
-  - (6) ON 거리 : 용접 구간 길이
-  - (7) OFF 거리 : 비용접 구간 길이
-  - (8) 횟수 : Stitch 용접 횟수
-  - (9) ON 속력 : 용접 구간 용접 속력 
-- 입출력 
-  - (11) Stitch Enable
-  - (12) Equipment Enable
-  - (13) Equipment Output  
-    → 3가지 파라미터에 1이 입력되어야 재생 중에 스티치 용접이 진행됨
-
-
-
-{% hint style="warning" %}
-- (9) ON 속력 : 스티치 구간에서 용접(ON) 구간의 속도 설정은 스텝 속도로 지정
-- (6) ON 거리, (7) OFF 거리, (8) 횟수 모두 입력 되어야 section2의 조건을 입력할 수 있음
-- (11) STITCH enable Port, (12) Equipment enable Port, (13) Equipment Output Port 모두 1을 입력해야 playback에서 재생 중에 스티치 용접이 진행됨. 그렇지 않을 경우 용접하지 않고 스티치 모션만 진행됨.
-
-{% endhint %}
+[Figure 8.6.5] illustrates the stitch welding process. Based on this chart, you can configure the options for the `stitch` command.
 
 <p align="center">
  <img src="../../_assets/8_6_6.png" width="70%"></img>
- <em><p align="center">그림 8.6.6. 스티치 용접 조건 대화상자1</p></em>
+ <em><p align="center">Figure 8.6.6. Stitch Welding Condition Dialog Box1 (General)</p></em>
 </p>
 
 <p align="center">
  <img src="../../_assets/8_6_7.png" width="70%"></img>
- <em><p align="center">그림 8.6.7. 스티치 용접 조건 대화상자2</p></em>
+ <em><p align="center">Figure 8.6.7. Stitch Welding Condition Dialog Box2 (Section)</p></em>
 </p>
 
-<p align="center">
- <img src="../../_assets/8_6_8.png" width="40%"></img>
- <em><p align="center">그림 8.6.8. 스티치 용접 명령어 입력</p></em>
-</p>
- 
+
+[그림 8.6.6]은 `stitch` 명령어에 커서를 두고 TP 좌측 화면에서 [**속성**] 버튼을 눌러 접근할 수 있습니다. [그림 8.6.7]은 이전 화면에서 [**구분**] 탭을 눌러 접근합니다. 각 그림에 대한 파라미터 설명은 다음과 같습니다.
+
+[Figure 8.6.6] shows the screen accessed by placing the cursor on the `stitch` command and pressing the [**Property**] button on the left side of the TP screen. [Figure 8.6.7] is accessed by selecting the [**Section**] tab from the previous screen.
+The descriptions of the parameters for each figure are as follows:
+
+- Condition Number: Select from the list of conditions on the right
+- Description: Input using the soft keyboard
+- General
+  - (1) On delay Time: The time period during which the welding signal is turned on in advance
+  - (2) Off delay Time: The time period during which the welding signal is turned off in advance
+  - (3) Distance to Start: The length of the speed entry section before the stitch welding starts(On section)
+  - (4) Off Speed: Welding Speed during the non-overlapping (Off) section
+
+- Section
+  - (5) Section: Stitch welding condition  <br/>
+    Example. When stitch welding under the conditions of section 1 is performed for the specified count, stitch welding proceeds under the conditions of section 2
+  - (6) On Distance: Length of the welding section
+  - (7) Off Distance: Length of the non-overlapping (Off) section
+  - (8) Count: Number of stitch welding repetitions
+  - (9) On speed: Welding speed during the welding section
+
+- Input/Output
+  - (10) Stitch Enable
+  - (11) Equipment Enable
+  - (12) Equipment Output  <br/>
+    → All three parameters must be set to 1 for stitch welding to proceed during playback
+
+
+{% hint style="warning" %}
+- **(6) on dist, (7) off dist, (8) count**: All of these must be entered to set the conditions for section2.
+- **(9) on speed**: The speed for the welding (ON) section in the stitch section is set as the step speed.
+- **(11) Stitch Enable Port, (12) Equipment enable Port, (13) Equipment Output Port**: All must be set to 1 for the stitch welding welding to proceed during playback. If not set, welding will not occur, and only the stitch motion will proceed.
+{% endhint %}
 

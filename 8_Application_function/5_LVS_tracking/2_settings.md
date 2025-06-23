@@ -1,118 +1,125 @@
-﻿# 8.5.2 LVS(Laser Vision Sensor) 기본설정
+﻿# 8.5.2 LVS Settings
 
-LVS기능을 사용하기 위해서는 센서 설치 및 통신 설정이 필요합니다.
 
-지금부터 해당 과정을 살펴보겠습니다.
+To use LVS functionality, sensor installation and communication settings are required.
 
-### (1) 연결 브라켓을 이용한 LVS센서의 장착
+Let's now look at the process involved.
 
-연결 브라켓은 직접 설계하여 사용하거나 HD현대로보틱스 또는 LVS 제조사로부터 받아 사용하십시오.<br>
+### (1) Mounting the LVS Sensor using the connection bracket
+
+The connection bracket can either be designed and used by yourself, or you may receive one from HD Hyundai Robotics or the LVS manufacturer. <br>
 
 <p align="center">
- <img src="../../_assets/8_5_3_lvs_mount_setup.png" width="60%"></img>
- <em><p align="center">그림 8.5.3. LVS 장착시 주의점</p></em>
+  <img src="../../_assets/8_5_3_lvs_mount_setup.png" width="60%"></img>
+  <em><p align="center">Figure 8.5.3. LVS Mounting Precautions</p></em>
 </p>
 
 {% hint style="warning" %}
-반복 정확도 (Accuracy) 및 정밀도(Precision) 달성을 위해 로봇의 플랜지에 LVS 마운트를 직결하십시오.<br>
-즉, 플랜지 - LVS 마운트 및 LVS센서 - 쇼크센서(사용시) - 토치 의 기구부를 갖도록 설치하십시오.
+  - To achieve repetition accruacy and precision, directly mount the LVS bracket to the robot flange<br>
+  - In other words, install the mechanical assembly as follows: flange - LVS mount, LVS sensor - shock sensor(if used) - torch.
 {% endhint %}
 
-툴 좌표계는 아래 그림과 같이 용접 진행 반대 방향을 +Tool X 방향, 와이어 방향을 +Tool Z 방향으로 설정해야합니다. 
+The tool coordinate system should be set as follows: the welding direction opposite to the progress direction should be set as the +Tool X direction, and the wire direction should be set as the +Tool Z direction, as shown in the diagram below.
 
-LVS 센서는 직선인 용접선을 기준으로 수직으로 레이저가 위치하도록 설치해야 합니다. (그림 참조)
+The LVS sensor must be installed so that the laser is positioned perpendicular to the welding seam, which is straight (see figure)
+
 
 <p align="center">
- <img src="../../_assets/8_5_4.png" width="90%"></img>
- <em><p align="center">그림 8.5.4. TCP와 센서설치, 툴좌표계의 설정</p></em>
+  <img src="../../_assets/8_5_4.png" width="90%"></img>
+  <em><p align="center">Figure 8.5.4. TCP and Sensor Installation, Tool Coordinate System Setup</p></em>
 </p>
 
 {% hint style="info" %}
-툴 좌표계를 설정하는 방법은 툴 캘리브레이션 및 각도보정 메뉴얼 항목을 참고하십시오.
+  For instructions on setting the tool coordinate system, refer to the Tool Calibration and Angle Correction Manual(Angle Calibration) section.
 {% endhint %}
 
 {% hint style="warning" %}
-LVS를 사용하기 위해서 레이저는 용접방향에 선행하여 위치하여야 하며, 툴 좌표계는 위 그림과 같이 설정되어야 합니다.
+  In order to use LVS, the laser should be positioned ahead of the welding direction, and the tool coordinate system must be set as shown in the diagram above.
 {% endhint %}
 
 ---
 
-### (2) 통신설정
+### (2) Communication Settings
 
-LVS센서 제어기와 로봇 제어기간에 이더넷 케이블을 이용해 접속합니다.<br>
-**[시스템]-[응용 파라미터]-[LVS 추종]-[사용환경 설정]** 에 진입합니다.<br>
-**[통신]** 탭에서 다음항목을 설정합니다.
+Connect the LVS sensor controller and the robot controller using an Ethernet cable.<br>
+Navigate to **[System > 4: Application parameter > 5: LVS tracking > 1: Envrionment setting]**.<br>
 
-- LVS 브랜드 : Scansonic, Oxford (or Meta), Full-v<br>
-- IP 주소 : 센서 제어기의 IP를 입력합니다.<br>
-- 로컬 포트 : 로봇 제어기의 포트입니다. (Oxford의 경우 8000)<br>
-- 원격 포트 : 센서 제어기의 포트입니다. (Oxford의 경우 8002)
+In the **[Communication]** tab, configure the following items:
 
-위 내용을 입력 후 **[연결]** 을 눌러 '연결됨' 이라고 표시될 경우 정상 개통된 것입니다.
+- LVS brand : Scansonic, Oxford (or Meta), Full-v<br>
+- IP Address : Enter the IP address of the sensor controller.
+- Local Port : The port for the robot controller. (For Oxford, 8000)
+- Remote Port : The port for the sensor controller. (For Oxford, 8002)
+
+After entering the above information, click **[connect]**. If the status shows "connected," the connection is successfully established.
+
 
 {% hint style="info" %}
-[IP 주소] : LVS제어기에서 로봇 제어기로 데이터를 보내기위한 IP설정은 LVS제어기에서 설정합니다. <br>
-설정이 잘못되면 연결이 되지 않을 수 있으므로 이 경우에는 LVS 제조사의 메뉴얼을 참고하십시오. <br>
-[포트] : 브랜드를 선택할 경우 디폴트 값으로 변경되므로 사용자가 수정할 필요가 없습니다.<br>
-포트가 잘못되면 연결이 되지 않을 수 있으므로 이 경우에는 LVS 제조사의 메뉴얼을 참고하십시오.
+- [IP Address] : The IP address used for sending data from the LVS controller to the robot controller is set in the LVS controller.
+  - If the settings are incorrect, the connection may fial. In such cases, refer to the LVS manufacturer's manual.
+- [Port] : When selecting a brand, the default values will automatically be applied, so there is no need for the user to modify them.
+  - If the port is incorrect, the connection may fial. In such cases, refer to the LVS manufacturer's manual.
 {% endhint %}
 
 ---
 
-### (3) 기본설정
+### (3) Basic Settings
 
-**[트래킹]** 탭에서 다음항목을 설정합니다.  
-- P 게인 : 변환할 위치 및 방위로 TCP가 추종하는 세기를 지정합니다.  
-- D 게인 : 변환할 위치 및 방위로 TCP가 반응하는 속도를 지정합니다.  
-- 최대 추종 거리 [mm/sec] : 초당 최대 추종량을 [mm/sec]로 지정합니다. 
+In the **[Tracking]** tab, configure the following items: 
+- P gain : Specifies the intensity with which the TCP tracks to the converted position and orientation.
+- D gain : Specifies the speed at which the TCP responds to the converted position and orientation.
+- Max tracking Distance : Specifies the maximum tracking amount per second in [mm/sec].
+
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">설명</th>
-      <th style="text-align:left">권장 설정값</th>
+      <th style="text-align:left">Item</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Recommended Settings</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">P, D 게인</td>
-      <td style="text-align:left">변환할 위치 및 방위로 TCP가 추종하는 세기를 지정합니다.
-      </td>
+      <td style="text-align:left">P, D gain</td>
+      <td style="text-align:left">Specifies the intensity with which the TCP tracks to the converted position and orientation.</td>
       <td style="text-align:left">
-        일반 트래킹 (위빙 미사용) : 1~10 범위 내에서 설정하십시오. <br>
-        위빙 트래킹 (위빙 사용) : default 값인 10을 사용하십시오. <br>
-        디폴트값은 P gain 10, D gain 10 입니다. 실제 작업물에 적합한 값을 찾아 적용하십시오.
+        General tracking (without weaving) : Set within the range 1 ~ 10. <br>
+        Weaving tracking (with weaving) : Use the default value of 10. <br>
+        The default values are P gain: 10 and D gain: 10. Adjust these values to suit the actual workpiece.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">최대 추종 거리 [mm/sec]</td>
-      <td style="text-align:left">초당 최대 추종량을 [mm/sec]로 지정합니다.<br>
-      </td>
+      <td style="text-align:left">Max tracking distance/sec [mm/sec]</td>
+      <td style="text-align:left">Specifies the maximum tracking amount per second in [mm/sec].</td>
       <td style="text-align:left">
-        1 ~ 5 범위로 설정하십시오.<br> LVS 용접선 추종은 티칭된 궤적에서 벗어나는 작은 차이를 보정하기 위한 기능이므로  크게 설정할 필요가 없습니다. 디폴트값은 10 입니다.
+        Set within the range of 1 to 5. The default value is 10.<br>
+        LVS seam tracking is designed to correct small deviations from the taught trajectory, so setting a larger value is not necessary.
       </td>
     </tr>
   </tbody>
 </table>
 
-위 과정을 통해 기본설정이 끝났습니다. 
+
+Preferences have been completed through the above process.
 
 ---
 
-### Full-V 센서 설정 예시
+#### Full-V Sensor Configuration Example
 
 <p align="center">
  <img src="../../_assets/8_5_5_lvs_setting_fullv_1.png" width="90%"></img>
- <em><p align="center">그림 8.5.5. Full-V 센서 연결 설정</p></em>
+ <em><p align="center">Figure 8.5.5. Full-V Sensor Connection Settings</p></em>
 </p>
 
-위 그림과 같이 LVS 브랜드를 FULL로 선택한 후 Full-V S/W에서 LVS 센서의 IP를 확인한 후 **[시스템]-[응용파라미터]-[lvs 추종]-[사용환경 설정]** 창의 IP에 입력하십시오. 그 후 하단의 "연결" 버튼을 눌러 연결 상태가 "연결됨"이 되는지 확인하십시오.<br>
-"연결 실패"라고 뜨는 경우에는 하드웨어 연결 및 IP를 확인하십시오.<br>
+As shown in the figure above, select the LVS brand as FULL, then check the IP address of the LVS sensor in the Full-V softeware.  <br>
+Enter the IP in the **[System > 4: Application parameter > 5: LVS tracking > 1: Envrionment setting]** window.  <br> Afterward, click the "connect" button at the bottom and verify that the connection status shows.  <br>
+If "disconnected" appears, check the hardware connection and IP address.<br>
 
-Full-V S/W에서 사용하고자 하는 seam을 Full-V사에서 제공하는 메뉴얼과 하기 그림을 참조하여 등록하십시오.
+Refer to the manual provided by Full-V and the figure below to register the seam you wish to use in the Full-V software.  
+
 
 <p align="center">
  <img src="../../_assets/8_5_6_lvs_setting_fullv_2.png" width="90%"></img>
- <em><p align="center">그림 8.5.6. Full-V S/W에서 seam 설정 예시</p></em>
+ <em><p align="center">Figure 8.5.6. Example of Seam Setting in Full-V Software</p></em>
 </p>

@@ -1,30 +1,31 @@
 ﻿# 8.7 Arc Trajectory Manager
 
-본 기능은 아크용접을 수행할 때 궤적, 전류, 전압, 토치의 자세 (작업각, 푸쉬풀각)를 실시간으로 보여줍니다.
+This features displays the trajectory, current, voltage, and torch position (welding angle, push-pull angle) in real-time during arc welding.
 
-이를 통해 용접시 용접각도 및 전류, 전압에 대한 정보를 실시간으로 확인하고 추후 용접 티칭을 수정하는데 용이하게 사용할 수 있습니다.
+Through this, you can monitor the welding angle, current, and voltage in real time during arc welding, making it easier to modify the welding teaching later.
 
-기능을 동작시키려면 다음과 같이 설정합니다.
+To enable this feature, follow these steps:
 
-**[시스템]-[응용파라미터]-[아크용접]** 에서 "아크 궤적 모니터링"을 '유효'로 설정
+Set "Arc trajectory monitoring" to 'activation on' under **[System > 2: Application parameter > 2: Arc welding]**.
+
 
 {% hint style="info" %}
-본 기능은 60.30-00 버전부터 지원합니다.
+This feature is available during from version 60.30-00.
 {% endhint %}
 
 <p align="center">
  <img src="../../_assets/8_7_1_arc_trj_mgr.png" width="90%"></img>
- <em><p align="center">그림 8.7.1. 실시간 용접 궤적 모니터링</p></em>
+ <em><p align="center">Figure 8.7.1. Real-time Arc trajectory monitoring</p></em>
 </p>
 
-`arcon` 부터 `arcoff` 구간 까지의 궤적 및 용접정보를 실시간으로 확인할 수 있습니다.
+You can monitor the trajectory and welding information in real-time from the `arcon` to the `arcoff` section.
 
-화살표 키를 눌러 평면을 움직이거나 (shift) +/- 키를 눌러 확대(축소) 할 수 있습니다.
+Use the arrow keys to move the plane, or press **[Shift] + [+/-]** keys to zomm in or out.
 
-작업각 및 푸쉬풀 각은 용접평면에 대해 용접진행방향을 기준으로 계산됩니다.
+The welding angle and push/pull angle are calculated base on the welding direction relative to the welding plane.
 
 {% hint style="info" %}
-용접 궤적에 따라 용접평면은 자동으로 회전합니다.
+The welding plane automatically rotates according to the welding trajectory.
 {% endhint %}
 
 

@@ -1,1 +1,1 @@
-﻿# 8.6 STITCH 기능
+﻿# 8.6 STITCH Function

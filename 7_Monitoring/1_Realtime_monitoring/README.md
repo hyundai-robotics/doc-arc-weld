@@ -1,2 +1,2 @@
-﻿# 7.1 Arc 용접 데이터 실시간 모니터링
+﻿# 7.1 Arc Weld data Real-time Monitoring
 

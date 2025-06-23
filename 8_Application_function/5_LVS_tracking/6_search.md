@@ -1,117 +1,92 @@
-# 8.5.6 LVS(Laser Vision Sensor) search 기능
+# 8.5.6 LVS Search Func.
 
-1. Search 기능 사용법
+### (1) How to Use the Search Function
 
-LVS는 search 기능을 제공하며 다음과 같은 목적으로 사용합니다.
+LVS provides a search function, which is used for the following purposes:
 
-- search : 시작점을 탐색하고 시작점으로 TCP가 이동하면서 추종할 위치를 설정 간격마다 버퍼에 저장하고 트래킹을 준비합니다.
-- step_search : 다단비드 검출, 단차 검출 
+- `search`: Searches for the starting point end, while the TCP (Tool Center Point) moves to the starting position, stores, the points to be tracked in a buffer at set intervals, preparing for tracking.
+- `step_search`: Used for multi-pass bead detection and step detection
 
-search를 수행하면 탐색을 수행하며 무효점이 검출되면 가장 최근의 유효점을 sp 인자에 포즈로 저장합니다.
+When a search is performed, the system searches for the target, and if an invalid point is detected, the most recent valid point is stored as the pose in the `sp` parameter.
 
-그 후 tracking을 준비하기 위해 찾은 점으로 TCP가 이동하면서 추종할 점들을 버퍼에 저장합니다.
+Subsequently, in order to prepare for tracking, the system stores the points to be followed in a buffer as the TCP moves to the found point.
 
-search 기능을 수행하면 seam tracking을 수행할 수 있는 상태가 됩니다.
+By performing the search function, the system becomes ready to perform "seam tracking". 
 
 {% hint style="info" %}
-탐색 방법 : 유효하지 않은 seam (LVS 제어기가 seam을 검출하지 못하는 상태)을 검지하여 시작점을 탐색합니다.
+  The search process detects invalid seams (when the LVS controller cannot detect a seam) and searches for the starting point.
+  The **search** function finds the start(or end), then moves to that location, storing the points to be tracked in a buffer.
 {% endhint %}
 
-search는 다음과 같이 사용합니다.
+
+```search``` function is used as follows:
 
 ```python
-move L, spd=60%, accu=0, tool=1
-delay 0.1 #탐색 시작위치의 accu가 0이 아닐경우 삽입해야 함
-var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
-lvs search, cnd=1, seam=1, sp=po_100
+    move L, spd=60%, accu=0, tool=1
+    delay 0.1 # if the accuracy of the starting position is not 0, it must be inserted.
+    var po_100=cpo() # The current pose is stored in the variable po_100
+    lvs search, cnd=1, seam=1, sp=po_100
 ```
 
-`lvs` 명령어에서 **[속성]** 에 진입하면 다음과 같이 search 설정을 수행할 수 있습니다.
+To configure the search function, enter **[property]** in the `lvs` command, where the search settings can be adjusted as follows:
 
 
 <p align="center">
  <img src="../../_assets/8_5_14_lvs_search_setting.png" width="80%"></img>
- <em><p align="center">그림 8.5.14. lvs search 설정화면</p></em>
+ <em><p align="center">Figure 8.5.14. lvs search settings</p></em>
 </p>   
 </br>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">설명</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">function</td>
-      <td style="text-align:left">
-        search 기능의 사용을 설정합니다.<br>
-        '무효' : lvs의 레이저 위치로 이동하면서 버퍼에 목표위치들을 저장합니다.<br>
-        '유효' : 경우 탐색방향으로 시작점과 종료점을 검출한 후 검출한 위치로 이동하면서 버퍼에 목표위치들을 저장합니다.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">direction</td>
-      <td style="text-align:left">
-       0 : +ToolX 방향으로 탐색합니다.<br>
-       1 : -ToolX 방향으로 탐색합니다.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">speed</td>
-      <td style="text-align:left">
-        탐색 속도를 mm/sec 단위로 설정합니다.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">offset</td>
-      <td style="text-align:left">
-       탐색점에서 용접선 방향으로 찾은 점을 설정한 mm 만큼 쉬프트시킬 수 있습니다.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Item | Description |
+|------|------|
+| function | Set the usage of the search function. <br> 'Disable': The system moves to the laser position of the LVS and stores the target positions in a buffer. <br> 'Enable': The system detects both the starting and ending points in the search direction, then moves to the detected location while storing the target positions in the buffer. |
+| distance | If the search function is set to **enable**, the maximum distance for searching the starting point should be entered [mm]. |
+| direction | 0: Search in the +ToolX direction. <br> 1: Search in the -ToolX direction. |
+| speed | The search speed can be set in mm/sec. |
+| offset | Points found in the direction of the welding line can be shifted by the specified number of mm from the detected position. |
+
+<br>
 
 <p align="center">
  <img src="../../_assets/8_5_15_lvs_search_example.png" width="80%"></img>
- <em><p align="center">그림 8.5.15. lvs search 예시</p></em>
+ <em><p align="center">Figure 8.5.15. lvs search Example</p></em>
 </p>   
 </br>
 
-다음과 같이 search 및 seam tracking을 티칭할 수 있습니다.
+The **search** and **seam tracking** functions can be taught as shown below.
 
 ```python
-move L, spd=60%, accu=0, tool=1
-delay 0.3
-var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
-lvs search, cnd=1, seam=1, sp=po_100
-weavon cnd=1
-arcon cnd=1
-lvs track, cnd=1, seam=1, sp=po_100
-move L, spd=30cm/min, accu=3, tool=1
-move L, spd=36cm/min, accu=3, tool=1
-move L, spd=40cm/min, accu=3, tool=1
-weavoff
-arcof
-end
+    move L, spd=60%, accu=0, tool=1
+    delay 0.3
+    var po_100=cpo() # The current pose is stored in the variable po_100
+    lvs search, cnd=1, seam=1, sp=po_100
+    weavon cnd=1
+    arcon cnd=1
+    lvs track, cnd=1, seam=1, sp=po_100
+    move L, spd=30cm/min, accu=3, tool=1
+    move L, spd=36cm/min, accu=3, tool=1
+    move L, spd=40cm/min, accu=3, tool=1
+    weavoff
+    arcof
+    end
 ```
 
 ---
 
-2. 다단비드 검출 기능 (step_search) 사용법
+### (2) How to Use the Multi-pass Bead Detection Function (step_search) 
 
-다단비드의 시작점을 검출해주는 기능으로 사용법은 search 기능과 동일합니다.
 
-`lvs` 명령어의 **[속성]**창에서 기능을 '유효'로 설정한 뒤 스캔거리를 '거리' 항목에 설정합니다.
+This function is used to detect the starting point of a multi-pass bead, and its usage is identical to the `search` function.
 
-다음과 같이 사용할 수 있습니다.
+In the **[property]** window of the `lvs` command, set the function to "Enable" and configure the scan distance in the "distance" field.
+
+It can be used as follows:
 
 ```python
-move L, spd=60%, accu=0, tool=1 # 다단비드 검출을 위한 스캔을 시작할 위치
-delay 0.3
-var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
-lvs step_search, cnd=1, seam=1, sp=po_100
-move L, tg=po_100, spd=40cm/min, accu=3, tool=1 # 찾은 위치로 이동
-end
+    move L, spd=60%, accu=0, tool=1 # Set the starting point for the multi-pass bead detection scan.
+    delay 0.3
+    var po_100=cpo() # The current pose is stored in the variable po_100
+    lvs step_search, cnd=1, seam=1, sp=po_100
+    move L, tg=po_100, spd=40cm/min, accu=3, tool=1 # Move to the found location.
+    end
 ```

@@ -1,10 +1,10 @@
-﻿# 7.1.1 세부 정보 모니터링
+﻿# 7.1.1 Detailed Information Monitoring
 
-본 기능은 Arc 용접과 관련된 세부 데이터를 확인할 수 있는 기능입니다. 설정된 용접기에 따라 제공하는 정보가 다르기 때문에 해당 모니터링 창은 설정된 용접기에 따라 다를 수 있습니다. 용접기와 통신 오류가 발생하거나 통신 연결이 되어 있지 않은 경우 ‘용접기 에러코드’나 ‘용접기 통신상태’ 항목이 붉은색 배경으로 표시됩니다. 세부정보 모니터링으로 다음과 같은 데이터를 확인할 수 있습니다.
+This function allows you to check detailed data related to arc welding. The information provided may vary depending on the set welder, so the monitoring window may differ based on the configured welder. If a communication error occurs with the welder or if there is no communication connection, the "Welder Error Code" or "Welder Communication Status" items will be displayed with a red background. The following data can be monitored in the detailed information monitoring.
 
 <p align="center">
  <img src="../../_assets/7_1_1.png" width="70%"></img>
- <em><p align="center">그림 7.1.1. Arc용접 세부 정보 모니터링</p></em>
+ <em><p align="center">Figure 7.1.1. Arc Welding Detailed Information Monitoring</p></em>
 </p>
 
 (1)	현재 용접기에서 출력되고 있는 실제 용접 전류(A)

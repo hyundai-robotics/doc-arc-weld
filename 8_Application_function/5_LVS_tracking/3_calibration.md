@@ -1,91 +1,96 @@
-# 8.5.3 LVS(Laser Vision Sensor) TCP-센서 캘리브레이션
+# 8.5.3 LVS Calibration
 
-LVS기능을 사용하기 위해서 TCP와 센서좌표계 간 캘리브레이션이 선행되어야 합니다. 
 
-Hi6 제어기는 자동캘리브레이션을 지원합니다.
+In order to use the LVS funtionality, calibration between the TCP and sensor coordinate system must be performed first.
 
-지금부터 tcp-lvs센서 자동캘리브레이션 수행 방법을 살펴보겠습니다.
+Hi6 controller supports automatic calibration.
 
-### (1) 캘리브레이션 시편 준비
+Let's now look at how to perform automatic calibration between TCP and LVS sensor.
 
-당사를 통해 라이센스 구입을 하면 자동캘리브레이션용 시편을 제공합니다. 
+### (1) Preparation of Calibration Specimen
+
+If you purchase a license through our company, an automatic calibration specimen will be provided.
+
 
 {% hint style="info" %}
-테스트 용도로 사용하고자 한다면 당사에 요청하여 캘리브레이션 시편을 준비하십시오.
+If you wish to use it for testing purpose, please contact us to prepare the calibration specimen.
 {% endhint %}
 
 ---
 
-### (2) 자동캘리브레이션 티칭
-
-다음을 참고하여 티칭하십시오.
-
-```python
-move L,spd=60%,accu=0,tool=0  # 캘리브레이션 시편 기준점 위치
-delay 0.5
-lvs auto_calib, cnd=1, seam=1, sp=p1, opt=0
-end
-```
-
-아래 그림과 같이 시편의 기준점에 TCP를 조그로 이동시키십시오. 
-
-토치 자세는 시편과 수직으로 위치해야 합니다. (Roll, Pitch 방향 모두 수직)
-
-레이저 라인은 시편의 엣지 부분과 수직이 되도록 조그 (보통 Tool Z로 조작)로 위치 하십시오.
-
-이 상태 (토치가 시편과 수직으로 위치하고 레이저 라인은 시편의 엣지에 수직인 상태)에서 **[기록]** 을 눌러 `move` 명령어를 삽입합니다.
-
-{% hint style="warning" %}
-* 토치의 캘리브레이션 시편과의 자세는 수평계를 이용하여 정밀하게 수직으로 맞추십시오.
-* 토치의 수직 정확도와 레이저 라인이 시편의 엣지에 수직하는 정확도는 캘리브레이션 정확도에 영향을 미칩니다.
-{% endhint %}
-
-`delay 0.5`를 삽입한 후 `lvs` 명령어를 삽입합니다.
-
-`lvs` 명령어의 seam 인자는 LVS controller에 등록한 형상 및 조건에 대한 번호입니다.
-
-{% hint style="info" %}
-캘리브레이션을 위해서 LVS제어기의 S/W에서 Lap 조인트로 seam을 등록해 놓으십시오.<br> 
-등록한 번호를 lvs 명령어의 seam인자에 설정하십시오.
-{% endhint %}
+### (2) Automatic Calibration Teaching
 
 <p align="center">
  <img src="../../_assets/8_5_7_lvs_autocalib.png" width="80%"></img>
- <em><p align="center">그림 8.5.7. lvs 자동 캘리브레이션</p></em>
+ <em><p align="center">Figure 8.5.7. LVS Auto Calibration</p></em>
 </p>   
 </br>
 
----
+As shown in the figure above, move the TCP to the reference point of the specimen using the jog function.
 
-### (3) 준비사항
+The torch orientation should be perpendicular to the specimen (both Roll and Pitch direction should be vertical).
 
-자동캘리브레이션은 앞뒤, 좌우 이동 및 roll 방향 회전, 높이방향 이동을 포함하는 모션을 수행하므로 안전에 유의하십시오.
+Position the laser line perpendicular to the edge of the specimen using jog (typically controlled by Tool Z).
+
+In this state(where the torch is positioned perpendicular to the specimen and the laser line is perpendicular to the edge of the specimen), press **[Record]** to insert the `move` command.
 
 {% hint style="warning" %}
-* 높은 위치에서도 lvs가 시편의 seam을 인식할 수 있도록 lvs의 설정 (노출시간, 레이저세기, 형상 설정)을 조절하십시오.
-* 레이저가 시편 기준점 바깥쪽 평평한 면을 보고있을 때에는 lvs 제어기가 seam을 인식 할 수 없어야 합니다.
+- Use a level to precisely align the torch's orientation perpendicular to the calibration specimen.
+- The vertical accuracy of the torch and the accuracy with which the laser line is perpendicular to the edge of the specimen will affect the calibration accuracy.
 {% endhint %}
 
+
+After inserting `delay 0.5`, input the `lvs` command.
+
+The seam parameter of the `lvs` command is the number corresponding to the shape and conditions registered in the LVS controller.
+
+{% hint style="info" %}
+For calibration, register the seam as a lap joint in the LVS controller's software.<br>
+Set the registered number in the seam parameter of the lvs command.
+{% endhint %}
+
+
+The program written as described is shown below:
+
+```python
+    move L,spd=60%,accu=0,tool=0  # Calibration specimen reference point
+    delay 0.5
+    lvs auto_calib, cnd=1, seam=1, sp=p1, opt=0
+    end
+```
+
 ---
 
-### (4) 자동모드로 재생합니다.
+### (3) Preparations
 
-캘리브레이션이 모두 끝나면 "lvs 추종" 모니터링 테이블의 '정보' 항목에  comp! 표시가 나타납니다.
+Automatic Calibration involves motions such as front/back, left/right, roll direction rotation, and height adjustments, so ensure safety precautions are followed.
+
+{% hint style="warning" %}
+* Adjust the LVS settings (exposure time, laser intensity, shape settings) so that the LVS can recognize the seam of the specimen even at higher positions.
+* When the laser is pointing to the flat surface outside the reference point of the specimen, the LVS controller should not be able to recognize the seam.
+{% endhint %}
+
 
 ---
 
-### (5) 툴과 lvs 캘리브레이션 정보
+### (4) Execution
 
-툴 번호마다 lvs 캘리브레이션 정보를 갖고 있습니다. 이는 툴 체인지를 사용할 경우에 유용합니다.
+Once calibration is complete, the "comp!" indicator will appear in the 'info' section of the 'LVS tracking' monitoring table.
 
-만약 tool 0번에 자동캘리브레이션을 수행한 후 tool 1번이나 2번을 사용하고자 한다면 해당 툴에 대한 자동캘리브레이션을 수행해야 합니다.
+---
 
-툴 정보는 같지만 번호만 다르게 사용하고 싶다면 다음 창에 진입하여 캘리브레이션 정보를 복사하여 사용할 수 있습니다.
+### (5) Tool and LVS Calibration Information
 
-**[시스템]-[응용파라미터]-[LVS 추종]-[LVS 캘리브레이션]**
+Each tool number has its own LVS calibration, which is useful when using tool changing.
+
+If you perform automatic calibration for tool 0 and want to use tool 1 or tool 2, you will need to perform automatic calibration for those tools as well.
+
+If you want to use the same tool information but with different numbers, you can enter the following window to copy and apply the calibration information.
+
+- Navigate to **[System > 4: Application parameter > 5: LVS tracking > 2: LVS Calibration]**.<br>
 
 <p align="center">
- <img src="../../_assets/8_5_8_lvs_tool_calibmat.png" width="80%"></img>
- <em><p align="center">그림 8.5.8. lvs 자동 캘리브레이션</p></em>
+  <img src="../../_assets/8_5_8_lvs_tool_calibmat.png" width="80%"></img>
+  <em><p align="center">Figure 8.5.8. LVS Calibration Information</p></em>
 </p>   
 </br>

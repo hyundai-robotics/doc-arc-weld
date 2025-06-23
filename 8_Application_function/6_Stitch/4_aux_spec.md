@@ -1,4 +1,5 @@
-﻿# 8.5.4 STITCH 기능 부가 사양
+﻿# 8.5.4 STITCH Func. Additional Specifications
 
-- **비상정지, 재기동**  
-Stitch 용접 진행 중, 비상정지나 playback 정지 후 재기동이 되지만 제어기 전원차단 후 재부팅하면 Stitch 재기동 안됨
+- **Emergency Stop, Restart**  
+
+During stitch welding, the process can resume after an emergency stop or playback stop. However, if the controller power is turned off and rebooted, the stitch welding cannot be restarted.
