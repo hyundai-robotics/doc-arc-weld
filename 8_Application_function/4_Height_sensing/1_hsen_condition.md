@@ -1,52 +1,79 @@
-﻿# 8.4.1 높이센싱 조건
+﻿# 8.4.1 Height Sensing Condition
 
-```heightsen on,cnd= ``` 명령어에서 [**속성**] 키를 눌러 『높이센싱 조건』설정화면으로 진입합니다. 조건설정 화면은 아래 그림과 같습니다.
 
+Press the **[Property]** key in the `heightsen` command to access the "Heigth Sensing Condition" settings screen. The condition settings screen is shown below.
  
 <p align="center">
  <img src="../../_assets/8_4_2.png" width="70%"></img>
- <em><p align="center">그림 8.4.2. 높이센싱 조건 대화상자</p></em>
+ <em><p align="center">Figure 8.4.2. Height Sensing Condition Dialog Box</p></em>
 </p>
 
 ---
 
-각 항목별 설정 및 조작방법은 다음과 같습니다.
+Each item's settings and operations are as follows:
 
-### (1)	조건번호: [1 ~ 8]  
-    높이센싱 조건번호를 설정합니다.
+### (1) Condition Number: [1 ~ 8]
 
-### (2)	높이 센싱 용 입력데이터 종류  
-    입력데이터 종류를 표시합니다. GMAW 는 용접 전류를 TIG 용접은 용접 전압을 사용합니다.
+Set the height sensing condition number.
 
-### (3)	기준 데이터 설정 방법: <평균 입력 데이터, 사용자 입력 데이터>  
-    기준 데이터를 설정하는 방법을 선택합니다.
--	평균 입력 데이터: 센싱 초반 기준데이터 평균값을 기준으로 설정
--	사용자 입력데이터: 사용자가 기준데이터를 직접 입력
 
-### (4)	입력 데이터 무시 시간: [0.0 ~ 5.0]  
-    용접 초기의 불안정한 상태에서 입력 신호를 무시하는 시간입니다. ‘평균 입력 데이터’로 기준데이터를 설정하는 경우 이 시간 지정된 시간동안 평균값으로 기준값을 계산합니다. ‘사용자 입력 데이터’를 기준으로 사용하는 경우 바로 높이센싱이 동작합니다.
+### (2) Type of Input Data
 
-### (5)	입력 데이터 평균시간: [0.5 ~ 10.0]  
-    센싱 기준 데이터를 계산하기 위해 입력 데이터 평균을 계산하는 시간을 설정합니다. 기준 데이터 설정 방법에서 ‘평균 입력 데이터’를 선택하는 경우 표시됩니다. 정확한 기준 높이 산정이 안 되어 있는 경우
+Displays the type of input data. For GMAW, welding current is used, while for TIG welding, welding voltage is used.
 
-### (6)	입력 데이터 무시 시간: [0.0 ~ 5.0]  
-    용접 초기의 불안정한 상태에서 입력 신호를 무시하는 시간입니다. ‘평균 입력 데이터’로 기준데이터를 설정하는 경우 이 항목이 표시됩니다. 이 시간 지정된 시간동안 평균값으로 기준값을 계산합니다. 
 
-### (7)	기준 데이터 설정: [-500.0 ~ 500.0]  
-    높이센싱의 기준값을 사용자가 직접 입력하는 항목입니다. ‘사용자 입력 데이터’로 기준데이터를 설정하는 경우 이 항목이 표시됩니다.
+### (3) Reference Data Setting: <Average Input Data, User Input Data>
 
-### (8)	높이 센싱 계수: [-100.0 ~ 100.0]  
-    입력된 데이터 차이에 대비되는 거리 계수입니다. 이 값이 작아지면 입력 데이터에 따른 추종량이 작아져서 부드럽게 추종합니다. 이 값이 커지면 추종이 빨라지지만 궤적 상 상하 진동이 발생할 수 있습니다.
+Choose the method for setting the reference data.
+- Average Input Data : Set the reference data based on the average value of the sensing initial reference data.
+- User Input Data : Allow the user to directly enter the reference data.
 
-### (9)	센싱에 의한 추종속도 제한값: [0.1 ~ 10.0]  
-    1초동안 센싱으로 추종하는 최대값을 설정합니다. 이 값이 작아지면 추종이 부드러워지며 커지면 추종이 빨라집니다.
 
-### (10) 노이즈 민감도  
-    입력 데이터의 노이즈에 대한 민감도를 설정합니다. 비활성화 되어 있는 경우 지원하지 않는 버전입니다.
+### (4) Input Data Ignore Time: [0.0 ~ 5.0]
 
-### (11) 추종오차 적분 계수: [0.0 ~ 10.0]
-    높이 센싱의 추종 성능 중 지속적인 에러값에 대한 보정량을 설정합니다. 0보다 큰 값이 설정되면 추종 성능이 향상되지만 지나치게 커지면 궤적 진동이 발생합니다. 아주 작은 값부터 적용하여 현장에 적정한 값을 선정하십시오.
+The time to ignore signals during the unstable initial welding state.
+If setting reference data with "Average Input Data", this time is used to calculate the reference value using the average over the specified time.
+If using "User Input data", height sensing begins immediately.
 
+
+### (5) Input Data Average Time: [0.5 ~ 10.0]
+
+Set the time to average the input data to calculate the sensing reference data.
+This item appears when "Average Input Data" is selected for the reference data setting method.
+(if the accurate reference height is not yet determined)
+
+
+### (6) Reference Data Setting: [-500.0 ~ 500.0]
+
+This is the item where the user directly enters the height sensing reference value. This item appears when "User Input Data" is selected for setting the reference data.
+
+
+### (7) Sensing Coefficient: [-100.0 ~ 100.0]
+
+This is the distance coefficient corresponding to the difference in the input data. A smaller value results in smoother tracking with less responsiveness to input data, while a larger value increases tracking speed but may cause oscillations along the trajectory.
+
+
+### (8) Tracking Speed Limit: [0.1 ~ 10.0]
+
+This sets the maximum tracking value per second based on sensing. A smaller value results in smoother tracking, while a larger value speeds up tracking.
+
+
+<!-- ### (10) 노이즈 민감도  
+    입력 데이터의 노이즈에 대한 민감도를 설정합니다. 비활성화 되어 있는 경우 지원하지 않는 버전입니다. -->
+
+### (9) Tracking Limit Distance: [-300.0 ~ 0.0] ~ [0.0 ~ 200.0]
+
+This sets the total tracking distance limit for height sensing.
+
+
+### (10) Integral Coefficient for Error: [0.00 ~ 10.00]
+
+This sets the correction amount for continuous error values in height sensing performance.
+Setting a value greater than 0 improves tracking performance, but if the value is too large, oscillations in the trajectory may occur.
+Start with a very small value and gradually adjust it to an appropriate setting for the field.
+
+
+<!-- 
 ### (12) 초기 기준 데이터: [-500.0 ~ 500.0]
     용접 초반에 별도의 기준 데이터를 적용하려고 할 때 설정합니다. 입력 데이터 무시 시간이 지난 후 ‘초기설정된 시기준 데이터 적용 시간’에서 설정된 시간동안 이 기준 데이터를 이용하여 높이 센싱이 수행됩니다.
 
@@ -67,4 +94,4 @@
     초당 추종 거리 제한치를 설정합니다. 이 값은 로봇의 급격한 추종을 제한하기 위하여 설정합니다. 이 값이 크면 추종 속도가 증가하고 진동이 발생할 수 있습니다. 이 값이 작으면 로봇의 추종가능 거리가 감소하지만 진동이 작아집니다. 
 
 ### (18) 높이 센싱 범위: [-300.0 ~ 0.0], [0.0 ~ 200.0]  
-    높이센싱의 총 추종거리 제한치를 설정합니다.
+    높이센싱의 총 추종거리 제한치를 설정합니다. -->
