@@ -1,13 +1,13 @@
 # 8.5.6 LVS(Laser Vision Sensor) search 기능
 
-1. Search 기능 사용법
+### (1) Search 기능 사용법
 
 LVS는 search 기능을 제공하며 다음과 같은 목적으로 사용합니다.
 
-- search : 시작점을 탐색하고 시작점으로 TCP가 이동하면서 추종할 위치를 설정 간격마다 버퍼에 저장하고 트래킹을 준비합니다.
-- step_search : 다단비드 검출, 단차 검출 
+- `search` : 시작점을 탐색하고 시작점으로 TCP가 이동하면서 추종할 위치를 설정 간격마다 버퍼에 저장하고 트래킹을 준비합니다.
+- `step_search` : 다단비드 검출, 단차 검출 
 
-search를 수행하면 탐색을 수행하며 무효점이 검출되면 가장 최근의 유효점을 sp 인자에 포즈로 저장합니다.
+search를 수행하면 탐색을 수행하며 무효점이 검출되면 가장 최근의 유효점을 `sp` 인자에 포즈로 저장합니다.
 
 그 후 tracking을 준비하기 위해 찾은 점으로 TCP가 이동하면서 추종할 점들을 버퍼에 저장합니다.
 
@@ -20,10 +20,10 @@ search 기능을 수행하면 seam tracking을 수행할 수 있는 상태가 �
 search는 다음과 같이 사용합니다.
 
 ```python
-move L, spd=60%, accu=0, tool=1
-delay 0.1 #탐색 시작위치의 accu가 0이 아닐경우 삽입해야 함
-var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
-lvs search, cnd=1, seam=1, sp=po_100
+  move L, spd=60%, accu=0, tool=1
+  delay 0.1 #탐색 시작위치의 accu가 0이 아닐경우 삽입해야 함
+  var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
+  lvs search, cnd=1, seam=1, sp=po_100
 ```
 
 `lvs` 명령어에서 **[속성]** 에 진입하면 다음과 같이 search 설정을 수행할 수 있습니다.
@@ -82,24 +82,24 @@ lvs search, cnd=1, seam=1, sp=po_100
 다음과 같이 search 및 seam tracking을 티칭할 수 있습니다.
 
 ```python
-move L, spd=60%, accu=0, tool=1
-delay 0.3
-var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
-lvs search, cnd=1, seam=1, sp=po_100
-weavon cnd=1
-arcon cnd=1
-lvs track, cnd=1, seam=1, sp=po_100
-move L, spd=30cm/min, accu=3, tool=1
-move L, spd=36cm/min, accu=3, tool=1
-move L, spd=40cm/min, accu=3, tool=1
-weavoff
-arcof
-end
+  move L, spd=60%, accu=0, tool=1
+  delay 0.3
+  var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
+  lvs search, cnd=1, seam=1, sp=po_100
+  weavon cnd=1
+  arcon cnd=1
+  lvs track, cnd=1, seam=1, sp=po_100
+  move L, spd=30cm/min, accu=3, tool=1
+  move L, spd=36cm/min, accu=3, tool=1
+  move L, spd=40cm/min, accu=3, tool=1
+  weavoff
+  arcof
+  end
 ```
 
 ---
 
-2. 다단비드 검출 기능 (step_search) 사용법
+### (2) 다단비드 검출 기능 (step_search) 사용법
 
 다단비드의 시작점을 검출해주는 기능으로 사용법은 search 기능과 동일합니다.
 

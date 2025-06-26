@@ -10,8 +10,7 @@
   * [1.3 Arc 용접 편의 기능](1_Basic_information/3_Convenient_functions/README.md)
     * [1.3.1 가스 체크, 와이어 인칭(Inching) 및 역인칭(Retract)](1_Basic_information/3_Convenient_functions/1_gas_check.md)
     * [1.3.2 고속 이동 기능](1_Basic_information/3_Convenient_functions/2_high_speed.md)
-    * [1.3.3 용접 중 전류/전압 변경 기능](1_Basic_information/3_Convenient_functions/3_change_current_voltage/README.md)
-      * [1.3.3.1 조작](1_Basic_information/3_Convenient_functions/3_change_current_voltage/1_operation/README.md)
+    * [1.3.3 용접 중 전류/전압 변경 기능](1_Basic_information/3_Convenient_functions/3_change_iv.md)
     * [1.3.4 수동모드 아크용접](1_Basic_information/3_Convenient_functions/4_manual_mode.md)
     * [1.3.5 고중량 아크토치 진동 저감 기능](1_Basic_information/3_Convenient_functions/5_vibration_reduction.md)
     * [1.3.6 Arc 용접 신호 시험 기능](1_Basic_information/3_Convenient_functions/6_signal_test.md)
@@ -66,7 +65,7 @@
   * [7.1 Arc 용접 데이터 실시간 모니터링](7_Monitoring/1_Realtime_monitoring/README.md)
     * [7.1.1 세부 정보 모니터링](7_Monitoring/1_Realtime_monitoring/1_detail_mon.md)
     * [7.1.2 용접파형 모니터링](7_Monitoring/1_Realtime_monitoring/2_wave_type.md)
-    * [7.1.3 조작](7_Monitoring/1_Realtime_monitoring/3_operation.md)
+    <!-- * [7.1.3 조작](7_Monitoring/1_Realtime_monitoring/3_operation.md) -->
 * [8. Arc 용접 응용기능](8_Application_function/README.md)
   * [8.1 Arc 용접조건](8_Application_function/1_Arc_cond/README.md)
     * [8.1.1 명령어 인자를 이용한 계단형 변경](8_Application_function/1_Arc_cond/1_cmd_para.md)

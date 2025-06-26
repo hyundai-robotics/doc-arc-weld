@@ -18,12 +18,14 @@ LVS는 로봇의 플렌지에 직결되어야 하며, 센서는 용접선을 인
 
 </br>
 
-LVS 용접선 추적 및 검출 기능은 ```lvs``` 명령어를 통해 수행하며 TP의 **[명령입력]-[아크]-[lvs]** 를 입력하여 명령어를 입력할 수 있습니다.
+## 명령어
+
+LVS 용접선 찾기 및 추적 기능은 ```lvs``` 명령어를 통해 수행하며 TP의 **[명령입력 > arcweld > lvs]** 를 입력하여 명령어를 입력할 수 있습니다.
 
 명령어의 구성은 다음과 같습니다.
 
 ```python
-lvs 기능인자 cnd=조건번호, seam=센싱하고자 하는 프로파일 번호, sp=센싱된 위치의 포즈변수, mp=마스터 기준 포즈변수, ms=마스터 대비 현재 센싱위치 쉬프트변수
+  lvs 기능인자 cnd=조건번호, seam=센싱하고자 하는 프로파일 번호, sp=센싱된 위치의 포즈변수, mp=마스터 기준 포즈변수, ms=마스터 대비 현재 센싱위치 쉬프트변수
 ```
 
 <table>
@@ -59,17 +61,17 @@ lvs 기능인자 cnd=조건번호, seam=센싱하고자 하는 프로파일 번�
     </tr>
     <tr>
       <td style="text-align:left">auto_calib</td>
-      <td style="text-align:left">TCP-LVS 간 오토캘리브레이션을 수행합니다. (8.5.3절 참고)</td>
+      <td style="text-align:left">TCP-LVS 간 오토캘리브레이션을 수행합니다. (<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/korean/8_Application_function/5_LVS_tracking/3_calibration">LVS Calibration</a>)</td>
     </tr>
     <tr>
       <td style="text-align:left">search</td>
       <td style="text-align:left">+ToolX, -ToolX 방향으로 이동하면서 시작점을 찾고 트래킹 준비를 수행합니다.<br>
-      찾은 시작점은 명령어의 sp인자에 지정된 포즈변수에 저장됩니다.(8.5.6절 참고)</td>
+      찾은 시작점은 명령어의 sp인자에 지정된 포즈변수에 저장됩니다.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/korean/8_Application_function/5_LVS_tracking/6_search">8.5.6 LVS search func.</a>)</td>
     </tr>
     <tr>
       <td style="text-align:left">step_search</td>
       <td style="text-align:left">+ToolX, -ToolX 방향으로 이동하면서 시작점 또는 다단비드의 시작점 등을 찾습니다.<br>
-      찾은 시작점은 명령어의 sp인자에 지정된 포즈변수에 저장됩니다.(8.5.6절 참고)</td>
+      찾은 시작점은 명령어의 sp인자에 지정된 포즈변수에 저장됩니다.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/korean/8_Application_function/5_LVS_tracking/6_search">8.5.6 LVS search func.</a>)</td>
     </tr>
     <tr>
       <td style="text-align:left">track</td>
@@ -97,13 +99,13 @@ lvs 기능인자 cnd=조건번호, seam=센싱하고자 하는 프로파일 번�
     <tr>
       <td colspan="2">마스터 기준 포즈변수</td>
       <td>
-        마스터 모드에서 등록된 기준 포즈변수입니다. (8.5.5절 참고)
+        마스터 모드에서 등록된 기준 포즈변수입니다. (<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/korean/8_Application_function/5_LVS_tracking/5_lvs_master_mode">8.5.5 LVS Master mode func.</a>)
       </td>
     </tr>
     <tr>
       <td colspan="2">마스터 대비 현재 센싱위치 쉬프트변수</td>
       <td>
-        mp 대비 현재 센싱한 위치의 쉬프트가 저장됩니다. (8.5.5절 참고)
+        mp 대비 현재 센싱한 위치의 쉬프트가 저장됩니다. (<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/korean/8_Application_function/5_LVS_tracking/5_lvs_master_mode">8.5.5 LVS Master mode func.</a>)
       </td>
     </tr>
   </tbody>
@@ -122,7 +124,7 @@ lvs 기능인자 cnd=조건번호, seam=센싱하고자 하는 프로파일 번�
 
 ---
 
-LVS 기능 사양
+## LVS 기능 사양
 
 * 일반 모션 트래킹 기능 지원 (직선 L보간, 원호 C보간, 직선 및 원호 복합 구간)<br>
 * 위빙 트래킹 기능 지원 (0.5Hz ~ 3Hz)<br>

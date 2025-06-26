@@ -2,8 +2,8 @@
 
 ### (1)	JOB mode: [**Job mode off, Job mode active**] 
 EWM AlphaQ 용접기에서 지원하는 용접모드를 설정합니다. 각 모드에 대한 설명은 아래와 같습니다.
--	Job mode off: 용접기에 시너직 데이터에 따라 송급속도, 전압 옵셋이 반영되어 용접을 수행
--	Job mode active: 용접기에 저장된 Job을 사용하여 용접 작업이 수행됨
+-	Job mode disable: 용접기에 시너직 데이터에 따라 송급속도, 전압 옵셋이 반영되어 용접을 수행
+-	Job mode enable: 용접기에 저장된 Job을 사용하여 용접 작업이 수행됨
 
 ### (2)	Welding mode  
 펄스 용접 사용여부를 설정합니다.

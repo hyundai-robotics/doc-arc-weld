@@ -43,6 +43,6 @@ heightsen on, cnd=<높이센싱 조건번호>
 <br/>
 
 ### 세부 설명
-  [[8.3 높이센싱(Height Sensing)]](../8_Application_function/3_Height_sensing/README.md) 참고
+  [[8.3 높이센싱(Height Sensing)]](../8_Application_function/4_Height_sensing/README.md) 참고
 
 
