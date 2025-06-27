@@ -40,3 +40,7 @@ stitch off
    stitch on, cnd=2         #  스티치 2번 조건 실행
    stitch off               #  스티치 기능 종료
 ```
+
+### 세부 설명
+
+  [8.6 STITCH 기능](../8_Application_function/6_Stitch/README.md) 참고

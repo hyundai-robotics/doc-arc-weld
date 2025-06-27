@@ -102,3 +102,7 @@ arccond <보간종류>, cnd=<조건번호>, gap=<gap>, spd=<용접속도>, rd=<�
 	arccond L, cnd=1, 용접스텝, arccond L, cnd=2 # 1번조건에서 2번조건으로 WDB데이터 연속보간 변경
 ```  
 <br/>
+
+### 세부 설명
+
+  [[8.1 Arc 용접조건]](../8_Application_function/1_Arc_cond/README.md) 참고

@@ -7,6 +7,7 @@ Fronius 용접기에서 지원하는 용접모드를 설정합니다. 각 모드
 - **Prog-Pulse**: 용접기에 저장된 펄스 용접의 program을 사용
 - **CMT**: Cool Metal Transfer 기능을 사용
 - **JOB**: 용접기에 저장된 Job을 사용
+- **TIG**: 텅스텐 불활성 가스 용접 기능 사용
 
 ### (2)	Prog/Job 번호  
 용접기에 저장되어 있는 program과 job 번호 중 사용할 번호를 설정합니다. 동작모드가 Job인 경우 job 번호로 사용됩니다.

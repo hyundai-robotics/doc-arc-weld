@@ -122,3 +122,8 @@ lvs auto_calib, cnd=<조건번호>, seam=<seam번호>, sp=<seam포즈>, opt=0
 {% hint style="info" %}
 옵션 기능으로 사용을 위해서는 당사에 문의하시기 바랍니다.
 {% endhint %}
+
+
+### 세부 설명
+
+  [8.5 LVS(Laser Vision Sensor) 용접선 추적 및 검출 기능](../8_Application_function/5_LVS_tracking/README.md) 참고

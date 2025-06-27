@@ -108,6 +108,18 @@ LVS 용접선 찾기 및 추적 기능은 ```lvs``` 명령어를 통해 수행�
         mp 대비 현재 센싱한 위치의 쉬프트가 저장됩니다. (<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/korean/8_Application_function/5_LVS_tracking/5_lvs_master_mode">8.5.5 LVS Master mode func.</a>)
       </td>
     </tr>
+    <tr>
+      <td colspan="2">opt</td>
+      <td>
+        자동 캘리브레이션(auto_calib) 명령어 사용 시 이 값을 0으로 두어야 합니다.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">find_flag</td>
+      <td>
+        이 파라미터에 변수를 설정하면 seam finding에 성공할 경우 1로 설정되고, 실패하면 에러가 뜨지 않고 0으로 설정됩니다.
+      </td>
+    </tr>
   </tbody>
 </table>  
 <br/>
@@ -142,37 +154,33 @@ LVS 용접선 찾기 및 추적 기능은 ```lvs``` 명령어를 통해 수행�
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">seam_find / seam_find_p</td>
+      <td style="text-align:left" rowspan="3">seam_find / seam_find_p</td>
       <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
       <td style="text-align:left">좌우 : 0.1 mm (기준 +- 30mm 높이),  0.4mm<br>높이 : 0.4mm (기준 +- 30mm 높이), 2mm<br>앞뒤 : 0.4mm (기준 +- 30mm 높이), 1.5mm</td>
       <td style="text-align:left">0.05 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">seam_find / seam_find_p</td>
       <td style="text-align:left">OXFORD (OSL-50)</td>
       <td style="text-align:left">좌우 : 0.4 mm (기준 +- 30mm 높이),  0.7mm<br>높이 : 0.6mm (기준 +- 30mm 높이), 3mm<br>앞뒤 : 0.6mm (기준 +- 30mm 높이), 2.5mm</td>
       <td style="text-align:left">0.2 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">seam_find / seam_find_p</td>
       <td style="text-align:left">Full-v</td>
       <td style="text-align:left">좌우 : 0.6 mm (기준 +- 30mm 높이),  2mm<br>높이 : 0.8mm (기준 +- 30mm 높이), 4.5mm<br>앞뒤 : 0.6mm (기준 +- 30mm 높이), 4mm</td>
       <td style="text-align:left">0.35 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">track</td>
+      <td style="text-align:left" rowspan="3">track</td>
       <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
       <td style="text-align:left">0.2mm (직선)<br>0.4mm (위빙)<br>0.25mm (포지셔너 동기)<br>0.5mm (위빙 + 포지셔너동기)</td>
       <td style="text-align:left">0.05 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">track</td>
       <td style="text-align:left">OXFORD (OSL-50)</td>
       <td style="text-align:left">0.3mm (직선)<br>0.5mm (위빙)<br>0.4mm (포지셔너 동기)<br>0.6mm (위빙 + 포지셔너동기)</td>
       <td style="text-align:left">0.2 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">track</td>
       <td style="text-align:left">Full-v</td>
       <td style="text-align:left">0.3mm (직선)<br>0.6mm (위빙)<br>0.4mm (포지셔너 동기)<br>0.7mm (위빙 + 포지셔너동기)</td>
       <td style="text-align:left">0.35 mm</td>
