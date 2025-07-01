@@ -48,7 +48,7 @@
   * [5.5 Welding Auxiliary condition](5_Condition_editing/5_Aux_condition/README.md)
     * [5.5.1 Welding Auxiliary condition – Retry](5_Condition_editing/5_Aux_condition/1_retry.md)
     * [5.5.2 Welding Auxiliary condition – Restart](5_Condition_editing/5_Aux_condition/2_restart.md)
-    * [5.5.3 Welding Auxiliary condition – Stick release](5_Condition_editing/5_Aux_condition/3_stick_recovery.md)
+    <!-- * [5.5.3 Welding Auxiliary condition – Stick release](5_Condition_editing/5_Aux_condition/3_stick_recovery.md) -->
 * [6. Weaving](6_Weaving_function/README.md)
   * [6.1 Weaving Functions](6_Weaving_function/1_Weaving_function/README.md)
     * [6.1.1 Weaving Condition](6_Weaving_function/1_Weaving_function/1_condition_.md)

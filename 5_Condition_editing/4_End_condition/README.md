@@ -13,10 +13,7 @@ After editing the welding end conditions, pressing the [**ESC**] key will close 
 
 </br>
 
----
-
 The descriptions for each item are as follows:
-
 
 </br>
 
@@ -25,6 +22,7 @@ Displays the welding start condition number. In digital arc welding, the end con
 
 ### (2)	End Welding Current / Welding Power / Wire Feed Speed  
 Set the current value to be output during crater treatment. This is set as a percentage(%) relative to the current welding conditions (welding current, welding power, and wire feed speed). However, for EWM welders, this is set in m/min, the same as the welding conditions.
+
 <center>
 
 | supported Welder | Name | Unit | Range | Default |
@@ -34,8 +32,6 @@ Set the current value to be output during crater treatment. This is set as a per
 | EWM | End Wire Feed Speed | m/min | 0.0 ~ 25.0 | 7.0 |
 
 </center>
-
-
 
 ### (3)	End Welding voltage/ Arc length correction  
 Set the voltage value to be output during crater treatment. The voltage is specified and output according to the set value.
@@ -69,10 +65,9 @@ Set the time to continue the shielding gas output even after the arc is turned o
 ### (8)	Crater move time: [ 0 ] second (Range: 0.0 ~ 10.0) / Crater move distance : [0] mm (Range: 0.0 ~ 100.0)
 During crater treatment, sets the distance the robot will move backward during the DownSlope time and condition hold time. The speed is automatically determined based on the distance and time.
 
-
-### (9) Retract Time: [ 0 ] second (Range: 0.0 ~ 10.0)  
+### (9) Stick release Time: [ 0 ] second (Range: 0.0 ~ 10.0)  
 After welding is completed, there may be a need to separate the wire and base metal as they might be stuck together during the welding process.
 The conditions for this separation are set, where 0 refers to the default condition.
 
-### (10) Retract Speed: [  0] (Range: 0 ~ 100)  
+### (10) Stick release Speed: [  0] (Range: 0 ~ 100)  
 Set the time required for the release of fusion after welding completion.

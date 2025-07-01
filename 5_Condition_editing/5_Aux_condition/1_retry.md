@@ -33,7 +33,6 @@ The left section of [Figure 5.5.1] represents the retry conditions in the weldin
 ### (5)	Operation mode: ReEnter / Shift / Multi-direc.  
   Sets the method for moving the torch during a retry. Three different methods are supported, and the torch movement for each setting is as follows: (Please refer to [Figure 5.5.2])  
 
-    
 - A. ReEnter  
   When arc ignition fails, the torch steps backward to the previous step and attempts to ignitie the arc again. The distance of this backward movement is set in the welding auxiliary condition retry settings menu under the "Retreat/Weld line dist". After stepping back a certain distance, the torch will step forward again, so the voltage/current conditions follow the welding start conditions.  
 
