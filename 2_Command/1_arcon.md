@@ -3,7 +3,7 @@
 
 ### Description
 
-```arcon``` command is used to start the Arc Welding process. This command can be used in four different forms. However, commands not supported by the configured welder cannot be used.
+```arcon``` command is used to start the Arc Welding process. This command can be used in 4 different forms. However, commands not supported by the configured welder cannot be used.
 <br/>
 
 ### Syntax

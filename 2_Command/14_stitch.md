@@ -28,3 +28,7 @@ stitch off
    stitch on, cnd=2         #  execute stitch on condition 2
    stitch off               #  terminate stitch
 ```
+
+
+### Details  
+  Refer to [[8.6 STITCH Function]](../8_Application_function/6_Stitch/README.md)

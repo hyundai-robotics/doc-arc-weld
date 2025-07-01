@@ -66,7 +66,7 @@ Sets the synergic code to b transmitted to the welder. The code value is configu
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| HRWI | Synergic Code | - |- | 040 |
+| Hyosung | Synergic Code | - |- | 040 |
 | Fronius </br>(Not supported) |-|-|-|-|
 | EWM | JOB Nr.(synergic) | - |- | 185|
 
@@ -80,7 +80,7 @@ Set the welding current value. This is the current used during the welding proce
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| HRWI | Welding Current | A |0.0 ~ 500.0 | 100 |
+| Hyosung | Welding Current | A |0.0 ~ 500.0 | 100 |
 | Fronius | Welding Power | % | 0.0 ~ 100.0 | 10 |
 | EWM | Wire Feed Speed |  m/min | 0.0 ~ 25.0 | 3.1 |
 
@@ -94,7 +94,7 @@ In digital welding, the welding voltage is often not entered directly, but inste
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| HRWI | Welding voltage | % | 50.0 ~ 150.0 | 100 |
+| Hyosung | Welding voltage | % | 50.0 ~ 150.0 | 100 |
 | Fronius | arc length correction | % | -30.0 ~ 30.0 | 0 |
 | EWM | Welding voltage Correction | V | -10.0 ~ 10.0 | 0 |
 </center>
@@ -159,7 +159,7 @@ This is set as a percent(%) relative to the welding current of the main conditio
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| HRWI | Initial Welding Current | % | 20 ~ 200 | 120 |
+| Hyosung | Initial Welding Current | % | 20 ~ 200 | 120 |
 | Fronius | Initial Welding Power | % | 20 ~ 200 | 120 |
 | EWM | Initial Wire Feed Speed | % | 20 ~ 200 | 120 |
 
@@ -174,7 +174,7 @@ This is set as a correction value relative to the synergic voltage.
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| HRWI | Initial Welding voltage | % | 50.0 ~ 150.0 | 100 |
+| Hyosung | Initial Welding voltage | % | 50.0 ~ 150.0 | 100 |
 | EWM | Initial Welding voltage | V | -10.0 ~ 10.0 | 0 |
 | Fronius | Initial Arc length correction | %| -30.0 ~ 30.0 | 0 |
 

@@ -22,7 +22,6 @@ After executing this, as shown below, the position sensed by the LVS will be sto
   If the **ms** parameter is not declared, it will be declared as a global shift.
 {% endhint %}
 
-아래 Figure과 같이 센싱 전 툴의 자세에 따라 sp 인자에 저장된 포즈의 자세가 결정됩니다. -- 삭제
 
 <p align="center">
  <img src="../../_assets/8_5_9_lvs_seamfind_ex.png" width="80%"></img>
@@ -70,7 +69,7 @@ The retry process is performed in the following sequence:
 </br>
 
 {% hint style="warning" %}
-* When using the master-shift function, be aware that retries will cause the position to shift forward and backward.
+* When using the master-shift function, be aware that retries will cause the position to shift forward and backward(by +ToolX, -ToolX).
 {% endhint %}
 
 ---

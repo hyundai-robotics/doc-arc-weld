@@ -90,14 +90,19 @@
 ### Example
 
 ```python
-   lvs seam_find, cnd=1, seam=10, sp=p10    
-   # 조건번호 1번, seam번호 10번으로 seam 파인딩 기능 수행, 결과포즈는 p10에 저장
-   lvs track, cnd=1 ,seam=10 , sp=p10           
-   # 조건번호 1번, seam번호 10번으로 LVS 용접선 추종 시작
+    lvs seam_find, cnd=1, seam=10, sp=p10    
+    # Perform seam finding with condition number 1 and seam number 10, saving the resulting pose in p10
+    lvs track, cnd=1 ,seam=10 , sp=p10
+    # Start LVS seam tracking with condition number 1 and seam number 10
 ```  
 <br/><br/>
 
 
 {% hint style="info" %}
-옵션 기능으로 사용을 위해서는 당사에 문의하시기 바랍니다.
+  For use as an optional feature, please contact our company.
 {% endhint %}
+
+
+### Details  
+
+  Refer to [[8.5 LVS(Laser Vision Sensor) Seam Finding and Tracking]](../8_Application_function/5_LVS_tracking/README.md)

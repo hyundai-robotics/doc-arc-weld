@@ -2,7 +2,7 @@
 
 ### Description
 
-```arcoff``` command is used to stop Arc Welding. This command can be used in four different forms. However, commands not supported by the configured welder cannot be used.
+```arcoff``` command is used to stop Arc Welding. This command can be used in 2 different forms. However, commands not supported by the configured welder cannot be used.
 
 <br/>
 
@@ -10,7 +10,7 @@
 
 ```python
 arcoff
-arcoff welder=<조건번호>, delay=<지연시간>
+arcoff welder=<Condition Number>, delay=<Delay Time>
 ```  
 <br/>
 
@@ -19,15 +19,15 @@ arcoff welder=<조건번호>, delay=<지연시간>
 
 | Item | Meaning | Remarks |
 | --- | --- | --- |
-| 조건번호 | 용접기를 2대 사용하는 경우 off시킬 용접기 번호를 설정합니다. (1 ~ 2) | Variable |
-| 지연시간 | 용접기를 2대 사용하는 경우 off시킬 지연시간을 설정합니다. (0 ~ 2) | Variable |
+| Condition Number | When using two welders, set the welder number to be turned off. (1 ~ 2) | Variable |
+| Delay Time | When using two welders, set the delay time to be turned off. (1 ~ 2) | Variable |
 
 
 ### Example
 
 ```python
-    arcoff                    #특별한 종료처리 없이 Arc 용접을 종료 함
-    arcoff welder=2, delay=1  #2번째 용접기 아크를 1초 후 off 
+    arcoff                    # Terminate the arc welding without any special shutdown process
+    arcoff welder=2, delay=1  # Trun off the arc of the 2nd welder after a 1-second delay.
 ```  
 <br/>
 

@@ -16,15 +16,15 @@
 
 | Item | Meaning | Remarks |
 | --- | --- | --- |
-| **Weaving Condition number** | 불러올 위빙 조건 번호 (1 ~ 1000) | Variable |
+| **Weaving Condition number** | Load the Weaving condition number (1 ~ 1000) | Variable |
 
 
 ### Example
 
 ```python  
-   weaving on, cnd=1    # 위빙 조건 1번을 로딩하여 실행
-   arcon cnd=1          # arcon 1번 조건으로 실행
-   move L,spd=100cm/min,accu=0,tool=0   # 위의 위빙 조건대로 실행하며 로봇 이동
+   weaving on, cnd=1    # Load and execute weaving condition number 1
+   arcon cnd=1          # Execute with arc condition number 1
+   move L,spd=100cm/min,accu=0,tool=0   # Perform execution according to the above weaving conditions while moving the robot
 ```  
 <br/>
 

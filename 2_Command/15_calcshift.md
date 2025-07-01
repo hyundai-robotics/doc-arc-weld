@@ -34,7 +34,7 @@ It is frequently used to calculate shifts based on pose variables saved from tou
     var pose_2 = cpo()
     var sft_1
     sft_1=calshift(pose_1,pose_2)   
-    # pose_1 – pose_2 의 벡터 쉬프트량을 계산하여 sft_1에 저장
+    # calculate the vector shift between pose_1 and pose_2, and store the result in sht_1
 ```  
 <br/>
   

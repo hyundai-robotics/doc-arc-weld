@@ -128,6 +128,18 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
         (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/5_lvs_master_mode">8.5.5 LVS Master mode func.</a>)
       </td>
     </tr>
+    <tr>
+      <td colspan="2">opt</td>
+      <td>
+        When using the auto_calib command, this value should be set to 0.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">find_flag</td>
+      <td>
+        If a variable is set for this parameter, it will be set to 1 upon successful seam finding, and to 0 without any error if the seam finding fails.
+      </td>
+    </tr>
   </tbody>
 </table>  
 <br/>
@@ -163,37 +175,33 @@ The tracking function using the ```lvs``` command can be used as follows:
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">seam_find / seam_find_p</td>
+      <td style="text-align:left" rowspan="3">seam_find / seam_find_p</td>
       <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
       <td style="text-align:left">Left/Right : 0.1 mm (Reference +- 30mm height),  0.4mm<br>Height : 0.4mm (Reference +- 30mm height), 2mm<br>Front/Back : 0.4mm (Reference +- 30mm height), 1.5mm</td>
       <td style="text-align:left">0.05 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">seam_find / seam_find_p</td>
       <td style="text-align:left">OXFORD (OSL-50)</td>
       <td style="text-align:left">Left/Right : 0.4 mm (Reference +- 30mm height),  0.7mm<br>Height : 0.6mm (Reference +- 30mm height), 3mm<br>Front/Back : 0.6mm (Reference +- 30mm height), 2.5mm</td>
       <td style="text-align:left">0.2 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">seam_find / seam_find_p</td>
       <td style="text-align:left">Full-v</td>
       <td style="text-align:left">Left/Right : 0.6 mm (Reference +- 30mm height),  2mm<br>Height : 0.8mm (Reference +- 30mm height), 4.5mm<br>Front/Back : 0.6mm (Reference +- 30mm height), 4mm</td>
       <td style="text-align:left">0.35 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">track</td>
+      <td style="text-align:left" rowspan="3">track</td>
       <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
       <td style="text-align:left">0.2mm (Linear)<br>0.4mm (weaving)<br>0.25mm (positioner synchronized)<br>0.5mm (weaving + positioner synchronized)</td>
       <td style="text-align:left">0.05 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">track</td>
       <td style="text-align:left">OXFORD (OSL-50)</td>
       <td style="text-align:left">0.3mm (Linear)<br>0.5mm (weaving)<br>0.4mm (positioner synchronized)<br>0.6mm (weaving + positioner synchronized)</td>
       <td style="text-align:left">0.2 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">track</td>
       <td style="text-align:left">Full-v</td>
       <td style="text-align:left">0.3mm (Linear)<br>0.6mm (weaving)<br>0.4mm (positioner synchronized)<br>0.7mm (weaving + positioner synchronized)</td>
       <td style="text-align:left">0.35 mm</td>

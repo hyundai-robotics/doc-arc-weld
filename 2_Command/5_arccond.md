@@ -42,4 +42,5 @@ arccond <Interpolation type>, cnd=<Condition Number>, gap=<Gap>, spd=<Welding Sp
 <br/>
 
 ### Details  
+
   Refer to [[8.1 Arccond - Arc Weld Condition]](../8_Application_function/1_Arc_cond/README.md)

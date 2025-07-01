@@ -1,4 +1,4 @@
-﻿# 5.3.1 Welding Start condition – HRWI-only settings
+﻿# 5.3.1 Welding Start condition – Hyosung-only settings
 
 ### (1) Welding Mode: [**Normal, Pulse**]  
 Set the Arc Welding method.

@@ -7,7 +7,7 @@ Set the welding mode supported by the Fronius welder. The descriptions for each 
 - **Prog-Pulse**: Use the pulse welding program stored in the welder.
 - **CMT**: Use the Cool Metal Transfer functions.
 - **JOB**: Use the job stored in the welder.
-- **TIG**
+- **TIG**: Use of TIG(Tungsten Insert Gas) welding functionality.
 
 ### (2)	Prog/Job Number  
 Set the program or job number to be used from the ones stored in the welder.
