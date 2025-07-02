@@ -1,28 +1,35 @@
-﻿# 8.3 Arc 센싱 기능과 멀티 패스
+﻿# 8.3 Arc Sensing and Multi Pass
 
 {% hint style="info" %}
-  - 본 기능 사용을 위해서는 아크 센싱 라이센스가 필요합니다.<br> 당사에 문의하여 라이센스를 구매하여 발급받으십시오.
-  - 또한, 해당 기능은 **위빙 기능**을 반드시 사용하여야 합니다.<br>시작 전 위빙에 대한 내용을 참고해주십시오.[6. 위빙 기능 (WEAVING)](6_Weaving_function/README.md)
+  - To use this feature, an Arc sensing license is required.<br> Please contact us to purchase and obtain the license.
+  - Additionally, this feature requires **the weaving funtion** to be enabled.<br> Please refer to the weaving section before starting. **[6. Weaving Function](../../6_Weaving_function/README.md)**
 {% endhint %}
 
-아크 센싱 기능은 두꺼운 재질(후판)의 아크 용접에서 사용할 수 있는 용접선 추종 기능입니다.  
-본 기능을 사용할 경우 작업물의 공차로 인한 용접선 오차나 작업물 변형이 있는 경우에도 정확하게 용접할 수 있습니다.  
+Arc Sensing is a seam tracking feature that can be used for arc welding on thick materials(such as thick plates).
+When using this feature, even if there are seam deviations due to workpiece tolerance or deformation, the welding can be performed accurately.
 <br>
 
-일반적으로 사용하는 방법은 다음과 같습니다. <br>
-1. 기준 작업물에 대해 용접점 센싱으로 용접구간 시작점, 경유점, 끝점에 대한 기준점 티칭(마스터포즈 등록)
-2. 실제 작업물에 대해 같은 위치에서 용접점 센싱 수행(마스터포즈 대비 쉬프트 계산)
-3. 계산한 쉬프트를 각 점에 적용
-4. 아크 센싱으로 용접 중 실시간 용접선 추종
+The typical usage method is as follows: <br>
+1. Teach the reference points (starting point, intermediate points, and endpoint) for the welding area by sensing the seam on the reference workpiece (register the master pose)
+2. Perform seam sensing at the same locations on the actual workpiece (calculate the shift relative to the master pose)
+3. Apply the calculated shift to each point
+4. Use arc sensing for real-time seam tracking during welding
+
 
 {% hint style="info" %}
-  - 기능을 사용하기 전에 아크 센싱 지연시간 캘리브레이션을 우선 수행해야 합니다.
-  - 용접점 센싱은 용접 구간의 시작점, 경유점, 끝점 등의 위치를 찾는 과정을 말합니다.
-  - 터치센싱, LVS seamfinding, LPS(Laser Point Sensing) 기능을 이용하여 용접점 센싱을 수행할 수 있습니다.
+  - Before using this function, it is necessary to first perform Arc Sensing delay time calibration.
+  - Seam sensing refers to the process of finding the starting point, intermediate points, and endpoint of the welding area.
+  - Seam sensing can be performed using touch sensing, LVS seamfinding, LPS(Laser Point Sensing) features.
 {% endhint %}
 
-본 메뉴얼에서는 Hi6에서 새롭게 추가된 아크 센싱 기능을 설명합니다.<br>
-다음 그림과 같이 `weaving` 명령어의 속성창에 진입하여 **아크 센싱(일반) 탭에서 '타입'을 '용접선+전류차**로 설정할 경우 Hi6에서 새롭게 추가된 아크 센싱 기능이 동작합니다.<br>
+This manual explains the newly added Arc Sensing feature in Hi6.  
+The newly added Arc Sensing feature in Hi6 is activated by entering the properties window of the `weaving` command and setting the **'type' in the Arc Sensing (General) tab to 'seam & cur_diff'**.
 
+---
 
-멀티 패스는 ~~~~~
+**Multi-Pass** is a feature used when welding needs to be repeated over multiple passes rather than in a single pass.
+Using this, the first layer (root pass) is welded, and since sensing may be unstable, the tracking trajectory is saved.
+Then, the saved trajectory is shifted to generate two or more passes for welding.  
+
+Typically, Arc Sensing is used to perform multi-pass welding, and multi-pass welding is conducted using Arc Sensing.
+

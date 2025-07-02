@@ -1,8 +1,11 @@
-﻿# 8.3.1 아크 센싱 개념 및 원리
+﻿# 8.3.1 Arc Sensing Overview
 
-아크 용접 시 위빙을 하면 토치와 모재 사이의 거리에 변화가 발생합니다. 거리 변화에 의해 와이어 저항이 변하여 흐르는 전류가 변합니다. 즉 위빙 구간의 전류 변화로부터 위빙 면에서의 위빙 면에서의 좌우 방향으로 보정할 거리를 계산하여 용접선을 추종할 수 있습니다.
+When weaving during arc welding, the distance between the torch and the base material changes.
+This change in distance causes a variation in wire resistance, which in turn alters the current flowing.
+In other words, by using the current change during the weaving section, the distance to be corrected in the left and right directions of the weaving area can be calculated, allowing the seam to be tracked.
 
-용접 시작 위치의 높이값을 기준으로 위빙 중간 부분의 전류값을 기준으로 용접 시 상하방향을 보정합니다. 혹은 시작 위치 전류 기준값 대신 **사용자가 직접 입력한 전류값**을 기준으로 보정할 수도 있습니다.
+The height value at the welding start position is used as the reference, and the current value in the middle of the weaving section is used to correct the vertical direction during welding.
+Or, instead of using the starting position current reference value, **the user can directly input a custom current value** as the reference for correction.
 
 
 <!-- - 좌우 방향 보정 : 좌우 전류차 및 용접선 추출 알고리즘에 의해 로봇이 자동으로 용접선을 추종하여 이동합니다.
@@ -11,12 +14,12 @@
 
 
 ```py
-    move L, spd=30cm/min,accu=3,tool=0  # 진입스텝
-    move L, spd=30cm/min,accu=3,tool=0  # 용접 시작스텝
-    weaving on, cnd=1 # [속성] 창의 아크 센싱 기능 '유효'로 설정
+    move L, spd=30cm/min,accu=3,tool=0  # Entry step
+    move L, spd=30cm/min,accu=3,tool=0  # Welding start step
+    weaving on, cnd=1 # Set the 'Arc Sensing' function to 'Enable' in the [Property] window
     arc on, cnd=1
     move L, spd=30cm/min,accu=3,tool=0
-    _weaving.height_sensing_reference_current=300 # 높이 기준값을 300A로 설정
+    _weaving.height_sensing_reference_current=300 # Set the height reference value to 300A
     move L, spd=30cm/min,accu=3,tool=0
     weaving off
     arc off
@@ -26,8 +29,9 @@
 
 <p align="center">
  <img src="../../_assets/8_3_1.png" width="70%"></img>
- <em><p align="center">그림 8.3.1. 아크 센싱 개념도</p></em>
+ <em><p align="center">Figure 8.3.1. Arc Sensing Concept</p></em>
 </p>
 
+As shown in the figure, when the torch is tilted to the left or right, the current weavform changes, and this can be used to track the seam in the left and right directions.
+Additionally, the current at the middle of the weaving section can be used to correct the vertical direction.
 
-위 그림과 같이 좌측이나 우측으로 쏠린 상태에서는 전류의 개형이 변하고 이를 이용하여 용접선을 좌우로 추종할 수 있습니다. 위빙 중간지점에서의 전류를 이용하여 높이방향 또한 보정할 수 있습니다.

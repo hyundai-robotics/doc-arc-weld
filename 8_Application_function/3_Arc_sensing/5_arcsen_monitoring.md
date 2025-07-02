@@ -1,25 +1,26 @@
-﻿# 8.3.5 아크 센싱 모니터링
+﻿# 8.3.5 Arc Sensing Monitoring
 
-### (1) 모니터링 실행
+### (1) Monitoring Execution
 
-**[창조정 > 선택 > 아크 센싱]**로 진입하면 아크 센싱 모니터링 창이 실행됩니다. 이 항목은 아크 센싱 라이선스가 유효한 상태에서만 활성화 됩니다.
+By accessing [**pane layout > select > arc sensing**], the Arc Sensing Monitoring window will be activated.
+This feature is only available when the Arc Sensing license is valid.
 
 
-### (2)	모니터링 항목 설명
+### (2)	Explanation of Monitoring Items
 
 <p align="center">
- <img src="../../_assets/8_3_7.png" width="60%"></img>
- <em><p align="center">그림 8.3.7 아크 센싱 모니터링</p></em>
+ <img src="../../_assets/8_3_7.png" width="50%"></img>
+ <em><p align="center">Figure 8.3.7 Arc Sensing Monitoring</p></em>
 </p>
 
+- Left/Right Tracking: Displays the left and right distance to be corrected, calculated based on the tracking speed, distance, and current diffrential in the left-right direction by sensing.
 
-- 좌우 추종: 좌우방향으로 센싱에 의한 추종 속도, 거리, 전류차 방식으로 계산된 보정할 좌우 거리를 표시합니다.
+- Up/Down Tracking: Displays the up and down distance to be corrected, calculated based on the tracking speed, distance, and welding seam in the up-down direction by sensing.
 
-- 상하 추종: 상하방향으로 센싱에 의한 추종 속도, 거리, 용접선 방식으로 계산된 보정할 상하 거리를 표시합니다.
+- XYZ Tracking: Displays the distance tracked so far compared to the original trajectory, in terms of the Base coordinate system's X, Y, and Z directions.
 
-- XYZ 추종: 원래 궤적대비 현재까지 추종한 거리를 Base 좌표계 X, Y, Z 방향 거리로 표시합니다.
 
-센싱 데이터
+<!-- 센싱 데이터
 
 - BC: 상하방향 센싱 기준 전류
 - CC: 상하방향 센싱 용 현재 구간의 중앙 부분 전류.
@@ -32,5 +33,5 @@
 
 위빙 데이터: 현재 위빙폭, 위빙 주파수, 지연시간, 모드 번호를 표시합니다.
 
-멀티패스: 저장된 멀티패스 데이터의 현재/전체 카운트, 시프트 거리, 각도를 표시합니다.
+멀티패스: 저장된 멀티패스 데이터의 현재/전체 카운트, 시프트 거리, 각도를 표시합니다. -->
 

@@ -1,69 +1,73 @@
-﻿# 8.3.3.1 아크 센싱 조건(일반)
+﻿# 8.3.3.1 Arc Sensing Condition(General)
 
-`weaving` 명령어에서 [**속성**]을 누르면 위빙 파일 조건 편집 화면이 나타납니다. 이 창의 두 번째 탭은 아래와 같이 위빙 중에 사용이 가능한 아크 센싱에 관한 설정을 하는 부분입니다.  
+
+In the `Weaving` command, clickin on [Properties] opens the Weaving Condition Edit Screen.
+The second tab of this window is where settings related to arc sensing during weaving can be configured, as shown below.  
+
 
 <p align="center">
  <img src="../../_assets/8_3_2.png" width="70%"></img>
- <em><p align="center">그림 8.3.2. 아크 센싱 조건(일반) 대화상자</p></em>
+ <em><p align="center">Figure 8.3.2. Arc Sensing Condition(General) Dialog Box</p></em>
 </p>
 
+The settings and operation methods for each item are as follows:  
 
-각 항목별 설정 및 조작방법은 다음과 같습니다.
+### (1) Arc Sensing Activation: <Disable, Enable> 
 
-### (1) 아크 센싱 활성화: <무효, 유효>  
-
-아크 센싱 기능의 사용 여부를 설정합니다.
-유효로 설정시 arc on, weaving on 이 실행된 후의 move문 부터 아크 센싱 추종이 적용됩니다.
-
-
-### (2) 센싱 타입 선택: <용접선, 전류차, 전류차+Gap, 용접선 추정 & 전류차>  
-
-```Hi6에서는 용접선 추정 & 전류차를 사용을 권장합니다.```   <br>
-용접선, 전류차, 전류차+Gap 타입은 Hi5a와 동일하므로 Hi5a 제어기 메뉴얼을 참고하십시오. 
+This option allows you to set whether the arc sensing function is enabled or disabled.
+When set to "Enabled", arc sensing tracking will be applied starting from the move command after "arc on" and "weaving" have been executed.
 
 
-### (3) 좌우 센싱 민감도: [0 ~ 10]  
+### (2) Sensing Type Selection: <Welding Seam, Current Difference, Current Difference + Gap, Welding Seam Estimation & Current Difference>  
 
-위빙 면에서 좌우 방향 센싱 민감도를 설정합니다. <br>
-디폴트값은 5이며 좌우 센싱 강도를 변화시킵니다.  <br>
-```지연시간 캘리브레이션 시에는 0으로 설정합니다. ```
+<br/>
 
-
-### (4) 좌우 센싱 시작 사이클: [0 ~ 9]  
-
-위빙 면에서 좌우로 센싱을 시작할 사이클을 설정합니다.  <br>
-```안정적으로 동작하기 위해 4 이상으로 설정하십시오.```
+```For Hi6, it is recommended to use "Welding Seam Estimation & Current Difference."```<br/>
+The options for Welding Seam, Current Difference, and Current Difference + Gap are the same as for Hi5a, so please refer to the Hi5a controller manual.
 
 
-### (5) 높이(상하) 센싱 민감도: [0 ~ 10]  
+### (3) Left/Right Sensing Sensitivity: [0 ~ 10]
 
-위빙 면에서 상하 방향 센싱 민감도를 설정합니다. <br>
-디폴트값은 5이며 상하 센싱 강도를 변화시킵니다.  <br>
-```지연시간 캘리브레이션 시에는 0으로 설정합니다. ```
-
-
-### (6) 높이(상하) 센싱 시작 사이클: [좌우 시작 사이클+1 ~ 10]  
-
-위빙 면에서 상하로 센싱을 시작할 사이클을 설정합니다. <br>
-```안정적으로 동작하기 위해 4 이상으로 설정하십시오.```
+This setting adjusts the sensitivity for left and right sensing on the weaving plane.<br>
+The default value is 5, which changes the strength of the left/right sensing.<br>
+```When performing delay time calibration, set this to 0.```
 
 
-### (7) 높이(상하) 센싱 기준 전류: [0 ~ 1000]  
+### (4) Left/Right Sensing Start Cycle: [0 ~ 9]
 
-상하방향 센싱을 수행할 때 기준이 되는 전류를 설정합니다.  <br>
-이 설정에 의해 아크 센싱 용접선 추종시 토치 높이가 결정됩니다.  <br>
-```0으로 설정하는 경우 초기 구간 전류의 평균값이 기준이 됩니다. (용접 시작 부위에 가접이 있는 경우 의도한 바와 다른 높은 초기전류가 기준값이 되므로 주의하십시오) ``` 
-
-
-### (8) 실시간 Gap 센싱 민감도: [0 (미사용) ~ 10]  
-
-gap에 따른 용접 속도, 위빙폭을 자동으로 변경시키는 기능으로 미사용시 0으로 설정합니다. <br>
-사용시에는 폭의 변동 민감도를 설정합니다. 이 값은 비드 품질 및 폭 변화 정도에 따라 적합한 값을 설정합니다.
+This setting determines the cycle at which left/right sensing will begin on the weaving plane.<br>
+```For stable operation, set it to 4 or higher.```
 
 
-### (9) 실시간 Gap 센싱 분해능: [ ]  
+### (5) Height (Up/Down) Sensing Sensitivity: [0 ~ 10]
 
-### (10) 실시간 Gap 센싱 Gap: [ ]  
+This setting adjusts the sensitivity for up and down sensing on the weaving plane.<br>
+The default value is 5, which changes the strength of the up/down sensing.<br>
+```When performing delay time calibration, set this to 0.```
 
-### (11) 실시간 Gap 센싱 속도: [ ]  
+
+### (6) Height (Up/Down) Sensing Start Cycle: [Left/Right Start Cycle +1 ~ 10]
+
+This setting determines the cycle at which up/down sensing will begin on the weaving plane.<br>
+```For stable operation, set it to 4 or higher.```
+
+
+### (7) Hight (Up/Down) Sensing Reference Current: [0 ~ 1000]
+
+This setting determines the reference current for up/down sensing. <br>
+The torch height during arc sensing welding wire tracking is based on this setting.<br>
+```When set to 0, the average value of the initial section current will be used as the reference. (If there is a tack weld at the start of the weld, be cautious as an unintended high initial current may be used as the reference.) ```
+
+
+### (8) Real-Time Gap Sensing Sensitivity: [0(disabled) ~ 10]
+
+This function automatically adjusts welding speed and weaving based on the gap. When not in use, set it to 0. <br>
+When enabled, this setting adjusts the sensitivity of the width variation. The value should be set according to bead quality and the degree of width variation.
+
+
+### (9) Real-Time Gap Sensing Resolution: [ ]  
+
+### (10) Real-Time Sensing Gap: [ ]  
+
+### (11) Real-Time Gap Sensing Speed: [ ]  
 

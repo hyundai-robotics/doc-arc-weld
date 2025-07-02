@@ -18,9 +18,7 @@ In other words, through seam tracking, welding can still be performed even if th
 
 </br>
 
-## 명령어 Command
-
-LVS 용접선 검출 및 추적 기능은 ```lvs``` 명령어를 통해 수행하며 TP의 **[명령입력 > 아크 > lvs]** 를 입력하여 명령어를 입력할 수 있습니다.
+## Command
 
 The LVS Seam Finding and Tracking function is executed through the `lvs` command, which can be entered by selecting **[cmd. input > arcweld > lvs]** in the TP.
 
@@ -156,7 +154,7 @@ The tracking function using the ```lvs``` command can be used as follows:
 
 ---
 
-## LVS 기능 사양 LVS Function Specifications
+## LVS Function Specifications
 
 * General motion tracking functionality supported (Linear L interpolation, Circular C interpolation, and composite linear and circular segments)
 * Weaving tracking functionality supported (0.5Hz ~ 3Hz)

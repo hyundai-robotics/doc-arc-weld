@@ -1,51 +1,54 @@
-﻿# 8.2	터치센싱 기능
+﻿# 8.2	Touch Sensing
 
-용접 작업물은 지그 또는 포지셔너의 오차, 작업물의 취부오차 등이 다르기 때문에 항상 일정한 위치에 있다고 볼 수 없습니다. 
-이러한 경우 터치센싱을 이용해 용접 시작점과 경유점, 끝점을 검출하여 용접할 수 있습니다.
 
-터치센싱 기능은 작업물의 위치 및 용접시작점 혹은 용접끝점, 용접 경유점 검출을 통해 포즈를 얻는 기능입니다.
+Welding workpieces are not always in a fixed position due to errors in the jig, positioner, or workpiece mounting.
+In such cases, touch sensing can be used to detect the welding start point, intermediate points, and end points, enabling accurate welding.
 
-터치센싱을 이용하여 기준 위치를 기록해 놓으면 작업물이 들어왔을 때 기준위치에서 얼만큼 쉬프트 되어있는지 계산할 수 있습니다. 
-마스터모드 기능을 사용하면 기준 티칭을 통해 마스터포즈를 저장해놓고 실제 기동시 터치센싱을 통해 쉬프트량을 자동으로 계산할 수 있습니다.
+The touch sensing func. helps obtain the pose by detecting the position of the workpiece and the welding start, end, or intermediate points.
+
+By recording the reference position using touch sensing, the shift of the workpiece from the reference position can be calculated when the workpiece is loaded.
+When using the master mode, a mster pose can be saved through reference teaching, and the shift amount is automatically calculated via touch sensing during actual operation.
+
 
 <p align="center">
  <img src="../../_assets/8_2_1.png"></img>
- <em><p align="center">그림 8.2.1. 터치센싱의 예</p></em>
+ <em><p align="center">Figure 8.2.1. Example of Touch Sensing</p></em>
 </p>
 
-### (1) 터치센싱 타입
+### (1) Touch Sensing Types
 
-터치센싱은 그림 8.2.1와 같이 총 5가지 타입(버트, 필렛, V그루브, LR센터, 그루브 감지-Detect groove)을 지원합니다.   
+The touch sensing supports a total of 5-types, as shown in [Figure 8.2.1] (Butt, Fillet, V-groove, LR Center, and Groove Detections).
 
 <p align="center">
  <img src="../../_assets/8_2_2.png" width="90%"></img>
- <em><p align="center">그림 8.2.2. 터치센싱 타입</p></em>
+ <em><p align="center">Figure 8.2.2. Touch Sensing Types</p></em>
 </p>
 
-### (2) 터치센싱 명령어 및 설정 파라미터
+### (2) Touch Sensing Command and Setting Parameters
 
-터치센싱 명령어는 T.P화면에서 **[명령입력 > 아크 > touchsen]** 을 입력하여 기록할 수 있습니다.  
+The touch sensing command can be recorded by entering **[Command input > Arcweld > touchsen]** on the TP.
 
-1번 터치센싱조건 (명령어에서 [속성]으로 사용자가 설정해놓은 조건들)에는 필렛, 2번 조건에는 버트, 3번 조건에는 V그루브로 작업물 타입이 지정되어있다고 가정할 때 예시는 아래와 같습니다. 
+Assuming the condition 1 set for Fillet, condition 2 set for Butt, and condition 3 for V-groove in the command (where the workpiece type is defined in the properties), the example is as follows:
 
- ```python
-   move L,spd=60%,accu=0,tool=0  # 터치센싱 위치로 accu 0으로 이동
-   var P10=cpo() # 터치센싱 전 현재 포즈를 P10이라는 로컬변수에 저장
-   touchsen cnd=1, crd="tool_prj", dir=["tf","td"], pose=P10       #1번 조건, 툴프로젝션 방향, 2점 터치
-   touchsen cnd=1, crd="robot", dir=["+x","-y","-z"], pose=P10     #1번 조건, 로봇좌표 방향, 3점 터치
-   touchsen cnd=1, crd="tool", dir="+tz", pose=P10           #1번 조건, 툴좌표 방향, +TZ방향으로 1점 터치 
-   touchsen cnd=2, crd="tool", dir="+tx", lift_up=3, pose=P10, gap=var1 #2번 조건, 툴좌표계 방향, 바닥터치 후 3mm 상승
-   touchsen cnd=3, crd="tool", dir="-ty", lift_up=5, pose=P10   #3번 조건, 툴좌표계 방향, 바닥터치 후 5mm 상승
- ```
+```python
+    move L,spd=60%,accu=0,tool=0  # Move to the touch sensing position with acc 0
+    var P10=cpo() # Save the current pose to a local variable P10 before touch sensing.
+    touchsen cnd=1, crd="tool_prj", dir=["tf","td"], pose=P10       # Condition 1, tool projection direction, 2-point touch
+    touchsen cnd=1, crd="robot", dir=["+x","-y","-z"], pose=P10     # Condition 1, robot coordinate direction, 3-point touch
+    touchsen cnd=1, crd="tool", dir="+tz", pose=P10           # Condition 1, tool coordinate direction, 1-point touch in +TZ
+    touchsen cnd=2, crd="tool", dir="+tx", lift_up=3, pose=P10, gap=var1 # Condition 2, tool coordinate direction, touch the bottom and rise 3mm
+    touchsen cnd=3, crd="tool", dir="-ty", lift_up=5, pose=P10   # Condition 3, tool coordinate direction, touch the bottom and rise 5mm
+```
 
-- 센싱 거리 : 센싱 방향에 대한 거리[mm]이며 이 거리에 도달해도 작업물을 감지하지 못할 경우 에러가 발생합니다.   
+- **Sensing Distance** : The distance in the sensing direction [mm], and an error occurs if the workpiece is not detected upon reaching this distance.
 
-- 센싱 속도와 퇴피 속도 : 탐색 또는 후퇴 시 속도를 지정할 수 있습니다.  
+- **Retreat Distance** : The distance to retreat after the initial sensing in the case of Fillet, and **the distance to raise after touching the bottom in the DetectGroove type**.
 
-- 후퇴 거리 : 필렛에선 처음 센싱 후 퇴피할 거리이고, **DetectGroove 타입에서는 바닥을 찍고 들어올릴 거리**입니다.  
+- **Sensing Speed and Retreat Speed** : Specifies the speed during search or retreat.  
 
-- 검지 타입 : 접촉 시와 접촉 해제 시를 지원합니다. 일반적으로 접촉 시 센싱을 많이 사용하며 오차는 거의 없습니다.<br/>
-  만약 센싱시 와이어 휘어짐에 의한 미세오차까지도 고려해 센싱해야 하는 상황에서만 후퇴 시 센싱을 사용하십시오.  
+- **Detection Type** : Supports sensing during contact and release of contact. Typically, sensing during contact is used, and there is alomost no error.<br/>
+  If the situation requires considering even minor errors caused by wire bending during sensing, only use sensing during retreat when absolutely necessary.
+
 
 <br/>
 
@@ -53,29 +56,29 @@
 
 <center>
 
-|타입|	최대탐색 </br>방향개수 |	직교XYZ </br>(모든타입 </br>지원예정)	| 툴좌표계|	툴프로젝션</br>좌표계 | 기타 입력인자 |
+| Sensing Type |	Max Search</br>Directions |	Orthogonal XYZ </br>(All types </br>Supported)	| Tool Coordinate System |	Tool Projection</br>Coordinate System | Other input parameters |
 |:---:|	:---: |	:---:	| :---:|	:---: |:---:|
-|Fillet|	3	|O|	O |	O	|	후퇴 거리|
-|Butt	|1 |	X	|O	|X	|  |
-|VGroove |	1 |	X |	O	|X | |
-|LRCen |	1	|O |	O	|X |  |	
-|DetectGroove|	2 |	O |	O |	O | 진행거리1 </br> 후퇴 거리1 </br> criteria |
+| Fillet |	3	|O|	O |	O	|	Retreat Distance |
+| Butt	| 1 |	X	|O	|X	|  |
+| VGroove |	1 |	X |	O	|X | |
+| LRCen |	1	|O |	O	|X |  |	
+| DetectGroove |	2 |	O |	O |	O | Proceed Distance 1</br> Retreat Distance 1 </br> criteria |
 
 </center>
 
 
-터치센싱 명령어에서 [**속성**]을 누르면 그림 8.2.3와 같은 창에 진입합니다.  
+In the touch sensing command, pressing on [**Property**] will bring up a winow as shown in [Figure 8.2.3]  
+You can set conditions such as sensing distance, retreat distance, proceed distance, sensing speed, retreat speed, and detection type (contact,  release of contact), among others.  
 
-센싱 거리, 후퇴 거리, 진행 거리, 센싱 속도, 퇴피 속도, 검지 타입(접촉 시, 접촉 해제 시) 등과 같은 조건들을 설정할 수 있습니다.  
 
 <p align="center">
  <img src="../../_assets/8_2_3.png" width="70%" ></img>
- <em><p align="center">그림 8.2.3. 터치센싱 조건 편집화면</p></em>
+ <em><p align="center">Figure 8.2.3. Touch Sensing Condition Edit Screen</p></em>
 </p>
 
 {% hint style="info" %}
-  명령어 사용과 파라미터에 대한 자세한 설명은 다음 링크를 참고해주십시오. [2.13 touchsen](../../2_Command/13_touchsen.md)<br>
-  이 장에서는 기능의 사용에 대해 설명합니다.
+  For detailed instructions on using the command and parameters, please refer to [2.13 touchsen](../../2_Command/13_touchsen.md) <br>
+  This section explains how to use the function.
 {% endhint %}
 
 <!-- - **명령어 사용 예시**
@@ -113,133 +116,131 @@
                   +tx, -tx, +ty, -ty, +tz, -tz (crd="tool") -->
 
 
-### (3) 센싱 타입 별 터치센싱 상세 설명
+### (3) Detailed Description of Touch Sensing by Sensing Type
 
 ---
 
-#### [1] Fillet 타입
+#### [1] Fillet
 
 <p align="center">
  <img src="../../_assets/8_2_4.png" width="60%"></img>
- <em><p align="center">그림 8.2.4. 터치센싱 예 - Fillet 타입</p></em>
+ <em><p align="center">Figure 8.2.4. Example of Touch Sensing - Fillet</p></em>
 </p>
 
-- 명령어 작성 예시
+- Examples of Command
 ```python
   touchsen cnd=1, crd="robot", dir=["+x","-y", "-z"], pose=P10
   touchsen cnd=1, crd="tool_prj", dir=["tf", "td"], pose=P10
   touchsen cnd=1, crd="tool", dir=["+tz"], pose=P10
 ```  
-  - 1점 센싱 : 센싱 방향을 한 개만 지정
-  - 2점 센싱 : 센싱 방향을 순차적으로 2개 지정
-  - 3점 센싱 : 센싱 방향을 순차적으로 3개 지정
-- 툴 프로젝션 방식 (crd="tool_prj"): 사용 편리상 토치 자세를 기준으로 전진, 하강, 좌우 방향을 결정하는 방식
-  tf(전진), td(하강), tl(좌), tr(우)로 방향을 지정할 수 있습니다. (tl=RotZ(90)*tf, tr=RotZ(-90)*tf 방향입니다)
-- 작업물에 회전량(RX, RY, RZ)이 존재하는 틀어진 Fillet의 경우 각도지정 옵션을 이용해 센싱 방향을 변경할 수 있습니다. 
-  사용법은 메뉴얼 하단을 참고하십시오.
+  - 1-Point sensing : Only one sensing direction is specified.
+  - 2-Point sensing : Two sensing directions are specified sequentially.
+  - 3-Point sensing : Three sensing directions are specified sequentially.
+- Tool Projection Method (crd="tool_prj") : For convenience, the forward, downward, left, and right directions are determined based on the torch posture.  <br> The directioon can be specified as tf(forward), td(downward), tl(left), tr(right). (tl = RotZ(90) * tf, tr = RotZ(-90) * tf)
+- For workpieces with rotational amounts (RX, RY, RZ), such as tilted Fillets, the sensing direction can be changed using the angle specification option. Please refer to the bottom of the manual for usage.
 
 ---
 
-#### [2] V Groove 타입
+#### [2] V Groove
 
 <p align="center">
  <img src="../../_assets/8_2_5.png" width="70%"></img>
- <em><p align="center">그림 8.2.5. 터치센싱 예 - V Groove 타입</p></em>
+ <em><p align="center">Figure 8.2.5. Example of Touch Sensing - V Groove</p></em>
 </p>   
 
-- 명령어 작성 예시
+- Examples of Command
 ```python
-  touchsen cnd=3, crd="tool", dir=[-ty], lift_up=3, pose=P10    #3번 조건, 툴좌표계 방향
+  touchsen cnd=3, crd="tool", dir=[-ty], lift_up=3, pose=P10    # Condition 3, tool coordinate direction
 ```  
-  - V그루브 타입은 Groove 형상의 작업물 센싱에 사용할 수 있습니다. 단, 센싱시작 전 툴자세는 위 그림과 유사하게 각의 2등분선 상에 위치하도록 티칭을 권장합니다.
-  - 방향인자는 좌우 시퀀스에 해당하는 방향으로 1가지 입니다. 하강 시퀀스 방향은 +tz 방향으로 고정됩니다.
-  - 안정적인 센싱을 위해 상승량(lift_up)은 최소 3mm이상 설정하는 것을 권장합니다.
+  - V-Groove Type can be used for sensing workpieces with a Groove shape. However, it is recommended to teach the tool posture so that it is positioned along the bisector of the angle, similar to the figure above, before starting the sensing.  
+  - The direction parameter corresponds to one direction for the left-right sequence. The downward sequence direction is fixed in the `+Tz` direction.  
+  - For stable sensing, it is recommended to set the lift-up amount to at least 3mm.  
 
-- 센싱 시퀀스  
-  - 센싱은 상단 좌우 - 중간 복귀 - 하단 - 하단 좌우 - 중간 으로 진행됩니다.  
+- Sensing Sequence  
+  - The sensing sequence proceeds as follows: upper left-right → middle return → bottom → bottom left-right → middle  
 
 <p align="center">
  <img src="../../_assets/8_2_6.png" width="60%"></img>
- <em><p align="center">그림 8.2.6. 터치센싱 시퀀스 VGroove 타입</p></em>
+ <em><p align="center">Figure 8.2.6. Touch Sensing Sequence - V-Groove</p></em>
 </p>   
-
 
 ---
  
-#### [3] BUTT 타입
+#### [3] BUTT
 
 <p align="center">
  <img src="../../_assets/8_2_7.png" width="30%"></img>
- <em><p align="center">그림 8.2.7. 터치센싱 예 - Butt 타입</p></em>
+ <em><p align="center">Figure 8.2.7. Example of Touch Sensing - Butt</p></em>
 </p>   
 
 
-- 명령어 작성 예시
+- Examples of Command
 ```python
     touchsen cnd=2, crd="tool", dir="+tx", lift_up=3, pose=P10, gap=var_gap   
-    #2번 조건, 툴좌표계 방향, 바닥 센싱 후3mm 상승상승
+    # Condition 2, tool coordinate direction, touch the bottom and rise 3mm
 ```  
-  - Butt 타입은 그림과 같이 센싱시작 전 툴 자세를 바닥면에 수직으로 티칭하는 것을 권장합니다.
-  - 방향인자는 좌우 시퀀스에 해당하는 방향으로 1가지 입니다. 하강 시퀀스 방향은 +tz 방향으로 고정됩니다.
-  -	센싱을 위해 바닥센싱 후 상승량(lift_up)은 최소 3mm이상 설정하는 것을 권장합니다. 상승량에 따라서 센싱한 gap의 크기가 바뀔 수 있습니다.
+  - Butt Type is recommended to teach the tool posture vertically to the floor surface before starting the sensing, as shown in the figure above.
+  - The direction parameter corresponds to one direction for the left-right sequence. The downward sequence direction is fixed in the `+Tz` direction.  
+  - After bottom sensing, it is recommended to set the lift-up amount to at least 3mm for stable sensing. The size of the sensed gap may change depending on the lift-up amount.  
 
-- 센싱 시퀀스
+- Sensing Sequence
+  - The sensing sequence proceeds as follows: upper left-right → middle return → bottom → bottom left-right → middle  
 
 <p align="center">
  <img src="../../_assets/8_2_8.png" width="60%"></img>
- <em><p align="center">그림 8.2.8. 터치센싱 시퀀스 Butt 타입</p></em>
+ <em><p align="center">Figure 8.2.8. Touch Sensing Sequence - Butt</p></em>
 </p>   
 
-센싱은 상단 좌우 - 중간 복귀 - 하단 - 하단 좌우 - 중간 으로 진행됩니다.
 
 
-### (4) 센싱 방향 각도 변환
+### (4) Sensing Direction Angle Transformation
 
-센싱 방향 각도 변환은 필렛과 그루브 감지 타입에서 지원합니다.  
+Angle transformation of the sensing direction is supported in Fillet and Groove Detection types.
+By specifying an angle for the sensing direction, you can change the direction of the search process.
+In the command, the rotation parameter is entered as "X30", "Y-30", "TL20", etc.  
 
-센싱 방향에 대한 각도를 지정하여 탐색 진행방향을 변경 할 수 있습니다.  
+Angle specification rotates the entire search direction by the specified angle along one of the selected axes, either the TL axis or the orthogonal XYZ axes.
+[FIgure 8.2.9] shows an example where the Fillet and Groove detection workpieces are rotated by 30 degrees along the Y-axis or TL axis.
 
-명령어의 rotation 인자에 "X30", "Y-30", "TL20" 등과 같이 입력합니다.  
-
-각도지정은 TL축, 직교 XYZ축 중 선택한 하나의 축으로 각도만큼 탐색 방향을 모두 회전시킵니다.  
-
-그림 8.2.9은 필렛과 그루브 감지 작업물에서 Y축 또는 TL축으로 30도 회전한 예입니다.  
 
 <p align="center">
  <img src="../../_assets/8_2_9.png" width="300"></img>
- <em><p align="center">그림 8.2.9. 터치센싱 예 - 각도설정</p></em>
+ <em><p align="center">Figure 8.2.9. Example of Touch Sensing - Angle setting</p></em>
 </p>       
 
-- 명령어 작성 예시
+- Examples of Command
 
 ```python
    touchsen cnd=1, crd="robot", dir=["+x","-z"], rotation="Y30", pose=P100
    touchsen cnd=1, crd="robot", dir=["+x","-z"], rotation="TL30", pose=P100
    touchsen cnd=2, crd="tool_prj", dir=["td","tf"], lift_up=5, rotation="Y-30", pose=P100
-   touchsen cnd=2, crd="tool_prj", dir=["td","tf"], rotation="TL-30", pose=P100   #그루브 감지 
+   touchsen cnd=2, crd="tool_prj", dir=["td","tf"], rotation="TL-30", pose=P100   # Detect Groove 
 ```
 
-- 작업물 타입과 명령어에 지정된 센싱방향 지정좌표계에 따라 지정이 가능한 각도회전 축은 아래 표와 같습니다.
+- The angle rotation axes that can be specified depending on the workpiece type and the sensing direction coordinate system designated in the command are as shown in the table below.
 
 <center>
 
-| 타입	| 센싱방향 </br> 지정좌표계	| 각도지정축|
+| Sensing Type	| Sensing Direction </br> Coordinate System	| Angle Specification Axis |
 |:---:|:---:|:---:|
-|Fillet	| 모든 좌표계	| 직교 XYZ축 </br>TL축 |
-|Detect Groove |	툴 (crd="tool") </br> 툴 프로젝션 (crd="tool_prj") |	직교 XYZ축</br>TL축 |
+|Fillet	| All	| Orthogonal XYZ axes </br> TL axis |
+|Detect Groove |	Tool (crd="tool") </br> Tool Projection (crd="tool_prj") |	Orthogonal XYZ axes </br> TL axis |
 
 </center>
 
 
-### (7) 마스터/실행 모드 터치센싱 기능
+### (5) Master/Execution Mode in Touch Sensing
 
-마스터 모드는 사용자키에서 On/Off 할 수 있습니다.  
-마스터 모드를 On한 상태에서 터치센싱을 하면 마스터 포즈를 저장할 수 있으며, 이를 기준 티칭으로 사용합니다.  
-실제 작업시에는 마스터 모드를 Off하고 터치센싱을 수행하게 되는데 이때에는 마스터 포즈대비 현재 센싱 포즈로 작업물이 쉬프트된 양을 자동으로 계산해 줍니다.  
+The master mode can be turned On/Off using the user key.
+When touch sensing is performed with the master mode On, the master pose can be saved and used as a reference for teaching.  
+During actual operation, the master mode is turned Off, and touch sensing is performed. In this case, the system automatically calculates the shift amount of the workpiece relative to the master pose based on the current sensing pose.  
 
-마스터 모드에선 사용자가 터치센싱 명령어의 mpose 입력인자에 지정한 변수에 센싱한 포즈가 저장되며, 실행 모드 (마스터 모드 off)에선 현재 센싱한 포즈를 마스터 모드에서 센싱했던 포즈와 비교하여 쉬프트량을 계산하고 사용자가 mshift 입력인자에 지정한 변수에 시프트량이 기록됩니다.
+In master mode, the sensed pose is saved in the variable specified by the `mpose` input parameter of the touch sensing command.
+In execution mode (when master mode is OFF), the current sensed pose is compared with the pose sensed in master mode, and the shift amount is calculated.
+The shift amount is then recorded in the variable specified by the `mshift` input parameter.
 
-- 명령어 작성 예시
+
+- Examples of Command
 ```python
    var P10=cpo()
    var sft_var1=Shift(0,0,0,0,0,0,"base")
@@ -247,4 +248,4 @@
    touchsen cnd=1, crd="robot", dir=["+x","-z"], mpose=P10, mshift=sft_var1
 ```  
 
-- 위 명령어는 마스터 모드에서 P10포즈변수에 센싱한 포즈가 저장되고, 실행 모드에서 센싱했을 때 마스터 모드와의 시프트 양이 자동으로 계산되어 sft_var1변수에 저장됩니다.
+- For example, in master mode, the sensed pose is saved in the `P10` pose variable, and in execution mode, when sensing is performed, the shift amount between the master mode pose and the current sensed pose is automatically calculated and stored in the sft_var1 variable.

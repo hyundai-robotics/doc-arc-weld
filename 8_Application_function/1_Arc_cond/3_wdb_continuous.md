@@ -1,27 +1,28 @@
-﻿# 8.1.3 WDB(용접데이터베이스)를 이용한 연속형 보간 변경
+﻿# 8.1.3 Continuous Interpolation Change using WDB(Welding DataBase)
 
 
-예를들면, 해당기능은 용접 시작위치에서 Butt gap이 5mm이고 용접 종료위치에서 Butt gap이 25mm인 작업물을 용접할 때, 용접을 하면서 전류, 전압, 용접속도, 위빙폭, 위빙주파수 등을 선형적으로 보간하며 용접이 가능합니다.  
-이때, 용접 조건의 연속변경(L, 보간)은 다음과 같이 직선형태로 이루어집니다.
+For example, this function allows for linear interpolation of welding condition(such as current, voltage, welding speed, weaving width, and weaving frequency) while welding a workpiece where the butt gap is 5mm at the start and 25mm at the end.
+In this case, the continuous change of welding conditions (L interpolation) is performed in a linear fashion as shown below.
+
  
 <p align="center">
  <img src="../../_assets/8_1_2.png" width="70%"></img>
- <em><p align="center">그림 8.1.2. 용접 조건의 직선 보간</p></em>
+ <em><p align="center">Figure 8.1.2. Linear Interpolation of Welding Conditions</p></em>
 </p> 
 
 <br>
 
-DB 1번의 위의 항목들과 DB 2번의 위의 항목들을 이용하여 연속형 보간변경을 사용하는 JOB은 다음과 같습니다.
+Using the above items from DB 1 and DB 2, a JOB utilizing continuous interpolation change is as follows: 
 
 ```python
 move L, spd=60%, …
-move L, spd=10%, …	    #용접점 진입 스텝
+move L, spd=10%, …	    # Weld point(seam) Entry Step
 arcon cnd=1
 move L, spd=40cm/min, …
-arccond L, cnd=1  	    #용접 DB 1번 -> 2번 조건으로 연속보간 변경
-move L, spd=30cm/min, …    #이 스텝에서 연속적으로 cnd=1에서 cnd=2의 값으로 조건이 선형변경된다.
-arccond L, cnd=2  	    #다음 스텝에선 arcof가 있어야 한다.
+arccond L, cnd=1  	    # Continuous interpolation change from Welding DB 1 -> 2
+move L, spd=30cm/min, …    # In this step, the conditions linearly change from cnd(DB) 1 -> 2
+arccond L, cnd=2  	    # The next step requires arcof
 arcoff
-move L, spd=10%, …	    #용접점 탈출 스텝
+move L, spd=10%, …	    # Weld point(seam) Exit Step
 end
 ```

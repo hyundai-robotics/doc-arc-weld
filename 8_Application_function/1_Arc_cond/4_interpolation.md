@@ -1,47 +1,54 @@
-﻿# 8.1.4 보간조건을 이용한 용접속도 및 위빙폭 변경 기능
+﻿# 8.1.4 Changing the welding Speed and Weaving Width Using Interpolation Condition
 
-이 기능은 위의 기능들과 별개인 기능입니다. 기준 gap에 따라 용접조건을 설정해 놓고, 실제 터치센싱으로 용접시점과 끝점의 gap을 계산하여 용접속도와 위빙폭을 자동으로 계산해주는 기능입니다.
-```arccond``` 명령어의 속성창에서 “Gap correction” 항목 탭에 진입하면 조건별로 Gap에 따른 속도와 폭을 설정할 수 있습니다. 창분할에서 “아크보간”을 클릭하면 여기서 설정한 것을 그래프로 볼 수 있습니다.  
+
+This feature is separate from the previously mentioned functionalities. It allows welding conditions to be set based on the reference gap, and then automatically calculates the welding speed and weaving width by measuring the gap at the start and end points through actual touch sensing.  
+By entering the "Gap correction" tab in the properties window of the `arccond` command, you can set speed and width accroding to the gap for each condition.
+In the split window, clicking on "Arc interpolation" will display this setting as a graph.
+
 
 <p align="center">
   <img src="../../_assets/8_1_3.png" width="70%"></img>
-  <em><p align="center">그림 8.1.3. 용접 조건(갭 보간) 대화상자</p></em>
+  <em><p align="center">Figure 8.1.3. Arc Welding Condition(Gap correction) Dialog box</p></em>
 </p> 
 
 <p align="center">
   <img src="../../_assets/8_1_4.png" width="70%"></img>
-  <em><p align="center">그림 8.1.4. 아크보간 모니터링</p></em>
+  <em><p align="center">Figure 8.1.4. Arc Interpolation Monitoring</p></em>
 </p> 
 
 <br>
 
-이 기능의 동작은 다음과 같습니다.  
-<br/>
+The operation of this function is as follows:
 
 <p align="center">
   <img src="../../_assets/8_1_5.png" width="70%"></img>
-  <em><p align="center">그림 8.1.5. 용접 조건의 보간 동작</p></em>
+  <em><p align="center">Figure 8.1.5. Welding Condition Interpolation Operation</p></em>
 </p> 
 
 <br>
  
 
-gap-속도 그래프로 예를 들어 보면 다음과 같습니다.  
-`arccond` 명령어의 속성창의 Gap correction 탭에 입력된 gap-Spd그래프를 생성합니다. 용접 시점에서는 WDB의 용접속도와 WDB의 기준 spd(그래프에서 기준 gap에서 spd값)에서의 속도의 차이를 dSpd라 할때, 현재 gap에서 원 그래프의 Spd 값에 dSpd를 적용한 값이 시작 Spd가 됩니다.  
-마찬가지로, 용접 종료점에서 WDB의 용접속도와 WDB의 기준 spd(그래프에서 기준 gap에서 spd값)에서의 속도차이를 dSpd2라 할때, 현재 gap에서 원 그래프의 Spd값에 dSpd2를 적용한 값이 종료 Spd가 됩니다.  
-위 그림과 같이 최종적으로 2개의 `arccond` 명령어 사이의 스텝에서 선형적으로 용접속도가 증가합니다.  
+The gap-speed graph can be illustrated as follows:  
 
-JOB 구성예시는 다음과 같습니다.
+The gap-spd graph entered in the Gap correction tab of the properties window of the `arccond` command is created.
+At the welding start point, the difference in speed between WDB welding speed and the WDB reference speed (the spd value at the reference gap on the graph) is assumed to be bSpd. The starting speed is then calculated by applying dSpd to the Spd value of the original graph at the current gap.
+
+Similarly, at the welding end point, the difference in speed between the WDB welding speed and the WDB reference speed (the spd value at the reference gap on the graph) is assumed to dSpd2. The ending speed is calculated by applying dSpd2 to the Spd value of the original graph at the current gap.
+
+As shown in the figure above, the welding speed increases linearly between the two `arccond` commands.
+
+
+An example of the JOB configuration is as follows:
 
 ```python
-move L, spd=60%, …
-move L, spd=10%, …	    #용접점 진입 스텝
-arcon cnd=1
-move L, spd=40cm/min, …
-arccond L, cnd=1, gap=20  
-move L, spd=30cm/min, …    #이 스텝에서 연속적으로 용접속도와 위빙폭이 선형변경된다.
-arccond L, cnd=2, gap=10   
-arcoff
-move L, spd=10%, …	    #용접점 탈출 스텝
-end
+    move L, spd=60%, …
+    move L, spd=10%, …	    # Weld point(seam) Entry Step
+    arcon cnd=1
+    move L, spd=40cm/min, …
+    arccond L, cnd=1, gap=20  
+    move L, spd=30cm/min, …    # In this step, welding speed and weaving width change linearly
+    arccond L, cnd=2, gap=10   
+    arcoff
+    move L, spd=10%, …	    # Weld point(seam) Exit Step
+    end
 ```

@@ -1,40 +1,48 @@
-﻿# 8.3.7 멀티패스 명령어 및 동작원리
+﻿# 8.3.7 Multi-pass Command
 
 
-### (1) 명령어
+### (1) Command
 
-센싱 궤적은 multipass 명령어를 사용하여 저장하고 로딩할 수 있습니다. 이 명령어는 3가지 형태로 사용할 수 있습니다.<br>
+The sensing trajectory can be saved and loaded using the multipass command. 
+This command can be used in three different forms:
+<br>
 
 ```py
-    multipass save, trj=<멀티패스 궤적 번호>, period=<궤적 저장 주기 거리>
-    multipass load, trj=<멀티패스 궤적 번호>, side=<좌우 시프트 거리>, height=<상하 시프트 거리>, reverse=<멀티패스 재생방향>, tas=<토치 전후방향 각도 시프트>, was=<토치 좌우방향 각도 시프트>
+    multipass save, trj=<multi-pass trajectory number>, period=<trajectory saving interval distance>
+    multipass load, trj=<multi-pass trajectory number>, side=<left-right Shift distance>, height=<up-down Shift distance>, reverse=<multi-pass playback direction>, tas=<torch forward/backward angle shift>, was=<torch left/right angle shift>
     multipass off
 ```
 
-### (2) 멀티패스 파라미터
+### (2) Multi-pass Parameters
 
-멀티패스 명령어 파라미터는 다음 링크를 참고하십시오.  <br>
+For detailed information on the multi-pass command parameters, please refer to the following link: <br>
 [2.11 multipass](../../2_Command/11_multipass.md)
 
-이 장에서는 다음 두 가지에 대해서만 설명합니다.
+<br>
 
-- 좌우/상하 시프트  
+This section will explain only the following two items:  
 
-멀티패스 재현 시 원래 궤적에서 시프트 하는 거리를 설정합니다. 토치의 위빙이 툴과 직각이므로 각 시프트는 아래와 같이 설정됩니다. 즉, 좌우 방향은 위빙면이 되고 상하 방향은 위빙면과 수직인 면이 됩니다.
+
+- Left-Right/Up-Down Shift
+
+This sets the distance by which the trajectory is shifted from the original path during multipass reproduction.
+Since the torch weaving is perpendicular to the tool, each shift is set as follows:
+the left/right direction becomes the weaving plane, and the up/down direction becomes the plane perpendicular to the weaving plane.
 
 <p align="center">
- <img src="../../_assets/8_3_11.png" width="60%"></img>
- <em><p align="center">그림 8.3.11 멀티패스 시프트 방향</p></em>
+  <img src="../../_assets/8_3_11.png" width="60%"></img>
+  <em><p align="center">Figure 8.3.11 Multipass Shift Direction</p></em>
 </p>
 
-- 각도 시프트: TAS, WAS  
 
-멀티패스 용접을 수행할 때 품질을 위해 토치를 기울여야 하는 경우 설정합니다.
-각 항목의 각도 개념은 하기 그림과 같습니다.
+- Angle Shift: TAS, WAS  
+
+When performing multi-pass welding, the torch must be tilted for quality control. This setting is used to define the required tilt.
+The concept of angles for each item is illusatrated in the following figures:  
 
 <p align="center">
- <img src="../../_assets/8_3_12.png" width="60%"></img>
- <em><p align="center">그림 8.3.12 멀티패스 각도 시프트 개념</p></em>
+  <img src="../../_assets/8_3_12.png" width="60%"></img>
+  <em><p align="center">Figure 8.3.12 Multipass Angle Shift Concept</p></em>
 </p>
 
 

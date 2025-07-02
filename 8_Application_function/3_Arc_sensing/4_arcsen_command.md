@@ -1,59 +1,63 @@
-﻿# 8.3.4 명령어를 이용한 위빙 및 아크 센싱 조건 설정
+﻿# 8.3.4 Setting Weaving and Arc Sensing Conditions Using Commands
 
-### (1) 기능 필요성
+### (1) Necessity of Functionality
 
-위빙과 아크 센싱 조건은 작업 중 자동으로 조건을 변경할 수 없습니다.
-따라서 명령어를 이용하여 조건을 바꿔줄 수 있으며, 해당 위빙 구간에서만 요효합니다.
-
-
-### (2) 명령어 사용 방법 
-
-명령어를 삽입할 떄는 수동모드 상태에서 **[명령입력 > var_io > assignment]**를 입력한 후에, 왼쪽 변수로 커서를 움직여 **[시스템 변수 > arcweld > _weaving.파라미터]**를 선택하여 값을 입력하면 됩니다.  
-
-입력된 명령어는 다음과 같은 형태가 됩니다: 
-```_weaving.위빙 파라미터=입력값```  
+Weaving and arc sensing conditions cannot be automatically adjusted during operation. <br>
+Therefore, the conditions can be modified using commands, and the changes will only be effective within the specific weaving section.  
 
 
-- 예시)
+### (2) Method of Using Commands  
+
+To insert the command, enter [**cmd input > var_io > assignment**] while in manual mode. Then, move the cursor to the left variable and select [**System Variables > arcweld > _weaving.`parameter`**], where you can input the desired value.  <br>
+
+The entered command will appear in the following format:  
+```e.g. _weaving.frequency=2.0```  
+
+
+- Example)
 ```py
-    weaving on, cnd=1	                # 위빙 명령문
+    weaving on, cnd=1	                # Weaving Command (cmd)
     arcon cnd=1
     move L,S=5mm/s,accu=1,tool=2
-    _weaving.right_distance = 4	        # 벽방향 거리를 명령어로 설정
-    _weaving.left_distance = 3	        # 타방향 거리를 명령어로 설정
-    MOVE L,S=5mm/s,A=1,T=2	            # 이구간부터 파라미터가 변경됨
+    _weaving.right_distance = 4	        # Set the wall direction dist using a cmd
+    _weaving.left_distance = 3	        # Set the wall direction dist using a cmd
+    MOVE L,S=5mm/s,A=1,T=2	            # parameter will be modified starting from this section
 ```
 
-각 명령어의 입력값은 조건 파일 내부의 조건설정 범위와 동일하게 제한됩니다.
+The input values for each command are restricted within the range of condition settings defined in the condition file.  
+For parameters that are not explicitly specified by the command, the conditions set in the weaving command will be used.  
 
-명령어로 별도 지정되지 않은 파라미터는 weaving 명령어에서 설정한 조건을 사용합니다.
+The applicability of the settings for each element of _weaving to the functionality is as follows:  
 
-_weaving의 element 별로 설정값이 기능에 적용되는 지 여부는 다음 표와 같습니다.
+<br>
 
-| 변수명 | weaving 명령 직후 | 아크 센싱 없는 위빙 동작 | 아크 센싱 사용 위빙 동작 | 용접조건 연속변경 |
+| Variable Name | Immediately after Weaving Cmd | Weaving without Arc sensing | Weaving with Arc sensing | Continuous Change of Welding Conditions |
 |-------|-------|-------|-------|-------|
-| weave	| 적용	| 적용	| 적용	| 적용 |
-| frequency	| 적용	| 적용	| 적용	| 적용 |
-| left_distance	| 적용	| 적용	| 적용	| 적용 |
-| right_distance	| 적용	| 적용	| 적용 | 적용 |
-| angle | 적용	| 적용	| 적용	| 적용 |
-| wall_direction | 적용	| 적용 | 적용	| 적용 |
-| offset_angle | 적용	| 적용 | 적용	| 적용 |
-| forward_angle | 적용	| 적용 | 적용	| 적용 |
-| boundary_limit | 적용	| 적용 | 적용	| 적용 |
-| segment_time_1 | 적용	| 적용 | 적용	| 적용 |
-| segment_delay_1 | 적용	| 적용 | 적용	| 적용 |
-| height_sensing_mode | 적용	| 해당 없음 | 적용 | 적용 |
-| side_sensing_sensitivity | 적용	| 해당 없음 | 적용 | 적용 |
-| height_sensing_sensitivity | 적용	| 해당 없음 | 적용 | 적용 |
-| BaseCur	| 적용	| 해당 없음 | 적용 | 적용 |
-| StickOut | 적용	| 해당 없음 | 적용 | 적용 |
-| asymetric_sensing_ratio | 적용	| 해당 없음 | 적용 | 적용 |
+| weave | O | O | O | O |
+| frequency | O | O | O | O |
+| left_distance | O | O | O | O |
+| right_distance | O | O | O | O |
+| angle | O | O | O | O |
+| wall_direction | O | O | O | O |
+| offset_angle | O | O | O | O |
+| forward_angle | O | O | O | O |
+| boundary_limit | O | O | O | O |
+| segment_time_1 | O | O | O | O |
+| segment_delay_1 | O | O | O | O |
+| height_sensing_mode | O | - | O | O |
+| side_sensing_sensitivity | O | - | O | O |
+| height_sensing_sensitivity | O | - | O | O |
+| BaseCur | O | - | O | O |
+| StickOut | O | - | O | O |
+| asymetric_sensing_ratio | O | - | O | O |
 
 
-### (3)	위빙 파라미터 명령어 종류 및 내용은 다음 링크를 참고해주세요.
+<!-- ### (3) 위빙 파라미터 명령어 종류 및 내용은 다음 링크를 참고해주세요.
 
-[로봇언어 HRScript_weaving문](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/10-etc/3-sysvar/_weaving)  
+[로봇언어 HRScript_weaving문](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/10-etc/3-sysvar/_weaving)   -->
+
+
+
 <!-- 
 (2)에서 설명한 각 파라미터 종류와 설명은 
 

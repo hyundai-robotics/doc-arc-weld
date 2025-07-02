@@ -1,24 +1,29 @@
-﻿# 8.3.6 멀티패스 개요
+﻿# 8.3.6 Multi-pass Overview
 
-멀티패스 용접 기능은 후판 아크용접에서 요구 각장이 넓어서 한번의 용접으로 해결할 수 없거나, 용접으로 채워야 할 체적이 넓어서 용접을 여러 번에 걸쳐 반복해야 할 때 사용하는 기능입니다.
+The multi-pass welding feature is used when the required weld length in thick plate arc welding is too wide to be completed in a single pass, or when the volume to be filled by welding is too large, requiring multiple welding passes.  
 
-통상 아크센싱의 특성상 초층인 루트패스 외에는 센싱이 불안정 할 가능성이 있으므로 아래 초층만 아크센싱으로 용접선을 추종하고, 이때의 추종궤적을 저장한 후, 저장된 궤적을 쉬프트하여 2층 이상의 패스를 생성하여 용접합니다.  
+Due to the inherent characteristics of arc sensing, the sensing may be unstable except for the root pass, which is the first layer.
+Therefore, only the root pass is tracked using arc sensing.
+The trajectory of this pass is tehn saved, and the stored trajectory is shifted to create passes for the second layer and beyond.  
 
-멀티패스의 작업 프로그램 위치는 초층 궤적과 동일하게 유지하면 되므로 초층 작업프로그램을 그대로 복사한 후 멀티패스 명령어만 삽입하여 간단하게 멀티패스를 수행할 수 있습니다.
+Since the position of the multi-pass work program is the same as that of the root pass trajectory, it is easy to perform multi-pass welding by simply copying the root pass work program and inserting the multi-pass command.
+
 
 <p align="center">
- <img src="../../_assets/8_3_8.png" width="60%"></img>
- <em><p align="center">그림 8.3.8 초층 아크센싱(좌) 후 2, 3층 멀티패스 용접</p></em>
+  <img src="../../_assets/8_3_8.png" width="60%"></img>
+  <em><p align="center">Figure 8.3.8 Root Pass Arc sensing (left) and Multi-pass welding for 2-3 layers</p></em>
 </p>
 
 <p align="center">
- <img src="../../_assets/8_3_9.png" width="60%"></img>
- <em><p align="center">그림 8.3.9 실제 멀티패스 용접</p></em>
+  <img src="../../_assets/8_3_9.png" width="60%"></img>
+  <em><p align="center">Figure 8.3.9 Actual Multi-Pass Welding</p></em>
 </p>
 
-멀티패스 비드를 상기 그림 2와 같이 경사진 적층형으로 생성하는 경우 용접 시작점과 종료점만 수정하여 약간 당겨 기록하면 하기와 같은 적층형으로 용접이 가능합니다.
+When creating multi-pass beads in a stacked, inclined configuration as shown in Figure 2 above, welding can be performed by modifying only the start and end points of the weld and slightly shifting them.  
+This will result in a stacked configuration as shown below.
+
 
 <p align="center">
- <img src="../../_assets/8_3_10.png" width="60%"></img>
- <em><p align="center">그림 8.3.10 경사가 있는 적층형 멀티패스 형상</p></em>
+  <img src="../../_assets/8_3_10.png" width="60%"></img>
+  <em><p align="center">Figure 8.3.10 Multi-pass Stacked Shape with Inclination</p></em>
 </p>

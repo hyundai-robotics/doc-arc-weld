@@ -1,28 +1,31 @@
-﻿# 8.1.2 WDB(용접데이터베이스)를 이용한 계단형 변경
+﻿# 8.1.2 Step Change using WDB(Welding DataBase)
+
 ```python
-arccond D, cnd=1
+    arccond D, cnd=1
 ```
-위 명령어에서 속성창에 진입하면 다음과 같은 설정항목을 볼 수 있습니다.
+
+In the command above, by entering the properties window, you can view the following configuration window.
+
  
 <p align="center">
  <img src="../../_assets/8_1_1.png" width="70%"></img>
- <em><p align="center">그림 8.1.1. 용접 조건 대화상자</p></em>
+ <em><p align="center">Figure 8.1.1. Arc Welding Condition Dialog</p></em>
 </p> 
 
 <br>
 
-cnd(용접 조건)를 추가하거나 삭제하여 다음과 같은 용접 조건을 DB화 하여 사용할 수 있습니다.  
-- DB화 가능한 조건 : 용접속도, 전류, 전압, 위빙주파수, 위빙폭
+You can add or delete **cnd**(welding conditions), allowing you to store and use welding conditions in the database as follows:
+    Conditions that can be stored in the DB: welding speed, current, voltage, weaving frequency, weaving width
 
-이를 이용하여 다음과 같은 JOB을 구성할 수 있습니다.
+Using this, the following JOB configuration can be created:
 
 ```python
-move L, spd=60%, …
-move L, spd=10%, …	    #용접점 진입 스텝
-arcon cnd=1
-move L, spd=40cm/min, …
-arccond D, cnd=1  	    #용접 DB 1번 조건으로 즉시 변경
-move L, spd=30cm/min, …
-arcof
-end
+    move L, spd=60%, …
+    move L, spd=10%, …	    # Weld point(seam) Entry Step
+    arcon cnd=1
+    move L, spd=40cm/min, …
+    arccond D, cnd=1  	    # Immediately change to Welding DB Condition 1
+    move L, spd=30cm/min, …
+    arcof
+    end
 ```

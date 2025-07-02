@@ -1,59 +1,74 @@
-﻿# 8.3.3.3 아크 센싱 캘리브레이션
+﻿# 8.3.3.3 Arc Sensing Calibration
 
-아크 센싱 기능을 사용하기 위해 캘리브레이션 과정이 선행되어야 합니다. <br>
-이 과정은 위빙 주기와 전류 데이터의 주기를 맞추기 위해 지연시간을 계산합니다. 
+To use the arc sensing function, a calibration process must be completed first.  
+This process calculates the delay time to synchronize the weaving cycle and the current data cycle.
 
 {% hint style="info" %}
-아크 센싱은 용접기 설정항목인 용접모드, 동작모드, Job/Pro no, 시너직코드에 종속되어 지연시간을 갖고 있습니다.<br>
-캘리브레이션 정보는 최대 3개까지 저장해 놓을 수 있습니다.<br>
-예시 : 펄스, 시너직 185번, 잡 0 (무효) 일 경우 아크 센싱시 해당 캘리브레이션 정보를 로딩하여 사용합니다. 
+  Arc sensing is dependent on welder settings, including welding mdoe, operation mode, Job/Prog number, and synergic code, and thus has a corresponding delay time.<br>
+  Up to 3 calibration data sets can be stored.<br>
+  Example: When the settings are Pulse, Synergic 185, Job 0 (disabled), the corresponding calibration information will be loaded and used during arc sensing.
 {% endhint %}
 
-### 캘리브레이션 과정
+### Calibration Process
 
-#### 준비사항 : bead on plate 용접을 위해 평평한 시편을 하나 준비하십시오.
+<br>
 
-#### Step 1. 
-weaving 명령어의 [**속성**]창에 진입하여 벽방향을 vertical로 설정하십시오.
+#### Preparation: Prepare a flat specimen for bead-on-plate welding.
 
-#### Step 2. 
-weaving 명령어의 속성창의 아크 센싱(일반)탭에 진입하여 타입을 "용접선 추정 & 전류차" 로 설정한 후 좌우/상하 민감도를 모두 0으로 설정하십시오.
+#### Step 1.  
+
+Enter the [**Property**] window of the weaving command and set the wall direction to vertical.
+
+#### Step 2.  
+
+Enter the Arc Sensing (General) in the property window of the weaving command, set the type to "Welding Seam Estimation & Current Difference", and set both the left/right and up/down sensitivities to 0.  
+
 
 <p align="center">
- <img src="../../_assets/8_3_5.png" width="70%"></img>
- <em><p align="center">그림 8.3.5. 아크 센싱 캘리브레이션</p></em>
+  <img src="../../_assets/8_3_5.png" width="70%"></img>
+  <em><p align="center">Figure 8.3.5. Arc Sensing Calibration</p></em>
 </p>
 <br>
 
+
 #### Step 3. 
-위 그림과 같이 진입스텝을 가상의 벽 반대방향에서 진입하도록 만들고 시작점과 끝점을 60cm정도 간격을 두고 티칭하십시오. <br>
-이때 토치 작업각(Roll 각도)을 45 degree 를 유지하십시오.
 
-#### Step 4.
-자동모드로 실제 아크용접을 수행합니다.
+As shown in the figure above, set the entry step to approach from the opposite direction of the imaginary wall.
+Teach the starting point and end point with an approximate gap to 60 cm. <br>
+During this process, ensure that the torch's working angle(Roll angle) is maintained at 45 degrees.
 
-#### Step 5.
-weaving 명령어의 속성창에서 지연시간테이블 탭에 진입하십시오. <br>
-좌측하단의 Auto calib 항목을 클릭하면 현재 켈리브레이션된 지연시간을 확인할 수 있습니다.
+#### Step 4.  
 
-#### Step 6. 
-해당 값을 현재 위빙 주파수 (캘리브레이션 시 weaving의 cnd에 적용한 위빙 주파수)의 항목에 기입하십시오.
+Perform the actual arc welding in automatic mode.  
 
-#### Step 7. 
-0.5Hz~3.0Hz 까지 Step 2 ~ Step 5 단계를 반복합니다.
+#### Step 5.  
 
+Navigate to the delay time table tab in the property window of the weaving command. <br>
+Click on the "Auto Calib" option at the bottom left to check the currently calibrated delay time.
 
-이 과정을 완료하면 위빙 조건 편집 화면의 4번째 탭에서 아크 센싱(지연 테이블 추종 게인) 결과를 확인할 수 있습니다.
+#### Step 6.  
+
+Enter the corresponding value into the field for the current weaving frequency (the frequency applied during calibrations).
+
+#### Step 7.  
+
+Repeat Steps 2 through 5 for frequencies ranging from 0.5 Hz ~ 3.0 Hz.  
+
+<br>
+
+After completing this process, you can check the arc sensing (delay table tracking gain) results on the forth tab of the weaving condition editing screen.
+
 
 <p align="center">
  <img src="../../_assets/8_3_6.png" width="70%"></img>
- <em><p align="center">그림 8.3.6. 아크 센싱 조건(추종 게인) 대화상자</p></em>
+ <em><p align="center">Figure 8.3.6. Arc Sensing Condition Tab(Tracking gain) Dialog Box</p></em>
 </p>
 <br>
 
 
 {% hint style="info" %}
-0.5Hz~3.0Hz까지 위 용접을 모두 수행한 후 weaving 명령어의 속성창에서 지연시간 테이블 탭의 좌측하단의 Auto calib 항목에 진입하여 Apply하면 모든항목을 일괄로 적용할 수 있습니다.
+  Once all weaving operations from from 0.5 Hz to 3.0 Hz have been performed, navigate to the "Auto Calib" option at the bottom left of the delay time table tab in the weaving command property window, and click "Apply" to apply all settings in bulk.
 {% endhint %}
 
-해당 캘리브레이션 과정이 끝나면 상하/좌우 센싱 민감도를 5로 모두 변경하여 아크 센싱 기능을 사용할 수 있습니다.
+Once the calibration process is completed, change the sensing sensitivity for both vertical/horizontal directions to 5 to enable the arc sensing function.
+

@@ -1,36 +1,41 @@
-﻿# 8.3.2 아크 센싱 지원 사양
+﻿# 8.3.2 Arc Sensing Support Specifications
 
-아크 센싱 용접선 추종기능은 모든 용접응용을 지원하지 않습니다. 아래 이외의 내용은 당사에 문의하여 기술지원을 받으십시오. 
 
-아래의 사양은 당사에서 충분한 시험을 거친 데이터입니다. (사양 외의 조건은 당사로 연락하시어 작업물과 사용조건에 대한 확인시험이 필요합니다)
+The Arc Sensing Seam Tracking does not support all welding applications.
+For any issues beyond the ones listed below, please contact us for technical support.  
 
-### (1) 용접조건 
-   - 용접방법: CO2, MAG, MIG, FCAW  
-   - 적용 와이어 굵기: 1.0 ~ 1.6φ (Solid wire, Flux cored wire)  
-   - 최대 용접속도: 용접기 특성에 따름 (10cm/min ~ 70cm/min)  
-   - 적용 용접전류: 160[A] ~ 600[A]  
+The specifications below are based on data obtained from extensive testing conducted by our company. 
+(For conditions outside of the specified parameters, please contact us for verification tests based on the workpiece and usage conditions.)  
 
-### (2) Workpiece 조건 
-   - 최소 두께: 2t 이상  
-   - 최대 추종성능: 민감도 설정값, 초당 최대 보정거리 설정값에 따라 결정.  
-   - 추종 성능을 높이는 경우 용접 궤적의 진동이 발생할 수 있으므로 확인시험 필요  
 
-### (3) 위빙 조건  
-   - 주파수 범위: 0.5 ~ 4.0 Hz  
-   - 진폭 범위: 1.0 X 1.0 mm 이상  
-   - 위빙형태: 단진동  
-  -  Dwell 시간: 0.0[sec] ~ 2.0[sec]  
+### (1) Welding Conditions
+  - Welding Methods: CO2, MAG, MIG, FCAW  
+  - Wire Diameter: 1.0 ~ 1.6 mm (Solid wire, Flux-cored wire)  
+  - Maximum Welding Speed: Depending on the welder chaeracteristics (10 cm/min ~ 70 cm/min)
+  - Welding Current: 160[A] ~ 600[A]  
 
-### (4) 보간 종류 
-   - 직선보간: 가능  
-   - 원호보간: 가능  
-   - 포지셔너 동기(직선): 가능  
-   - 포지셔너 동기(원호): 가능
 
-### (5) 접합형태 
+### (2) Workpiece Conditions
+  - Minimum Thickness: 2t or greater  
+  - Maximum Tracking Performance: Determined by sensitivity settings and maximum correction distance per second  
+     - When improving tracking performance, welding path vibrations may occur, so verification tests are required.  
+
+### (3) Weaving Conditions  
+  - Frequency Range: 0.5 ~ 4.0 Hz
+  - Amplitude Range: 1.0 X 1.0 mm or grater
+  - Weaving Type: Single oscillation
+  - Dwell Time: 0.0[sec] ~ 2.0[sec]
+
+### (4) Interpolation Type
+  - Linear Interpolation: Available
+  - Circular Interpolation: Available
+  - Positioner Synchronization (Linear): Available
+  - Positioner Synchronization (Circular): Available
+
+### (5) Joint Type
    - Fillet, V-groove  
-   - 최대 허용 Gap: 위빙 폭에 따라 다름  
+   - Maximum Allowable Gap: Depends on weaving width
 
-### (6) 그 외 기능 
-   - 센싱 궤적이탈 제한기능  
-   - 센싱 중 토치 높이 설정 기능  
+### (6) Other Functions
+  - Sensing Trajectory Deviation Limiting Function
+  - Torch Height Setting Function during Sensing
