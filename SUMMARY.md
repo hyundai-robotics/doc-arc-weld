@@ -49,7 +49,7 @@
   * [5.5 용접 보조 조건](5_Condition_editing/5_Aux_condition/README.md)
     * [5.5.1 용접 보조 조건 – 재시도](5_Condition_editing/5_Aux_condition/1_retry.md)
     * [5.5.2 용접 보조 조건 – 재기동](5_Condition_editing/5_Aux_condition/2_restart.md)
-    * [5.5.3 용접 보조 조건 – 자동 용착해제](5_Condition_editing/5_Aux_condition/3_stick_recovery.md)
+    <!-- * [5.5.3 용접 보조 조건 – 자동 용착해제](5_Condition_editing/5_Aux_condition/3_stick_recovery.md) -->
 * [6. 위빙 기능 (WEAVING)](6_Weaving_function/README.md)
   * [6.1 위빙 기능](6_Weaving_function/1_Weaving_function/README.md)
     * [6.1.1 위빙 조건](6_Weaving_function/1_Weaving_function/1_condition_.md)
@@ -82,7 +82,7 @@
     * [8.3.4 명령어를 이용한 위빙 및 아크 센싱 조건 설정](8_Application_function/3_Arc_sensing/4_arcsen_command.md)
     * [8.3.5 아크 센싱 모니터링](8_Application_function/3_Arc_sensing/5_arcsen_monitoring.md)
     * [8.3.6 멀티패스 개요](8_Application_function/3_Arc_sensing/6_multipass_overview.md)
-    * [8.3.7 멀티패스](8_Application_function/3_Arc_sensing/7_multipass_command.md)
+    * [8.3.7 멀티패스 명령어](8_Application_function/3_Arc_sensing/7_multipass_command.md)
     <!-- * [8.3.8 터치센싱과 아크센싱을 이용한 필렛용접 예시](8_Application_function/3_Arc_sensing/8_example_fillet.md)
     * [8.3.9 터치센싱을 이용한 위빙 폭 자동설정 아크센싱 예시](8_Application_function/3_Arc_sensing/9_example_butt_gap.md)
     * [8.3.10 멀티패스 용접 예시](8_Application_function/3_Arc_sensing/10_example_multipass.md) -->
