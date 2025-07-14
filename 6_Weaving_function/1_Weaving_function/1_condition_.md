@@ -1,49 +1,71 @@
-﻿# 6.1.1 위빙 조건
+﻿# 6.1.1 Weaving Condition
 
-```weaving ... ``` 명령어 위에 커서가 있을 때, [**속성**]키를 누르면 다음과 같은 위빙 조건 편집화면이 나타납니다.
+When the cursor is placed above the `weaving ...` command, pressing the [**property**] key will display the weaving condition editing screen as shown below.  
 
- 
+
 <p align="center">
  <img src="../../_assets/6_1_1.png" width="70%"></img>
- <em><p align="center">그림 6.1.1. 위빙조건 설정</p></em>
+ <em><p align="center">Figure 6.1.1. Weaving Condition Settings</p></em>
 </p>
-
-
 
 ---
 
-위빙 조건의 각 항목별 내용은 다음과 같습니다.
+The details for each field in the weaving conditions are as follows:  
 
-### (1)	조건 번호: [1] (범위: 1~ 32)  
-위빙 동작의 설정이 저장된 조건 번호입니다. [+], [-] 버튼을 눌러 조건을 추가하거나 삭제할 수 있습니다. 현재 번호의 이전 또는 이후 조건 번호로 이동하여 해당 조건 번호를 편집 할 수 있습니다.
+### (1)	Condition Number: [1] (Range: 1 ~ 1000)  
 
-### (2)	위빙 형태: <단진동, 삼각, L형, 원형>    
-위빙 동작의 형태를 지정합니다. ([[6.1.2 위빙 형태]](../1_Weaving_function/2_configuration_.md)  참조)
+This is the condition number where the weaving operation settings are stored.
+Conditions can be added or removed by pressing the [+] or [-] buttons.
+You can navigate to the previous or next condition number to edit the corresponding condition.
 
-### (3)	주파수: [2] Hz (범위: 0.0 ~ 10.0)  
-위빙 주파수를 설정합니다. 주파수의 범위는 0.0 ~ 10.0Hz 입니다. 주파수가 ‘0’으로 설정된 경우 이동시간을 적용합니다. ([[6.1.3 주파수]](../1_Weaving_function/3_frequency.md) 참조)  
+### (2)	Weaving Type: <Single, Triangle, L type, Circle, DownCurve>  
 
-### (4)	기본패턴  
-위빙 동작의 패턴을 설정합니다. ([[6.1.4 기본 패턴]](../1_Weaving_function/4_pattern.md) 참조)  
-- **벽방향 거리** : [2.5] (범위 : 1.0 ~ 25.0mm)  
-- **타방향 거리** : [2.5] (범위 1.0 ~ 25.0mm)  
-- **각도**       : [90] (범위 : 0.1 ~ 180.0도)  
-- **벽방향**     : <**수직방향, 수평방향, 토치자세기준**>  
-- **옵셋 각도**: 토치 자세 기준 사용 시 토치 위치로부터 좌, 우로 기울어 지는 각도 지정
+This field specifies the type of weaving motion. (please refer to [[6.1.2 Weaving Type]](../1_Weaving_function/2_configuration_.md))
 
-### (5)	진행 각도: [0] (범위 : -90.0 ~ 90.0도)  
-진행 방향에 대한 위빙 각도 방향을 나타냅니다. 0도 인 경우 진행방향과 위빙방향은 직각을 이룹니다. ([[6.1.4 기본 패턴]](../1_Weaving_function/4_pattern.md) 참조)
+### (3)	Frequency: [2] Hz (Range: 0.0 ~ 10.0)  
 
-### (6)	경계 제한: <유효, 무효>  
-위빙궤적이 용접시작 및 끝 부분의 경계부분에 의해 제한되는지 여부를 설정합니다. 본 기능이 유효이면 위빙 궤적은 용접 구간 안에 제한됩니다. ([[6.1.4 기본 패턴]](../1_Weaving_function/4_pattern.md) 참조)
+This field sets the weaving frequency, with a range of `0.0 to 10.0 Hz`. When the frequency is set to '0', the movement time will be applied instead.  
+(please refer to [[6.1.3 Frequency]](../1_Weaving_function/3_frequency.md))  
 
-### (7)	위빙 정지 시 로봇 동작: <이동, 정지>  
-위빙 패턴에서 타이머가 설정되는 경우 위빙의 좌우 끝 부분에서 위빙 동작이 정지됩니다. 이 경우 로봇의 동작은 계속 이동할 것인지 정지할 것인지를 설정합니다.
+### (4)	Default Pattern  
 
-### (8)	이동시간: [1] (범위: 0.01 ~ 10.0초), 타이머(위빙 정지): [  0] (범위 : 0.00 ~ 2.00)  
-위빙 주파수가 ‘0’으로 설정된 경우 이동시간으로 위빙을 수행합니다. 이때 각 구간별 이동시간과 구간 사이의 위빙정지시간을 설정합니다. (([[6.1.5 위빙 구간 설정]](../1_Weaving_function/5_weaving_section.md) 참고)
-    ‘위빙 주파수’가 설정된 경우에는 ‘타이머(위빙 정지)’ 항목만 설정 가능합니다.
-    설정된 주파수의 전체 시간에서 ‘타이머(위빙 정지)’에 설정된 시간을 제외한 시간 동안 로봇이 위빙 동작을 하며 위빙 정지 시간 동안은 위빙이 정지합니다. 위빙 정지 중 로봇의 이동 여부는 ‘위빙 정지 시 로봇 동작’ 설정이 적용됩니다. 
+This field sets the pattern for the weaving motion.
+(please refer to [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
 
-### (9)	위빙 구동 축: <로봇, 부가축>, 부가축 번호: [1]  
-위빙 동작을 수행할 부분이 로봇인지 부가축인지를 설정합니다. 부가축으로 설정되는 경우 로봇은 기록된 대로 그대로 이동하며 부가축만 설정 거리와 주파수만큼 움직이며 위빙을 구현합니다. 부가축을 선택하는 경우 ‘부가축 번호’ 항목에 지정된 부가축이 동작하여 위빙을 수행합니다.
+- **Left Distance(Wall Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
+- **Right Distance(Other Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
+- **Angle** : [90] degrees (Range: 0.1 ~ 180.0)
+- **Offset Angle** : When the torch orientation reference is used, the field specifies the angle at which the tilts to the left or right from its position.
+- **Wall Direaction** : <**Vertical**, **Horizon**, **Base on Torch**>
+
+### (5) Forward Angle: [0] degrees (Range : -90.0 ~ 90.0)  
+
+This field indicates the weaving angle relative to the forward direction.
+When set to 0 degrees, the forward and weaving directions form a right angle.  
+(please refer to [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
+
+### (6)	Boundary Limitation: <Enable, Disable>  
+
+This option determines whether the weaving trajectory is restricted by the boundaries at the start and end of the welding section. When this function is enabled, the weaving trajectory is confined within the welding area.  
+(please refer to [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
+
+### (7)	Robot Behavior when Weaving Stops: <Moving, Stop>
+
+When a timer is set in the weaving pattern, the weaving motion will stop at both the left and right ends of the weaving.
+In this case, this setting determines whether the robot continues to move or stops during the weaving stop period.  
+
+### (8) Move Time: [1] sec (Range: 0.0 ~ 10.0), Timer(Weaving Stop): [0] (범위 : 0.00 ~ 2.00)  
+
+If the weaving frequency is set to '0', the weaving motion will be performed based on the move time.
+In this case, the move time for each section and the weaving stop time between sections are configured.  
+(please refer to [[6.1.5 Weaving Section Setting]](../1_Weaving_function/5_weaving_section.md))  
+
+When the 'Weaving Frequency' is set, only the 'Timer (Weaving Stop)' setting can be adjusted.
+Druing the total time set for the specified frequency, the robot performs weaving for the duration excluding the time set in the 'Timer (Weaving Stop)'. During the weaving stop time, weaving stops.
+Whether the robot continues to move during the weaving stop time is determined by the setting of 'Robot Behavior when Weaving Stops'.
+
+### (9) Weaving Axis Number: [1]  
+
+This setting determines whether the part perfoming the weaving motion is the robot or an auxiliary axis.
+When set to an auxiliary axis, the robot will move as recorded, and only the auxiliary axis will move according to the set distance and frequency to implement weaving.
+If an auxiliary axis is selected, the auxiliary axis specified in the 'Auxiliary Axis Number' field will perform the weaving motion.

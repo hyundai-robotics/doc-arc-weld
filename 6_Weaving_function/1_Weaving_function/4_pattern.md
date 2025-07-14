@@ -1,45 +1,67 @@
-﻿# 6.1.4 기본 패턴
+﻿# 6.1.4 Default Pattern
 
 다음 그림에서의 각 요소를 설정합니다. 
   
 <p align="center">
- <img src="../../_assets/6_1_3.png" width="60%"></img>
- <img src="../../_assets/6_1_3_1.png" width="45%"></img>
- <em><p align="center">그림 6.1.3 벽방향에 따른 위빙 요소</p></em>
+  <img src="../../_assets/6_1_3.png" width="60%"></img>
+  <img src="../../_assets/6_1_3_1.png" width="45%"></img>
+  <em><p align="center">그림 6.1.3 벽방향에 따른 위빙 요소</p></em>
 </p>
 
+- **Left Distance(Wall Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
+- **Right Distance(Other Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
 
-### (1)	좌방향 거리
-    좌(벽)방향(左각장)의 거리를 설정합니다.
+### (1) Left Distance(Wall Direction Distance)
 
-### (2)	우방향 거리
-    우방향(右각장)의 거리를 설정합니다.
-
-### (3)	각도
-    그림 6.3과 같이 좌(벽)방향과 우방향의 각도를 설정합니다. 각도는 좌(벽)방향에서부터 우방향까지로 나타냅니다. 단, REFP 4를 사용할 경우 이 각도는 무시됩니다.
-    
-### (4)	벽방향 ([그림 6.3] 참고)
-    좌(벽)방향을 수직(그림(1)), 수평(그림(2)), 토치자세기준(그림(3)) 중 어느 것으로 할 것인지 설정합니다. 일반적으로 좌(벽)방향은 수직방향으로 사용하며 수평방향은 평면상에서 각도가 180도인 위빙에 주로 사용합니다. 토치자세기준 위빙의 좌(벽)방향은 위빙 진행방향(그림 (3)의 진행방향은 나오는 방향, ⊙)을 기준으로 반시계방향으로 설정됩니다. 토치자세기준 위빙의 경우 모든 좌(벽)방향에 대한 대응이 가능하고 위빙 진행 중 좌(벽)방향이 바뀌는 경우에도 대응할 수 있습니다.
-
-### (5)	옵셋각도([그림 6.3] 참고)
-    벽방향을 토치자세기준으로 설정한 경우 위빙면을 위빙 진행방향(그림 (3)의 진행방향은 나오는 방향, ⊙) 기준으로 회전하는 각도를 설정합니다. 0도 설정 시 좌(벽)방향과 우방향의 각도를 이등분합니다.
+Set the distance in the left (wall) direction.  
 
 
-### (6)	진행 각도
-    용접선에 대한 위빙 진동 방향의 각도입니다. 설정 가능한 범위는 -90.0 ~ 90.0도입니다. 0도 설정 시 용접선과 직각으로 위빙이 동작합니다.
+### (2) Right Distance(Other Direction Distance)
+
+Set the distance in the right direction.  
+
+
+### (3)	Angle
+
+As shown in Figure 6.3, set the angle between the left (wall) direction and the right direction.
+The angle is measured from the left (wall) direction to the right direction.
+However, when using **REFP 4**, this angle will be ignored.
+
+
+### (4)	Offset Angle (refer to [Figure 6.1.3])
+
+When the wall direction is set based on the torch posture, this setting defines the angle at which the weaving surface rotates relative to the direction of weaving progression (the dirction in Figure (3) marked with ⊙).
+When set to 0°, the angle between the left (wall) direction and the right direction is bisected.
+
+
+### (5) Wal Direction (refer to [Figure 6.1.3])
+
+Set the left (wall) direction to one of the following options: vertical (Figure (1)), horizontal (Figure (2)), or torch posture-based (Figure (3))
+Generally, the left (wall) direction is set to vertical, while the horizontal direction is typically used for weaving with a 180-degree angle on the plane.  
+
+For torch posture-based weaving, the left (wall) direction is set counterclockwise from the direction of weaving progression (the dirction in Figure (3) marked with ⊙).
+Torch posture-based weaving can accommodate all left (wall directions), and it can also adapt when the left (wall) direction changes during the weaving process.
+
+
+### (6) Forward Angle
+
+This refers to the angle of the weaving vibration direction relative to the welding line. The adjustable range is -90.0 to 90.0 degrees.
+When set to 0°, the weaving will move perpendicular to the welding line.
+
 
 <p align="center">
- <img src="../../_assets/6_1_4.png" width="60%"></img>
- <em><p align="center">그림 6.1.4. 위빙 진행 각도</p></em>
+  <img src="../../_assets/6_1_4.png" width="60%"></img>
+  <em><p align="center">Figure 6.1.4. Weaving Forward Angle</p></em>
 </p>
 
     
+### (7)	Boundary Limitation
 
-### (7)	경계제한
-    진행각도가 0도가 아닌 위빙은 위빙 구간의 시작 밑 끝 부분에서 구간 경계를 넘어가는 경우가 발생할 수 있습니다. 경계제한 설정으로 구간 경계를 제한하여 구간 경계를 넘어가지 않게 위빙 동작을 수행할 것인지 제한 없이 위빙 동작을 수행할 것인지를 설정합니다.<br/>  
+For weaving with a forward angle other than 0°, the weaving may exceed the boundary of the section at the start and end of the weaving area.  
+The boundary limitation setting allows you to choose whether the weaving should be confined within the section boundaries or if it can proceed without any restrictions beyond the section boundaries.
 
  
 <p align="center">
- <img src="../../_assets/6_1_5.png" width="60%"></img>
- <em><p align="center">그림 6.1.5 위빙 경계 제한</p></em>
+  <img src="../../_assets/6_1_5.png" width="60%"></img>
+  <em><p align="center">Figure 6.1.5 Weaving Boundary Limitation</p></em>
 </p> 

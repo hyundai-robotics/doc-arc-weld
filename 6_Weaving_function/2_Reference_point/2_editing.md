@@ -1,34 +1,43 @@
-﻿# 6.2.2 참조점 편집
+﻿# 6.2.2 Reference Point Edit
 
-### (1)	참조점 기록 (숨은 포즈 방식)  
- -    ①	Jog키로 참조점을 기록할 위치로 이동합니다
- -    ②	커서를 참조점이 기록될 위치(통상 ```weaving on``` 명령 바로 위쪽 스텝)로 이동합니다.
- -    ③	[명령입력] → [아크] → [refp]를 눌러 참조점 명령을 기록합니다.
- -    ④ 사용할 참조점의 종류에 따라 참조점 번호를 입력합니다.
+### (1) Recording Reference Points : Similar to the Move Command
 
-### (2)	참조점 기록 (포즈변수 입력 방식)  
- -    ①	[명령입력] → [아크] → [refp]를 눌러 참조점 명령을 기록합니다.
- -    ②	사용할 참조점의 종류에 따라 참조점 번호를 입력합니다.
- -    ③	참조점 위치로 사용할 포즈변수를 입력합니다.
+- ① **Move the Cursor**: Move the cursor to the location where the reference point will be recorded (typically just above the `weaving on` command step).
+- ② **Record the Reference Point Command**: Press [**Command Input > arcweld > refp**] to record the reference point command.
+- ③ **Enter the Reference Point Number**
+- ④ Pose Method:
+  - The *Hidden Pose Method* records the current robot position.
+  - When using the *Pose Variable Input Method*, enter the pose variable after the reference point number.
 
-### (3)	참조점 이동  
-참조점은 위빙 형태를 결정하기 위한 위치이므로 통상 재생 시에는 참조점으로 이동하지 않습니다. 그러나 참조점의 위치 확인 및 변경 시에는 다음의 과정을 수행합니다.
- -    ①	커서를 참조점 명령에 위치시킵니다.
- -    ②	스텝 전진키를 누르면 참조점으로 이동합니다.
 
- 이 때 보간 종류는 직선으로 하고, 이동속도와 툴, ACC등은 위빙구간 시작 스텝에 기록되어 있는 조건을 이용합니다.
+### (2) Moving to the Reference Point
 
-### (4)	참조점 위치 수정 (숨은 포즈 방식 용)  
- -    ①	커서를 참조점 명령에 위치시킵니다. 
- -    ②	Jog 키를 이용하여 변경할 참조점의 위치로 이동합니다. 
- -    ③	**[SHIFT] + [위치수정]** 키를 누르면 참조점의 위치가 변경됩니다. 
+Reference points determine the weaving pattern, so typically, the robot does not move to the reference point during playback.
+However, when checking or modifying the reference point location, follow these steps.  
 
-### (5)	참조점 명령 삭제  
- -    ①	커서를 참조점 명령에 위치시킵니다. 
- -    ②	**[SHIFT] + [DEL]** 키를 누르면 참조점의 명령이 삭제됩니다. 
+- ① Move the cursor to the reference point command.
+- ② Press the step forward key to move to the reference point.  
 
-### (6)	참조점 번호 수정  
- -    ①	커서를 참조점 명령에 위치시킵니다. 
- -    ②	[**ENTER**]키를 누릅니다.
- -    ③	새로운 참조점 번호를 입력하고 [**ENTER**]키를 누릅니다. 
- -    ④	[**ENTER**]을 다시 한번 누르면 참조점 번호가 변경됩니다. 
+When moving, the interpolation type is set to linear, and the movement speed, tool, and acceleration settings will be based on the conditions set in the weaving section's start step.
+
+
+### (3)	Modifying the Reference Point (for Hidden Pose Method)
+
+- ① Move the Cursor to the reference point command.
+- ② Use the Jog key to move to the new location for the reference point.
+- ③ Press **[SHIFT] + [위치수정]** key to change the reference point's location.
+
+
+### (4) Deleting the Reference Point Command
+
+- ① Move the cursor to the reference point command.
+- ② Press **[SHIFT] + [DEL]** to delete the reference point command.
+
+
+### (5)	Modifying the Reference Point Number
+
+- ① Move the cursor to the reference point command.
+- ② Press **[ENTER]** key.
+- ③ Input the new reference point number and press **[ENTER]**.
+- ④ Press **[ENTER]** again to confirm the change of the reference point number.
+

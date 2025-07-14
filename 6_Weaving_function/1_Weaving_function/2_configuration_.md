@@ -1,10 +1,10 @@
-﻿# 6.1.2 위빙형태 
+﻿# 6.1.2 Weaving Type    
 
-다음 그림과 같은 위빙의 패턴 모양을 설정합니다. 
 
+Set the pattern shape of the weaving as shown in the following figure.
  
 <p align="center">
- <img src="../../_assets/6_1_2.png" width="60%"></img>
- <em><p align="center">그림 6.1.2. 위빙 패턴 종류</p></em>
+  <img src="../../_assets/6_1_2.png" width="60%"></img>
+  <em><p align="center">Figure 6.1.2. Weaving Pattern Type</p></em>
 </p>
 
