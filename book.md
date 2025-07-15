@@ -1,256 +1,259 @@
-﻿# Hi6 로봇제어기 기능설명서 - 아크 용접
+﻿# Hi6 Robot Controller Functional Manual - Arc Welding
 
-이 매뉴얼은 8개의 장으로 이루어져 있습니다.
+This manual consist of 8 chapters.
 
-### 1장 Arc 용접 기본사항
-Arc 용접 로봇을 처음 사용할 때 필요한 설정, 기본 교시 방법과 편의 기능에 대해 설명합니다.
+### Chapter 1: Arc Welding Basics
+This chapter explains the settings, basic teaching methods, and convenience function required when using an Arc welding robot for the first time.
 <br/><br/>
 
-### 2장 명령어 삽입
-다양한 Arc 용접 관련 명령어의 소개와 간단한 설정 방법에 대해 소개합니다. 이 장을 통해 당사 Arc 용접 로봇이 지원하는 기본 기능을 한 눈에 볼 수 있습니다.
+### Chapter 2: Inserting Commands
+This chapter introduces various Arc welding related commands and their simple setup methods. Through this chapter, you can get a quick overview of the basic functions supported by our company Arc Welidng Robots.
 <br/><br/>
 
-### 3장 명령어 속성창
-2장에서 소개한 일부 명령어들의 세부 설정을 위한 속성 기능에 대해 소개합니다. Arc 용접 로봇 사용 시 필수로 설정해야 하는 Arc 용접조건 편집 방법과 응용 기능 명령어의 편집 방법에 대해 설명하고 있습니다.
+### Chapter 3: Command Property
+This chapter explains the property functions for detailed settings of some commands introduced in Chapter 2. It explains how to edit Arc welding conditions, which are essential settings when using an Arc welding robot, and how to edit application function commands.
 <br/><br/>
 
-### 4장 Arc 용접기 설정
-사용하고자 하는 Arc 용접기를 선택하는 방법과 용접기별로 설정해야 하는 항목을 소개합니다.
+### Chapter 4: Arc Welder Settings
+This chapter introduces how to select the Arc Welder you want to use and the items that need to be set for each welder.
 <br/><br/>
 
-### 5장 Arc 용접 조건 편집
-Arc 용접 조건 편집 방법에 대해 설명합니다. 용접 시 필수로 설정해야 할 전류, 전압, 용접 모드, 가스 예/후출 등에 대한 설정 방법이 소개되고 있습니다. 용접 조건은 용접기마다 다르기 때문에, 사용하고자 하는 용접기에 대한 내용만 숙지하여도 무방합니다.
+### Chapter 5: Editing Arc Welding Conditions
+This chapter explains how to edit Arc welding conditions. It introduces how to set essential parameters for welding, such as current, voltage, welding mode, and gas pre/post-flow. Since welding conditions vary by welder, you can only understand the content about the welder you want to use.
 <br/><br/>
 
-### 6장 위빙 기능 (WEAVING)
-위빙에 대한 기능 설명과 세부 설정 방법에 대해 설명합니다. 위빙 동작을 사용하지 않을 경우 생략하여도 무방합니다.
+### Chapter 6: Weaving Function
+This chapter introduces the weaving function and its detailed settings. You can skip this chapter if you are not using the weaving operation.
 <br/><br/>
 
-### 7장 용접 데이터 모니터링
- Arc 용접기가 용접 중에 보내는 데이터를 활용하는 기능에 대해 소개하고 있습니다. 용접 중에 용접기가 보내주는 데이터를 실시간으로 모니터링 할 수 있는 방법과 그 데이터를 파일로 저장하는 기능 등을 설명합니다. 또한 저장된 이전 데이터를 그래프로 그리고 편리하게 확인할 수 있는 기능과 용접 품질을 수치화 하는 기능을 설명합니다.
+### Chapter 7: Arc Welding Data Monitoring
+This chapter explains functions that utilize data sent by the welder during welding process. It describes how to monitor real-time data from the welder and how to save that data to a file. It also describes features for plotting and conveniently reviewing previously saved data as graphs, as well as functions for quantifying welding quality.
 <br/><br/>
 
-### 8장 Arc 용접 응용기능
-Arc 용접 응용 기능으로 특수한 상황에서 유용하게 사용될 수 있는 기능에 대해 소개를 합니다. 용접 대상물의 용접선이 균일하지 않거나, 용접 대상물 위치에 오차가 발생하여 용접 품질에 문제가 있을 경우 적용 가능한 기능들의 간단한 소개를 하고 있습니다.
+### Chapter 8: Arc Welding Application Functions
+This chapter introduces Arc welding application functions that can be useful in special situations.
+It provides a brief overview of functions that can be applied when the welding line of the workpiece is uneven, or when errors in the workpiece position lead to issues with welding quality.
 <br/><br/>
 
-당사 Arc 용접 로봇을 처음 사용할 경우 1~5장은 필독을 권장하고, 6~8장은 필요한 기능들을 선택적으로 읽어보는 것을 권장합니다.
+When using our Arc Welding Robots for the first time, we recommend reading Chapters 1 ~ 5. For Chapters 6 ~ 8, we suggest selectively reading about the functions you need.
 
 <br>
-# 1. Arc용접 기본사항# 1.1 개요
+# 1. Arc Welding Basics# 1.1 Overview
 
-다음 그림과 같은 Arc용접 작업을 티칭 합니다.
+Teach the Arc welding operation as shown in the following figure.
 
 
 <p align="center">
- <img src="../../_assets/1_1_1.png" width="60%"></img>
- <em><p align="center">그림 1.1.1. 기본 Arc 용접 티칭</p></em>
+  <img src="../../_assets/1_1_1.png" width="60%"></img>
+  <em><p align="center">Figure 1.1.1. Basic Arc Weld Teaching</p></em>
 </p>
 
 </br>
 
-(1)	제어기 전면부의 전원 스위치를 켭니다.
+(1) Turn on the power switch on the front of the Controller.
 
-(2)	티치펜던트의 `[모드 스위치]`를 수동모드로 선택합니다.
+(2) Select the `[mode witch]` on the (Teach Pendant)TP in manual mode.
 
-(3)	티치펜던트의 `[프로그램]`을 누른 후 프로그램 번호를 입력합니다.
+(3) Press the `[Program]` on the TP and enter the program number.
 
-(4)	여기까지 진행하면 티치펜던트 화면은 아래 그림과 같이 표시됩니다.
+(4) If you proceed this far, the TP screen will be displayed as shown below.
 
 <p align="center">
- <img src="../../_assets/1_1_2.png" width="70%"></img>
- <em><p align="center">그림 1.1.2. 신규 프로그램 번호가 선택된 화면</p></em>
+  <img src="../../_assets/1_1_2.png" width="70%"></img>
+  <em><p align="center">Figure 1.1.2. Screen with new program number selected</p></em>
 </p>
 
 </br>
 
-(5)	티치펜던트의 `[Motor On]` 버튼을 눌러 로봇의 모터에 전원을 투입합니다.
+(5) Press the `[Motor On]` button on the TP to power the robot's motor.
 
-(6)	축 조작키를 사용해 로봇의 토치를 스텝1의 위치로 이동합니다.
+(6) Use the axis control key to move the robot's torch to the position in Step 1.
 
-(7)	`[기록조건]` 키를 누른 후 원하는 보간 종류, 속도, accuracy, 툴 번호를 지정합니다.  
-            
-- 방향키를 이용하여 원하는 항목으로 이동 후 값을 설정하고 `[ENTER]` 키를 누르면 설정이 저장됩니다.
-- 툴 번호는 `[툴]` 키를 누른 후 원하는 툴 번호를 입력합니다. (`[툴]`키는 `[SHIFT] + [좌표계]`키를 눌러 선택합니다.) 
+(7) Press the `[rec. cond]` key, then specify the desired interpolation type, speed, accuracy, and tool number.  
+
+- After moving to the desired item using the direction key, set the value and press the `[ENTER]` key to save the setting
+- press the `[tool]` key and enter the desired tool number.
 
 
 <p align="center">
  <img src="../../_assets/1_1_3.png" width="40%"></img>
- <em><p align="center">그림 1.1.3. 기록조건 표시내용</p></em>
+ <em><p align="center">Figure 1.1.3. Recording Conditions</p></em>
 </p>
 
 </br>
 
-- `[기록]`키를 누르면 아래 그림과 같이 스텝이 기록됩니다.
+- Press the `[rec. cond]` key to record the step as shown below.
 
 <p align="center">
  <img src="../../_assets/1_1_4.png" width="70%"></img>
- <em><p align="center">그림 1.1.4. 스텝 기록 화면 (1)</p></em>
+ <em><p align="center">Figure 1.1.4. Program with recorded Step (1)</p></em>
 </p>
 
 </br>
 
-(8)	스텝2~4에 대해서도 (5) ~ (7)의 과정을 반복합니다. 
-
+(8)	Repeat steps 5 through 7 for steps 2 through 4.
  
 
 <p align="center">
  <img src="../../_assets/1_1_5.png" width="70%"></img>
- <em><p align="center">그림 1.1.5. 스텝 기록 화면 (2)</p></em>
+ <em><p align="center">Figure 1.1.5. Program with recorded Step (2)</p></em>
 </p>
 
-(9) 용접구간이 스텝2 ~ 스텝3이므로, 스텝2로 커서를 이동합니다. 
+(9) Since the welding area is from Step 2 to Step 3, move the cursor to Step 2.
 
-- **[명령입력]-[아크용접]-[weaving]** 을 입력, 조건번호를 입력하고 `[ENTER]`키를 누릅니다.
-- 같은 방법으로 **[ARCON]** 을 입력합니다. 조건번호를 입력하고 `[ENTER]`키를 누릅니다.  
-(Arc용접 조건설정은 [5장 Arc용접 조건 편집](../../5_Condition_editing/README.md)을 참고하십시오.)
+- Enter the **[cmd. Input] > [arcweld] > [weaving]**, input the condition number, and press the `[ENTER]` key.
+- In the same way, enter the **[arcon]**, input the condition number, and press the `[ENTER]` key.
+(For Arc Welding condition settings, refer to [5. Editing Arc Welding Conditions](../../5_Condition_editing/README.md).)
 
 
-(10) Arc용접이 종료되는 스텝인 스텝3으로 커서를 이동합니다.
+(10) Move the cursor to Step 3, which is the step where Arc Welding ends.
  
-- 다시 **[명령입력]-[아크용접]-[arcon]** 을 입력하고 off로 설정합니다.
-- 같은 방법으로 **[weaving]** 을 입력하여 off로 설정합니다.
+- Again, enter the **[weaving]** and set it to off.
+- Also, enter the **[arcoff]**.
 
 
-(11) 스텝3의 속도를 원하는 용접속도로 수정합니다. (Ex. 12mm/s)
+(11) Modify the speed of Step 3 to your desired welding speed (e.g., 20mm/s).
 
-(12) 마지막으로 프로그램을 종료하는 **[end]** 명령을 입력합니다.
-**[명령입력] → [FLOW제어] → [end]** 키를 누르면 **[end]** 명령이 입력됩니다.
+(12) Finally, enter the **[cmd. input] > [flowctrl] > [end]** command to terminate the program.
 
 <p align="center">
  <img src="../../_assets/1_1_6.png" width="70%"></img>
- <em><p align="center">그림 1.1.6. 티칭이 완료된 화면</p></em>
-</p># 1.2 Arc 용접기능 설정# 1.2.1 Arc 용접 용도 설정
+ <em><p align="center">Figure 1.1.6. Teaching Completion Screen</p></em>
+</p># 1.2 Arc Welding function settings# 1.2.1 Arc Welding application settings
 
-(1)	로봇의 종류에 따라 Arc용접기능이 활성화 되어있지 않는 경우가 있습니다. 이때는 다음의 과정에 따라 Arc용접기능을 설정하십시오. (Arc용접 기능 설정은 엔지니어 권한이 필요합니다.)
+(1) Depending on the Robot model, the Arc welding function might not be active. If in this the case, follow the steps below to enable. (Note: Engineer authority is required to set up the Arc welding function)
 
-(2)	수동모드에서 **『시스템』 → 『5: 초기화』 → 『3: 용도설정』** 을 누르면 [그림 1-7]과 같이 로봇의 용도, 사용하고자 하는 용접기, 사용자키 및 입출력신호 할당을 설정할 수 있는 대화상자가 나타납니다.
+(2) In manual mode, press **[System > 5: Initialization > 3: Usage setting]**. A dialog box will appear, as shown in [Figure 1.2.1.], allowing you to configure the robot's application, the welder you want to use, user keys, and I/O signal assignments.
 
-(3)	[그림 1.7]은 아크 용접 설정 유효로, **『용접기 정보』** 에서 확인한 용접기 번호를 1번('**효성**')으로 선택한 경우입니다. 이 화면에서 **[용접기 설정]** 을 누르면 사용하고자 하는 용접기의 조건을 설정하는 대화상자로 진입합니다.
+(3) [Figure 1.2.1] shows an active Arc welding steps, where the welder number in welder information has been selected as **No.4(Fronius)**. From this screen, pressing **welder setting** will take you to a dialog box where you can configure the conditions for the desired welder.
 
-(4)	용접기 특성 파일의 자세한 설정은 [[4장 Arc용접기 설정](../../4_Setting/)]을 참고하시기 바랍니다.
+(4) For detailed settings of the welder characteristic file, please refer to [4. Arc Welder Settings](../../4_Setting/README.md).
 
 
 <p align="center">
  <img src="../../_assets/1_2_1.png" width="70%"></img>
- <em><p align="center">그림 1.2.1. 용도설정 대화상자</p></em>
-</p># 1.2.2 Arc 용접 각종 신호 및 기능 설정
+ <em><p align="center">Figure 1.2.1. Usage Setting Dialog</p></em>
+</p># 1.2.2 Arc Welding various signals and funtion settings
 
-수동모드 화면에서 **『시스템』 → 『4: 응용 파라미터』 → 『2: 아크용접』** 을 누르면 다음 화면과 같이 Arc용접의 응용을 위한 각종 조건들을 설정할 수 있는 화면이 나타납니다.
+On the manual mode screen, press **[System > 4: Application parameter > 2: Arc welding]** to bring up a screen where you can set various conditions for Arc welding applications, as shown below.
 
 
 <p align="center">
  <img src="../../_assets/1_2_2.png" width="70%"></img>
- <em><p align="center">그림 1.2.2. Arc용접 응용조건 대화상자</p></em>
+ <em><p align="center">Figure 1.2.2. Arc Welding Application parameter Dialog</p></em>
 </p>
  
 
-각 항목별 내용은 다음과 같습니다.
-## [일반]
-### 인칭 속도(%)
-| 항목 | 설명 |
+The details for each item are as follows:
+
+## [General]
+### Inching speed(%)
+| Item | Description |
 |------|------|
-|**(저속)**[1 ~ 50] %<br>**(고속)**[10 ~ 100] %| `[SHIFT]+[2]` (인칭), `[SHIFT]+[3]` (역인칭)키를 사용한 와이어의 인칭 및 역인칭 실행 시 와이어 송급 속도입니다.<br> 저속 및 고속(3초 이상 키를 누르고 있을 때) 동작 시 송급 속도를 설정합니다.|
+|**(Low)**[1 ~ 50] %<br>**(High)**[10 ~ 100] %| This refers to the wire feed speed when jogging the wire forward(`[SHIFT]+[2]` (wire inching)) or backward(`[SHIFT]+[3]` (wire retreat)).<br> You can set the feed speed for both low-speed and high-speed operation (when the key is pressed for 3 seconds or more).|
 
-### `[GUN]`키 상태 출력신호
-| 항목 | 설명 |
+### `[GUN]` key status output signal
+| Item | Description |
 |------|------|
-|출력신호|티치펜던트 `[GUN]`키의 현재 상태를 출력하기 위한 신호를 설정합니다.|
+|output signal| Set the signal to output the current status of the `[GUN]` key on the TP.|
 
-### `[GUN]`키 제어 불능 입력신호
-| 항목 | 설명 |
+### `[GUN]` key control disable input
+| Item | Description |
 |------|------|
-|입력신호|외부에서 `[GUN]`키의 on/off를 설정할 수 있는 입력신호를 할당합니다. 해당 신호가 할당되면 티치펜던트의 `[GUN]`키를 눌러 아크용접 on/off 상태를 변경할 수 없습니다. 이 기능을 이용하면 사용자 실수로 `[GUN]`키를 눌러 용접구간에서 용접을 하지 않는 문제를 방지할 수 있습니다.<br>(할당된 신호가 입력되면 `[GUN]`키의 LED가 off되며 로봇이 재생되는 경우 Arc 용접 구간에서 용접을 수행하지 않는 **Dry Run** 상태로 작업이 진행됨)|
+|Input signal| Assign an input signal to externally control the `[Gun]` key's on/off status. Once this signal is assigned, you won't be able to change the arc welding on/off status by pressing the `[GUN]` key on the TP. This function helps prevent issues where welding might be skipped in a welding section due to accidential presses of the `[GUN]` key.<br> (When the assigned signal is received, the LED of the `[GUN]` key turns off, and the robot enters a **Dry Run** state where no welding is performed in the arc welding section, despite the robot running.)|
 
-### 냉각수 에러 입력신호
-| 항목 | 설명 |
+### Coolant Error Input Signal
+| Item | Description |
 |------|------|
-|입력신호|수냉식 Arc용접 토치를 사용하는 경우 냉각수 순환에 문제 발생 상태를 입력 받기 위한 신호를 설정합니다. 용접 중 본 신호가 입력되면 에러로 판단하여 로봇 기동과 용접 작업을 정지합니다.|
+|Input Signal| For water-cooled Arc welding torches, a signal is configured to detect issues with coolant circulation. When this signal is received during welding, it is considered an error, which triggers the robot's operation and welding process to stop.|
 
 
-### 용접기 에러처리
-| 항목 | 설명 |
+### Welder Error treat
+| Item | Description |
 |------|------|
-|[**무효**, **경고**, **에러**]|용접기 에러를 처리하는 방법을 설정합니다.|
+|[**Disable**, **Error**, **Error**]| Set how to handle welder errors.|
 
-### 와이어 사용 불가 시 처리
-| 항목 | 설명 |
+### Wire Empty error treat
+| Item | Description |
 |------|------|
-|[**무효**, **경고**, **에러**]|용접 와이어가 없을 때 에러처리 방법을 설정합니다.|
+|[**Disable**, **Error**, **Error**]| Set the error handling method when no welding wire is present.|
 
-### 가스 압력 에러 처리
-| 항목 | 설명 |
+### Gas Pressure Error treat
+| Item | Description |
 |------|------|
-|[**무효**,**경고**, **에러**]|가스 압력 상태 이상 시 에러처리 방법을 설정합니다.|
+|[**Disable**,**Error**, **Error**]| Set the error handling method in case of gas pressure abnormalities.|
 
-### Arc 용접 I/V 변경 자동저장 설정
-| 항목 | 설명 |
+### Arc Welding I/V change auto saving
+| Item | Description |
 |------|------|
-|[**무효**, **유효**]|**Arc용접 전류전압 변경** 대화상자에서 전류와 전압 값을 변경할 경우 그 값을 자동 저장할 것인지 여부를 결정합니다. 자세한 내용은 [[1.3.3 용접 중 전류/전압 변경기능]](../3_Convenient_functions/3_change_current_voltage/README.md)을 참조하십시오.|
+|[**Disable**, **Enable**]| This setting determines whether to automatically save changes to current and voltage values when they are changed within the **arc change IV(Arc Welding Current/Voltage Adjustment dialog box)**. For more details, please refer to [[1.3.3 Change the Current/Voltage during Welding]](../3_Convenient_functions/3_change_current_voltage/README.md).|
 
-### 고중량 토치용 진동 저감 기능 설정
-| 항목 | 설명 |
+### Vibration reduction for heavy torch
+| Item | Description |
 |------|------|
-|[**무효**, **용접점**, **전 구간**]|고중량 Arc 토치용 사용 시 진동을 줄이는 방법을 설정합니다. 수냉식 토치나 push-pull 토치와 같은 중량이 큰 토치를 사용할 때 발생할 수 있는 진동을 감소시킬 수 있습니다. <br>**용접점**으로 설정 시 로봇 작업속도에 큰 변화 없이 용접점 진입구간에서 상당량의 진동을 줄일 수 있습니다. <br>**전 구간**으로 설정 시 고중량 Arc 토치용 필터가 반영되어 전 구간에서 진동을 거의 발생하지 않습니다. 하지만, 로봇의 작업속도가 느려질 수 있습니다.|
+|[**Disable**, **Welding point**, **All range**]| This setting is designed to reduce vibrations when using heavy torches. It helps to minimize vibrations that may occur when using heavy torches such as water-cooled or push-pull torches.<br> When set to **Welding Points**, a significant reduction in vibrations can be achieved in the welding point entry section without substantial changes in the robot's operating speed.<br> When set to **All range**, a filter specifically designed for heavy Arc torches is applied, virtually eliminating vibrations throughout the entire preocess. However, this may result in a decrease in the robot's operating speed.|
 
-### 수동모드 아크용접 설정
-| 항목 | 설명 |
+### Arc welding enable during manual mode
+| Item | Description |
 |------|------|
-|[**무효**, **유효**]|수동모드에서 스텝 전진을 통해 용접을 가능하게 할 것인지에 대한 설정입니다. <br>**유효**로 설정 시 실행단위가 **End**로 설정된 상태에서 Arc용접 구간으로 스텝 전진을 하면 용접이 가능합니다. 자세한 내용은 [[1.3.4 수동모드 아크용접]](../3_Convenient_functions/4_manual_mode.md)을 참고하십시오.|
+|[**Disable**, **Enable**]| This setting determines whether welding can be performed through ste-forward in manual mode.<br> When set to **Enable**, welding can be performed by stepping forward to the Arc welding section, with the execution unit set to **End**. For more details, please refer to [[1.3.4 Manual mode Arc Welding]](../3_Convenient_functions/4_manual_mode.md).|
 
-### 로봇 기동 시 용착 검사
-| 항목 | 설명 |
+### Stick check at cycle start
+| Item | Description |
 |------|------|
-|[**검사**, **생략**]|로봇이 처음으로 사이클을 시작할 때 와이어 용착 검사를 수행할 것인지 설정합니다. <br>**검사**를 수행하는 경우 초반에 0.2초 정도 검사 후 로봇이 이동합니다.|
+|[**Check**, **Ignore**]| This setting determines whether a wire stick check will be performed when the robot starts its first cycle.<br> When **"check"** is enabled, the robot will perform a check for approximately 0.2 seconds at the beginning before proceeding with movement.|
 
-### TCP 속도 변화율 모니터링
-| 항목 | 설명 |
+### TCP speed ratio monitoring
+| Item | Description |
 |------|------|
-|[**무효**, **유효**]|TCP 속도 변화율 모니터링 여부를 설정합니다.|
+|[**Disable**, **Enable**]| This setting determines whether to monitor the rate of change in the TCP speed.|
 
-## [터치센싱]
-### 터치센싱 정지설정
-| 항목 | 설명 |
+## [Touch Sensing]
+### Touch Sensing Stop Setting
+| Item | Description |
 |------|------|
-|[**즉시**, **일반**]|터치센싱이 작업물을 감지할 때 **즉시정지** 할것인지 **일반정지** 할 것인지 설정합니다. <br>일반정지 시 와이어 휘어짐이 커질 경우, **즉시정지**로 설정하여 사용합니다.|
+|[**Immediately**, **Normal**]|Set whether to **immediately stop** or **normal stop** when Touch Sensing detects a work piece.<br>If wire bending increases during a normal stop, set it to **immediately stop**|
 
-## [아크 궤적 모니터링]
-### 활성화
-| 항목 | 설명 |
+## [Arc trajectory Monitoring]
+### Activation
+| Item | Description |
 |------|------|
-|[**꺼짐**, **켜짐**]|아크 궤적 모니터링 여부를 설정합니다.|
+|[**Disable**, **Enable**]|Sets whether to monitor the Arc trajectory.|
 
-# 1.2.3 충돌센서 신호 설정
-아크용접로봇 시스템은 토치의 변형을 방지하기 위해 충돌센서를 사용합니다. 충돌센서는 기본적으로 부논리를 사용하여 센서 케이블의 단선 등이 발생 시 바로 확인할 수 있도록 합니다.
+# 1.2.3 Collision sensor signal settings
 
-설정 대화상자는 다음과 같습니다. 
+Arc welding robot systems uses a collision sensor to prevent torch deformation. The collision sensor basically uses negative logic to immediately detect issues such as a disconnected sensor cable.
 
-**『시스템』 → 『1: 사용자 환경』** 에서 충돌센서 처리 방법을 설정할 수 있습니다.  
+The setup dialog box is as follows:
 
-## [충돌센서 처리]
-| 항목 | 설명 |
+You can configure the collision sensor processing method on **[System > 1: User Environment]**.
+
+
+## [Collision sensor process]
+| item | Description |
 |------|------|
-|**비상정지**|충돌센서 신호 입력 시 로봇이 모터를 off하고 비상 정지 수행|
-|**정지**|충돌센서 신호 입력 시 로봇이 모터를 On 상태로 유지하고 정지 수행|
+|**Emergency Stop**|When a collision sensor signal is input, the robot turns off its motor and performs an emergency stop|
+|**Stop**|When a collision sensor signal is input, the robot keeps its motors On and performs a stop|
 
-## [신호논리 변경 방법]
-툴이 충돌하여 충돌센서 신호가 on될 경우 모터온이 되지 않습니다. 이러한 경우에는 다음과 같이 신호논리를 부논리로 바꾸어 주어야 합니다. 
+## [How to Change Signal Logic]
+If the tool collides and the collision sensor signal turns on, the motor will not turn on. In this case, you need to change the signal logic to negative logic as follows.
 
-- **『시스템』 - 『제어파라미터』 - 『입력/출력 신호 설정』 - 『입력신호 속성』** - 신호 추가 및 부논리 체크박스 로 정논리/부논리 변경
+- **[System > 2: Control parameter > 2: Input/Output signal setting > 1: Input signal attribute]** - Adding a Signal and Checking the Negative Logic Box  
+
 
 <p align="center">
  <img src="../../_assets/1_2_3.png" width="70%"></img>
- <em><p align="center">그림 1.2.3. 신호 논리 반전 방법</p></em>
+ <em><p align="center">Figure 1.2.3. How to Change Signal Logic</p></em>
 </p>
 
 {% hint style="info" %}
-[기타 항목] 
-시스템의 입력신호 설정 항목에서 충돌 센서를 설정하는 경우 이 신호의 입력을 우선 확인하며 용접기 통신으로 입력되는 충돌 센서 신호 입력은 무시됩니다.
-{% endhint %}# 1.3 Arc 용접 편의 기능# 1.3.1 가스 체크, 와이어 인칭(Inching) 및 역인칭(Retract)
+When you set up a collision sensor in the system's input signal settings, the system will prioritize the input from this signal. Any collision sensor signals received via welder communication will be ignored.
+{% endhint %}
+# 1.3 Arc Welding Convenience Functions# 1.3.1 Gas Check, Wire Inching, and Wire Retract
 
-Arc 용접장치 중 실드 가스 밸브와 와이어 송급장치(wire feeder)의 모터를 제어하는 기능입니다. 가스 체크 기능을 이용하여 현재 실드가스 유량을 확인할 수 있고, 인칭 및 역인칭 기능을 이용하면 용접 토치 밖으로 돌출되는 와이어 길이를 조절할 수 있습니다.
+This describes the functionality for controlling the shield gas valve and the wire feeder motor in an arc welding system. You can check the current shield gas flow rate using the gas check function. The inching and reverse inching(retreat) functions let you adjust the length of the wire protruding from the welding torch.
 
-용도 및 조작 방법은 다음과 같습니다. 
+Here are the functions and how to use them: 
 
 <style>
   table {
@@ -260,823 +263,591 @@ Arc 용접장치 중 실드 가스 밸브와 와이어 송급장치(wire feeder)
   }
 </style>
 
-### 가스 체크 기능
+### Gas Check
 
-| 항목      | 내용                     |
+| Item      | Description                     |
 | ------- | ---------------------- |
-| **단축키** | `[Shift]+[1]`          |
-| **전용키** | 사용자키 `GAS CHK`         |
-| **용도**  | 실드가스 밸브를 열어 실드가스 유량 확인 |
+| **HotKey** | `[Shift]+[1]`          |
+| **Dedicated Key** | User Key `GAS CHK`         |
+| **Function**  | Open the shield gas valve to verify the gas flow rate |
 
-### 인칭 기능
+### Wire Inching
 
-| 항목      | 내용                          |
+| Item      | Description                          |
 | ------- | --------------------------- |
-| **단축키** | `[Shift]+[2]`               |
-| **전용키** | 사용자키 `inching`              |
-| **용도**  | 와이어를 토치 앞쪽으로 송급하여 와이어 길이 조절 <li>저속 인칭: 키를 누른 후 3초 이내</li> <li>고속 인칭: 키를 누른 후 3초 이상</li> |
+| **HotKey** | `[Shift]+[2]`               |
+| **Dedicated Key** | User Key `inching`              |
+| **Function**  | Feed the wire forward out of the torch to adjust its length <li>Slow Inching: Press the key for less than 3 seconds</li> <li>Fast Inching: Press the key for 3 seconds or more</li> |
 
-### 역인칭 기능
+### Wire Retract
 
-| 항목      | 내용                 |
+| Item      | Description                 |
 | ------- | ------------------ |
-| **단축키** | `[Shift]+[3]`      |
-| **전용키** | 사용자키 `retract`     |
-| **용도**  | 와이어를 되감아 와이어 길이 조절 <li>저속 역인칭: 키를 누른 후 3초 이내</li>  <li>고속 역인칭: 키를 누른 후 3초 이상</li> |
+| **HotKey** | `[Shift]+[3]`      |
+| **Dedicated Key** | User Key `retract`     |
+| **Function**  | Rewind the wire to adjust its length <li>Slow Inching: Press the key for less than 3 seconds</li> <li>Fast Inching: Press the key for 3 seconds or more</li> |
+<br/>
 
+### Inching Speed Setting
+ >- Navigate to **[System > 4: Application parameter > 2: Arc welding]**
+ >- Within the Arc welding settings menu, Set your values for both low and high speeds: **Inching speed(%): Low=[---]%, High=[---]%**
+ >- The speed is displayed as a percentage of the maximum inching speed.
+ >- Depending on your specific welder model, changes to the inching speed may not be reflected.
+# 1.3.2 High-speed mobility function
 
-### 인칭 속도 설정
- >- 수동설정 화면에서 **『시스템』 → 『4: 응용 파라미터』 → 『2: 아크용접』** 을 선택합니다.
- >- Arc 용접 설정메뉴 중에서 **『1: Inching 속도: 저속=[---]%, 고속=[---]%』** 의 값을 원하는 저속 및 고속 값으로 설정합니다. 속도는 최대 인칭속도에 대한 비율(%)로 표시됩니다.
- >- 용접기 모델에 따라 인칭속도 변경이 반영되지 않을 수 있습니다.
+When an Arc welding program runs, the robot's movement speed in welding sections is very slow. This leads to a significant amount of time being consumed during test runs to verify the robot's working position.
 
-# 1.3.2 고속 이동 기능
-
-Arc 용접이 포함된 프로그램이 재생될 때 용접 구간에서는 로봇의 이동속도가 매우 느리기 때문에, 로봇의 작업 위치 확인을 위한 시험 운전을 할 때에 그 소요시간이 오래 걸리는 문제가 있습니다.  
-이를 해결하기 위해 용접 구간을 기록된 속도보다 더 빠르게 고속으로 이동할 수 있는 고속 이동 기능을 제공합니다.  
+To address this, we offer a high-speed movement function that allows the robot to run through welding sections faster than their recorded speed.
 
 {% hint style="info" %}
-이 기능은 수동모드의 스텝 전/후진 시에만 동작되도록 제한됩니다.
+This function is limited to operating only during step forward/backward movements in manual mode.
 {% endhint %}  
 
-고속 이동 기능이 실행될 때의 로봇 이동 속도는 조건설정의 **『스텝 전/후진시의 최고속』** 에 제한되지 않습니다. 또한 고속 이동 기능 적용 상태에 상관 없이 용접 구간에서 기능의 설정과 해제가 가능합니다. (예, 용접 구간에서 고속 이동 기능 실행 중 고속 이동 기능 실행 해제 가능)
+The robot's movement speed when the high-speed movement function is active is not limited by the **"Maximum speed during step forward/backward"** in the condition settings. Furthermore, you can enable or disable the high-speed movement function within a welding section, regardless of its current application status(e.g., you can disable it even while it's currently running within a welding section).
 
-조작 방법은 다음과 같습니다.
+The operation method is as follows:
 
 
-### 수동 최고속 스텝 전/후진
+### Manual Max-speed Step FWD/BWD
 
-| 항목              | 내용              |
+| Item              | Description              |
 | --------------- | --------------- |
-| **단축키**         | `[Shift]+[FWD]` <br> `[Shift]+[BWD]` |
-| **용도**          | 수동 최고속으로 전/후진   |
+| **Dedicated Key**         | `[Shift]+[FWD]` <br> `[Shift]+[BWD]` |
+| **Function**          | Move the robot FWD/BWD at manual maximum speed. |
 
-### 고속 이동 중 `[SHIFT]`키 변화 처리
-|      | 고속 이동 중 `[SHIFT]`키 해제                   |티칭 속도로 스텝 전/후진 중 `[SHIFT]`키 입력 |
+### Handling `[SHIFT]` Key Changes During High-speed Movement
+|        | `[SHIFT]` Key Released During High-speed Movement | `[SHIFT]` Key Pressed During Teaching Speed Step FWD/BWD |
 | ------ | --------------------- |--------------------- |
-| **동작** | 수동 최고속으로 전/후진         |로봇 정지 후 수동 최고속 이동|
-# 1.3.3 용접 중 전류/전압 변경 기능
+| **Operation** | Move the robot forward/backward at manual maximum speed. | Robot stops, then moves at manual maximum speed |
+# 1.3.3 Change the Current/Voltage during Welding
 
-Arc 용접작업을 티칭할 때 적절한 용접 전류/전압을 찾기 위해서 용접 수행 중 전류/전압을 변경해야 하는 경우 사용하는 기능입니다.
+This function is used when teaching Arc welding tasks and there's a need to change the welding current/voltage during welding to find the appropriate settings.
 
-이 기능을 이용하면 용접 중 실시간으로 전류/전압을 변경하여 최적 조건을 찾고 확인된 조건을 바로 용접조건으로 저장하는 것이 가능합니다.
+Using this function, you can change the current/voltage in real-time during welding to find optimal conditions and then immediately save the verified conditions as welding parameters.
 
-기능의 세부 내용 및 설정 방법은 다음과 같습니다. 여기서 %는 용접기의 최소와 최대값의 차이에 대한 단위 입니다.
+The detailed content and setup method for this function are as follows:  <br/>
+("%" refers to the unit relative to the difference between the welder's minimum and maximum values)
 
 ---  
 
-### Arc 용접 전류/전압 변경 대화상자 진입
+### Entering the Arc Welding Current/Voltage Change Dialog Box
 
 <p align="center">
- <img src="../../../_assets/1_3_1.png" width="70%"></img>
- <em><p align="center">그림 1.3.1. Arc용접 프로그램 및 전류전압 변경</p></em>
+ <img src="../../_assets/1_3_1.png" width="70%"></img>
+ <em><p align="center">Figure 1.3.1. Arc Weld program and Change I/V</p></em>
 </p>
 
 <br>
 
-- 자동모드에서 Arc 용접을 수행
-- **[창조정] – [선택] – [아크IV변경]** 선택
-- 버튼 **[+/-]** 를 클릭하여 조절버튼 창 진입
+1. Perform arc welding in automatic mode.
+2. Navigate to **[pane layout > select > arc change IV]**
+3. Click the **[+/-]** button to enter the adjustment button window.
 
 ---  
 
-### 용접 중 전류/전압 조정단위 및 조정 키
-|      | [+ 전류]/[- 전류]                   |`[SHIFT]` + [+ 전류]/[- 전류] |
+### Parameter Adjustment Key during Arc Welding  
+
+|      | [+ Current]/[- Current]                   |`[SHIFT]` + [+ Current]/[- Current] |
 | ------ | --------------------- |--------------------- |
-| **용도** | 용접전류 1% 증/감         |용접전류 5% 증/감|
+| **Function** | Welding Current 1% +/-         | Welding Current 5% +/-|
 
-|      | [+ 전압]/[- 전압]                   |`[SHIFT]` + [+ 전압]/[- 전압] |
+|      | [+ Voltage]/[- Voltage]                   |`[SHIFT]` + [+ Voltage]/[- Voltage] |
 | ------ | --------------------- |--------------------- |
-| **용도** | 용접전압 1% 증/감         |용접전압 5% 증/감|
+| **Function** | Welding Voltage 1% +/-         | Welding Voltage 5% +/-|
 
-
-
----  
-
-### 용접 속도 및 위빙 파라미터 조정 키
-
-
-|      | [+ 위빙L]/[- 위빙L]                   |`[SHIFT]` + [+ 위빙L]/[- 위빙L] |
+|      | [+ Weaving L]/[- Weaving L]                   |`[SHIFT]` + [+ Weaving L]/[- Weaving L] |
 | ------ | --------------------- |--------------------- |
-| **용도** | 위빙 폭(좌) 0.1[mm] 증/감         |위빙 폭(좌) 0.5[mm] 증/감|
+| **Function** | Weaving Width(Left) 0.1[mm] +/-         |Weaving Width(Left) 0.5[mm] +/-|
 
-|      | [+ 위빙R]/[- 위빙R]                   |`[SHIFT]` + [+ 위빙R]/[- 위빙R] |
+|      | [+ Weaving R]/[- Weaving R]                   |`[SHIFT]` + [+ Weaving R]/[- Weaving R] |
 | ------ | --------------------- |--------------------- |
-| **용도** | 위빙 폭(우) 0.1[mm] 증/감         |위빙 폭(우) 0.5[mm] 증/감|
+| **Function** | Weaving Width(Right) 0.1[mm] +/-         |Weaving Width(Right) 0.5[mm] +/-|
 
-|      | [+ 주파수]/[- 주파수]                   |`[SHIFT]` + [+ 주파수]/[- 주파수] |
+|      | [+ Frequency]/[- Frequency]                   |`[SHIFT]` + [+ Frequency]/[- Frequency] |
 | ------ | --------------------- |--------------------- |
-| **용도** | 위빙 주파수 0.1[Hz] 증/감         |위빙 주파수 0.5[Hz] 증/감|
+| **Function** | Weaving Frequency 0.1[Hz] +/-         | Weaving Frequency 0.5[Hz] +/-|
 
 
 
 ---  
 
 
-### 전류/전압 변경 자동저장 설정 변경
+### Arc welding Current/Voltage Auto saving settings
 
-- **[시스템]』 → 『4: 응용 파라미터』 → 『2: 아크용접』** 대화상자 진입
-- **[Arc 용접 전류/전압 변경 자동저장 설정]**
-    - **무효**  
-    저장 안됨  
+- Navigate to **[System > 4: Application parameter > 2: Arc welding]**
+- **[Arc welding I/V change auto saving]**
+    - **Disable**  
+    Not saved
 
-    - **유효**  
-    사용자가 값을 변경하는 즉시 용접조건에 저장
+    - **Enable**  
+    Save to welding conditions as soon as the user changes the value
 
 ---  
-# 1.3.3.1 조작
 
-자동모드에서 Arc 용접 중 **[창조정] – [선택] – [아크IV변경]** 을 선택합니다.
+
+### Operation
+
+The details for each item in the dialog box are as shown in the following figure.
 
 <p align="center">
- <img src="../../../../_assets/1_3_2.png" width="70%"></img>
- <em><p align="center">그림 1.3.2. Arc 용접 전류/전압 변경 대화상자</p></em>
-</p>   
+ <img src="../../_assets/1_3_2.png" width="70%"></img>
+ <em><p align="center">Figure 1.3.2. Arc Welding Change I/V dialog box</p></em>
+</p>
 
-<br>
-
-대화상자의 항목 별 내용은 다음과 같습니다. 
-
----  
-
-### 전류
-
-| 항목       | 내용                                      |
-| -------- | --------------------------------------- |
-| **조건내용** | 현재 사용중인 용접조건의 송급 속도를 나타냅니다.             |
-| **조정 값** | 현재 제어기에서 용접기로 출력하고 있는 송급 속도를 표시합니다.     |
-| **실제 값** | 디지털 용접기에서 제어기로 송신하고 있는 출력 용접 전류를 표시합니다. |
-
----  
-
-### 실제 용접 전류
-| 항목       | 내용                                      |
-| -------- | --------------------------------------- |
-| **조정 값** | 디지털 용접기에서 제어기로 송신하고 있는 출력 용접 전류를 표시합니다. |
-
----  
-
-### 용접전압 보정
-| 항목       | 내용                                        |
-| -------- | ----------------------------------------- |
-| **조건내용** | 현재 사용중인 용접조건의 본 용접 전압 보정을 나타냅니다.          |
-| **조정 값** | 현재 제어기에서 용접기로 출력하고 있는 용접 전압보정을 표시합니다.     |
-| **실제 값** | 디지털 용접기에서 제어기로 송신하고 있는 출력 용접 전압보정을 표시합니다. |
-
----  
-
-### 위빙 폭
-
-| 항목       | 내용                           |
-| -------- | ---------------------------- |
-| **조건내용** | 현재 사용중인 용접조건의 본 위빙 폭을 나타냅니다. |
-| **조정 값** | 사용자가 조작한 위빙폭을 표시합니다.         |
-
----  
-
-### 위빙 주파수
-| 항목       | 내용                             |
-| -------- | ------------------------------ |
-| **조건내용** | 현재 사용중인 용접조건의 본 위빙 주파수를 나타냅니다. |
-| **조정 값** | 사용자가 조작한 위빙주파수를 표시합니다.         |
-
----  
- 
 {% hint style="info" %}
-- 전류/전압 변경은 용접시작조건에만 저장되며, 종료조건에는 저장되지 않습니다.
+- Current/Voltage changes are saved only to the welding Start Conditions, not to the End Conditions.
 
-- ```arcon``` 명령어 형태 중 전류, 전압 값을 별도로 지정한 형태의 명령어인 경우 용접 조건에만 변경내용이 저장됩니다.
+- If the ```arcon``` command specifically designates current and voltage values, then the changes will only be saved to the welding conditions.
 
-예시) ```arcon cnd=1,cur=200,vol=20``` <span style = "color:green"># 용접시작조건 1번에 변경된 전류, 전압이 저장</span>
-{% endhint %}# 1.3.4 수동모드 아크용접
+Example: arcon cnd=1,cur=200,vol=20 # The changed current and voltage are saved to welding start condition #1.
+{% endhint %}
+# 1.3.4 Manual Mode Arc Welding
 
-일반적으로 Arc 용접은 로봇이 자동/원격 모드로 운행될 경우에만 가능합니다.  
-수동모드 Arc 용접은 로봇이 수동모드인 경우에도 용접이 가능하도록 지원하는 기능으로 용접 조건 설정 시 다양한 조건으로 용접을 반복할 때 편리하게 사용할 수 있습니다.
+Generally, Arc Welding is only possible when the robot operates in automatic or remote mode.
 
-수동모드 Arc 용접을 사용하기 위해서는 아래와 같이 설정되어 있어야 합니다.
+Manual Mode Arc Welding is a function that allows welding even when the robot is in manual mode. This is convenient for repeatedly testing various welding conditions during setup.
 
- (1)	**『시스템』 → 『4: 응용 파라미터』 → 『2: 아크용접』 → 『12: 수동모드 아크용접 설정』→ '유효'**  
+To use Manual Mode Arc Welding, it should be set as below.
 
- (2)	**『실행단위』 → [End]** (티칭 펜던트 기본화면 좌측 2번째 매뉴)
+ (1) Go to **[System > 4: Application parameter > 2: Arc welding > Arc welding enable during manual mode]** and check enable.
 
- (3)	스텝 전진으로 ```arcon``` 실행(용접 중 ```arcoff``` 전에 스텝 전진이 중단되어 용접이 중단된 상태에서, 다시 스텝 전진을 할 경우 ```arcon```이 실행되지 않기 때문에 다음 교시점으로 용접하지 않고 이동) 
- # 1.3.5 고중량 아크토치 진동 저감 기능
+ (2) Set the **[run to(execution unit)] to "End"** (the second menu on the left side of the TP).
 
-본 기능은 소형 로봇에 고중량의 토치(수냉식 토치, push-pull 토치)를 사용할 때 발생할 수 있는 진동을 줄이기 위한 것입니다. 본 기능은 아래와 같이 설정할 수 있습니다.
+ (3) Execute ```arcon``` using step forward.  <br/>
+ * NOTE: If the robot stops during welding(before ```arcoff```) due to a paused step forward movement, ```arcon``` won't execute when you step forward again. In this case, the robot will move to the next teaching point without welding.# 1.3.5 High weight arc torch vibration reduction function
 
--	**[시스템] → [4: 응용 파라미터] → [아크용접] → [고중량 토치용 진동 저감 기능 설정] → ‘무효’, ‘용접점’, ‘전 구간’** 중 택일
+This function aims to reduce vibrations that can occur when using heavy torches (such as water-cooled torches or push-pull torches) on a small robot. You can configure this feature as described below.
 
-진동을 줄이기 위해 2가지 방법을 제공하며, 각각의 방법은 아래와 같은 장단점이 있습니다. 아래 장단점을 참고하여 상황에 맞게 선택하여 사용할 수 있습니다.
+- **[System > 4: Application parameter > 2: Arc welding > Vibration reduction for heavy torch]**: Disable / Welding Point / All range
+
+To reduce vibrations, two methods are provided, each with its own advantages and disadvantages. You can refer to the pros and cons below to choose the method that best suits your situation.
 
 
-| 항목           | 내용                               |
-| ------------ | -------------------------------- |
-| **용접점**  | 진동의 상당량 감소. 로봇 작업 시간에 영향이 거의 없음. |
-| **전 구간** | 진동의 대부분 감소. 로봇 작업 시간이 증가함.       |
-# 1.3.6 Arc 용접 신호 시험 기능
+| Item | Description |
+| --- | --- |
+| **Disable**  |  |
+| **Welding Point**  | Significantly reduces a considerable amount of vibrations. No impact on robot cycle time. |
+| **All range** | Reduces most vibrations. Increases robot cycle time. |# 1.3.6 Arc Welding signal test function
 
-Arc 용접 신호 시험 기능은 용접에 필요한 주요한 신호의 입출력 상태를 테스트하고, 수동으로 용착 해제할 수 있는 기능입니다. 본 기능은 특정 신호의 동작 여부를 확인할 수 있기 때문에 용접기 및 통신의 이상 상태를 점검할 때 유용하게 사용할 수 있습니다.
 
-본 기능을 사용하기 위해서는 티칭 펜던트 기본화면에서 **[창조정]** 을 눌러 **[선택]** 에서 **[아크용접]** 을 선택합니다. 아크 용접 패널에서 스크롤을 하단으로 움직여 입력/출력 신호 항목을 확인할 수 있습니다.  
+The Arc Welding Signal Test function lets you test the input/output status of key welding signals and manually release wire stick-out. This feature is useful for checking the status of welder and communication as it confirms wheter specific signals are operating correctly.
+
+To use this feature, on TP, press **[pane layout > select > arc welding]** sequentially. In the Arc Welding panel, scroll down to see the input/output signal items.
+
 
 <p align="center">
  <img src="../../_assets/1_3_3.png" width="70%"></img>
- <em><p align="center">그림 1.3.3. Arc 용접 모니터링</p></em>
+ <em><p align="center">Figure 1.3.3. Arc Welding Monitoring</p></em>
 </p>
 
-| 항목          | 설명                                                        |
+| Item | Description |
 | ------------- | ---------------------------------------------------------- |
-| **출력 신호** | 원하는 출력신호를 선택한 상태에서 **\[수동 출력]** 버튼을 클릭하여 신호를 on/off 테스트 할 수 있습니다. |
-| **입력 신호**| 입력 신호가 동작에 맞게 입력되고 있는지를 확인 할 수 있습니다.                              |
-| **지령값**| <li><b>수동 용착해제</b>: 와이어 용착 해제를 선택한 상태에서 **\[수동 출력]** 버튼 클릭</li> <li><b>수동 용접기 에러 리셋</b>: 용접기 에러 리셋을 선택한 상태에서 **\[수동 출력]** 버튼 클릭</li>|# 1.3.7 아크용접 가동정보
+| **Output Signal** | With the desired output signal selected, click the **[Manual Output]** button to test turnning the signal on/off. |
+| **Input Signal**| You can verify whether input signals are being recieved correctly according to their operation. |
+| **Command Value**| <li>**Manual Wire Stick-out Release**: Select "Stick check" and click the **[Manual Output]** button. </li> <li>**Manual Welder Error Reset**: Select "Welder Error Reset" and click the **[Manual Output]** button. </li>|
+# 1.3.7 Arc Welding Operation Information
 
-Arc 용접을 수행한 가동정보를 모니터링 창을 이용하여 확인하는 기능입니다. 이 기능을 이용하여 아래와 같은 사항을 쉽게 확인하고 관리할 수 있습니다.  
+This function allows you to monitor the operational information of arc welding. With this feature, you can easily check and manage the following aspects:
 
-본 기능을 사용하기 위해서는 티칭 펜던트 기본화면에서 **[창조정]** 을 눌러 **[선택]** 에서 **[아크 가동정보]** 를 선택합니다. 
+To use this feature, on TP, press **[pane layout > select > arc operation info.]** sequentially. 
+
 
 <p align="center">
  <img src="../../_assets/1_3_4.png" width="70%"></img>
- <em><p align="center">그림 1.3.4. 아크용접 가동정보 모니터링 창</p></em>
+ <em><p align="center">Figure 1.3.4. Arc Welding Operation Information Monitoring</p></em>
 </p>  
 
-| 항목                | 설명                                                                                                         |
-| ----------------- | ---------------------------------------------------------------------------------------------------------- |
-| **통산(초기화후)**      | 시스템 초기화부터 용접 시간 및 자동으로 수행된 재시도/자동용착해제 횟수를 확인할 수 있습니다.                                                      |
-| **통산(전원투입후)**     | 시스템 전원 투입 후부터 용접 시간 및 자동으로 수행된 재시도/자동용착해제 횟수를 확인할 수 있습니다.                                                  |
-| **마지막 사이클**       | 바로 직전 사이클의 용접 시간 및 자동으로 수행된 재시도/자동용착해제 횟수를 확인할 수 있습니다.                                                     |
-| **현재 사이클**        | 현재 사이클의 용접 시간 및 자동으로 수행된 재시도/자동용착해제 횟수를 확인할 수 있습니다.                                                        |
-| **오버랩 횟수 (원인별)**  | 용접 중 로봇이 정지하는 경우 수행되는 오버랩의 횟수를 발생 원인 별로 확인할 수 있습니다.                                                        |
-| **아크용접 가동정보 초기화** | 아크용접 가동정보 창이 활성화 되면 **\[초기화]** 버튼이 나타나며, 이를 누르면 가동정보 클리어 대화상자가 표시됩니다. 클리어를 원하는 항목의 버튼을 클릭하면 원하는 동작이 수행됩니다. |
-# 2. 명령어 삽입
+| Item | Description |
+| --- | --- |
+| **since init.** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **since system initialization**. |
+| **since pow.** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **since the system was powered on**. |
+| **last cycle** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **of the immediately previous cycle**. |
+| **current cycle** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **for the current cycle**. |
+| **overlap count(by cause)**  | Displays the number of overlaps that occur when the robot stops during welding, categorized by the cause of the stop. |
+| **clear(on fbt)** | When the Arc welding operation info window is activated, the **[clear]** button appears. Clicking this button will display the operation info clear dialog. You can click the button for the item you wish to clear to perform the desired action. |# 2. Inserting Commands
 
 # 2.1 arcon
 
 
-### 설명
+### Description
 
-```arcon``` 문은 Arc용접을 시작하는 명령어 입니다. 이 명령어는 4가지 형태로 사용될 수 있습니다. 단, 설정된 용접기에서 지원하지 않는 명령어는 사용할 수 없습니다.  
+```arcon``` command is used to start the Arc Welding process. This command can be used in 4 different forms. However, commands not supported by the configured welder cannot be used.
 <br/>
 
-### 문법
+### Syntax
   
 ```python
 arcon
-arcon cnd=<조건번호> 
-arcon cnd=<조건번호>,job=<용접 Job번호>,cur=<전류값>,vol=<전압값>, vol_offset=<전압 옵셋값>
-arcon cnd=<조건번호>,job=<용접 Job번호>  
+arcon cnd=<Condition Number> 
+arcon cnd=<Condition Number>,job=<Job Number of the Welder>,cur=<Current>,vol=<Voltage>, vol_offset=<Voltage Offset>
+arcon cnd=<Condition Number>,job=<Job Number of the Welder>  
 ```  
 <br/>
 
-### 파라미터
+### Parameter
 
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Arc용접 조건번호</td>
-      <td>
-        Arc용접 시작 및 본 조건에 사용되는 용접조건의 번호
-        (1~100)
-      </td>
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>전류 값</td>
-      <td>
-        Arc용접용 출력 전류 값<br>
-        (0 ~ 500)[A]
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>전압 값</td>
-      <td>
-        Arc용접 시 실제 출력할 전압 값<br>
-        (20 ~ 40)[V]
-      <td>변수</td>
-    </tr>
-        <tr>
-      <td>전압 옵셋값</td>
-      <td>
-        Arc용접 시 시너직 전압의 옵셋 전압 값<br>
-        (-200 ~ 200)[V]
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>용접기의 Job번호</td>
-      <td>
-        용접기 쪽에 저장된 Job번호 중 사용할 Job번호(Job 모드 지원 용접기 전용)
-        (0 ~ 9999)
-      <td>변수</td>
-    </tr>
-  </tbody>
-</table>  
-<br/>
+| Item | Meaning | Remarks |
+| --- | --- | --- |
+| **Arc Welding Condition Number** | The number of the welding condition used to starting Arc Welding and the specific condition (1~100) | Variable |
+| **Job Number of the Welder** | The Job number stored in the welder to be used(only for welders supporting job mode) (0 ~ 9999) | Variable |
+| **Current** | The output current value for Arc Welding (0 ~ 500)[A] | Variable |
+| **Voltage** | The output voltage value for Arc Welding (20 ~ 40)[V] | Variable |
+| **Voltage Offset** | The voltage offset value for the synergic voltage during Arc Welding (-200 ~ 200)[V] | Variable |
 
-### 사용 예
+
+### Example
 
 ```python
-   arcon  # 이전에 수행했던 용접조건으로 설정한 조건대로 용접개시. 재시도, 재 기동은 미 실행
-   arcon cnd=1  # 지정한 용접시작조건 설정대로 용접개시
-   arcon cnd=1,cur=200,vol=22  # 전류, 전압은 입력된 값으로 적용하고 그 외의 용접 조건은 용접시작조건번호의 조건으로 용접개시
-   arcon cnd=1,job=5 # 용접 모드는 Job모드로 적용. 5번 job번호 사용. 그 외의 용접 조건은 용접시작조건번호의 조건으로 용접개시
+   arcon  # Starts Welding using the previously set welding conditions. Retry or Restart is not executed.
+   arcon cnd=1  # Starts welding according to the specified welding start condition(cnd=1)
+   arcon cnd=1,cur=200,vol=22  # Starts welding with the specified current and voltage(200A, 22V), while other welding conditions follow the settings of the specified welding start condition number(cnd=1)
+   arcon cnd=1,job=5 # Starts welding in Job mode, using Job number 5. Other welding conditions follow the settings of the specified welding start condition number(cnd=1)
 ```  
 <br/>
 
-### 세부 설명  
-[[5장 Arc용접 조건 편집]](../5_Condition_editing/README.md) 참고  
+### Details  
+
+Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md) 
 <br/>
 
 
 {% hint style="warning" %}
-[**주의**]  
- - ‘용접기 중 일부 모델은 각종 용접설정들을 미리 설정하여 Job으로 내부에 저장하는 기능이 있습니다. 이 경우 '용접기의 Job번호' 항목을 사용할 수 있습니다.
+[**Caution**]  
+ - Some welder models can store various welding settings as jobs internally. In this case, you can use 'Job number of the Welder' item.
 {% endhint %}# 2.2 arcoff
 
-### 설명
-```arcoff```는 Arc용접을 종료하는 명령어 입니다. 이 명령어는 4가지 형태로 사용될 수 있습니다. 단, 설정된 용접기에서 지원하지 않는 명령어는 사용할 수 없습니다.  
+### Description
+
+```arcoff``` command is used to stop Arc Welding. This command can be used in 2 different forms. However, commands not supported by the configured welder cannot be used.
+
 <br/>
 
-### 문법
+### Syntax
 
 ```python
 arcoff
-arcoff welder=<조건번호>, delay=<지연시간>
+arcoff welder=<Condition Number>, delay=<Delay Time>
 ```  
 <br/>
 
-### 파라미터
 
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>조건번호</td>
-      <td>
-        용접기를 2대 사용하는 경우 off시킬 용접기 번호를 설정합니다.
-        (1 ~ 2)
-      </td>
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>지연시간</td>
-      <td>
-        용접기를 2대 사용하는 경우 off시킬 지연시간을 설정합니다.
-        (0 ~ 2)
-      <td>변수</td>
-    </tr>
-  </tbody>
-</table>  
-<br/>
+### Parameter
+
+| Item | Meaning | Remarks |
+| --- | --- | --- |
+| Condition Number | When using two welders, set the welder number to be turned off. (1 ~ 2) | Variable |
+| Delay Time | When using two welders, set the delay time to be turned off. (1 ~ 2) | Variable |
 
 
-### 사용 예
+### Example
 
 ```python
-    arcoff                    #특별한 종료처리 없이 Arc 용접을 종료 함
-    arcoff welder=2, delay=1  #2번째 용접기 아크를 1초 후 off 
+    arcoff                    # Terminate the arc welding without any special shutdown process
+    arcoff welder=2, delay=1  # Trun off the arc of the 2nd welder after a 1-second delay.
 ```  
 <br/>
 
-### 세부 설명  
 
-  [[5장 Arc용접 조건 편집]](../5_Condition_editing/README.md) 참고
+### Details 
+
+Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md) 
 # 2.3 weaving on
 
 
-### 설명
-```weaving on```은 위빙조건을 실행하는 명령어 입니다. 속성 창에 진입하여 해당 조건번호에 해당하는 위빙조건을 설정할 수 있습니다.  
+### Description
+```weaving on``` command is used to enable the weaving condition. You can enter the properties window to set the corresponding weaving condition for the specified condition number.  
 <br/>
 
-### 문법
+### Syntax
 
 ```python
-weaving on <위빙조건번호>
+    weaving on, cnd=<Weaving Condition number>
 ```  
 <br/>
 
-### 파라미터
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>위빙조건번호</td>
-      <td>
-        불러올 위빙 조건 번호
-        (1 ~ 1000)
-      </td>
-      <td>변수</td>
-    </tr>
-  </tbody>
-</table>  
-<br/>
+### Parameter
 
-### 사용 예
+| Item | Meaning | Remarks |
+| --- | --- | --- |
+| **Weaving Condition number** | Load the Weaving condition number (1 ~ 1000) | Variable |
+
+
+### Example
 
 ```python  
-   weaving on, cnd=1    # 위빙 조건 1번을 로딩하여 실행
-   arcon cnd=1          # arcon 1번 조건으로 실행
-   move L,spd=100cm/min,accu=0,tool=0   # 위의 위빙 조건대로 실행하며 로봇 이동
+   weaving on, cnd=1    # Load and execute weaving condition number 1
+   arcon cnd=1          # Execute with arc condition number 1
+   move L,spd=100cm/min,accu=0,tool=0   # Perform execution according to the above weaving conditions while moving the robot
 ```  
 <br/>
 
 
-### 세부 설명  
-  [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 참고
+### Details  
+  Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)
 # 2.4 weaving off
 
 
-### 설명
+### Description
 
-```weaving off```는 위빙 동작을 종료하기 위한 명령어 입니다.  
+```weaving off``` command is used to stop the weaving motion.  
 <br/>
 
-### 문법
+### Syntax
 
 ```python
 weaving off
 ```  
 <br/>
 
-### 사용 예
+### Example
 
 ```python
    weaving off
 ```  
 <br/>
 
-### 세부 설명
+### Details
 
-  [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 참고
+  Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)
 
 # 2.5 arccond
 
 
+### Description
 
-### 설명
-
-```arccond``` 용접 DB를 이용하여 JOB을 구성하거나, 용접 DB를 이용한 용접조건 연속변경 기능을 이용할 때 사용합니다.  
+```arccond``` command is used to configure a job using the welding database(DB), or to continuously change welding conditions using the welding DB.  
 <br/>
 
-### 문법
+### Syntax
 
 ```python
-arccond <보간종류>, cnd=<조건번호>, gap=<gap>, spd=<용접속도>, rd=<벽방향>, ld=<타방향>, freq=<위빙주파수>, cur=<전류>, vol=<전압>
+arccond <Interpolation type>, cnd=<Condition Number>, gap=<Gap>, spd=<Welding Speed>, rd=<Wall Direction(right distance)>, ld=<Cross Direction(left distance)>, freq=<Weaving Frequency>, cur=<Current>, vol=<Voltage>
 ```  
 <br/>
 
-### 파라미터
+### Parameter
 
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>보간종류</td>
-      <td>
-        보간조건 설정
-        (D:즉시변경, L:선형보간변경)
-      </td>
-      <td>문자</td>
-    </tr>
-    <tr>
-      <td>조건번호</td>
-      <td>
-        용접 DB (WDB) 및 보간조건을 저장하는 조건번호<br>
-        (1 ~ 1000)
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>gap</td>
-      <td>
-        gap을 입력합니다.<br>
-        (-1 ~ 1000)[mm]
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>용접속도</td>
-      <td>
-        즉시변경시 용접속도입니다.<br>
-        (1 ~ 1000) [cm/min]
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>벽방향</td>
-      <td>
-        즉시변경시 위빙 벽방향 폭입니다.<br>
-        (1 ~ 50)[mm]
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>타방향</td>
-      <td>
-        즉시변경시 위빙 타방향 폭입니다.<br>
-        (1 ~ 50)[mm]
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>위빙주파수</td>
-      <td>
-        즉시변경시 위빙주파수 입니다.<br>
-        (1 ~ 10)[Hz]
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>전류</td>
-      <td>
-        즉시변경시 용접 전류입니다.<br>
-        (1 ~ 1000)[A]
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>전압</td>
-      <td>
-        즉시변경시 용접 전압입니다.<br>
-        (1 ~ 200)[V]
-      <td>변수</td>
-    </tr>
-  </tbody>
-</table>  
-<br/>
+| Item | Meaning | Remarks |
+| --- | --- | --- |
+| **Interpolation Type** | Interpolation condition setting (D: Immediate change, L: Linear interpolation change)| Character |
+| **Condition Number**| The condition number that stores the welding DB (WDB) and interpolation conditions (1 ~ 1000) | Variable  |
+| **Gap** | The gap value to be input (-1 ~ 1000) [mm]| Variable  |
+| **Welding Speed**| Welding speed for immediate change (1 ~ 1000) [cm/min]| Variable  |
+| **Wall Direction**  | Weaving wall direction width for immediate change (1 ~ 50) [mm]| Variable  |
+| **Cross Direction** | Weaving cross direction width for immediate change (1 ~ 50) [mm]  | Variable  |
+| **Weaving Frequency**  | Weaving frequency for immediate change (1 ~ 10) [Hz]  | Variable  |
+| **Current**| Welding current for immediate change (1 ~ 1000) [A]| Variable  |
+| **Voltage**| Welding voltage for immediate change (1 ~ 200) [V] | Variable  |
 
-### 사용 예
+
+### Example
 
 ```python
-	arccond D, cur=170, vol=10 # 전류 170A, 전압 10V로 즉시변경
-	arccond D, spd=80, rd=20, ld=20, freq=1.5 # 용접속도 80cm/min, 위빙폭 20mm, 주파수 1.5Hz로 즉시변경
-	arccond D, cnd=1 # 1번 조건으로 즉시변경
-	arccond L, cnd=1, 용접스텝, arccond L, cnd=2 # 1번조건에서 2번조건으로 WDB데이터 연속보간 변경
-```  
-<br/>
-# 2.6 refp
-
-### 설명
-
-```refp``` 명령어는 위빙 동작 시 필요한 참조점을 입력하기 위한 명령어 입니다. 위빙 벽, 진입방향 등의 참조점을 입력합니다.  
-<br/>
-
-### 문법
-
-```python
-refp <참조점 번호>,<포즈(번호)>
-refp <참조점 번호>
-```  
-<br/>
-
-### 파라미터
-
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>참조점 번호</td>
-      <td>
-        참조점의 종류를 설정하는 번호
-        (1 ~ 4)
-      </td>
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>포즈번호</td>
-      <td>
-        참조점의 포즈를 입력합니다.(단, 숨은 포즈로 입력한 경우는 생략됨)
-      <td>변수</td>
-    </tr>
-  </tbody>
-</table>  
-<br/>
-
-### 사용 예
-
-```python
-   refp 1,P1                   # 위빙의 벽방향을 P1을 이용하여 지정
-   refp 1                      # 위빙의 벽방향을 숨은 포즈를 이용하여 지정
-   refp 2, (-1073.33, 739.01, 258.30, 0, 76, 23)  # 위빙면의 위치를 지정
-```  
-<br/>
-
-### 세부 설명
-  [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 참고
+  	arccond D, cur=170, vol=10 # Change immediately with a current of 170A and a voltage of 10V
+  	arccond D, spd=80, rd=20, ld=20, freq=1.5 # Change immediately with a welding speed 80cm/min, weaving width of 20mm, and frequency of 1.5Hz
+  	arccond D, cnd=1 # Change immediatelyto condition number 1
   
+  	arccond L, cnd=1  
+    ...               # welding step (move command for welding section)
+    arccond L, cnd=2  # Change continuously from condition 1 to condition 2 using WDB data with linear interpolation
+```  
+<br/>
+
+### Details  
+
+  Refer to [[8.1 Arccond - Arc Weld Condition]](../8_Application_function/1_Arc_cond/README.md)# 2.6 refp
+
+### Description
+
+```refp``` command is used to input reference points for the weaving motion. It inputs reference points such as weaving wall and entry direction.
+<br/>
+
+### Syntax
+
+```python
+refp <Reference Point Number>
+refp <Reference Point Number>,<Pose(Num)>
+```  
+<br/>
+
+### Parameter
+
+| Item | Meaning | Remarks |
+| --- | --- | --- |
+| **Reference Point Number** | Set the number for the type of reference points (1 ~ 8) | Variable |
+| **Pose** | Input the pose of the reference points (However, if a hidden pose is used, it will be omitted) | Variable |
+
+
+### Example
+
+```python
+   refp 1,P1                   # Specify the wall direction of the weaving using P1
+   refp 1                      # Specify the wall direction of the weaving hidden pose
+   refp 2, (-1073.33, 739.01, 258.30, 0, 76, 23)  # Specify the position of the weaving surface
+```  
+<br/>
+
+### Details
+  Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)  
 <br/>  
 <br/>
 
+
 {% hint style="warning" %}
--	```refp``` 문은 ```move``` 문처럼 스텝에 속합니다.
-- 사용자키의 <refp>키를 이용해 refp 명령문을 입력한 경우 숨은 포즈 형식이 됩니다.
-- 실행단위를 Cmd, Step로 설정 후 스텝전진을 실행하여 티칭 된 위치로 이동할 수 있습니다.
+-	```refp``` command, likes ```move``` command, belongs to the step category.
+- When the ```refp``` command is entered using a user key, it takes the form of a hidden pose.
+- After setting the execution unit to Cmd or Step, you can move to the taught position.  
 {% endhint %}# 2.7 lvs
 
-### 설명 
+### Description 
 
-```lvs``` 문은 LVS(레이저비전센서)를 이용하여 레이저가 위치한 곳의 포즈를 얻어내거나 (seam_find), 시점 탐색 (search), 용접선 추종 (track) 기능을 수행하는 명령어입니다.  
+```lvs``` command uses the LVS(Laser Vision Sensor) to perform functions such as obtaining the pose of the laser position(`seam_find`), start point detection(`search`), and seam tracking(`track`).
 <br/>
 
-### 문법
+### Syntax
 
 ```python
-lvs laser_on, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
-lvs laser_off, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
-lvs search, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
-lvs track, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
-lvs seam_find, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
-lvs auto_calib, cnd=<조건번호>, seam=<seam번호>, sp=<seam포즈>, opt=0
+    lvs laser_on, cnd=<Condition Number>, seam=<Seam Number>, sp=<Seam Pose>
+    lvs laser_off, cnd=<Condition Number>, seam=<Seam Number>, sp=<Seam Pose>
+    lvs search, cnd=<Condition Number>, seam=<Seam Number>, sp=<Seam Pose>
+    lvs track, cnd=<Condition Number>, seam=<Seam Number>, sp=<Seam Pose>
+    lvs seam_find, cnd=<Condition Number>, seam=<Seam Number>, sp=<Seam Pose>
+    lvs auto_calib, cnd=<Condition Number>, seam=<Seam Number>, sp=<Seam Pose>, opt=0
 ```   
 <br/>
 
-### 파라미터
+### Parameter
 
 <table>
   <thead>
     <tr>
-      <th>대항목</th>
-      <th>소항목</th>
-      <th>의미</th>
-      <th>기타</th>
+      <th>Major Category</th>
+      <th>Sub Category</th>
+      <th>Meaning</th>
+      <th>Remarks</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="10">lvs</td>
       <tr>
-      <td>laser_on</td>
-      <td>
-        레이저를 켭니다.
-      </td>
+        <td>laser_on</td>
+        <td> Turns on the laser </td>
       </tr>
       <tr>
-      <td>laser_off</td>
-      <td>
-        레이저를 끕니다.
-      </td>
+        <td>laser_off</td>
+        <td> Turns off the laser </td>
       </tr>
       <tr>
-      <td>search</td>
-      <td>
-        track 기능을 수행하기 전 시점을 찾고 tracking을 위한 준비를 시작합니다.
-      </td>
+        <td>search</td>
+        <td> Finds the starting point before performing the track function and prepares for tracking </td>
       </tr>
       <tr>
-      <td>step_search</td>
-      <td>
-        모재의 단차를 찾아 sp에 포즈로 저장합니다.
-      </td>
+        <td>step_search</td>
+        <td> Find the step difference of the base material and saves it as a pose in the `sp`. </td>
       </tr>
       <tr>
-      <td>track</td>
-      <td>
-        arcon을 만나면 용접선 추종을 시작합니다.(search가 선행되어야 함)
-      </td>
+        <td>track</td>
+        <td> Starts following the welding line when `arcon` is encountered (must have executed `search` first) </td>
       </tr>
       <tr>
-      <td>track_stationary</td>
-      <td>
-        정지 트래킹 기능을 수행합니다.
-      </td>
+        <td>track_stationary</td>
+        <td> Performs stop tracking function. </td>
       </tr>
       <tr>
-      <td>seam_find</td>
-      <td>
-        현재 레이저가 센싱하고 있는 위치에 현재 자세를 반영하여 포즈로 변환 후 sp 인자에 저장합니다.
-      </td>
+        <td>seam_find</td>
+        <td> Reflects the current position of the laser sensing location and converts it to a pose, then saves it to the `sp`. </td>
       </tr>
       <tr>
-      <td>seam_find_p</td>
-      <td>
-        현재 레이저가 센싱하고 있는 위치를 포즈로 변환 후 sp 인자에 저장합니다.
-      </td>
+        <td>seam_find_p</td>
+        <td> Converts the current laser sensing location to a pose, and saves it to the `sp`. </td>
       </tr>
       <tr>
-      <td>auto_calib</td>
-      <td>
-        툴-센서 간 자동 캘리브레이션을 수행합니다.
-      </td>
+        <td>auto_calib</td>
+        <td> Performs automatic calibration between the tool and the LVS Sensor. </td>
       </tr>
     </tr>
     <tr>
-      <td colspan="2">조건 번호</td>
-      <td>
-        LVS 기능 수행 시 사용되는 조건번호 (1 ~ 32), 각 조건번호 마다 명령어의 속성창에 있는 정보가 달라지며 트래킹시 이 정보를 사용합니다. 
-      <td>변수</td>
+      <td colspan="2">Condition Number</td>
+      <td> The condition number used when performing the LVS function (1 ~ 32). The properties window for each condition number is different, and this information is used during tracking. </td>
+      <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">seam번호</td>
-      <td>
-        seam 번호를 지정합니다. 해당 번호는 LVS 컨트롤러에 전송되어 LVS센서가 해당번호의 seam으로 센싱을 하도록 합니다.
-      <td>변수</td>
+      <td colspan="2">Seam Number</td>
+      <td>Specifies the seam number. This number is sent to the LVS controller, and the LVS sensor senses the seam corresponding to this number</td>
+      <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">seam포즈</td>
-      <td>
-        seam_find 로 찾은 포즈를 저장하거나 search후 찾은 시점을 저장할 포즈변수를 지정합니다.
-      <td>포즈변수</td>
+      <td colspan="2">Seam Pose</td>
+      <td> Specifies the pose variable to save the pose found by `seam_find` or the pose found after `search` </td>
+      <td>Pose Variable</td>
     </tr>
   </tbody>
 </table>  
 <br/>
 
-### 사용 예
+### Example
 
 ```python
-   lvs seam_find, cnd=1, seam=10, sp=p10    
-   # 조건번호 1번, seam번호 10번으로 seam 파인딩 기능 수행, 결과포즈는 p10에 저장
-   lvs track, cnd=1 ,seam=10 , sp=p10           
-   # 조건번호 1번, seam번호 10번으로 LVS 용접선 추종 시작
+    lvs seam_find, cnd=1, seam=10, sp=p10    
+    # Perform seam finding with condition number 1 and seam number 10, saving the resulting pose in p10
+    lvs track, cnd=1 ,seam=10 , sp=p10
+    # Start LVS seam tracking with condition number 1 and seam number 10
 ```  
 <br/><br/>
 
 
 {% hint style="info" %}
-옵션 기능으로 사용을 위해서는 당사에 문의하시기 바랍니다.
+  For use as an optional feature, please contact our company.
 {% endhint %}
-# 2.8 atdc
 
-### 설명 
-```atdc``` 문은 자동 툴 데이터 보정 기능을 실행하는 명령어 입니다.
 
-자세한 명령어 사용법은 툴 데이터 보정 기능설명서를 참고하시기 바랍니다.# 2.9 heightsen on
+### Details  
 
-### 설명 
-```heightsen on``` 문은 높이센싱(AVC, Arc 길이제어)을 시작하는 명령문입니다.
-자세한 내용은 ‘높이 센싱’ 부분을 참고하십시오.  
+  Refer to [[8.5 LVS(Laser Vision Sensor) Seam Finding and Tracking]](../8_Application_function/5_LVS_tracking/README.md)
+# 2.9 heightsen on
+
+### Description 
+
+```heightsen on``` command starts the height sensing function(AVC, Arc length control).  
 <br/>
 
 
-### 문법
+### Syntax
 ```python
-heightsen on, cnd=<높이센싱 조건번호>
+    heightsen on, cnd=<Condition Number>
 ```  
 <br/>
 
-### 파라미터
+### Parameter
 
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>높이센싱 조건번호</td>
-      <td>
-        높이센싱 실행 시 사용하는 조건 번호
-        (1 ~ 8)
-      </td>
-      <td>변수</td>
-    </tr>
-  </tbody>
-</table>  
-<br/>
+| Item | Meaning | Remarks |
+| --- | --- | --- |
+| **Condition Number** | The number of the welding condition used to starting Arc Welding and the specific condition (1 ~ 8) | Variable |
 
-### 사용 예
+
+### Example
 
 ```python   
-   heightsen on, cnd=1        # 높이센싱 1번 조건으로 높이센싱을 시작
+    heightsen on, cnd=1        # Starts height sensing with condition number 1.
 ```  
 <br/>
 
-### 세부 설명
-  [[8.3 높이센싱(Height Sensing)]](../8_Application_function/3_Height_sensing/README.md) 참고
+
+### Details
+  Refer to [[8.4 Height Sensing]](../8_Application_function/4_Height_sensing/README.md)
 
 
 # 2.10 heightsen off
 
-### 설명 
-```heightsen off``` 문은 높이센싱(AVC, Arc 길이제어)을 종료하는 명령문입니다.  
+### Description
+
+```heightsen off``` command is used to stop the height sensing function (AVC, Arc Voltage Control).
+
 <br/>
 
-### 문법
+
+### Syntax
   
 ```python
 heightsen off
@@ -1084,42 +855,45 @@ heightsen off
 <br/>
 
 
-### 사용 예
+### Example
 
 ```python   
-   heightsen off            # 높이센싱 실행을 종료
+   heightsen off            # End height sensing execution
 ```  
 <br/>
 
-### 세부 설명
-  [[8.3 높이센싱(Height Sensing)]](../8_Application_function/3_Height_sensing/README.md) 참고  
+
+### Details
+  Refer to [[8.4 Height Sensing]](../8_Application_function/4_Height_sensing/README.md)
 <br/>
 
 
 # 2.11 multipass
 
-### 설명  
-```multipass``` 는 아크센싱의 경로를 재현하기 위한 멀티패스 용 명령어 입니다. 이 명령어를 이용하면 원래 아크용접 경로에서 원하는 만큼 시프트 시킨 경로를 재현하여 용접할 수 있습니다.   
+### Description  
+
+```multipass``` command is used for multi-pass welding to reproduce the arc sensing path.  
+Using this command, you can perform welding by reproducing the original arc welding path with a specified amount of shift.  
 <br/>
 
 
-### 문법
+### Syntax
 
 ```python  
-multipass save, trj=<멀티패스 궤적 번호>, period=<궤적 저장 주기 거리>
-multipass load, trj=<멀티패스 궤적 번호>, side=<좌우 시프트 거리>, height=<상하 시프트 거리>, reverse=<멀티패스 재생방향>, tas=<토치 전후방향 각도 시프트>, was=<토치 좌우방향 각도 시프트>
+multipass save, trj=<Multi-pass trajectory Number>, period=<trajectory save interval distance>
+multipass load, trj=<Multi-pass trajectory Number>, side=<lateral shift distance>, height=<vertical shift distance>, reverse=<Multi-pass run direction>, tas=<torch shift angle (front/rear)>, was=<torch shift angle(left/right)>
 multipass off
 ```  
 <br/>
 
-### 파라미터
+### Parameter
 <table>
   <thead>
     <tr>
-      <th>대항목</th>
-      <th>소항목</th>
-      <th>의미</th>
-      <th>기타</th>
+      <th>Major Category</th>
+      <th>Sub Category</th>
+      <th>Meaning</th>
+      <th>Remarks</th>
     </tr>
   </thead>
   <tbody>
@@ -1128,75 +902,60 @@ multipass off
     </tr>
     <tr>
       <td>save</td>
-      <td>멀티패스 궤적 저장</td>
+      <td>Multi-pass trajectory save</td>
     </tr>
     <tr>
       <td>load</td>
-      <td>멀티패스 궤적 재현</td>
+      <td>Multi-pass trajectory load</td>
     </tr>
     <tr>
       <td>off</td>
-      <td>멀티패스 off</td>
+      <td>Multi-pass off</td>
     </tr>
     <tr>
-      <td colspan="2">멀티패스 궤적 번호</td>
-      <td>
-        저장/로딩 할 멀티패스 궤적 번호
-        (1 ~ 50)
-      </td>
-      <td>변수</td>
+      <td colspan="2">Multi-pass trajectory Number</td>
+      <td> Trajectory Number to save/load the multi-pass (1 ~ 50)</td>
+      <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">궤적 저장 주기 거리</td>
-      <td>
-        멀티패스 궤적을 저장할 샘플링 거리
-        (5 ~ 100)[mm]
-      <td>변수</td>
+      <td colspan="2">trajectory save interval distance</td>
+      <td> Sampling interval distance when saving the multi-pass trajectory (5 ~ 100)[mm] </td>
+      <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">좌우 시프트 거리</td>
-      <td>
-        멀티패스 재현 시 원래 아크센싱 궤적에서 좌우 방향으로 시프트 할 거리
-        (-20 ~ 20)[mm]
-      <td>변수</td>
+      <td colspan="2">lateral shift distance</td>
+      <td> Shift distance in the left/right direction from the origin Arc sensing path (-20 ~ 20)[mm] </td>
+      <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">상하 시프트 거리</td>
-      <td>
-        멀티패스 재현 시 원래 아크센싱 궤적에서 좌우 방향으로 시프트 할 거리
-        (-20 ~ 20)[mm]
-      <td>변수</td>
+      <td colspan="2">vertical shift distance</td>
+      <td> Shift distance in the up/down direction from the origin Arc sensing path (-20 ~ 20)[mm] </td>
+      <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">멀티패스 재생방향</td>
-      <td>
-        멀티패스 재현 시 원래 아크센싱 궤적과 반대 방향부터 재생할 것인지 설정
-        (0: 정방향, 1: 역방향)
-      <td>변수</td>
+      <td colspan="2">Multi-pass run direction</td>
+      <td> Whether to reproduce the path in the reverse direction (0: forward, 1: reverse) </td>
+      <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">토치 전후방향 각도 시프트</td>
-      <td>
-        멀티패스 재현 시 토치를 전후 방향으로 기울이는 시프트 각도
-        (-20 ~ 20)[deg]
-      <td>변수</td>
+      <td colspan="2">torch shift angle (front/rear)</td>
+      <td> Torch tilt angle shift in the front/rear direction during multi-pass reproduction (-20 ~ 20)[deg] </td>
+      <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">토치 좌우방향 각도 시프트</td>
-      <td>
-        멀티패스 재현 시 토치를 좌우 방향으로 기울이는 시프트 각도
-        (-20 ~ 20)[deg]
-      <td>변수</td>
+      <td colspan="2">torch shift angle (left/right)</td>
+      <td> Torch tilt angle shift in the left/right direction during multi-pass reproduction (-20 ~ 20)[deg] </td>
+      <td>Variable</td>
     </tr>
   </tbody>
 </table>  
 <br/>
 
-### 사용 예
+### Example
 
 ```python
      weaving on, cnd=1 
-     multipass save, trj=1, period=10       # 1번 궤적에 10mm 간격으로 저장  
+     multipass save, trj=1, period=10       # Save to trajectory 1 at 10mm intervals
      arcon cnd=1
 S10  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
 S11  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
@@ -1206,9 +965,9 @@ S11  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
 S12  move L,spd=50%,accu=3,tool=1
 S13  move L,spd=50%,accu=3,tool=1
 S14  move L,spd=50%,accu=3,tool=1
-     multipass load,trj=1,side=3,height=3,reverse=0,tas=0,was=0   
-     # 1번 궤적을 읽어 우측 3mm, 위로 3mm 시프트, 정방향, 각도 시프트 없음.  
-S15  move L,R2,spd=50%,accu=0,tool=1       #  멀티패스 시작 위치로 시프트하며 이동할 스텝  
+     multipass load,trj=1,side=3,height=3,reverse=0,tas=0,was=0
+     # Load trajectory 1 with a 3mm shift to the left, 3mm upward, in forward direction, with no angle shift
+S15  move L,R2,spd=50%,accu=0,tool=1       # Move step to the Multi-pass starting position
      weaving on, cnd=11
      arcon cnd=1 
 S16  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1  
@@ -1220,215 +979,132 @@ S17  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
 <br/>
 # 2.12 posi_calib
 
-### 설명 
-`posi_calib`문은 포지셔너가 로봇과 동기동작을 하기 위해 필요한 포지셔너 캘리브레이션을 수행하는 명령입니다. 일반적으로 포지셔너 캘리브레이션은 설정 대화상자를 통해 수행합니다. 그러나, 서보툴 체인지로 포지셔너가 변경되는 경우에는 로봇 운전 중 캘리브레이션이 변경되어야 합니다. 이를 로봇 프로그램 상에서 수행하기 위한 명령어가 포지셔너 캘리브레이션입니다.
+### Description 
+
+```posi_calib``` command is used to perform positioner calibration, which is required for the positioner to operate synchronously with the robot.
+Typically, positioner calibration is carried out via a settings dialog.
+However, when the positioner is changed using a servo tool changer, calibration must be updated during robot operation.
+This command allows calibration to be performed directly within the robot program.
 
 
-- 자세한 명령어 사용법은 [posi_calib 명령어](https://hrbook-hrc.web.app/#/view/doc-positioner-sync/korean/2-system_settings/2-3-positioner-calibration/4-posi_calib)를 참고하시기 바랍니다.# 2.13 touchsen
+- For detailed instructions on using this command, please refer to [2.3.4 posi_calib](https://hrbook-hrc.web.app/#/view/doc-positioner-sync/english/2-system_settings/2-3-positioner-calibration/4_posi_calib)
 
-### 설명
-```touchsen``` 문은 와이어 터치센싱을 수행하는 명령어 입니다. 속성창에서 센싱타입 및 센싱조건을 설정할 수 있습니다. 터치센싱 하려는 위치로 move를 수행하고 `touchsen`문을 수행하면 해당 위치에서 센싱타입 및 조건에 맞추어 자동으로 터치센싱 합니다.  
+# 2.13 touchsen
+
+### Description
+
+```touchsen``` command performs wire touch sensing. You can configure the sensing type and conditions in the properties window.
+After moving to the desired sensing position using a `move` command, executing the `touchsen` command initiates touch sensing at that position automatically, based on the specified sensing type and condition.
+
 <br/>
 
 
-### 문법
+### Syntax
 
 ```python
-touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, pose=<저장할 포즈>
-touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, rotation=<센싱각도>, pose=<저장할 포즈>
-touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, lift_up=<들어올릴 양>, pose=<저장할 포즈>, gap=<butt gap 변수>
-touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모드 저장할 기준포즈>, mshift=<양산모드 계산된 쉬프트 변수>
-```  
-<br/>
-
-### 파라미터
-
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>조건번호</td>
-      <td>
-        터치센싱 조건 번호 (1 ~ 8)
-      </td>
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>좌표계</td>
-      <td>
-        센싱방향 지정좌표계("robot", "base", "tool", "tool_prj")
-      </td>
-    </tr>
-    <tr>
-      <td>방향</td>
-      <td>
-        터치센싱 방향 (센싱 타입별 지원 방향 상이함)
-        ("+x", ["+x","-z"], ["+ty", "+tz"])
-      <td>문자열 배열</td>
-    </tr>
-    <tr>
-      <td>저장할 포즈</td>
-      <td>
-        포즈변수를 지정합니다.
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>센싱각도</td>
-      <td>
-        베이스/툴 (X+30 또는 Y-20 등..) 또는 툴프로젝션 (TL+30, TL-10 등..) 좌표계에 대한 축으로 모든 센싱방향을 회전
-        (Y+30, Y-30, X+30, X-30, TL+30, TL-30, TY+30, TY-30)
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>들어올릴 양</td>
-      <td>
-        바닥 탐색 후 상승량[mm]
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>탐지기준거리</td>
-      <td>
-        Detect groove 탐지기준거리[mm]
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>Butt gap</td>
-      <td>
-        Butt, VGroove 센싱 타입에서 터치센싱으로 측정한 하단 gap이 저장될 변수
-      <td>변수</td>
-    </tr>
-    <tr>
-      <td>mpose<br>(마스터모드)</td>
-      <td>
-        마스터모드에서는 mpose에 센싱결과를 저장하며, 양산모드에서 mpose는 mshift를 계산할 때 사용됩니다.
-      <td>포즈변수</td>
-    </tr>
-    <tr>
-      <td>mshift<br>(양산모드)</td>
-      <td>
-       양산모드에서 사용되는 쉬프트 변수. mshift에 할당된 변수에 쉬프트값(현재센싱포즈 - 마스터포즈의벡터)이 계산되어 저장됩니다.
-      <td>시프트변수</td>
-    </tr>
-  </tbody>
-</table>  
-<br/>
-
-### 사용 예
-```python
-  var var1=0      # butt 작업물 센싱시 측정된 gap을 저장할 변수를 선언한다.
-  var P10=cpo()   # 포즈변수 P10을 선언하고 현재포즈를 저장해둔다.
-  touchsen cnd=2, crd="tool", dir=["+y"], lift_up=3, pose=P10, gap=var1  # 2번 조건, 툴좌표계 방향, 바닥센싱 후 3mm 상승, 갭은 var1변수에 저장
-  touchsen cnd=1, crd="tool", dir=["tf", "td"], pose=P10, 0  # 1번 조건, 툴프로젝션 방향, 2점 터치
-  touchsen cnd=1, crd="base", dir=["+x","-y","-z"], pose=P10, 0  # 1번 조건, 베이스좌표 방향, 3점 터치
+touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, pose=<Pose to save>
+touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, rotation=<Sensing Angle>, pose=<Pose to save>
+touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, lift_up=<Lifting Distance>, criteria=<Detection Threshold in Detect Groove>, pose=<Pose to save>, gap=<butt gap value>
+touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, mpose=<Pose to save in Master Mode>, mshift=<Shift Variable Calculated in Production Mode>
 ```  
 <br/>
 
 
-### 세부 설명  
-  [[8.2 터치센싱 기능]](../8_Application_function/2_Touch_sensing/README.md) 참고  
+### Parameter
+
+| Item | Meaning | Remarks |
+| --- | --- | --- |
+| **Condition number** | Touch sensing Condition number (1 ~ 1000) | Variable |
+| **Coordinate System** | Coordinate system used to define sensing direction ("robot", "base", "tool", "tool_prj") | Variable |
+| **Direction** | Touch sensing direction (supported directions vary by sensing type) ("+x", ["+x", "-z"], ["+ty", "+tz"]) | String Array |
+| **Pose to save** | Specifies the pose variable where the sensing result will be stored. | Variable |
+| **Sensing Angle** | Rotational angle applied to the sensing direction with respect to the selected coordinate system (Y+30, Y-30, X+30, X-30, TL+30, TL-30, TY+30, TY-30) | Variable |
+| **Lifting Distance** | The upward distance the robot moves after bottom detection | Variable |
+| **Criteria(Detection Threshold in Detect Groove)** | Reference distance for groove detection[mm] | Variable |
+| **Butt Gap Value** | Variable to store the lower gap measured via touch sensing in Butt or V-groove type | Variable |
+| **mpose(Pose to save in Master Mode)** | In Master mode, sensing results are stored in `mpose`. In Production mode, `mpose` is used to calculate `mshift`. | Variable |
+| **mshift(Shift Variable Calculated in Production Mode)** | In Production mode, `mshift` stores the calculated shift value as a vecotr difference: (current sensing pose - master pose) | Variable |
+
+
+### Example
+
+```python
+    var var1=0      # Declare a variable to store the measured gap during butt joint sensing.
+    var P10=cpo()   # Declare a pose variable `P10` and save the current pose to it.
+    touchsen cnd=2, crd="tool", dir=["+y"], lift_up=3, pose=P10, gap=var1  # condition 2, in tool crd system, After bottom sensing, lift by 3mm, and store the gap in var1
+    touchsen cnd=1, crd="tool", dir=["tf", "td"], pose=P10, 0  # condition 1, in Tool projection crd system, 2-points
+    touchsen cnd=1, crd="base", dir=["+x","-y","-z"], pose=P10, 0  # condition 1, in base crd system, 3-points
+```  
+<br/>
+
+
+### Details
+  Refer to [[8.2 Touch Sensing]](../8_Application_function/2_Touch_sensing/README.md)
 <br/>
 
 # 2.14 stitch
 
-### 설명 
-```stitch``` 문은 스티치 용접을 수행하는 명령어 입니다. 명령어에 커서를 둔 상태에서 [**속성**] 버튼을 눌러 스티치 조건을 설정할 수 있습니다. 스티치 용접을 하려는 위치로 ```move``` 수행 후 ```arcon```문과 함께 사용해야 합니다. 스티치 기능을 수행하면 해당 위치에서 스티치 용접을 시작하며,  스티치 기능이 종료 되는 지점까지 스티치 용접을 진행 합니다.  
+### Description 
+
+```stitch``` command performs stitch welding. You can set the stitch conditions by placing the cursor on the command and clicking the **Properties** button.
+After moving to the desired stitch welding position using a `move` command, use stitch together with the `arcon` command.
+When the stitch function is executed, stitch welding starts at the specified position and continues until the stitch operation is completed.  
 <br/>
 
-### 문법
+### Syntax
+
 ```python
-stitch on, cnd=<조건번호>
+stitch on, cnd=<Condition Number>
 stitch off
 ```  
 <br/>
 
 
-### 파라미터
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>조건 번호</td>
-      <td>
-        스티치 조건 번호
-        (1 ~ 20)
-      </td>
-      <td>변수</td>
-    </tr>
-  </tbody>
-</table>  
-<br/>
+### Parameter
+
+| Item | Meaning | Remarks |
+| --- | --- | --- |
+| **Condition number** | Stitch Condition Number (1 ~ 1000) | Variable |
 
 
-### 사용 예
+### Example
 ```python
-   stitch on, cnd=2         #  스티치 2번 조건 실행
-   stitch off               #  스티치 기능 종료
+   stitch on, cnd=2         #  execute stitch on condition 2
+   stitch off               #  terminate stitch
 ```
+
+
+### Details  
+  Refer to [[8.6 STITCH Function]](../8_Application_function/6_Stitch/README.md)
 # 2.15 calshift
 
+### Description  
 
-### 설명     
-```calshift``` 문은 2개의 포즈변수를 이용해 쉬프트를 계산하는 함수입니다.
-터치센싱으로 저장한 포즈 변수들을 이용해 쉬프트를 계산할 때 많이 사용됩니다.  
+```calshift``` command calculates the shift using two Pose variables.
+It is frequently used to calculate shifts based on pose variables saved from touch sensing.  
 <br/>
 
 
-### 문법
+### Syntax
+
 ```python
-<쉬프트변수인자>=calshift(<포즈변수인자1>, <포즈변수인자2>)
-<쉬프트변수인자>=calshift(<포즈변수인자1>, <포즈변수인자2>,"TV")
+<Shift Val>=calshift(<Pose Val 1>, <Pose Val 2>)
+<Shift Val>=calshift(<Pose Val 1>, <Pose Val 2>,"TV")
 ```  
 <br/>
 
-### 파라미터
 
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>포즈변수 인자</td>
-      <td>
-        포즈변수를 입력합니다.(1 ~ 9999)
-      </td>
-      <td>포즈변수</td>
-    </tr>
-    <tr>
-      <td>쉬프트변수 인자</td>
-      <td>
-        쉬프트 값을 저장 할 쉬프트 변수를 입력합니다.
-      </td>
-      <td>쉬프트변수</td>
-    </tr>    
-    <tr>
-      <td>TV</td>
-      <td>
-        툴에 수직인 방향으로 쉬프트를 계산합니다.
-      </td>
-      <td>문자열</td>
-    </tr>
-  </tbody>
-</table>   
-<br/>
+### Parameter
 
-### 사용 예
+| Item | Meaning | Remarks |
+| --- | --- | --- |
+| **Shift Variable Input** | Enter the shift variable to store the calculated shift | Shift Variable |
+| **Pose Variable Input** | Enter the pose variable (1 ~ 9999) | Pose Variable |
+| **TV** | Calculates the shift in the direction perpendicular to the tool (1 ~ 9999) | string |
+
+
+### Example
+
 ```python
     move L, spd=30%, …
     var pose_1 = cpo()
@@ -1436,1328 +1112,1312 @@ stitch off
     var pose_2 = cpo()
     var sft_1
     sft_1=calshift(pose_1,pose_2)   
-    # pose_1 – pose_2 의 벡터 쉬프트량을 계산하여 sft_1에 저장
+    # calculate the vector shift between pose_1 and pose_2, and store the result in sht_1
 ```  
 <br/>
-  # 3. 명령어 속성 창# 3.1 개요
+  # 3. Command Property# 3.1 Overview
 
-Arc용접을 위한 작업 프로그램을 티칭할 때 전압, 전류 등 용접조건뿐만 아니라 위빙과 재시도/오버랩, 용접기의 특성 등 Arc 용접 기능의 세부적인 설정이 필요합니다. 또한 Arc 용접뿐만 아니라 로봇을 사용하는 일반적인 상황에서 티칭된 스텝이나 보조점의 위치의 정보(좌표 및 자세 등)를 확인해야 하는 경우도 있습니다.  
-명령어에 커서를 위치한 후, 티칭 펜던트의 좌측에 위치한 [**속성**] 버튼을 누르면 이러한 파일들을 쉽고 빠르게 편집할 수 있는 기능을 제공합니다.
-
-### 명령어 [속성]창 예시
-|명령어|속성 창|
-|-----|-------|
-|`arcon`|전류, 전압, 시너직, 초기조건, 종료조건, 재시도조건, 재기동조건 등을 설정합니다.  |
-|`weaving on`|위빙형상, 위빙 주파수, 위빙 폭, 위빙방향 등을 설정합니다.  |
-|`lvs`|추종관련 정보, seam finding 관련 설정 등을 할 수 있습니다.  |
-|`arccond`|WDB(용접조건 데이터베이스)를 전류, 전압, 주파수, 위빙폭 등을 관리할 수 있습니다.  |
-|`move`|현재 기록된 위치를 베이스좌표계, 로봇좌표계, 축좌표계 등으로 바꿀 수 있습니다. |
+When teaching an arc welding program, not only the welding conditions such as voltage and current but also detailed settings related to weaving, retries/overlaps, and the characteristics of the welder are necessary.
+Furthermore, in general robot operation, there may be cases where the position information (coordinates and orientation) of the taught steps or auxiliary points needs to be verified.  
+By placing the cursor on the command and pressing the [**Property**] button located on the left side of the TP, a function is provided that allows easy and quick editing of these files.
 
 
-용접시작조건의 편집을 예로 들면, 아크를 on 시키는 ```arcon``` 명령문에 커서가 있을 때 [**속성**] 버튼을 누르면 용접시작조건 중 현재 명령문에서 사용하는 조건번호의 내용이 표시됩니다. 이 화면에서 용접시작조건의 세부내용을 확인하거나 변경할 수 있습니다.
+### Example of Command [Property]
 
-이처럼 특정 명령문에 커서를 위치시킨 후 [**속성**] 창에 진입하면 조건을 설정하거나 스텝에 기록된 위치 등 세부내용을 쉽고 빠르게 확인 및 변경 할 수 있습니다.
+| Command | Property | 
+| -----| -------| 
+| `arcon `| Set the current, voltage, synergic, initial/aux/end conditions, etc. | 
+| `weaving on `| Set weaving type, frequency, width, and weaving direction, etc. |
+| `lvs `| Configure tracking-related informations, seam finding settings, etc. |
+| `arccond `| Manage welding condition database(WDB) with settings for current, voltage, frequency, and weaving width. |
+| `move `| Change the current recorded position to base coordinate system, robot coordinate system, or joint coordinate system. |
 
- 
+
+
+As an example of editing welding start conditions, when the cursor is placed on the `arcon` command, which turns on the arc, pressing the [**Property**] button will display the details of the condition number currently used in the welding start conditions.
+In this screen, you can view or modify the detailed settings of the welding start conditions.
+
+Similarly, after placing the cursor on a specific command and entering the [**Property**] window, you can easily and quickly check and modify the settings, such as the conditions or positions recorded in the steps.
+If you wish to save the changes and exit, press [**OK**]; if you wish to exit without saving, press the [**ESC**] key on the teaching pendant.
+
+
 <p align="center">
  <img src="../_assets/3_1_1.png" width="65%"></img>
- <em><p align="center">그림 3.1.1. 로봇 프로그램에서 '속성'</p></em>
+ <em><p align="center">Figure 3.1.1. Property in Robot Program Command</p></em>
 </p>
 
-특정 명령문에서 [**속성**]을 누르면 관련된 파일이나 상세 내용을 화면에 표시합니다. 변경된 내용을 파일에 저장 후 종료를 원할 경우 [**완료**]를, 저장하지 않고 종료를 원할 경우 티칭 펜던트의 [`ESC`]키를 누릅니다.
- 
-# 3.2 상세 내용
 
-각 명령문에서 [**속성**] 버튼을 누를 때 나타나는 내용은 다음과 같습니다.
-
-<style>
-  table th,
-  table td {
-    text-align: left;
-  }
-</style>
-
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>내용</th>
-      <th>상세</th>
-      <th>비고</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>move</th>
-      <td>기록된 위치</td>
-      <td>
-        - 현 위치 (로봇좌표계, 베이스좌표계, 축좌표계, 엔코더 등)<br>
-        - X Y Z(mm) Rx Ry Rz(deg)<br>
-        - 로봇 Configuration
-      </td>
-      <td>지령치 수정 가능</td>
-    </tr>
-    <tr>
-      <th>대입문</th>
-      <td>변수 확인 및 변경</td>
-      <td>
-        변수 유형에 따라 해당 변수를 모니터링하고 값을 변경
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>arcon</th>
-      <td>
-        용접 조건 확인 및 변경<br>
-        - 용접 시작조건<br>
-        - 용접 본조건<br>
-        - 용접 보조조건<br>
-        - 용접 종료조건<br>
-      </td>
-      <td>
-        - 용접시작 및 본조건 <br>
-        조건번호, 설명, 시너직 코드, 가스예출, 전류/송급속도, 용접전압(보정)/ Arc길이, WCR 대기시간, 로봇지연시간, ...<br><br>
-        - 용접보조조건  <br>
-        - 재시도: 횟수, 재시도조건, 동작모드, 속도, Retract시간, Retract속도, 후퇴/용접선 이동량, 시프트 이동량<br>
-        - 재기동: 횟수, 재기동조건, 중첩량, 이동속도, 용접속도<br><br>
-        - 용접종료조건<br>
-        - 전류비율, Downslope시간, 조건 유지시간, 가스후출, ...<br>
-        - 용접보조조건(종료조건 진입)<br>
-        - 자동 용착 해제: 횟수, 용착해제 조건, 조건유지시간 <br>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>weaving on</th>
-      <td>
-        위빙 조건 확인 및 변경
-      </td>
-      <td>
-        조건번호, 위빙형태, 주파수, 기본패턴, 진행각도, 경계제한, 이동시간, 타이머
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>refp</th>
-      <td>
-        참조점 확인 및 변경
-      </td>
-      <td>
-        현 위치, 지령치<br>
-        - X Y Z(mm) Rx Ry Rz(deg) 로봇 Configuration
-      </td>
-      <td>
-        지령치 수정 가능<br>
-        “위치”화면과 동일
-      </td>
-    </tr>
-    <tr>
-      <th>lvs</th>
-      <td>
-        LVS 조건 확인 및 변경
-      </td>
-      <td>
-        기능 설정
-    - 조건번호, Joint형상, 동작모드, 시작점 검출, 용접점 파인딩 설정
-  - 탐색 조건 
-    - 탐색량 [mm], 탐색방향 (+tx, -tx), 탐색속도 (mm/s)
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>heightsen</th>
-      <td>
-        높이센싱 조건 확인 및 변경
-      </td>
-      <td>
-        조건번호, Input data type for height sensing, Reference data setting method, ...
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>arccond</th>
-      <td>
-        용접조건 데이터베이스
-      </td>
-      <td>
-        용접속도, 전류, 전압, 위빙 폭, 위빙 주파수로 이루어진 데이터 베이스 확인 및 편집
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>touchsen</th>
-      <td>
-        터치센싱 기능 설정
-      </td>
-      <td>
-        용접속도, 전류, 전압, 위빙 폭, 위빙 주파수로 이루어진 데이터 베이스 확인 및 편집
-      </td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-
-# 4. Arc용접기 설정# 4.1 Arc 용접기 통신 연결
+{% hint style="info" %}
+    For more details, please refer to [2. Inserting Commands]
+{% endhint %}# 4. Arc Welder Settings# 4.1 Arc Welder communication settings
 
 
-PC와 제어기를 이더넷 케이블로 연결하기 위해 아래 순서대로 진행합니다.
+Follow the steps below to connect the PC and controller using an Ethernet cable:
 
-1. PC에서 **Sycon** 프로그램을 실행합니다. 
-2. cifx카드를 추가하고 아이콘을 우측클릭하여 **configuration**을 클릭합니다.  
-3. 각 항목에 대해 아래와 같이 설정합니다.  
-**Driver** : netX Driver로 설정  
-**Bus Parameters** : Baud rate을 250kBits/s로 설정  
-**Device Assignment** : 추가된 cifx카드를 클릭하고 OK를 클릭합니다.    
-4. cifx 아이콘을 우클릭하여 **download** 합니다. 
-5. cifx 아이콘을 우클릭하여 **네트워크 스캔**을 누릅니다.
+1. Run the **Sycon** program on the PC.
+2. Add the cifx card, then right-click its icon and select **configuration**.
+3. Configure each items as follows:
+  **Driver**: Set to nexX Driver
+  **Bus Parameters**: Set Baud rate to 250kBits/s
+  **Device Assignment**: Select the added cifx card and click OK.
+4. Right-click the cifx icon and select **download**.
+4. Right-click the cifx icon and select **network scan**.
+
 
 <p align="center">
  <img src="../../_assets/4_1_1.png" width="60%"></img>
- <em><p align="center">그림 4.1.1. Sycon 통신 상태</p></em>
-</p> 
- 
-여기까지 진행할 경우 Sycon은 위와 같은 화면이 됩니다. (현대PNS용접기 연결시)  
+ <em><p align="center">Figure 4.1.1. Sycon Communication Status</p></em>
+</p>  
 
-6. 용접기에 해당하는 아이콘에서 우측클릭 후 **disconnect** 후 configuration에서 General항목에 있는 **UCMM**을 **Group3**으로 설정합니다.  
-7. 용접기 아이콘을 우측클릭하여 **upload**한 후 cifx 아이콘을 우클릭하여 **download** 합니다.
+After completing the below steps, the sycon screen will appear as shown above. (when connected to Hyundai PNS Welder)
 
-모든 과정이 끝났으면 로봇 티칭팬던트의 **[설정]-[제어파라미터]-[입출력신호설정]-[fb블럭 할당]** 메뉴에서 사용할 블록을 할당합니다.   
-여기까지 끝났다면, 용접기로부터 제어기로 송신한 데이터들이 할당한 블록내에 굵은 글씨로 표시될 것입니다. (**[창조정]-[선택]-[범용입력]-[fb할당한 번호/9.di]** 에서 확인)
-# 4.2 Arc 용접기 설정 
+6. Right-click the welder icon and select **disconnect**, then go to **configuration > General > UCM** tab and set UCMM to Group3.
+7. Right-click the welder icon and select **upload**, then right-click the cifx icon and select **download**.
 
-사용자는 당사 Arc 용접 로봇과 함께 다양한 용접기를 사용 가능합니다. 이를 위해 용접기 특성을 편집할 수 있는 기능을 제공합니다. 용접기 설정 화면은 다음과 같이 접근 가능합니다.  
-**『시스템』 → 『5: 초기화』 → 『3: 용도설정』** 메뉴로 진입합니다.
+On the Robot TP, navigate to **[System > 2: Control parameter > 2: Input/Output signal setting > 6: fb block allocation]** and assign the blocks to be used.
+Once this is completed, the data transmitted from the welder to the controller will be displayed in bold within the assigned blocks.
+(Verify this in **[pane layout > select > public input > assigned fb block]**)
 
 
-###	용접기 번호  
->현재 설정하고 있는 용접기 제조사 번호를 나타냅니다. 각 제조사별 용접기 번호는 [**용접기 정보**] 버튼을 눌러 확인할 수 있습니다.
+{% hint style="info" %}
+  For more information, please refer to [Hi6 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/english/README)  
+{% endhint %}
+# 4.2 Arc Welder Settings
 
-이 화면에서 [**용접기 설정**] 버튼을 누르면 해당 용접기의 조건 편집화면이 나타납니다.
+User can operate various welders together with our Arc Welding Robots. To support this, a function is provided to edit welder-specific settings. The welder configuration screen can be accessed as follows: **[System > 5: Initialization > 3: Usage setting]**
+
+
+###	Welder Maker Number
+> The currently selected welder maker number is displayed. You can check the welder numbers for each maker by clicking the **[Welder information]** button. By clicking the **[Welder setting]** button on this screen, the condition editing screen for the selected welder will appear.
 
 
 <p align="center">
  <img src="../../_assets/1_2_1.png" width="70%"></img>
- <em><p align="center">그림 4.2.1. 용도설정 대화상자</p></em>
+ <em><p align="center">Figure 4.2.1. Usage Setting Dialog box</p></em>
 </p> 
 
 </br>
 
 <p align="center">
  <img src="../../_assets/4_2_2.png" width="70%"></img>
- <em><p align="center">그림 4.2.2. 현대 용접기 조건 설정</p></em>
+ <em><p align="center">Figure 4.2.2. Hyundai Welder Condition Settings</p></em>
 </p>   
 
 </br>
 
 <p align="center">
  <img src="../../_assets/4_2_3.png" width="70%"></img>
- <em><p align="center">그림 4.2.3. 현대 용접기 입출력 신호 할당</p></em>
+ <em><p align="center">Figure 4.2.3. Hyundai Welder I/O Signal Assignment</p></em>
 </p>   
 
 
-용접기 조건 화면에서는 용접기와 관련된 특성에 대한 편집 기능을 제공하기 때문에 편집 가능한 항목은 용접기 별로 차이가 있습니다. 다음 항목들은 용접기 조건 화면에서 공통적으로 편집 가능한 항목들입니다.  
+The welder condition screen provides editing functions related to welder characteristics, so the editable items differ by welder. The following items are commonly editable in the welder condition screen.
 
-|항목|기본값|설명|
+| Item | Default Value | Description |
 |---|------|---|
-|명칭|당사 지원 용접기 모델명 |용접기의 모델명을 기록합니다.|
-|설명|용접기 메이커명|용접기에 대한 설명을 기록합니다. |
-|용착 검출시간|[0.2]초 <br>(범위: 0.1 ~ 10.0)|Arc 용접 종료 후 설정된 시간 동안 와이어 용착을 검사합니다.|
-|ARC OFF 검출시간|[0.6]초 <br>(범위: 0.0 ~ 10.0)|Arc용접 중 Arc 꺼짐에 대한 기준 시간을 설정합니다. 해당 시간 이상 Arc가 꺼질 경우 Arc off로 인식합니다.<br> 이 값이 작은 경우 Arc점화 실패가 자주 발생할 수 있습니다. 반면에 설정된 값이 너무 크면 Arc off 후에도 로봇 이동과 와이어 인칭이 계속 되는 시간이 증가하기 때문에 Arc off 후 로봇이 이동하는 거리와 와이어 돌출되는 길이가 증가합니다.|
-# 5. Arc 용접 조건 편집# 5.1 Arc 용접 조건 구성
+| Name                   | Supported welder model name | Records the model name of the welder |
+| Comment                | Welder Maker name | Records a description of the welder |
+| Stick detection time   | [0.2] seconds <br>(Range: 0.1 ~ 10.0) | Checks wire fusion during setting time after arc welding ends |
+| ARC OFF detection time | [0.3] seconds <br>(Range: 0.0 ~ 10.0) | Sets the reference time for detecting arc off during arc welding. If the arc is off longer than this time, it is recognized as arc off.<br> It set too low, arc ignition failures may occur frequently.<br> If set too high, robot movement and wire inching continue longer after arc off, increasing the robot travel distance and wire protrusion length after arc off. |
 
-당사 제어기를 이용하여 Arc 용접을 수행하기 위해서는 용접기와 용접조건 설정이 필요합니다. 기본적인 Arc 용접 외에 위빙이나 Arc 센싱과 같은 특별한 기능을 사용하기 위해서는 해당 기능의 세부 설정을 필요로 합니다. 당사에서는 다양한 용접기를 이용하여 사용자가 원하는 설정으로 다양한 환경에서 용접할 수 있게 용접기 특성 파일 편집([[4장. Arc용접기 설정]](../../4_Setting/README.md)), Arc 용접 응용 기능 편집([[1.2.2 Arc 용접 각종 신호 및 기능 설정]](../../1_Basic_information/2_Function_setting/2_signals_functions.md))과 Arc 용접조건 편집 기능을 제공합니다. 
+# 5. Editing Arc Welding Conditions# 5.1 Configure Arc Welding Condition
 
-Arc 용접 조건은 다음과 같이 구성되어 있습니다.
-  -	Arc 용접시작조건: 용접 시작 및 본 조건 용접 설정 편집
-      - Arc 용접시작 보조조건: 재시도와 재시작 기능 편집
-  -	Arc 용접종료조건: 용접 종료 시 설정 편집
-      - Arc 용접종료 보조조건: 자동용착해제 기능 편집
-# 5.2 Arc 용접 타임차트
+To perform Arc Welding our controller, it is necessary to configure both the welder and the welding conditions. In addition to basic arc welding, special functions such as weaving or arc sensing require detailed settings for each respective feature.
+Our company provides the ability to edit Arc welder characteristic files([[4. Arc Welder Settings]](../../4_Setting/README.md)), arc welding application functions([[1.2.2 Arc Welding various signals and funtion settings]](../../1_Basic_information/2_Function_setting/2_signals_functions.md)), and arc welding condition settings, enabling users to weld in various environments with desired configurations using a variety of welder.
 
-디지털 Arc용접의 타임차트입니다. 각 조건설정은 이후 각 명령어 별 대화상자 설명을 참조하세요.
+Arc welding conditions are structed as follows:
+- Arc welding Start Conditions: Editing settings for welding initiation and main welding parameters
+  - Auxiliary Arc welding Start conditions: Editing retry and restart functions
+- Arc welding End Conditions: Editing settings for welding termination
+  - Auxiliary Arc welding End condiitons: Editing the automatic wire stick-out release
 
+# 5.2 Arc Welding FlowChart
+
+This is the Time Flowchart for digital Arc Welding. For each condition setting, please refer to the dialog box desciptions for each command below.
  
 <p align="center">
  <img src="../../_assets/5_2_1.png" width="80%"></img>
- <em><p align="center">그림 5.2.1. 디지털 Arc용접 타임차트</p></em>
+ <em><p align="center">Figure 5.2.1. Digital Arc Welding FlowChart</p></em>
 </p>
 
-# 5.3 용접시작조건 - arcon cnd=X 에서 [속성]으로 실행
+# 5.3 Welding Start condition
 
 
-Arc용접 설정이 디지털이고, ```arcon cnd=X``` 명령라인에 커서가 있을 때, [속성]키를 누르면 다음과 같이 용접시작조건의 편집화면이 나타납니다.
+When the arc welding settings are digital and the cursor is placed on the command line `arcon cnd=_`, pressing the [property] key will bring up the editing screen for the welding start conditions.
 
  
 <p align="center">
  <img src="../../_assets/5_3_1.png" width="70%"></img>
- <em><p align="center">그림 5.3.1. Fronius 용접기 조건 설정</p></em>
-</p>
-  
- 
+ <em><p align="center">Figure 5.3.1. Hyosung welder setting</p></em>
+</p>  
+
+
 <p align="center">
  <img src="../../_assets/5_3_2.png" width="70%"></img>
- <em><p align="center">그림 5.3.2. 효성 용접기 조건 설정</p></em>
-</p>
+ <em><p align="center">Figure 5.3.2. Fronius welder setting</p></em>
+</p>  
 
- 
  
 <p align="center">
  <img src="../../_assets/5_3_3.png" width="70%"></img>
- <em><p align="center">그림 5.3.3. EWM 용접기 조건 설정</p></em>
+ <em><p align="center">Figure 5.3.3. EWM welder setting</p></em>
 </p>
 
  
 
+After editing the conditions, pressing the [**ESC**] key will close the dialog box without saving the changes, while pressing [**OK**] key will save the settings and close the dialog box.
 
-조건들을 편집 후 [**ESC**]키를 누르면 저장하지 않고 대화상자가 종료되며 [**완료**] 키를 누르면 설정 내용이 저장한 후 대화상자가 종료됩니다.
+The following items apply to all welder in common. For model-specific settings, please refer to the following chapter.
 
-다음 설명되는 항목들은 용접기에 공통적으로 적용되는 항목들에 대한 설명입니다. 용접기별 전용 설정 가능 항목들은 [[4장 Arc 용접기 설정]](../../4_Setting/README.md)을 참조하시기 바랍니다. 
-
-공통 항목의 내용들은 용접기마다 명칭, 단위, 범위에 차이가 있을 수 있습니다. 용접기별 차이점은 각 항목의 표를 참조하시기 바랍니다.
+The contents of common items may vary in name, unit, and range for each welder. Please refer to the respective table for model-specific differences.
 
 </br>
 
 ---
 
-### (1)	조건번호  
-편집할 용접시작조건 번호를 지정합니다. (32개의 조건을 지정하여 사용할 수 있습니다. ) 
+### (1)	Condition Number  
+Specifies the welding start condition number to be edited.(Max: 32) 
+
 <center>
 
-| 항목 | 명칭 | 범위 |
+| Item | Name | Range |
 | :---: | :---: | :---: |
-| 모든 용접기 공통 | 조건번호 | 1 ~ 32 |
+| Common to all welders | Condition Number | 1 ~ 32 |
 
 </center>
-    
-    
 
-</br>
+</br>  
 
-### (2)	설명  
-해당 용접시작조건에 대한 설명을 기록합니다. 
+### (2)	Description  
+Records the description for the specified welding start condition.
+
 <center>
 
-| 지원 용접기 | 명칭 |
+| Supported Welder | Name |
 | :---: | :---: |
-| 모든 용접기 공통 | 설명 |
+| Common to all welders | Comment |
 
 </center>
+
+</br>  
     
-### (3)	시너직 코드  
-용접기에 전송할 synergic code를 설정합니다. 코드값의 설정은 별도의 시너직 선택 화면에서 이루어지게 됩니다. 시너직 선택 화면은 용접 시작 조건 화면에서 [**시너직 선택**] 버튼을 눌러서 진입할 수 있습니다.
+### (3)	Synergic Code  
+Sets the synergic code to b transmitted to the welder. The code value is configured in a separate synergic selection screen. The synergic selection screen can be accessed by pressing the [**Synergic Selection**] button on the welding start condition creen.
+
 <center>
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 기본값 |
+| Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| HRWI | 시너직 코드 | - |- | 040 |
-| Fronius </br>(미지원) |-|-|-|-|
+| Hyosung | Synergic Code | - |- | 040 |
+| Fronius </br>(Not supported) |-|-|-|-|
 | EWM | JOB Nr.(synergic) | - |- | 185|
 
 </center>
     
-</br>
+</br>  
 
-### (4)	가스 예출(가스신호제어시)  
-Arc 용접 시작 전 용접부위를 대기와 격리시키기 위해 쉴드가스를 미리 배출하는 시간을 설정합니다.
+### (4)	Welding Current / Welding Power / Wire Feed Speed  
+Set the welding current value. This is the current used during the welding process. The current of the initial and final conditions is determined as a ratio of this value.
 <center>
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 기본값 |
+| Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| 모든 용접기 공통 | 가스 예출 | 초 | 0.0 ~ 10.0 | 0.5 |
-
-</center>
-
-</br>
-
-### (5)	시너직 코드  
-용접 전류에 해당하는 값을 설정합니다. 본 조건 용접에서 사용되는 전류이며, 초기조건, 종료조건에서 사용되는 전류는 이 값의 비율로 결정됩니다. 
-<center>
-
-| 지원 용접기 | 명칭 | 단위 | 범위 | 기본값 |
-| :---: | :---: | :---: |:---: | :---: |
-| HRWI | 용접전류 | A |0.0 ~ 500.0 | 100 |
-| Fronius | 용접파워 | % | 0.0 ~ 100.0 | 10 |
-| EWM | 와이어 송급속도 |  m/min | 0.0 ~ 25.0 | 3.1 |
+| Hyosung | Welding Current | A |0.0 ~ 500.0 | 100 |
+| Fronius | Welding Power | % | 0.0 ~ 100.0 | 10 |
+| EWM | Wire Feed Speed |  m/min | 0.0 ~ 25.0 | 3.1 |
 
 </center>
     
 </br>
 
-### (6)	용접전압보정/ Arc 길이보정  
-디지털 용접에서는 용접전압을 직접 입력하지 않고 synergic data에서 용접전류에 의해 선택된 용접전압을 사용하는 경우가 많습니다. Synergic data에 의해 자동적으로 선택된 용접전압의 변경을 원할 경우 해당 용접전압을 기준으로 하여 변경될 전압의 옵셋 값을 설정합니다. 
+### (5)	Welding voltage / Arc length correction  
+In digital welding, the welding voltage is often not entered directly, but instead selected automatically based on welding current from the synergic data. If you wish to modify the welding voltage automatically selected by the synergic data, set the offset value for the voltage to be adjusted based on the selected welding voltage.
 <center>
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 기본값 |
+| Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| HRWI | 용접전압보정 | % | 50.0 ~ 150.0 | 100 |
-| EWM | 용접전압보정 | V | -10.0 ~ 10.0 | 0 |
-| Fronius | 아크길이보정 | % | -30.0 ~ 30.0 | 0 |
+| Hyosung | Welding voltage | % | 50.0 ~ 150.0 | 100 |
+| Fronius | arc length correction | % | -30.0 ~ 30.0 | 0 |
+| EWM | Welding voltage Correction | V | -10.0 ~ 10.0 | 0 |
 </center>
     
 </br>
 
-### (7)	WCR 대기시간  
-WCR 입력을 대기하는 시간을 나타냅니다. 이 시간 내에 WCR신호가 들어오지 않으면 재시도를 수행합니다. 단, 재시도횟수가 0인 경우에는 에러를 출력하고 로봇이 정지하게 됩니다. 재시동방법 및 재시도횟수 등 재시도 관련 기능은 용접보조조건에서 설정 가능합니다. (5.5, 5.6 용접보조조건 참조)
-<center>
+### (6)	Gas preflow
+Set the time to preflow shileld gas before starting the arc welding to isolate and prepare the welding area.
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 기본값 |
+<center>  
+
+| Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| 모든 용접기 공통 | WCR 대기시간 | 초 | 0.0 ~ 10.0 | 2 |
-
+| Common to all welders | gas preflow | sec | 0.0 ~ 10.0 | 0.5 |  
 
 </center>
-    
-</br>
 
-### (8)	로봇지연시간  
-Arc용접이 정상적으로 시작된 후 로봇이 용접선을 따라 이동하면서 용접을 하기 전 이동을 대기하는 시간을 설정합니다. 초기조건과 무관하며 초기조건 처리 중에도 로봇이 이동할 수 있습니다.
+</br>  
+
+### (7)	WCR Wait Time  
+Indicates the time waiting for the WCR input. If the WCR signal is not received within this time, a retry will be performed. However, if the retry count is set to 0, an error will be displayed, and the robot will stop. Retry methods and retry counts can be configured in the welding auxiliary conditions. (Refer to [5.5 Welding Auxiliary condition](../5_Aux_condition/README.md))
+
 <center>
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 기본값 |
+| Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| 모든 용접기 공통 | 로봇지연시간 | 초 | 0.0 ~ 10.0 | 0 |
+| Common to all welders | WCR Wait Time | sec | 0.0 ~ 10.0 | 2 |
 
 
 </center>
     
 </br>
 
-### (9) 초기조건 유지시간  
-Arc용접 시작 시 초기 전류값을 유지하는 시간을 설정합니다.
+### (8)	Robot delay time  
+After the arc welding has started normally, sets the time the robot will wait before moving along the welding line to perform the welding. This is independent of the initial conditions, and the robot can move even while processing initial conditions.
 <center>
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 
+| Supported Welder | Name | Unit | Range | Default |
+| :---: | :---: | :---: |:---: | :---: |
+| Common to all welders | Robot delay time | sec | 0.0 ~ 10.0 | 0 |
+
+</center>
+    
+</br>
+
+### (9) Initial condition maintain time  
+Sets the time for maintaining the initial current value at the start of arc welding.
+<center>
+
+| Supported Welder | Name | Unit | Range | 
 | :---: | :---: | :---: |:---: |
-| 모든 용접기 공통 | 초기조건유지시간 | 초 | 0.0 ~ 10.0 | 
-
+| Common to all welders | Initial condition maintain time | sec | 0.0 ~ 10.0 | 
 
 </center>
     
 </br>
 
-### (10) 초기 용접전류/용접파워/송급속도  
-Arc 용접 시작 시 초기조건 유지시간 동안 출력할 용접전류를 설정합니다. 본 조건 용접전류 대비 %로 설정합니다.
+### (10) Initial Welding Current / Welding Power / Wire Feed Speed  
+Sets the welding current to be output during the initial condition hold time at the start of arc welding.
+This is set as a percent(%) relative to the welding current of the main condition.
 <center>
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 기본값 |
+| Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| HRWI | 초기 용접전류 | % | 20 ~ 200 | 120 |
-| Fronius | 초기 용접파워 | % | 20 ~ 200 | 120 |
-| EWM | 초기 송급속도 | % | 20 ~ 200 | 120 |
+| Hyosung | Initial Welding Current | % | 20 ~ 200 | 120 |
+| Fronius | Initial Welding Power | % | 20 ~ 200 | 120 |
+| EWM | Initial Wire Feed Speed | % | 20 ~ 200 | 120 |
 
 </center>
     
 </br>
 
-### (11) 초기 용접전압보정/ Arc 길이보정  
-Arc 용접 시작 시 초기조건 유지시간 동안 출력할 용접전압를 설정합니다. 시너직 전압 대비 보정값으로 설정합니다.
+### (11) Initial Welding voltage / Arc length correction  
+Sets the welding voltage to be output during the initial condition hold time at the start of arc welding.
+This is set as a correction value relative to the synergic voltage.  
 <center>
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 기본값 |
+| Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| HRWI | 초기 용접전압보정 | % | 50.0 ~ 150.0 | 100 |
-| EWM | 초기 용접전압보정 | V | -10.0 ~ 10.0 | 0 |
-| Fronius | 초기 Arc 길이보정 | %| -30.0 ~ 30.0 | 0 |
+| Hyosung | Initial Welding voltage | % | 50.0 ~ 150.0 | 100 |
+| EWM | Initial Welding voltage | V | -10.0 ~ 10.0 | 0 |
+| Fronius | Initial Arc length correction | %| -30.0 ~ 30.0 | 0 |
 
 </center>
     
 </br>
 
-### (12) 슬로프 시간  
-초기조건과 본 조건 사이에 전류 변화를 슬로프로 처리하는 시간을 설정합니다.
+### (12) Slope Time  
+Sets the time to process the current change between the initial condition and this condition as a slope.
 <center>
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 
+| Supported Welder | Name | Unit | Range | 
 | :---: | :---: | :---: |:---: |
-| 모든 용접기 공통 | 슬로프 시간 | 초 | 0.0 ~ 10.0 | 
+| Common to all welders | Slope Time | 초 | 0.0 ~ 10.0 | 
 
 
 </center>
     
 </br>
 
-### (13) 제한치 초과 허용 시간  
-용접 전류/전압, 피드모터 전류의 제한치 초과 허용시간을 설정합니다. 이 시간 이상 용접 전류/전압, 피드모터 전류가 제한치를 초과하는 경우 재시작을 수행합니다. 단, 재시작 횟수가 0인 경우에는 에러를 출력하고 로봇이 정지합니다. 재시작 방법 및 재시작 횟수 등 재시작 관련 기능은 용접보조조건에서 설정 가능합니다. ([5.6 용접 보조 조건 – 재기동] 참고) 이 시간이 0초로 설정되는 경우 Arc제한 감시기능을 사용하지 않습니다.
+### (13) Excess Allowed Time  
+Sets the allowable time for exceeding the welding voltage/current and feed motor current limits. If the welding voltage/current or feed motor current exceeds the limits for longer than this time, a restart will be performed. However, If the restart count is set to 0, an error will be displayed, and the robot will stop. The restart method and restart count, as well as other restart-related features, can be configured in the welding auxiliary conditions. If this time is set to 0 seconds, the arc limits monitoring function will not be used.
 <center>
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 기본값 | 
+| Supported Welder | Name | Unit | Range | Default | 
 | :---: | :---: | :---: |:---: |:---: |
-| 모든 용접기 공통 | 제한치 초과 허용 시간 | 초 | 0.0 ~ 10.0 | 0 | 
+| Common to all welders | Excess Allowed Time | 초 | 0.0 ~ 10.0 | 0 | 
 
 
 </center>
     
 </br>
 
-### (14) 전압 상한치/전압 하한치  
-용접 중 전압의 상하한 제한치를 설정합니다. 제한치를 허용 시간 이상 넘을 경우 에러를 발생합니다.
+### (14) Welding Voltage upper/lower limit  
+Sets the upper and lower voltage limits during welding. If the limits are exceeded for longer than the allowed time, an error will occur.
 <center>
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 
+| Supported Welder | Name | Unit | Range | 
 | :---: | :---: | :---: |:---: |
-| 모든 용접기 공통 | 전압 상한치/전압 하한치| V | 0.0 ~ 100.0 | 
+| Common to all welders | Welding Voltage upper/lower limit | V | 0.0 ~ 100.0 | 
 
 
 </center>
     
 </br>
 
-### (15) 전류 상한치/전류 하한치  
-용접 중 전류의 상하한 제한치를 설정합니다. 제한치를 허용 시간 이상 넘을 경우 에러를 발생합니다.
+### (15) Welding Current upper/lower limit  
+Sets the upper and lower current limits during welding. If the limits are exceeded for longer than the allowed time, an error will occur.
 <center>
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 
+| Supported Welder | Name | Unit | Range | 
 | :---: | :---: | :---: |:---: |
-| 모든 용접기 공통 | 전류 상한치/전류 하한치| A | 0.0 ~ 1000 | 
+| Common to all welders | Welding Current upper/lower limit | A | 0.0 ~ 1000 | 
 
 
 </center>
     
 </br>
     
-</br># 5.3.1 용접 시작 조건 – HRWI 전용 설정
+</br># 5.3.1 Welding Start condition – Hyosung-only settings
 
+### (1) Welding Mode: [**Normal, Pulse**]  
+Set the Arc Welding method.
 
+### (2)	Slowdown Adjuctment: [ 100 ] % (range: 0 ~ 255)  
+Adjust the offset for the wire feed speed before the arc is initiated.
 
-### (1) 용접모드 선택: [**일반, 펄스**]  
-Arc 용접 방법을 설정합니다.
+### (3)	Inductor Effect: [  100] % (range: 0 ~ 255)  
+Set the inductor effect.
+# 5.3.2 Welding Start condition – Fronius-only settings
 
-### (2)	슬로우다운 조정: [  100] % (범위: 0 ~ 255)  
-Arc 발생전까지 와이어를 송급하는 기본 속도의 옵셋을 설정합니다.
+### (1)	Operation Mode: [**Prog-Std, Prog-Pulse, CMT, JOB, TIG**]  
+Set the welding mode supported by the Fronius welder. The descriptions for each mode as follows:
 
-### (3)	인덕터 효과: [  100] % (범위: 0 ~ 255)  
-인덕터 효과를 설정합니다.
-# 5.3.2 용접 시작 조건 – Fronius 전용 설정
+- **Prog-Std**: Use the standard welding program stored in the welder.
+- **Prog-Pulse**: Use the pulse welding program stored in the welder.
+- **CMT**: Use the Cool Metal Transfer functions.
+- **JOB**: Use the job stored in the welder.
+- **TIG**: Use of TIG(Tungsten Insert Gas) welding functionality.
 
-### (1)	동작모드: [**Prog-Std, Prog-Pulse, CMT, JOB**]  
-Fronius 용접기에서 지원하는 용접모드를 설정합니다. 각 모드에 대한 설명은 아래와 같습니다.
+### (2)	Prog/Job Number  
+Set the program or job number to be used from the ones stored in the welder.
+If the operation mode is set to Job, the job number will be used.
 
-- **Prog-Std**: 용접기에 저장된 일반 용접의 program을 사용
-- **Prog-Pulse**: 용접기에 저장된 펄스 용접의 program을 사용
-- **CMT**: Cool Metal Transfer 기능을 사용
-- **JOB**: 용접기에 저장된 Job을 사용
+### (3)	Dynamic correction: [ 0 ]% (range: -5.0 ~ 5.0)  
 
-### (2)	Prog/Job 번호  
-용접기에 저장되어 있는 program과 job 번호 중 사용할 번호를 설정합니다. 동작모드가 Job인 경우 job 번호로 사용됩니다.
+Set the dynamic correction value. A smaller value results in a strong and stable arc, but increases the amount of spatter. A larger value generates a smoother arc and reduces the amount of spatter.
 
-### (3)	다이나믹보정: [  0]% (범위: -5.0 ~ 5.0)  
-다이나믹보정 값을 설정합니다. 이 값이 작으면 강하고 안정적인 Arc가 발생하지만 스패터 양이 증가하고, 이 값이 크면 부드러운 Arc발생하고 스패터 양이 줄어듭니다.
+# 5.3.3 Welding Start condition – EWM-only settings
 
-# 5.3.3 용접 시작 조건 – EWM 전용 설정
-
-### (1)	JOB mode: [**Job mode off, Job mode active**] 
-EWM AlphaQ 용접기에서 지원하는 용접모드를 설정합니다. 각 모드에 대한 설명은 아래와 같습니다.
--	Job mode off: 용접기에 시너직 데이터에 따라 송급속도, 전압 옵셋이 반영되어 용접을 수행
--	Job mode active: 용접기에 저장된 Job을 사용하여 용접 작업이 수행됨
+### (1)	JOB mode: [**Job mode Disable, Job mode Enable**] 
+Set the Job mode supported by the EWM AlphaQ welder. The descriptions for each mode are as follows:
+- Job mode disable: Welding is performed with wire feed speed and voltage offset based on the synergy data stored in the welder.
+- Job mode enable: Welding is pserfored with the job stored in welder.
 
 ### (2)	Welding mode  
-펄스 용접 사용여부를 설정합니다.
+Set whether pulse welding is used.
 
 ### (3)	Super pulse function  
-펄스 용접 시 super pulse(2단 펄스) 기능을 사용할 것인지 설정합니다.
+When pulse weling is enabled, it configures the use oft the Super Pulse(2-stage pulse) function.
 
-### (4)	Job Nr. (synergic)  
-용접에 사용할 있는 시너직 번호나 job 번호 중 사용할 번호를 입력합니다. [시너직 선택] 버튼을 누르면 용접법, 재질, 가스 종류, 와이어 직경에 맞는 Job번호를 설정하는 대화상자로 진입할 수 있습니다.
+### (4)	Job Number (synergic)  
+Enter the synergy number or job number to be used for welding. Press the [Synergy selection] button at the bottom of the TP to open a dialog box where you can set the job number that corresponds to the welding method, material, gas type, and wire diameter.
 
-### (5)	다이나믹보정: [  0] (범위: -40.0 ~ 40.0)  
-다이나믹보정 값을 설정합니다. 이 값이 작으면 강하고 안정적인 Arc가 발생하지만 스패터 양이 증가하고, 이 값이 크면 부드러운 Arc발생하고 스패터 양이 줄어듭니다.
+### (5)	Dynamic correction: [ 0 ] (range: -40.0 ~ 40.0)  
+Set the dynamic correction. A smaller value results in a strong and stable arc, but increases the amount of spatter. A larger value generates a smoother arc and reduces the amount of spatter.
 
-### (6)	Lift arc start: [**미사용, 사용**]  
-용접 시작 시 리프트 아크 기능을 사용할 것인지 설정합니다. 리프트 아크 기능을 사용하는 경우 용접 시작 시 스패터가 크게 발생하는 현상을 감소시킬 수 있습니다.
-# 5.4 용접 종료 조건
+### (6)	Lift arc start: [**Not use, Use**]  
+Set whether to use the lift arc function at the start of welding. Using the lift arc function can reduce the occurrence of excessive spatter during the start of welding.
+# 5.4 Welding End condition
 
-Arc용접 설정이 디지털이고 용접시작조건 대화상자에서 [종료조건] 키를 누르면 다음과 같은 용접종료조건 편집화면이 나타납니다.
+When the arc welding settings are digital and [End condition] tab is pressed in the welding start condition dialog box, the following welding end condition editing screen appears.
+
 
 <p align="center">
  <img src="../../_assets/5_4_1.png" width="70%"></img>
- <em><p align="center">그림 5.4.1. 용접종료조건 설정 (디지털 EWM 용접기 예)</p></em>
+ <em><p align="center">Figure 5.4.1. Welding End Condition Setting (e.g. EWM)</p></em>
 </p> 
 
 
-
-
-
-용접 종료 조건의 항목을 수정 후 [**ESC**]키를 누르면 수정된 내용을 저장하지 않고 용접시작조건 대화상자로 이동합니다. [**완료**]키를 누르면 수정된 내용을 저장하고 용접시작조건 대화상자로 이동합니다.
+After editing the welding end conditions, pressing the [**ESC**] key will close the dialog box without saving the changes, while pressing [**OK**] key will save the settings and close the dialog box.
 
 </br>
 
----
-각 항목별 내용은 다음과 같습니다.
-
+The descriptions for each item are as follows:
 
 </br>
 
-### (1)	조건번호: [1] (범위: 변경불가)  
-용접시작조건 번호를 표시합니다. 디지털 Arc용접기능에서는 종료조건번호와 시작조건번호는 하나로 관리됩니다. 따라서 종료조건번호를 변경하기 위해서는 시작조건번호를 변경해야 합니다. 종료조건화면에서는 확인만 가능하며 변경은 불가능합니다.
+### (1)	Condition Number: [1] (Range: changes not allowed)  
+Displays the welding start condition number. In digital arc welding, the end condition number and start condition number are managed as one. Therefore, to change the end condition number, the start condition number must also be changed.  
 
-### (2)	종료 용접전류/용접파워/송급속도  
-크레이터 처리시 출력할 전류의 값을 설정합니다. 본 조건(시작조건의 용접전류, 용접파워, 송급속도) 대비 % 량으로 설정합니다. 단, EWM 용접기의 경우 본 조건과 같은 m/min으로 설정합니다.
+### (2)	End Welding Current / Welding Power / Wire Feed Speed  
+Set the current value to be output during crater treatment. This is set as a percentage(%) relative to the current welding conditions (welding current, welding power, and wire feed speed). However, for EWM welders, this is set in m/min, the same as the welding conditions.
+
 <center>
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 기본값 |
+| supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| HRWI | 종료 용접전류 | % |10 ~ 100 | 70 |
-| Fronius | 종료 용접파워 | % | 10 ~ 100 | 70 |
-| EWM | 종료 송급속도 | m/min | 0.0 ~ 25.0 | 7.0 |
+| Hyosung | End Welding Current | % |10 ~ 100 | 70 |
+| Fronius | End Welding Power | % | 10 ~ 100 | 70 |
+| EWM | End Wire Feed Speed | m/min | 0.0 ~ 25.0 | 7.0 |
 
 </center>
 
-
-
-### (3)	종료 용접전압보정/ Arc 길이보정  
-크레이터 처리 시 출력할 전압(Arc 길이) 보정값을 설정합니다. 전압은 출력할 전압을 지정하여 출력합니다.
+### (3)	End Welding voltage/ Arc length correction  
+Set the voltage value to be output during crater treatment. The voltage is specified and output according to the set value.
 <center>
 
-| 지원 용접기 | 명칭 | 단위 | 범위 | 기본값 |
+| supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| HRWI | 종료 용접전압보정 | % | 50.0 ~ 150.0| 100 |
-| EWM | 종료 용접전압보정 | V | -10.0 ~ 10.0 | 0 |
-| Fronius | 종료 Arc 길이보정 |  % | -30.0 ~ 30.0 | 0 |
+| Hyosung | End Welding voltage | % | 50.0 ~ 150.0| 100 |
+| EWM | End Welding voltage | V | -10.0 ~ 10.0 | 0 |
+| Fronius | End Arc length correction |  % | -30.0 ~ 30.0 | 0 |
 
 </center>
 
-### (4)	Downslope 시간(Crate Time): [0.10] 초 (범위: 0.0 ~ 10.0)  
-본 조건과 종료조건 사이에 전류 변화를 슬로프로 처리하는 시간을 설정합니다.  
+### (4)	Downslope Time(Crate Time): [0] sec (Range: 0.0 ~ 10.0)  
+Sets the time for processing the current change between the main condition and the end condition as a slope.
 
 <p align="center">
  <img src="../../_assets/5_4_2.png" width="30%"></img>
- <em><p align="center">그림 5.4.2. DownSlope 시간과 Crate 시간 차트</p></em>
+ <em><p align="center">Figure 5.4.2. DownSlope Time and Crate Time Chart</p></em>
 </p>
 
-### (5)	조건유지시간: [1] 초 (범위: 0.1 ~ 10.0)   
-용접종료조건의 ‘전류비율’ 항목에서 지정된 출력 값을 유지하는 시간을 설정합니다.
+### (5)	Condition Hold time: [1] second (Range: 0.1 ~ 10.0)   
+Set the time to maintain the output value specified in the 'current ratio' item under the welding end condition.
 
-### (6)	Burnback 조정: [  0] % (범위: -20 ~ 20)  
-Burnback 처리를 설정합니다.
+### (6)	Wire Burnback: [  0] % (Range: -20 ~ 20)  
+Configures burnback processing. May vary depending on the welder.
 
-### (7)	가스 후출: [ 0.10] 초 (범위: 0.3 ~ 10.0)  
-Arc가 꺼진 후에도 보호가스를 계속 출력하는 시간을 설정합니다.
+### (7)	Gas Post Flow: [ 0] second (Range: 0.0 ~ 10.0)  
+Set the time to continue the shielding gas output even after the arc is turned off.
 
-### (8)	크레이터 후진거리: [  0] (범위: 0 ~ 100)  
-크레이터 처리 과정 중 DownSlope시간+조건유지시간 동안 로봇이 후진할 거리를 설정합니다. 속도는 거리와 시간에 의해 자동으로 결정됩니다.
+### (8)	Crater move time: [ 0 ] second (Range: 0.0 ~ 10.0) / Crater move distance : [0] mm (Range: 0.0 ~ 100.0)
+During crater treatment, sets the distance the robot will move backward during the DownSlope time and condition hold time. The speed is automatically determined based on the distance and time.
 
-### (9) Retract 시간: [  0] (범위: 0.0 ~ 10.0)  
-용접 종료 처리가 끝난 후 로봇이 다음 이동을 수행하면서 와이어를 되감을 시간을 설정합니다. 간섭 등에 의해 와이어가 휘어지거나 다음 스텝 시작 시 와이어 접촉 상태로 용접이 시작되는 것을 방지하기 위한 경우 사용합니다.
+### (9) Stick release Time: [ 0 ] second (Range: 0.0 ~ 10.0)  
+After welding is completed, there may be a need to separate the wire and base metal as they might be stuck together during the welding process.
+The conditions for this separation are set, where 0 refers to the default condition.
 
-### (10) Retract 속도: [  0] (범위: 0 ~ 100)  
-용접 종료 시 와이어를 되감는 처리를 할 때 와이어 송급속도를 지정합니다. 용접기의 최대 전류에 대한 비율로 설정합니다.
-# 5.5 용접 보조 조건# 5.5.1 용접 보조 조건 - 재시도
+### (10) Stick release Speed: [  0] (Range: 0 ~ 100)  
+Set the time required for the release of fusion after welding completion.
+# 5.5 Welding Auxiliary condition
 
 
-Arc 용접을 시작할 때 모재의 용접 시작점 부근에 부착된 이물질 등의 원인으로 Arc 불꽃이 발생하지 못하는 경우가 있습니다. 재시도(Retry)기능은 이와 같은 Arc점화 실패 시 자동으로 Arc의 점화를 재시도 하여 로봇의 정지 없이 연속작업을 가능하게 하는 기능입니다.
+When the arc welding settings are digital and [Auxiliary condition] tab is pressed in the welding start condition dialog box, the following welding auxiliary condition editing screen appears.
 
-Arc용접 설정이 디지털일 때 용접시작조건 대화상자에서 [**보조조건**] 키를 누르면 다음과 같은 용접 보조 조건 편집화면이 나타납니다.
+# 5.5.1 Welding Auxiliary condition – Retry
+
+
+There may be cases where the arc does not ignite due to foreign materials attached near the weld start point of the base material when starting arc welding. The retry function automatically attempts to reignite the arc in such cases of arc ignition failure, enabling continuous operation without robot stoppage.
 
   
 <p align="center">
  <img src="../../_assets/5_5_1.png" width="70%"></img>
- <em><p align="center">그림 5.5.1. 용접보조조건(재시도) 설정(EWM 용접기)</p></em>
+ <em><p align="center">Figure 5.5.1. Welding Auxiliary condition (Retry) Setting(e.g. EWM)</p></em>
 </p>
 
 {% hint style="info" %}
-[참고 사항]   
-재시도 기능은 Arc 점화 시도 후 점화에 실패했을 때 수행되는 기능이고, 재기동 기능은 Arc 용접 중 용접이 중단된 후 다시 재개될 때 수행되는 기능입니다. 
+[Note]   
+The retry function is activated when arc ignition fails after an attempt, while the restart function is activated when welding is interrupted during arc welding and needs to be resumed.
 {% endhint %}
 
 
-[그림 5.7]의 좌측 항목은 용접 보조조건 중 재시도 조건을 나타냅니다. 재시도 조건의 각 항목별 내용은 다음과 같습니다.
+The left section of [Figure 5.5.1] represents the retry conditions in the welding auxiliary conditions. The descriptions for each item of the retry conditions are as follows:  
 
-### (1)	RETRACT시간: [0] 초 (범위: 0.00 ~ 10.00)  
-    재시도는 와이어를 송출하여 용접을 시도한 후에 Arc가 발생 않았을 때 진행됩니다. 그렇기 때문에 재시도 할 때 와이어가 과도하게 송출된 상태일 수 있습니다. 이럴 경우 와이어가 모재와 접촉하여 용착이 발생하거나 모재와 너무 근접하여 Arc 발생이 불안정할 수 있습니다. 그렇기 때문에 재시도 전 와이어를 retract하여 용접에 적합한 환경을 만드는 기능을 지원합니다. 이 설정은 와이어를 retract할 시간을 지정하는 것입니다. 이 값이 0이 아닐 경우 와이어를 retract한 후 토치를 이동하고, 이후 Arc 발생을 시도 합니다. 
+### (1)	Retract Time: [0.3] second (Range: 0.00 ~ 10.00)  
+  The retry function is performed after attempting to weld by feeding the wire and failing to ignite the arc. As a result, the wire may be excessively fed during the retry process. In this case, the wire might contact the base material and cause fusion or get too close to the base material, resulting in unstable arc ignition. To address this, the function supports retracting the wire before the retry to create an optimal environment for welding. This setting specifies the time for retracting the wire. If this value is not 0, the wire will be retracted, the torch will move, and then the arc ignition will be attempted.  
 
-### (2)	RETRACT속도: [10] % (범위: 0 ~ 100)  
-    재시도 할 때에 와이어를 retract하는 속도입니다. 용접기에 따라 지원되지 않을 수 있습니다. (Ex. Saprom 용접기)
+### (2)	Retract speed: [10] % (Range: 0.0 ~ 100.0)  
+  Specifies the speed at which the wire is retracted during the retry process. This feature may not be supported depending on the welder model. (e.g. Saprom welders)  
 
-### (3)	횟수: [5] 회 (범위: 0 ~ 9)  
-    Arc점화 실패 후 재시도할 횟수를 지정합니다. 지정된 횟수 내에 Arc 점화를 성공하지 못하면 원점(처음 Arc점화 시도지점, 용접 시작점)으로 복귀 후 정지합니다.  
+### (3)	Repetition: [5] times (Range: 0 ~ 9)  
+  Specifies the number of times the arc ignition will be retried after failure. If the arc fails to ignite within the specified number of retries, the system will return to the origin(the initial arc ignition attempt point, or the weld start point) and stop.  
 
-### (4)	재시도조건: [0] (범위: 0 ~ 32)  
-    Arc 점화를 재시도 할 때 사용할 용접조건의 번호를 입력합니다. 재시도 시 입력된 용접시작조건의 본 조건(전류, 전압 등)으로 용접을 수행하게 됩니다. 단, 입력된 조건번호가 “0” 인 경우와 동작모드가 재진입인 경우 현재 실행중인 용접시작조건의 본 조건으로 재시도 용접이 수행됩니다.
+### (4)	Retry condition: [0] (Range: 0 ~ 32)  
+  Specifies the welding condition number to be used for retrying the arc ignition. During the retry, welding will be performed according to the conditions (current, voltage, etc.) of the welding start condition that was entered.
+  However, if the entered condition number is "0" or if the operation mode is set to reentry, the welding will be perfomed based on the main condition of the currently active welding start condition.  
 
-### (5)	동작모드: <재진입, 시프트, 다방향>  
-    재시도를 위해 토치를 이동시키는 방법을 설정합니다. 3가지 설정을 지원하며 설정에 따른 토치 이동 방법은 다음과 같습니다. [그림 5.10]을 참고하여 주십시오.
-    
-- A. 재진입  
-    Arc발생 실패 시 직전 스텝으로 스텝 후진한 후 다시 Arc발생을 시도합니다. 그 이동거리는 용접보조조건 재시도 설정 메뉴에서 ‘후퇴/용접선 이동’거리로 설정합니다. 일정거리 스텝 후진 후 다시 스텝전진하기 때문에 전압/전류 조건은 용접시작 조건을 따릅니다.
+### (5)	Operation mode: ReEnter / Shift / Multi-direc.  
+  Sets the method for moving the torch during a retry. Three different methods are supported, and the torch movement for each setting is as follows: (Please refer to [Figure 5.5.2])  
 
-- B. 시프트  
-    용접보조조건의 재시도 조건에서 설정된 시프트 이동 량만큼 이동 후 Arc발생 스텝으로 복귀합니다. 시프트 거리는 용접선을 기준으로 전/후, 좌/우, 상/하 방향으로 설정할 수 있습니다. 재시도 시 용접 조건은 재시도조건 항목의 용접시작조건입니다. Arc발생이 성공하면 Arc를 유지하면서 설정된 속도로 용접 시작점으로 이동한 후 용접을 진행합니다.
+- A. ReEnter  
+  When arc ignition fails, the torch steps backward to the previous step and attempts to ignitie the arc again. The distance of this backward movement is set in the welding auxiliary condition retry settings menu under the "Retreat/Weld line dist". After stepping back a certain distance, the torch will step forward again, so the voltage/current conditions follow the welding start conditions.  
 
-- C. 다방향  
-    용접보조조건의 재시도 조건 중 ‘시프트 이동량’에서 설정된 이동거리 중 전/후만큼 용접 선을 따라 이동 후 1차 시도를 합니다. 2차 시도는 좌/우, 상/하에서 설정된 거리까지 감안한 거리로 이동하여 수행합니다. 3차 시도는 2차 시도에서 좌/우 위치만 반대로 이동하여 용접을 시도합니다. 4~6차 시도는 1~3차 시도보다 2배 거리에서 같은 작업을 수행하며 7~9차 시도는 3배 거리에서 같은 작업을 시도합니다. 재시도 조건 항목의 용접시작조건으로 용접을 시작하며 Arc발생이 성공하면 Arc를 유지하면서 설정된 속도로 용접 시작점으로 이동한 후 용접을 진행합니다.
+- B. Shift  
+  After moving by the shift distance set in the retry conditions of the welding auxiliary condition, the torch returns to the arc ignition step. The shift distance can be set in the forward/backward, left/right, and up/down direction relative to the welding line. During the retry, the welding conditions follow the welding start conditions in the retry settings. If arc ignition is successful, the arc is maintained, and the torch moves to the welding start point at the set speed, where welding proceeds.  
 
-### (6)	속도: [100]cm/분 (범위: 1 ~ 999)  
-    재시도 할 때 토치가 재시도 위치로 이동하거나 용접시작점으로 복귀하는 속도입니다.
+- C. Multi-direc.  
+  In the retry conditions of the welding auxiliary settings, the "shift Distance" is devided into forward/backward, left/right, and up/down movements. The 1st retry attempts to move along the welding line by the forward/backward distance. The 2nd retry attempts the left/right and up/down movements, considering the distances set for those directions. The 3rd retry moves in the opposite direction of the left/right position from the second retry. For retries 4-6, the same operation is performed at twice the distance compared to retries 1-3, and for retries 7-9, the same operation is performed at three times the distance. Welding starts according to the welding start conditions in the retry settings, and if arc ignition is successful, the arc is maintained, and the torch moves to the welding start point at the set speed, where welding proceeds.  
 
-### (7)	후퇴 이동 거리: [3] mm (범위: 0.00 ~ 99.99)   
-    동작모드가 재진입으로 설정 시, 재시도 할 때에 토치를 이동시키는 거리입니다. 동작모드 설정은 시작조건에서 지정합니다. 
+### (6)	Speed: [100]cm/min (Range: 1.0 ~ 999.0)  
+  Specifies the speed at which the torch moves to the retry position or returns to the welding start point during the retry.  
 
-### (8)	시프트 이동 량: 전/후=[2], 좌/우=[2], 상/하=[1] mm (범위: -99.9 ~ 99.9)  
-    동작모드가 시프트, 다방향으로 설정된 경우, 토치가 이동하는 거리입니다. 
+### (7)	Retreat/Weld line dist.: [3] mm (Range: 0.00 ~ 99.99)   
+  When the operation mode is set to ReEnter, this is the distance the torch moves during the retry.  
+
+### (8)	Shift distance: FWD/BWD = [ 2 ], L/R = [ 2 ], Up/Down = [ 1 ] mm (Range: -99.99 ~ 99.99)  
+  When the operation mode is set to Shift, this is the distance the torch moves during the retry.  
     
 
 <p align="center">
  <img src="../../_assets/5_5_2.png" width="80%"></img>
- <em><p align="center">그림 5.5.2 재시도 기능 순서</p></em>
+ <em><p align="center">Figure 5.5.2 Retry Function Sequence</p></em>
 </p>
 
-# 5.5.2 용접 보조 조건 - 재기동
+# 5.5.2 Welding Auxiliary condition – Restart
 
-Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 초과, 가스 압력 저하, 와이어 부족, 냉각수 에러 등으로 인해 용접이 중단될 수 있습니다. 이 때 용접이 정지된 지점에서 다시 용접을 시작하면 용접이 안된 부분이 발생할 수 있습니다. 재기동 기능은 이러한 경우 용접이 수행되지 않은 부분을 보완하기 위해 오버랩하여 용접을 수행하는 기능입니다.
+During arc welding, the process may be interrupted due to factors such as arc failure, exceeding the limits of welding current and voltage, gas pressure drop, wire shortage, cooling water errors, etc.
+When welding is restarted from the point where the process was interrupted, there is a risk of leaving un-welded areas.
+In such cases, the restart function compensates for the un-welded sections by performing overlap welding.
 
-재기동 조건설정에서는 Arc 꺼짐 등 특정 원인에 의해 용접이 중단된 후 재기동 할 때 재기동 방법 대해 설정합니다. 용접이 중단된 이후 별도의 조치 없이도 용접작업을 자동으로 재기동하거나 중단 원인을 제거한 후 다시 기동하면 일정 거리만큼 용접선을 따라 역방향으로 이동한 후 용접을 시작합니다. 결과적으로 에러가 발생하여 용접이 중단된 위치 근처에서는 용접 수행이 중복되는 오버랩 구간이 생기게 됩니다. 이를 통하여 용접 중단 후 재기동을 할 때 용접이 안된 부분이 생기는 것을 막을 수 있습니다.
+After welding is interrupted, the system automatically restarts or, after eliminating the cause of the interruption, resumes operation.
+It moves backward along the weld line for a certain distance and then resumes welding. This results in an overlap region near the point where welding was stopped, preventing un-welded areas from being created.
+
+This section describes the restart conditions and overlap settings.
 
  
 <p align="center">
  <img src="../../_assets/5_5_3.png" width="70%"></img>
- <em><p align="center">그림 5.5.3. 용접보조조건(재기동) 설정(EWM 용접기)</p></em>
+ <em><p align="center">Figure 5.5.3. Welding Auxiliary condition (Restart) Setting(e.g. EWM)</p></em>
 </p>
 
 
+### (1)	Restart Repetition: [ 3 ] times (Range: 0 ~ 9)   
+Specifies the maximum number of restart attempts within the same welding section. If this count is exceeded, the error "**E1274 Re-startup count exceeded within the same welding section**" will occur.  
 
-자동용착해제 조건은 용접 종료 후 와이어가 모재에 용착 되었을 때, 이를 자동으로 해제하는 기능에 대한 설정입니다.
+### (2)	Restart Condition: [ 0 ] (Range: 0 ~ 32)   
+Specifies the welding condition number to be used during the overlap region when restarting the welding. The welding will be performed with the specified initial welding conditions(current, voltage, etc.)  
+If the input condition number is "0", welding will proceed with the current welding start conditions from the point of overlap.
 
-자동 용착해제 조건의 각 항목별 내용은 다음과 같습니다.
+### (3)	Overlap distance: [ 5 ] mm (Range: 0.0 ~ 99.9)  
+Specifies the length of the overlap (overlap distance) when restarting the welidng. The robot will move back by the specified distance and then resume welding.  
 
-### (1)	RETRACT시간: [0] 초 (범위: 0.00 ~ 10.00)  
-용접 중에 용접이 중단되어 재기동을 할 때 다양한 이유로 와이어가 과도하게 송출된 상태일 수 있습니다. 이럴 경우 와이어가 모재와 접촉하여 용착이 발생하거나 모재와 너무 근접하여 Arc 발생이 불안정할 수 있습니다. 그렇기 때문에 재기동 전 와이어를 retract하여 용접에 적합한 환경을 만드는 기능을 지원합니다. 이 설정은 와이어를 retract할 시간을 지정하는 것입니다. 이 값이 0이 아닐 경우 와이어를 retract한 후 토치를 이동하고, 이후 Arc 발생을 시도 합니다.
+### (4)	Moving Speed: [ 50 ] mm/sec (Range: 1~999)  
+Specifies the speed at which the torch is moved to the overlap start position.
+This corresponds to the movement speed in the section from ③ to ④ in [figure 5.5.4]  
 
-### (2)	RETRACT속도: [10] % (범위: 0 ~ 100)  
-재기동 할 때에 와이어를 retract하는 속도입니다. 용접기에 따라 지원되지 않을 수 있습니다. (Ex. Saprom 용접기)
+### (5)	Welding Speed: [ 50 ] cm/min (Range: 1~999)  
+Specifies the robot's speed while performing overlap welding from the start to the end position. This is the speed during the overlap region in section ④ of [Figure 5.5.4].
 
-### (3)	재기동 횟수: [5] 회 (범위: 0 ~ 9)   
-동일용접 구간에서 재기동 처리의 최대 반복 횟수를 지정합니다. 이 횟수를 초과하면 “**E1274 동일 용접구간 내 재기동 횟수 초과**” 에러가 발생합니다.
-
-### (4)	재기동 조건: [0] (범위: 0 ~ 32)   
-재기동 할 때 오버랩 구간에서 사용할 용접조건의 번호를 입력합니다. 오버랩 하여 재기동 할 때 입력된 용접시작조건의 본 조건(전류, 전압 등)으로 오버랩 구간에서 용접을 수행하게 됩니다. 단, 입력된 조건번호가 “0” 인 경우 오버랩 구간에서부터 현재 실행중인 용접시작조건의 본 조건으로 용접이 수행됩니다.
-
-### (5)	중첩 량: [5] mm (범위: 0.0 ~ 99.9)  
-재 기동 할 때 용접을 중첩하는 길이(오버랩 거리)입니다. 중첩 길이만큼 되돌아 간 후 다시 용접을 시작합니다. 
-
-### (6)	이동속도: [ 50] mm/초 (범위: 1~999)  
-오버랩을 시작하는 위치로 토치를 이동 시키는 속도를 설정합니다. [그림 5.13]의 ③~④ 구간의 이동 속도를 의미합니다. (그림 5.10 참조)
-
-### (7)	용접속도: [ 50] cm/분 (범위: 1~999)  
-오버랩 시작 위치에서 종료 위치까지 중첩 용접을 할 때 로봇의 이동 속도를 설정합니다. [그림 5.10]의 ④에서 오버랩 거리만큼 용접하며 이동할 때의 속도입니다. (그림 5.10 참조)
-
-용접시작점에서 용접종료점(⑤)으로 용접 진행 중 에러가 발생한 경우, 오버랩 조건이 반자동이면 사용자는 용접이 정지된 원인을 파악하고 에러를 처리합니다(①). 에러 요인 제거 후(②) [**기동**]버튼을 눌러(③) 용접을 재개할 경우 로봇은 자동으로 오버랩 시작 위치로 [이동속도]에 설정된 속도로 이동합니다(④). 이동 후 오버랩 거리만큼 [용접속도]에 설정된 속도로 용접을 하며 그 이후에는 정상 속도로 용접을 하며 이동합니다. 단, 오버랩 구간 용접 중 에러가 발생한 경우는 다시 오버랩 하지 않고 그 지점에서 바로 용접을 시작합니다. 
-
-### (8)	오버랩 조건설정  
-[그림 5.11]의 우측 하단 항목은 Arc 용접 중 ArcOff(Arc꺼짐), Limit 초과, 가스Off(가스 압력 저하), 와이어Off(와이어 부족), 냉각수Off(냉각수 에러) 등의 원인으로 용접이 중단되었을 때 오버랩을 수행할 방법에 대해 설정합니다.  
-    
--  A. 자동  
-    자동으로 오버랩을 수행하는 설정입니다. 해당 설정은 Arc 꺼짐에 의해 용접이 중단된 경우에만 설정할 수 있습니다. 용접 중 Arc 꺼짐이 발생한 경우 정지하지 않고 용접보조조건의 재기동 항목에 설정된 방법으로 오버랩 용접을 수행한 후 본 작업을 진행합니다. 단, 오버랩 구간 용접 중 다시 Arc가 꺼지는 경우는 그 위치에서 바로 용접을 시작합니다.
-
-- B. 반자동  
-    사용자에 의해 오버랩을 수행하는 설정 입니다. Arc 꺼짐, 제한치 초과, 가스 압력 저하, 와이어 부족, 냉각수 에러가 발생할 경우 용접이 중단되고 로봇 본체도 정지합니다. 이후 원인 제거 후 사용자가 [**기동**]을 누르면 용접보조조건의 재기동 항목에 설정된 방법으로 오버랩 용접을 수행한 후 본 작업을 진행합니다. 이때 로봇을 조그동작을 통하여 다른 위치로 이동시킨 후 [**기동**]을 누르면 오버랩 용접위치로 바로 이동 후 용접을 수행합니다.
-
-{% hint style="warning" %}
-로봇 이동 시 스텝 전/후진키를 누르면 재기동 정보가 초기화되어 오버랩이 수행되지 않습니다. 반드시 조그 동작으로만 이동하십시오.
-{% endhint %}
-
-- C. 무시  
-    에러를 무시하는 설정입니다. 해당 설정을 활성화하면 용접 중단 후 로봇이 정지하지 않고 계속 진행합니다. 즉 Arc가 꺼지거나 제한치를 초과해도 무시하고 계속 진행됩니다. 이 처리 방법은 Arc 꺼짐, 제한치 초과의 원인으로 용접이 중단 후 재기동하는 경우에만 가능합니다.
-
-- D. 금지  
-    오버랩을 금지하는 설정입니다. Arc 꺼짐, 제한치 초과, 가스 압력 저하, 와이어 부족, 냉각수 에러가 발생할 경우 용접이 중단되고 로봇 본체도 정지합니다. 이후 원인 제거 후 [**기동**]을 누르면 오버랩 동작을 하지 않고 로봇이 정지한 위치에서 용접을 시작하고 진행됩니다.
-
- 
-<p align="center">
- <img src="../../_assets/5_5_4.png" width="80%"></img>
- <em><p align="center">그림 5.5.4. 재기동 동작 과정</p></em>
-</p>
-
- 
-# 5.5.3 용접 보조 조건 –자동 용착해제
-
-Arc 용접 종료 시 와이어가 모재에 용착되는 경우가 있습니다. 용접기에서는 이를 현상을 방지하기 위해 용접 종료 시 일시적으로 전압을 상승시키는 용착 방지 처리를 합니다. 용접기에서 이런 용착 방지 처리를 한 후에도 용착이 되는 경우가 있기 때문에 로봇 제어기에서도 용접 후 용착 검사 신호를 용접기로 전송하여 용착 여부를 확인합니다.  
-자동 용착 해제 기능은 이렇게 용접 후에 용착이 검출될 때 자동으로 용착 해제를 수행하여 로봇이 정지하지 않고 연속적으로 작업할 수 있게 하는 기능입니다. 이 기능을 이용하면 용착 검출 시 즉시 일정 전압을 인가하는 용착 해제 처리가 자동으로 이루어집니다. 자동 용착 해제 시도는 설정된 횟수만큼 반복되며, 설정된 횟수를 초과할 때까지 용착이 해제되지 않는 경우 『용착 중』 신호를 출력하고 로봇은 정지하게 됩니다.
-
-Arc용접 설정이 디지털이고 『[용접시작조건] → [용접종료조건]』대화상자에서 [**보조조건**]키를 누르면 다음과 같은 자동 용착해제 설정화면이 나타납니다. 
-
- 
-<p align="center">
- <img src="../../_assets/5_5_5.png" width="70%"></img>
- <em><p align="center">그림 5.5.4 자동 용착해제 설정</p></em>
-</p>
-
-
-</br>
-
-자동 용착해제 조건의 각 항목별 내용은 다음과 같습니다.
-
-### (1)	횟수: [2] 회 (범위: 0 ~ 9회)  
-용착해제 처리의 최대 반복 횟수입니다. 설정된 횟수 이내에 용착이 해제 되지 않을 경우에는 용착 에러(“**E1262 와이어 스틱 검출 중**”)가 발생합니다. 예외적으로 0으로 설정하면 용착 검사를 하지 않고 바로 다음 스텝으로 이동합니다.
-
-### (2)	용착해제조건: [0] (범위 : 0 ~ 32)  
-용착 해제 처리할 때 사용할 용접조건의 번호입니다. 입력된 조건번호가 “0” 인 경우 현재 실행중인 용접시작조건의 본 조건으로 용착 해제가 수행됩니다.
-
-### (3)	조건유지시간: [2] sec (범위 : 0.00 ~ 10.0)  
-용착 해제 조건의 출력을 유지하는 시간입니다. 너무 짧으면 용착 해제가 되지 않습니다.
-
-# 6. 위빙 기능 (WEAVING)
-# 6.1 위빙 기능
-
-위빙 기능은 Arc 용접에서 용접비드 폭을 넓게 하기 위하여 사용하는 기능입니다. 위빙 기능의 세부사항은 위빙조건과 참조점으로 결정됩니다. 위빙조건에서는 다음과 같은 사항을 설정할 수 있습니다.# 6.1.1 위빙 조건
-
-```weaving ... ``` 명령어 위에 커서가 있을 때, [**속성**]키를 누르면 다음과 같은 위빙 조건 편집화면이 나타납니다.
-
- 
-<p align="center">
- <img src="../../_assets/6_1_1.png" width="70%"></img>
- <em><p align="center">그림 6.1.1. 위빙조건 설정</p></em>
-</p>
-
-
+When an error occurs during welding from the start point to the end point (⑤), and if the overlap condition is semi-automatic, the user must identify the cause of the welding stop and address the error (①).
+After resolving the issue (②), pressing the [**Start**] button (③) will resume welding.
+The robot will automatically move to the overlap start position at the speed set by the [**Moving speed**] (④).
+Once at the position, it will perform overlap welding at the [**Welding speed**] for the specified distance, and then continue welding at the normal speed.
+However, if an error occurs during the overlap welding, the robot will not repeat the overlap but will directly start welding from that point onward.
 
 ---
 
-위빙 조건의 각 항목별 내용은 다음과 같습니다.
-
-### (1)	조건 번호: [1] (범위: 1~ 32)  
-위빙 동작의 설정이 저장된 조건 번호입니다. [+], [-] 버튼을 눌러 조건을 추가하거나 삭제할 수 있습니다. 현재 번호의 이전 또는 이후 조건 번호로 이동하여 해당 조건 번호를 편집 할 수 있습니다.
-
-### (2)	위빙 형태: <단진동, 삼각, L형, 원형>    
-위빙 동작의 형태를 지정합니다. ([[6.1.2 위빙 형태]](../1_Weaving_function/2_configuration_.md)  참조)
-
-### (3)	주파수: [2] Hz (범위: 0.0 ~ 10.0)  
-위빙 주파수를 설정합니다. 주파수의 범위는 0.0 ~ 10.0Hz 입니다. 주파수가 ‘0’으로 설정된 경우 이동시간을 적용합니다. ([[6.1.3 주파수]](../1_Weaving_function/3_frequency.md) 참조)  
-
-### (4)	기본패턴  
-위빙 동작의 패턴을 설정합니다. ([[6.1.4 기본 패턴]](../1_Weaving_function/4_pattern.md) 참조)  
-- **벽방향 거리** : [2.5] (범위 : 1.0 ~ 25.0mm)  
-- **타방향 거리** : [2.5] (범위 1.0 ~ 25.0mm)  
-- **각도**       : [90] (범위 : 0.1 ~ 180.0도)  
-- **벽방향**     : <**수직방향, 수평방향, 토치자세기준**>  
-- **옵셋 각도**: 토치 자세 기준 사용 시 토치 위치로부터 좌, 우로 기울어 지는 각도 지정
-
-### (5)	진행 각도: [0] (범위 : -90.0 ~ 90.0도)  
-진행 방향에 대한 위빙 각도 방향을 나타냅니다. 0도 인 경우 진행방향과 위빙방향은 직각을 이룹니다. ([[6.1.4 기본 패턴]](../1_Weaving_function/4_pattern.md) 참조)
-
-### (6)	경계 제한: <유효, 무효>  
-위빙궤적이 용접시작 및 끝 부분의 경계부분에 의해 제한되는지 여부를 설정합니다. 본 기능이 유효이면 위빙 궤적은 용접 구간 안에 제한됩니다. ([[6.1.4 기본 패턴]](../1_Weaving_function/4_pattern.md) 참조)
-
-### (7)	위빙 정지 시 로봇 동작: <이동, 정지>  
-위빙 패턴에서 타이머가 설정되는 경우 위빙의 좌우 끝 부분에서 위빙 동작이 정지됩니다. 이 경우 로봇의 동작은 계속 이동할 것인지 정지할 것인지를 설정합니다.
-
-### (8)	이동시간: [1] (범위: 0.01 ~ 10.0초), 타이머(위빙 정지): [  0] (범위 : 0.00 ~ 2.00)  
-위빙 주파수가 ‘0’으로 설정된 경우 이동시간으로 위빙을 수행합니다. 이때 각 구간별 이동시간과 구간 사이의 위빙정지시간을 설정합니다. (([[6.1.5 위빙 구간 설정]](../1_Weaving_function/5_weaving_section.md) 참고)
-    ‘위빙 주파수’가 설정된 경우에는 ‘타이머(위빙 정지)’ 항목만 설정 가능합니다.
-    설정된 주파수의 전체 시간에서 ‘타이머(위빙 정지)’에 설정된 시간을 제외한 시간 동안 로봇이 위빙 동작을 하며 위빙 정지 시간 동안은 위빙이 정지합니다. 위빙 정지 중 로봇의 이동 여부는 ‘위빙 정지 시 로봇 동작’ 설정이 적용됩니다. 
-
-### (9)	위빙 구동 축: <로봇, 부가축>, 부가축 번호: [1]  
-위빙 동작을 수행할 부분이 로봇인지 부가축인지를 설정합니다. 부가축으로 설정되는 경우 로봇은 기록된 대로 그대로 이동하며 부가축만 설정 거리와 주파수만큼 움직이며 위빙을 구현합니다. 부가축을 선택하는 경우 ‘부가축 번호’ 항목에 지정된 부가축이 동작하여 위빙을 수행합니다.
-# 6.1.2 위빙형태 
-
-다음 그림과 같은 위빙의 패턴 모양을 설정합니다. 
-
- 
 <p align="center">
- <img src="../../_assets/6_1_2.png" width="60%"></img>
- <em><p align="center">그림 6.1.2. 위빙 패턴 종류</p></em>
+ <img src="../../_assets/5_5_4.png" width="80%"></img>
+ <em><p align="center">Figure 5.5.4. Restart Function Sequence</p></em>
 </p>
 
-# 6.1.3 주파수
 
-「주파수」는 위빙의 반복주기를 의미하며, 「주파수」를 ‘0’으로 지정하면 반복주기를 「주파수」방식이 아닌 이동시간 지정방식으로 설정합니다. 반복 주기를 「주파수」방식으로 지정하기 위해서는 ‘0’이 아닌 값으로 설정해야 합니다. 
+### (6)	Overlap Condition Settings  
+The lower section of [Figure 5.5.3] defines how to perform overlap welding when the welding process is interrupted due to reasons such as Arc Off (arc failure), exceeding limits, Gas Off (gas pressure drop), Wire Off (wire shortage), or Coolant Off (coolant error) during arc welding.
+    
+-  A. Auto  
+    This setting performs overlap automatically. It can only be configured if welding has been interrupted due to arc stoppage.
+    In the event of an arc stoppage during welding, the process does not stop. Instead, overlap welding is carried out based on the method set in the restart section of the welding auxiliary conditions, after which the main process resumes.
+    However, if the arc stops again during the overlap welding section, welding will resume from that position immediately.  
 
-주파수는 횡방향, 종방향 거리에 관계가 있습니다. 주파수가 클수록 이동 가능한 횡방향, 종방향 거리가 줄어들어 진폭의 크기는 줄어들고, 반대로 주파수가 작을수록 진폭을 크게 할 수 있습니다. 위빙형태가 삼각파일 경우 횡방향 이동시간과 종방향 이동시간의 합은 대각선 방향의 이동시간과 같습니다.
+- B. Semi-Auto  
+    This setting allows the user to perform overlap manually. If issues such as Arc Off, exceeding limits, gas pressure drop, wire shortage, or coolant error occur, welding is interrupted, ant the robot is also halted.
+    After addressing the cause, the user must press [**Start**], upon which overlap welding will be performed based on the method set in the restart section of the welding auxiliary conditions, and then main process resumes.
+    At this point, if the robot is moved to a different location using the jog function and [**Start**] is pressed, it will move directly to the overlap welding position and resume welding.
+
+- C. Ignore  
+    This setting ignores errors. When this setting is enabled, the robot continues the process without stopping even if welding is interrupted. In other words, the process will proceed regardless of arc stoppage or exceeding the set limits.
+    This method can only be applied when welding has been interrupted due to arc stoppage or exceeding limits, and the process is being restarted.
+
+- D. Disable  
+    This setting prohibits overlap welding. If issus such as arc stoppage, exceeding limits, gas pressure drop, wire shortage, or coolant error occur, welding is interrupted and the robot is halted.
+    After addressing the cause, the user must press [**Start**], overlap welding will not be performed, and welding will begin from the position where the robot was stopped.
+
+
+{% hint style="warning" %}
+  When moving the robot, pressing the step forward/backward keys will reset the restart information, prventing overlap overlap from being performed. Only jog movements should be used to move the robot.
+{% endhint %}
+
+
+# 6. Weaving Function
+# 6.1 Weaving Functions
+
+The weaving function is used in arc welding to widen the weld bead width. The details of the weaving function are determined by the weaving conditions and reference points. The following settings can be configured in the weaving conditions.  
+# 6.1.1 Weaving Condition
+
+When the cursor is placed above the `weaving ...` command, pressing the [**property**] key will display the weaving condition editing screen as shown below.  
+
+
+<p align="center">
+ <img src="../../_assets/6_1_1.png" width="70%"></img>
+ <em><p align="center">Figure 6.1.1. Weaving Condition Settings</p></em>
+</p>
+
+---
+
+The details for each field in the weaving conditions are as follows:  
+
+### (1)	Condition Number: [1] (Range: 1 ~ 1000)  
+
+This is the condition number where the weaving operation settings are stored.
+Conditions can be added or removed by pressing the [+] or [-] buttons.
+You can navigate to the previous or next condition number to edit the corresponding condition.
+
+### (2)	Weaving Type: <Single, Triangle, L type, Circle, DownCurve>  
+
+This field specifies the type of weaving motion. (please refer to [[6.1.2 Weaving Type]](../1_Weaving_function/2_configuration_.md))
+
+### (3)	Frequency: [2] Hz (Range: 0.0 ~ 10.0)  
+
+This field sets the weaving frequency, with a range of `0.0 to 10.0 Hz`. When the frequency is set to '0', the movement time will be applied instead.  
+(please refer to [[6.1.3 Frequency]](../1_Weaving_function/3_frequency.md))  
+
+### (4)	Default Pattern  
+
+This field sets the pattern for the weaving motion.
+(please refer to [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
+
+- **Left Distance(Wall Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
+- **Right Distance(Other Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
+- **Angle** : [90] degrees (Range: 0.1 ~ 180.0)
+- **Offset Angle** : When the torch orientation reference is used, the field specifies the angle at which the tilts to the left or right from its position.
+- **Wall Direaction** : <**Vertical**, **Horizon**, **Base on Torch**>
+
+### (5) Forward Angle: [0] degrees (Range : -90.0 ~ 90.0)  
+
+This field indicates the weaving angle relative to the forward direction.
+When set to 0 degrees, the forward and weaving directions form a right angle.  
+(please refer to [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
+
+### (6)	Boundary Limitation: <Enable, Disable>  
+
+This option determines whether the weaving trajectory is restricted by the boundaries at the start and end of the welding section. When this function is enabled, the weaving trajectory is confined within the welding area.  
+(please refer to [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
+
+### (7)	Robot Behavior when Weaving Stops: <Moving, Stop>
+
+When a timer is set in the weaving pattern, the weaving motion will stop at both the left and right ends of the weaving.
+In this case, this setting determines whether the robot continues to move or stops during the weaving stop period.  
+
+### (8) Move Time: [1] sec (Range: 0.0 ~ 10.0), Timer(Weaving Stop): [0] (범위 : 0.00 ~ 2.00)  
+
+If the weaving frequency is set to '0', the weaving motion will be performed based on the move time.
+In this case, the move time for each section and the weaving stop time between sections are configured.  
+(please refer to [[6.1.5 Weaving Section Setting]](../1_Weaving_function/5_weaving_section.md))  
+
+When the 'Weaving Frequency' is set, only the 'Timer (Weaving Stop)' setting can be adjusted.
+Druing the total time set for the specified frequency, the robot performs weaving for the duration excluding the time set in the 'Timer (Weaving Stop)'. During the weaving stop time, weaving stops.
+Whether the robot continues to move during the weaving stop time is determined by the setting of 'Robot Behavior when Weaving Stops'.
+
+### (9) Weaving Axis Number: [1]  
+
+This setting determines whether the part perfoming the weaving motion is the robot or an auxiliary axis.
+When set to an auxiliary axis, the robot will move as recorded, and only the auxiliary axis will move according to the set distance and frequency to implement weaving.
+If an auxiliary axis is selected, the auxiliary axis specified in the 'Auxiliary Axis Number' field will perform the weaving motion.
+# 6.1.2 Weaving Type    
+
+
+Set the pattern shape of the weaving as shown in the following figure.
+ 
+<p align="center">
+  <img src="../../_assets/6_1_2.png" width="60%"></img>
+  <em><p align="center">Figure 6.1.2. Weaving Pattern Type</p></em>
+</p>
+
+# 6.1.3 Frequency
+
+
+"**Frequency**" refers to the repetition cycle of the weaving. When the "Frequency" is set to '0', the repetition cycle is defined by the move time method instead of the frequency method.
+To specify the repetition cycle using the frequency method, a value other than '0' must be set.  
+
+The frequency is releated to both the leteral and longitudinal distances.
+As the frequency increases, the available lateral and longitudinal distances decrease, resulting in a smaller amplitude. Conversely, as the frequency decreases, the amplitude can be increased.
+In the case of a triangular weaving pattern, the sum of the lateral and longitudinal move times equals the diagonal move time. 
  
-# 6.1.4 기본 패턴
+# 6.1.4 Default Pattern
 
 다음 그림에서의 각 요소를 설정합니다. 
   
 <p align="center">
- <img src="../../_assets/6_1_3.png" width="60%"></img>
- <img src="../../_assets/6_1_3_1.png" width="45%"></img>
- <em><p align="center">그림 6.1.3 벽방향에 따른 위빙 요소</p></em>
+  <img src="../../_assets/6_1_3.png" width="60%"></img>
+  <img src="../../_assets/6_1_3_1.png" width="45%"></img>
+  <em><p align="center">그림 6.1.3 벽방향에 따른 위빙 요소</p></em>
 </p>
 
+- **Left Distance(Wall Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
+- **Right Distance(Other Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
 
-### (1)	좌방향 거리
-    좌(벽)방향(左각장)의 거리를 설정합니다.
+### (1) Left Distance(Wall Direction Distance)
 
-### (2)	우방향 거리
-    우방향(右각장)의 거리를 설정합니다.
-
-### (3)	각도
-    그림 6.3과 같이 좌(벽)방향과 우방향의 각도를 설정합니다. 각도는 좌(벽)방향에서부터 우방향까지로 나타냅니다. 단, REFP 4를 사용할 경우 이 각도는 무시됩니다.
-    
-### (4)	벽방향 ([그림 6.3] 참고)
-    좌(벽)방향을 수직(그림(1)), 수평(그림(2)), 토치자세기준(그림(3)) 중 어느 것으로 할 것인지 설정합니다. 일반적으로 좌(벽)방향은 수직방향으로 사용하며 수평방향은 평면상에서 각도가 180도인 위빙에 주로 사용합니다. 토치자세기준 위빙의 좌(벽)방향은 위빙 진행방향(그림 (3)의 진행방향은 나오는 방향, ⊙)을 기준으로 반시계방향으로 설정됩니다. 토치자세기준 위빙의 경우 모든 좌(벽)방향에 대한 대응이 가능하고 위빙 진행 중 좌(벽)방향이 바뀌는 경우에도 대응할 수 있습니다.
-
-### (5)	옵셋각도([그림 6.3] 참고)
-    벽방향을 토치자세기준으로 설정한 경우 위빙면을 위빙 진행방향(그림 (3)의 진행방향은 나오는 방향, ⊙) 기준으로 회전하는 각도를 설정합니다. 0도 설정 시 좌(벽)방향과 우방향의 각도를 이등분합니다.
+Set the distance in the left (wall) direction.  
 
 
-### (6)	진행 각도
-    용접선에 대한 위빙 진동 방향의 각도입니다. 설정 가능한 범위는 -90.0 ~ 90.0도입니다. 0도 설정 시 용접선과 직각으로 위빙이 동작합니다.
+### (2) Right Distance(Other Direction Distance)
+
+Set the distance in the right direction.  
+
+
+### (3)	Angle
+
+As shown in Figure 6.3, set the angle between the left (wall) direction and the right direction.
+The angle is measured from the left (wall) direction to the right direction.
+However, when using **REFP 4**, this angle will be ignored.
+
+
+### (4)	Offset Angle (refer to [Figure 6.1.3])
+
+When the wall direction is set based on the torch posture, this setting defines the angle at which the weaving surface rotates relative to the direction of weaving progression (the dirction in Figure (3) marked with ⊙).
+When set to 0°, the angle between the left (wall) direction and the right direction is bisected.
+
+
+### (5) Wal Direction (refer to [Figure 6.1.3])
+
+Set the left (wall) direction to one of the following options: vertical (Figure (1)), horizontal (Figure (2)), or torch posture-based (Figure (3))
+Generally, the left (wall) direction is set to vertical, while the horizontal direction is typically used for weaving with a 180-degree angle on the plane.  
+
+For torch posture-based weaving, the left (wall) direction is set counterclockwise from the direction of weaving progression (the dirction in Figure (3) marked with ⊙).
+Torch posture-based weaving can accommodate all left (wall directions), and it can also adapt when the left (wall) direction changes during the weaving process.
+
+
+### (6) Forward Angle
+
+This refers to the angle of the weaving vibration direction relative to the welding line. The adjustable range is -90.0 to 90.0 degrees.
+When set to 0°, the weaving will move perpendicular to the welding line.
+
 
 <p align="center">
- <img src="../../_assets/6_1_4.png" width="60%"></img>
- <em><p align="center">그림 6.1.4. 위빙 진행 각도</p></em>
+  <img src="../../_assets/6_1_4.png" width="60%"></img>
+  <em><p align="center">Figure 6.1.4. Weaving Forward Angle</p></em>
 </p>
 
     
+### (7)	Boundary Limitation
 
-### (7)	경계제한
-    진행각도가 0도가 아닌 위빙은 위빙 구간의 시작 밑 끝 부분에서 구간 경계를 넘어가는 경우가 발생할 수 있습니다. 경계제한 설정으로 구간 경계를 제한하여 구간 경계를 넘어가지 않게 위빙 동작을 수행할 것인지 제한 없이 위빙 동작을 수행할 것인지를 설정합니다.<br/>  
+For weaving with a forward angle other than 0°, the weaving may exceed the boundary of the section at the start and end of the weaving area.  
+The boundary limitation setting allows you to choose whether the weaving should be confined within the section boundaries or if it can proceed without any restrictions beyond the section boundaries.
 
  
 <p align="center">
- <img src="../../_assets/6_1_5.png" width="60%"></img>
- <em><p align="center">그림 6.1.5 위빙 경계 제한</p></em>
+  <img src="../../_assets/6_1_5.png" width="60%"></img>
+  <em><p align="center">Figure 6.1.5 Weaving Boundary Limitation</p></em>
 </p> 
-# 6.1.5 위빙 구간 설정
+# 6.1.5 Weaving Section Setting
 
-### (1)	위빙 정지 시 로봇 동작
+### (1)	Robot Behavior when Weaving Stops  
 
-위빙 구간에 타이머(위빙 정지)가 0이 아닌 값이 설정되는 경우 해당 시간동안 위빙 구간 끝 부분에서 위빙 패턴이 정지합니다. 이 상태에서 로봇의 이동 여부를 설정합니다.
+When the Timer (Weaving Stop) is set to a value other than 0, the weaving pattern will stop at the end of the weaving section for the specified duration.
+In this state, you can configure whether the robot will continue to move or stop.
 
-이동 설정 시 하기 그림의 좌측과 같은 동작을 수행하며 정지 설정 시 우측과 같은 동작을 수행합니다.
- 
-<p align="center">
- <img src="../../_assets/6_1_8.png" width="40%"></img>
- <em><p align="center">그림 6.1.8. 위빙 정지시 로봇 동작</p></em>
-</p> 
+If set to **Move**, the robot behaves as shown on the left in the figure; if set to **Stop**, the behavior is as shown on the right.  
 
-### (2)	이동시간
-
-「주파수」값을 ‘0’으로 지정했을 때 위빙 반복주기 설정에 사용되는 항목입니다. 다음 그림과 같이 구간별 이동시간을 개별적으로 지정합니다. 위빙에 사용되는 구간은 위빙의 형태에 따라 달라지게 됩니다. 따라서 설정된 위빙형태에서 사용되지 않는 구간(Ex. 단진동의 경우 3, 4번)에 설정된 이동시간은 무시됩니다.
 
 <p align="center">
- <img src="../../_assets/6_1_7.png" width="90%"></img>
- <em><p align="center">그림 6.1.7. 위빙 패턴별 이동구간</p></em>
+  <img src="../../_assets/6_1_8.png" width="40%"></img>
+  <em><p align="center">Figure 6.1.8. Robot Behavior when Weaving Stops</p></em>
+</p> 
+
+### (2)	Move Time
+
+This setting defines the move time for each section when "Frequency" is set to '0'.
+The move time for unused sections (e.g., sections 3 and 4 in simple oscillation) will be ignored.
+
+<p align="center">
+  <img src="../../_assets/6_1_7.png" width="90%"></img>
+  <em><p align="center">Figure 6.1.7. Movement Section by Weaving Pattern</p></em>
 </p> 
 
 
+### (3)	Timer (Weaving Stop)
 
-### (3)	타이머
-
-아래 그림과 같이 각 구간 끝점에서의 위빙 정지 시간을 설정합니다. 이 항목은 위빙의 주파수가 설정된 경우에도 적용됩니다.
-
-위빙의 주파수가 설정된 경우 위빙 주기 중 로봇의 이동 시간은 다음과 같이 설정됩니다.
-
-로봇 이동 시간 = (1 / 위빙 주파수) – 타이머 시간 총합
+Set the weaving stop time at the endpoint of each section as shown in the figure below.
+This setting also applies when the weaving frequency is configured.
+When the weaving frequency is set, the robot's move time during the weaving cycle is calculated as follows:  
+* Robot Move Time = (1 / Weaving Frequency) - Total Timer Time
 
 {% hint style="warning" %}
-‘위빙 정지 시 로봇 동작’이 ‘이동’으로 설정되는 경우 이동 궤적이 정지하는 것이 아닙니다.  
-아래 그림의 직선 형태가 됩니다.  
+  if "Robot Behavior when Weaving Stops" is set to **Move**, the movement trajectory does not stop, and it will follow a straight path, as shown in the figure below.
 {% endhint %}
  
  
 <p align="center">
- <img src="../../_assets/6_1_8.png"  width="40%"></img>
- <em><p align="center">그림 6.1.8. 타이머 지정 시 궤적 예시</p></em>
-</p> 
-
-
-
-{% hint style="warning" %}
-‘위빙 정지 시 로봇 동작’이 ‘정지’로 설정되는 경우 이동 궤적까지 함께 정지합니다. 이 경우에도 로봇의 이동 속도는 동일합니다.
-{% endhint %}# 6.2 참조점 기능
-
-위빙을 수행하기 위해서는 [[6.1 위빙기능(Weaving)]](../1_Weaving_function/README.md)에서 설명한 위빙 형태의 궤적이 생성될 위치를 결정하기 위한 위빙 좌표계가 필요합니다. 설정된 위빙 좌표계는 위빙 기능의 세부 조건을 설정하기 위하여 사용됩니다. 기본적으로 위빙 동작을 시작할 때 로봇 좌표계의 Z축을 벽방향으로 하고, 용접 시작점으로 접근하는 포즈의 위치와 용접구간에서 토치의 진행방향을 이용하여 위빙 좌표계(직각 좌표계)가 자동으로 생성됩니다. 하지만 용접 시작점으로 접근하는 포즈의 위치와 모재의 형태, 위치 등에 따라 위빙 좌표계를 생성할 수 없거나 기본적으로 설정된 위빙 좌표계에 수정이 필요한 경우(예. 벽방향과 타방향의 각도가 90도가 아닌 경우)가 있습니다. 이러한 경우 참조점 기능을 이용하면 원하는 위빙 좌표계를 생성하여 위빙 형태를 모재에 일치시킬 수 있습니다.
-
- 
-
-{% hint style="info" %}
-위빙 조건 중  [기본 패턴] → [벽방향] 설정을 ‘토치자세기준’으로 설정하는 경우 ```refp 3``` (참조점 3) 이외의 ```refp``` 명령문은 사용하지 않습니다.
-{% endhint %}# 6.2.1 참조점 종류
-
- 
-<p align="center">
- <img src="../../_assets/6_2_1.png" width="50%"></img>
- <em><p align="center">그림 6.2.1. 위빙 좌표계</p></em>
-</p> 
-
-
-
-
-### (1)	refp 1 (참조점 1)  
-```refp 1```은 위빙 좌표계의 벽방향을 지정하는 명령어입니다. 특별히 벽방향을 지정하지 않는 경우 로봇은 수직방향을 벽방향으로 하여 위빙 동작을 실행합니다. 따라서 벽방향이 수직이 아닌 경우 이 명령을 통하여 벽방향을 지정해야 합니다. 
-    사용 방법: 작업물의 벽방향 면 위의 한 점을 refp 1로 기록합니다. 이 점과 용접선(직선ⓢⓔ)으로 벽방향 면을 결정할 수 있습니다. refp 1 명령만 사용하는 경우 타방향은 설정된 벽방향을 진행방향 기준으로 기본패턴 각도만큼 회전한 방향으로 설정됩니다.
-
-### (2)	refp 2 (참조점 2)  
-```refp 2```는 벽방향을 결정하는 평면(벽방향을 포함하는 평면)을 기준으로 하여 해당 평면의 양쪽 공간 중 어느 쪽에 위빙궤적을 생성할 것인지를 설정하는 명령어입니다. 
-    사용방법: 위빙을 수행할 면 쪽의 공간 상 임의의 점을 refp 2로 기록합니다. [그림 6.8]은 두 모재 사이의 공간 상에 참조점 2를 기록했을 때 설정되는 위빙 좌표계의 예시입니다. refp 2 명령만 사용하는 경우 로봇 좌표계의 Z축을 벽방향으로 하여 타방향이 설정됩니다.  
-
-### (3)	refp 3 (참조점 3)  
-```refp 3```은 로봇은 정지하고 포지셔너만 회전하는 정지위빙에서 위빙의 진행방향을 지정하는 명령어입니다.
-사용방법: 로봇이 정지하고 있는 위치에서 진행방향을 나타내는 직선 상의 임의의 점을 refp 3으로 기록합니다. 로봇은 용접 시작점과 refp 3로 이루어진 선의 수직방향으로 위빙을 합니다.  
-- 사용 예: refp 3 교시 후 용접 시작 스텝과 종료 스텝의 위치를 동일하게 교시. 이동속도는 시간으로 지정.<br>(주의: 이 때 refp 3이 지정되어 있지 않은 경우 위빙을 하지 않고 에러가 발생합니다.)  
-
-### (4)	refp 4 (참조점 4)  
-```refp 4```는 벽방향과 타방향의 각도를 설정하는 명령어 입니다. [그림 6.8]은 90도로 설정했을 때의 예시입니다. 이 명령어를 이용하여 각도를 지정하는 경우 [기본 패턴] -> [각도]에서 설정한 값은 무시됩니다.
-
-    
-<p align="center">
- <img src="../../_assets/6_2_2.png" width="65%"></img>
- <em><p align="center">그림 6.2.2. 위빙 방향과 참조점</p></em>
-</p> 
-    
-
- <p align="center">
- <img src="../../_assets/6_2_3.png" width="65%"></img>
- <img src="../../_assets/6_2_3_1.png" width="65%"></img>
- <em><p align="center">그림 6.2.3. 참조점 종류별 활용</p></em>
+  <img src="../../_assets/6_1_8.png"  width="40%"></img>
+  <em><p align="center">Figure 6.1.8. Trajectory Example When Timer is Set</p></em>
 </p>   
 
-    
+{% hint style="warning" %}
+  if "Robot Behavior when Weaving Stops" is set to **Stop**, the movement trajectory also stops, but the robot's speed remains the same.
+{% endhint %}# 6.2 Reference Point(refp) Features
 
 
-    
-{% hint style="info" %}
-- refp 1: 용접선과의 거리는 최소 5mm 이상으로 설정하십시오.  
-- refp 2: 벽 방향 평면과의 거리는 최소 5mm 이상으로 설정하십시오.  
-- refp 3: 시작점과의 거리가 최소 5mm 이상이 되도록 설정하십시오.  
-- refp 4: 위빙 패턴의 각도를 측정하기 어려운 경우 각도를 지정합니다.
-{% endhint %}# 6.2.2 참조점 편집
+To perform weaving, a weaving coordinate system is required to determine the location where the weaving pattern will be created, as explained in [[6.1 Weaving Functions]](../1_Weaving_function/README.md).
+The configured weaving coordinate system is usde to set the detailed parameters for the weaving function.
+By default, when the weaving motion begins, the Z-axis of the robot's coordinate system is set to the wall direction.
+The weaving coordinate system (rectangular coordinate system) is automatically created using the position of the pose approaching the welding start point and the direction of the torch during the welding process.  
 
-### (1)	참조점 기록 (숨은 포즈 방식)  
- -    ①	Jog키로 참조점을 기록할 위치로 이동합니다
- -    ②	커서를 참조점이 기록될 위치(통상 ```weaving on``` 명령 바로 위쪽 스텝)로 이동합니다.
- -    ③	[명령입력] → [아크] → [refp]를 눌러 참조점 명령을 기록합니다.
- -    ④ 사용할 참조점의 종류에 따라 참조점 번호를 입력합니다.
+However, in some cases, such as when the welding start pose, the shape of the base material, or its position prevent the creation of the weaving coordinate system, or when modifications to the default weaving coordinate system are needed (e.g., when the angle between the wall direction and the other direction is not 90 degrees), the reference point function can be used to create a desired weaving coordinate system and align the weaving pattern with the base material.
 
-### (2)	참조점 기록 (포즈변수 입력 방식)  
- -    ①	[명령입력] → [아크] → [refp]를 눌러 참조점 명령을 기록합니다.
- -    ②	사용할 참조점의 종류에 따라 참조점 번호를 입력합니다.
- -    ③	참조점 위치로 사용할 포즈변수를 입력합니다.
-
-### (3)	참조점 이동  
-참조점은 위빙 형태를 결정하기 위한 위치이므로 통상 재생 시에는 참조점으로 이동하지 않습니다. 그러나 참조점의 위치 확인 및 변경 시에는 다음의 과정을 수행합니다.
- -    ①	커서를 참조점 명령에 위치시킵니다.
- -    ②	스텝 전진키를 누르면 참조점으로 이동합니다.
-
- 이 때 보간 종류는 직선으로 하고, 이동속도와 툴, ACC등은 위빙구간 시작 스텝에 기록되어 있는 조건을 이용합니다.
-
-### (4)	참조점 위치 수정 (숨은 포즈 방식 용)  
- -    ①	커서를 참조점 명령에 위치시킵니다. 
- -    ②	Jog 키를 이용하여 변경할 참조점의 위치로 이동합니다. 
- -    ③	**[SHIFT] + [위치수정]** 키를 누르면 참조점의 위치가 변경됩니다. 
-
-### (5)	참조점 명령 삭제  
- -    ①	커서를 참조점 명령에 위치시킵니다. 
- -    ②	**[SHIFT] + [DEL]** 키를 누르면 참조점의 명령이 삭제됩니다. 
-
-### (6)	참조점 번호 수정  
- -    ①	커서를 참조점 명령에 위치시킵니다. 
- -    ②	[**ENTER**]키를 누릅니다.
- -    ③	새로운 참조점 번호를 입력하고 [**ENTER**]키를 누릅니다. 
- -    ④	[**ENTER**]을 다시 한번 누르면 참조점 번호가 변경됩니다. 
-# 6.3 위빙 싱크 출력 기능
-
-위빙 시 좌측, 우측에서 전류, 전압 등을 각각 설정하여 부드럽게 입열량(용착량)을 조절할 수 있는 기능입니다.
 
 {% hint style="info" %}
-본 기능은 60.30-00 버전부터 지원합니다.
-{% endhint %}
+  When the **[Wall Direction]** setting is configured as Torch Posture-Based, no other `refp` commands except `refp3` are used.
+{% endhint %}# 6.2.1 Reference Point Type
+
 
 <p align="center">
- <img src="../../_assets/6_3_1_weav_sync_out.png" width="90%"></img>
- <em><p align="center">그림 6.3.1. 위빙 싱크 출력 기능 동작 예</p></em>
+  <img src="../../_assets/6_2_1.png" width="50%"></img>
+  <em><p align="center">Figure 6.2.1. Weaving Coordinate System</p></em>
+</p> 
+
+
+### (1)	refp 1  
+
+The `refp1` command specifies the wall direction of the weaving coordinate system.
+If the wall direction is not specifically defined, the robot will use the vertical direction as the wall direction to perform the weaving opeartion.
+Therefore, if the wall direction is not vertical, this command should be used to set the wall direction.  
+
+* **Usage**: Record a point on the surface of the workpiece in the wall direction as `refp 1`. <br> This point and the welding seam(straight line ⓢⓔ) can be used to determine the wall direction. <br> If only the `refp1` command is used, the other direction will be set by rotating the wall direction by the default pattern angle relative to the direction of movement.
+
+
+### (2)	refp 2  
+
+The `refp2` command sets the side of the space when the weaving trajectory will be created, based on the plane that defines the wall direction.
+
+* **Usage**: Record any point in the space on the side where weaving will be performed as `refp 2`. <br> [Figure 6.2.2] shows an example of the weaving coordinate system when `refp 2` is recorded between two base materials. <br> When only the `refp 2` command is used, the Z-axis of the robot's coordinate system is set to the wall direction, and the other direction is determined accordingly.
+
+
+### (3)	refp 3  
+
+The `refp3` command specifies the direction of weaving in a stationary weaving operation, where the robot remains stationary and only the positioner rotates.  
+
+* **Usage**: Record any point along a straight line that indicates the direction of movement, starting from the robot's stationary position, as `refp 3`. <br> The robot will weave along a direction perpendicular to the line formed by the welding start point and `refp 3`. 
+
+* Example: After setting refp3, specify the same positions for the welding start and end steps. The travel speed is set by time. <br> (Note: If `refp 3` is not specified, no weaving will occur, and an error will be triggered.)
+
+
+### (4)	refp 4  
+
+The `refp 4` command sets the angle between the wall direction and the other direction.
+[Figure 6.2.3.] shows an example when the angle is set to 90 degrees.
+When using this command to specify the angle, the value set in `Angle` will be ignored.
+
+    
+<p align="center">
+  <img src="../../_assets/6_2_2.png" width="65%"></img>
+  <em><p align="center">Figure 6.2.2. Weaving Direction and Reference Point</p></em>
+</p> 
+    
+
+<p align="center">
+  <img src="../../_assets/6_2_3.png" width="65%"></img>
+  <img src="../../_assets/6_2_3_1.png" width="65%"></img>
+  <em><p align="center">Figure 6.2.3. Usage of Different Reference Points</p></em>
+</p>   
+
+
+{% hint style="info" %}
+  - refp 1: Ensure the distance from the welding seam is at least 5mm.
+  - refp 2: Ensure the distance from the wall direction plane is at least 5mm.
+  - refp 3: Ensure the distance from the start point is at least 5mm.
+  - refp 4: Set the angle when it is difficult to measure the angle of the weaving pattern.
+{% endhint %}# 6.2.2 Reference Point Edit
+
+### (1) Recording Reference Points : Similar to the Move Command
+
+- ① **Move the Cursor**: Move the cursor to the location where the reference point will be recorded (typically just above the `weaving on` command step).
+- ② **Record the Reference Point Command**: Press [**Command Input > arcweld > refp**] to record the reference point command.
+- ③ **Enter the Reference Point Number**
+- ④ Pose Method:
+  - The *Hidden Pose Method* records the current robot position.
+  - When using the *Pose Variable Input Method*, enter the pose variable after the reference point number.
+
+
+### (2) Moving to the Reference Point
+
+Reference points determine the weaving pattern, so typically, the robot does not move to the reference point during playback.
+However, when checking or modifying the reference point location, follow these steps.  
+
+- ① Move the cursor to the reference point command.
+- ② Press the step forward key to move to the reference point.  
+
+When moving, the interpolation type is set to linear, and the movement speed, tool, and acceleration settings will be based on the conditions set in the weaving section's start step.
+
+
+### (3)	Modifying the Reference Point (for Hidden Pose Method)
+
+- ① Move the Cursor to the reference point command.
+- ② Use the Jog key to move to the new location for the reference point.
+- ③ Press **[SHIFT] + [위치수정]** key to change the reference point's location.
+
+
+### (4) Deleting the Reference Point Command
+
+- ① Move the cursor to the reference point command.
+- ② Press **[SHIFT] + [DEL]** to delete the reference point command.
+
+
+### (5)	Modifying the Reference Point Number
+
+- ① Move the cursor to the reference point command.
+- ② Press **[ENTER]** key.
+- ③ Input the new reference point number and press **[ENTER]**.
+- ④ Press **[ENTER]** again to confirm the change of the reference point number.
+
+# 6.3 Weaving Sync Out
+
+
+This feature allows for smooth control of heat input (weld deposit) by adjusting the current and voltage on the left and right sides during weaving.  
+
+{% hint style="info" %}
+  The functionality is supported from version 60.30-00.
+{% endhint %}  
+
+<p align="center">
+  <img src="../../_assets/6_3_1_weav_sync_out.png" width="90%"></img>
+  <em><p align="center">그림 6.3.1. Example of Weaving Sync Output Function</p></em>
 </p>   
 
-위 그림과 같이 좌우 위빙에서 입열량, 용착량을 조절할 필요가 있는 경우 또는 비드의 모양을 다르게 만들어야 할 경우 사용합니다.
+As shown in the figure above, this feature is used when it is necessary to control the heat input and weld deposit during left and right weaving, or when the bead shape needs to be adjusted.
 
-`weaving` 명령어의 [**속성**]창에 진입하여 다음 항목을 설정하여 사용할 수 있습니다.
+To use this feature, enter the [**property**] window of the `weaving` command and configure the following settings.
+
 
 <p align="center">
- <img src="../../_assets/6_3_2_weav_sync_out_setting.png" width="90%"></img>
- <em><p align="center">그림 6.3.2. 위빙 싱크 출력 기능 설정</p></em>
+  <img src="../../_assets/6_3_2_weav_sync_out_setting.png" width="90%"></img>
+  <em><p align="center">Figure 6.3.2. Weaving Sync Output Function Settings</p></em>
 </p>   
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">설명</th>
+      <th style="text-align:left">Item</th>
+      <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">사용여부</td>
+      <td style="text-align:left">Enable</td>
       <td style="text-align:left">
-      유효로 두면 위빙시 전류/전압을 사용자가 설정한대로 전류/전압 출력을 조절합니다.
+        When enabled, it adjusts the current/voltage output during weaving according to the user's settings.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">출력(좌/우)</td>
+      <td style="text-align:left">Output(left/right)</td>
       <td style="text-align:left">
-        좌측, 우측 위빙 설정범위 내에서 변화시킬 본조건 대비 전류,전압 출력량 [%]
+        The percentage of curren/voltage output change relative to the baseline condition within the left and right weaving settings
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">범위</td>
+      <td style="text-align:left">Range</td>
       <td style="text-align:left">
-      좌측, 우측 위빙 중 몇 %의 범위를 출력 변화시킬 것인지 설정합니다.
+        Set the percentage range of output change during the left and right weaving.
       </td>
     </tr>
   </tbody>
-</table># 7. 용접 데이터 모니터링
+</table># 7. Arc Welding Data Monitoring
 
-Arc 용접 실행 중에 로봇 제어기에서 용접기로 전송되는 전류/전압 지령치와 실제 용접기에서 로봇 제어기로 출력되는 전류/전압 값을 비교하는 경우가 있습니다. 이때 다양한 Arc 용접 데이터 모니터링 기능을 이용하여 용접 관련 데이터를 실시간으로 확인할 수 있습니다.
+During arc welding, there are instances where the current/voltage command values sent form the robot controller to the welder are compared with the actual current/voltage values output from the welder to the robot controller. In such cases, the arc welding data graph monitoring function can be used to check the welding-related data in real time.
 
 </br>
 
-당사 제어기에서는 용접 데이터 모니터링을 위해 3가지 타입의 모니터링 기능을 제공합니다.
+Our controller offers 2-type of monitoring functions for welding data monitoring:
 
-- **(1) 세부 정보 모니터링**: 제공하는 모든 데이터 확인 가능  
+(1) **Detailed Information Monitoring**: Allows you to check all available data.
 
-- **(2) 대화면 모니터링**: 제공하는 데이터의 일부를 큰 글씨로 확인 가능  
+(2) Arc Welding Data Graph: Enalbes viewing of the command and actual current/voltage data in waveform.
+# 7.1 Arc Weld data Real-time Monitoring
 
-- **(3) 용접파형 모니터링**: 용접 전류/전압의 파형 및 관련 데이터 확인 가능  
+# 7.1.1 Detailed Information Monitoring
 
-
-3 가지 모니터링 기능은 모니터링 창에서 다른 모니터링 창으로 변경 가능합니다.
-# 7.1 Arc 용접 데이터 실시간 모니터링
-
-# 7.1.1 세부 정보 모니터링
-
-본 기능은 Arc 용접과 관련된 세부 데이터를 확인할 수 있는 기능입니다. 설정된 용접기에 따라 제공하는 정보가 다르기 때문에 해당 모니터링 창은 설정된 용접기에 따라 다를 수 있습니다. 용접기와 통신 오류가 발생하거나 통신 연결이 되어 있지 않은 경우 ‘용접기 에러코드’나 ‘용접기 통신상태’ 항목이 붉은색 배경으로 표시됩니다. 세부정보 모니터링으로 다음과 같은 데이터를 확인할 수 있습니다.
+This function allows you to check detailed data related to arc welding. The information provided may vary depending on the set welder, so the monitoring window may differ based on the configured welder. If a communication error occurs with the welder or if there is no communication connection, the "Welder Error Code" or "Welder Communication Status" items will be displayed with a red background. The following data can be monitored in the detailed information monitoring.
 
 <p align="center">
  <img src="../../_assets/7_1_1.png" width="70%"></img>
- <em><p align="center">그림 7.1.1. Arc용접 세부 정보 모니터링</p></em>
+ <em><p align="center">Figure 7.1.1. Arc Welding Detailed Information Monitoring</p></em>
 </p>
 
-(1)	현재 용접기에서 출력되고 있는 실제 용접 전류(A)
+1. Current Input: The commanded welding current sent from the robot to the welder (A)
 
-(2)	용접 전류 제한 치, Arc제한 감시기능을 사용하지 않는 경우 ‘---’로 표시
+2. Current Output: The actual welding current currently being output by the welder (A)
 
-(3)	로봇에서 용접기로 출력하는 지령 용접 전류(A)
+3. Voltage Iutput: The commanded welding voltage sent from the robot to the welder (V)
 
-(4)	1초 동안 Arc단락횟수
+4. Voltage Output: The actual welding voltage currently being output by the welder (V)
 
-(5)	현재 용접기에서 출력되고 있는 실제 용접 전압(V)
+5. Welding Process
 
-(6)	용접 전압 제한 치, Arc제한 감시기능을 사용하지 않는 경우 ‘--.- ‘로 표시
+6. Feeding Speed: The wire feeding speed (m/min)
 
-(7)	로봇에서 용접기로 출력하는 지령 용접 전압 옵셋값(V)
+7. Operation Mode: Arc welding mode
 
-(8)	옵셋값+시너직 전압 즉, 목표 출력 전압(V)
+8. Prog/Job Number
 
-(9)	실제 피딩모터를 구동하는 전류값(A)
+9. Feed Motor Current: The current driving the actual fedding motor (A)
 
-(10) 피딩모터 Arc제한 감시기능을 사용하지 않는 경우 ‘--.-‘로 표시(A)
+10. Welder Error Number
 
-(11) 피딩모터 회전속도(rpm)
+11. Pulse Dynamic Compensation
 
-(12) T: 명령송신횟수, R: 명령수신횟수
+12. Additional Information Window: This section displays useful additional information such as the upper and lower limits of current/voltage and their units. 
 
-(13) R: 재시도횟수, B: Busy검출횟수, N: NG횟수, E: 에러횟수
+13. Input Signals: Signals sent from the welder to the robot controller.(Can be checked under **[System > 5: Initialization > 3: Usage Setting > Welder Setting - Input signal assign]**)
 
-(14) 용접기 에러코드
+14. Output Signals: Signals sent from the robot controller to the welder.(Can be checked under **[System > 5: Initialization > 3: Usage Setting > Welder Setting - Output signal assign]**)
 
-(15) 용접기로 전달된 시너직 코드
+15. Command Values: Frequently used commands that can be manually output.
 
-(16) 용접진행단계
-# 7.1.2 용접파형 모니터링
+# 7.1.2 Arc welding data graph
 
-용접파형 모니터링은 용접 데이터의 파형과 관련된 정보를 표시하여 용접 데이터의 순간적인 정보뿐만 아니라 과거 정보도 한 눈에 알아볼 수 있게 합니다. 
+Arc welding data graph displays information related to the welding data's waveform, allowing you to view not only the real-time data but also past data at a glance.
+
+To use this feature, on TP, press **[pane layout > select > arc data graph]** sequentially. 
 
  
 <p align="center">
  <img src="../../_assets/7_1_2.png" width="70%"></img>
- <em><p align="center">그림 7.1.2. Arc용접 파형 모니터링</p></em>
+ <em><p align="center">Figure 7.1.2. Arc Welding data graph</p></em>
 </p>
 
+The following items can be checked in the monitoring window:
 
-모니터링 창에서 확인할 수 있는 내용은 다음과 같습니다.  
+1. Welding Status(initial conditions, gas pre-flow, end conditions, gas post-flow, crater movement, main welding, etc.)
 
-- (1)	용접 상태 (초기조건, 가스선출, 종료조건, 가스후출, 크레이터이동, 본용접 등..)  
-- (2)	Job/Prog no, Synergic 설정내용  
-- (3)	입력 전류 / 지령전류 그래프  
-- (4)	입력 전압 / 지령전압 그래프  
-- (5)	입력전류, 전압의 이동평균 필터링된 그래프  
-- (6)	용접 전류전압의 상/하한 값  
-  
-용접파형 모니터링은 좌/우, 상/하 이동 기능을 제공합니다. 또한 행과 열을 추가하여 볼 수 있습니다. [**자동 스크롤**] 버튼을 토글시키면 용접 도중에도 지난 용접 화면을 살펴볼 수 있습니다. 
+2. Job/Prog no, Synergic settings
 
-# 7.1.3  조작
+3. Input Current / Command current graph
 
-용접 데이터 모니터링 화면은 『서비스』→『1: 모니터링』→『13: 아크용접 데이터』를 통하여 선택할 수 있습니다.
+4. Input voltage / Command voltage graph
 
-다른 방법으로는 기본화면에서 [**창조정**]키를 이용하여 화면 분할 후 『내용선택』 → 『아크용접 데이터』를 통해서도 선택할 수 있습니다.
+5. Moving average filtered graph of input current and voltage
 
-모니터링 기능을 수행하면 기본적으로 ‘세부정보 모니터링’이 실행됩니다. 모니터링 기능은 전환이 가능하며 전환 순서는 ‘세부정보 모니터링’→‘용접파형 모니터링’→ ‘대화면 모니터링’ →’세부정보 모니터링’... 순서로 순환합니다.
+6. Upper and lower limits of welding current and voltage
 
-‘대화면 모니터링’의 자동 pop-up 기능을 사용하기 위해서는 『시스템』 → 『4: 응용 파라미터』 → 『2: 아크용접』 → 『용접 중 모니터링 자동활성』에서 **유효**로 설정해야 합니다.
+Arc Welding data graph offers left/right and up/down movement functions. You can also add rows and columns to view more data. By toggling the [**Auto scroll**] button, you can review the past welding screens even during the current welding process.
 
-용접 파형 모니터링의 확장 기능은 파형의 현재 시점 대비 과거(좌), 미래(우)와 높은 전류/전압(상), 낮은 전류/전압(하)를 볼 수 있도록 이동 기능을 제공합니다. 해당 방향으로 이동하기 위해서는 파형 모니터링 화면을 터치하여 활성화한 후 티칭 펜던트의 **[상/하/좌/우]** 커서를 누르면 그래프가 이동합니다. 과거(좌)나 미래(우)로 많은 양의 이동이 필요한 경우 **[SHIFT]+[좌]** 또는 **[SHIFT]+[우]** 를 누르면 **[SHIFT]** 를 누르지 않을 때에 비해 10배 많은 양을 이동합니다. 
-세밀한 파형을 보기 위한 확장은 **[SHIFT]+[상]** 을 누르고, 전체적인 개괄 파형을 보기 위한 축소는 **[SHIFT]+[하]** 를 누르면 됩니다. 과거 데이터를 보는 중 바로 현재 데이터로 이동하기 위해서는 **[ENTER]** 를 누르면 현재 화면으로 복귀합니다.
+You can increase the number of rows in the graph by pressing the **[Row]** or **[Col]** button at the bottom of the arc welding data graph screen. If you want to zoom in on the data graph further, you can press **[SHIFT] + [Row]** or **[SHIFT] + [Col]** to enlarge the display.# 8. Arc Welding Application Functions
+
+We provide various application features to enhance the quality and stability of arc welding. This section briefly introduces these features. Detailed explanations and applications can be found in separate feature manuals, so please refer to the respective manuals for more in-depth information.
+# 8.1 Arccond - Arc Welding Condition DB & interpolation
 
 
+Welding conditions can be stored in a database (DB) for use or interpolated during the welding process.
+The usage of this function is as follows:
 
+**[Command input > arcweld > arccond]** to enter the command in the JOB file.
 
-# 8. Arc 용접 응용기능
+The command format is as follows:
+```arccond <interpolation type>, cnd=<condition number>, gap=<gap>, spd=<welding speed>, rd=<wall direction>, ld=<sie direction>, freq=<weaving frequency>, cur=<crruent>, vol=<voltage>```
 
-당사에서는 Arc 용접의 품질과 안정성 향상을 위해 다양한 응용 기능을 제공하고 있습니다. 이 장에서는 해당 기능들에 간단히 소개를 합니다. 기능별로 별도의 설명서가 있으므로 자세한 설명과 적용을 위해서는 별도의 기능 설명서를 참고하시기 바랍니다.# 8.1 arccond (용접조건DB 및 용접조건보간기능)
-
-용접조건을 DB화 하여 사용하거나 용접과정에서 용접조건을 보간하면서 용접할 수 있습니다.
-해당 기능의 사용법은 다음과 같습니다.  
-**『명령입력』 → 『아크용접』 → 『arccond』** 로 JOB파일에 명령어를 입력합니다.
-
-
-명령어의 형태는 다음과 같습니다.  
-```arccond``` <보간종류>, cnd=<조건번호>, gap=<gap>, spd=<용접속도>, rd=<벽방향>, ld=<타방향>, freq=<위빙주파수>, cur=<전류>, vol=<전압>
 
 <br>
 
-- **보간종류**: D(계단형, 즉시적용), L(선형 보간 적용)  
-- **cnd** : 조건번호 (속성창에 진입하여 용접DB 및 보간조건을 편집 가능)
-# 8.1.1 명령어 인자를 이용한 계단형 변경
+- **interpolation type**: D(stepped, immediate application) / L(Linear interpolation)
+- **cnd**: condition number (WDB-welding database- and interpolation conditions can be edited via the properties window)# 8.1.1 Step Change using Command Factors
 
-명령어 인자에 다음과 같은 방식으로 계단형 변경 기능을 사용할 수 있습니다.
+The stepped change function can be used in the command arguments as follows:
 
-
-| 방식 | 사용 예시 |
+| Method | Example |
 | :--- | :--- |
-| 전류, 전압 변경 |move L, spd=60%, …  <br>    move L, spd=10%, …   <span style="color: green"> #용접점 진입 스텝 </span> <br>    arcon cnd=1  <br>    move L, spd=40cm/min, ... <br>   <b>  arccond D, cur=175, vol=20 </b>  <span style="color: green"> #전류는 175A, 전압은 20V로 변경 </span> <br>   move L, spd=30cm/min, …  <br>    arcof <br>   end |
-| 용접속도 및 위빙 파라미터 변경 | move L, spd=60%, …  <br>   move L, spd=10%, …    <span style="color: green"> #용접점 진입 스텝  </span> <br> weaving on, cnd=1 <br>   arcon cnd=1   move L, spd=40cm/min, … <br> <b>  arccond D, spd=80, rd=20, ld=10, freq=1.5, cur=175, vol=20 </b> <br> <span style="color: green">  # 용접속도 80cm/min, 위빙폭 20, 10 mm, 주파수 1.5Hz, 전류175A, 전압20V로 변경 </span> <br>  move L, spd=30cm/min, …  <br>   weaving off <br>   arcof  <br> end |# 8.1.2 WDB(용접데이터베이스)를 이용한 계단형 변경
+| Changing IV(Current, Voltage) |move L, spd=60%, …<br/>move L, spd=10%, …   <span style="color: green"> # Weld point(seam) Entry Step </span> <br>    arcon cnd=1  <br>    move L, spd=40cm/min, ... <br>   <b>  arccond D, cur=175, vol=20 </b>  <span style="color: green"> # Change current to 175A, voltage to 20V </span> <br>   move L, spd=30cm/min, …  <br>    arcof <br>   end |
+| Changing Welding Speed and Weaving Parameter | move L, spd=60%, …  <br>   move L, spd=10%, …    <span style="color: green"> # Weld point(seam) Entry Step  </span> <br> weaving on, cnd=1 <br>   arcon cnd=1   move L, spd=40cm/min, … <br> <b>  arccond D, spd=80, rd=20, ld=10, freq=1.5, cur=175, vol=20 </b> <br> <span style="color: green">  # Change welding speed to 80cm/min, weaving width to 20/10mm, frequency to 1.5HZ, current to 175A, and voltage ot 20V </span> <br>  move L, spd=30cm/min, …  <br>   weaving off <br>   arcof  <br> end |# 8.1.2 Step Change using WDB(Welding DataBase)
+
 ```python
-arccond D, cnd=1
+    arccond D, cnd=1
 ```
-위 명령어에서 속성창에 진입하면 다음과 같은 설정항목을 볼 수 있습니다.
+
+In the command above, by entering the properties window, you can view the following configuration window.
+
  
 <p align="center">
  <img src="../../_assets/8_1_1.png" width="70%"></img>
- <em><p align="center">그림 8.1.1. 용접조건 대화상자</p></em>
+ <em><p align="center">Figure 8.1.1. Arc Welding Condition Dialog</p></em>
 </p> 
 
 <br>
 
-cnd(용접조건)를 추가하거나 삭제하여 다음과 같은 용접조건을 DB화 하여 사용할 수 있습니다.  
-- DB화 가능한 조건 : 용접속도, 전류, 전압, 위빙주파수, 위빙폭
+You can add or delete **cnd**(welding conditions), allowing you to store and use welding conditions in the database as follows:
+    Conditions that can be stored in the DB: welding speed, current, voltage, weaving frequency, weaving width
 
-이를 이용하여 다음과 같은 JOB을 구성할 수 있습니다.
+Using this, the following JOB configuration can be created:
 
 ```python
-move L, spd=60%, …
-move L, spd=10%, …	    #용접점 진입 스텝
-arcon cnd=1
-move L, spd=40cm/min, …
-arccond D, cnd=1  	    #용접 DB 1번 조건으로 즉시 변경
-move L, spd=30cm/min, …
-arcof
-end
-```# 8.1.3 WDB(용접데이터베이스)를 이용한 연속형 보간 변경
+    move L, spd=60%, …
+    move L, spd=10%, …	    # Weld point(seam) Entry Step
+    arcon cnd=1
+    move L, spd=40cm/min, …
+    arccond D, cnd=1  	    # Immediately change to Welding DB Condition 1
+    move L, spd=30cm/min, …
+    arcof
+    end
+```# 8.1.3 Continuous Interpolation Change using WDB(Welding DataBase)
 
 
-예를들면, 해당기능은 용접 시작위치에서 Butt gap이 5mm이고 용접 종료위치에서 Butt gap이 25mm인 작업물을 용접할 때, 용접을 하면서 전류, 전압, 용접속도, 위빙폭, 위빙주파수 등을 선형적으로 보간하며 용접이 가능합니다. 이때, 용접조건의 연속변경(L, 보간)은 다음과 같이 직선형태로 이루어집니다.
+For example, this function allows for linear interpolation of welding condition(such as current, voltage, welding speed, weaving width, and weaving frequency) while welding a workpiece where the butt gap is 5mm at the start and 25mm at the end.
+In this case, the continuous change of welding conditions (L interpolation) is performed in a linear fashion as shown below.
+
  
 <p align="center">
  <img src="../../_assets/8_1_2.png" width="70%"></img>
- <em><p align="center">그림 8.1.2. 용접조건의 직선보간</p></em>
+ <em><p align="center">Figure 8.1.2. Linear Interpolation of Welding Conditions</p></em>
 </p> 
 
 <br>
 
-DB 1번의 위의 항목들과 DB2의 위의 항목들을 이용하여 연속형 보간변경을 사용하는 JOB은 다음과 같습니다.
+Using the above items from DB 1 and DB 2, a JOB utilizing continuous interpolation change is as follows: 
 
 ```python
 move L, spd=60%, …
-move L, spd=10%, …	    #용접점 진입 스텝
+move L, spd=10%, …	    # Weld point(seam) Entry Step
 arcon cnd=1
 move L, spd=40cm/min, …
-arccond L, cnd=1  	    #용접 DB 1번 -> 2번 조건으로 연속보간 변경
-move L, spd=30cm/min, …    #이 스텝에서 연속적으로 cnd=1에서 cnd=2의 값으로 조건이 선형변경된다.
-arccond L, cnd=2  	    #다음 스텝에선 arcof가 있어야 한다.
+arccond L, cnd=1  	    # Continuous interpolation change from Welding DB 1 -> 2
+move L, spd=30cm/min, …    # In this step, the conditions linearly change from cnd(DB) 1 -> 2
+arccond L, cnd=2  	    # The next step requires arcof
 arcoff
-move L, spd=10%, …	    #용접점 탈출 스텝
+move L, spd=10%, …	    # Weld point(seam) Exit Step
 end
-```# 8.1.4 보간조건을 이용한 용접속도 및 위빙폭 변경 기능
+```# 8.1.4 Changing the welding Speed and Weaving Width Using Interpolation Condition
 
-이 기능은 위의 기능들과 별개인 기능입니다. 기준 gap에 따라 용접조건을 설정해 놓고, 실제 터치센싱으로 용접시점과 끝점의 gap을 계산하여 용접속도와 위빙폭을 자동으로 계산해주는 기능입니다.
-```arccond``` 명령어의 속성창에서 “Gap correction” 항목 탭에 진입하면 조건별로 Gap에 따른 속도와 폭을 설정할 수 있습니다. 창분할에서 “아크보간”을 클릭하면 여기서 설정한 것을 그래프로 볼 수 있습니다.
+
+This feature is separate from the previously mentioned functionalities. It allows welding conditions to be set based on the reference gap, and then automatically calculates the welding speed and weaving width by measuring the gap at the start and end points through actual touch sensing.  
+By entering the "Gap correction" tab in the properties window of the `arccond` command, you can set speed and width accroding to the gap for each condition.
+In the split window, clicking on "Arc interpolation" will display this setting as a graph.
+
 
 <p align="center">
- <img src="../../_assets/8_1_3.png" width="70%"></img>
- <em><p align="center">그림 8.1.3. 용접 조건(갭 보간) 대화상자</p></em>
+  <img src="../../_assets/8_1_3.png" width="70%"></img>
+  <em><p align="center">Figure 8.1.3. Arc Welding Condition(Gap correction) Dialog box</p></em>
 </p> 
 
 <p align="center">
- <img src="../../_assets/8_1_4.png" width="70%"></img>
- <em><p align="center">그림 8.1.4. 아크보간 모니터링</p></em>
+  <img src="../../_assets/8_1_4.png" width="70%"></img>
+  <em><p align="center">Figure 8.1.4. Arc Interpolation Monitoring</p></em>
 </p> 
-
 
 <br>
-이 기능의 동작은 다음과 같습니다.
 
- <p align="center">
- <img src="../../_assets/8_1_5.png" width="70%"></img>
- <em><p align="center">그림 8.1.5. 용접 조건의 보간 동작</p></em>
+The operation of this function is as follows:
+
+<p align="center">
+  <img src="../../_assets/8_1_5.png" width="70%"></img>
+  <em><p align="center">Figure 8.1.5. Welding Condition Interpolation Operation</p></em>
 </p> 
 
 <br>
  
 
-gap-속도 그래프로 예를 들어 보면 다음과 같습니다.
-`arccond` 명령어의 속성창의 Gap correction 탭에 입력된 gap-Spd그래프를 생성합니다.
-용접 시점에서는 WDB의 용접속도와 WDB의 기준 spd(그래프에서 기준 gap에서 spd값)에서의 속도의 차이를 dSpd라 할때, 현재 gap에서 원 그래프의 Spd 값에 dSpd를 적용한 값이 시작 Spd가 됩니다.
-마찬가지로, 용접 종료점에서 WDB의 용접속도와 WDB의 기준 spd(그래프에서 기준 gap에서 spd값)에서의 속도차이를 dSpd2라 할때, 현재 gap에서 원 그래프의 Spd값에 dSpd2를 적용한 값이 종료 Spd가 됩니다.
-위 그림과 같이 최종적으로 2개의 `arccond` 명령어 사이의 스텝에서 선형적으로 용접속도가 증가합니다.
+The gap-speed graph can be illustrated as follows:  
 
-JOB 구성예시는 다음과 같습니다.
+The gap-spd graph entered in the Gap correction tab of the properties window of the `arccond` command is created.
+At the welding start point, the difference in speed between WDB welding speed and the WDB reference speed (the spd value at the reference gap on the graph) is assumed to be bSpd. The starting speed is then calculated by applying dSpd to the Spd value of the original graph at the current gap.
 
+Similarly, at the welding end point, the difference in speed between the WDB welding speed and the WDB reference speed (the spd value at the reference gap on the graph) is assumed to dSpd2. The ending speed is calculated by applying dSpd2 to the Spd value of the original graph at the current gap.
+
+As shown in the figure above, the welding speed increases linearly between the two `arccond` commands.
+
+
+An example of the JOB configuration is as follows:
 
 ```python
-move L, spd=60%, …
-move L, spd=10%, …	    #용접점 진입 스텝
-arcon cnd=1
-move L, spd=40cm/min, …
-arccond L, cnd=1, gap=20  
-move L, spd=30cm/min, …    #이 스텝에서 연속적으로 용접속도와 위빙폭이 선형변경된다.
-arccond L, cnd=2, gap=10   
-arcoff
-move L, spd=10%, …	    #용접점 탈출 스텝
-end
-```# 8.2	터치센싱 기능
+    move L, spd=60%, …
+    move L, spd=10%, …	    # Weld point(seam) Entry Step
+    arcon cnd=1
+    move L, spd=40cm/min, …
+    arccond L, cnd=1, gap=20  
+    move L, spd=30cm/min, …    # In this step, welding speed and weaving width change linearly
+    arccond L, cnd=2, gap=10   
+    arcoff
+    move L, spd=10%, …	    # Weld point(seam) Exit Step
+    end
+```# 8.2	Touch Sensing
 
-용접 작업물은 지그 또는 포지셔너의 오차, 작업물의 취부오차 등이 다르기 때문에 항상 일정한 위치에 있다고 볼 수 없습니다. 
-이러한 경우 터치센싱을 이용해 용접 시작점과 경유점, 끝점을 검출하여 용접할 수 있습니다.
 
-터치센싱 기능은 작업물의 위치 및 용접시작점 혹은 용접끝점, 용접 경유점 검출을 통해 포즈를 얻는 기능입니다.
+Welding workpieces are not always in a fixed position due to errors in the jig, positioner, or workpiece mounting.
+In such cases, touch sensing can be used to detect the welding start point, intermediate points, and end points, enabling accurate welding.
 
-터치센싱을 이용하여 기준 위치를 기록해 놓으면 작업물이 들어왔을 때 기준위치에서 얼만큼 쉬프트 되어있는지 계산할 수 있습니다. 
-마스터모드 기능을 사용하면 기준 티칭을 통해 마스터포즈를 저장해놓고 실제 기동시 터치센싱을 통해 쉬프트량을 자동으로 계산할 수 있습니다.
+The touch sensing func. helps obtain the pose by detecting the position of the workpiece and the welding start, end, or intermediate points.
+
+By recording the reference position using touch sensing, the shift of the workpiece from the reference position can be calculated when the workpiece is loaded.
+When using the master mode, a mster pose can be saved through reference teaching, and the shift amount is automatically calculated via touch sensing during actual operation.
+
 
 <p align="center">
  <img src="../../_assets/8_2_1.png"></img>
- <em><p align="center">그림 8.2.1. 터치센싱의 예</p></em>
+ <em><p align="center">Figure 8.2.1. Example of Touch Sensing</p></em>
 </p>
 
-### (1) 터치센싱 타입
+### (1) Touch Sensing Types
 
- 터치센싱은 그림 8.5와 같이 총 8가지 타입 (필렛, VGroove, Butt, LRCen, DetectGroove, Wall) 을 지원합니다. 
-       
+The touch sensing supports a total of 5-types, as shown in [Figure 8.2.1] (Butt, Fillet, V-groove, LR Center, and Groove Detections).
+
 <p align="center">
  <img src="../../_assets/8_2_2.png" width="90%"></img>
- <em><p align="center">그림 8.2.2. 터치센싱 타입</p></em>
+ <em><p align="center">Figure 8.2.2. Touch Sensing Types</p></em>
 </p>
 
-### (2) 터치센싱 명령어 및 설정 파라미터
+### (2) Touch Sensing Command and Setting Parameters
 
-터치센싱 명령어는 T.P화면에서 **[명령입력]-[아크]-[touchsen]** 을 입력하여 기록할 수 있습니다.
+The touch sensing command can be recorded by entering **[Command input > Arcweld > touchsen]** on the TP.
 
-터치센싱 명령어에서 [**속성**]을 누르면 그림 8.8와 같은 창에 진입합니다. 
+Assuming the condition 1 set for Fillet, condition 2 set for Butt, and condition 3 for V-groove in the command (where the workpiece type is defined in the properties), the example is as follows:
 
-센싱 거리, 후퇴 거리, 진행 거리, 센싱 속도, 퇴피 속도, 검지 타입(접촉 시, 접촉 해제 시) 등과 같은 조건들을 설정할 수 있습니다. 
+```python
+    move L,spd=60%,accu=0,tool=0  # Move to the touch sensing position with acc 0
+    var P10=cpo() # Save the current pose to a local variable P10 before touch sensing.
+    touchsen cnd=1, crd="tool_prj", dir=["tf","td"], pose=P10       # Condition 1, tool projection direction, 2-point touch
+    touchsen cnd=1, crd="robot", dir=["+x","-y","-z"], pose=P10     # Condition 1, robot coordinate direction, 3-point touch
+    touchsen cnd=1, crd="tool", dir="+tz", pose=P10           # Condition 1, tool coordinate direction, 1-point touch in +TZ
+    touchsen cnd=2, crd="tool", dir="+tx", lift_up=3, pose=P10, gap=var1 # Condition 2, tool coordinate direction, touch the bottom and rise 3mm
+    touchsen cnd=3, crd="tool", dir="-ty", lift_up=5, pose=P10   # Condition 3, tool coordinate direction, touch the bottom and rise 5mm
+```
+
+- **Sensing Distance** : The distance in the sensing direction [mm], and an error occurs if the workpiece is not detected upon reaching this distance.
+
+- **Retreat Distance** : The distance to retreat after the initial sensing in the case of Fillet, and **the distance to raise after touching the bottom in the DetectGroove type**.
+
+- **Sensing Speed and Retreat Speed** : Specifies the speed during search or retreat.  
+
+- **Detection Type** : Supports sensing during contact and release of contact. Typically, sensing during contact is used, and there is alomost no error.<br/>
+  If the situation requires considering even minor errors caused by wire bending during sensing, only use sensing during retreat when absolutely necessary.
+
+
+<br/>
+
+- **참고**
+
+<center>
+
+| Sensing Type |	Max Search</br>Directions |	Orthogonal XYZ </br>(All types </br>Supported)	| Tool Coordinate System |	Tool Projection</br>Coordinate System | Other input parameters |
+|:---:|	:---: |	:---:	| :---:|	:---: |:---:|
+| Fillet |	3	|O|	O |	O	|	Retreat Distance |
+| Butt	| 1 |	X	|O	|X	|  |
+| VGroove |	1 |	X |	O	|X | |
+| LRCen |	1	|O |	O	|X |  |	
+| DetectGroove |	2 |	O |	O |	O | Proceed Distance 1</br> Retreat Distance 1 </br> criteria |
+
+</center>
+
+
+In the touch sensing command, pressing on [**Property**] will bring up a winow as shown in [Figure 8.2.3]  
+You can set conditions such as sensing distance, retreat distance, proceed distance, sensing speed, retreat speed, and detection type (contact,  release of contact), among others.  
+
 
 <p align="center">
  <img src="../../_assets/8_2_3.png" width="70%" ></img>
- <em><p align="center">그림 8.2.3. 터치센싱 조건 편집화면</p></em>
+ <em><p align="center">Figure 8.2.3. Touch Sensing Condition Edit Screen</p></em>
 </p>
 
-- **문법**
+{% hint style="info" %}
+  For detailed instructions on using the command and parameters, please refer to [2.13 touchsen](../../2_Command/13_touchsen.md) <br>
+  This section explains how to use the function.
+{% endhint %}
+
+<!-- - **명령어 사용 예시**
 ```python
-   - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], pose=<결과포즈 저장변수>, gap=<butt gap 변수>
-   - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, pose=<결과포즈 저장변수>, gap=<butt gap 변수>
-   - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, mpose=<결과포즈 저장변수>, mshift=<계산된 시프트 변수, gap=butt gap 변수>
-```
-- **파라미터**
+    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], pose=<결과포즈 저장변수>, gap=<butt gap 변수>
+    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, pose=<결과포즈 저장변수>, gap=<butt gap 변수>
+    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, mpose=<결과포즈 저장변수>, mshift=<계산된 시프트 변수, gap=butt gap 변수>
+```   -->
+
+<!-- - **파라미터**
   - 터치센싱 조건번호 (cnd) : cnd=1	
   - 터치센싱 좌표계 (crd) : "robot", "base", "tool", "tool_prj" 
   - 센싱 방향 파라미터 (dir) : "+x", ["+x","-z"], [+tx, +tz], ["tf","td"],  
@@ -2782,534 +2442,1023 @@ end
               +tx, -tx, +ty, -ty, +tz, -tz (crd="tool")
   - DetectGroove: 2개 지정 (하강방향, 전진방향 순서)
                   tf, td, tl, tr (crd="tool_prj")
-                  +tx, -tx, +ty, -ty, +tz, -tz (crd="tool")
+                  +tx, -tx, +ty, -ty, +tz, -tz (crd="tool") -->
 
-<center>
 
-|타입|	최대탐색 </br>방향개수 |	직교XYZ </br>(모든타입 </br>지원예정)	| 툴좌표계|	툴프로젝션</br>좌표계 | 기타 입력인자 |
-|:---:|	:---: |	:---:	| :---:|	:---: |:---:|
-|Fillet|	3	|O|	O |	O	|	후퇴 거리|
-|Butt	|1 |	X	|O	|X	| ~~오차보정량~~ |
-|VGroove |	1 |	X |	O	|X | |
-|LRCen |	1	|O |	O	|X |  |	
-|DetectGroove|	2 |	O |	O |	O | 진행거리1 </br> 후퇴 거리1 </br> criteria |
-
-</center>
-
-### (3) 터치센싱 명령어 작성 예제
-
-1번 터치센싱조건 (명령어에서 [속성]으로 사용자가 설정해놓은 조건들)에는 필렛, 2번 조건에는 버트, 3번 조건에는 V그루브로 작업물 타입이 지정되어있다고 가정할 때 예시는 아래와 같습니다. 
-
- ```python
-   move L,spd=60%,accu=0,tool=0  # 터치센싱 위치로 accu 0으로 이동
-   var P10=cpo() # 터치센싱 전 현재 포즈를 P10이라는 로컬변수에 저장
-   touchsen cnd=1, crd="tool_prj", dir=["tf","td"], pose=P10       #1번 조건, 툴프로젝션 방향, 2점 터치
-   touchsen cnd=1, crd="robot", dir=["+x","-y","-z"], pose=P10     #1번 조건, 로봇좌표 방향, 3점 터치
-   touchsen cnd=1, crd="tool", dir="+tz", pose=P10           #1번 조건, 툴좌표 방향, +TZ방향으로 1점 터치 
-   touchsen cnd=2, crd="tool", dir="+tx", lift_up=3, pose=P10, gap=var1 #2번 조건, 툴좌표계 방향, 바닥터치 후 3mm 상승
-   touchsen cnd=3, crd="tool", dir="-ty", lift_up=5, pose=P10   #3번 조건, 툴좌표계 방향, 바닥터치 후 5mm 상승
- ```
-
-</br>
+### (3) Detailed Description of Touch Sensing by Sensing Type
 
 ---
-### (4) 센싱 타입 별 터치센싱 상세 설명
 
-**[1] Fillet 타입**
+#### [1] Fillet
 
 <p align="center">
  <img src="../../_assets/8_2_4.png" width="60%"></img>
- <em><p align="center">그림 8.2.4. 터치센싱 예 Fillet 타입</p></em>
+ <em><p align="center">Figure 8.2.4. Example of Touch Sensing - Fillet</p></em>
 </p>
 
-- 명령어 작성 예시
+- Examples of Command
 ```python
   touchsen cnd=1, crd="robot", dir=["+x","-y", "-z"], pose=P10
   touchsen cnd=1, crd="tool_prj", dir=["tf", "td"], pose=P10
   touchsen cnd=1, crd="tool", dir=["+tz"], pose=P10
-```
-- 1점 센싱 : 센싱 방향을 한 개만 지정
-- 2점 센싱 : 센싱 방향을 순차적으로 2개 지정
-- 3점 센싱 : 센싱 방향을 순차적으로 3개 지정
-- 툴 프로젝션 방식 (crd="tool_prj"): 사용 편리상 토치 자세를 기준으로 전진, 하강, 좌우 방향을 결정하는 방식
-  tf(전진), td(하강), tl(좌), tr(우)로 방향을 지정할 수 있습니다. (tl=RotZ(90)*tf, tr=RotZ(-90)*tf 방향입니다)
-- 작업물에 회전량(RX, RY, RZ)이 존재하는 틀어진 Fillet의 경우 각도지정 옵션을 이용해 센싱 방향을 변경할 수 있습니다. 
-  사용법은 메뉴얼 하단을 참고하십시오.
-
+```  
+  - 1-Point sensing : Only one sensing direction is specified.
+  - 2-Point sensing : Two sensing directions are specified sequentially.
+  - 3-Point sensing : Three sensing directions are specified sequentially.
+- Tool Projection Method (crd="tool_prj") : For convenience, the forward, downward, left, and right directions are determined based on the torch posture.  <br> The directioon can be specified as tf(forward), td(downward), tl(left), tr(right). (tl = RotZ(90) * tf, tr = RotZ(-90) * tf)
+- For workpieces with rotational amounts (RX, RY, RZ), such as tilted Fillets, the sensing direction can be changed using the angle specification option. Please refer to the bottom of the manual for usage.
 
 ---
 
-**[2] V Groove 타입**
+#### [2] V Groove
 
 <p align="center">
  <img src="../../_assets/8_2_5.png" width="70%"></img>
- <em><p align="center">그림 8.2.5. 터치센싱 예 V Groove 타입</p></em>
+ <em><p align="center">Figure 8.2.5. Example of Touch Sensing - V Groove</p></em>
 </p>   
 
-- 명령어 작성 예시
+- Examples of Command
 ```python
-  touchsen cnd=3, crd="tool", dir=[-ty], lift_up=3, pose=P10    #3번 조건, 툴좌표계 방향
-```
-- V그루브 타입은 Groove 형상의 작업물 센싱에 사용할 수 있습니다. 단, 센싱시작 전 툴자세는 위 그림과 유사하게 각의 2등분선 상에 위치하도록 티칭을 권장합니다.
-- 방향인자는 좌우 시퀀스에 해당하는 방향으로 1가지 입니다. 하강 시퀀스 방향은 +tz 방향으로 고정됩니다.
-- 안정적인 센싱을 위해 상승량(lift_up)은 최소 3mm이상 설정하는 것을 권장합니다.
+  touchsen cnd=3, crd="tool", dir=[-ty], lift_up=3, pose=P10    # Condition 3, tool coordinate direction
+```  
+  - V-Groove Type can be used for sensing workpieces with a Groove shape. However, it is recommended to teach the tool posture so that it is positioned along the bisector of the angle, similar to the figure above, before starting the sensing.  
+  - The direction parameter corresponds to one direction for the left-right sequence. The downward sequence direction is fixed in the `+Tz` direction.  
+  - For stable sensing, it is recommended to set the lift-up amount to at least 3mm.  
 
-- 센싱 시퀀스
+- Sensing Sequence  
+  - The sensing sequence proceeds as follows: upper left-right → middle return → bottom → bottom left-right → middle  
 
 <p align="center">
  <img src="../../_assets/8_2_6.png" width="60%"></img>
- <em><p align="center">그림 8.2.6. 터치센싱 시퀀스 VGroove 타입</p></em>
+ <em><p align="center">Figure 8.2.6. Touch Sensing Sequence - V-Groove</p></em>
 </p>   
-
-센싱은 상단 좌우 - 중간 복귀 - 하단 - 하단 좌우 - 중간 으로 진행됩니다.
 
 ---
  
-**[3] BUTT 타입**
+#### [3] BUTT
 
 <p align="center">
  <img src="../../_assets/8_2_7.png" width="30%"></img>
- <em><p align="center">그림 8.2.7. 터치센싱 예 Butt 타입</p></em>
+ <em><p align="center">Figure 8.2.7. Example of Touch Sensing - Butt</p></em>
 </p>   
 
 
-- 명령어 작성 예시
+- Examples of Command
 ```python
     touchsen cnd=2, crd="tool", dir="+tx", lift_up=3, pose=P10, gap=var_gap   
-    #2번 조건, 툴좌표계 방향, 바닥 센싱 후3mm 상승상승
-```
+    # Condition 2, tool coordinate direction, touch the bottom and rise 3mm
+```  
+  - Butt Type is recommended to teach the tool posture vertically to the floor surface before starting the sensing, as shown in the figure above.
+  - The direction parameter corresponds to one direction for the left-right sequence. The downward sequence direction is fixed in the `+Tz` direction.  
+  - After bottom sensing, it is recommended to set the lift-up amount to at least 3mm for stable sensing. The size of the sensed gap may change depending on the lift-up amount.  
 
-- Butt 타입은 그림과 같이 센싱시작 전 툴 자세를 바닥면에 수직으로 티칭하는 것을 권장합니다.
-- 방향인자는 좌우 시퀀스에 해당하는 방향으로 1가지 입니다. 하강 시퀀스 방향은 +tz 방향으로 고정됩니다.
--	센싱을 위해 바닥센싱 후 상승량(lift_up)은 최소 3mm이상 설정하는 것을 권장합니다. 상승량에 따라서 센싱한 gap의 크기가 바뀔 수 있습니다.
-
-- 센싱 시퀀스
+- Sensing Sequence
+  - The sensing sequence proceeds as follows: upper left-right → middle return → bottom → bottom left-right → middle  
 
 <p align="center">
  <img src="../../_assets/8_2_8.png" width="60%"></img>
- <em><p align="center">그림 8.2.8. 터치센싱 시퀀스 Butt 타입</p></em>
+ <em><p align="center">Figure 8.2.8. Touch Sensing Sequence - Butt</p></em>
 </p>   
 
-센싱은 상단 좌우 - 중간 복귀 - 하단 - 하단 좌우 - 중간 으로 진행됩니다.
 
----
 
-### (5) 터치센싱 조건
+### (4) Sensing Direction Angle Transformation
 
-터치센싱 명령어에서 [**속성**]을 누르면 해당 조건번호에 대한 터치센싱 조건들을 편집할 수 있습니다.
+Angle transformation of the sensing direction is supported in Fillet and Groove Detection types.
+By specifying an angle for the sensing direction, you can change the direction of the search process.
+In the command, the rotation parameter is entered as "X30", "Y-30", "TL20", etc.  
 
-- 센싱 거리 : 센싱 방향에 대한 거리[mm]이며 이 거리에 도달해도 작업물을 감지하지 못할 경우 에러가 발생합니다.  
-- 센싱 속도와 퇴피 속도 : 탐색 또는 후퇴 시 속도를 지정할 수 있습니다.  
-- 후퇴 거리 : 필렛에선 처음 센싱 후 퇴피할 거리이고, **DetectGroove 타입에서는 바닥을 찍고 들어올릴 거리**입니다.  
-- 검지 타입 : 접촉 시와 접촉 해제 시를 지원합니다. 일반적으로 접촉 시 센싱을 많이 사용하며 오차는 거의 없습니다. 
-            만약 센싱시 와이어 휘어짐에 의한 미세오차까지도 고려해 센싱해야 하는 상황에서만 후퇴 시 센싱을 사용하십시오.  
+Angle specification rotates the entire search direction by the specified angle along one of the selected axes, either the TL axis or the orthogonal XYZ axes.
+[FIgure 8.2.9] shows an example where the Fillet and Groove detection workpieces are rotated by 30 degrees along the Y-axis or TL axis.
 
-### (6) 센싱 방향 각도 변환
-
-센싱 방향 각도 변환은 Fillet과 DetectGroove 타입에서 지원합니다. 
-
-센싱 방향에 대한 각도를 지정하여 탐색 진행방향을 변경 할 수 있습니다. 
-
-명령어의 rotation 인자에 "X30", "Y-30", "TL20" 등과 같이 입력합니다.
-
-각도지정은 TL축, 직교 XYZ축 중 선택한 하나의 축으로 각도만큼 탐색 방향을 모두 회전시킵니다. 
-
-그림 8.13은 필렛과 DetectGroove작업물에서 Y축 또는 TL축으로 30도 회전한 예입니다.
 
 <p align="center">
  <img src="../../_assets/8_2_9.png" width="300"></img>
- <em><p align="center">그림 8.2.9. 터치센싱 예 각도설정</p></em>
+ <em><p align="center">Figure 8.2.9. Example of Touch Sensing - Angle setting</p></em>
 </p>       
 
-- 명령어 작성 예시
+- Examples of Command
 
 ```python
    touchsen cnd=1, crd="robot", dir=["+x","-z"], rotation="Y30", pose=P100
    touchsen cnd=1, crd="robot", dir=["+x","-z"], rotation="TL30", pose=P100
    touchsen cnd=2, crd="tool_prj", dir=["td","tf"], lift_up=5, rotation="Y-30", pose=P100
-   touchsen cnd=2, crd="tool_prj", dir=["td","tf"], rotation="TL-30", pose=P100   #DetectGroove
+   touchsen cnd=2, crd="tool_prj", dir=["td","tf"], rotation="TL-30", pose=P100   # Detect Groove 
 ```
 
-작업물 타입과 명령어에 지정된 센싱방향 지정좌표계에 따라 지정이 가능한 각도회전 축은 아래 표와 같습니다.
+- The angle rotation axes that can be specified depending on the workpiece type and the sensing direction coordinate system designated in the command are as shown in the table below.
 
 <center>
 
-| 타입	| 센싱방향 </br> 지정좌표계	| 각도지정축|
+| Sensing Type	| Sensing Direction </br> Coordinate System	| Angle Specification Axis |
 |:---:|:---:|:---:|
-|Fillet	| 모든 좌표계	| 직교 XYZ축 </br>TL축 |
-|Detect Groove |	툴 (crd="tool") </br> 툴 프로젝션 (crd="tool_prj") |	직교 XYZ축</br>TL축 |
+|Fillet	| All	| Orthogonal XYZ axes </br> TL axis |
+|Detect Groove |	Tool (crd="tool") </br> Tool Projection (crd="tool_prj") |	Orthogonal XYZ axes </br> TL axis |
 
 </center>
 
 
-### (7) 마스터/실행 모드 터치센싱 기능
+### (5) Master/Execution Mode in Touch Sensing
 
-마스터 모드는 사용자키에서 On/Off 할 수 있습니다.
-마스터 모드를 On한 상태에서 터치센싱을 하면 마스터 포즈를 저장할 수 있으며, 이를 기준 티칭으로 사용합니다. 실제 작업시에는 마스터 모드를 Off하고 터치센싱을 수행하게 되는데 이때에는 마스터 포즈대비 현재 센싱 포즈로 작업물이 쉬프트된 양을 자동으로 계산해 줍니다.
+The master mode can be turned On/Off using the user key.
+When touch sensing is performed with the master mode On, the master pose can be saved and used as a reference for teaching.  
+During actual operation, the master mode is turned Off, and touch sensing is performed. In this case, the system automatically calculates the shift amount of the workpiece relative to the master pose based on the current sensing pose.  
 
-마스터 모드에선 사용자가 터치센싱 명령어의 mpose 입력인자에 지정한 변수에 센싱한 포즈가 저장되며, 실행 모드 (마스터 모드 off)에선 현재 센싱한 포즈를 마스터 모드에서 센싱했던 포즈와 비교하여 쉬프트량을 계산하고 사용자가 mshift 입력인자에 지정한 변수에 시프트량이 기록됩니다.
+In master mode, the sensed pose is saved in the variable specified by the `mpose` input parameter of the touch sensing command.
+In execution mode (when master mode is OFF), the current sensed pose is compared with the pose sensed in master mode, and the shift amount is calculated.
+The shift amount is then recorded in the variable specified by the `mshift` input parameter.
 
-- 명령어 작성 예시
+
+- Examples of Command
 ```python
    var P10=cpo()
    var sft_var1=Shift(0,0,0,0,0,0,"base")
    ....
    touchsen cnd=1, crd="robot", dir=["+x","-z"], mpose=P10, mshift=sft_var1
-```
-위 명령어는 마스터 모드에서 P10포즈변수에 센싱한 포즈가 저장되고, 실행 모드에서 센싱했을 때 마스터 모드와의 시프트 양이 자동으로 계산되어 sft_var1변수에 저장됩니다.
-# 8.3 Arc 센싱 기능
+```  
+
+- For example, in master mode, the sensed pose is saved in the `P10` pose variable, and in execution mode, when sensing is performed, the shift amount between the master mode pose and the current sensed pose is automatically calculated and stored in the sft_var1 variable.
+# 8.3 Arc Sensing and Multi Pass
 
 {% hint style="info" %}
-본 기능 사용을 위해서는 아크센싱 라이센스가 필요합니다.<br>
-당사에 문의하여 라이센스를 구매하여 발급받으십시오.
+  - To use this feature, an Arc sensing license is required.<br> Please contact us to purchase and obtain the license.
+  - Additionally, this feature requires **the weaving funtion** to be enabled.<br> Please refer to the weaving section before starting. **[6. Weaving Function](../../6_Weaving_function/README.md)**
 {% endhint %}
 
-아크센싱 기능은 두꺼운 재질의 아크용접(후판용접)에서 **위빙기능을 사용할 경우** 사용할 수 있는 용접선 추종기능입니다. <br>
-본 기능을 이용할 경우 작업물의 공차로 인한 용접선 오차나 작업물의 변형이 있는 경우에도 정확하게 용접선을 추종하여 용접 할 수 있습니다.
+Arc Sensing is a seam tracking feature that can be used for arc welding on thick materials(such as thick plates).
+When using this feature, even if there are seam deviations due to workpiece tolerance or deformation, the welding can be performed accurately.
+<br>
 
-작업물의 위치가 일정하지 않아 용접 불량이 발생하는 경우 터치센싱 기능을 이용하여 정확한 용접시작점을 찾고 Arc센싱기능을 사용하여 용접선을 추종하면 불량 없는 용접품질을 얻을 수 있습니다.
+The typical usage method is as follows: <br>
+1. Teach the reference points (starting point, intermediate points, and endpoint) for the welding area by sensing the seam on the reference workpiece (register the master pose)
+2. Perform seam sensing at the same locations on the actual workpiece (calculate the shift relative to the master pose)
+3. Apply the calculated shift to each point
+4. Use arc sensing for real-time seam tracking during welding
 
-일반적으로 사용하는 방법은 다음과 같은 방법입니다.
-
-1. 기준작업물에 대해 용접점센싱으로 용접구간 시작점, 경유점, 끝점에 대한 기준점 티칭 (마스터포즈 등록)
-2. 실제 작업물에 대해 위 시작점, 경유점, 끝점에 대해 같은 위치에서 용접점센싱 수행 (마스터포즈 대비 쉬프트 계산)
-3. 용접점센싱으로 계산한 쉬프트를 시작점, 경유점, 끝점에 적용 (시작점, 경유점에 대한 작업물 쉬프트 보상)
-4. 아크센싱으로 용접중 용접선 추종 (실시간 용접선 추종)
 
 {% hint style="info" %}
-용접점 센싱은 용접 구간의 시작점, 경유점, 끝점 등의 위치를 찾는 과정을 말합니다.<br>
-터치센싱, LVS seamfinding, LPS(Laser Point Sensing) 기능을 이용하여 수행할 수 있습니다.
+  - Before using this function, it is necessary to first perform Arc Sensing delay time calibration.
+  - Seam sensing refers to the process of finding the starting point, intermediate points, and endpoint of the welding area.
+  - Seam sensing can be performed using touch sensing, LVS seamfinding, LPS(Laser Point Sensing) features.
 {% endhint %}
 
-{% hint style="info" %}
-본 기능의 사용을 위해서는 위빙 기능을 반드시 사용해야 합니다. <br>
-또한 기능 사용에 앞서 아크센싱 지연시간 캘리브레이션이 필요합니다.
-{% endhint %}
+This manual explains the newly added Arc Sensing feature in Hi6.  
+The newly added Arc Sensing feature in Hi6 is activated by entering the properties window of the `weaving` command and setting the **'type' in the Arc Sensing (General) tab to 'seam & cur_diff'**.
 
-본 메뉴얼에서는 Hi6에서 새롭게 추가된 아크센싱 기능을 설명합니다.<br>
-다음 그림과 같이 `weaving` 명령어의 속성창에 진입하여 **아크센싱(일반) 탭에서 '타입'을 '용접선+전류차**로 설정할 경우 Hi6에서 새롭게 추가된 아크센싱 기능이 동작합니다.<br># 8.3.1 아크센싱 개념
+---
 
-아크용접 시 위빙을 하면 위빙 좌우에서 토치와 모재사이의 거리에 변화가 발생합니다. 거리변화에 의해 와이어의 저항이 변하여 흐르는 전류가 변합니다. 즉 위빙구간의 전류 변화로부터 위빙 면에서의 좌우 방향으로 보정할 거리를 계산하여 용접선을 추종할 수 있습니다. 
+**Multi-Pass** is a feature used when welding needs to be repeated over multiple passes rather than in a single pass.
+Using this, the first layer (root pass) is welded, and since sensing may be unstable, the tracking trajectory is saved.
+Then, the saved trajectory is shifted to generate two or more passes for welding.  
 
-용접시작 위치는 터치센싱에 의하여 구하므로 상하방향의 오차가 거의 없습니다. 이 높이 값을 기준으로 위빙 중간 부분의 전류값을 기준으로 하여 용접 시 상하방향을 보정합니다. 아크센싱 중 별도의 높이 조절이 필요한 경우 시작위치의 전류 기준값 대신 사용자가 직접 입력한 전류값을 기준으로 상하방향을 보정할 수도 있습니다.
+Typically, Arc Sensing is used to perform multi-pass welding, and multi-pass welding is conducted using Arc Sensing.
 
-- 좌우 방향 보정 : 좌우 전류차 및 용접선 추출 알고리즘에 의해 로봇이 자동으로 용접선을 추종하여 이동합니다.
+# 8.3.1 Arc Sensing Overview
+
+When weaving during arc welding, the distance between the torch and the base material changes.
+This change in distance causes a variation in wire resistance, which in turn alters the current flowing.
+In other words, by using the current change during the weaving section, the distance to be corrected in the left and right directions of the weaving area can be calculated, allowing the seam to be tracked.
+
+The height value at the welding start position is used as the reference, and the current value in the middle of the weaving section is used to correct the vertical direction during welding.
+Or, instead of using the starting position current reference value, **the user can directly input a custom current value** as the reference for correction.
+
+
+<!-- - 좌우 방향 보정 : 좌우 전류차 및 용접선 추출 알고리즘에 의해 로봇이 자동으로 용접선을 추종하여 이동합니다.
 - 상하 방향 보정 : 용접 시작시 높이 (CTWD)를 기준으로하여 이 값을 계속 유지합니다.
-                  만약 용접 도중 높이변화가 필요할 경우 job에 다음 명령어를 이용하여 사용자가 기준 전류값을 입력할 수 있습니다. 
-```python
-move L, spd=30cm/min,accu=3,tool=0  # 진입스텝
-move L, spd=30cm/min,accu=3,tool=0  # 용접 시작스텝
-weaving on, cnd=1 # [속성] 창의 아크센싱 기능 '유효'로 설정
-arc on, cnd=1
-move L, spd=30cm/min,accu=3,tool=0
-_weaving.height_sensing_reference_current = 300 # 높이 기준값을 300A로 설정
-move L, spd=30cm/min,accu=3,tool=0
-weaving off
-arc off
-end
+                  만약 용접 도중 높이변화가 필요할 경우 job에 다음 명령어를 이용하여 사용자가 기준 전류값을 입력할 수 있습니다.  -->
+
+
+```py
+    move L, spd=30cm/min,accu=3,tool=0  # Entry step
+    move L, spd=30cm/min,accu=3,tool=0  # Welding start step
+    weaving on, cnd=1 # Set the 'Arc Sensing' function to 'Enable' in the [Property] window
+    arc on, cnd=1
+    move L, spd=30cm/min,accu=3,tool=0
+    _weaving.height_sensing_reference_current=300 # Set the height reference value to 300A
+    move L, spd=30cm/min,accu=3,tool=0
+    weaving off
+    arc off
+    end
 ```  
 <br/>
 
 <p align="center">
  <img src="../../_assets/8_3_1.png" width="70%"></img>
- <em><p align="center">그림 8.3.1. 아크센싱 개념도</p></em>
+ <em><p align="center">Figure 8.3.1. Arc Sensing Concept</p></em>
 </p>
 
+As shown in the figure, when the torch is tilted to the left or right, the current weavform changes, and this can be used to track the seam in the left and right directions.
+Additionally, the current at the middle of the weaving section can be used to correct the vertical direction.
 
-위 그림과 같이 좌측이나 우측으로 쏠린 상태에서는 전류의 개형이 변하고 이를 이용하여 용접선을 좌우로 추종할 수 있습니다. 위빙 중간지점에서의 전류를 이용하여 높이방향 또한 보정할 수 있습니다.# 8.3.1 아크센싱 지원 사양
+# 8.3.2 Arc Sensing Support Specifications
 
-아크센싱 용접선 추종기능은 모든 용접응용을 지원하지 않습니다. 아래 이외의 내용은 당사에 문의하여 기술지원을 받으십시오. 
 
-아래의 사양은 당사에서 충분한 시험을 거친 데이터입니다. (사양 외의 조건은 당사로 연락하시어 작업물과 사용조건에 대한 확인시험이 필요합니다)
+The Arc Sensing Seam Tracking does not support all welding applications.
+For any issues beyond the ones listed below, please contact us for technical support.  
 
-### (1) 용접조건 
-   - 용접방법: CO2, MAG, MIG, FCAW  
-   - 적용 와이어 굵기: 1.0 ~ 1.6φ (Solid wire, Flux cored wire)  
-   - 최대 용접속도: 용접기 특성에 따름 (10cm/min ~ 70cm/min)  
-   - 적용 용접전류: 160[A] ~ 600[A]  
+The specifications below are based on data obtained from extensive testing conducted by our company. 
+(For conditions outside of the specified parameters, please contact us for verification tests based on the workpiece and usage conditions.)  
 
-### (2) Workpiece 조건 
-   - 최소 두께: 2t 이상  
-   - 최대 추종성능: 민감도 설정값, 초당 최대 보정거리 설정값에 따라 결정.  
-   - 추종 성능을 높이는 경우 용접 궤적의 진동이 발생할 수 있으므로 확인시험 필요  
 
-### (3) 위빙 조건  
-   - 주파수 범위: 0.5 ~ 4.0 Hz  
-   - 진폭 범위: 1.0 X 1.0 mm 이상  
-   - 위빙형태: 단진동  
-  -  Dwell 시간: 0.0[sec] ~ 2.0[sec]  
+### (1) Welding Conditions
+  - Welding Methods: CO2, MAG, MIG, FCAW  
+  - Wire Diameter: 1.0 ~ 1.6 mm (Solid wire, Flux-cored wire)  
+  - Maximum Welding Speed: Depending on the welder chaeracteristics (10 cm/min ~ 70 cm/min)
+  - Welding Current: 160[A] ~ 600[A]  
 
-### (4) 보간 종류 
-   - 직선보간: 가능  
-   - 원호보간: 가능  
-   - 포지셔너 동기(직선): 가능  
-   - 포지셔너 동기(원호): 가능
 
-### (5) 접합형태 
+### (2) Workpiece Conditions
+  - Minimum Thickness: 2t or greater  
+  - Maximum Tracking Performance: Determined by sensitivity settings and maximum correction distance per second  
+     - When improving tracking performance, welding path vibrations may occur, so verification tests are required.  
+
+### (3) Weaving Conditions  
+  - Frequency Range: 0.5 ~ 4.0 Hz
+  - Amplitude Range: 1.0 X 1.0 mm or grater
+  - Weaving Type: Single oscillation
+  - Dwell Time: 0.0[sec] ~ 2.0[sec]
+
+### (4) Interpolation Type
+  - Linear Interpolation: Available
+  - Circular Interpolation: Available
+  - Positioner Synchronization (Linear): Available
+  - Positioner Synchronization (Circular): Available
+
+### (5) Joint Type
    - Fillet, V-groove  
-   - 최대 허용 Gap: 위빙 폭에 따라 다름  
+   - Maximum Allowable Gap: Depends on weaving width
 
-### (6) 그 외 기능 
-   - 센싱 궤적이탈 제한기능  
-   - 센싱 중 토치 높이 설정 기능  
-# 8.3.1 아크센싱 조건
+### (6) Other Functions
+  - Sensing Trajectory Deviation Limiting Function
+  - Torch Height Setting Function during Sensing
+# 8.3.3.1 Arc Sensing Condition(General)
 
-`weaving` 명령어에서 [**속성**]을 누르면 위빙 파일 조건편집화면이 나타납니다. 이 창의 두 번째 탭은 아래와 같이 위빙 중에 사용이 가능한 아크센싱에 관한 설정을 하는 부분입니다. 
+
+In the `Weaving` command, clickin on [Properties] opens the Weaving Condition Edit Screen.
+The second tab of this window is where settings related to arc sensing during weaving can be configured, as shown below.  
+
 
 <p align="center">
  <img src="../../_assets/8_3_2.png" width="70%"></img>
- <em><p align="center">그림 8.3.2. 아크센싱 조건-일반 대화상자</p></em>
+ <em><p align="center">Figure 8.3.2. Arc Sensing Condition(General) Dialog Box</p></em>
 </p>
 
+The settings and operation methods for each item are as follows:  
 
-각 항목별 설정 및 조작방법은 다음과 같습니다.
+### (1) Arc Sensing Activation: <Disable, Enable> 
 
-### (1) 아크센싱 기능 활성화: <무효, 유효>  
-    아크센싱 기능의 사용 여부를 설정합니다.
-    유효로 설정시 arc on, weaving on 이 실행된 후의 move문 부터 아크센싱 추종이 적용됩니다.
+This option allows you to set whether the arc sensing function is enabled or disabled.
+When set to "Enabled", arc sensing tracking will be applied starting from the move command after "arc on" and "weaving" have been executed.
 
-### (2) 좌우 센싱 민감도: [0 ~ 10]  
-    위빙 면에서 좌우 방향 센싱 민감도를 설정합니다. <br>
-    디폴트값은 5이며 좌우 센싱 강도를 변화시킵니다.  <br>
-    ```지연시간 캘리브레이션 시에는 0으로 설정합니다. ```
 
-### (3) 상하 센싱 민감도: [0 ~ 10]  
-    위빙 면에서 상하 방향 센싱 민감도를 설정합니다. <br>
-    디폴트값은 5이며 상하 센싱 강도를 변화시킵니다.  <br>
-    ```지연시간 캘리브레이션 시에는 0으로 설정합니다. ```
+### (2) Sensing Type Selection: <Welding Seam, Current Difference, Current Difference + Gap, Welding Seam Estimation & Current Difference>  
 
-### (4) 좌우 센싱 시작 사이클: [0 ~ 9]  
-    위빙 면에서 좌우로 센싱을 시작할 사이클을 설정합니다.  <br>
-    ```안정적으로 동작하기 위해 4 이상으로 설정하십시오.```
+<br/>
 
-### (5) 상하 센싱 시작 사이클: [좌우 시작 사이클+1 ~ 10]  
-    위빙 면에서 상하로 센싱을 시작할 사이클을 설정합니다. <br>
-    ```안정적으로 동작하기 위해 4 이상으로 설정하십시오.```
+```For Hi6, it is recommended to use "Welding Seam Estimation & Current Difference."```<br/>
+The options for Welding Seam, Current Difference, and Current Difference + Gap are the same as for Hi5a, so please refer to the Hi5a controller manual.
 
-### (6) 상하 센싱 기준 전류: [0 ~ 3000]  
-    상하방향 센싱을 수행할 때 기준이 되는 전류를 설정합니다.  <br>
-    이 설정에 의해 아크센싱 용접선 추종시 토치 높이가 결정됩니다.  <br>
-    ```0으로 설정하는 경우 초기 구간 전류의 평균값이 기준이 됩니다. (용접 시작 부위에 가접이 있는 경우 의도한 바와 다른 높은 초기전류가 기준값이 되므로 주의하십시오) ``` 
 
-### (7) 아크센싱 타입 선택: <용접선, 전류차, 전류차+Gap, 용접선 추정 & 전류차>  
-    ```Hi6에서는 용접선 추정 & 전류차를 사용을 권장합니다.```   <br>
-    용접선, 전류차, 전류차+Gap 타입은 Hi5a와 동일하므로 Hi5a 제어기 메뉴얼을 참고하십시오. 
+### (3) Left/Right Sensing Sensitivity: [0 ~ 10]
 
-### (8) 실시간 Gap 센싱 민감도: [0 (미사용) ~ 10]  
-    gap에 따른 용접 속도, 위빙폭을 자동으로 변경시키는 기능으로 미사용시 0으로 설정합니다. <br>
-    사용시에는 폭의 변동 민감도를 설정합니다. 이 값은 비드 품질 및 폭 변화 정도에 따라 적합한 값을 설정합니다.
+This setting adjusts the sensitivity for left and right sensing on the weaving plane.<br>
+The default value is 5, which changes the strength of the left/right sensing.<br>
+```When performing delay time calibration, set this to 0.```
 
-</br>
 
----
-위빙 대화상자의 아크센싱 (advanced) 탭은 아래와 같습니다. <br>
-```이 탭의 내용은 가급적이면 default 값을 사용하십시오.```
+### (4) Left/Right Sensing Start Cycle: [0 ~ 9]
+
+This setting determines the cycle at which left/right sensing will begin on the weaving plane.<br>
+```For stable operation, set it to 4 or higher.```
+
+
+### (5) Height (Up/Down) Sensing Sensitivity: [0 ~ 10]
+
+This setting adjusts the sensitivity for up and down sensing on the weaving plane.<br>
+The default value is 5, which changes the strength of the up/down sensing.<br>
+```When performing delay time calibration, set this to 0.```
+
+
+### (6) Height (Up/Down) Sensing Start Cycle: [Left/Right Start Cycle +1 ~ 10]
+
+This setting determines the cycle at which up/down sensing will begin on the weaving plane.<br>
+```For stable operation, set it to 4 or higher.```
+
+
+### (7) Hight (Up/Down) Sensing Reference Current: [0 ~ 1000]
+
+This setting determines the reference current for up/down sensing. <br>
+The torch height during arc sensing welding wire tracking is based on this setting.<br>
+```When set to 0, the average value of the initial section current will be used as the reference. (If there is a tack weld at the start of the weld, be cautious as an unintended high initial current may be used as the reference.) ```
+
+
+### (8) Real-Time Gap Sensing Sensitivity: [0(disabled) ~ 10]
+
+This function automatically adjusts welding speed and weaving based on the gap. When not in use, set it to 0. <br>
+When enabled, this setting adjusts the sensitivity of the width variation. The value should be set according to bead quality and the degree of width variation.
+
+
+### (9) Real-Time Gap Sensing Resolution: [ ]  
+
+### (10) Real-Time Sensing Gap: [ ]  
+
+### (11) Real-Time Gap Sensing Speed: [ ]  
+
+# 8.3.3.2 Arc Sensing Condition(Advanced)
+
+
+In the third tab of the Weaving Condition Edit Screen, advanced settings can be configured.<br>
+
+```It is recommended to use the default values in this tab whenver possible.```
+
 
 <p align="center">
  <img src="../../_assets/8_3_3.png" width="70%"></img>
- <em><p align="center">그림 8.3.3. 아크센싱 조건-고급 대화상자</p></em>
+ <em><p align="center">Figure 8.3.3. Arc Sensing Condition(Advanced) Dialog Box</p></em>
 </p>
 
 
-각 항목별 설정 및 조작방법은 다음과 같습니다.
+The settings and operation methods for each item are as follows:
 
-### (1) 초당 최대 보정거리(좌우/상하): [0.1 ~ 20.0] mm  
-    1초 동안 최대로 추종할 수 있는 거리를 설정합니다.
+### (1) Maximum Tracking Speed: [0.1~ 20.0] mm/s
 
-### (2) 좌우/상하 궤적 이탈 제한: [0 ~ 200] mm 
-    좌우/상하 방향 아크센싱 추종거리 제한치를 설정합니다. 아크센싱에 의해서 설정된 제한 거리 이상으로 추종이 발생하는 경우 에러로 정지합니다.
+This setting defines the maximum left/rgiht/up/down distance (or speed) that can be tracked in 1 second.
 
-### (3) 계산 범위 [20 ~ 80] % <br>
-    좌우측 전류를 계산하기위한 범위를 설정합니다. (기본값 : 60%) <br>
-    ```위빙 진폭이 작아질 수록 이 값 또한 작게 설정하는 것이 유리합니다. (ex : 1mm 진폭일 경우 50%, 0.5mm 진폭일 경우 40% 권장)```
 
-### (4) 좌우 비대칭 센싱 비율: [-50 ~ 50] %  
-    비드의 좌우폭이 다를 때 이를 감안하여 센싱하기 위한 비대칭 센싱 비율을 설정합니다. <br>
-    +값은 토치 진행방향의 뒤에서 토치를 바라 보았을때 우측방향, - 값은 좌측방향 입니다.
+### (2) Tracking Limit Distance: [0 ~ 200] mm (0: Disabled)
 
-### (5) 비정상 데이터 처리방법: <에러, 경고, 무효>  
-    센싱 동작 중 ‘비정상 판별 마진’으로 계산된 정상 전류의 범위를 ‘비정상 판별 시간’이상 초과한 경우 처리하는 방법입니다.  
-- 에러: 로봇은 에러를 표시하고 정지합니다.
-- 경고: 로봇은 경고를 표시하고 계속 작업을 진행합니다.
-- 무효: 로봇은 그대로 작업을 계속 진행합니다.
+This setting defines the limit for the left/right/up/down arc sensing tracking distance.
+If tracking exceeds the limit set by the arc sensing, an error will occur and stop the operation.
 
-### (6) 비정상 판별 마진: [100 ~ 200] %  
-    전류 데이터에서 비정상으로 판단할 전류값 마진을 설정합니다. 기본값은 150% 입니다. 
-    아래 그림과 같이 한구간의 전류에 대해 Q1-1.5*IQR, Q3+1.5*IQR 범위를 기본으로 합니다.
 
-<p align="center">
- <img src="../../_assets/8_3_4.png" width="40%"></img>
- <em><p align="center">그림 8.3.4. 비정상 판별 마진</p></em>
-</p>
-<br>
+### (3) Calculation Range: [1 ~ 100] % (default: 60%)
 
-### (7) 비정상 판별 시간: [10 ~ 1000] ms  
-    비정상 판별 마진을 벗어난 전류 입력을 허용할 시간을 설정합니다. 이 시간을 초과하여 마진을 벗어나는 경우 처리방법에 따라 에러, 경고, 무시 등으로 로봇이 동작합니다.
+This setting defines the range for calculating the left/right current. <br>
+```As the weaving amplitude decreases, it is advantageous to set this value smaller. (e.g. for 1mm amplitude, set to 50%; for 0.5 mm amplitude, 40% is recommended.)```
 
-### (8) 하이브리드 모드 ```(용접선+전류차 타입)``` <br>
-    위빙 반주기마다 전류를 회귀할 것인지, 위빙 한주기마다 전류를 회귀할 것인지 설정합니다.
-    
-### (9) 전류 회귀 오차 허용값 ```(용접선+전류차 타입)``` <br>
-    회귀시 허용할 전류 오차값을 선정합니다. 위빙폭이 작거나 개선각이 작은경우 작은 값을 설정합니다. 기본값은 5A 입니다.
 
-### (10) 회귀시 데이터 샘플링 옵션 ```(용접선+전류차 타입)``` <br>
-    회귀시 샘플링 데이터 처리방법 : raw 값, 메디안, 평균값 
-</br>
+### (4) Asymmetric Sensing Ratio: [-50 ~ 50] %
+
+This setting defines the asymmetric sensing ratio when the left and right bead widths are different.<br>
+A positive value indicates the right direction when viewed from the back of the torch in the welding direction, and a negative value indicates the left direction.
 
 ---
 
-위빙 대화상자의 아크센싱 (지연시간 테이블 이득) 탭은 아래와 같습니다. <br>
-각 내용은 Data 지연 및 추종 계수를 나타내며 이 대화상자의 내용은 아크센싱 자동 캘리브레이션을 통해 설정할 수 있습니다.
+### (5) Abnormal Data Handling Method: <Error, Warning, Disable>
+
+This setting defines how to handle data when the normal current range, calculated using the "detection margin," exceeds the limit for the "detection time."
+
+- Error: The robot diplays an error and stops.
+- Warning: The robot displays a warning and continues the operation.
+- Disable: The robot continues the operation without any interruption.
+
+
+### (6) Detection Margin: [100 ~ 200] %
+
+This setting defines the margin for determining abnormal current values from the current data. The default value is 150 %.<br>
+As shown in the figure below, the range is based on 'Q1 - 1.5 * IQR' for the lower bound and 'Q3 + 1.5 * IQR' for the upper bound.
 
 
 <p align="center">
- <img src="../../_assets/8_3_5.png" width="70%"></img>
- <em><p align="center">그림 8.3.5. 아크센싱 조건-추종게인 대화상자</p></em>
+  <img src="../../_assets/8_3_4.png" width="40%"></img>
+  <em><p align="center">Figure 8.3.4. Abnormal Detection Margin</p></em>
 </p>
+<br>
+
+### (7) Detection Time: [10 ~ 1000] ms
+
+This setting defines the amount of time allowed for current input that exceeds the abnormal detection margin.<br>
+If the margin is exceeded for a period longer than this time, the robot will operate based on the selected handling method (error, warning, or disable).
+
+---
+
+### (8) Hybrid Mode ```(Welding Seam Estimation + Current Difference)``` <br>
+
+This setting determines whether the current will be regressed at the end of each weaving half-cycle or at the end of each full weaving cycle.
+
+
+### (9) Current Regression Error Tolerance ```(Welding Seam Estimation + Current Difference)``` <br>
+
+This setting defines the acceptable current error during regression. For smaller weaving widths or minor improvement angles, a smaller value should be selected. The default value is 5A.
+
+
+### (10) Data Sampling Option during Regression ```(Welding Seam Estimation + Current Difference)``` <br>
+
+This setting defines the method for processing sampled data during regression: Raw, Median, or Average.
+
+</br>
+# 8.3.3.3 Arc Sensing Calibration
+
+To use the arc sensing function, a calibration process must be completed first.  
+This process calculates the delay time to synchronize the weaving cycle and the current data cycle.
+
+{% hint style="info" %}
+  Arc sensing is dependent on welder settings, including welding mdoe, operation mode, Job/Prog number, and synergic code, and thus has a corresponding delay time.<br>
+  Up to 3 calibration data sets can be stored.<br>
+  Example: When the settings are Pulse, Synergic 185, Job 0 (disabled), the corresponding calibration information will be loaded and used during arc sensing.
+{% endhint %}
+
+### Calibration Process
 
 <br>
 
+#### Preparation: Prepare a flat specimen for bead-on-plate welding.
 
-# 8.3.12 아크센싱 캘리브레이션
+#### Step 1.  
 
-아크센싱 기능을 사용하기 위해 캘리브레이션 과정이 선행되어야 합니다. <br>
-이 과정은 위빙 주기와 전류 데이터의 주기를 맞추기 위해 지연시간을 계산합니다. 
+Enter the [**Property**] window of the weaving command and set the wall direction to vertical.
 
-{% hint style="info" %}
-아크센싱은 용접기 설정항목인 용접모드, 동작모드, Job/Pro no, 시너직코드에 종속되어 지연시간을 갖고 있습니다.<br>
-캘리브레이션 정보는 최대 3개까지 저장해 놓을 수 있습니다.<br>
-예시 : 펄스, 시너직 185번, 잡 0 (무효) 일 경우 아크센싱시 해당 캘리브레이션 정보를 로딩하여 사용합니다. 
-{% endhint %}
+#### Step 2.  
 
-### 캘리브레이션 과정
+Enter the Arc Sensing (General) in the property window of the weaving command, set the type to "Welding Seam Estimation & Current Difference", and set both the left/right and up/down sensitivities to 0.  
 
-#### 준비사항 : bead on plate 용접을 위해 평평한 시편을 하나 준비하십시오.
 
-#### Step 1. 
-weaving 명령어의 [**속성**]창에 진입하여 벽방향을 vertical로 설정하십시오.
+<p align="center">
+  <img src="../../_assets/8_3_5.png" width="70%"></img>
+  <em><p align="center">Figure 8.3.5. Arc Sensing Calibration</p></em>
+</p>
+<br>
 
-#### Step 2. 
-weaving 명령어의 속성창의 아크센싱(일반)탭에 진입하여 타입을 "용접선 추정 & 전류차" 로 설정한 후 좌우/상하 민감도를 모두 0으로 설정하십시오.
+
+#### Step 3. 
+
+As shown in the figure above, set the entry step to approach from the opposite direction of the imaginary wall.
+Teach the starting point and end point with an approximate gap to 60 cm. <br>
+During this process, ensure that the torch's working angle(Roll angle) is maintained at 45 degrees.
+
+#### Step 4.  
+
+Perform the actual arc welding in automatic mode.  
+
+#### Step 5.  
+
+Navigate to the delay time table tab in the property window of the weaving command. <br>
+Click on the "Auto Calib" option at the bottom left to check the currently calibrated delay time.
+
+#### Step 6.  
+
+Enter the corresponding value into the field for the current weaving frequency (the frequency applied during calibrations).
+
+#### Step 7.  
+
+Repeat Steps 2 through 5 for frequencies ranging from 0.5 Hz ~ 3.0 Hz.  
+
+<br>
+
+After completing this process, you can check the arc sensing (delay table tracking gain) results on the forth tab of the weaving condition editing screen.
+
 
 <p align="center">
  <img src="../../_assets/8_3_6.png" width="70%"></img>
- <em><p align="center">그림 8.3.6. 아크센싱 캘리브레이션</p></em>
+ <em><p align="center">Figure 8.3.6. Arc Sensing Condition Tab(Tracking gain) Dialog Box</p></em>
 </p>
 <br>
 
-#### Step 3. 
-위 그림과 같이 진입스텝을 가상의 벽 반대방향에서 진입하도록 만들고 시작점과 끝점을 60cm정도 간격을 두고 티칭하십시오. <br>
-이때 토치 작업각(Roll 각도)을 45 degree 를 유지하십시오.
-
-#### Step 4.
-자동모드로 실제 아크용접을 수행합니다.
-
-#### Step 5.
-weaving 명령어의 속성창에서 지연시간테이블 탭에 진입하십시오. <br>
-좌측하단의 Auto calib 항목을 클릭하면 현재 켈리브레이션된 지연시간을 확인할 수 있습니다.
-
-#### Step 6. 
-해당 값을 현재 위빙 주파수 (캘리브레이션 시 weaving의 cnd에 적용한 위빙 주파수)의 항목에 기입하십시오.
-
-#### Step 7. 
-0.5Hz~3.0Hz 까지 Step 2 ~ Step 5 단계를 반복합니다.
 
 {% hint style="info" %}
-0.5Hz~3.0Hz까지 위 용접을 모두 수행한 후 weaving 명령어의 속성창에서 지연시간 테이블 탭의 좌측하단의 Auto calib 항목에 진입하여 Apply하면 모든항목을 일괄로 적용할 수 있습니다.
+  Once all weaving operations from from 0.5 Hz to 3.0 Hz have been performed, navigate to the "Auto Calib" option at the bottom left of the delay time table tab in the weaving command property window, and click "Apply" to apply all settings in bulk.
 {% endhint %}
 
-해당 캘리브레이션 과정이 끝나면 상하/좌우 센싱 민감도를 5로 모두 변경하여 아크센싱 기능을 사용할 수 있습니다.
-# 8.4 높이센싱(Height Sensing) 기능
+Once the calibration process is completed, change the sensing sensitivity for both vertical/horizontal directions to 5 to enable the arc sensing function.
 
-본 기능은 TIG 용접과 같이 로봇의 툴이 작업물에서 일정한 거리를 유지해야 하는 경우에 사용하는 기능입니다. TIG 용접의 경우에는 높이가 Arc길이와 비례하므로 AVC(Arc Voltage Control)기능이라고 합니다. 작업물과의 거리는 센서에 의한 아날로그 전압입력, 용접기에서 감지하는 Arc 길이 보정용 파라미터, 용접 전류나 전압 값에 의해 조정됩니다.
+# 8.3.4 Setting Weaving and Arc Sensing Conditions Using Commands
 
-본 기능의 사용을 위해서는 센싱 기능을 위한 데이터 입력 설정을 ‘유효’로 선택해야 합니다.
-센싱 기능을 위한 데이터 입력 설정의 세부 내용은 ‘1.3 Arc 용접 응용 조건 설정’을 참고하여 주십시오.
+### (1) Necessity of Functionality
 
-센싱 기능용 입력데이터의 설정이 완료된 후에는 하기와 같은 절차를 통하여 높이센싱 기능을 사용할 수 있습니다.
+Weaving and arc sensing conditions cannot be automatically adjusted during operation. <br>
+Therefore, the conditions can be modified using commands, and the changes will only be effective within the specific weaving section.  
 
-(1)	명령어 입력
 
-높이센싱 시작을 위해서 heightsen on, cnd=1 명령을 사용합니다. 명령어에는 뒤에는 조건번호를 입력합니다. 높이센싱 조건은 총 8개가 있습니다.
-높이센싱 종료를 위해서 heightsen off 명령을 사용합니다. 종료 명령어는 특별히 인수를 필요로 하지 않습니다.
+### (2) Method of Using Commands  
 
-높이센싱용 명령어가 입력된 작업프로그램의 예시는 다음과 같습니다.
+To insert the command, enter [**cmd input > var_io > assignment**] while in manual mode. Then, move the cursor to the left variable and select [**System Variables > arcweld > _weaving.`parameter`**], where you can input the desired value.  <br>
+
+The entered command will appear in the following format:  
+```e.g. _weaving.frequency=2.0```  
+
+
+- Example)
+```py
+    weaving on, cnd=1	                # Weaving Command (cmd)
+    arcon cnd=1
+    move L,S=5mm/s,accu=1,tool=2
+    _weaving.right_distance = 4	        # Set the wall direction dist using a cmd
+    _weaving.left_distance = 3	        # Set the wall direction dist using a cmd
+    MOVE L,S=5mm/s,A=1,T=2	            # parameter will be modified starting from this section
+```
+
+The input values for each command are restricted within the range of condition settings defined in the condition file.  
+For parameters that are not explicitly specified by the command, the conditions set in the weaving command will be used.  
+
+The applicability of the settings for each element of _weaving to the functionality is as follows:  
+
+<br>
+
+| Variable Name | Immediately after Weaving Cmd | Weaving without Arc sensing | Weaving with Arc sensing | Continuous Change of Welding Conditions |
+|-------|-------|-------|-------|-------|
+| weave | O | O | O | O |
+| frequency | O | O | O | O |
+| left_distance | O | O | O | O |
+| right_distance | O | O | O | O |
+| angle | O | O | O | O |
+| wall_direction | O | O | O | O |
+| offset_angle | O | O | O | O |
+| forward_angle | O | O | O | O |
+| boundary_limit | O | O | O | O |
+| segment_time_1 | O | O | O | O |
+| segment_delay_1 | O | O | O | O |
+| height_sensing_mode | O | - | O | O |
+| side_sensing_sensitivity | O | - | O | O |
+| height_sensing_sensitivity | O | - | O | O |
+| BaseCur | O | - | O | O |
+| StickOut | O | - | O | O |
+| asymetric_sensing_ratio | O | - | O | O |
+
+
+<!-- ### (3) 위빙 파라미터 명령어 종류 및 내용은 다음 링크를 참고해주세요.
+
+[로봇언어 HRScript_weaving문](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/10-etc/3-sysvar/_weaving)   -->
+
+
+
+<!-- 
+(2)에서 설명한 각 파라미터 종류와 설명은 
+
+weave: 위빙 패턴
+
+frequency: 위빙 주파수
+
+left_distance: 벽방향 거리
+
+right_distance: 타방향 거리
+
+angle: 기본패턴의 각도
+
+wall_direction: 기본패턴의 벽방향
+
+forward_angle: 진행각도
+
+boundary_limit: 경계제한 사용 여부
+
+segment_time_1: 이동시간 사용 시 각 구간의 시간
+
+Dwesegment_delay_1: 이동시간 사용 시 위빙만 정지하는 시간
+
+height_sensing_mode: 아크 센싱 중 상하센싱 실행방법
+
+side_sensing_sensitivity: 좌우방향 아크 센싱 민감도
+
+height_sensing_sensitivity: 상하방향 아크 센싱 민감도
+
+BaseCur: 상하센싱 기준전류
+
+이 값을 설정하여 토치와 모재간 거리를 설정할 수 있습니다. 
+토치와 모재의 거리를 더 멀리 하려면 이 값을 낮추십시오. 
+반대로 토치와 모재를 가까이 하려면 이 값을 높이십시오.
+
+StickOut: 아크 센싱 중 상하방향으로 토치를 이동시키기 위한 값. 입력된 mm만큼 토치 높이가 변경됩니다. +값 입력 시 토치와 모재간 거리가 멀어지고 –값 입력 시 토치가 모재와 가까워 집니다.
+
+asymetric_sensing_ratio: 좌우 비대칭 센싱 비율
+
+ -->
+# 8.3.5 Arc Sensing Monitoring
+
+### (1) Monitoring Execution
+
+By accessing [**pane layout > select > arc sensing**], the Arc Sensing Monitoring window will be activated.
+This feature is only available when the Arc Sensing license is valid.
+
+
+### (2)	Explanation of Monitoring Items
+
+<p align="center">
+ <img src="../../_assets/8_3_7.png" width="50%"></img>
+ <em><p align="center">Figure 8.3.7 Arc Sensing Monitoring</p></em>
+</p>
+
+- Left/Right Tracking: Displays the left and right distance to be corrected, calculated based on the tracking speed, distance, and current diffrential in the left-right direction by sensing.
+
+- Up/Down Tracking: Displays the up and down distance to be corrected, calculated based on the tracking speed, distance, and welding seam in the up-down direction by sensing.
+
+- XYZ Tracking: Displays the distance tracked so far compared to the original trajectory, in terms of the Base coordinate system's X, Y, and Z directions.
+
+
+<!-- 센싱 데이터
+
+- BC: 상하방향 센싱 기준 전류
+- CC: 상하방향 센싱 용 현재 구간의 중앙 부분 전류.
+- LR: 현재 구간의 위빙 끝 영역 전류
+- WC: 용접기의 용접 전류
+- Mode: 현재 적용 중인 지연시간, 모드 번호
+
+상하방향 기준전류는 사용자가 입력하거나 용접 시작 영역에서 중앙 부분 전류를 일정 구간 동안 평균한 값으로 설정합니다.
+상하방향의 센싱은 기준전류와 현재 측정 전류를 차이를 이용하여 보정할 상하방향 거리를 계산합니다. 따라서 기준 전류를 높이면 토치와 모재가 가까워지고 기준 전류를 낮추면 토치와 모재가 멀어집니다.
+
+위빙 데이터: 현재 위빙폭, 위빙 주파수, 지연시간, 모드 번호를 표시합니다.
+
+멀티패스: 저장된 멀티패스 데이터의 현재/전체 카운트, 시프트 거리, 각도를 표시합니다. -->
+
+# 8.3.6 Multi-pass Overview
+
+The multi-pass welding feature is used when the required weld length in thick plate arc welding is too wide to be completed in a single pass, or when the volume to be filled by welding is too large, requiring multiple welding passes.  
+
+Due to the inherent characteristics of arc sensing, the sensing may be unstable except for the root pass, which is the first layer.
+Therefore, only the root pass is tracked using arc sensing.
+The trajectory of this pass is tehn saved, and the stored trajectory is shifted to create passes for the second layer and beyond.  
+
+Since the position of the multi-pass work program is the same as that of the root pass trajectory, it is easy to perform multi-pass welding by simply copying the root pass work program and inserting the multi-pass command.
+
+
+<p align="center">
+  <img src="../../_assets/8_3_8.png" width="60%"></img>
+  <em><p align="center">Figure 8.3.8 Root Pass Arc sensing (left) and Multi-pass welding for 2-3 layers</p></em>
+</p>
+
+<p align="center">
+  <img src="../../_assets/8_3_9.png" width="60%"></img>
+  <em><p align="center">Figure 8.3.9 Actual Multi-Pass Welding</p></em>
+</p>
+
+When creating multi-pass beads in a stacked, inclined configuration as shown in Figure 2 above, welding can be performed by modifying only the start and end points of the weld and slightly shifting them.  
+This will result in a stacked configuration as shown below.
+
+
+<p align="center">
+  <img src="../../_assets/8_3_10.png" width="60%"></img>
+  <em><p align="center">Figure 8.3.10 Multi-pass Stacked Shape with Inclination</p></em>
+</p># 8.3.7 Multi-pass Command
+
+
+### (1) Command
+
+The sensing trajectory can be saved and loaded using the multipass command. 
+This command can be used in three different forms:
+<br>
+
+```py
+    multipass save, trj=<multi-pass trajectory number>, period=<trajectory saving interval distance>
+    multipass load, trj=<multi-pass trajectory number>, side=<left-right Shift distance>, height=<up-down Shift distance>, reverse=<multi-pass playback direction>, tas=<torch forward/backward angle shift>, was=<torch left/right angle shift>
+    multipass off
+```
+
+### (2) Multi-pass Parameters
+
+For detailed information on the multi-pass command parameters, please refer to the following link: <br>
+[2.11 multipass](../../2_Command/11_multipass.md)
+
+<br>
+
+This section will explain only the following two items:  
+
+
+- Left-Right/Up-Down Shift
+
+This sets the distance by which the trajectory is shifted from the original path during multipass reproduction.
+Since the torch weaving is perpendicular to the tool, each shift is set as follows:
+the left/right direction becomes the weaving plane, and the up/down direction becomes the plane perpendicular to the weaving plane.
+
+<p align="center">
+  <img src="../../_assets/8_3_11.png" width="60%"></img>
+  <em><p align="center">Figure 8.3.11 Multipass Shift Direction</p></em>
+</p>
+
+
+- Angle Shift: TAS, WAS  
+
+When performing multi-pass welding, the torch must be tilted for quality control. This setting is used to define the required tilt.
+The concept of angles for each item is illusatrated in the following figures:  
+
+<p align="center">
+  <img src="../../_assets/8_3_12.png" width="60%"></img>
+  <em><p align="center">Figure 8.3.12 Multipass Angle Shift Concept</p></em>
+</p>
+
+
+<!-- MULTIPASS 기능은 아크센싱 수행 시 정해진 거리마다 지정된 궤적 번호에 카운트, 위치, 보정량을 기록합니다. 이 궤적은 여러 세트를 저장할 수 있습니다. 작업물에 따라 변형을 최소화 하기 위해 2개 이상의 용접구간을 번갈아 용접하는 경우 다양한 번호의 궤적을 사용할 수 있습니다.
+
+멀티 패스를 위한 데이터 저장 시작 명령어는 아래와 같습니다.
+
+```multipass save, trj=[궤적 번호], period=[샘플링 거리]```
+- 궤적 번호: 아크센싱의 보정량, 위치를 저장할 궤적 번호입니다. [1~50]
+- 샘플링 거리: 저장할 궤적의 간격 거리입니다. [Default는 10mm. 범위: 5~100mm]
+- 일반적으로 default 설정을 사용하여 궤적을 저장하십시오.
+- 용접 구간이 길어 저장 궤적 범위를 초과하는 경우 간격을 늘리십시오.
+- 용접 구간의 굴곡이 심한 경우 이 거리를 짧게 설정하십시오.
+
+### (3) 멀티패스 궤적 재생
+
+멀티 패스를 위해 저장된 데이터 로딩 및 재생 시작 명령어는 아래와 같습니다.
+
+```multipass load, trj=[궤적 번호], side=[좌우 시프트], height=[상하 시프트], reverse= [재생 방향], tas=[TAS 각도], was=[WAS 각도]```
+- **궤적 번호**: 로딩할 궤적 번호. 1~50번
+- **좌우/상하 시프트**: 원래 궤적에서 시프트 할 거리. [Default: 0, 범위: -20~20mm]
+- **재생 방향**: 멀티 패스 재현을 정방향으로 할 것인지 역방향으로 할 것인지 설정
+[0: default정방향, 1: 역방향]
+- **TAS(Travel Angle Shift)**: 전후진 방향으로 기울어 지는 시프트. [-20~20도]
+- **WAS(Work Angle Shift)**: 토치가 양쪽 면 방향으로 기울어지는 시프트. [-20~20도]
+
+### (4) 멀티패스 재생 방향
+아크센싱 멀티패스는 저장된 궤적 재생 방향을 2가지로 사용 가능합니다. 재생 방향의 결정은 작업물의 변형 정도, 용접 비드 형상, 사이클 타임 등을 고려하여 현장 상황에 맞게 선택합니다.
+
+#### 정방향 멀티패스
+다음 pass 진행 방향: 아크센싱을 수행한 저장 궤적의 방향과 동일
+작업 프로그램은 원래 초층 용접의 궤적을 그대로 사용
+
+#### 역방향 멀티패스
+다음 pass 진행 방향: 아크센싱을 수행한 저장 궤적의 방향과 반대
+작업 프로그램은 초층 용접의 궤적을 스텝 순서를 역순으로 반전하여 사용. 이 경우 위치 지정에 혼동이 발생할 수 있으므로 반드시 궤적을 확인해야 합니다. -->
+
+
+<!-- ### (5) 좌우/상하 시프트
+멀티패스 재현 시 원래 궤적에서 시프트 하는 거리를 설정합니다. 토치의 위빙이 툴과 직각이므로 각 시프트는 아래와 같이 설정됩니다. 즉, 좌우 방향은 위빙면이 되고 상하 방향은 위빙면과 수직인 면이 됩니다.
+
+<p align="center">
+ <img src="../_assets/3_4.png" width="60%"></img>
+ <em><p align="center">그림 3.4 멀티패스 시프트 방향</p></em>
+</p>
+
+### (6) 각도 시프트: TAS, WAS  
+멀티패스 용접을 수행할 때 품질을 위해 토치를 기울여야 하는 경우 설정합니다.
+각 항목의 각도 개념은 하기 그림과 같습니다.
+
+<p align="center">
+ <img src="../_assets/3_5.png" width="60%"></img>
+ <em><p align="center">그림 3.5 멀티패스 각도 시프트 개념</p></em>
+</p> -->
+# 8.3.9 터치센싱을 이용한 위빙 폭 자동설정 아크센싱 예시
+
+
+하기와 같은 두 작업물에 모두 적용할 수 있는 하나의 작업 프로그램을 생성합니다.
+
+<p align="center">
+ <img src="../_assets/4_2.png" width="60%"></img>
+ <em><p align="center">그림 4.2 Butt 터치센싱, 아크센싱 작업물</p></em>
+</p>
+
+작업 환경은 다음과 같이 가정합니다.
+
+두 작업물 사이를 용접하는 공정.
+180도 평면 위빙
+용접 진행방향은 X+ 방향. 작업물 터치센싱은 Y방향으로 좌우 수행
+아크센싱 파라미터 설정은 기존에 완료된 것으로 가정
+4.0mm gap인 경우 용접 속도는 7.0mm/sec
+8.0mm gap인 경우 용접 속도는 3.5mm/sec
+
+작업 순서는 다음과 같습니다.
+
+1)	터치 센싱 명령어를 이용하여 종료점 Butt 부분의 용접 중심 위치, gap 거리를 측정
+2)	터치 센싱 명령어를 이용하여 시작점 Butt 부분의 용접 중심 위치, gap 거리를 측정
+3)	gap_var 값이 허용 값 이내인지 판단. 2.0mm ~ 10.0mm 범위를 벗어나는 경우 정지
+4)	측정 된 거리의 절반을 각각 벽방향(좌측면), 타방향(우측면) 거리로 지정
+5)	용접 속도는 4.0mm/sec, 8.0mm/sec 시 속도를 이용하여 보간 계산. Gap이 4.0mm보다 작으면 7.0mm/sec, 8mm를 초과하면 4.0mm/sec 고정 속도 적용
+6)	계산된 값을 이용하여 위빙 폭, 용접진행속도를 자동 입력하여 작업 진행
+7)	작업 진행이 완료된 후 원래 시작 위치로 복귀
+
+<p align="center">
+ <img src="../_assets/4_3.png" width="60%"></img>
+ <em><p align="center">그림 4.3 Butt 터치센싱과 아크센싱</p></em>
+</p>
+
+예시프로그램은 다음과 같습니다.
+
+~~~~~~~아크센싱 프로그램: 0002.JOB~~~~~~~~~~~~~~~ 
+     'Butt 아크센싱 프로그램
+     '1자리: 시작조건, 10자리: 종료조건
+S1   move P,spd=60%,accu=3,tool=1  			' 1: 동작 시작점
+S2   move L,spd=30%,accu=3,tool=1  			' 2: 종료점 터치센싱 위치
+     var p10=cpo()
+     var p1=cpo()
+     var gap_var1=0
+     var gap_var11=0
+     touchsen cnd=2,crd="tool",dir="+ty",lift_up=5,pose=p10,gap=gap_var11		' 3: 종료점 터치센싱. P10에 위치 저장
+S3   move L,spd=30%,accu=3,tool=1  			' 4: 시작점 터치센싱 위치
+     touchsen cnd=3,crd="+ty",lift_up=5,pose=p1,gap=gap_var1		' 5: 시작점 터치센싱. P1에 위치 저장
+     'Calc. weld speed, width according to Gap 1!	갭에 따른 속도 설정
+     var V3=0
+     IF gap_var1<2.0 OR gap_var1>10.0 THEN		' 허용 범위 초과
+     GOTO *Error
+     ELSEIF gap_var1<4.0 THEN			' 4mm 이하이면 7mm/sec로 고정
+     V3=7.0 'Weld speed at start
+     ELSEIF gap_var1>8.0 THEN			' 8mm 이상이면 4mm/sec로 고정
+     V3=4.0 'Weld speed at start
+     ELSE				'4~8mm 범위내인 경우 선형 보간으로 속도 계산
+     V3=(7-3.5)/(4-8)*gap_var1+10.5 	'Linear interpolated weld speed at start
+     ENDIF
+     var V4=gap_var1/2.0 'left side width	'Gap 의 절반을 좌측 위빙 폭으로 지정
+     var V5=gap_var1/2.0 'right side width	'Gap 의 절반을 우측 위빙 폭으로 지정
+     '--------------------------------------------------------
+     'Calc. weld speed, width according to Gap gap_var11
+     var V13=0
+     IF gap_var11<2.0 OR gap_var11>10.0 THEN		' 허용 범위 초과
+     GOTO *Error
+     ELSEIF gap_var11<4.0 THEN			' 4mm 이하이면 7mm/sec로 고정
+     V13=7.0 'Weld speed at start
+     ELSEIF gap_var11>8.0 THEN			' 8mm 이상이면 4mm/sec로 고정
+     V13=4.0 'Weld speed at start
+     ELSE				'4~8mm 범위내인 경우 선형 보간으로 속도 계산
+     V13=(7-3.5)/(4-8)*gap_var11+10.5 	' Linear interpolated weld speed at end
+     ENDIF
+     var V14=gap_var11/2.0 'left side width
+     var V15=gap_var11/2.0 'right side width
+     '---------------------------------------------------------
+S4   move L,1,S=20%,A=3,T=1		' 6: 용접 시작 점으로 이동
+     weaving on, cnd=2			' 7: 위빙, 아크센싱 시작
+     arcon cnd=2			' 8: 용접 시작
+     arc_cond L,spd=V3,ld=V4,rd=V5,freq=2 	' 9: Start of weld parameter continuous change
+S5   move L,p10,spd=60cm/min,accu=3,tool=1	'10: 용접 종료 점으로 이동
+     arc_cond L,spd=V13,ld=V14,rd=V15,freq=2 '11: End of weld parameter continuous change
+     arcoff				'12: 용접 종료
+     weaving off				'13: 위빙, 아크센싱 종료
+S6   move P,spd=60%,accu=3,tool=1  		'14: 동작 종료점
+     END
+     *Error				'15: 갭의 범위 이탈 시 퇴피 위치
+     DO200=1			'16: 에러 표시를 위해 신호 출력
+     STOP				'17: 로봇 정지
+     END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 8.3.10 멀티패스 용접 예시
+
+작업 프로그래밍은 다음과 같이 작성합니다.
+이 작업은 1pass 용접 후 2pass, 3pass를 좌/우 3mm, 높이 3mm로 시프트 하여 용접하는 작업프로그램입니다.
+
+
+```py
+     'Cylinder AS and MP Program
+S1   MOVE P,S=60%,A=3,T=1  
+     'Find 4 Points by touch sensing
+S2   MOVE L,S=30%,A=3,T=1  			' 1: 원 궤적 첫 번째 점 탐색 위치
+     TOUCHSEN TSC#=4,TF,TD,0,P1,V1!		' 2: 원 궤적 첫 번째 위치 터치센싱
+S3   MOVE L,S=30%,A=3,T=1  			' 3: 원 궤적 두 번째 점 탐색 위치
+     TOUCHSEN TSC#=4,TF,TD,0,P2,V1! 		' 4: 원 궤적 두 번째 위치 터치센싱
+S4   MOVE L,S=30%,A=3,T=1  			' 5: 원 궤적 세 번째 점 탐색 위치
+     TOUCHSEN TSC#=4,TF,TD,0,P3,V1! 		' 6: 원 궤적 세 번째 위치 터치센싱
+S5   MOVE L,S=30%,A=3,T=1  			' 7: 원 궤적 네 번째 점 탐색 위치
+     TOUCHSEN TSC#=4,TF,TD,0,P4,V1! 		' 8: 원 궤적 네 번째 위치 터치센싱
+     '1st pass					첫 멀티패스 궤적을 아크센싱으로 저장
+S6   MOVE L,S=60%,A=3,T=1  
+S7   MOVE L,P1,S=50%,A=3,T=1
+     WEAVON WEV#=3
+     MULTIPASS SAVE,TrjNo=1,SampDist=10
+     ARCON ASF#=3
+S8   MOVE C,P2,S=60cm/min,A=3,T=1
+S9   MOVE C,P3,S=60cm/min,A=3,T=1
+S10  MOVE C,P4,S=60cm/min,A=3,T=1
+S11  MOVE C,P1,S=60cm/min,A=3,T=1
+     ARCOF ASF#
+     WEAVOF
+     MULTIPASS OFF
+S12  MOVE P,S=60%,A=3,T=1  
+     '2nd pass				두 번째 멀티패스는 수평 우측 3mm, 수직 3mm 시프트
+     MULTIPASS LOAD,TrjNo=1,Side=3,Updown=3,Reverse=0,TAS=0,WAS=0
+S13  MOVE L,P1,S=20%,A=3,T=1
+     WEAVON WEV#=4
+     ARCON ASF#=3
+S14  MOVE C,P2,S=60cm/min,A=3,T=1
+S15  MOVE C,P3,S=60cm/min,A=3,T=1
+S16  MOVE C,P4,S=60cm/min,A=3,T=1
+S17  MOVE C,P1,S=60cm/min,A=3,T=1
+     ARCOF ASF#
+     WEAVOF
+     MULTIPASS OFF
+     '3rd pass				세 번째 멀티패스는 수평 우측 -3mm, 수직 3mm 시프트
+S18  MOVE P,S=60%,A=3,T=1  
+     MULTIPASS LOAD,TrjNo=1,Side=-3,Updown=3,Reverse=0,TAS=0,WAS=0
+S19  MOVE L,P1,S=20%,A=3,T=1
+     WEAVON WEV#=4
+     ARCON ASF#=3
+S20  MOVE C,P2,S=60cm/min,A=3,T=1
+S21  MOVE C,P3,S=60cm/min,A=3,T=1
+S22  MOVE C,P4,S=60cm/min,A=3,T=1
+S23  MOVE C,P1,S=60cm/min,A=3,T=1
+     ARCOF ASF#
+     WEAVOF
+     MULTIPASS OFF
+S24  MOVE P,S=60%,A=3,T=1  
+     END
+```
+
+# 8.4 Height Sensing
+
+
+This function is used in cases where the robot tool needs to maintain a constant distance from the workpiece, such as TIG welding. In TIG welding, the height is proportional to the arc length, which is why this function is called Arc Voltage Control(AVC). The distance from the workpiece is adjusted by the analog voltage input from the sensor, a correction parameter for the Arc length detected by the welder, and the welding current or voltage values.
+
+<!-- 본 기능의 사용을 위해서는 센싱 기능을 위한 데이터 입력 설정을 ‘유효’로 선택해야 합니다.
+센싱 기능을 위한 데이터 입력 설정의 세부 내용은 ‘1.3 Arc 용접 응용 조건 설정’을 참고하여 주십시오.  -- ???? -->
+
+Once the setup for the sensing function input data is complete, the height sensing function can be used through the following procedure.
+
+### (1) Command
+
+To start height sensing, use the command `height on, cnd=1`.
+The command is followed by the condition number. There are a total of 8 height sensing conditions.
+To stop height sensing, use the command `height off`.
+The stop command does not require any additional arguments.
+
+An example of a job program with height sensing commands is as follows:
 
 ```python
     S1   move L,spd=100%,accu=1,tool=0
     S2   move L,spd=20%,accu=1,tool=0
     S3   move L,spd=100mm/s,accu=1,tool=0
-         heightsen on, cnd=1		  # 높이센싱 시작
-         arcon cnd=2		       # Arc 용접 시작
+         heightsen on, cnd=1		  # Start height sensing
+         arcon cnd=2		       # Start Arc welding
     S4   move L,spd=10mm/s,accu=1,tool=0
-         arcoff			       # Arc 용접 종료
-         heigghtsen off			  # 높이센싱 종료
+         arcoff			       # End Arc welding
+         heigghtsen off			  # End height sensing
     S5   move L,spd=20%,accu=1,tool=0
          END 
 ```
 
-(2)	높이센싱기능 동작순서
+### (2) Height Sensing Function Operation Sequence
 
-높이센싱은 명령어 실행 후 ```arcon``` 명령어가 실행되면 동작하기 시작합니다. 일반적으로 용접 초기에는 전류, 전압이 안정화되지 않은 상태이므로 안정화 될 때까지는 입력데이터를 무시합니다. 이후 입력데이터가 안정화되면 기준데이터 설정방식에 따라 평균을 계산합니다. 사용자가 기준데이터를 입력하는 방식인 경우는 바로 높이센싱을 수행하게 됩니다.
+Height sensing begins after the ```arcon``` command is executed. Since the current and voltage are typically unstable at the start of welding, the input data is ignored until they stabilize.
+Once the input data stabilizes, the average is calculated based on the method of setting the reference data. If the user manually enters the reference data, height sensing is performed immediately.  
 
- 
-높이센싱의 동작 순서는 다음과 같습니다.
+The opration sequence of height sensing is as follows:
+
 
  
 <p align="center">
  <img src="../../_assets/8_4_1.png" width="40%"></img>
- <em><p align="center">그림 8.4.1. 높이센싱 기능 동작 순서</p></em>
+ <em><p align="center">Figure 8.4.1. Height Sensing Function Operation Sequence</p></em>
 </p>
 
-# 8.4.1 높이센싱 조건
+# 8.4.1 Height Sensing Condition
 
-```heightsen on,cnd= ``` 명령어에서 [**속성**] 키를 눌러 『높이센싱 조건』설정화면으로 진입합니다. 조건설정 화면은 아래 그림과 같습니다.
 
+Press the **[Property]** key in the `heightsen` command to access the "Heigth Sensing Condition" settings screen. The condition settings screen is shown below.
  
 <p align="center">
  <img src="../../_assets/8_4_2.png" width="70%"></img>
- <em><p align="center">그림 8.4.2. 높이센싱 조건 대화상자</p></em>
+ <em><p align="center">Figure 8.4.2. Height Sensing Condition Dialog Box</p></em>
 </p>
 
 ---
 
-각 항목별 설정 및 조작방법은 다음과 같습니다.
+Each item's settings and operations are as follows:
 
-### (1)	조건번호: [1 ~ 8]  
-    높이센싱 조건번호를 설정합니다.
+### (1) Condition Number: [1 ~ 8]
 
-### (2)	높이 센싱 용 입력데이터 종류  
-    입력데이터 종류를 표시합니다. GMAW 는 용접 전류를 TIG 용접은 용접 전압을 사용합니다.
+Set the height sensing condition number.
 
-### (3)	기준 데이터 설정 방법: <평균 입력 데이터, 사용자 입력 데이터>  
-    기준 데이터를 설정하는 방법을 선택합니다.
--	평균 입력 데이터: 센싱 초반 기준데이터 평균값을 기준으로 설정
--	사용자 입력데이터: 사용자가 기준데이터를 직접 입력
 
-### (4)	입력 데이터 무시 시간: [0.0 ~ 5.0]  
-    용접 초기의 불안정한 상태에서 입력 신호를 무시하는 시간입니다. ‘평균 입력 데이터’로 기준데이터를 설정하는 경우 이 시간 지정된 시간동안 평균값으로 기준값을 계산합니다. ‘사용자 입력 데이터’를 기준으로 사용하는 경우 바로 높이센싱이 동작합니다.
+### (2) Type of Input Data
 
-### (5)	입력 데이터 평균시간: [0.5 ~ 10.0]  
-    센싱 기준 데이터를 계산하기 위해 입력 데이터 평균을 계산하는 시간을 설정합니다. 기준 데이터 설정 방법에서 ‘평균 입력 데이터’를 선택하는 경우 표시됩니다. 정확한 기준 높이 산정이 안 되어 있는 경우
+Displays the type of input data. For GMAW, welding current is used, while for TIG welding, welding voltage is used.
 
-### (6)	입력 데이터 무시 시간: [0.0 ~ 5.0]  
-    용접 초기의 불안정한 상태에서 입력 신호를 무시하는 시간입니다. ‘평균 입력 데이터’로 기준데이터를 설정하는 경우 이 항목이 표시됩니다. 이 시간 지정된 시간동안 평균값으로 기준값을 계산합니다. 
 
-### (7)	기준 데이터 설정: [-500.0 ~ 500.0]  
-    높이센싱의 기준값을 사용자가 직접 입력하는 항목입니다. ‘사용자 입력 데이터’로 기준데이터를 설정하는 경우 이 항목이 표시됩니다.
+### (3) Reference Data Setting: <Average Input Data, User Input Data>
 
-### (8)	높이 센싱 계수: [-100.0 ~ 100.0]  
-    입력된 데이터 차이에 대비되는 거리 계수입니다. 이 값이 작아지면 입력 데이터에 따른 추종량이 작아져서 부드럽게 추종합니다. 이 값이 커지면 추종이 빨라지지만 궤적 상 상하 진동이 발생할 수 있습니다.
+Choose the method for setting the reference data.
+- Average Input Data : Set the reference data based on the average value of the sensing initial reference data.
+- User Input Data : Allow the user to directly enter the reference data.
 
-### (9)	센싱에 의한 추종속도 제한값: [0.1 ~ 10.0]  
-    1초동안 센싱으로 추종하는 최대값을 설정합니다. 이 값이 작아지면 추종이 부드러워지며 커지면 추종이 빨라집니다.
 
-### (10) 노이즈 민감도  
-    입력 데이터의 노이즈에 대한 민감도를 설정합니다. 비활성화 되어 있는 경우 지원하지 않는 버전입니다.
+### (4) Input Data Ignore Time: [0.0 ~ 5.0]
 
-### (11) 추종오차 적분 계수: [0.0 ~ 10.0]
-    높이 센싱의 추종 성능 중 지속적인 에러값에 대한 보정량을 설정합니다. 0보다 큰 값이 설정되면 추종 성능이 향상되지만 지나치게 커지면 궤적 진동이 발생합니다. 아주 작은 값부터 적용하여 현장에 적정한 값을 선정하십시오.
+The time to ignore signals during the unstable initial welding state.
+If setting reference data with "Average Input Data", this time is used to calculate the reference value using the average over the specified time.
+If using "User Input data", height sensing begins immediately.
 
+
+### (5) Input Data Average Time: [0.5 ~ 10.0]
+
+Set the time to average the input data to calculate the sensing reference data.
+This item appears when "Average Input Data" is selected for the reference data setting method.
+(if the accurate reference height is not yet determined)
+
+
+### (6) Reference Data Setting: [-500.0 ~ 500.0]
+
+This is the item where the user directly enters the height sensing reference value. This item appears when "User Input Data" is selected for setting the reference data.
+
+
+### (7) Sensing Coefficient: [-100.0 ~ 100.0]
+
+This is the distance coefficient corresponding to the difference in the input data. A smaller value results in smoother tracking with less responsiveness to input data, while a larger value increases tracking speed but may cause oscillations along the trajectory.
+
+
+### (8) Tracking Speed Limit: [0.1 ~ 10.0]
+
+This sets the maximum tracking value per second based on sensing. A smaller value results in smoother tracking, while a larger value speeds up tracking.
+
+
+<!-- ### (10) 노이즈 민감도  
+    입력 데이터의 노이즈에 대한 민감도를 설정합니다. 비활성화 되어 있는 경우 지원하지 않는 버전입니다. -->
+
+### (9) Tracking Limit Distance: [-300.0 ~ 0.0] ~ [0.0 ~ 200.0]
+
+This sets the total tracking distance limit for height sensing.
+
+
+### (10) Integral Coefficient for Error: [0.00 ~ 10.00]
+
+This sets the correction amount for continuous error values in height sensing performance.
+Setting a value greater than 0 improves tracking performance, but if the value is too large, oscillations in the trajectory may occur.
+Start with a very small value and gradually adjust it to an appropriate setting for the field.
+
+
+<!-- 
 ### (12) 초기 기준 데이터: [-500.0 ~ 500.0]
     용접 초반에 별도의 기준 데이터를 적용하려고 할 때 설정합니다. 입력 데이터 무시 시간이 지난 후 ‘초기설정된 시기준 데이터 적용 시간’에서 설정된 시간동안 이 기준 데이터를 이용하여 높이 센싱이 수행됩니다.
 
@@ -3330,904 +3479,827 @@ weaving 명령어의 속성창에서 지연시간테이블 탭에 진입하십�
     초당 추종 거리 제한치를 설정합니다. 이 값은 로봇의 급격한 추종을 제한하기 위하여 설정합니다. 이 값이 크면 추종 속도가 증가하고 진동이 발생할 수 있습니다. 이 값이 작으면 로봇의 추종가능 거리가 감소하지만 진동이 작아집니다. 
 
 ### (18) 높이 센싱 범위: [-300.0 ~ 0.0], [0.0 ~ 200.0]  
-    높이센싱의 총 추종거리 제한치를 설정합니다.
-# 8.5 LVS(Laser Vision Sensor) 용접선 추적 및 검출 기능
-# 8.5.1 LVS 개요 및 사양
+    높이센싱의 총 추종거리 제한치를 설정합니다. -->
+# 8.5 LVS(Laser Vision Sensor) Seam Finding and Tracking
+# 8.5.1 LVS Overview and Specifications
 
 {% hint style="info" %}
-해당 기능은 60.30-03 이후 버전에서 지원합니다.
+This feature is available during from version 60.30-03.
 {% endhint %}
 
-본 기능은 LVS (레이저비전 센서)로 용접선을 인식하여 작업물 및 지그 오차에 대한 보상을 실시간으로 반영하여 용접선 추적을 수행합니다. 
+This function performs real-time compensation for workpiece and jig errors by recognize the welding seam using an LVS(Laser Vision Sensor), thereby enabling seam tracking during welding.
 
-LVS는 로봇의 플렌지에 직결되어야 하며, 센서는 용접선을 인식하고, 로봇은 툴을 용접선을 실시간으로 추적합니다. 
+The LVS must be directly connected to the robot's flange. The sensor detects the welding seam, and the robot's tool tracks the seam in real-time.
 
-즉, 용접선 추적을 통해 용접 대상물의 위치가 변하여 기존 교시점에서 벗어나는 경우에도 용접을 수행할 수 있습니다.
+In other words, through seam tracking, welding can still be performed even if the position of the welding target changes and deviates from the original reference points.
 
 
 <p align="center">
  <img src="../../_assets/8_5_1.png" width="90%"></img>
- <em><p align="center">그림 8.5.1. LVS 용접선 추적 데이터 흐름도</p></em>
+ <em><p align="center">Figure 8.5.1. LVS Seam Tracking Flowchart</p></em>
 </p>
 
 </br>
 
-LVS 용접선 추적 및 검출 기능은 ```lvs``` 명령어를 통해 수행하며 TP의 **[명령입력]-[아크]-[lvs]** 를 입력하여 명령어를 입력할 수 있습니다.
+## Command
 
-명령어의 구성은 다음과 같습니다.
+The LVS Seam Finding and Tracking function is executed through the `lvs` command, which can be entered by selecting **[cmd. input > arcweld > lvs]** in the TP.
+
+The structure of the command is as follows:
 
 ```python
-lvs 기능인자 cnd=조건번호, seam=센싱하고자 하는 프로파일 번호, sp=센싱된 위치의 포즈변수, mp=마스터 기준 포즈변수, ms=마스터 대비 현재 센싱위치 쉬프트변수
+lvs <function argument> cnd=<condition Number>, seam=<profile number to be sensed position>, sp=<pose variable of the sensed position>, mp=<pose variable of the master reference>, ms=<shift variable of the current sensing position relative to the master>
 ```
 
 <table>
   <thead>
     <tr>
-      <th>대항목</th>
-      <th>소항목</th>
-      <th>의미</th>
+      <th>Major Category</th>
+      <th>Sub Category</th>
+      <th>Meaning</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td rowspan="9">기능인자</td>
+      <td rowspan="9">function argument</td>
     </tr>
     <tr>
       <td style="text-align:left">laser_on</td>
-      <td style="text-align:left">레이저를 켭니다.</td>
+      <td style="text-align:left">Turn on the laser.</td>
     </tr>
     <tr>
       <td style="text-align:left">laser_off</td>
-      <td style="text-align:left">레이저를 끕니다.</td>
+      <td style="text-align:left">Turn off the laser.</td>
     </tr>
     <tr>
       <td style="text-align:left">seam_find</td>
-      <td style="text-align:left">현재 센서가 센싱하고 있는 레이저의 seam 위치를 명령어의 sp인자에 지정된 포즈변수(로봇/베이스좌표계)에 저장합니다.<br>
-      단, 자세(RX, RY, RZ)는 명령어 수행시 툴의 자세로 기록됩니다.</td>
+      <td style="text-align:left">
+        The seam position of the laser currently being sensed by the sensor is stored in the pose variable specified by the 'sp' argument of the command (robot/base coordinate system). <br>
+        Note that the orientation(RX, RY, RZ) is recorded as the tool's orientation at the time the command is executed.
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">seam_find_p</td>
-      <td style="text-align:left">현재 센서가 센싱하고 있는 레이저의 seam 위치를 명령어의 sp인자에 지정된 포즈변수(로봇/베이스좌표계)에 저장합니다.<br>
-      단, 자세(RX, RY, RZ)는 기존 포즈변수 값이 유지되며 X, Y, Z 값만 저장합니다.<br>
-      intersection 등의 함수로 3점을 이용해 교점을 포즈로 찾는 경우 유용하게 사용할 수 있습니다.</td>
+      <td style="text-align:left">
+        The seam position of the laser currently being sensed by the sensor is stored in the pose variable specified by the 'sp' argument of the command (robot/base coordinate system). <br>
+        Note that the orientation(RX, RY, RZ) remains as the original pose variable, and only the X, Y, and Z values are updated. <br>
+        This is particularly useful when using functions such as 'intersection', where the intersection point is determined using three points to calculate the pose.
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">auto_calib</td>
-      <td style="text-align:left">TCP-LVS 간 오토캘리브레이션을 수행합니다. (8.5.3절 참고)</td>
+      <td style="text-align:left">
+        Performs auto-calibration between TCP and LVS.(refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/3_calibration">LVS Calibration</a>)
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">search</td>
-      <td style="text-align:left">+ToolX, -ToolX 방향으로 이동하면서 시작점을 찾고 트래킹 준비를 수행합니다.<br>
-      찾은 시작점은 명령어의 sp인자에 지정된 포즈변수에 저장됩니다.(8.5.6절 참고)</td>
+      <td style="text-align:left">
+        The starting point is found while moving in the +ToolX, -ToolX directions, and tracking preparation is performed. <br>
+        The detected starting point is stored in the pose variable specified by the 'sp' argument of the command.
+        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/6_search">LVS search func.</a>)
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">step_search</td>
-      <td style="text-align:left">+ToolX, -ToolX 방향으로 이동하면서 시작점 또는 다단비드의 시작점 등을 찾습니다.<br>
-      찾은 시작점은 명령어의 sp인자에 지정된 포즈변수에 저장됩니다.(8.5.6절 참고)</td>
+      <td style="text-align:left">
+        The starting point or the start point of a multi-bead is found while moving int the +ToolX, -ToolX directions. <br>
+        The detected starting point is stored in the pose variable specified by the 'sp' argument of the command.
+        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/6_search">LVS search func.</a>)
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">track</td>
-      <td style="text-align:left">search가 완료된 후 arcon 및 weaving on 이 수행된 뒤 실행되어야 합니다.
-      arcoff를 만날때 까지 트래킹을 수행합니다.</td>
+      <td style="text-align:left">
+        After the search is completed, the 'arcon' and 'weaving on' actions must be performed before executing. <br>
+        Tracking continues until 'arcoff' is encountered.
+      </td>
     </tr>
     <tr>
-      <td colspan="2">조건번호</td>
+      <td colspan="2">condition Number</td>
       <td>
-        lvs 명령어의 속성 창에 설정된 내용을 사용하기 위한 조건번호입니다. 속성창에서 탐색속도, 탐색길이, 큐간격, 추종제한치, 센싱좌표계(로봇/베이스) 등을 설정할 수 있습니다.
+        This is the condition number used to apply the the settings configured in the peroperties window of the lvs command. <br>
+        The properties window allows you to set search speed, search distance, queue interval, tracking limit, and sensing coordinate system(robot/base), among others.
       </td>
     </tr>
   <tr>
-      <td colspan="2">센싱하고자 하는 프로파일 번호</td>
+      <td colspan="2">profile number to be sensed position</td>
       <td>
-        LVS 제어기에 사용자가 등록한 센싱형상 및 센싱조건에 해당하는 번호입니다. 명령어 수행시 LVS제어기는 이 번호에 대한 센싱형상 및 조건을 load 합니다.
+        This refers to the number corresponding to the sensing shape and sensing conditions registered by the user in the LVS controller. 
+        When the command is executed, the LVS controller loads the sensing shape and conditions associated with this number.
       </td>
     </tr>
     <tr>
-      <td colspan="2">센싱된 위치의 포즈변수</td>
+      <td colspan="2">pose variable of the sensed position</td>
       <td>
-        현재 레이저의 위치에 해당하는 위치를 포즈변수로 저장합니다.
+        The position corresponding to the current laser location is stored as a pose variable.
       </td>
     </tr>
     <tr>
-      <td colspan="2">마스터 기준 포즈변수</td>
+      <td colspan="2">pose variable of the master position</td>
       <td>
-        마스터 모드에서 등록된 기준 포즈변수입니다. (8.5.5절 참고)
+        This is the reference pose variable registered in master mode.
+        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/5_lvs_master_mode">8.5.5 LVS Master mode func.</a>)
       </td>
     </tr>
     <tr>
-      <td colspan="2">마스터 대비 현재 센싱위치 쉬프트변수</td>
+      <td colspan="2">shift variable of the current sensing position relative to the master</td>
       <td>
-        mp 대비 현재 센싱한 위치의 쉬프트가 저장됩니다. (8.5.5절 참고)
+        The shift of the current sensed position relative to the mp(master pose) is stored.
+        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/5_lvs_master_mode">8.5.5 LVS Master mode func.</a>)
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">opt</td>
+      <td>
+        When using the auto_calib command, this value should be set to 0.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">find_flag</td>
+      <td>
+        If a variable is set for this parameter, it will be set to 1 upon successful seam finding, and to 0 without any error if the seam finding fails.
       </td>
     </tr>
   </tbody>
 </table>  
 <br/>
 
----
 
-```lvs``` 명령어를 이용한 트래킹기능은 다음과 같이 사용할 수 있습니다.
+The tracking function using the ```lvs``` command can be used as follows:
+
 
 <p align="center">
  <img src="../../_assets/8_5_2.png" width="60%"></img>
- <em><p align="center">그림 8.5.2. LVS 용접선 추적을 위한 티칭 방법</p></em>
+ <em><p align="center">Figure 8.5.2. Teaching Method for LVS Seam Tracking</p></em>
 </p>
 
 
 ---
 
-LVS 기능 사양
+## LVS Function Specifications
 
-* 일반 모션 트래킹 기능 지원 (직선 L보간, 원호 C보간, 직선 및 원호 복합 구간)<br>
-* 위빙 트래킹 기능 지원 (0.5Hz ~ 3Hz)<br>
-* 포지셔너 동기 트래킹 기능 지원 (SMOV 구간)<br>
-* 포지셔너 동기 + 위빙 트래킹 기능 지원 (0.5Hz ~ 3Hz)<br>
+* General motion tracking functionality supported (Linear L interpolation, Circular C interpolation, and composite linear and circular segments)
+* Weaving tracking functionality supported (0.5Hz ~ 3Hz)
+* Positioner synchronized tracking functionality supported (SMOV segment)
+* Positioner synchronized + Weaving tracking functionality supported (0.5Hz ~ 3Hz)
+
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">제조사</th>
-      <th style="text-align:left">반복 정확도</th>
-      <th style="text-align:left">반복 정밀도</th>
+      <th style="text-align:left">Item</th>
+      <th style="text-align:left">LVS Manufacturer</th>
+      <th style="text-align:left">Repetition Accuracy</th>
+      <th style="text-align:left">Repetition Precision</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">seam_find / seam_find_p</td>
+      <td style="text-align:left" rowspan="3">seam_find / seam_find_p</td>
       <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
-      <td style="text-align:left">좌우 : 0.1 mm (기준 +- 30mm 높이),  0.4mm<br>높이 : 0.4mm (기준 +- 30mm 높이), 2mm<br>앞뒤 : 0.4mm (기준 +- 30mm 높이), 1.5mm</td>
+      <td style="text-align:left">Left/Right : 0.1 mm (Reference +- 30mm height),  0.4mm<br>Height : 0.4mm (Reference +- 30mm height), 2mm<br>Front/Back : 0.4mm (Reference +- 30mm height), 1.5mm</td>
       <td style="text-align:left">0.05 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">seam_find / seam_find_p</td>
       <td style="text-align:left">OXFORD (OSL-50)</td>
-      <td style="text-align:left">좌우 : 0.4 mm (기준 +- 30mm 높이),  0.7mm<br>높이 : 0.6mm (기준 +- 30mm 높이), 3mm<br>앞뒤 : 0.6mm (기준 +- 30mm 높이), 2.5mm</td>
+      <td style="text-align:left">Left/Right : 0.4 mm (Reference +- 30mm height),  0.7mm<br>Height : 0.6mm (Reference +- 30mm height), 3mm<br>Front/Back : 0.6mm (Reference +- 30mm height), 2.5mm</td>
       <td style="text-align:left">0.2 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">seam_find / seam_find_p</td>
       <td style="text-align:left">Full-v</td>
-      <td style="text-align:left">좌우 : 0.6 mm (기준 +- 30mm 높이),  2mm<br>높이 : 0.8mm (기준 +- 30mm 높이), 4.5mm<br>앞뒤 : 0.6mm (기준 +- 30mm 높이), 4mm</td>
+      <td style="text-align:left">Left/Right : 0.6 mm (Reference +- 30mm height),  2mm<br>Height : 0.8mm (Reference +- 30mm height), 4.5mm<br>Front/Back : 0.6mm (Reference +- 30mm height), 4mm</td>
       <td style="text-align:left">0.35 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">track</td>
+      <td style="text-align:left" rowspan="3">track</td>
       <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
-      <td style="text-align:left">0.2mm (직선)<br>0.4mm (위빙)<br>0.25mm (포지셔너 동기)<br>0.5mm (위빙 + 포지셔너동기)</td>
+      <td style="text-align:left">0.2mm (Linear)<br>0.4mm (weaving)<br>0.25mm (positioner synchronized)<br>0.5mm (weaving + positioner synchronized)</td>
       <td style="text-align:left">0.05 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">track</td>
       <td style="text-align:left">OXFORD (OSL-50)</td>
-      <td style="text-align:left">0.3mm (직선)<br>0.5mm (위빙)<br>0.4mm (포지셔너 동기)<br>0.6mm (위빙 + 포지셔너동기)</td>
+      <td style="text-align:left">0.3mm (Linear)<br>0.5mm (weaving)<br>0.4mm (positioner synchronized)<br>0.6mm (weaving + positioner synchronized)</td>
       <td style="text-align:left">0.2 mm</td>
     </tr>
     <tr>
-      <td style="text-align:left">track</td>
       <td style="text-align:left">Full-v</td>
-      <td style="text-align:left">0.3mm (직선)<br>0.6mm (위빙)<br>0.4mm (포지셔너 동기)<br>0.7mm (위빙 + 포지셔너동기)</td>
+      <td style="text-align:left">0.3mm (Linear)<br>0.6mm (weaving)<br>0.4mm (positioner synchronized)<br>0.7mm (weaving + positioner synchronized)</td>
       <td style="text-align:left">0.35 mm</td>
     </tr>
   </tbody>
-</table># 8.5.2 LVS(Laser Vision Sensor) 기본설정
+</table># 8.5.2 LVS Settings
 
-LVS기능을 사용하기 위해서는 센서 설치 및 통신 설정이 필요합니다.
 
-지금부터 해당 과정을 살펴보겠습니다.
+To use LVS functionality, sensor installation and communication settings are required.
 
-### (1) 연결 브라켓을 이용한 LVS센서의 장착
+Let's now look at the process involved.
 
-연결 브라켓은 직접 설계하여 사용하거나 HD현대로보틱스 또는 LVS 제조사로부터 받아 사용하십시오.<br>
+### (1) Mounting the LVS Sensor using the connection bracket
+
+The connection bracket can either be designed and used by yourself, or you may receive one from HD Hyundai Robotics or the LVS manufacturer. <br>
 
 <p align="center">
- <img src="../../_assets/8_5_3_lvs_mount_setup.png" width="60%"></img>
- <em><p align="center">그림 8.5.3. LVS 장착시 주의점</p></em>
+  <img src="../../_assets/8_5_3_lvs_mount_setup.png" width="60%"></img>
+  <em><p align="center">Figure 8.5.3. LVS Mounting Precautions</p></em>
 </p>
 
 {% hint style="warning" %}
-반복 정확도 (Accuracy) 및 정밀도(Precision) 달성을 위해 로봇의 플랜지에 LVS 마운트를 직결하십시오.<br>
-즉, 플랜지 - LVS 마운트 및 LVS센서 - 쇼크센서(사용시) - 토치 의 기구부를 갖도록 설치하십시오.
+  - To achieve repetition accruacy and precision, directly mount the LVS bracket to the robot flange<br>
+  - In other words, install the mechanical assembly as follows: flange - LVS mount, LVS sensor - shock sensor(if used) - torch.
 {% endhint %}
 
-툴 좌표계는 아래 그림과 같이 용접 진행 반대 방향을 +Tool X 방향, 와이어 방향을 +Tool Z 방향으로 설정해야합니다. 
+The tool coordinate system should be set as follows: the welding direction opposite to the progress direction should be set as the +Tool X direction, and the wire direction should be set as the +Tool Z direction, as shown in the diagram below.
 
-LVS 센서는 직선인 용접선을 기준으로 수직으로 레이저가 위치하도록 설치해야 합니다. (그림 참조)
+The LVS sensor must be installed so that the laser is positioned perpendicular to the welding seam, which is straight (see figure)
+
 
 <p align="center">
- <img src="../../_assets/8_5_4.png" width="90%"></img>
- <em><p align="center">그림 8.5.4. TCP와 센서설치, 툴좌표계의 설정</p></em>
+  <img src="../../_assets/8_5_4.png" width="90%"></img>
+  <em><p align="center">Figure 8.5.4. TCP and Sensor Installation, Tool Coordinate System Setup</p></em>
 </p>
 
 {% hint style="info" %}
-툴 좌표계를 설정하는 방법은 툴 캘리브레이션 및 각도보정 메뉴얼 항목을 참고하십시오.
+  For instructions on setting the tool coordinate system, refer to the Tool Calibration and Angle Correction Manual(Angle Calibration) section.
 {% endhint %}
 
 {% hint style="warning" %}
-LVS를 사용하기 위해서 레이저는 용접방향에 선행하여 위치하여야 하며, 툴 좌표계는 위 그림과 같이 설정되어야 합니다.
+  In order to use LVS, the laser should be positioned ahead of the welding direction, and the tool coordinate system must be set as shown in the diagram above.
 {% endhint %}
 
 ---
 
-### (2) 통신설정
+### (2) Communication Settings
 
-LVS센서 제어기와 로봇 제어기간에 이더넷 케이블을 이용해 접속합니다.<br>
-**[시스템]-[응용 파라미터]-[LVS 추종]-[사용환경 설정]** 에 진입합니다.<br>
-**[통신]** 탭에서 다음항목을 설정합니다.
+Connect the LVS sensor controller and the robot controller using an Ethernet cable.<br>
+Navigate to **[System > 4: Application parameter > 5: LVS tracking > 1: Envrionment setting]**.<br>
 
-- LVS 브랜드 : Scansonic, Oxford (or Meta), Full-v<br>
-- IP 주소 : 센서 제어기의 IP를 입력합니다.<br>
-- 로컬 포트 : 로봇 제어기의 포트입니다. (Oxford의 경우 8000)<br>
-- 원격 포트 : 센서 제어기의 포트입니다. (Oxford의 경우 8002)
+In the **[Communication]** tab, configure the following items:
 
-위 내용을 입력 후 **[연결]** 을 눌러 '연결됨' 이라고 표시될 경우 정상 개통된 것입니다.
+- LVS brand : Scansonic, Oxford (or Meta), Full-v<br>
+- IP Address : Enter the IP address of the sensor controller.
+- Local Port : The port for the robot controller. (For Oxford, 8000)
+- Remote Port : The port for the sensor controller. (For Oxford, 8002)
+
+After entering the above information, click **[connect]**. If the status shows "connected," the connection is successfully established.
+
 
 {% hint style="info" %}
-[IP 주소] : LVS제어기에서 로봇 제어기로 데이터를 보내기위한 IP설정은 LVS제어기에서 설정합니다. <br>
-설정이 잘못되면 연결이 되지 않을 수 있으므로 이 경우에는 LVS 제조사의 메뉴얼을 참고하십시오. <br>
-[포트] : 브랜드를 선택할 경우 디폴트 값으로 변경되므로 사용자가 수정할 필요가 없습니다.<br>
-포트가 잘못되면 연결이 되지 않을 수 있으므로 이 경우에는 LVS 제조사의 메뉴얼을 참고하십시오.
+- [IP Address] : The IP address used for sending data from the LVS controller to the robot controller is set in the LVS controller.
+  - If the settings are incorrect, the connection may fial. In such cases, refer to the LVS manufacturer's manual.
+- [Port] : When selecting a brand, the default values will automatically be applied, so there is no need for the user to modify them.
+  - If the port is incorrect, the connection may fial. In such cases, refer to the LVS manufacturer's manual.
 {% endhint %}
 
 ---
 
-### (3) 기본설정
+### (3) Basic Settings
 
-**[트래킹]** 탭에서 다음항목을 설정합니다.  
-- P 게인 : 변환할 위치 및 방위로 TCP가 추종하는 세기를 지정합니다.  
-- D 게인 : 변환할 위치 및 방위로 TCP가 반응하는 속도를 지정합니다.  
-- 최대 추종 거리 [mm/sec] : 초당 최대 추종량을 [mm/sec]로 지정합니다. 
+In the **[Tracking]** tab, configure the following items: 
+- P gain : Specifies the intensity with which the TCP tracks to the converted position and orientation.
+- D gain : Specifies the speed at which the TCP responds to the converted position and orientation.
+- Max tracking Distance : Specifies the maximum tracking amount per second in [mm/sec].
+
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">설명</th>
-      <th style="text-align:left">권장 설정값</th>
+      <th style="text-align:left">Item</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Recommended Settings</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">P, D 게인</td>
-      <td style="text-align:left">변환할 위치 및 방위로 TCP가 추종하는 세기를 지정합니다.
-      </td>
+      <td style="text-align:left">P, D gain</td>
+      <td style="text-align:left">Specifies the intensity with which the TCP tracks to the converted position and orientation.</td>
       <td style="text-align:left">
-        일반 트래킹 (위빙 미사용) : 1~10 범위 내에서 설정하십시오. <br>
-        위빙 트래킹 (위빙 사용) : default 값인 10을 사용하십시오. <br>
-        디폴트값은 P gain 10, D gain 10 입니다. 실제 작업물에 적합한 값을 찾아 적용하십시오.
+        General tracking (without weaving) : Set within the range 1 ~ 10. <br>
+        Weaving tracking (with weaving) : Use the default value of 10. <br>
+        The default values are P gain: 10 and D gain: 10. Adjust these values to suit the actual workpiece.
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">최대 추종 거리 [mm/sec]</td>
-      <td style="text-align:left">초당 최대 추종량을 [mm/sec]로 지정합니다.<br>
-      </td>
+      <td style="text-align:left">Max tracking distance/sec [mm/sec]</td>
+      <td style="text-align:left">Specifies the maximum tracking amount per second in [mm/sec].</td>
       <td style="text-align:left">
-        1 ~ 5 범위로 설정하십시오.<br> LVS 용접선 추종은 티칭된 궤적에서 벗어나는 작은 차이를 보정하기 위한 기능이므로  크게 설정할 필요가 없습니다. 디폴트값은 10 입니다.
+        Set within the range of 1 to 5. The default value is 10.<br>
+        LVS seam tracking is designed to correct small deviations from the taught trajectory, so setting a larger value is not necessary.
       </td>
     </tr>
   </tbody>
 </table>
 
-위 과정을 통해 기본설정이 끝났습니다. 
+
+Preferences have been completed through the above process.
 
 ---
 
-### Full-V 센서 설정 예시
+#### Full-V Sensor Configuration Example
 
 <p align="center">
  <img src="../../_assets/8_5_5_lvs_setting_fullv_1.png" width="90%"></img>
- <em><p align="center">그림 8.5.5. Full-V 센서 연결 설정</p></em>
+ <em><p align="center">Figure 8.5.5. Full-V Sensor Connection Settings</p></em>
 </p>
 
-위 그림과 같이 LVS 브랜드를 FULL로 선택한 후 Full-V S/W에서 LVS 센서의 IP를 확인한 후 **[시스템]-[응용파라미터]-[lvs 추종]-[사용환경 설정]** 창의 IP에 입력하십시오. 그 후 하단의 "연결" 버튼을 눌러 연결 상태가 "연결됨"이 되는지 확인하십시오.<br>
-"연결 실패"라고 뜨는 경우에는 하드웨어 연결 및 IP를 확인하십시오.<br>
+As shown in the figure above, select the LVS brand as FULL, then check the IP address of the LVS sensor in the Full-V softeware.  <br>
+Enter the IP in the **[System > 4: Application parameter > 5: LVS tracking > 1: Envrionment setting]** window.  <br> Afterward, click the "connect" button at the bottom and verify that the connection status shows.  <br>
+If "disconnected" appears, check the hardware connection and IP address.<br>
 
-Full-V S/W에서 사용하고자 하는 seam을 Full-V사에서 제공하는 메뉴얼과 하기 그림을 참조하여 등록하십시오.
+Refer to the manual provided by Full-V and the figure below to register the seam you wish to use in the Full-V software.  
+
 
 <p align="center">
  <img src="../../_assets/8_5_6_lvs_setting_fullv_2.png" width="90%"></img>
- <em><p align="center">그림 8.5.6. Full-V S/W에서 seam 설정 예시</p></em>
-</p># 8.5.3 LVS(Laser Vision Sensor) TCP-센서 캘리브레이션
+ <em><p align="center">Figure 8.5.6. Example of Seam Setting in Full-V Software</p></em>
+</p># 8.5.3 LVS Calibration
 
-LVS기능을 사용하기 위해서 TCP와 센서좌표계 간 캘리브레이션이 선행되어야 합니다. 
 
-Hi6 제어기는 자동캘리브레이션을 지원합니다.
+In order to use the LVS funtionality, calibration between the TCP and sensor coordinate system must be performed first.
 
-지금부터 tcp-lvs센서 자동캘리브레이션 수행 방법을 살펴보겠습니다.
+Hi6 controller supports automatic calibration.
 
-### (1) 캘리브레이션 시편 준비
+Let's now look at how to perform automatic calibration between TCP and LVS sensor.
 
-당사를 통해 라이센스 구입을 하면 자동캘리브레이션용 시편을 제공합니다. 
+### (1) Preparation of Calibration Specimen
+
+If you purchase a license through our company, an automatic calibration specimen will be provided.
+
 
 {% hint style="info" %}
-테스트 용도로 사용하고자 한다면 당사에 요청하여 캘리브레이션 시편을 준비하십시오.
+If you wish to use it for testing purpose, please contact us to prepare the calibration specimen.
 {% endhint %}
 
 ---
 
-### (2) 자동캘리브레이션 티칭
-
-다음을 참고하여 티칭하십시오.
-
-```python
-move L,spd=60%,accu=0,tool=0  # 캘리브레이션 시편 기준점 위치
-delay 0.5
-lvs auto_calib, cnd=1, seam=1, sp=p1, opt=0
-end
-```
-
-아래 그림과 같이 시편의 기준점에 TCP를 조그로 이동시키십시오. 
-
-토치 자세는 시편과 수직으로 위치해야 합니다. (Roll, Pitch 방향 모두 수직)
-
-레이저 라인은 시편의 엣지 부분과 수직이 되도록 조그 (보통 Tool Z로 조작)로 위치 하십시오.
-
-이 상태 (토치가 시편과 수직으로 위치하고 레이저 라인은 시편의 엣지에 수직인 상태)에서 **[기록]** 을 눌러 `move` 명령어를 삽입합니다.
-
-{% hint style="warning" %}
-* 토치의 캘리브레이션 시편과의 자세는 수평계를 이용하여 정밀하게 수직으로 맞추십시오.
-* 토치의 수직 정확도와 레이저 라인이 시편의 엣지에 수직하는 정확도는 캘리브레이션 정확도에 영향을 미칩니다.
-{% endhint %}
-
-`delay 0.5`를 삽입한 후 `lvs` 명령어를 삽입합니다.
-
-`lvs` 명령어의 seam 인자는 LVS controller에 등록한 형상 및 조건에 대한 번호입니다.
-
-{% hint style="info" %}
-캘리브레이션을 위해서 LVS제어기의 S/W에서 Lap 조인트로 seam을 등록해 놓으십시오.<br> 
-등록한 번호를 lvs 명령어의 seam인자에 설정하십시오.
-{% endhint %}
+### (2) Automatic Calibration Teaching
 
 <p align="center">
  <img src="../../_assets/8_5_7_lvs_autocalib.png" width="80%"></img>
- <em><p align="center">그림 8.5.7. lvs 자동 캘리브레이션</p></em>
+ <em><p align="center">Figure 8.5.7. LVS Auto Calibration</p></em>
 </p>   
 </br>
 
----
+As shown in the figure above, move the TCP to the reference point of the specimen using the jog function.
 
-### (3) 준비사항
+The torch orientation should be perpendicular to the specimen (both Roll and Pitch direction should be vertical).
 
-자동캘리브레이션은 앞뒤, 좌우 이동 및 roll 방향 회전, 높이방향 이동을 포함하는 모션을 수행하므로 안전에 유의하십시오.
+Position the laser line perpendicular to the edge of the specimen using jog (typically controlled by Tool Z).
 
-{% hint style="warning" %}
-* 높은 위치에서도 lvs가 시편의 seam을 인식할 수 있도록 lvs의 설정 (노출시간, 레이저세기, 형상 설정)을 조절하십시오.
-* 레이저가 시편 기준점 바깥쪽 평평한 면을 보고있을 때에는 lvs 제어기가 seam을 인식 할 수 없어야 합니다.
-{% endhint %}
-
----
-
-### (4) 자동모드로 재생합니다.
-
-캘리브레이션이 모두 끝나면 "lvs 추종" 모니터링 테이블의 '정보' 항목에  comp! 표시가 나타납니다.
-
----
-
-### (5) 툴과 lvs 캘리브레이션 정보
-
-툴 번호마다 lvs 캘리브레이션 정보를 갖고 있습니다. 이는 툴 체인지를 사용할 경우에 유용합니다.
-
-만약 tool 0번에 자동캘리브레이션을 수행한 후 tool 1번이나 2번을 사용하고자 한다면 해당 툴에 대한 자동캘리브레이션을 수행해야 합니다.
-
-툴 정보는 같지만 번호만 다르게 사용하고 싶다면 다음 창에 진입하여 캘리브레이션 정보를 복사하여 사용할 수 있습니다.
-
-**[시스템]-[응용파라미터]-[LVS 추종]-[LVS 캘리브레이션]**
-
-<p align="center">
- <img src="../../_assets/8_5_8_lvs_tool_calibmat.png" width="80%"></img>
- <em><p align="center">그림 8.5.8. lvs 자동 캘리브레이션</p></em>
-</p>   
-</br># 8.5.4 LVS(Laser Vision Sensor) seam finding 기능
-
-### (1) Seam finding 기능의 개요
-
-이 기능은 LVS를 이용하여 센싱한 위치를 포즈로 저장하는 기능으로 터치센싱 대용으로 사용 가능합니다. 
+In this state(where the torch is positioned perpendicular to the specimen and the laser line is perpendicular to the edge of the specimen), press **[Record]** to insert the `move` command.
 
 {% hint style="warning" %}
-기능 사용전 TCP-LVS 센서 캘리브레이션(8.5.3절 참조)이 수행되어 있지 않으면 비정상적인 포즈가 저장됩니다.
+- Use a level to precisely align the torch's orientation perpendicular to the calibration specimen.
+- The vertical accuracy of the torch and the accuracy with which the laser line is perpendicular to the edge of the specimen will affect the calibration accuracy.
 {% endhint %}
 
-명령어 형식은 다음과 같습니다.
 
-```python
-var po_100=cpo() # 현재 포즈를 선언한 변수 po_100에 저장함
-lvs seam_find, cnd=1, seam=1, sp=po_100 # sp에 입력한 이름의 변수가 없는 경우 local pose 변수로 자동 선언됨
-```
+After inserting `delay 0.5`, input the `lvs` command.
 
-위 명령어를 수행하면 po_100 변수에 lvs로 센싱한 위치가 저장됩니다.
-
-{% hint style="warning" %}
-sp인자가 선언되어 있지 않다면 지역 포즈로 선언됩니다.<br>
-mp인자가 선언되어 있지 않다면 전역 포즈로 선언됩니다.<br>
-ms인자가 선언되어 있지 않다면 전역 쉬프트로 생성됩니다.
-{% endhint %}
+The seam parameter of the `lvs` command is the number corresponding to the shape and conditions registered in the LVS controller.
 
 {% hint style="info" %}
-seam_find 명령어로 sp 인자에 저장된 포즈의 자세는 센싱 전 툴의 자세 (RX, RY, RZ) 를 유지합니다.
+For calibration, register the seam as a lap joint in the LVS controller's software.<br>
+Set the registered number in the seam parameter of the lvs command.
 {% endhint %}
 
-아래 그림과 같이 센싱 전 툴의 자세에 따라 sp 인자에 저장된 포즈의 자세가 결정됩니다.
+
+The program written as described is shown below:
+
+```python
+    move L,spd=60%,accu=0,tool=0  # Calibration specimen reference point
+    delay 0.5
+    lvs auto_calib, cnd=1, seam=1, sp=p1, opt=0
+    end
+```
+
+---
+
+### (3) Preparations
+
+Automatic Calibration involves motions such as front/back, left/right, roll direction rotation, and height adjustments, so ensure safety precautions are followed.
+
+{% hint style="warning" %}
+* Adjust the LVS settings (exposure time, laser intensity, shape settings) so that the LVS can recognize the seam of the specimen even at higher positions.
+* When the laser is pointing to the flat surface outside the reference point of the specimen, the LVS controller should not be able to recognize the seam.
+{% endhint %}
+
+
+---
+
+### (4) Execution
+
+Once calibration is complete, the "comp!" indicator will appear in the 'info' section of the 'LVS tracking' monitoring table.
+
+---
+
+### (5) Tool and LVS Calibration Information
+
+Each tool number has its own LVS calibration, which is useful when using tool changing.
+
+If you perform automatic calibration for tool 0 and want to use tool 1 or tool 2, you will need to perform automatic calibration for those tools as well.
+
+If you want to use the same tool information but with different numbers, you can enter the following window to copy and apply the calibration information.
+
+- Navigate to **[System > 4: Application parameter > 5: LVS tracking > 2: LVS Calibration]**.<br>
+
+<p align="center">
+  <img src="../../_assets/8_5_8_lvs_tool_calibmat.png" width="80%"></img>
+  <em><p align="center">Figure 8.5.8. LVS Calibration Information</p></em>
+</p>   
+</br># 8.5.4 LVS Seam Finding Func.
+
+### (1) Seam Finding Overview
+
+This function stores the position sensed by the LVS as a pose, and can be used as a substitute for touch sensing.
+
+{% hint style="warning" %}
+  If the TCP-LVS sensor calibration has not been performed before using this function, an abnormal pose will be saved.
+{% endhint %}
+
+The command format is as follows:  
+After executing this, as shown below, the position sensed by the LVS will be stored in the po_100 variable.
+
+```python
+  var po_100=cpo()  # The current pose is stored in the variable po_100
+  lvs seam_find, cnd=1, seam=1, sp=po_100 # If there is no variable with the name entered in the sp parameter, it will be automatically declared as a local pose variable.
+```
+
+{% hint style="warning" %}
+  If the **sp** parameter is not declared, it will be declared as a local pose. <br>
+  If the **mp** parameter is not declared, it will be declared as a global pose. <br>
+  If the **ms** parameter is not declared, it will be declared as a global shift.
+{% endhint %}
+
 
 <p align="center">
  <img src="../../_assets/8_5_9_lvs_seamfind_ex.png" width="80%"></img>
- <em><p align="center">그림 8.5.9. lvs 센싱 자세에 따른 포즈에서의 자세</p></em>
+ <em><p align="center">Figure 8.5.9. Pose in the LVS sensing position</p></em>
 </p>   
 </br>
 
-* 센싱 전 자세와 상관없이 포즈에 위치만 저장하고 싶다면 다음과 같은 명령어 형식을 사용하십시오.<br>
-이 기능은 포즈에 용접자세를 기록해 놓은 뒤 위치(X,Y,Z) 만 lvs로 센싱한 점으로 만들하고자 할때 유용하게 사용 할 수 있습니다.
+{% hint style="info" %}
+  - The orientation of the pose stored in the sp parameter with the **seam_find** command will maintain the tool's orientation (Rx, Ry, Rz) before sensing.
+  - On the other hand, with the **seam_find_p** command, only the position is recorded in the pose stored in the sp parameter.
+{% endhint %}
 
+* If you want to store only the position in the pose regardless of the pre-sensing orientation, use the following command format.<br>
+This function is useful when you want to record the welding posture in the pose and then make the position (X, Y, Z) correspond to the point sensed by the LVS.
 
 ```python
-var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
-lvs seam_find_p, cnd=1, seam=1, side=10, height=10, sp=po_100
+var po_100=cpo()
+lvs seam_find_p, cnd=1, seam=1, sp=po_100
 ```
 
-
-* 센싱한 위치에서 센싱시 툴 방향 (Tool Y, Tool Z 방향)으로 쉬프트한 포즈는 다음과 같이 계산할 수 있습니다.
+* The pose shifted in the direction of Tool Y and Tool Z from the sensed position can be calculated as follows. <br>
+This command calculates a pose that has shifted by 10mm in the Tool Y direction and 10mm in the Tool Z direction, based on the tool orientation during sensing.
 
 ```python
-var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
+var po_100=cpo()
 lvs seam_find, cnd=1, seam=1, side=10, height=10, sp=po_100
 ```
 
-위 명령어는 센싱한 위치에서 센싱시 툴의 자세로 tool_y 방향으로 10mm, tool_z 방향으로 10mm 이동된 포즈를 계산합니다.
-
 ---
 
-### (2) lvs seam finding 재시도 기능
+### (2) LVS Seam Finding Retry
 
-Seam finding 시 seam 인식이 불가능할 경우 재시도를 수행합니다. 
+If the seam cannot be recognized during seam finding, a retry will be performed. 
 
-재시도 횟수는 lvs명령어의 속성창에서 seam finding parameter의 no of retry 항목에 기입합니다.
+The number of retries is specified in the **"no of retry"** under the Seam finding option in the LVS command's properties window.
 
-재시도 횟수만큼 센싱을 시도한 뒤에도 센싱이 불가능할 경우 에러가 발생합니다.
+If sensing is still impossible after the specified number of retries, an error will occur.
 
-재시도는 다음과 같은 시퀀스로 수행됩니다.
+The retry process is performed in the following sequence:
 
 <p align="center">
  <img src="../../_assets/8_5_10_lvs_seamfind_retry.png" width="60%"></img>
- <em><p align="center">그림 8.5.10. seam finding 재시도 기능</p></em>
+ <em><p align="center">Figure 8.5.10. LVS Seam Finding Retry</p></em>
 </p>   
 </br>
 
 {% hint style="warning" %}
-* 마스터-쉬프트 기능(8.5.5절 참조)을 사용할 경우 재시도를 하면 앞뒤로 위치가 바뀌므로 유의하십시오.
+* When using the master-shift function, be aware that retries will cause the position to shift forward and backward(by +ToolX, -ToolX).
 {% endhint %}
 
 ---
 
-### (3) lvs seamfinding 모니터링 기능
+### (3) LVS Seam Finding Monitoring
 
-TP 우측의 **[창조절]** 버튼을 눌러 "LVS 용접선 탐색" 항목을 선택하면 lvs seamfinding 모니터링을 볼 수 있습니다.
+To view the LVS seam finding monitoring screen, click **[pane layout > select > LVS seamfind]** in the TP  
+
 
 <p align="center">
  <img src="../../_assets/8_5_11_seamfind monitoring.png" width="60%"></img>
- <em><p align="center">그림 8.5.11. seam finding 모니터링 기능</p></em>
+ <em><p align="center">Figure 8.5.11. LVS Seam Finding Monitoring</p></em>
 </p>   
 </br>
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">설명</th>
+      <th style="text-align:left">Item</th>
+      <th style="text-align:left">Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">위치 (X, Y, Z)</td>
+      <td style="text-align:left">Position (X, Y, Z)</td>
       <td style="text-align:left">
-        센싱한 위치를 표시합니다. (베이스 좌표계)
-        사양 : 마스터 포즈의 위치입니다. 등록이 안된경우 (-1, -1, -1)로 표시됩니다.<br>
-        센싱 : 현재 센싱한 위치입니다.
+        Displays the current sensed position (in base coordinates)<br>
+        Spec : The position of the master pose. If not registered, it will display as (-1, -1, -1)<br>
+        Sensing : Current sensed position 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">갭</td>
+      <td style="text-align:left">Gap</td>
       <td style="text-align:left">
-      사양 : 마스터 갭 [mm]<br>
-      센싱 : 현재 센싱한 갭 [mm]
+        Spec : Master gap [mm]<br>
+        Sensing : Current sensed gap [mm]
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">영역</td>
+      <td style="text-align:left">Area</td>
       <td style="text-align:left">
-      groove 나 butt 형상의 내부 영역 넓이 [mm^2]
-      사양 : 마스터 넓이 [mm]<br>
-      센싱 : 현재 센싱한 넓이 [mm]
+        Internal area width of groove or butt shape [mm^2]<br>
+        Spec : Master area [mm]<br>
+        Sensing : Current sensed area [mm]
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">미일치</td>
+      <td style="text-align:left">Mismatch</td>
       <td style="text-align:left">
-       lvs seam의 미스매치 값을 보여줍니다. 보통 좌우 형상의 높이차를 말합니다. 
+        Mismatch value typically refers to the height difference of the left-right shape.
       </td>
     </tr>
   </tbody>
 </table>
 
 {% hint style="info" %}
-갭, 영역, 미스매치 등의 값은 제조사의 lvs 컨트롤러가 지원하는 seam에 대해서만 표시됩니다.
+  Gap, area, mismatch, and similar values are displayed only for seams supported by the manufacturer's LVS controller.
 {% endhint %}
 
-마스터 포즈가 등록되어 있다면, 현재 JOB에서 센싱한 이력들을 prev, next를 눌러서 확인해 볼 수 있습니다.
+If the master pose is registered, you can check the sensing history for the current job by pressing prev or next button.
 
 {% hint style="info" %}
-마스터모드 기능은 8.5.5 LVS master mode 기능을 참고하십시오.
+  For more details on the master mode, please refer to [8.5.5 LVS Master mode func.](./5_lvs_master_mode.md).
 {% endhint %}
 
-# 8.5.5 LVS(Laser Vision Sensor) 마스터 모드 기능
+# 8.5.5 LVS Master Mode Func.
 
-### (1) 마스터 모드 개요
+### (1) Master Mode Overview
 
-마스터 모드 기능은 기준위치(마스터 포즈)를 저장해 놓고 실제 양산 시 기준 위치 대비 현재 센싱한 위치의 쉬프트를 구하는 기능입니다.
+The Master Mode function stores a reference position (Master pose) and calculates the shift between the current sensed position and the reference position during actual production.
 
-이를 위해서는 **[사용자키] - [마스터 모드]** 를 활성화 하여 기준위치(마스터포즈)를 미리 등록해 두어야 합니다.
+To enable this functionality, **[user key > Master Mode]** must be activated to register the reference position(Master pose) in advance.
+
 
 <p align="center">
  <img src="../../_assets/8_5_12_lvs_seamfind_mastermode.png" width="90%"></img>
- <em><p align="center">그림 8.5.12. 마스터모드와 실제 기동시의 동작의 예</p></em>
+ <em><p align="center">Figure 8.5.12. Example of Master Mode and Actual Motion</p></em>
 </p>   
 </br>
 
-위 그림의 왼쪽과 같이 마스터 모드를 활성화 한 상태에서 마스터포즈를 `lvs` 명령어의 mp인자에 할당된 포즈변수에 저장합니다.
+As shown in the left part of the figure, after activating Master Mode, the Master Pose is saved to the pose variable assigned to the `mp` parameter in the `lvs` command.
 
-일반적으로 각 센싱점들을 미리 티칭해 두고 마스터 모드를 on 한 상태에서 자동으로 재생시켜 마스터 티칭을 완료합니다.
+Typically, the sensing points are pre-taught, and once Master Mode is activated, the system automatically plays back to the complete the master teaching.
 
-후판용접에서는 대략 수십개의 용접 경유점들이 마스터포즈로 등록될 것입니다.
+In thick welding application, several tens of welding waypoints will typically be registered as Master Poses.
 
-마스터 티칭이 완료되면 마스터 모드를 off합니다. 마스터모드는 마스터티칭이 완료되면 그 후 다시 on할 필요가 없습니다.
+Once the Master Teaching is completed, the Master Mode is turned off. There is no need to turn Master Mode back on after completing the Master Teaching.
 
-양산 시에는 로봇이 자동 또는 원격모드로 기동하여 각 용접점마다 센싱하여 쉬프트를 계산합니다.
+During production, the robot operates in automatic or remote mode and senses each welding point to calculate the shift.
 
-이 때, `lvs` 명령어의 ms 인자에 지정된 shift 변수에 마스터포즈 대비 현재 센싱한 포즈의 shift가 자동으로 계산되어 저장됩니다.
+At this point, the shift relative to the Master Pose is automatically calculated and stored in the shift variable designated by the `ms` parameter in the `lvs` command.
 
-이 쉬프트 변수를 `move` 문의 tg 인자에 적용하여 용접 위치에 쉬프트를 보정하여 용접 작업을 수행할 수 있습니다.
+This shift value is then applied to the `tg` parameter in the `move` command to compensate for the shift in the welding position, allowing the welding operation to be carried out accurately.
+
 
 {% hint style="warning" %}
-마스터포즈 등록시에는 하기 내용을 주의하십시오.
+Important notes when registering master pose.
 
-* 센싱하는 위치에서 LVS S/W에서 센싱된 seam의 side 및 height는 모두 0 근처에 오도록 티칭하시오.<br>
-* 위와 같이 티칭하여 센싱을 안정적으로 수행할 수 있으며, 마스터 포즈 관리 및 LVS 또는 툴의 틀어짐에 인식을 손쉽게 할 수 있습니다.
+* During the registeration of the Master Pose, ensure that the side and height of the seam sensed by the LVS S/W at the sensing position are both close to 0.
+* By teaching as described above, sensing can be performed stably, and Master Pose management, as well as the detection of any misalignment in the LVS or tool, can be easily recognized.
+
 {% endhint %}
 
 
 <p align="center">
  <img src="../../_assets/8_5_13_lvs_seamfind_mastermode_warn.png" width="90%"></img>
- <em><p align="center">그림 8.5.13. 마스터 포즈 등록시 유의점</p></em>
+ <em><p align="center">Figure 8.5.13. Important Considerations When Registering Master Pose</p></em>
 </p>   
 </br>
 
 ---
 
-### (2) 마스터모드 대비 쉬프트량 검사 기능
+### (2) Shift Quantity Check Function Relaive to Master Mode
 
-마스터포즈 대비 현재 센싱한 포즈의 쉬프트량 (mm)이 사용자가 설정한 범위 내에 존재하는지 검사할 수 있습니다.
+The shift quantity(in mm) between the current sensed pose and the Master Pose can be checked to verify if it falls within the user-defined range.
 
-범위 설정은 lvs 명령어에서 **[속성]**창에 진입하여 "용접점 추출 옵션" 항목의 "기준 위치로부터의 거리" 항목에 [mm] 단위로 기입합니다.
+To set the range, access the **[property]** window in the lvs command, and enter the desired distance from the reference position in the "distance from reference position" field under the "Seam finding option"(in mm). 
 
-seam finding 수행시 shift량이 사용자가 설정한 범위를 벗어난다면 에러가 발생합니다.
+If the shift value exceeds the user-defined range during seam finding, an error will occur.
 
 {% hint style="warning" %}
-sp인자가 선언되어 있지 않다면 지역 포즈로 선언됩니다.<br>
-mp인자가 선언되어 있지 않다면 전역 포즈로 선언됩니다.<br>
-ms인자가 선언되어 있지 않다면 전역 쉬프트로 생성됩니다.
-{% endhint %}# 8.5.6 LVS(Laser Vision Sensor) search 기능
+If the `sp` parameter is not declared, it will be treated as a local pose.<br>
+If the `mp` parameter is not declared, it will be treated as a global pose.<br>
+If the `ms` parameter is not declared, it will be treated as a global pose.
+{% endhint %}# 8.5.6 LVS Search Func.
 
-1. Search 기능 사용법
+### (1) How to Use the Search Function
 
-LVS는 search 기능을 제공하며 다음과 같은 목적으로 사용합니다.
+LVS provides a search function, which is used for the following purposes:
 
-- search : 시작점을 탐색하고 시작점으로 TCP가 이동하면서 추종할 위치를 설정 간격마다 버퍼에 저장하고 트래킹을 준비합니다.
-- step_search : 다단비드 검출, 단차 검출 
+- `search`: Searches for the starting point end, while the TCP (Tool Center Point) moves to the starting position, stores, the points to be tracked in a buffer at set intervals, preparing for tracking.
+- `step_search`: Used for multi-pass bead detection and step detection
 
-search를 수행하면 탐색을 수행하며 무효점이 검출되면 가장 최근의 유효점을 sp 인자에 포즈로 저장합니다.
+When a search is performed, the system searches for the target, and if an invalid point is detected, the most recent valid point is stored as the pose in the `sp` parameter.
 
-그 후 tracking을 준비하기 위해 찾은 점으로 TCP가 이동하면서 추종할 점들을 버퍼에 저장합니다.
+Subsequently, in order to prepare for tracking, the system stores the points to be followed in a buffer as the TCP moves to the found point.
 
-search 기능을 수행하면 seam tracking을 수행할 수 있는 상태가 됩니다.
+By performing the search function, the system becomes ready to perform "seam tracking". 
 
 {% hint style="info" %}
-탐색 방법 : 유효하지 않은 seam (LVS 제어기가 seam을 검출하지 못하는 상태)을 검지하여 시작점을 탐색합니다.
+  The search process detects invalid seams (when the LVS controller cannot detect a seam) and searches for the starting point.
+  The **search** function finds the start(or end), then moves to that location, storing the points to be tracked in a buffer.
 {% endhint %}
 
-search는 다음과 같이 사용합니다.
+
+```search``` function is used as follows:
 
 ```python
-move L, spd=60%, accu=0, tool=1
-delay 0.1 #탐색 시작위치의 accu가 0이 아닐경우 삽입해야 함
-var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
-lvs search, cnd=1, seam=1, sp=po_100
+    move L, spd=60%, accu=0, tool=1
+    delay 0.1 # if the accuracy of the starting position is not 0, it must be inserted.
+    var po_100=cpo() # The current pose is stored in the variable po_100
+    lvs search, cnd=1, seam=1, sp=po_100
 ```
 
-`lvs` 명령어에서 **[속성]** 에 진입하면 다음과 같이 search 설정을 수행할 수 있습니다.
+To configure the search function, enter **[property]** in the `lvs` command, where the search settings can be adjusted as follows:
 
 
 <p align="center">
  <img src="../../_assets/8_5_14_lvs_search_setting.png" width="80%"></img>
- <em><p align="center">그림 8.5.14. lvs search 설정화면</p></em>
+ <em><p align="center">Figure 8.5.14. lvs search settings</p></em>
 </p>   
 </br>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">설명</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">function</td>
-      <td style="text-align:left">
-        search 기능의 사용을 설정합니다.<br>
-        '무효' : lvs의 레이저 위치로 이동하면서 버퍼에 목표위치들을 저장합니다.<br>
-        '유효' : 경우 탐색방향으로 시작점과 종료점을 검출한 후 검출한 위치로 이동하면서 버퍼에 목표위치들을 저장합니다.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">direction</td>
-      <td style="text-align:left">
-       0 : +ToolX 방향으로 탐색합니다.<br>
-       1 : -ToolX 방향으로 탐색합니다.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">speed</td>
-      <td style="text-align:left">
-        탐색 속도를 mm/sec 단위로 설정합니다.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">offset</td>
-      <td style="text-align:left">
-       탐색점에서 용접선 방향으로 찾은 점을 설정한 mm 만큼 쉬프트시킬 수 있습니다.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Item | Description |
+|------|------|
+| function | Set the usage of the search function. <br> 'Disable': The system moves to the laser position of the LVS and stores the target positions in a buffer. <br> 'Enable': The system detects both the starting and ending points in the search direction, then moves to the detected location while storing the target positions in the buffer. |
+| distance | If the search function is set to **enable**, the maximum distance for searching the starting point should be entered [mm]. |
+| direction | 0: Search in the +ToolX direction. <br> 1: Search in the -ToolX direction. |
+| speed | The search speed can be set in mm/sec. |
+| offset | Points found in the direction of the welding line can be shifted by the specified number of mm from the detected position. |
+
+<br>
 
 <p align="center">
  <img src="../../_assets/8_5_15_lvs_search_example.png" width="80%"></img>
- <em><p align="center">그림 8.5.15. lvs search 예시</p></em>
+ <em><p align="center">Figure 8.5.15. lvs search Example</p></em>
 </p>   
 </br>
 
-다음과 같이 search 및 seam tracking을 티칭할 수 있습니다.
+The **search** and **seam tracking** functions can be taught as shown below.
 
 ```python
-move L, spd=60%, accu=0, tool=1
-delay 0.3
-var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
-lvs search, cnd=1, seam=1, sp=po_100
-weavon cnd=1
-arcon cnd=1
-lvs track, cnd=1, seam=1, sp=po_100
-move L, spd=30cm/min, accu=3, tool=1
-move L, spd=36cm/min, accu=3, tool=1
-move L, spd=40cm/min, accu=3, tool=1
-weavoff
-arcof
-end
+    move L, spd=60%, accu=0, tool=1
+    delay 0.3
+    var po_100=cpo() # The current pose is stored in the variable po_100
+    lvs search, cnd=1, seam=1, sp=po_100
+    weavon cnd=1
+    arcon cnd=1
+    lvs track, cnd=1, seam=1, sp=po_100
+    move L, spd=30cm/min, accu=3, tool=1
+    move L, spd=36cm/min, accu=3, tool=1
+    move L, spd=40cm/min, accu=3, tool=1
+    weavoff
+    arcof
+    end
 ```
 
 ---
 
-2. 다단비드 검출 기능 (step_search) 사용법
+### (2) How to Use the Multi-pass Bead Detection Function (step_search) 
 
-다단비드의 시작점을 검출해주는 기능으로 사용법은 search 기능과 동일합니다.
 
-`lvs` 명령어의 **[속성]**창에서 기능을 '유효'로 설정한 뒤 스캔거리를 '거리' 항목에 설정합니다.
+This function is used to detect the starting point of a multi-pass bead, and its usage is identical to the `search` function.
 
-다음과 같이 사용할 수 있습니다.
+In the **[property]** window of the `lvs` command, set the function to "Enable" and configure the scan distance in the "distance" field.
+
+It can be used as follows:
 
 ```python
-move L, spd=60%, accu=0, tool=1 # 다단비드 검출을 위한 스캔을 시작할 위치
-delay 0.3
-var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
-lvs step_search, cnd=1, seam=1, sp=po_100
-move L, tg=po_100, spd=40cm/min, accu=3, tool=1 # 찾은 위치로 이동
-end
-```# 8.5.7 LVS(Laser Vision Sensor) tracking 기능과 모니터링
+    move L, spd=60%, accu=0, tool=1 # Set the starting point for the multi-pass bead detection scan.
+    delay 0.3
+    var po_100=cpo() # The current pose is stored in the variable po_100
+    lvs step_search, cnd=1, seam=1, sp=po_100
+    move L, tg=po_100, spd=40cm/min, accu=3, tool=1 # Move to the found location.
+    end
+```# 8.5.7 LVS Tracking Func. and Monitoring
 
-### (1) tracking 개요
+### (1) LVS Tracking Overview
 
-LVS 트래킹은 티칭된 궤적과 실제 용접선의 차이를 보정해주는 기능입니다.
+LVS Tracking is a function that compensates for the different between the taught trajectory and the actual welding line.
 
 {% hint style="warning" %}
-기준 작업물에 대한 기준티칭은 정밀하게 수행되어야 합니다.<br>
-작업물의 위치 오차를 보정하기 위한 쉬프트를 적용한 후 LVS 기능을 사용하십시오.<br>
-해당내용은 8.5.5 LVS master mode 기능을 참고하십시오.
+The reference teaching for the base workpiece should be performed with high precision.<br>
+After applying the shift to correct the positioning error of the workpiece, the LVS function should be used.<br>
+For further details, please refer to [8.5.5 LVS Master Mode Func.].
 {% endhint %}
 
-레이저는 TCP보다 앞에 장착되어 있으므로 트래킹을 수행하기 위해서는 search 를 먼저 수행하여야 합니다. 
+Since the laser is mounted in front of the TCP, a search must be performed first to carry out tracking.
 
 {% hint style="info" %}
-search는 시점(또는 종점)을 찾고 그 위치로 이동하면서 추종할 점들을 버퍼에 저장합니다.
+  Please refer to the previous section, **[8.5.6 LVS Search Func.]**, for detailed information about the search function.
 {% endhint %}
 
-`lvs` 명령어의 **[속성]** 창에 진입하여 탐색 항목에 다음 항목을 설정하십시오.
 
-<p align="center">
- <img src="../../_assets/8_5_16.png" width="80%"></img>
- <em><p align="center">그림 8.5.16. lvs 명령어의 속성창</p></em>
-</p>   
-</br>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">설명</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">search 기능 무효</td>
-      <td style="text-align:left">
-        레이저 라인의 seam을 시작점으로 하여 TCP가 시작점으로 이동하면서 추종할 점들을 버퍼에 저장합니다.
-      </td>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">search 기능 유효</td>
-      <td style="text-align:left">
-        방향이 0인 경우 : +ToolX 방향으로 시작점을 탐색한 후 버퍼를 채우며 시작점으로 이동합니다.<br>
-        방향이 1인 경우 : -ToolX 방향으로 시작점을 탐색한 후 버퍼를 채우며 시작점으로 이동합니다.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">거리</td>
-      <td style="text-align:left">
-        탐색이 유효로 설정되어 있을 경우 시점을 탐색할 최대거리를 입력합니다. [mm]
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">속도</td>
-      <td style="text-align:left">
-        탐색시 이동속도 [mm/sec] 를 입력합니다.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">옵셋</td>
-      <td style="text-align:left">찾은 시작점에서 용접선 방향으로 쉬프트할 거리를 입력합니다. [mm]
-        찾은 시작점
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-따라서 LVS명령어의 구성은 다음과 같이 구성하여야 합니다.
+The configuration of the lvs command should be set as follows:
 
 ```python
-move L, spd=60%, accu=0, tool=1
-delay 0.3
-var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
-lvs search, cnd=1, seam=1, sp=po_100
-weavon cnd=1  
-arcon cnd=1
-lvs track, cnd=1, seam=1, sp=po_100
-move L, spd=30cm/min, accu=3, tool=1
-move L, spd=36cm/min, accu=3, tool=1
-move L, spd=40cm/min, accu=3, tool=1
-weavoff
-arcof
-end
+    move L, spd=60%, accu=0, tool=1
+    delay 0.3
+    var po_100=cpo() # The current pose is stored in the variable po_100
+    lvs search, cnd=1, seam=1, sp=po_100
+    weavon cnd=1  
+    arcon cnd=1
+    lvs track, cnd=1, seam=1, sp=po_100
+    move L, spd=30cm/min, accu=3, tool=1
+    move L, spd=36cm/min, accu=3, tool=1
+    move L, spd=40cm/min, accu=3, tool=1
+    weavoff
+    arcof
+    end
 ```
 
-search 명령어 수행과정은 다음 그림과 같습니다. (탐색 유효, 방향 0 설정시)  
-유효하지 않은 점을 시작점으로 찾아 sp에 저장한 후 시작점으로 이동하면서 데이터 버퍼를 채웁니다.
+The processs of executing the search command is illustrated in the following figure (when search is set to valid and direction is set to 0).
+An invalid point is found and stored in the `sp` parameter as the starting point, then the TCP moves to the starting point while filling the data buffer. 
 
 <p align="center">
  <img src="../../_assets/8_5_17.png" width="80%"></img>
- <em><p align="center">그림 8.5.17. lvs search 과정</p></em>
+ <em><p align="center">Figure 8.5.17. LVS search process</p></em>
 </p>   
 </br>
 
-### (2) offset량을 지정한 tracking 사용법
+### (2) How to Use Tracking with an Offset Value
 
-만약 용접선(seam)을 정확히 추종하는 것이 아닌 좌우 또는 높이 offset을 두고 추종하고자 한다면 `lvs` 명령어의 side와 height에 
-옵셋값을 mm 단위로 지정하면 됩니다. 이 때 옵셋값은 툴좌표계 방향으로 적용됩니다.
+If you want to track with an offset from the seam (instead of exactly following the welding line), you can specify the offset values for side and height in the `lvs` command in mm units. The offset is applied in the tool coordinate system direction.
+
 
 ```python
-move L, spd=60%, accu=0, tool=1
-delay 0.3
-var po_100=cpo() #현재 포즈를 선언한 변수 po_100에 저장함
-lvs search, cnd=1, seam=1, sp=po_100
-weavon cnd=1  
-arcon cnd=1
-lvs track, cnd=1, seam=1, sp=po_100, side=5, height=-5 #ToolX방향으로 5mm, ToolZ방향으로 -5mm 옵셋 트래킹
-move L, spd=30cm/min, accu=3, tool=1
-move L, spd=36cm/min, accu=3, tool=1
-move L, spd=40cm/min, accu=3, tool=1
-weavoff
-arcof
-end
+    move L, spd=60%, accu=0, tool=1
+    delay 0.3
+    var po_100=cpo() # The current pose is stored in the variable po_100
+    lvs search, cnd=1, seam=1, sp=po_100
+    weavon cnd=1  
+    arcon cnd=1
+    lvs track, cnd=1, seam=1, sp=po_100, side=5, height=-5 # offset tracking with 5mm in the ToolX, and -5mm in the ToolZ
+    move L, spd=30cm/min, accu=3, tool=1
+    move L, spd=36cm/min, accu=3, tool=1
+    move L, spd=40cm/min, accu=3, tool=1
+    weavoff
+    arcof
+    end
 ```
 
 {% hint style="info" %}
-* weaving을 사용할 경우 각도 및 진폭에 따라 stickout 길이가 길어지므로 search 및 track에 height를 -값으로 지정하여 이를 해소할 수 있습니다.
+* When using weaving, the stickout length increases depending on the angle and amplitude. To compensate for this, set the height with a negative value during both search and track operations.
 {% endhint %}
 
-(3) lvs 모니터링
-
-lvs모니터링은 **[창조정]-[선택]-[lvs 모니터링]** 항목으로 활성화 할 수 있습니다.
-
-모니터링에서는 다음과 같은 항목을 확인할 수 있습니다.
+### (3) LVS Monitoring
 
 <p align="center">
  <img src="../../_assets/8_5_18_tracking_monitoring.png" width="80%"></img>
- <em><p align="center">그림 8.5.18. lvs 모니터링</p></em>
+ <em><p align="center">Figure 8.5.18. LVS Monitoring</p></em>
 </p>   
 </br>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">항목</th>
-      <th style="text-align:left">설명</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
-      전체 누적 보정량 (X, Y, Z)
-      </td>
-      <td style="text-align:left">
-        위빙 미사용 시에는 base좌표계 기준 누적 보정량, 위빙 사용시에는 위빙 좌표계 기준 누적보정량을 의미합니다.
-      </td>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-      센서
-      </td>
-      <td style="text-align:left">
-      qual :  현재 레이저의 seam 센싱 무효,유효를 나타냅니다.<br> 
-      Y, Z : 센서 이미지좌표계(2D)에서의 현재 센싱중인 seam의 위치입니다.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">툴 끝</td>
-      <td style="text-align:left">
-        현재 TCP의 base좌표계 기준 위치 입니다.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">추종점</td>
-      <td style="text-align:left">
-        현재 TCP가 트래킹하고 있는 base좌표계 기준 점입니다.
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">센싱점</td>
-      <td style="text-align:left">현재 레이저가 보고있는 곳의 base좌표 값 입니다. </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">버퍼사이즈</td>
-      <td style="text-align:left">따라갈 점들이 저장되어 있는 버퍼의 개수입니다. 이 값이 계속 늘어나거나 계속 줄어들거나 0이 되면 tracking, 통신 혹은 설정상에 문제가 있는 것 입니다.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">정보</td>
-      <td style="text-align:left">자동캘리브레이션 진행상황 및 기타 정보를 표시합니다. </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">실시간 이미지</td>
-      <td style="text-align:left">빨간 원들을 버퍼에 저장된 따라갈 점들입니다.</td>
-    </tr>
-  </tbody>
-</table>
 
-# 8.6 STITCH 기능# 8.6.1  STITCH 기능 개요
- 
-스티치 용접을 바느질 하는 것 처럼 띄엄띄엄 용접하는 기능입니다. 그림 8.17 시편에 시작점과 종료점을 설정하여 스티치 용접을 한 모습입니다. 스티치 용접에서 그림 8.16과 같이 파라미터 a와 b를 설정하여 용접구간과 비용접 구간의 길이를 설정하여 스티치 패턴의 용접을 진행합니다.
-그림 8.18에서 간단하게 스티치 용접의 프로세스를 설명 합니다. P[1]위치에서 P[4] 위치까지 위치를 기록합니다. 이 그림에서는 P[2]와 P[3] 구간에서 스티치 용접을 진행하며 사용 명령어로 ```stitch on/off```와 ```arcon/arcoff``` 명령어를 사용하였습니다.
+LVS Monitoring can be activated by selecting **[pane layout > select > LVS tracking]**.
+
+In the monitoring, the follwing items can be checked:
+
+
+| Item | Description |
+|------|------|
+| Total Cumulative Compensation<br> (X, Y, Z) | If weaving is not used, this represents the cumulative compensation relative to the base coordinate system. If weaving is used, it refers to the cumulative compensation in the weaving corrdinate syste. |
+| Sensor | qual: Indicates whether the current laser seam sensing is valid or invalid.<br> Y, Z: The position of the currently sensed seam in the sensor image coordinate system(2D). |
+| Tool Tip | The current position of the TCP relative to the base coordinate system. | 
+| Tracking Point | The point that the TCP is currently tracking, relative to the base coordinate system. |
+| Sensing Point | The base coordinate value of the location currently being sensed by the laser. |
+| Buffer Size | The number of points stored in the buffer for tracking. If this value keeps increasing, decreasing, or reaches 0, there may be a problem with tracking, communication, or configuration. |
+| Information | Displays the progress of the auto-calibration and other relevant information. |
+| Real-time Image | Displays the points to be tracked, represented by red circles, that are stored in the buffer. |
+
+# 8.6 STITCH Function# 8.6.1  STITCH Func. Overview
+
+Stitch welding is a function where welding is performed intermittently, similar to stitching. In [Figure 8.6.2], stitch welding is performed by setting start and end points on the specimen. In stitch welding, parameters `a` and `b` are set as shown in [Figure 8.6.1] to determine the length of the welding section and the non-welding section, thus forming the stitch pattern.
+
+[Figure 8.6.3] provides a simple explanation of the stitch welding process. Positions from P[1] to P[4] are recorded. In this diagram, stitch welding is performed at the P[2] and P[3] sections, using the commands ```stitch on/off``` and ```arcon/arcoff```.
 
 </br>
 
 <p align="center">
  <img src="../../_assets/8_6_1.png" width="40%"></img>
- <em><p align="center">그림 8.6.1. 스티치 기능 기본 파라미터</p></em>
+ <em><p align="center">Figure 8.6.1. Stitch Func. basic parameter</p></em>
 </p> 
 
 </br>
@@ -4236,7 +4308,7 @@ lvs모니터링은 **[창조정]-[선택]-[lvs 모니터링]** 항목으로 활�
 
 <p align="center">
  <img src="../../_assets/8_6_2.png" width="50%"></img>
- <em><p align="center">그림 8.6.2. 스티치 용접 시험 시편</p></em>
+ <em><p align="center">Figure 8.6.2. Stitch Welding specimen</p></em>
 </p> 
  
 </br>
@@ -4244,7 +4316,7 @@ lvs모니터링은 **[창조정]-[선택]-[lvs 모니터링]** 항목으로 활�
 
 <p align="center">
  <img src="../../_assets/8_6_3.png" width="60%"></img>
- <em><p align="center">그림 8.6.3. 스티치 용접 프로세스</p></em>
+ <em><p align="center">Figure 8.6.3. Stitch Welding Process</p></em>
 </p> 
 
 
@@ -4262,113 +4334,114 @@ lvs모니터링은 **[창조정]-[선택]-[lvs 모니터링]** 항목으로 활�
 
 
 
-# 8.6.2 stitch 명령어 작성 
+# 8.6.2 STITCH Func. Command
  
 
 <p align="center">
  <img src="../../_assets/8_6_4.png" width="60%"></img>
- <em><p align="center">그림 8.6.4. 스티치 명령어 작성 예시</p></em>
+ <em><p align="center">Figure 8.6.4. Stitch Command Example</p></em>
 </p>  
 
 
-```stitch``` 명령어 입력
-**[명령입력]-[아크]-[stitch]** (on/off 선택 후 **[ENTER[YES]]** 버튼 클릭)
+```stitch``` Command: 
+After selecting **[cmd.input > arcweld > stitch]** in sequence, choose on/off and press **[ENTER]**.
 
 
 {% hint style="warning" %}
-- ```S3 move L, spd=10mm/s, accu=3, tool=1```  
-	 - L : 반드시 직선 보간을 선택  
-	 - 10mm/s : 용접 속도, Stitch 용접의 ON 구간에서 속도, 반드시 단위를 mm/s로 선택
-- ```arcon / arcoff``` 명령어 함께 사용 → 용접 
-{% endhint %}# 8.6.3 stitch 기능 파라미터 설정
+- ```S2 move L, spd=10mm/s, accu=3, tool=1```  
+	- L : Ensure that linear interpolation is selected.  
+	- 200mm/sec : Welding speed - the speed during the ON section of the stitch welding. the unit must be set to mm/sec
+- ```arcon / arcoff``` Use the command together to start welding.
+{% endhint %}# 8.6.3 STITCH Func. Parameter setting
 
 
 <p align="center">
  <img src="../../_assets/8_6_5.png" width="80%"></img>
- <em><p align="center">그림 8.6.5. 스티치 용접 과정에 따른 Profile</p></em>
+ <em><p align="center">Figure 8.6.5. Stitch Welding Process Profile</p></em>
 </p>
 
 
+[그림 8.6.5]는 스티치 용접 과정을 보여줍니다. 이 차트에 따라 `stitch` 명령어의 옵션들을 설정할 수 있습니다.
 
-그림 8.21은 ```stitch``` 명령어에서 **[속성]** 버튼을 눌러서 접근하는 화면이고, 그림 8.22은 그림 8.21화면에서 '구분' 버튼으로 접근합니다. 그림 8.23은 Job 프로그램 화면입니다.
-그림 8.21 – 8.22 의 파라미터에 대한 설명은 다음과 같습니다.
-
-- 조건 번호 : 우측 조건 목록에서 선택 
-- 설명 : 소프트 키보드로 입력
-- 일반
-  - (1) On 유지 시간 : 용접 신호가 미리 켜지는 시간
-  - (2) Off 유지 시간 : 용접 신호가 미리 꺼지는 시간
-  - (3) 시작 거리 : 스티치 시작 전 On 구간 속도 진입 구간 길이
-  - (4) OFF 속력 : 비용접 구간 용접 속력
-- 구분
-  - (5) 구분 : 스티치 용접 조건  
-    Ex) section1 조건의 스티치 용접이 해당 count만큼 진행되면 section2의 조건에 해당하는 스티치 용접이 진행됨
-  - (6) ON 거리 : 용접 구간 길이
-  - (7) OFF 거리 : 비용접 구간 길이
-  - (8) 횟수 : Stitch 용접 횟수
-  - (9) ON 속력 : 용접 구간 용접 속력 
-- 입출력 
-  - (11) Stitch Enable
-  - (12) Equipment Enable
-  - (13) Equipment Output  
-    → 3가지 파라미터에 1이 입력되어야 재생 중에 스티치 용접이 진행됨
-
-
-
-{% hint style="warning" %}
-- (9) ON 속력 : 스티치 구간에서 용접(ON) 구간의 속도 설정은 스텝 속도로 지정
-- (6) ON 거리, (7) OFF 거리, (8) 횟수 모두 입력 되어야 section2의 조건을 입력할 수 있음
-- (11) STITCH enable Port, (12) Equipment enable Port, (13) Equipment Output Port 모두 1을 입력해야 playback에서 재생 중에 스티치 용접이 진행됨. 그렇지 않을 경우 용접하지 않고 스티치 모션만 진행됨.
-
-{% endhint %}
+[Figure 8.6.5] illustrates the stitch welding process. Based on this chart, you can configure the options for the `stitch` command.
 
 <p align="center">
  <img src="../../_assets/8_6_6.png" width="70%"></img>
- <em><p align="center">그림 8.6.6. 스티치 용접 조건 대화상자1</p></em>
+ <em><p align="center">Figure 8.6.6. Stitch Welding Condition Dialog Box1 (General)</p></em>
 </p>
 
 <p align="center">
  <img src="../../_assets/8_6_7.png" width="70%"></img>
- <em><p align="center">그림 8.6.7. 스티치 용접 조건 대화상자2</p></em>
+ <em><p align="center">Figure 8.6.7. Stitch Welding Condition Dialog Box2 (Section)</p></em>
 </p>
 
-<p align="center">
- <img src="../../_assets/8_6_8.png" width="40%"></img>
- <em><p align="center">그림 8.6.8. 스티치 용접 명령어 입력</p></em>
-</p>
- 
 
-# 8.5.4 STITCH 기능 부가 사양
+[그림 8.6.6]은 `stitch` 명령어에 커서를 두고 TP 좌측 화면에서 [**속성**] 버튼을 눌러 접근할 수 있습니다. [그림 8.6.7]은 이전 화면에서 [**구분**] 탭을 눌러 접근합니다. 각 그림에 대한 파라미터 설명은 다음과 같습니다.
 
-- **비상정지, 재기동**  
-Stitch 용접 진행 중, 비상정지나 playback 정지 후 재기동이 되지만 제어기 전원차단 후 재부팅하면 Stitch 재기동 안됨
-# 8.7 Arc Trajectory Manager
+[Figure 8.6.6] shows the screen accessed by placing the cursor on the `stitch` command and pressing the [**Property**] button on the left side of the TP screen. [Figure 8.6.7] is accessed by selecting the [**Section**] tab from the previous screen.
+The descriptions of the parameters for each figure are as follows:
 
-본 기능은 아크용접을 수행할 때 궤적, 전류, 전압, 토치의 자세 (작업각, 푸쉬풀각)를 실시간으로 보여줍니다.
+- Condition Number: Select from the list of conditions on the right
+- Description: Input using the soft keyboard
+- General
+  - (1) On delay Time: The time period during which the welding signal is turned on in advance
+  - (2) Off delay Time: The time period during which the welding signal is turned off in advance
+  - (3) Distance to Start: The length of the speed entry section before the stitch welding starts(On section)
+  - (4) Off Speed: Welding Speed during the non-overlapping (Off) section
 
-이를 통해 용접시 용접각도 및 전류, 전압에 대한 정보를 실시간으로 확인하고 추후 용접 티칭을 수정하는데 용이하게 사용할 수 있습니다.
+- Section
+  - (5) Section: Stitch welding condition  <br/>
+    Example. When stitch welding under the conditions of section 1 is performed for the specified count, stitch welding proceeds under the conditions of section 2
+  - (6) On Distance: Length of the welding section
+  - (7) Off Distance: Length of the non-overlapping (Off) section
+  - (8) Count: Number of stitch welding repetitions
+  - (9) On speed: Welding speed during the welding section
 
-기능을 동작시키려면 다음과 같이 설정합니다.
+- Input/Output
+  - (10) Stitch Enable
+  - (11) Equipment Enable
+  - (12) Equipment Output  <br/>
+    → All three parameters must be set to 1 for stitch welding to proceed during playback
 
-**[시스템]-[응용파라미터]-[아크용접]** 에서 "아크 궤적 모니터링"을 '유효'로 설정
+
+{% hint style="warning" %}
+- **(6) on dist, (7) off dist, (8) count**: All of these must be entered to set the conditions for section2.
+- **(9) on speed**: The speed for the welding (ON) section in the stitch section is set as the step speed.
+- **(11) Stitch Enable Port, (12) Equipment enable Port, (13) Equipment Output Port**: All must be set to 1 for the stitch welding welding to proceed during playback. If not set, welding will not occur, and only the stitch motion will proceed.
+{% endhint %}
+
+# 8.5.4 STITCH Func. Additional Specifications
+
+- **Emergency Stop, Restart**  
+
+During stitch welding, the process can resume after an emergency stop or playback stop. However, if the controller power is turned off and rebooted, the stitch welding cannot be restarted.# 8.7 Arc Trajectory Manager
+
+This features displays the trajectory, current, voltage, and torch position (welding angle, push-pull angle) in real-time during arc welding.
+
+Through this, you can monitor the welding angle, current, and voltage in real time during arc welding, making it easier to modify the welding teaching later.
+
+To enable this feature, follow these steps:
+
+Set "Arc trajectory monitoring" to 'activation on' under **[System > 2: Application parameter > 2: Arc welding]**.
+
 
 {% hint style="info" %}
-본 기능은 60.30-00 버전부터 지원합니다.
+This feature is available during from version 60.30-00.
 {% endhint %}
 
 <p align="center">
  <img src="../../_assets/8_7_1_arc_trj_mgr.png" width="90%"></img>
- <em><p align="center">그림 8.7.1. 실시간 용접 궤적 모니터링</p></em>
+ <em><p align="center">Figure 8.7.1. Real-time Arc trajectory monitoring</p></em>
 </p>
 
-`arcon` 부터 `arcoff` 구간 까지의 궤적 및 용접정보를 실시간으로 확인할 수 있습니다.
+You can monitor the trajectory and welding information in real-time from the `arcon` to the `arcoff` section.
 
-화살표 키를 눌러 평면을 움직이거나 (shift) +/- 키를 눌러 확대(축소) 할 수 있습니다.
+Use the arrow keys to move the plane, or press **[Shift] + [+/-]** keys to zomm in or out.
 
-작업각 및 푸쉬풀 각은 용접평면에 대해 용접진행방향을 기준으로 계산됩니다.
+The welding angle and push/pull angle are calculated base on the welding direction relative to the welding plane.
 
 {% hint style="info" %}
-용접 궤적에 따라 용접평면은 자동으로 회전합니다.
+The welding plane automatically rotates according to the welding trajectory.
 {% endhint %}
 
 
