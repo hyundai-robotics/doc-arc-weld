@@ -29,7 +29,7 @@
 ```지연시간 캘리브레이션 시에는 -1으로 설정합니다. ```
 
 {% hint style="info" %}
-용접 중 아크센싱을 시스템변수로 weavings_.side_sensing_sensitivity=0 를 실행하면 추종을 Off 할 수 있습니다. 다시 On하려면 이 값을 양수로 설정하면 됩니다.
+아크센싱 도중 시스템변수로 weavings_.side_sensing_sensitivity=0 를 실행하면 추종을 Off 할 수 있습니다. 다시 On하려면 이 값을 양수로 설정하면 됩니다.
 {% endhint %}
 
 ### (4) 좌우 센싱 시작 사이클: [0 ~ 9]  
@@ -45,7 +45,7 @@
 ```지연시간 캘리브레이션 시에는 -1으로 설정합니다. ```
 
 {% hint style="info" %}
-용접 중 아크센싱을 시스템변수로 weavings_.height_sensing_sensitivity=0 를 실행하면 추종을 Off 할 수 있습니다. 다시 On하려면 이 값을 양수로 설정하면 됩니다.
+아크센싱 도중 시스템변수로 weavings_.height_sensing_sensitivity=0 를 실행하면 추종을 Off 할 수 있습니다. 다시 On하려면 이 값을 양수로 설정하면 됩니다.
 {% endhint %}
 
 ### (6) 높이(상하) 센싱 시작 사이클: [좌우 시작 사이클+1 ~ 10]  
