@@ -25,7 +25,7 @@ This setting defines the limit for the left/right/up/down arc sensing tracking d
 If tracking exceeds the limit set by the arc sensing, an error will occur and stop the operation.
 
 
-### (3) Calculation Range: [1 ~ 100] % (default: 60%)
+### (3) Calculation Range: [1 ~ 100] % (default: 50%)
 
 This setting defines the range for calculating the left/right current. <br>
 ```As the weaving amplitude decreases, it is advantageous to set this value smaller. (e.g. for 1mm amplitude, set to 50%; for 0.5 mm amplitude, 40% is recommended.)```
@@ -35,6 +35,12 @@ This setting defines the range for calculating the left/right current. <br>
 
 This setting defines the asymmetric sensing ratio when the left and right bead widths are different.<br>
 A positive value indicates the right direction when viewed from the back of the torch in the welding direction, and a negative value indicates the left direction.
+
+{% hint style="info" %}
+  During arc sensing, if `weavings_.asymetric_sensing_ratio=10` is executed, asymmetric tracking will occur towards the right, maintaining the right-side current 10A higher.
+  If this value is set to a negative number, asymmetric tracking will occur towards the left.
+{% endhint %}
+
 
 ---
 
@@ -73,7 +79,7 @@ This setting determines whether the current will be regressed at the end of each
 
 ### (9) Current Regression Error Tolerance ```(Welding Seam Estimation + Current Difference)``` <br>
 
-This setting defines the acceptable current error during regression. For smaller weaving widths or minor improvement angles, a smaller value should be selected. The default value is 5A.
+This setting defines the acceptable current error during regression. For smaller weaving widths or minor improvement angles, a smaller value should be selected. The default value is 1A.
 
 
 ### (10) Data Sampling Option during Regression ```(Welding Seam Estimation + Current Difference)``` <br>

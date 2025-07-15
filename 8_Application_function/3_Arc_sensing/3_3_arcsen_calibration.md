@@ -21,7 +21,7 @@ Enter the [**Property**] window of the weaving command and set the wall directio
 
 #### Step 2.  
 
-Enter the Arc Sensing (General) in the property window of the weaving command, set the type to "Welding Seam Estimation & Current Difference", and set both the left/right and up/down sensitivities to 0.  
+Enter the Arc Sensing (General) in the property window of the weaving command, set the type to "Welding Seam Estimation & Current Difference", and set both the left/right and up/down sensitivities to -1.  
 
 
 <p align="center">
@@ -34,8 +34,11 @@ Enter the Arc Sensing (General) in the property window of the weaving command, s
 #### Step 3. 
 
 As shown in the figure above, set the entry step to approach from the opposite direction of the imaginary wall.
-Teach the starting point and end point with an approximate gap to 60 cm. <br>
+Teach the starting point and end point with an gap to 60 cm. <br>
 During this process, ensure that the torch's working angle(Roll angle) is maintained at 45 degrees.
+
+Create an entry step to approach from the opposite direction of the virtual wall as shown in the figure above, and teach the starting and ending points with a 60 cm gap between them.  
+In this case, keep the torch working angle (roll angle) consistent within the range of 30 to 45 degrees.
 
 #### Step 4.  
 

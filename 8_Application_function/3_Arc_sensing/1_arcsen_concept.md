@@ -2,7 +2,7 @@
 
 When weaving during arc welding, the distance between the torch and the base material changes.
 This change in distance causes a variation in wire resistance, which in turn alters the current flowing.
-In other words, by using the current change during the weaving section, the distance to be corrected in the left and right directions of the weaving area can be calculated, allowing the seam to be tracked.
+In other words, by using the current change during the weaving section, the distance to be corrected in the left and right directions of the weaving plane can be calculated, allowing the seam to be tracked.
 
 The height value at the welding start position is used as the reference, and the current value in the middle of the weaving section is used to correct the vertical direction during welding.
 Or, instead of using the starting position current reference value, **the user can directly input a custom current value** as the reference for correction.

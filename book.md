@@ -2617,7 +2617,7 @@ Typically, Arc Sensing is used to perform multi-pass welding, and multi-pass wel
 
 When weaving during arc welding, the distance between the torch and the base material changes.
 This change in distance causes a variation in wire resistance, which in turn alters the current flowing.
-In other words, by using the current change during the weaving section, the distance to be corrected in the left and right directions of the weaving area can be calculated, allowing the seam to be tracked.
+In other words, by using the current change during the weaving section, the distance to be corrected in the left and right directions of the weaving plane can be calculated, allowing the seam to be tracked.
 
 The height value at the welding start position is used as the reference, and the current value in the middle of the weaving section is used to correct the vertical direction during welding.
 Or, instead of using the starting position current reference value, **the user can directly input a custom current value** as the reference for correction.
@@ -2723,7 +2723,11 @@ The options for Welding Seam, Current Difference, and Current Difference + Gap a
 
 This setting adjusts the sensitivity for left and right sensing on the weaving plane.<br>
 The default value is 5, which changes the strength of the left/right sensing.<br>
-```When performing delay time calibration, set this to 0.```
+```When performing delay time calibration, set this to -1.```
+
+{% hint style="info" %}
+  During arc sensing, executing the system variable `weavings_.side_sensing_sensitivity=0` will disable tracking. To enable tracking agian, set this value to a positive number.
+{% endhint %}
 
 
 ### (4) Left/Right Sensing Start Cycle: [0 ~ 9]
@@ -2736,7 +2740,11 @@ This setting determines the cycle at which left/right sensing will begin on the 
 
 This setting adjusts the sensitivity for up and down sensing on the weaving plane.<br>
 The default value is 5, which changes the strength of the up/down sensing.<br>
-```When performing delay time calibration, set this to 0.```
+```When performing delay time calibration, set this to -1.```
+
+{% hint style="info" %}
+  During arc sensing, executing the system variable `weavings_.height_sensing_sensitivity=0` will disable tracking. To enable tracking agian, set this value to a positive number.
+{% endhint %}
 
 
 ### (6) Height (Up/Down) Sensing Start Cycle: [Left/Right Start Cycle +1 ~ 10]
@@ -2751,11 +2759,17 @@ This setting determines the reference current for up/down sensing. <br>
 The torch height during arc sensing welding wire tracking is based on this setting.<br>
 ```When set to 0, the average value of the initial section current will be used as the reference. (If there is a tack weld at the start of the weld, be cautious as an unintended high initial current may be used as the reference.) ```
 
+{% hint style="info" %}
+  When `weavings_.height_sensing_reference_current=200` is executed immediately after `weaving on` and `arc on`, tracking will be maintained while keeping a height of 200A.
+{% endhint %}
+
 
 ### (8) Real-Time Gap Sensing Sensitivity: [0(disabled) ~ 10]
 
-This function automatically adjusts welding speed and weaving based on the gap. When not in use, set it to 0. <br>
-When enabled, this setting adjusts the sensitivity of the width variation. The value should be set according to bead quality and the degree of width variation.
+<!-- This function automatically adjusts welding speed and weaving based on the gap. When not in use, set it to 0. <br>
+When enabled, this setting adjusts the sensitivity of the width variation. The value should be set according to bead quality and the degree of width variation. -->
+
+Set to 0. (Not Supported)
 
 
 ### (9) Real-Time Gap Sensing Resolution: [ ]  
@@ -2791,7 +2805,7 @@ This setting defines the limit for the left/right/up/down arc sensing tracking d
 If tracking exceeds the limit set by the arc sensing, an error will occur and stop the operation.
 
 
-### (3) Calculation Range: [1 ~ 100] % (default: 60%)
+### (3) Calculation Range: [1 ~ 100] % (default: 50%)
 
 This setting defines the range for calculating the left/right current. <br>
 ```As the weaving amplitude decreases, it is advantageous to set this value smaller. (e.g. for 1mm amplitude, set to 50%; for 0.5 mm amplitude, 40% is recommended.)```
@@ -2801,6 +2815,12 @@ This setting defines the range for calculating the left/right current. <br>
 
 This setting defines the asymmetric sensing ratio when the left and right bead widths are different.<br>
 A positive value indicates the right direction when viewed from the back of the torch in the welding direction, and a negative value indicates the left direction.
+
+{% hint style="info" %}
+  During arc sensing, if `weavings_.asymetric_sensing_ratio=10` is executed, asymmetric tracking will occur towards the right, maintaining the right-side current 10A higher.
+  If this value is set to a negative number, asymmetric tracking will occur towards the left.
+{% endhint %}
+
 
 ---
 
@@ -2839,7 +2859,7 @@ This setting determines whether the current will be regressed at the end of each
 
 ### (9) Current Regression Error Tolerance ```(Welding Seam Estimation + Current Difference)``` <br>
 
-This setting defines the acceptable current error during regression. For smaller weaving widths or minor improvement angles, a smaller value should be selected. The default value is 5A.
+This setting defines the acceptable current error during regression. For smaller weaving widths or minor improvement angles, a smaller value should be selected. The default value is 1A.
 
 
 ### (10) Data Sampling Option during Regression ```(Welding Seam Estimation + Current Difference)``` <br>
@@ -2870,7 +2890,7 @@ Enter the [**Property**] window of the weaving command and set the wall directio
 
 #### Step 2.  
 
-Enter the Arc Sensing (General) in the property window of the weaving command, set the type to "Welding Seam Estimation & Current Difference", and set both the left/right and up/down sensitivities to 0.  
+Enter the Arc Sensing (General) in the property window of the weaving command, set the type to "Welding Seam Estimation & Current Difference", and set both the left/right and up/down sensitivities to -1.  
 
 
 <p align="center">
@@ -2883,8 +2903,11 @@ Enter the Arc Sensing (General) in the property window of the weaving command, s
 #### Step 3. 
 
 As shown in the figure above, set the entry step to approach from the opposite direction of the imaginary wall.
-Teach the starting point and end point with an approximate gap to 60 cm. <br>
+Teach the starting point and end point with an gap to 60 cm. <br>
 During this process, ensure that the torch's working angle(Roll angle) is maintained at 45 degrees.
+
+Create an entry step to approach from the opposite direction of the virtual wall as shown in the figure above, and teach the starting and ending points with a 60 cm gap between them.  
+In this case, keep the torch working angle (roll angle) consistent within the range of 30 to 45 degrees.
 
 #### Step 4.  
 
