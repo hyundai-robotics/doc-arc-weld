@@ -351,132 +351,132 @@
 	},
 	{
 		"link": "8_Application_function/3_Arc_sensing/2_arcsen_spec.md",
-		"char_ofs": 77251,
-		"byte_ofs": 134825
+		"char_ofs": 77243,
+		"byte_ofs": 134805
 	},
 	{
 		"link": "8_Application_function/3_Arc_sensing/3_1_arcsen_condition_general.md",
-		"char_ofs": 78104,
-		"byte_ofs": 136366
+		"char_ofs": 78096,
+		"byte_ofs": 136346
 	},
 	{
 		"link": "8_Application_function/3_Arc_sensing/3_2_arcsen_condition_advanced.md",
-		"char_ofs": 79671,
-		"byte_ofs": 139453
+		"char_ofs": 79997,
+		"byte_ofs": 139867
 	},
 	{
 		"link": "8_Application_function/3_Arc_sensing/3_3_arcsen_calibration.md",
-		"char_ofs": 81385,
-		"byte_ofs": 142769
+		"char_ofs": 81870,
+		"byte_ofs": 143458
 	},
 	{
 		"link": "8_Application_function/3_Arc_sensing/4_arcsen_command.md",
-		"char_ofs": 82948,
-		"byte_ofs": 145704
+		"char_ofs": 83448,
+		"byte_ofs": 146420
 	},
 	{
 		"link": "8_Application_function/3_Arc_sensing/5_arcsen_monitoring.md",
-		"char_ofs": 85377,
-		"byte_ofs": 149860
+		"char_ofs": 85877,
+		"byte_ofs": 150576
 	},
 	{
 		"link": "8_Application_function/3_Arc_sensing/6_multipass_overview.md",
-		"char_ofs": 86257,
-		"byte_ofs": 151721
+		"char_ofs": 86757,
+		"byte_ofs": 152437
 	},
 	{
 		"link": "8_Application_function/3_Arc_sensing/7_multipass_command.md",
-		"char_ofs": 87121,
-		"byte_ofs": 153335
+		"char_ofs": 87621,
+		"byte_ofs": 154051
 	},
 	{
 		"link": "8_Application_function/3_Arc_sensing/9_example_butt_gap.md",
-		"char_ofs": 89882,
-		"byte_ofs": 158518
+		"char_ofs": 90382,
+		"byte_ofs": 159234
 	},
 	{
 		"link": "8_Application_function/3_Arc_sensing/10_example_multipass.md",
-		"char_ofs": 93256,
-		"byte_ofs": 163272
+		"char_ofs": 93756,
+		"byte_ofs": 163988
 	},
 	{
 		"link": "8_Application_function/4_Height_sensing/README.md",
-		"char_ofs": 95122,
-		"byte_ofs": 165600
+		"char_ofs": 95622,
+		"byte_ofs": 166316
 	},
 	{
 		"link": "8_Application_function/4_Height_sensing/1_hsen_condition.md",
-		"char_ofs": 96508,
-		"byte_ofs": 168187
+		"char_ofs": 97008,
+		"byte_ofs": 168903
 	},
 	{
 		"link": "8_Application_function/5_LVS_tracking/README.md",
-		"char_ofs": 99256,
-		"byte_ofs": 174008
+		"char_ofs": 99756,
+		"byte_ofs": 174724
 	},
 	{
 		"link": "8_Application_function/5_LVS_tracking/1_overall.md",
-		"char_ofs": 99302,
-		"byte_ofs": 174078
+		"char_ofs": 99802,
+		"byte_ofs": 174794
 	},
 	{
 		"link": "8_Application_function/5_LVS_tracking/2_settings.md",
-		"char_ofs": 105696,
-		"byte_ofs": 183032
+		"char_ofs": 106196,
+		"byte_ofs": 183748
 	},
 	{
 		"link": "8_Application_function/5_LVS_tracking/3_calibration.md",
-		"char_ofs": 109054,
-		"byte_ofs": 188706
+		"char_ofs": 109554,
+		"byte_ofs": 189422
 	},
 	{
 		"link": "8_Application_function/5_LVS_tracking/4_seam_finding.md",
-		"char_ofs": 111104,
-		"byte_ofs": 192574
+		"char_ofs": 111604,
+		"byte_ofs": 193290
 	},
 	{
 		"link": "8_Application_function/5_LVS_tracking/5_lvs_master_mode.md",
-		"char_ofs": 114484,
-		"byte_ofs": 197862
+		"char_ofs": 114984,
+		"byte_ofs": 198578
 	},
 	{
 		"link": "8_Application_function/5_LVS_tracking/6_search.md",
-		"char_ofs": 116114,
-		"byte_ofs": 201047
+		"char_ofs": 116614,
+		"byte_ofs": 201763
 	},
 	{
 		"link": "8_Application_function/5_LVS_tracking/7_tracking_monitoring.md",
-		"char_ofs": 118936,
-		"byte_ofs": 205197
+		"char_ofs": 119436,
+		"byte_ofs": 205913
 	},
 	{
 		"link": "8_Application_function/6_Stitch/README.md",
-		"char_ofs": 122458,
-		"byte_ofs": 210361
+		"char_ofs": 122958,
+		"byte_ofs": 211077
 	},
 	{
 		"link": "8_Application_function/6_Stitch/1_overall_.md",
-		"char_ofs": 122473,
-		"byte_ofs": 210383
+		"char_ofs": 122973,
+		"byte_ofs": 211099
 	},
 	{
 		"link": "8_Application_function/6_Stitch/2_command.md",
-		"char_ofs": 123283,
-		"byte_ofs": 211696
+		"char_ofs": 123783,
+		"byte_ofs": 212412
 	},
 	{
 		"link": "8_Application_function/6_Stitch/3_parameter.md",
-		"char_ofs": 123743,
-		"byte_ofs": 212331
+		"char_ofs": 124243,
+		"byte_ofs": 213047
 	},
 	{
 		"link": "8_Application_function/6_Stitch/4_aux_spec.md",
-		"char_ofs": 125241,
-		"byte_ofs": 214792
+		"char_ofs": 125741,
+		"byte_ofs": 215508
 	},
 	{
 		"link": "8_Application_function/7_Arc_trj_mgr/README.md",
-		"char_ofs": 125360,
-		"byte_ofs": 215020
+		"char_ofs": 125860,
+		"byte_ofs": 215736
 	}
 ]
