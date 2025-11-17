@@ -54,7 +54,7 @@ weaving 명령어의 속성창에서 지연시간테이블 탭에 진입하십�
 이 때, 지연시간의 값은 다음과 같이 전류의 선행/후행 정도를 의미합니다.
 
 <p align="center">
- <img src="../../_assets/8_3_6.png" width="70%"></img>
+ <img src="../../_assets/8_3_6-2.png" width="70%"></img>
  <em><p align="center">그림 8.3.6-2. 아크센싱 지연시간의 의미</p></em>
 </p>
 <br>
