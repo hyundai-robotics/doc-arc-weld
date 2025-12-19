@@ -11,8 +11,8 @@
 4)	용접 시작위치에서 위빙 명령어, 아크용접 명령어를 이용하여 작업 수행
 
 <p align="center">
- <img src="../_assets/4_1.png" width="60%"></img>
- <em><p align="center">그림 4.1 필렛 터치센싱과 아크센싱</p></em>
+ <img src="../../_assets/8_3_13.png" width="60%"></img>
+ <em><p align="center">그림 8.3.13 필렛 터치센싱과 아크센싱</p></em>
 </p>
 
 

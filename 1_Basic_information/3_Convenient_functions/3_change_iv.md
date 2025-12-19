@@ -67,7 +67,7 @@ Arc 용접작업을 티칭할 때 적절한 용접 전류/전압을 찾기 위�
 대화상자의 항목 별 내용은 다음과 같습니다. 
 
 <p align="center">
- <img src="../../_assets/1_3_2.png" width="70%"></img>
+ <img src="../../_assets/1_3_2.png" width="25%"></img>
  <em><p align="center">그림 1.3.2. Arc 용접 전류/전압 변경 대화상자</p></em>
 </p>   
 
