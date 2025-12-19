@@ -1,38 +1,40 @@
-﻿# 8.3.8 터치센싱과 아크센싱을 이용한 필렛용접 예시
+﻿# 8.3.8 Fillet Welding Example Using Touch Sensing and Arc Sensing
 
-일반적으로 아크센싱 기능은 터치센싱 기능과 함께 사용합니다. 터치센싱 기능을 이용하면 정확한 용접 시작 위치 및 종료 위치를 찾을 수 있고 아크센싱 기능을 이용하면 용접 시작 후 이동하며 정확한 방향을 찾을 수 있습니다.
+In general, the Arc Sensing function is used together with the touch sensing function. Touch sensing is used to accurately detect the welding start and end positions, while arc sensing is used to determine the correct welding direciton during movement after welding has started.  
 
-첫 번째 예시는 가장 기본적인 필렛 용접입니다.
+The first example demonstrates a basic fillet welding operation.
 
-작업 순서는 다음과 같습니다.
-1)	위빙 조건, 아크센싱 조건, 용접 조건 설정 
-2)	터치센싱을 이용하여 용접 시작 위치 탐색
-3)	종료 위치 근처 이동 후 터치센싱을 이용하여 용접 종료 위치 탐색
-4)	용접 시작위치에서 위빙 명령어, 아크용접 명령어를 이용하여 작업 수행
+The work sequence is as follows:
+
+1) Set the weaving conditions, arc sensing conditions, and welding conditions.  
+2) Use touch sensing to search for the welding start position.
+3) Move to a position near the welding end area, and then use touch sensing to search for the welding end position.
+4) Perform the welding operation from the welding start position using the weaving command and the arc welding command.
+
 
 <p align="center">
- <img src="../_assets/4_1.png" width="60%"></img>
- <em><p align="center">그림 4.1 필렛 터치센싱과 아크센싱</p></em>
+ <img src="../../_assets/8_3_13" width="60%"></img>
+ <em><p align="center">Figure 8.3.13 Fillet Touch Sensing and Arc Sensing</p></em>
 </p>
 
 
-예시 프로그램은 다음과 같습니다.
+The example program is shown below.
 
-~~~~~~~아크센싱 프로그램: 0001.JOB~~~~~~~~~~~~~~~ 
-'아크센싱 프로그램
-S1   move P,spd=60%,accu=3,tool=1  			' 1: 동작 시작점
-S2   move L,spd=30%,accu=3,tool=1  			' 2: 종료점 터치센싱 위치
-     var p10=cpo()
-     var p1=cpo()
-     touchsen cnd=1,crd="robot", dir=["x","-z"], pose=p10 	' 3: 종료점 터치센싱. P10에 위치 저장
-S3   move L,spd=30%,accu=3,tool=1  			    ' 4: 시작점 터치센싱 위치
-     touchsen cnd=1,crd="robot",dir=["-x","-z"], pose=p1 	' 5: 시작점 터치센싱. P1에 위치 저장
-S4   move L,p1,spd=20%,accu=3,tool=1		' 6: 용접 시작 점으로 이동
-     weaving on, cnd=1              ' 7: 위빙, 아크센싱 시작
-     arcon cnd=1				    ' 8: 용접 시작
-S5   move L,p10,spd=60cm/min,accu=3,tool=1	' 9: 용접 종료 점으로 이동
-     arcoff	    			            '10: 용접 종료
-     weaving off			            '11: 위빙, 아크센싱 종료
-S6   move P,spd=60%,accu=3,tool=1 	        '12: 동작 종료점
-     END
+~~~~~~~Arc sensing program : 0001.JOB~~~~~~~~~~~~~~~ 
+' Arc sensing program  
+S1   move P,spd=60%,accu=3,tool=1              ' 1: Motion start point  
+S2   move L,spd=30%,accu=3,tool=1              ' 2: Touch sensing position for welding end point  
+     var p10=cpo()  
+     var p1=cpo()  
+     touchsen cnd=1,crd="robot", dir=["x","-z"], pose=p10   ' 3: Touch sensing for welding end point. Position stored in P10  
+S3   move L,spd=30%,accu=3,tool=1              ' 4: Touch sensing position for welding start point  
+     touchsen cnd=1,crd="robot",dir=["-x","-z"], pose=p1    ' 5: Touch sensing for welding start point. Position stored in P1  
+S4   move L,p1,spd=20%,accu=3,tool=1            ' 6: Move to welding start point  
+     weaving on, cnd=1                          ' 7: Start weaving and arc sensing  
+     arcon cnd=1                                ' 8: Start welding  
+S5   move L,p10,spd=60cm/min,accu=3,tool=1      ' 9: Move to welding end point  
+     arcoff                                     '10: End welding  
+     weaving off                                '11: End weaving and arc sensing  
+S6   move P,spd=60%,accu=3,tool=1               '12: Motion end point  
+     END  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

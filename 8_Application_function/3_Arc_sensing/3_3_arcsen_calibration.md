@@ -33,12 +33,8 @@ Enter the Arc Sensing (General) in the property window of the weaving command, s
 
 #### Step 3. 
 
-As shown in the figure above, set the entry step to approach from the opposite direction of the imaginary wall.
-Teach the starting point and end point with an gap to 60 cm. <br>
-During this process, ensure that the torch's working angle(Roll angle) is maintained at 45 degrees.
-
 Create an entry step to approach from the opposite direction of the virtual wall as shown in the figure above, and teach the starting and ending points with a 60 cm gap between them.  
-In this case, keep the torch working angle (roll angle) consistent within the range of 30 to 45 degrees.
+In this case, keep the torch working angle (Roll angle) consistent within the range of 30 to 45 degrees.
 
 #### Step 4.  
 
@@ -68,6 +64,19 @@ After completing this process, you can check the arc sensing (delay table tracki
 </p>
 <br>
 
+
+At this time, the delay time value represents the degree of current lead or lag.
+
+<p align="center">
+ <img src="../../_assets/8_3_6-2.png" width="70%"></img>
+ <em><p align="center">Figure 8.3.6-2. Meaning of Arc Sensing Delay Time</p></em>
+</p>
+<br>
+
+
+{% hint style="info" %}
+  The delay time must be within the range of **-40 ~ +40**. The vertical and horizontal tracking gains (mm/A) are recommended to be set within the range of **0.2 ~ 0.5**.
+{% endhint %}
 
 {% hint style="info" %}
   Once all weaving operations from from 0.5 Hz to 3.0 Hz have been performed, navigate to the "Auto Calib" option at the bottom left of the delay time table tab in the weaving command property window, and click "Apply" to apply all settings in bulk.

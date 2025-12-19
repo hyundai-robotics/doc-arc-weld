@@ -82,9 +82,8 @@
     * [8.3.5 Arc Sensing Monitoring](8_Application_function/3_Arc_sensing/5_arcsen_monitoring.md)
     * [8.3.6 Multi-pass Overview](8_Application_function/3_Arc_sensing/6_multipass_overview.md)
     * [8.3.7 Multi-pass Command](8_Application_function/3_Arc_sensing/7_multipass_command.md)
-    <!-- * [8.3.8 터치센싱과 아크센싱을 이용한 필렛용접 예시](8_Application_function/3_Arc_sensing/8_example_fillet.md)
-    * [8.3.9 터치센싱을 이용한 위빙 폭 자동설정 아크센싱 예시](8_Application_function/3_Arc_sensing/9_example_butt_gap.md)
-    * [8.3.10 멀티패스 용접 예시](8_Application_function/3_Arc_sensing/10_example_multipass.md) -->
+    * [8.3.8 Fillet Welding Example Using Touch Sensing and Arc Sensing](8_Application_function/3_Arc_sensing/8_example_fillet.md)
+    * [8.3.9 Arc Sensing Example : Automatic Weaving Width Setting Using Touch Sensing](8_Application_function/3_Arc_sensing/9_example_butt_gap.md)
 
   * [8.4 Height Sensing](8_Application_function/4_Height_sensing/README.md)
     * [8.4.1 Height Sensing Condition](8_Application_function/4_Height_sensing/1_hsen_condition.md)

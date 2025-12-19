@@ -65,9 +65,18 @@ Set the time to continue the shielding gas output even after the arc is turned o
 ### (8)	Crater move time: [ 0 ] second (Range: 0.0 ~ 10.0) / Crater move distance : [0] mm (Range: 0.0 ~ 100.0)
 During crater treatment, sets the distance the robot will move backward during the DownSlope time and condition hold time. The speed is automatically determined based on the distance and time.
 
-### (9) Stick release Time: [ 0 ] second (Range: 0.0 ~ 10.0)  
-After welding is completed, there may be a need to separate the wire and base metal as they might be stuck together during the welding process.
-The conditions for this separation are set, where 0 refers to the default condition.
+### (9) Auto Stick Release Count : [0] times (Range: 0 to 9) / Condition : [0] (Range: 0 to 32) / Time: [0] sec (Range: 0.0 to 10.0)  
+During arc welding, the welding wire may stick to the base material at the end of welding. To prevent this, the welding power source temporarily increases the voltage at the end of welding as an anti-sticking process.
+However, sticking may still occur even after this process. Therefore, the robot controller sends a post-weld sticking detection signal to the welding power source to check whether sticking has occurred.
+The auto stick release function automaticllay performs a burnback release when sticking is detected after welding, allowing the robot to continue operation without stopping.
+This process is repeated for the configured number of times. If the sticking is not released after the specified number of attempts is exceeded, the robot will stop.
 
-### (10) Stick release Speed: [  0] (Range: 0 ~ 100)  
-Set the time required for the release of fusion after welding completion.
+* Count : [0] times (Range: 0 to 9)
+    This parameter specifies the maximum number of burnback release attempts. If the sticking is not released within the configured number of attempts, an error will occur. 
+    Exceptionally, when set to 0, the sticking check is skipped and the system proceeds directly to the next step.
+
+* Condition : [0] (Range: 0 to 32)
+    This parameter specifies the welding condition number used for the burnback release process. When set to 0, the burnback release is performed using the current welding start condition.
+
+* Time: [0] sec (Range: 0.0 to 10.0)
+    This parameter specifies the duration for which the burnback release condition output is maintained.

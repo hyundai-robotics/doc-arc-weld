@@ -21,10 +21,16 @@ The specifications below are based on data obtained from extensive testing condu
      - When improving tracking performance, welding path vibrations may occur, so verification tests are required.  
 
 ### (3) Weaving Conditions  
-  - Frequency Range: 0.5 ~ 4.0 Hz
-  - Amplitude Range: 1.0 X 1.0 mm or grater
-  - Weaving Type: Single oscillation
-  - Dwell Time: 0.0[sec] ~ 2.0[sec]
+  - Weaving Type: Single oscillation, L-type, Triangular
+  - Frequency Range: 0.5 ~ 4.0 Hz(Single oscillation), 0.1 ~ 3.0 Hz(L-type, Triangular)
+  - Amplitude Range: 1.0 X 1.0 mm or more(Single oscillation), 1.5 X 1.5 mm or more(L-type), 3.0 X 3.0 mm or more(Triangular)
+  - Dwell Time: 0.0 ~ 2.0[sec]
+
+{% hint style="info" %}
+  Please check the communication specifications of the welding power source.
+  The communication cycle for welding current and seam tracking data must be 10ms or less(e.g. EWM, Fronius).
+  Arc Sensing guarantees weld seam tracking under stable welding conditions(when the current waveform is stable).
+{% endhint %}
 
 ### (4) Interpolation Type
   - Linear Interpolation: Available
