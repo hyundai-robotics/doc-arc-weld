@@ -26,5 +26,5 @@ PC와 제어기를 이더넷 케이블로 연결하기 위해 아래 순서대�
 여기까지 끝났다면, 용접기로부터 제어기로 송신한 데이터들이 할당한 블록내에 굵은 글씨로 표시될 것입니다. (**[창조정]-[선택]-[범용입력]-[fb할당한 번호/9.di]** 에서 확인)
 
 {% hint style="info" %}
-    자세한 내용은 [Hi6 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/korean/README)을 참고하십시오.  
+    자세한 내용은 [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/korean/README)을 참고하십시오.  
 {% endhint %}

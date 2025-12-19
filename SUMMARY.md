@@ -1,6 +1,6 @@
 ﻿# Table of contents
 
-* [Hi6 로봇제어기 기능설명서 - 아크 용접](README.md)
+* [${cont_model} 로봇제어기 기능설명서 - 아크 용접](README.md)
 * [1. Arc 용접 기본사항](1_Basic_information/README.md)
   * [1.1 개요](1_Basic_information/1_Introduction/README.md)
   * [1.2  Arc 용접기능 설정](1_Basic_information/2_Function_setting/README.md)
