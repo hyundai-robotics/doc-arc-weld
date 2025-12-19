@@ -22,8 +22,8 @@ The typical usage method is as follows: <br>
   - Seam sensing can be performed using touch sensing, LVS seamfinding, LPS(Laser Point Sensing) features.
 {% endhint %}
 
-This manual explains the newly added Arc Sensing feature in Hi6.  
-The newly added Arc Sensing feature in Hi6 is activated by entering the properties window of the `weaving` command and setting the **'type' in the Arc Sensing (General) tab to 'seam & cur_diff'**.
+This manual explains the newly added Arc Sensing feature in ${cont_model}.  
+The newly added Arc Sensing feature in ${cont_model} is activated by entering the properties window of the `weaving` command and setting the **'type' in the Arc Sensing (General) tab to 'seam & cur_diff'**.
 
 ---
 

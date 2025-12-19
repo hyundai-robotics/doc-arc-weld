@@ -1,6 +1,6 @@
 ﻿# Table of contents
 
-* [Hi6 Robot Controller Functional Manual - Arc Welding](README.md)
+* [${cont_model} Robot Controller Functional Manual - Arc Welding](README.md)
 * [1. Arc Welding Basics](1_Basic_information/README.md)
   * [1.1 Overview](1_Basic_information/1_Introduction/README.md)
   * [1.2 Arc Welding function settings](1_Basic_information/2_Function_setting/README.md)

@@ -22,7 +22,7 @@ When set to "Enabled", arc sensing tracking will be applied starting from the mo
 
 <br/>
 
-```For Hi6, it is recommended to use "Welding Seam Estimation & Current Difference."```<br/>
+```For ${cont_model}, it is recommended to use "Welding Seam Estimation & Current Difference."```<br/>
 The options for Welding Seam, Current Difference, and Current Difference + Gap are the same as for Hi5a, so please refer to the Hi5a controller manual.
 
 

@@ -3,7 +3,7 @@
 
 In order to use the LVS funtionality, calibration between the TCP and sensor coordinate system must be performed first.
 
-Hi6 controller supports automatic calibration.
+${cont_model} controller supports automatic calibration.
 
 Let's now look at how to perform automatic calibration between TCP and LVS sensor.
 

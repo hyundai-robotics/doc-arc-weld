@@ -1,4 +1,4 @@
-﻿# Hi6 Robot Controller Functional Manual - Arc Welding
+﻿# ${cont_model} Robot Controller Functional Manual - Arc Welding
 
 This manual consist of 8 chapters.
 
@@ -1180,7 +1180,7 @@ Once this is completed, the data transmitted from the welder to the controller w
 
 
 {% hint style="info" %}
-  For more information, please refer to [Hi6 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/english/README)  
+  For more information, please refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/english/README)  
 {% endhint %}
 # 4.2 Arc Welder Settings
 
@@ -2602,8 +2602,8 @@ The typical usage method is as follows: <br>
   - Seam sensing can be performed using touch sensing, LVS seamfinding, LPS(Laser Point Sensing) features.
 {% endhint %}
 
-This manual explains the newly added Arc Sensing feature in Hi6.  
-The newly added Arc Sensing feature in Hi6 is activated by entering the properties window of the `weaving` command and setting the **'type' in the Arc Sensing (General) tab to 'seam & cur_diff'**.
+This manual explains the newly added Arc Sensing feature in ${cont_model}.  
+The newly added Arc Sensing feature in ${cont_model} is activated by entering the properties window of the `weaving` command and setting the **'type' in the Arc Sensing (General) tab to 'seam & cur_diff'**.
 
 ---
 
@@ -2715,7 +2715,7 @@ When set to "Enabled", arc sensing tracking will be applied starting from the mo
 
 <br/>
 
-```For Hi6, it is recommended to use "Welding Seam Estimation & Current Difference."```<br/>
+```For ${cont_model}, it is recommended to use "Welding Seam Estimation & Current Difference."```<br/>
 The options for Welding Seam, Current Difference, and Current Difference + Gap are the same as for Hi5a, so please refer to the Hi5a controller manual.
 
 
@@ -3840,7 +3840,7 @@ Refer to the manual provided by Full-V and the figure below to register the seam
 
 In order to use the LVS funtionality, calibration between the TCP and sensor coordinate system must be performed first.
 
-Hi6 controller supports automatic calibration.
+${cont_model} controller supports automatic calibration.
 
 Let's now look at how to perform automatic calibration between TCP and LVS sensor.
 

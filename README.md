@@ -1,4 +1,4 @@
-﻿# Hi6 Robot Controller Functional Manual - Arc Welding
+﻿# ${cont_model} Robot Controller Functional Manual - Arc Welding
 
 This manual consist of 8 chapters.
 
