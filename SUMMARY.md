@@ -83,9 +83,9 @@
     * [8.3.5 아크 센싱 모니터링](8_Application_function/3_Arc_sensing/5_arcsen_monitoring.md)
     * [8.3.6 멀티패스 개요](8_Application_function/3_Arc_sensing/6_multipass_overview.md)
     * [8.3.7 멀티패스 명령어](8_Application_function/3_Arc_sensing/7_multipass_command.md)
-    <!-- * [8.3.8 터치센싱과 아크센싱을 이용한 필렛용접 예시](8_Application_function/3_Arc_sensing/8_example_fillet.md)
+    * [8.3.8 터치센싱과 아크센싱을 이용한 필렛용접 예시](8_Application_function/3_Arc_sensing/8_example_fillet.md)
     * [8.3.9 터치센싱을 이용한 위빙 폭 자동설정 아크센싱 예시](8_Application_function/3_Arc_sensing/9_example_butt_gap.md)
-    * [8.3.10 멀티패스 용접 예시](8_Application_function/3_Arc_sensing/10_example_multipass.md) -->
+    <!-- * [8.3.10 멀티패스 용접 예시](8_Application_function/3_Arc_sensing/10_example_multipass.md) -->
 
   * [8.4 높이센싱(Height Sensing) 기능](8_Application_function/4_Height_sensing/README.md)
     * [8.4.1 높이센싱 조건](8_Application_function/4_Height_sensing/1_hsen_condition.md)

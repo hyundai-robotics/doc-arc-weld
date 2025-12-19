@@ -3319,6 +3319,44 @@ asymetric_sensing_ratio: 좌우 비대칭 센싱 비율
  <img src="../_assets/3_5.png" width="60%"></img>
  <em><p align="center">그림 3.5 멀티패스 각도 시프트 개념</p></em>
 </p> -->
+# 8.3.8 터치센싱과 아크센싱을 이용한 필렛용접 예시
+
+일반적으로 아크센싱 기능은 터치센싱 기능과 함께 사용합니다. 터치센싱 기능을 이용하면 정확한 용접 시작 위치 및 종료 위치를 찾을 수 있고 아크센싱 기능을 이용하면 용접 시작 후 이동하며 정확한 방향을 찾을 수 있습니다.
+
+첫 번째 예시는 가장 기본적인 필렛 용접입니다.
+
+작업 순서는 다음과 같습니다.
+1)	위빙 조건, 아크센싱 조건, 용접 조건 설정 
+2)	터치센싱을 이용하여 용접 시작 위치 탐색
+3)	종료 위치 근처 이동 후 터치센싱을 이용하여 용접 종료 위치 탐색
+4)	용접 시작위치에서 위빙 명령어, 아크용접 명령어를 이용하여 작업 수행
+
+<p align="center">
+ <img src="../../_assets/8_3_13.png" width="60%"></img>
+ <em><p align="center">그림 8.3.13 필렛 터치센싱과 아크센싱</p></em>
+</p>
+
+
+예시 프로그램은 다음과 같습니다.
+
+~~~~~~~아크센싱 프로그램: 0001.JOB~~~~~~~~~~~~~~~ 
+'아크센싱 프로그램
+S1   move P,spd=60%,accu=3,tool=1  			' 1: 동작 시작점
+S2   move L,spd=30%,accu=3,tool=1  			' 2: 종료점 터치센싱 위치
+     var p10=cpo()
+     var p1=cpo()
+     touchsen cnd=1,crd="robot", dir=["x","-z"], pose=p10 	' 3: 종료점 터치센싱. P10에 위치 저장
+S3   move L,spd=30%,accu=3,tool=1  			    ' 4: 시작점 터치센싱 위치
+     touchsen cnd=1,crd="robot",dir=["-x","-z"], pose=p1 	' 5: 시작점 터치센싱. P1에 위치 저장
+S4   move L,p1,spd=20%,accu=3,tool=1		' 6: 용접 시작 점으로 이동
+     weaving on, cnd=1              ' 7: 위빙, 아크센싱 시작
+     arcon cnd=1				    ' 8: 용접 시작
+S5   move L,p10,spd=60cm/min,accu=3,tool=1	' 9: 용접 종료 점으로 이동
+     arcoff	    			            '10: 용접 종료
+     weaving off			            '11: 위빙, 아크센싱 종료
+S6   move P,spd=60%,accu=3,tool=1 	        '12: 동작 종료점
+     END
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # 8.3.9 터치센싱을 이용한 위빙 폭 자동설정 아크센싱 예시
 
 
@@ -3410,67 +3448,6 @@ S6   move P,spd=60%,accu=3,tool=1  		'14: 동작 종료점
      STOP				'17: 로봇 정지
      END
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# 8.3.10 멀티패스 용접 예시
-
-작업 프로그래밍은 다음과 같이 작성합니다.
-이 작업은 1pass 용접 후 2pass, 3pass를 좌/우 3mm, 높이 3mm로 시프트 하여 용접하는 작업프로그램입니다.
-
-
-```py
-     'Cylinder AS and MP Program
-S1   MOVE P,S=60%,A=3,T=1  
-     'Find 4 Points by touch sensing
-S2   MOVE L,S=30%,A=3,T=1  			' 1: 원 궤적 첫 번째 점 탐색 위치
-     TOUCHSEN TSC#=4,TF,TD,0,P1,V1!		' 2: 원 궤적 첫 번째 위치 터치센싱
-S3   MOVE L,S=30%,A=3,T=1  			' 3: 원 궤적 두 번째 점 탐색 위치
-     TOUCHSEN TSC#=4,TF,TD,0,P2,V1! 		' 4: 원 궤적 두 번째 위치 터치센싱
-S4   MOVE L,S=30%,A=3,T=1  			' 5: 원 궤적 세 번째 점 탐색 위치
-     TOUCHSEN TSC#=4,TF,TD,0,P3,V1! 		' 6: 원 궤적 세 번째 위치 터치센싱
-S5   MOVE L,S=30%,A=3,T=1  			' 7: 원 궤적 네 번째 점 탐색 위치
-     TOUCHSEN TSC#=4,TF,TD,0,P4,V1! 		' 8: 원 궤적 네 번째 위치 터치센싱
-     '1st pass					첫 멀티패스 궤적을 아크센싱으로 저장
-S6   MOVE L,S=60%,A=3,T=1  
-S7   MOVE L,P1,S=50%,A=3,T=1
-     WEAVON WEV#=3
-     MULTIPASS SAVE,TrjNo=1,SampDist=10
-     ARCON ASF#=3
-S8   MOVE C,P2,S=60cm/min,A=3,T=1
-S9   MOVE C,P3,S=60cm/min,A=3,T=1
-S10  MOVE C,P4,S=60cm/min,A=3,T=1
-S11  MOVE C,P1,S=60cm/min,A=3,T=1
-     ARCOF ASF#
-     WEAVOF
-     MULTIPASS OFF
-S12  MOVE P,S=60%,A=3,T=1  
-     '2nd pass				두 번째 멀티패스는 수평 우측 3mm, 수직 3mm 시프트
-     MULTIPASS LOAD,TrjNo=1,Side=3,Updown=3,Reverse=0,TAS=0,WAS=0
-S13  MOVE L,P1,S=20%,A=3,T=1
-     WEAVON WEV#=4
-     ARCON ASF#=3
-S14  MOVE C,P2,S=60cm/min,A=3,T=1
-S15  MOVE C,P3,S=60cm/min,A=3,T=1
-S16  MOVE C,P4,S=60cm/min,A=3,T=1
-S17  MOVE C,P1,S=60cm/min,A=3,T=1
-     ARCOF ASF#
-     WEAVOF
-     MULTIPASS OFF
-     '3rd pass				세 번째 멀티패스는 수평 우측 -3mm, 수직 3mm 시프트
-S18  MOVE P,S=60%,A=3,T=1  
-     MULTIPASS LOAD,TrjNo=1,Side=-3,Updown=3,Reverse=0,TAS=0,WAS=0
-S19  MOVE L,P1,S=20%,A=3,T=1
-     WEAVON WEV#=4
-     ARCON ASF#=3
-S20  MOVE C,P2,S=60cm/min,A=3,T=1
-S21  MOVE C,P3,S=60cm/min,A=3,T=1
-S22  MOVE C,P4,S=60cm/min,A=3,T=1
-S23  MOVE C,P1,S=60cm/min,A=3,T=1
-     ARCOF ASF#
-     WEAVOF
-     MULTIPASS OFF
-S24  MOVE P,S=60%,A=3,T=1  
-     END
-```
-
 # 8.4 높이센싱(Height Sensing) 기능
 
 본 기능은 TIG 용접과 같이 로봇의 툴이 작업물에서 일정한 거리를 유지해야 하는 경우에 사용하는 기능입니다. TIG 용접의 경우에는 높이가 Arc길이와 비례하므로 AVC(Arc Voltage Control)기능이라고 합니다. 작업물과의 거리는 센서에 의한 아날로그 전압입력, 용접기에서 감지하는 Arc 길이 보정용 파라미터, 용접 전류나 전압 값에 의해 조정됩니다.
