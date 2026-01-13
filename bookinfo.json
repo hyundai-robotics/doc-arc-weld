@@ -1,11 +1,12 @@
 {
     "langCode": "en",
-    "series": "Hyundai Robot Hi6 Controller",
+    "series": "${cont_model} Controller",
     "title": "Functional Manual - Arc Welding",
     "publisher": "HD Hyundai Robotics",
     "tocTitle": "Table of Contents",
     "tocTitleElements": "[ \"h1\", \"h2\" ]",
-    "variables": {
-        "cont_model": "Hi6"
-    }
+    "docId": "${cont_model:upper}ARC_EN_001",
+    "references": [
+        { "rpath" : "doc-hi6-operation/en-tp630" }
+    ]
 }
