@@ -1,6 +1,6 @@
-﻿# 5.3.2 Welding Start condition – Fronius-only settings
+﻿# 5.3.2 Welding Start condition - Fronius-only settings
 
-### (1)	Operation Mode: [**Prog-Std, Prog-Pulse, CMT, JOB, TIG**]  
+### (1)	Operation Mode: `Prog-Std, Prog-Pulse, CMT, JOB, TIG`  
 Set the welding mode supported by the Fronius welder. The descriptions for each mode as follows:
 
 - **Prog-Std**: Use the standard welding program stored in the welder.

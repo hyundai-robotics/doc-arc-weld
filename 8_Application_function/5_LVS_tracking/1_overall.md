@@ -1,4 +1,4 @@
-# 8.5.1 LVS Overview and Specifications
+﻿# 8.5.1 LVS Overview and Specifications
 
 {% hint style="info" %}
 This feature is available during from version 60.30-03.
@@ -66,7 +66,7 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
     <tr>
       <td style="text-align:left">auto_calib</td>
       <td style="text-align:left">
-        Performs auto-calibration between TCP and LVS.(refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/3_calibration">LVS Calibration</a>)
+        Performs auto-calibration between TCP and LVS.(refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/3_calibration?cont_model=${cont_model}">LVS Calibration</a>)
       </td>
     </tr>
     <tr>
@@ -74,7 +74,7 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
       <td style="text-align:left">
         The starting point is found while moving in the +ToolX, -ToolX directions, and tracking preparation is performed. <br>
         The detected starting point is stored in the pose variable specified by the 'sp' argument of the command.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/6_search">LVS search func.</a>)
+        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">LVS search func.</a>)
       </td>
     </tr>
     <tr>
@@ -82,7 +82,7 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
       <td style="text-align:left">
         The starting point or the start point of a multi-bead is found while moving int the +ToolX, -ToolX directions. <br>
         The detected starting point is stored in the pose variable specified by the 'sp' argument of the command.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/6_search">LVS search func.</a>)
+        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">LVS search func.</a>)
       </td>
     </tr>
     <tr>
@@ -116,14 +116,14 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
       <td colspan="2">pose variable of the master position</td>
       <td>
         This is the reference pose variable registered in master mode.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/5_lvs_master_mode">8.5.5 LVS Master mode func.</a>)
+        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS Master mode func.</a>)
       </td>
     </tr>
     <tr>
       <td colspan="2">shift variable of the current sensing position relative to the master</td>
       <td>
         The shift of the current sensed position relative to the mp(master pose) is stored.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/5_lvs_master_mode">8.5.5 LVS Master mode func.</a>)
+        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS Master mode func.</a>)
       </td>
     </tr>
     <tr>

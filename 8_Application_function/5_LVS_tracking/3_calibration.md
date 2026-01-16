@@ -1,4 +1,4 @@
-# 8.5.3 LVS Calibration
+﻿# 8.5.3 LVS Calibration
 
 
 In order to use the LVS funtionality, calibration between the TCP and sensor coordinate system must be performed first.

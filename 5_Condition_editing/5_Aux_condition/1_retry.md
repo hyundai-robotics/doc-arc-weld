@@ -1,4 +1,4 @@
-﻿# 5.5.1 Welding Auxiliary condition – Retry
+﻿# 5.5.1 Welding Auxiliary condition - Retry
 
 
 There may be cases where the arc does not ignite due to foreign materials attached near the weld start point of the base material when starting arc welding. The retry function automatically attempts to reignite the arc in such cases of arc ignition failure, enabling continuous operation without robot stoppage.

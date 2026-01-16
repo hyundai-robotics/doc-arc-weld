@@ -8,5 +8,5 @@ However, when the positioner is changed using a servo tool changer, calibration 
 This command allows calibration to be performed directly within the robot program.
 
 
-- For detailed instructions on using this command, please refer to [2.3.4 posi_calib](https://hrbook-hrc.web.app/#/view/doc-positioner-sync/english/2-system_settings/2-3-positioner-calibration/4_posi_calib)
+- For detailed instructions on using this command, please refer to [2.3.4 posi_calib](https://hrbook-hrc.web.app/#/view/doc-positioner-sync/en/2-system_settings/2-3-positioner-calibration/4_posi_calib)
 

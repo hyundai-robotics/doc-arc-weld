@@ -57,7 +57,7 @@ S3   move L,spd=30%,accu=3,tool=1              ' 4: Touch sensing position for w
      V3=7.0                                     ' Welding speed at start  
      ELSEIF gap_var1>8.0 THEN                   ' If gap ≥ 8 mm, fix speed to 4 mm/s  
      V3=4.0                                     ' Welding speed at start  
-     ELSE                                       ' Linear interpolation for gap range 4–8 mm  
+     ELSE                                       ' Linear interpolation for gap range 4-8 mm  
      V3=(7-3.5)/(4-8)*gap_var1+10.5             ' Linearly interpolated welding speed at start  
      ENDIF  
 
@@ -73,7 +73,7 @@ S3   move L,spd=30%,accu=3,tool=1              ' 4: Touch sensing position for w
      V13=7.0                                    ' Welding speed at end  
      ELSEIF gap_var11>8.0 THEN                  ' If gap ≥ 8 mm, fix speed to 4 mm/s  
      V13=4.0                                    ' Welding speed at end  
-     ELSE                                       ' Linear interpolation for gap range 4–8 mm  
+     ELSE                                       ' Linear interpolation for gap range 4-8 mm  
      V13=(7-3.5)/(4-8)*gap_var11+10.5           ' Linearly interpolated welding speed at end  
      ENDIF  
 

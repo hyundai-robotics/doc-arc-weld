@@ -15,14 +15,14 @@ In this case, the continuous change of welding conditions (L interpolation) is p
 Using the above items from DB 1 and DB 2, a JOB utilizing continuous interpolation change is as follows: 
 
 ```python
-move L, spd=60%, …
-move L, spd=10%, …	    # Weld point(seam) Entry Step
+move L, spd=60%, ...
+move L, spd=10%, ...	    # Weld point(seam) Entry Step
 arcon cnd=1
-move L, spd=40cm/min, …
+move L, spd=40cm/min, ...
 arccond L, cnd=1  	    # Continuous interpolation change from Welding DB 1 -> 2
-move L, spd=30cm/min, …    # In this step, the conditions linearly change from cnd(DB) 1 -> 2
+move L, spd=30cm/min, ...    # In this step, the conditions linearly change from cnd(DB) 1 -> 2
 arccond L, cnd=2  	    # The next step requires arcof
 arcoff
-move L, spd=10%, …	    # Weld point(seam) Exit Step
+move L, spd=10%, ...	    # Weld point(seam) Exit Step
 end
 ```

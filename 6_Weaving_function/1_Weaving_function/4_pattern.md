@@ -64,4 +64,4 @@ The boundary limitation setting allows you to choose whether the weaving should 
 <p align="center">
   <img src="../../_assets/6_1_5.png" width="60%"></img>
   <em><p align="center">Figure 6.1.5 Weaving Boundary Limitation</p></em>
-</p> 
+</p> 

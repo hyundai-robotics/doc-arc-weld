@@ -67,7 +67,7 @@ Assuming the condition 1 set for Fillet, condition 2 set for Butt, and condition
 </center>
 
 
-In the touch sensing command, pressing on [**Property**] will bring up a winow as shown in [Figure 8.2.3]  
+In the touch sensing command, pressing on `Property` will bring up a winow as shown in [Figure 8.2.3]  
 You can set conditions such as sensing distance, retreat distance, proceed distance, sensing speed, retreat speed, and detection type (contact,  release of contact), among others.  
 
 
@@ -165,7 +165,7 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 </p>   
 
 ---
- 
+ 
 #### [3] BUTT
 
 <p align="center">

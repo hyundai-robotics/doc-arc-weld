@@ -26,7 +26,7 @@ The operation of this function is as follows:
 </p> 
 
 <br>
- 
+ 
 
 The gap-speed graph can be illustrated as follows:  
 
@@ -41,14 +41,14 @@ As shown in the figure above, the welding speed increases linearly between the t
 An example of the JOB configuration is as follows:
 
 ```python
-    move L, spd=60%, …
-    move L, spd=10%, …	    # Weld point(seam) Entry Step
+    move L, spd=60%, ...
+    move L, spd=10%, ...	    # Weld point(seam) Entry Step
     arcon cnd=1
-    move L, spd=40cm/min, …
+    move L, spd=40cm/min, ...
     arccond L, cnd=1, gap=20  
-    move L, spd=30cm/min, …    # In this step, welding speed and weaving width change linearly
+    move L, spd=30cm/min, ...    # In this step, welding speed and weaving width change linearly
     arccond L, cnd=2, gap=10   
     arcoff
-    move L, spd=10%, …	    # Weld point(seam) Exit Step
+    move L, spd=10%, ...	    # Weld point(seam) Exit Step
     end
 ```

@@ -1,6 +1,6 @@
-﻿# 5.3.1 Welding Start condition – Hyosung-only settings
+﻿# 5.3.1 Welding Start condition - Hyosung-only settings
 
-### (1) Welding Mode: [**Normal, Pulse**]  
+### (1) Welding Mode: `Normal, Pulse`  
 Set the Arc Welding method.
 
 ### (2)	Slowdown Adjuctment: [ 100 ] % (range: 0 ~ 255)  

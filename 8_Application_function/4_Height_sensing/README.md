@@ -3,8 +3,8 @@
 
 This function is used in cases where the robot tool needs to maintain a constant distance from the workpiece, such as TIG welding. In TIG welding, the height is proportional to the arc length, which is why this function is called Arc Voltage Control(AVC). The distance from the workpiece is adjusted by the analog voltage input from the sensor, a correction parameter for the Arc length detected by the welder, and the welding current or voltage values.
 
-<!-- 본 기능의 사용을 위해서는 센싱 기능을 위한 데이터 입력 설정을 ‘유효’로 선택해야 합니다.
-센싱 기능을 위한 데이터 입력 설정의 세부 내용은 ‘1.3 Arc 용접 응용 조건 설정’을 참고하여 주십시오.  -- ???? -->
+<!-- 본 기능의 사용을 위해서는 센싱 기능을 위한 데이터 입력 설정을 '유효'로 선택해야 합니다.
+센싱 기능을 위한 데이터 입력 설정의 세부 내용은 '1.3 Arc 용접 응용 조건 설정'을 참고하여 주십시오.  -- ???? -->
 
 Once the setup for the sensing function input data is complete, the height sensing function can be used through the following procedure.
 

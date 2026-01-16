@@ -11,7 +11,7 @@ If set to **Move**, the robot behaves as shown on the left in the figure; if set
 <p align="center">
   <img src="../../_assets/6_1_8.png" width="40%"></img>
   <em><p align="center">Figure 6.1.8. Robot Behavior when Weaving Stops</p></em>
-</p> 
+</p> 
 
 ### (2)	Move Time
 
@@ -21,7 +21,7 @@ The move time for unused sections (e.g., sections 3 and 4 in simple oscillation)
 <p align="center">
   <img src="../../_assets/6_1_7.png" width="90%"></img>
   <em><p align="center">Figure 6.1.7. Movement Section by Weaving Pattern</p></em>
-</p> 
+</p> 
 
 
 ### (3)	Timer (Weaving Stop)
@@ -39,7 +39,7 @@ When the weaving frequency is set, the robot's move time during the weaving cycl
 <p align="center">
   <img src="../../_assets/6_1_8.png"  width="40%"></img>
   <em><p align="center">Figure 6.1.8. Trajectory Example When Timer is Set</p></em>
-</p>   
+</p>   
 
 {% hint style="warning" %}
   if "Robot Behavior when Weaving Stops" is set to **Stop**, the movement trajectory also stops, but the robot's speed remains the same.

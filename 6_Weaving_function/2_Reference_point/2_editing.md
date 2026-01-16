@@ -3,7 +3,7 @@
 ### (1) Recording Reference Points : Similar to the Move Command
 
 - ① **Move the Cursor**: Move the cursor to the location where the reference point will be recorded (typically just above the `weaving on` command step).
-- ② **Record the Reference Point Command**: Press [**Command Input > arcweld > refp**] to record the reference point command.
+- ② **Record the Reference Point Command**: Press `Command Input > arcweld > refp` to record the reference point command.
 - ③ **Enter the Reference Point Number**
 - ④ Pose Method:
   - The *Hidden Pose Method* records the current robot position.

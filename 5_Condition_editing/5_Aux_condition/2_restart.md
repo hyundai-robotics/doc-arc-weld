@@ -1,4 +1,4 @@
-﻿# 5.5.2 Welding Auxiliary condition – Restart
+﻿# 5.5.2 Welding Auxiliary condition - Restart
 
 During arc welding, the process may be interrupted due to factors such as arc failure, exceeding the limits of welding current and voltage, gas pressure drop, wire shortage, cooling water errors, etc.
 When welding is restarted from the point where the process was interrupted, there is a risk of leaving un-welded areas.
@@ -34,9 +34,9 @@ This corresponds to the movement speed in the section from ③ to ④ in [figure
 Specifies the robot's speed while performing overlap welding from the start to the end position. This is the speed during the overlap region in section ④ of [Figure 5.5.4].
 
 When an error occurs during welding from the start point to the end point (⑤), and if the overlap condition is semi-automatic, the user must identify the cause of the welding stop and address the error (①).
-After resolving the issue (②), pressing the [**Start**] button (③) will resume welding.
-The robot will automatically move to the overlap start position at the speed set by the [**Moving speed**] (④).
-Once at the position, it will perform overlap welding at the [**Welding speed**] for the specified distance, and then continue welding at the normal speed.
+After resolving the issue (②), pressing the `Start` button (③) will resume welding.
+The robot will automatically move to the overlap start position at the speed set by the `Moving speed` (④).
+Once at the position, it will perform overlap welding at the `Welding speed` for the specified distance, and then continue welding at the normal speed.
 However, if an error occurs during the overlap welding, the robot will not repeat the overlap but will directly start welding from that point onward.
 
 ---
@@ -57,8 +57,8 @@ The lower section of [Figure 5.5.3] defines how to perform overlap welding when 
 
 - B. Semi-Auto  
     This setting allows the user to perform overlap manually. If issues such as Arc Off, exceeding limits, gas pressure drop, wire shortage, or coolant error occur, welding is interrupted, ant the robot is also halted.
-    After addressing the cause, the user must press [**Start**], upon which overlap welding will be performed based on the method set in the restart section of the welding auxiliary conditions, and then main process resumes.
-    At this point, if the robot is moved to a different location using the jog function and [**Start**] is pressed, it will move directly to the overlap welding position and resume welding.
+    After addressing the cause, the user must press `Start`, upon which overlap welding will be performed based on the method set in the restart section of the welding auxiliary conditions, and then main process resumes.
+    At this point, if the robot is moved to a different location using the jog function and `Start` is pressed, it will move directly to the overlap welding position and resume welding.
 
 - C. Ignore  
     This setting ignores errors. When this setting is enabled, the robot continues the process without stopping even if welding is interrupted. In other words, the process will proceed regardless of arc stoppage or exceeding the set limits.
@@ -66,7 +66,7 @@ The lower section of [Figure 5.5.3] defines how to perform overlap welding when 
 
 - D. Disable  
     This setting prohibits overlap welding. If issus such as arc stoppage, exceeding limits, gas pressure drop, wire shortage, or coolant error occur, welding is interrupted and the robot is halted.
-    After addressing the cause, the user must press [**Start**], overlap welding will not be performed, and welding will begin from the position where the robot was stopped.
+    After addressing the cause, the user must press `Start`, overlap welding will not be performed, and welding will begin from the position where the robot was stopped.
 
 
 {% hint style="warning" %}

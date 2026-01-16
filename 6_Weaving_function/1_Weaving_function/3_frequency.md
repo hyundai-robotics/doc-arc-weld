@@ -7,4 +7,4 @@ To specify the repetition cycle using the frequency method, a value other than '
 The frequency is releated to both the leteral and longitudinal distances.
 As the frequency increases, the available lateral and longitudinal distances decrease, resulting in a smaller amplitude. Conversely, as the frequency decreases, the amplitude can be increased.
 In the case of a triangular weaving pattern, the sum of the lateral and longitudinal move times equals the diagonal move time. 
- 
+ 

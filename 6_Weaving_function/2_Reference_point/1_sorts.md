@@ -4,7 +4,7 @@
 <p align="center">
   <img src="../../_assets/6_2_1.png" width="50%"></img>
   <em><p align="center">Figure 6.2.1. Weaving Coordinate System</p></em>
-</p> 
+</p> 
 
 
 ### (1)	refp 1  
@@ -42,14 +42,14 @@ When using this command to specify the angle, the value set in `Angle` will be i
 <p align="center">
   <img src="../../_assets/6_2_2.png" width="65%"></img>
   <em><p align="center">Figure 6.2.2. Weaving Direction and Reference Point</p></em>
-</p> 
+</p> 
     
 
 <p align="center">
   <img src="../../_assets/6_2_3.png" width="65%"></img>
   <img src="../../_assets/6_2_3_1.png" width="65%"></img>
   <em><p align="center">Figure 6.2.3. Usage of Different Reference Points</p></em>
-</p>   
+</p>   
 
 
 {% hint style="info" %}

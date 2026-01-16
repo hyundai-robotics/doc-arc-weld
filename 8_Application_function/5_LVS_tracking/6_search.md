@@ -1,4 +1,4 @@
-# 8.5.6 LVS Search Func.
+﻿# 8.5.6 LVS Search Func.
 
 ### (1) How to Use the Search Function
 
