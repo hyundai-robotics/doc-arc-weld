@@ -1,4 +1,4 @@
-# 8.5.1 LVS 개요 및 사양
+﻿# 8.5.1 LVS 개요 및 사양
 
 {% hint style="info" %}
 해당 기능은 60.30-03 이후 버전에서 지원합니다.
@@ -61,17 +61,17 @@ LVS 용접선 찾기 및 추적 기능은 ```lvs``` 명령어를 통해 수행�
     </tr>
     <tr>
       <td style="text-align:left">auto_calib</td>
-      <td style="text-align:left">TCP-LVS 간 오토캘리브레이션을 수행합니다. (<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/korean/8_Application_function/5_LVS_tracking/3_calibration">LVS Calibration</a>)</td>
+      <td style="text-align:left">TCP-LVS 간 오토캘리브레이션을 수행합니다. (<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/ko/8_Application_function/5_LVS_tracking/3_calibration?cont_model=${cont_model}">LVS Calibration</a>)</td>
     </tr>
     <tr>
       <td style="text-align:left">search</td>
       <td style="text-align:left">+ToolX, -ToolX 방향으로 이동하면서 시작점을 찾고 트래킹 준비를 수행합니다.<br>
-      찾은 시작점은 명령어의 sp인자에 지정된 포즈변수에 저장됩니다.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/korean/8_Application_function/5_LVS_tracking/6_search">8.5.6 LVS search func.</a>)</td>
+      찾은 시작점은 명령어의 sp인자에 지정된 포즈변수에 저장됩니다.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/ko/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">8.5.6 LVS search func.</a>)</td>
     </tr>
     <tr>
       <td style="text-align:left">step_search</td>
       <td style="text-align:left">+ToolX, -ToolX 방향으로 이동하면서 시작점 또는 다단비드의 시작점 등을 찾습니다.<br>
-      찾은 시작점은 명령어의 sp인자에 지정된 포즈변수에 저장됩니다.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/korean/8_Application_function/5_LVS_tracking/6_search">8.5.6 LVS search func.</a>)</td>
+      찾은 시작점은 명령어의 sp인자에 지정된 포즈변수에 저장됩니다.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/ko/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">8.5.6 LVS search func.</a>)</td>
     </tr>
     <tr>
       <td style="text-align:left">track</td>
@@ -99,13 +99,13 @@ LVS 용접선 찾기 및 추적 기능은 ```lvs``` 명령어를 통해 수행�
     <tr>
       <td colspan="2">마스터 기준 포즈변수</td>
       <td>
-        마스터 모드에서 등록된 기준 포즈변수입니다. (<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/korean/8_Application_function/5_LVS_tracking/5_lvs_master_mode">8.5.5 LVS Master mode func.</a>)
+        마스터 모드에서 등록된 기준 포즈변수입니다. (<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/ko/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS Master mode func.</a>)
       </td>
     </tr>
     <tr>
       <td colspan="2">마스터 대비 현재 센싱위치 쉬프트변수</td>
       <td>
-        mp 대비 현재 센싱한 위치의 쉬프트가 저장됩니다. (<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/korean/8_Application_function/5_LVS_tracking/5_lvs_master_mode">8.5.5 LVS Master mode func.</a>)
+        mp 대비 현재 센싱한 위치의 쉬프트가 저장됩니다. (<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/ko/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS Master mode func.</a>)
       </td>
     </tr>
     <tr>

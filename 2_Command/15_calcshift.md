@@ -52,13 +52,13 @@
 
 ### 사용 예
 ```python
-    move L, spd=30%, …
+    move L, spd=30%, ...
     var pose_1 = cpo()
-    move L, spd=30%, …
+    move L, spd=30%, ...
     var pose_2 = cpo()
     var sft_1
     sft_1=calshift(pose_1,pose_2)   
-    # pose_1 – pose_2 의 벡터 쉬프트량을 계산하여 sft_1에 저장
+    # pose_1 - pose_2 의 벡터 쉬프트량을 계산하여 sft_1에 저장
 ```  
 <br/>
   

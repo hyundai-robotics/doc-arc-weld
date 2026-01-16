@@ -53,7 +53,7 @@ _weaving의 element 별로 설정값이 기능에 적용되는 지 여부는 다
 
 ### (3)	위빙 파라미터 명령어 종류 및 내용은 다음 링크를 참고해주세요.
 
-[로봇언어 HRScript_weaving문](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/10-etc/3-sysvar/_weaving)  
+[로봇언어 HRScript_weaving문](https://hrbook-hrc.web.app/#/view/doc-hrscript/ko/10-etc/3-sysvar/_weaving?cont_model=${cont_model})  
 <!-- 
 (2)에서 설명한 각 파라미터 종류와 설명은 
 
@@ -89,7 +89,7 @@ BaseCur: 상하센싱 기준전류
 토치와 모재의 거리를 더 멀리 하려면 이 값을 낮추십시오. 
 반대로 토치와 모재를 가까이 하려면 이 값을 높이십시오.
 
-StickOut: 아크 센싱 중 상하방향으로 토치를 이동시키기 위한 값. 입력된 mm만큼 토치 높이가 변경됩니다. +값 입력 시 토치와 모재간 거리가 멀어지고 –값 입력 시 토치가 모재와 가까워 집니다.
+StickOut: 아크 센싱 중 상하방향으로 토치를 이동시키기 위한 값. 입력된 mm만큼 토치 높이가 변경됩니다. +값 입력 시 토치와 모재간 거리가 멀어지고 -값 입력 시 토치가 모재와 가까워 집니다.
 
 asymetric_sensing_ratio: 좌우 비대칭 센싱 비율
 

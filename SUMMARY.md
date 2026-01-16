@@ -1,6 +1,6 @@
 ﻿# Table of contents
 
-* [${cont_model} 로봇제어기 기능설명서 - 아크 용접](README.md)
+* [${cont_model} 제어기 기능설명서 - 아크 용접](README.md)
 * [1. Arc 용접 기본사항](1_Basic_information/README.md)
   * [1.1 개요](1_Basic_information/1_Introduction/README.md)
   * [1.2  Arc 용접기능 설정](1_Basic_information/2_Function_setting/README.md)
@@ -42,14 +42,14 @@
   * [5.1 Arc 용접 조건 구성](5_Condition_editing/1_Condition_config/README.md)
   * [5.2 Arc 용접 타임차트](5_Condition_editing/2_Time_chart/README.md)
   * [5.3 용접시작조건 - arcon cond=x에서 '속성'으로 실행](5_Condition_editing/3_Start_condition/README.md)
-    * [5.3.1 용접 시작 조건 – 효성 전용 설정](5_Condition_editing/3_Start_condition/1_hyosung_.md)
-    * [5.3.2 용접 시작 조건 – Fronius 전용 설정](5_Condition_editing/3_Start_condition/2_fronius_.md)
-    * [5.3.3 용접 시작 조건 – EWM 전용 설정](5_Condition_editing/3_Start_condition/3_ewm.md)
+    * [5.3.1 용접 시작 조건 - 효성 전용 설정](5_Condition_editing/3_Start_condition/1_hyosung_.md)
+    * [5.3.2 용접 시작 조건 - Fronius 전용 설정](5_Condition_editing/3_Start_condition/2_fronius_.md)
+    * [5.3.3 용접 시작 조건 - EWM 전용 설정](5_Condition_editing/3_Start_condition/3_ewm.md)
   * [5.4 용접 종료 조건](5_Condition_editing/4_End_condition/README.md)
   * [5.5 용접 보조 조건](5_Condition_editing/5_Aux_condition/README.md)
-    * [5.5.1 용접 보조 조건 – 재시도](5_Condition_editing/5_Aux_condition/1_retry.md)
-    * [5.5.2 용접 보조 조건 – 재기동](5_Condition_editing/5_Aux_condition/2_restart.md)
-    <!-- * [5.5.3 용접 보조 조건 – 자동 용착해제](5_Condition_editing/5_Aux_condition/3_stick_recovery.md) -->
+    * [5.5.1 용접 보조 조건 - 재시도](5_Condition_editing/5_Aux_condition/1_retry.md)
+    * [5.5.2 용접 보조 조건 - 재기동](5_Condition_editing/5_Aux_condition/2_restart.md)
+    <!-- * [5.5.3 용접 보조 조건 - 자동 용착해제](5_Condition_editing/5_Aux_condition/3_stick_recovery.md) -->
 * [6. 위빙 기능 (WEAVING)](6_Weaving_function/README.md)
   * [6.1 위빙 기능](6_Weaving_function/1_Weaving_function/README.md)
     * [6.1.1 위빙 조건](6_Weaving_function/1_Weaving_function/1_condition_.md)

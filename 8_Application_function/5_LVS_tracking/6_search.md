@@ -1,4 +1,4 @@
-# 8.5.6 LVS(Laser Vision Sensor) search 기능
+﻿# 8.5.6 LVS(Laser Vision Sensor) search 기능
 
 ### (1) Search 기능 사용법
 

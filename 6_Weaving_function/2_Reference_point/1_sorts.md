@@ -4,7 +4,7 @@
 <p align="center">
  <img src="../../_assets/6_2_1.png" width="50%"></img>
  <em><p align="center">그림 6.2.1. 위빙 좌표계</p></em>
-</p> 
+</p> 
 
 
 ### (1)	refp 1 (참조점 1)  
@@ -27,14 +27,14 @@
 <p align="center">
  <img src="../../_assets/6_2_2.png" width="65%"></img>
  <em><p align="center">그림 6.2.2. 위빙 방향과 참조점</p></em>
-</p> 
+</p> 
 
 
 <p align="center">
  <img src="../../_assets/6_2_3.png" width="65%"></img>
  <img src="../../_assets/6_2_3_1.png" width="65%"></img>
  <em><p align="center">그림 6.2.3. 참조점 종류별 활용</p></em>
-</p>   
+</p>   
 
 
     

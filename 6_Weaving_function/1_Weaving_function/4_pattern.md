@@ -42,4 +42,4 @@
 <p align="center">
  <img src="../../_assets/6_1_5.png" width="60%"></img>
  <em><p align="center">그림 6.1.5 위빙 경계 제한</p></em>
-</p> 
+</p> 
