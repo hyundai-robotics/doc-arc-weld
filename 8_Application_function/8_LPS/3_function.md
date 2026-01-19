@@ -89,7 +89,7 @@ LPS 명령어 속성은 다음과 같습니다.
 
 툴 기준 x 혹은 y 방향으로 설정된 거리만큼 이동하며 용접점을 검출합니다. 필렛, v-groove, 버트 등 형상 상관없이 하나의 명령어로 수행됩니다. 검출 결과는 REST API로 받아보거나 당사가 제공하는 앱을 등록하여 확인할 수 있습니다.
 
-앱을 등록하여 사용하는 방법은 다음 링크를 참고해주십시오. - [SDK 설명서](https://hrbook-hrc.web.app/#/view/doc-hi6-sdk/korean-Hi6/README)
+앱을 등록하여 사용하는 방법은 다음 링크를 참고해주십시오. - [SDK 설명서](https://hrbook-hrc.web.app/#/view/doc-hi6-sdk/ko/README?cont_model=${cont_model})  
 
 
 {% hint style="warning" %}
