@@ -23,7 +23,8 @@ LPS 기능을 사용하기 위해서는 최초 레이저 센서를 설치하고 
 
 ### (2) 통신 설정
 
-레이저 센서 사양에 맞게 다음 링크를 참고하여 연결할 수 있습니다.(참고 - [Hi6 - 산업용 통신](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/korean/README))
+레이저 센서 사양에 맞게 다음 링크를 참고하여 연결할 수 있습니다.(참고 - [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko/README?cont_model=${cont_model}))
+
 
 이 페이지에서는 일부 센서에 대한 예시만을 설명합니다.
 
@@ -69,7 +70,7 @@ PC와 연결하여 웹에 접속합니다.(최초 고정 IP는 192.168.0.250)
 </br>  
 
 `장치 구성(Device Configuration)` 탭에 진입하여 목적에 맞게 통신 방식을 설정합니다. 이때 프로세스 인터페이스에서 현재 통신 프로토콜에 맞는 방식만 활성화합니다.
-그리고 이더넷IP를 사용한다면 네트워크 설정을 완료합니다. Hi6 에서는 0번과 1번, 2번을 default로 사용하고 있으므로 다른 영역대를 사용해야 합니다.(예시: 192.168.10.250)
+그리고 이더넷IP를 사용한다면 네트워크 설정을 완료합니다. ${cont_model} 에서는 0번과 1번, 2번을 default로 사용하고 있으므로 다른 영역대를 사용해야 합니다.(예시: 192.168.10.250)
 
 <p align="center">
   <img src="../../_assets/8_8_4.png" width="80%"></img>
