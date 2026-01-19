@@ -8,7 +8,7 @@
 
 
 ```stitch``` 명령어 입력
-**[명령입력]-[아크]-[stitch]** (on/off 선택 후 **[ENTER[YES]]** 버튼 클릭)
+`[F6: 명령입력] - arcweld - 다음 - stitch` (on/off 선택 후 **[ENTER[YES]]** 버튼 클릭)
 
 
 {% hint style="warning" %}
