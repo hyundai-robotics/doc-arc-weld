@@ -13,7 +13,7 @@ LPS 기능을 사용하기 위해서는 최초 레이저 센서를 설치하고 
 </p>
 
 레이저 변위 센서는 발/수광부가 존재합니다. 아크 토치에 대해 로봇을 정렬시켰을 때 **레이저 센서의 발/수광부가 툴 기준 X 방향과 정렬이 되도록** 해야 합니다.(레이저 제조사 스펙 참고) 또한 툴의 Y 방향에 대해 우측(토치 바라봤을 때 우측)에 설치할 것을 권장합니다.
-레이저를 설치하여 전원을 인가했을 때 툴의 끝과 레이저 포인터가 가까울수록 간섭이나 CT에 유리합니다. 마지막으로 툴 끝에 대해 센서 설치 위치는 사용하고자 하는 레이저 센서 사양(측정 범위)에 적합해야 하며, 사양 최소 거리보다는 높게 설치되어야 합니다.
+레이저를 설치하여 전원을 인가했을 때 툴의 끝과 레이저 포인트가 가까울수록 간섭이나 CT에 유리합니다. 마지막으로 툴 끝에 대해 센서 설치 위치는 사용하고자 하는 레이저 센서 사양(측정 범위)에 적합해야 하며, 사양 최소 거리보다는 높게 설치되어야 합니다.
 
 
 {% hint style="warning" %}
@@ -23,7 +23,7 @@ LPS 기능을 사용하기 위해서는 최초 레이저 센서를 설치하고 
 
 ### (2) 통신 설정
 
-레이저 센서 사양에 맞게 다음 링크를 참고하여 연결할 수 있습니다.(참고 - [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko/README?cont_model=${cont_model}))
+레이저 센서 사양에 맞게 다음 링크를 참고하여 연결할 수 있습니다.(참고 - [${cont_model} - 산업용 통신](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-${cont_model}/README?cont_model=${cont_model}))
 
 
 이 페이지에서는 일부 센서에 대한 예시만을 설명합니다.
@@ -46,7 +46,7 @@ LPS 기능을 사용하기 위해서는 최초 레이저 센서를 설치하고 
 3. `ENT` 키를 누르고 🔼 키로 원하는 자릿수를 설정한다.(G-0 ~ ; 0.01, 0.001, ...)
 
 
-**[시스템 → 4: 응용 파라미터 → 6: 레이저 포인터 센싱 → 1: 사용환경 설정]**에 진입합니다. 
+`[F2: 시스템] - 4: 응용 파라미터 - 6: 레이저 포인트 센싱 - 1: 사용환경 설정`에 진입합니다. 
 
 <p align="center">
   <img src="../../_assets/8_8_2.png" width="80%"></img>
@@ -78,7 +78,8 @@ PC와 연결하여 웹에 접속합니다.(최초 고정 IP는 192.168.0.250)
 </p>
 </br>   
 
-이후 과정은 다음 링크를 따라 하나씩 수행하면 됩니다. (참고 - [산업용 통신 - 이더넷/IP](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/korean/2-ethernet-ip/README))
+이후 과정은 다음 링크를 따라 하나씩 수행하면 됩니다. 단, hi6에서는 내장 이더넷을 지원하지 않으므로 통신 카드를 이용해야 하고([Hi6 - 산업용 통신](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-Hi6/1-cifx-pci-communication/3-cifx-pci-settings-industrial-communication/3-EtherNet-IP/README?cont_model=Hi6)), hi7부터는 내장 이더넷을 지원하므로 제어기만으로 통신 연결이 가능합니다.([Hi7 - 산업용 통신](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-Hi7/2-ethernet-ip/4-scanner/README?cont_model=Hi7))
+
 
 <p align="center">
   <img src="../../_assets/8_8_5.png" width="80%"></img>
@@ -86,9 +87,9 @@ PC와 연결하여 웹에 접속합니다.(최초 고정 IP는 192.168.0.250)
 </p>
 </br>
 
-위 과정이 완료되었으면 **[시스템 → 4: 응용 파라미터 → 6: 레이저 포인터 센싱 → 1: 사용환경 설정 → 신호 탭]**에 진입합니다. 위에서 할당된 블럭에 대해 입력 신호를 설정하면 센서 값에 대해 거리(현재값)가 출력되는 것을 볼 수 있습니다.(센서-거리 맵핑이 필요하다면 추가 설정 필요)
+위 과정이 완료되었으면 `[F2: 시스템] - 4: 응용 파라미터 - 6: 레이저 포인트 센싱 - 1: 사용환경 설정 - 신호 탭`에 진입합니다. 위에서 할당된 블럭에 대해 입력 신호를 설정하면 센서 값에 대해 거리(현재값)가 출력되는 것을 볼 수 있습니다.(센서-거리 맵핑이 필요하다면 추가 설정 필요)
 
 
 #### 이더넷 통신 - 예: 키엔스 IL-300
 
-* 해당 제조사 매뉴얼과 당사 매뉴얼([산업용 통신 - 이더넷/IP](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/korean/2-ethernet-ip/README))을 참고하여 바우머 센서와 마찬가지로 연결해주면 됩니다.
+* 해당 제조사 매뉴얼과 당사 매뉴얼을 참고하여 바우머 센서와 마찬가지로 연결해주면 됩니다. 위와 마찬가지로 hi6와 hi7 제어기에 따라 이더넷 연결 방법에 차이가 있습니다. 
