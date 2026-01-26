@@ -14,7 +14,7 @@ The connection bracket may be designed and fabricated by the user, or provided b
 </p>
 
 A laser distance sensor consists of a transmitter and a receiver.
-When the robot is aligned with the arc torch, ensure that the transmitter/receiver of the laser sensor is aligned with the tool-based X direction (refer to the laser manufacturer’s specifications).
+When the robot is aligned with the arc torch, ensure that the transmitter/receiver of the laser sensor is aligned with the tool-based X direction (refer to the laser manufacturer's specifications).
 In addition, it is recommended to install the sensor on the right side of the tool Y direction (right side when facing the torch).  
 
 When the laser is installed and powered on, keeping the distance between the tool tip and the laser point as short as possible is advantageous in terms of interference prevention and CT (Cycle Time).
@@ -23,7 +23,7 @@ Finally, the sensor installation position relative to the tool tip must be suita
 
 
 {% hint style="warning" %}
-  It is recommended to mount the sensor bracket directly to the robot flange. In other words, install the mechanical structure in the following order: **Flange – Laser sensor and bracket – Shock sensor – Torch.**
+  It is recommended to mount the sensor bracket directly to the robot flange. In other words, install the mechanical structure in the following order: **Flange - Laser sensor and bracket - Shock sensor - Torch.**
 {% endhint %}
 
 
@@ -50,7 +50,7 @@ First, configure the sensor controller settings.
 * Display Unit Setting (Optional)  
 1. Press and hold the `SET` key, then press the `[UP]` key to select `oUt-1`.
 2. Press the `ENT` key and use the `[RIGHT]` key to select function `G`.
-3. Press the `ENT` key and use the `[UP]` key to set the desired number of decimal places (G-0 to ; 0.01, 0.001, …).
+3. Press the `ENT` key and use the `[UP]` key to set the desired number of decimal places (G-0 to ; 0.01, 0.001, ...).
 
 Navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting`.
 
@@ -89,8 +89,8 @@ If **Ethernet/IP** is used, complete the network settings accordingly. In the ${
 </br>   
 
 Afterward, proceed step by step by following the link below.
-Note that Hi6 does not support built-in Ethernet, so a communication card must be used ([Hi6 – Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-Hi6/1-cifx-pci-communication/3-cifx-pci-settings-industrial-communication/3-EtherNet-IP/README?cont_model=Hi6)).
-From Hi7 and later, built-in Ethernet is supported, allowing communication to be established using the controller alone ([Hi7 – Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-Hi7/2-ethernet-ip/4-scanner/README?cont_model=Hi7)).
+Note that Hi6 does not support built-in Ethernet, so a communication card must be used ([Hi6 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-Hi6/1-cifx-pci-communication/3-cifx-pci-settings-industrial-communication/3-EtherNet-IP/README?cont_model=Hi6)).
+From Hi7 and later, built-in Ethernet is supported, allowing communication to be established using the controller alone ([Hi7 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-Hi7/2-ethernet-ip/4-scanner/README?cont_model=Hi7)).
 
 
 
@@ -100,12 +100,12 @@ From Hi7 and later, built-in Ethernet is supported, allowing communication to be
 </p>
 </br>
 
-Once the above steps are completed, navigate to `[F2: System] – 4: Application Parameters – 6: Laser Point Sensing – 1: Environment Setting – Signal tab`.
+Once the above steps are completed, navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting - Signal tab`.
 Configure the input signals for the assigned blocks.
 You can then confirm that the distance (current value) is output as the sensor value. (Additional settings are required if sensor-to-distance mapping is needed.)
 
 
 #### EtherNet/IP - Example: Keyence IL-300
 
-* Refer to the manufacturer’s manual and our manual to connect the sensor in the same manner as the Baumer sensor.
+* Refer to the manufacturer's manual and our manual to connect the sensor in the same manner as the Baumer sensor.
 As described above, the Ethernet connection method differs depending on whether an Hi6 or Hi7 controller is used.

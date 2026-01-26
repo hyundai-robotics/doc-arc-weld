@@ -19,7 +19,7 @@ Before performing calibration, the tool must be perfectly aligned with the calib
 Teach the tool manually in the X and Y directions based on the tool coordinate system, and check that the laser output remains constant (with the error kept within 0.5 or less). Adjust the RX and RY values as necessary.  
 
 Once the tool is aligned, position the wire tip at the edge of the calibration plane.
-When teaching in the tool-based X–Y directions, adjust the RZ value so that the laser point moves along the edge corner.  
+When teaching in the tool-based X-Y directions, adjust the RZ value so that the laser point moves along the edge corner.  
 
 <br/>
 
@@ -43,7 +43,7 @@ In addition, ensure that the laser point is located inside the calibration plane
  <em><p align="center">Figure 8.8.2.2 Start of calibration</p></em>
 </p><br/>  
 
-From the lower panel, select `[F6: cmd. input] – arcweld – lps` and insert the following command.
+From the lower panel, select `[F6: cmd. input] - arcweld - lps` and insert the following command.
 
 ```py
   lps auto_calib, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool
@@ -56,14 +56,14 @@ When executed in automatic method, calibration is performed through the followin
 
 1. The laser point moves in the Tx and Ty directions, initially moving toward the tool tip direction.
 2. The robot is lifted in the +Z direction based on the robot coordinate system, and the same process as in Step 1 is performed.
-3. The robot moves downward in the –Z direction based on the robot coordinate system, while interpolation is performed toward the transmitter/receiver direction of the sensor (current bracket specification Tx).  
+3. The robot moves downward in the -Z direction based on the robot coordinate system, while interpolation is performed toward the transmitter/receiver direction of the sensor (current bracket specification Tx).  
 
 Once calibration is fully completed, an execution mark appears on the left side of the step, and all motion stops.  
 
 
 ### (4) Calbration Information
 
-Navigate to `[F2: System] – 4: Application Parameters – 6: Laser Point Sensing – 2: Calibration` to check the calibration results.
+Navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 2: Calibration` to check the calibration results.
 When the value in the **Calibration done** field changes to "2", it indicates that all calibration processes, including interpolation, have been completed.  
 Calibration information is stored per tool number, which is useful when using tool change functions.
 If the tool information is the same but a different tool number is to be used, the calibration data can be copied and reused.

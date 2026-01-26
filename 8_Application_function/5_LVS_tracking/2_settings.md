@@ -42,7 +42,7 @@ The LVS sensor must be installed so that the laser is positioned perpendicular t
 ### (2) Communication Settings
 
 Connect the LVS sensor controller and the robot controller using an Ethernet cable.<br>
-Navigate to **[System > 4: Application parameter > 5: LVS tracking > 1: Envrionment setting]**.<br>
+Navigate to `[F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting`.<br>
 
 In the **[Communication]** tab, configure the following items:
 
@@ -113,7 +113,7 @@ Preferences have been completed through the above process.
 </p>
 
 As shown in the figure above, select the LVS brand as FULL, then check the IP address of the LVS sensor in the Full-V softeware.  <br>
-Enter the IP in the **[System > 4: Application parameter > 5: LVS tracking > 1: Envrionment setting]** window.  <br> Afterward, click the "connect" button at the bottom and verify that the connection status shows.  <br>
+Enter the IP in the `[F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting` window.  <br> Afterward, click the "connect" button at the bottom and verify that the connection status shows.  <br>
 If "disconnected" appears, check the hardware connection and IP address.<br>
 
 Refer to the manual provided by Full-V and the figure below to register the seam you wish to use in the Full-V software.  

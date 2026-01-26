@@ -26,7 +26,7 @@ The touch sensing supports a total of 5-types, as shown in [Figure 8.2.1] (Butt,
 
 ### (2) Touch Sensing Command and Setting Parameters
 
-The touch sensing command can be recorded by entering **[Command input > Arcweld > touchsen]** on the TP.
+The touch sensing command can be recorded by entering `[F6: cmd. input] - arcweld - touchsen` on the TP.
 
 Assuming the condition 1 set for Fillet, condition 2 set for Butt, and condition 3 for V-groove in the command (where the workpiece type is defined in the properties), the example is as follows:
 

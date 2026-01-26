@@ -8,7 +8,7 @@ Therefore, the conditions can be modified using commands, and the changes will o
 
 ### (2) Method of Using Commands  
 
-To insert the command, enter `cmd input > var_io > assignment` while in manual mode. Then, move the cursor to the left variable and select `System Variables > arcweld > _weaving.`parameter``, where you can input the desired value.  <br>
+To insert the command, enter `[F6: cmd input] - var_io - assignment` while in manual mode. Then, move the cursor to the left variable and select `[F3: System Variables] - arcweld - _weaving.{parameter}`, where you can input the desired value.  <br>
 
 The entered command will appear in the following format:  
 ```e.g. _weaving.frequency=2.0```  

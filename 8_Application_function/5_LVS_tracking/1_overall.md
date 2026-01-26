@@ -20,7 +20,7 @@ In other words, through seam tracking, welding can still be performed even if th
 
 ## Command
 
-The LVS Seam Finding and Tracking function is executed through the `lvs` command, which can be entered by selecting **[cmd. input > arcweld > lvs]** in the TP.
+The LVS Seam Finding and Tracking function is executed through the `lvs` command, which can be entered by selecting `[F6: cmd. input] - arcweld - lvs` in the TP.
 
 The structure of the command is as follows:
 

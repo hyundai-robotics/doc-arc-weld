@@ -61,7 +61,7 @@ Teach the Arc welding operation as shown in the following figure.
 
 (9) Since the welding area is from Step 2 to Step 3, move the cursor to Step 2.
 
-- Enter the **[cmd. Input] > [arcweld] > [weaving]**, input the condition number, and press the `[ENTER]` key.
+- Enter the `[F6: cmd. Input] - arcweld - weaving`, input the condition number, and press the `[ENTER]` key.
 - In the same way, enter the **[arcon]**, input the condition number, and press the `[ENTER]` key.
 (For Arc Welding condition settings, refer to [5. Editing Arc Welding Conditions](../../5_Condition_editing/README.md).)
 
@@ -74,7 +74,7 @@ Teach the Arc welding operation as shown in the following figure.
 
 (11) Modify the speed of Step 3 to your desired welding speed (e.g., 20mm/s).
 
-(12) Finally, enter the **[cmd. input] > [flowctrl] > [end]** command to terminate the program.
+(12) Finally, enter the `[F6: cmd. input] - flowctrl - end` command to terminate the program.
 
 <p align="center">
  <img src="../../_assets/1_1_6.png" width="70%"></img>

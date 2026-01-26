@@ -4,7 +4,7 @@
 
 The Master Mode function stores a reference position (Master pose) and calculates the shift between the current sensed position and the reference position during actual production.
 
-To enable this functionality, **[user key > Master Mode]** must be activated to register the reference position(Master pose) in advance.
+To enable this functionality, `user key - Master Mode` must be activated to register the reference position(Master pose) in advance.
 
 
 <p align="center">

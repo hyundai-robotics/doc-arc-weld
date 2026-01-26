@@ -31,9 +31,9 @@ This function allows you to check detailed data related to arc welding. The info
 
 12. Additional Information Window: This section displays useful additional information such as the upper and lower limits of current/voltage and their units. 
 
-13. Input Signals: Signals sent from the welder to the robot controller.(Can be checked under **[System > 5: Initialization > 3: Usage Setting > Welder Setting - Input signal assign]**)
+13. Input Signals: Signals sent from the welder to the robot controller.(Can be checked under `[F2: System] - 5: Initialization - 3: Usage Setting - Welder Setting - Input signal assign`)
 
-14. Output Signals: Signals sent from the robot controller to the welder.(Can be checked under **[System > 5: Initialization > 3: Usage Setting > Welder Setting - Output signal assign]**)
+14. Output Signals: Signals sent from the robot controller to the welder.(Can be checked under `[F2: System] - 5: Initialization - 3: Usage Setting - Welder Setting - Output signal assign`)
 
 15. Command Values: Frequently used commands that can be manually output.
 

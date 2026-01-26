@@ -2,7 +2,7 @@
 
 Arc welding data graph displays information related to the welding data's waveform, allowing you to view not only the real-time data but also past data at a glance.
 
-To use this feature, on TP, press **[pane layout > select > arc data graph]** sequentially. 
+To use this feature, on TP, press `[pane layout] - select - arc data graph` sequentially. 
 
  
 <p align="center">

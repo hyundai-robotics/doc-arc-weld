@@ -6,7 +6,7 @@ Manual Mode Arc Welding is a function that allows welding even when the robot is
 
 To use Manual Mode Arc Welding, it should be set as below.
 
- (1) Go to **[System > 4: Application parameter > 2: Arc welding > Arc welding enable during manual mode]** and check enable.
+ (1) Go to `[F2: System] - 4: Application parameter - 2: Arc welding - Arc welding enable during manual mode` and check enable.
 
  (2) Set the **[run to(execution unit)] to "End"** (the second menu on the left side of the TP).
 

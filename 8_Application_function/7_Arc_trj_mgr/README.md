@@ -6,7 +6,7 @@ Through this, you can monitor the welding angle, current, and voltage in real ti
 
 To enable this feature, follow these steps:
 
-Set "Arc trajectory monitoring" to 'activation on' under **[System > 2: Application parameter > 2: Arc welding]**.
+Set "Arc trajectory monitoring" to 'activation on' under `[System] - 2: Application parameter - 2: Arc welding`.
 
 
 {% hint style="info" %}

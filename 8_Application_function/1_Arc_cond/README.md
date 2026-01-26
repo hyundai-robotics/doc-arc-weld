@@ -4,7 +4,7 @@
 Welding conditions can be stored in a database (DB) for use or interpolated during the welding process.
 The usage of this function is as follows:
 
-**[Command input > arcweld > arccond]** to enter the command in the JOB file.
+`[F6: cmd. input] - arcweld - arccond` to enter the command in the JOB file.
 
 The command format is as follows:
 ```arccond <interpolation type>, cnd=<condition number>, gap=<gap>, spd=<welding speed>, rd=<wall direction>, ld=<sie direction>, freq=<weaving frequency>, cur=<crruent>, vol=<voltage>```

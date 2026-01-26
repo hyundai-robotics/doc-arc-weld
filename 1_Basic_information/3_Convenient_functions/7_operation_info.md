@@ -2,7 +2,7 @@
 
 This function allows you to monitor the operational information of arc welding. With this feature, you can easily check and manage the following aspects:
 
-To use this feature, on TP, press **[pane layout > select > arc operation info.]** sequentially. 
+To use this feature, on TP, press `[pane layout] - select - arc operation info.` sequentially. 
 
 
 <p align="center">

@@ -3,7 +3,7 @@
 
 The Arc Welding Signal Test function lets you test the input/output status of key welding signals and manually release wire stick-out. This feature is useful for checking the status of welder and communication as it confirms wheter specific signals are operating correctly.
 
-To use this feature, on TP, press **[pane layout > select > arc welding]** sequentially. In the Arc Welding panel, scroll down to see the input/output signal items.
+To use this feature, on TP, press `[pane layout] - select - arc welding` sequentially. In the Arc Welding panel, scroll down to see the input/output signal items.
 
 
 <p align="center">

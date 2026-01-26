@@ -87,7 +87,7 @@ If you perform automatic calibration for tool 0 and want to use tool 1 or tool 2
 
 If you want to use the same tool information but with different numbers, you can enter the following window to copy and apply the calibration information.
 
-- Navigate to **[System > 4: Application parameter > 5: LVS tracking > 2: LVS Calibration]**.<br>
+- Navigate to `[F2: System] - 4: Application parameter - 5: LVS tracking - 2: LVS Calibration`.<br>
 
 <p align="center">
   <img src="../../_assets/8_5_8_lvs_tool_calibmat.png" width="80%"></img>

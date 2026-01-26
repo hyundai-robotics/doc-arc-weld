@@ -120,18 +120,18 @@ For instructions on how to register and use the application, please refer to the
   <em><p align="center">Figure 8.8.3.4 LPS Graph</p></em>
 </p><br/>  
 
-After registering the application, the monitoring screen can be accessed through the following method: `[(Right Panel)Pane layout] - select - LPS Graph` 
+After registering the application, the monitoring screen can be accessed through the following method: `[Pane layout] - select - LPS Graph` 
 
 <br/>
 
 <p align="center">
   <img src="../../_assets/8_8_3_5.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.3.5 Example screen – V-groove</p></em>
+  <em><p align="center">Figure 8.8.3.5 Example screen - V-groove</p></em>
 </p><br/>  
 
 <p align="center">
   <img src="../../_assets/8_8_3_6.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.3.6 Example screen – Butt joint</p></em>
+  <em><p align="center">Figure 8.8.3.6 Example screen - Butt joint</p></em>
 </p><br/>  
 
 

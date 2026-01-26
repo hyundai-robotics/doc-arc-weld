@@ -4,7 +4,7 @@ Arc welding robot systems uses a collision sensor to prevent torch deformation. 
 
 The setup dialog box is as follows:
 
-You can configure the collision sensor processing method on **[System > 1: User Environment]**.
+You can configure the collision sensor processing method on `[F2: System] - 1: User Environment`.
 
 
 ## [Collision sensor process]
@@ -16,7 +16,7 @@ You can configure the collision sensor processing method on **[System > 1: User 
 ## [How to Change Signal Logic]
 If the tool collides and the collision sensor signal turns on, the motor will not turn on. In this case, you need to change the signal logic to negative logic as follows.
 
-- **[System > 2: Control parameter > 2: Input/Output signal setting > 1: Input signal attribute]** - Adding a Signal and Checking the Negative Logic Box  
+- `[F2: System] - 2: Control parameter - 2: Input/Output signal setting - 1: Input signal attribute` - Adding a Signal and Checking the Negative Logic Box  
 
 
 <p align="center">

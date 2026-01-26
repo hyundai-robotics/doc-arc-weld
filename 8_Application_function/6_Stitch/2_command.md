@@ -8,7 +8,7 @@
 
 
 ```stitch``` Command: 
-After selecting **[cmd.input > arcweld > stitch]** in sequence, choose on/off and press **[ENTER]**.
+After selecting `[F6: cmd.input] - arcweld - stitch` in sequence, choose on/off and press **[ENTER]**.
 
 
 {% hint style="warning" %}

@@ -38,7 +38,7 @@ Here are the functions and how to use them:
 <br/>
 
 ### Inching Speed Setting
- >- Navigate to **[System > 4: Application parameter > 2: Arc welding]**
+ >- Navigate to `[F2: System] - 4: Application parameter - 2: Arc welding`
  >- Within the Arc welding settings menu, Set your values for both low and high speeds: **Inching speed(%): Low=[---]%, High=[---]%**
  >- The speed is displayed as a percentage of the maximum inching speed.
  >- Depending on your specific welder model, changes to the inching speed may not be reflected.

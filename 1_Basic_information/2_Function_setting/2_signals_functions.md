@@ -1,6 +1,6 @@
 ﻿# 1.2.2 Arc Welding various signals and funtion settings
 
-On the manual mode screen, press **[System > 4: Application parameter > 2: Arc welding]** to bring up a screen where you can set various conditions for Arc welding applications, as shown below.
+On the manual mode screen, press `[F2: System] - 4: Application parameter - 2: Arc welding` to bring up a screen where you can set various conditions for Arc welding applications, as shown below.
 
 
 <p align="center">

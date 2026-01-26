@@ -1,6 +1,6 @@
 ﻿# 4.2 Arc Welder Settings
 
-User can operate various welders together with our Arc Welding Robots. To support this, a function is provided to edit welder-specific settings. The welder configuration screen can be accessed as follows: **[System > 5: Initialization > 3: Usage setting]**
+User can operate various welders together with our Arc Welding Robots. To support this, a function is provided to edit welder-specific settings. The welder configuration screen can be accessed as follows: `[F2: System] - 5: Initialization - 3: Usage setting`
 
 
 ###	Welder Maker Number

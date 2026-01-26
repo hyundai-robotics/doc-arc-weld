@@ -76,7 +76,7 @@ The retry process is performed in the following sequence:
 
 ### (3) LVS Seam Finding Monitoring
 
-To view the LVS seam finding monitoring screen, click **[pane layout > select > LVS seamfind]** in the TP  
+To view the LVS seam finding monitoring screen, click `[pane layout] - select - LVS seamfind` in the TP  
 
 
 <p align="center">

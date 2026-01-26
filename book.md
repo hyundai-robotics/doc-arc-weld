@@ -1,4 +1,6 @@
-﻿# ${cont_model} Robot Controller Functional Manual - Arc Welding
+﻿
+[__SOURCE](README.md)
+# ${cont_model} Robot Controller Functional Manual - Arc Welding
 
 This manual consist of 8 chapters.
 
@@ -38,7 +40,11 @@ It provides a brief overview of functions that can be applied when the welding l
 When using our Arc Welding Robots for the first time, we recommend reading Chapters 1 ~ 5. For Chapters 6 ~ 8, we suggest selectively reading about the functions you need.
 
 <br>
-# 1. Arc Welding Basics# 1.1 Overview
+
+[__SOURCE](1_Basic_information/README.md)
+# 1. Arc Welding Basics
+[__SOURCE](1_Basic_information/1_Introduction/README.md)
+# 1.1 Overview
 
 Teach the Arc welding operation as shown in the following figure.
 
@@ -101,7 +107,7 @@ Teach the Arc welding operation as shown in the following figure.
 
 (9) Since the welding area is from Step 2 to Step 3, move the cursor to Step 2.
 
-- Enter the **[cmd. Input] > [arcweld] > [weaving]**, input the condition number, and press the `[ENTER]` key.
+- Enter the `[F6: cmd. Input] - arcweld - weaving`, input the condition number, and press the `[ENTER]` key.
 - In the same way, enter the **[arcon]**, input the condition number, and press the `[ENTER]` key.
 (For Arc Welding condition settings, refer to [5. Editing Arc Welding Conditions](../../5_Condition_editing/README.md).)
 
@@ -114,16 +120,20 @@ Teach the Arc welding operation as shown in the following figure.
 
 (11) Modify the speed of Step 3 to your desired welding speed (e.g., 20mm/s).
 
-(12) Finally, enter the **[cmd. input] > [flowctrl] > [end]** command to terminate the program.
+(12) Finally, enter the `[F6: cmd. input] - flowctrl - end` command to terminate the program.
 
 <p align="center">
  <img src="../../_assets/1_1_6.png" width="70%"></img>
  <em><p align="center">Figure 1.1.6. Teaching Completion Screen</p></em>
-</p># 1.2 Arc Welding function settings# 1.2.1 Arc Welding application settings
+</p>
+[__SOURCE](1_Basic_information/2_Function_setting/README.md)
+# 1.2 Arc Welding function settings
+[__SOURCE](1_Basic_information/2_Function_setting/1_usage.md)
+# 1.2.1 Arc Welding application settings
 
 (1) Depending on the Robot model, the Arc welding function might not be active. If in this the case, follow the steps below to enable. (Note: Engineer authority is required to set up the Arc welding function)
 
-(2) In manual mode, press **[System > 5: Initialization > 3: Usage setting]**. A dialog box will appear, as shown in [Figure 1.2.1.], allowing you to configure the robot's application, the welder you want to use, user keys, and I/O signal assignments.
+(2) In manual mode, press `[F2: System] - 5: Initialization - 3: Usage setting`. A dialog box will appear, as shown in [Figure 1.2.1.], allowing you to configure the robot's application, the welder you want to use, user keys, and I/O signal assignments.
 
 (3) [Figure 1.2.1] shows an active Arc welding steps, where the welder number in welder information has been selected as **No.4(Fronius)**. From this screen, pressing **welder setting** will take you to a dialog box where you can configure the conditions for the desired welder.
 
@@ -133,9 +143,11 @@ Teach the Arc welding operation as shown in the following figure.
 <p align="center">
  <img src="../../_assets/1_2_1.png" width="70%"></img>
  <em><p align="center">Figure 1.2.1. Usage Setting Dialog</p></em>
-</p># 1.2.2 Arc Welding various signals and funtion settings
+</p>
+[__SOURCE](1_Basic_information/2_Function_setting/2_signals_functions.md)
+# 1.2.2 Arc Welding various signals and funtion settings
 
-On the manual mode screen, press **[System > 4: Application parameter > 2: Arc welding]** to bring up a screen where you can set various conditions for Arc welding applications, as shown below.
+On the manual mode screen, press `[F2: System] - 4: Application parameter - 2: Arc welding` to bring up a screen where you can set various conditions for Arc welding applications, as shown below.
 
 
 <p align="center">
@@ -220,13 +232,15 @@ The details for each item are as follows:
 |------|------|
 |[**Disable**, **Enable**]|Sets whether to monitor the Arc trajectory.|
 
+
+[__SOURCE](1_Basic_information/2_Function_setting/3_crash_sensor.md)
 # 1.2.3 Collision sensor signal settings
 
 Arc welding robot systems uses a collision sensor to prevent torch deformation. The collision sensor basically uses negative logic to immediately detect issues such as a disconnected sensor cable.
 
 The setup dialog box is as follows:
 
-You can configure the collision sensor processing method on **[System > 1: User Environment]**.
+You can configure the collision sensor processing method on `[F2: System] - 1: User Environment`.
 
 
 ## [Collision sensor process]
@@ -238,7 +252,7 @@ You can configure the collision sensor processing method on **[System > 1: User 
 ## [How to Change Signal Logic]
 If the tool collides and the collision sensor signal turns on, the motor will not turn on. In this case, you need to change the signal logic to negative logic as follows.
 
-- **[System > 2: Control parameter > 2: Input/Output signal setting > 1: Input signal attribute]** - Adding a Signal and Checking the Negative Logic Box  
+- `[F2: System] - 2: Control parameter - 2: Input/Output signal setting - 1: Input signal attribute` - Adding a Signal and Checking the Negative Logic Box  
 
 
 <p align="center">
@@ -249,7 +263,11 @@ If the tool collides and the collision sensor signal turns on, the motor will no
 {% hint style="info" %}
 When you set up a collision sensor in the system's input signal settings, the system will prioritize the input from this signal. Any collision sensor signals received via welder communication will be ignored.
 {% endhint %}
-# 1.3 Arc Welding Convenience Functions# 1.3.1 Gas Check, Wire Inching, and Wire Retract
+
+[__SOURCE](1_Basic_information/3_Convenient_functions/README.md)
+# 1.3 Arc Welding Convenience Functions
+[__SOURCE](1_Basic_information/3_Convenient_functions/1_gas_check.md)
+# 1.3.1 Gas Check, Wire Inching, and Wire Retract
 
 This describes the functionality for controlling the shield gas valve and the wire feeder motor in an arc welding system. You can check the current shield gas flow rate using the gas check function. The inching and reverse inching(retreat) functions let you adjust the length of the wire protruding from the welding torch.
 
@@ -289,10 +307,12 @@ Here are the functions and how to use them:
 <br/>
 
 ### Inching Speed Setting
- >- Navigate to **[System > 4: Application parameter > 2: Arc welding]**
+ >- Navigate to `[F2: System] - 4: Application parameter - 2: Arc welding`
  >- Within the Arc welding settings menu, Set your values for both low and high speeds: **Inching speed(%): Low=[---]%, High=[---]%**
  >- The speed is displayed as a percentage of the maximum inching speed.
  >- Depending on your specific welder model, changes to the inching speed may not be reflected.
+
+[__SOURCE](1_Basic_information/3_Convenient_functions/2_high_speed.md)
 # 1.3.2 High-speed mobility function
 
 When an Arc welding program runs, the robot's movement speed in welding sections is very slow. This leads to a significant amount of time being consumed during test runs to verify the robot's working position.
@@ -319,6 +339,8 @@ The operation method is as follows:
 |        | `[SHIFT]` Key Released During High-speed Movement | `[SHIFT]` Key Pressed During Teaching Speed Step FWD/BWD |
 | ------ | --------------------- |--------------------- |
 | **Operation** | Move the robot forward/backward at manual maximum speed. | Robot stops, then moves at manual maximum speed |
+
+[__SOURCE](1_Basic_information/3_Convenient_functions/3_change_current_voltage.md)
 # 1.3.3 Change the Current/Voltage during Welding
 
 This function is used when teaching Arc welding tasks and there's a need to change the welding current/voltage during welding to find the appropriate settings.
@@ -340,7 +362,7 @@ The detailed content and setup method for this function are as follows:  <br/>
 <br>
 
 1. Perform arc welding in automatic mode.
-2. Navigate to **[pane layout > select > arc change IV]**
+2. Navigate to `[pane layout] - select - arc change IV`
 3. Click the **[+/-]** button to enter the adjustment button window.
 
 ---  
@@ -374,7 +396,7 @@ The detailed content and setup method for this function are as follows:  <br/>
 
 ### Arc welding Current/Voltage Auto saving settings
 
-- Navigate to **[System > 4: Application parameter > 2: Arc welding]**
+- Navigate to `[F2: System] - 4: Application parameter - 2: Arc welding`
 - **[Arc welding I/V change auto saving]**
     - **Disable**  
     Not saved
@@ -401,6 +423,8 @@ The details for each item in the dialog box are as shown in the following figure
 
 Example: arcon cnd=1,cur=200,vol=20 # The changed current and voltage are saved to welding start condition #1.
 {% endhint %}
+
+[__SOURCE](1_Basic_information/3_Convenient_functions/4_manual_mode.md)
 # 1.3.4 Manual Mode Arc Welding
 
 Generally, Arc Welding is only possible when the robot operates in automatic or remote mode.
@@ -409,16 +433,19 @@ Manual Mode Arc Welding is a function that allows welding even when the robot is
 
 To use Manual Mode Arc Welding, it should be set as below.
 
- (1) Go to **[System > 4: Application parameter > 2: Arc welding > Arc welding enable during manual mode]** and check enable.
+ (1) Go to `[F2: System] - 4: Application parameter - 2: Arc welding - Arc welding enable during manual mode` and check enable.
 
  (2) Set the **[run to(execution unit)] to "End"** (the second menu on the left side of the TP).
 
  (3) Execute ```arcon``` using step forward.  <br/>
- * NOTE: If the robot stops during welding(before ```arcoff```) due to a paused step forward movement, ```arcon``` won't execute when you step forward again. In this case, the robot will move to the next teaching point without welding.# 1.3.5 High weight arc torch vibration reduction function
+ * NOTE: If the robot stops during welding(before ```arcoff```) due to a paused step forward movement, ```arcon``` won't execute when you step forward again. In this case, the robot will move to the next teaching point without welding.
+
+[__SOURCE](1_Basic_information/3_Convenient_functions/5_vibration_reduction.md)
+# 1.3.5 High weight arc torch vibration reduction function
 
 This function aims to reduce vibrations that can occur when using heavy torches (such as water-cooled torches or push-pull torches) on a small robot. You can configure this feature as described below.
 
-- **[System > 4: Application parameter > 2: Arc welding > Vibration reduction for heavy torch]**: Disable / Welding Point / All range
+- `[F2: System] - 4: Application parameter - 2: Arc welding - Vibration reduction for heavy torch`: Disable / Welding Point / All range
 
 To reduce vibrations, two methods are provided, each with its own advantages and disadvantages. You can refer to the pros and cons below to choose the method that best suits your situation.
 
@@ -427,12 +454,14 @@ To reduce vibrations, two methods are provided, each with its own advantages and
 | --- | --- |
 | **Disable**  |  |
 | **Welding Point**  | Significantly reduces a considerable amount of vibrations. No impact on robot cycle time. |
-| **All range** | Reduces most vibrations. Increases robot cycle time. |# 1.3.6 Arc Welding signal test function
+| **All range** | Reduces most vibrations. Increases robot cycle time. |
+[__SOURCE](1_Basic_information/3_Convenient_functions/6_signal_test.md)
+# 1.3.6 Arc Welding signal test function
 
 
 The Arc Welding Signal Test function lets you test the input/output status of key welding signals and manually release wire stick-out. This feature is useful for checking the status of welder and communication as it confirms wheter specific signals are operating correctly.
 
-To use this feature, on TP, press **[pane layout > select > arc welding]** sequentially. In the Arc Welding panel, scroll down to see the input/output signal items.
+To use this feature, on TP, press `[pane layout] - select - arc welding` sequentially. In the Arc Welding panel, scroll down to see the input/output signal items.
 
 
 <p align="center">
@@ -445,11 +474,13 @@ To use this feature, on TP, press **[pane layout > select > arc welding]** seque
 | **Output Signal** | With the desired output signal selected, click the **[Manual Output]** button to test turnning the signal on/off. |
 | **Input Signal**| You can verify whether input signals are being recieved correctly according to their operation. |
 | **Command Value**| <li>**Manual Wire Stick-out Release**: Select "Stick check" and click the **[Manual Output]** button. </li> <li>**Manual Welder Error Reset**: Select "Welder Error Reset" and click the **[Manual Output]** button. </li>|
+
+[__SOURCE](1_Basic_information/3_Convenient_functions/7_operation_info.md)
 # 1.3.7 Arc Welding Operation Information
 
 This function allows you to monitor the operational information of arc welding. With this feature, you can easily check and manage the following aspects:
 
-To use this feature, on TP, press **[pane layout > select > arc operation info.]** sequentially. 
+To use this feature, on TP, press `[pane layout] - select - arc operation info.` sequentially. 
 
 
 <p align="center">
@@ -464,8 +495,12 @@ To use this feature, on TP, press **[pane layout > select > arc operation info.]
 | **last cycle** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **of the immediately previous cycle**. |
 | **current cycle** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **for the current cycle**. |
 | **overlap count(by cause)**  | Displays the number of overlaps that occur when the robot stops during welding, categorized by the cause of the stop. |
-| **clear(on fbt)** | When the Arc welding operation info window is activated, the **[clear]** button appears. Clicking this button will display the operation info clear dialog. You can click the button for the item you wish to clear to perform the desired action. |# 2. Inserting Commands
+| **clear(on fbt)** | When the Arc welding operation info window is activated, the **[clear]** button appears. Clicking this button will display the operation info clear dialog. You can click the button for the item you wish to clear to perform the desired action. |
+[__SOURCE](2_Command/README.md)
+# 2. Inserting Commands
 
+
+[__SOURCE](2_Command/1_arcon.md)
 # 2.1 arcon
 
 
@@ -514,7 +549,9 @@ Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md)
 {% hint style="warning" %}
 [**Caution**]  
  - Some welder models can store various welding settings as jobs internally. In this case, you can use 'Job number of the Welder' item.
-{% endhint %}# 2.2 arcoff
+{% endhint %}
+[__SOURCE](2_Command/2_arcoff.md)
+# 2.2 arcoff
 
 ### Description
 
@@ -551,6 +588,8 @@ arcoff welder=<Condition Number>, delay=<Delay Time>
 ### Details 
 
 Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md) 
+
+[__SOURCE](2_Command/3_weavon.md)
 # 2.3 weaving on
 
 
@@ -584,6 +623,8 @@ Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md)
 
 ### Details  
   Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)
+
+[__SOURCE](2_Command/4_weavof.md)
 # 2.4 weaving off
 
 
@@ -610,6 +651,8 @@ weaving off
 
   Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)
 
+
+[__SOURCE](2_Command/5_arccond.md)
 # 2.5 arccond
 
 
@@ -655,7 +698,9 @@ arccond <Interpolation type>, cnd=<Condition Number>, gap=<Gap>, spd=<Welding Sp
 
 ### Details  
 
-  Refer to [[8.1 Arccond - Arc Weld Condition]](../8_Application_function/1_Arc_cond/README.md)# 2.6 refp
+  Refer to [[8.1 Arccond - Arc Weld Condition]](../8_Application_function/1_Arc_cond/README.md)
+[__SOURCE](2_Command/6_refp.md)
+# 2.6 refp
 
 ### Description
 
@@ -697,7 +742,9 @@ refp <Reference Point Number>,<Pose(Num)>
 -	```refp``` command, likes ```move``` command, belongs to the step category.
 - When the ```refp``` command is entered using a user key, it takes the form of a hidden pose.
 - After setting the execution unit to Cmd or Step, you can move to the taught position.  
-{% endhint %}# 2.7 lvs
+{% endhint %}
+[__SOURCE](2_Command/7_lvson.md)
+# 2.7 lvs
 
 ### Description 
 
@@ -805,6 +852,8 @@ refp <Reference Point Number>,<Pose(Num)>
 ### Details  
 
   Refer to [[8.5 LVS(Laser Vision Sensor) Seam Finding and Tracking]](../8_Application_function/5_LVS_tracking/README.md)
+
+[__SOURCE](2_Command/9_hsenson.md)
 # 2.9 heightsen on
 
 ### Description 
@@ -838,6 +887,8 @@ refp <Reference Point Number>,<Pose(Num)>
   Refer to [[8.4 Height Sensing]](../8_Application_function/4_Height_sensing/README.md)
 
 
+
+[__SOURCE](2_Command/10_hsensoff.md)
 # 2.10 heightsen off
 
 ### Description
@@ -868,6 +919,8 @@ heightsen off
 <br/>
 
 
+
+[__SOURCE](2_Command/11_multipass.md)
 # 2.11 multipass
 
 ### Description  
@@ -977,6 +1030,8 @@ S17  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
      multipass off
 ```  
 <br/>
+
+[__SOURCE](2_Command/12_posical.md)
 # 2.12 posi_calib
 
 ### Description 
@@ -987,8 +1042,10 @@ However, when the positioner is changed using a servo tool changer, calibration 
 This command allows calibration to be performed directly within the robot program.
 
 
-- For detailed instructions on using this command, please refer to [2.3.4 posi_calib](https://hrbook-hrc.web.app/#/view/doc-positioner-sync/english/2-system_settings/2-3-positioner-calibration/4_posi_calib)
+- For detailed instructions on using this command, please refer to [2.3.4 posi_calib](https://hrbook-hrc.web.app/#/view/doc-positioner-sync/en/2-system_settings/2-3-positioner-calibration/4_posi_calib)
 
+
+[__SOURCE](2_Command/13_touchsen.md)
 # 2.13 touchsen
 
 ### Description
@@ -1042,6 +1099,8 @@ touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, mpose
   Refer to [[8.2 Touch Sensing]](../8_Application_function/2_Touch_sensing/README.md)
 <br/>
 
+
+[__SOURCE](2_Command/14_stitch.md)
 # 2.14 stitch
 
 ### Description 
@@ -1076,6 +1135,8 @@ stitch off
 
 ### Details  
   Refer to [[8.6 STITCH Function]](../8_Application_function/6_Stitch/README.md)
+
+[__SOURCE](2_Command/15_calcshift.md)
 # 2.15 calshift
 
 ### Description  
@@ -1106,16 +1167,154 @@ It is frequently used to calculate shifts based on pose variables saved from tou
 ### Example
 
 ```python
-    move L, spd=30%, …
+    move L, spd=30%, ...
     var pose_1 = cpo()
-    move L, spd=30%, …
+    move L, spd=30%, ...
     var pose_2 = cpo()
     var sft_1
     sft_1=calshift(pose_1,pose_2)   
     # calculate the vector shift between pose_1 and pose_2, and store the result in sht_1
 ```  
 <br/>
-  # 3. Command Property# 3.1 Overview
+  
+[__SOURCE](2_Command/16_lps.md)
+# 2.16 lps
+
+### Description 
+
+```lps``` command is used to perform functions such as obtaining the pose of the laser position using a laser distance sensor (Spot Mode), detecting step differences (Step mode), and searching for a weld seam (Scan mode).
+
+<br/>
+
+### Syntax
+
+```python
+    lps auto_calib, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>
+    lps spot, cnd=<Condition Number>, sp=<Stored Pose>
+    lps stepp, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>, spd=<Robot Speed>, sp=<Stored Pose>
+    lps scan, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>, spd=<Robot Speed>, sp=<Stored Pose>
+    # When Using Master / Production Mode
+    lps scan, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>, spd=<Robot Speed>, sp=<Stored Pose>, mp=<Pose to save in Master Mode>, ms=<Shift Variable Calculated in Production Mode>
+```  
+<br/>
+
+### Parameter
+
+<table>
+  <thead>
+    <tr>
+      <th>Major Category</th>
+      <th>Sub Category</th>
+      <th>Meaning</th>
+      <th>Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="5">lps</td>
+      <tr>
+      <td>auto_calib</td>
+      <td>
+        Performs automatic calibration between the tool and the sensor.
+      </td>
+      </tr>
+      <tr>
+      <td>spot</td>
+      <td>
+        In Spot mode, the pose of the position currently indicated by the laser is obtained.
+      </td>
+      </tr>
+      <tr>
+      <td>stepp</td>
+      <td>
+        In Step mode, the pose of the position where the output value changes abruptly while the laser is moving is obtained.
+      </td>
+      </tr>
+      <tr>
+      <td>scan</td>
+      <td>
+        In Scan mode, the pose of the position estimated to be a weld point along the laser movement path is obtained.
+      </td>
+      </tr>
+    </tr>
+    <tr>
+      <td colspan="2">cnd</td>
+      <td>
+        Condition numbers (1 to 8) used when executing the LPS function.
+        The information displayed in the command property window varies depending on the condition number.
+        This information is used for sensitivity settings in Automatic Calibration and Step mode, and coordinate system configuration when storing poses.
+      <td>Variable</td>
+    </tr>
+    <tr>
+      <td colspan="2">Tx / Ty</td>
+      <td>
+        Sets the movement distance in the X or Y direction based on the tool.
+        Except for auto_calib, only one of the two values must be entered.
+      <td>Variable</td>
+    </tr>
+    <tr>
+      <td colspan="2">spd</td>
+      <td>
+        Specifies the speed at which the robot moves while executing the operation.
+      <td>Variable</td>
+    </tr>
+    <tr>
+      <td colspan="2">sp</td>
+      <td>
+        Specifies the pose variable in which the current pose found by each command is stored.
+      <td>Pose Variable</td>
+    </tr>
+    <tr>
+      <td colspan="2">mp</td>
+      <td>
+        In Master mode, the sensing result is stored in mp (master pose).
+        In Production mode, it is used to calculate ms (master shift).
+      <td>Pose Variable</td>
+    </tr>
+    <tr>
+      <td colspan="2">ms</td>
+      <td>
+        A shift variable used in Production mode.
+        The difference between the master pose (mp parameter) and the currently sensed pose (sp parameter) is calculated and stored.
+      <td>Shift Variable</td>
+    </tr>
+  </tbody>
+</table>  
+<br/>
+
+
+### Example
+
+```python
+    lps auto_calib, cnd=1, Tx=50, Ty=-100
+    # Performs Automatic Calibration within the specified distance range of +50 in the X direction and -100 in the Y direction, based on the tool, using condition number 1
+    lps spot, cnd=1, sp=p10
+    # Using condition number 1, stores the pose of the current laser position in p10, based on the coordinate system defined in the condition settings.
+    lps stepp, cnd=1, Tx=50, sp=p10
+    # Using condition number 1, moves 50[mm] in the X direction based on the tool, stops immediately when a step difference is detected, and stores the pose in p10.
+    lps scan, cnd=1, Tx=50, spd=10, sp=p10
+    # Using condition number 1, moves 50[mm] in the X direction based on the tool at a speed of 10, detects the weld point upon completion of the movement, and stores it in p10.
+    # 조건 번호 1번, 툴 기준 X 방향으로 50만큼 설정된 거리만큼 이동이 완료되면 용접점을 검출하여 p10에 저장
+    
+    lps scan, cnd=1, Tx=50, spd=10, sp=p10, mp=mp10, ms=ms10
+    # When using Master mode: Using condition number 1, moves 50[mm] in the X direction based on the tool at a speed of 10, detects the weld point upon completion of the movement, stores it in p10, compares it with mp10, and saves the calculated shift value in ms10.
+```  
+<br/><br/>
+
+
+{% hint style="info" %}
+To use this function as an optional feature, please contact our company.
+{% endhint %}
+
+
+### Details
+
+  Refer to [8.8 LPS(Laser Point Sensing)](../8_Application_function/8_LPS/README.md)
+
+[__SOURCE](3_Property/README.md)
+# 3. Command Property
+[__SOURCE](3_Property/1_overall.md)
+# 3.1 Overview
 
 When teaching an arc welding program, not only the welding conditions such as voltage and current but also detailed settings related to weaving, retries/overlaps, and the characteristics of the welder are necessary.
 Furthermore, in general robot operation, there may be cases where the position information (coordinates and orientation) of the taught steps or auxiliary points needs to be verified.  
@@ -1149,7 +1348,11 @@ If you wish to save the changes and exit, press [**OK**]; if you wish to exit wi
 
 {% hint style="info" %}
     For more details, please refer to [2. Inserting Commands]
-{% endhint %}# 4. Arc Welder Settings# 4.1 Arc Welder communication settings
+{% endhint %}
+[__SOURCE](4_Setting/README.md)
+# 4. Arc Welder Settings
+[__SOURCE](4_Setting/1_Arc_communication/README.md)
+# 4.1 Arc Welder communication settings
 
 
 Follow the steps below to connect the PC and controller using an Ethernet cable:
@@ -1174,17 +1377,19 @@ After completing the below steps, the sycon screen will appear as shown above. (
 6. Right-click the welder icon and select **disconnect**, then go to **configuration > General > UCM** tab and set UCMM to Group3.
 7. Right-click the welder icon and select **upload**, then right-click the cifx icon and select **download**.
 
-On the Robot TP, navigate to **[System > 2: Control parameter > 2: Input/Output signal setting > 6: fb block allocation]** and assign the blocks to be used.
+On the Robot TP, navigate to `[F2: System] - 2: Control parameter - 2: Input/Output signal setting - 6: fb block allocation` and assign the blocks to be used.
 Once this is completed, the data transmitted from the welder to the controller will be displayed in bold within the assigned blocks.
-(Verify this in **[pane layout > select > public input > assigned fb block]**)
+(Verify this in `[pane layout] - select - public input - assigned fb block`)
 
 
 {% hint style="info" %}
-  For more information, please refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/english/README)  
+  For more information, please refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en/README?cont_model=${cont_model})  
 {% endhint %}
+
+[__SOURCE](4_Setting/2_Arc_setting/README.md)
 # 4.2 Arc Welder Settings
 
-User can operate various welders together with our Arc Welding Robots. To support this, a function is provided to edit welder-specific settings. The welder configuration screen can be accessed as follows: **[System > 5: Initialization > 3: Usage setting]**
+User can operate various welders together with our Arc Welding Robots. To support this, a function is provided to edit welder-specific settings. The welder configuration screen can be accessed as follows: `[F2: System] - 5: Initialization - 3: Usage setting`
 
 
 ###	Welder Maker Number
@@ -1220,7 +1425,11 @@ The welder condition screen provides editing functions related to welder charact
 | Stick detection time   | [0.2] seconds <br>(Range: 0.1 ~ 10.0) | Checks wire fusion during setting time after arc welding ends |
 | ARC OFF detection time | [0.3] seconds <br>(Range: 0.0 ~ 10.0) | Sets the reference time for detecting arc off during arc welding. If the arc is off longer than this time, it is recognized as arc off.<br> It set too low, arc ignition failures may occur frequently.<br> If set too high, robot movement and wire inching continue longer after arc off, increasing the robot travel distance and wire protrusion length after arc off. |
 
-# 5. Editing Arc Welding Conditions# 5.1 Configure Arc Welding Condition
+
+[__SOURCE](5_Condition_editing/README.md)
+# 5. Editing Arc Welding Conditions
+[__SOURCE](5_Condition_editing/1_Condition_config/README.md)
+# 5.1 Configure Arc Welding Condition
 
 To perform Arc Welding our controller, it is necessary to configure both the welder and the welding conditions. In addition to basic arc welding, special functions such as weaving or arc sensing require detailed settings for each respective feature.
 Our company provides the ability to edit Arc welder characteristic files([[4. Arc Welder Settings]](../../4_Setting/README.md)), arc welding application functions([[1.2.2 Arc Welding various signals and funtion settings]](../../1_Basic_information/2_Function_setting/2_signals_functions.md)), and arc welding condition settings, enabling users to weld in various environments with desired configurations using a variety of welder.
@@ -1231,6 +1440,8 @@ Arc welding conditions are structed as follows:
 - Arc welding End Conditions: Editing settings for welding termination
   - Auxiliary Arc welding End condiitons: Editing the automatic wire stick-out release
 
+
+[__SOURCE](5_Condition_editing/2_Time_chart/README.md)
 # 5.2 Arc Welding FlowChart
 
 This is the Time Flowchart for digital Arc Welding. For each condition setting, please refer to the dialog box desciptions for each command below.
@@ -1240,6 +1451,8 @@ This is the Time Flowchart for digital Arc Welding. For each condition setting, 
  <em><p align="center">Figure 5.2.1. Digital Arc Welding FlowChart</p></em>
 </p>
 
+
+[__SOURCE](5_Condition_editing/3_Start_condition/README.md)
 # 5.3 Welding Start condition
 
 
@@ -1476,9 +1689,11 @@ Sets the upper and lower current limits during welding. If the limits are exceed
     
 </br>
     
-</br># 5.3.1 Welding Start condition – Hyosung-only settings
+</br>
+[__SOURCE](5_Condition_editing/3_Start_condition/1_hyosung.md)
+# 5.3.1 Welding Start condition - Hyosung-only settings
 
-### (1) Welding Mode: [**Normal, Pulse**]  
+### (1) Welding Mode: `Normal, Pulse`  
 Set the Arc Welding method.
 
 ### (2)	Slowdown Adjuctment: [ 100 ] % (range: 0 ~ 255)  
@@ -1486,9 +1701,11 @@ Adjust the offset for the wire feed speed before the arc is initiated.
 
 ### (3)	Inductor Effect: [  100] % (range: 0 ~ 255)  
 Set the inductor effect.
-# 5.3.2 Welding Start condition – Fronius-only settings
 
-### (1)	Operation Mode: [**Prog-Std, Prog-Pulse, CMT, JOB, TIG**]  
+[__SOURCE](5_Condition_editing/3_Start_condition/2_fronius_.md)
+# 5.3.2 Welding Start condition - Fronius-only settings
+
+### (1)	Operation Mode: `Prog-Std, Prog-Pulse, CMT, JOB, TIG`  
 Set the welding mode supported by the Fronius welder. The descriptions for each mode as follows:
 
 - **Prog-Std**: Use the standard welding program stored in the welder.
@@ -1505,9 +1722,11 @@ If the operation mode is set to Job, the job number will be used.
 
 Set the dynamic correction value. A smaller value results in a strong and stable arc, but increases the amount of spatter. A larger value generates a smoother arc and reduces the amount of spatter.
 
-# 5.3.3 Welding Start condition – EWM-only settings
 
-### (1)	JOB mode: [**Job mode Disable, Job mode Enable**] 
+[__SOURCE](5_Condition_editing/3_Start_condition/3_ewm.md)
+# 5.3.3 Welding Start condition - EWM-only settings
+
+### (1)	JOB mode: `Job mode Disable, Job mode Enable` 
 Set the Job mode supported by the EWM AlphaQ welder. The descriptions for each mode are as follows:
 - Job mode disable: Welding is performed with wire feed speed and voltage offset based on the synergy data stored in the welder.
 - Job mode enable: Welding is pserfored with the job stored in welder.
@@ -1524,8 +1743,10 @@ Enter the synergy number or job number to be used for welding. Press the [Synerg
 ### (5)	Dynamic correction: [ 0 ] (range: -40.0 ~ 40.0)  
 Set the dynamic correction. A smaller value results in a strong and stable arc, but increases the amount of spatter. A larger value generates a smoother arc and reduces the amount of spatter.
 
-### (6)	Lift arc start: [**Not use, Use**]  
+### (6)	Lift arc start: `Not use, Use`  
 Set whether to use the lift arc function at the start of welding. Using the lift arc function can reduce the occurrence of excessive spatter during the start of welding.
+
+[__SOURCE](5_Condition_editing/4_End_condition/README.md)
 # 5.4 Welding End condition
 
 When the arc welding settings are digital and [End condition] tab is pressed in the welding start condition dialog box, the following welding end condition editing screen appears.
@@ -1607,12 +1828,16 @@ This process is repeated for the configured number of times. If the sticking is 
     This parameter specifies the welding condition number used for the burnback release process. When set to 0, the burnback release is performed using the current welding start condition.
 
 * Time: [0] sec (Range: 0.0 to 10.0)
-    This parameter specifies the duration for which the burnback release condition output is maintained.# 5.5 Welding Auxiliary condition
+    This parameter specifies the duration for which the burnback release condition output is maintained.
+[__SOURCE](5_Condition_editing/5_Aux_condition/README.md)
+# 5.5 Welding Auxiliary condition
 
 
 When the arc welding settings are digital and [Auxiliary condition] tab is pressed in the welding start condition dialog box, the following welding auxiliary condition editing screen appears.
 
-# 5.5.1 Welding Auxiliary condition – Retry
+
+[__SOURCE](5_Condition_editing/5_Aux_condition/1_retry.md)
+# 5.5.1 Welding Auxiliary condition - Retry
 
 
 There may be cases where the arc does not ignite due to foreign materials attached near the weld start point of the base material when starting arc welding. The retry function automatically attempts to reignite the arc in such cases of arc ignition failure, enabling continuous operation without robot stoppage.
@@ -1671,7 +1896,9 @@ The left section of [Figure 5.5.1] represents the retry conditions in the weldin
  <em><p align="center">Figure 5.5.2 Retry Function Sequence</p></em>
 </p>
 
-# 5.5.2 Welding Auxiliary condition – Restart
+
+[__SOURCE](5_Condition_editing/5_Aux_condition/2_restart.md)
+# 5.5.2 용접 보조 조건 - 재기동  
 
 During arc welding, the process may be interrupted due to factors such as arc failure, exceeding the limits of welding current and voltage, gas pressure drop, wire shortage, cooling water errors, etc.
 When welding is restarted from the point where the process was interrupted, there is a risk of leaving un-welded areas.
@@ -1707,9 +1934,9 @@ This corresponds to the movement speed in the section from ③ to ④ in [figure
 Specifies the robot's speed while performing overlap welding from the start to the end position. This is the speed during the overlap region in section ④ of [Figure 5.5.4].
 
 When an error occurs during welding from the start point to the end point (⑤), and if the overlap condition is semi-automatic, the user must identify the cause of the welding stop and address the error (①).
-After resolving the issue (②), pressing the [**Start**] button (③) will resume welding.
-The robot will automatically move to the overlap start position at the speed set by the [**Moving speed**] (④).
-Once at the position, it will perform overlap welding at the [**Welding speed**] for the specified distance, and then continue welding at the normal speed.
+After resolving the issue (②), pressing the `Start` button (③) will resume welding.
+The robot will automatically move to the overlap start position at the speed set by the `Moving speed` (④).
+Once at the position, it will perform overlap welding at the `Welding speed` for the specified distance, and then continue welding at the normal speed.
 However, if an error occurs during the overlap welding, the robot will not repeat the overlap but will directly start welding from that point onward.
 
 ---
@@ -1730,8 +1957,8 @@ The lower section of [Figure 5.5.3] defines how to perform overlap welding when 
 
 - B. Semi-Auto  
     This setting allows the user to perform overlap manually. If issues such as Arc Off, exceeding limits, gas pressure drop, wire shortage, or coolant error occur, welding is interrupted, ant the robot is also halted.
-    After addressing the cause, the user must press [**Start**], upon which overlap welding will be performed based on the method set in the restart section of the welding auxiliary conditions, and then main process resumes.
-    At this point, if the robot is moved to a different location using the jog function and [**Start**] is pressed, it will move directly to the overlap welding position and resume welding.
+    After addressing the cause, the user must press `Start`, upon which overlap welding will be performed based on the method set in the restart section of the welding auxiliary conditions, and then main process resumes.
+    At this point, if the robot is moved to a different location using the jog function and `Start` is pressed, it will move directly to the overlap welding position and resume welding.
 
 - C. Ignore  
     This setting ignores errors. When this setting is enabled, the robot continues the process without stopping even if welding is interrupted. In other words, the process will proceed regardless of arc stoppage or exceeding the set limits.
@@ -1739,7 +1966,7 @@ The lower section of [Figure 5.5.3] defines how to perform overlap welding when 
 
 - D. Disable  
     This setting prohibits overlap welding. If issus such as arc stoppage, exceeding limits, gas pressure drop, wire shortage, or coolant error occur, welding is interrupted and the robot is halted.
-    After addressing the cause, the user must press [**Start**], overlap welding will not be performed, and welding will begin from the position where the robot was stopped.
+    After addressing the cause, the user must press `Start`, overlap welding will not be performed, and welding will begin from the position where the robot was stopped.
 
 
 {% hint style="warning" %}
@@ -1747,10 +1974,16 @@ The lower section of [Figure 5.5.3] defines how to perform overlap welding when 
 {% endhint %}
 
 
+
+[__SOURCE](6_Weaving_function/README.md)
 # 6. Weaving Function
+
+[__SOURCE](6_Weaving_function/1_Weaving_function/README.md)
 # 6.1 Weaving Functions
 
 The weaving function is used in arc welding to widen the weld bead width. The details of the weaving function are determined by the weaving conditions and reference points. The following settings can be configured in the weaving conditions.  
+
+[__SOURCE](6_Weaving_function/1_Weaving_function/1_condition_.md)
 # 6.1.1 Weaving Condition
 
 When the cursor is placed above the `weaving ...` command, pressing the [**property**] key will display the weaving condition editing screen as shown below.  
@@ -1822,6 +2055,8 @@ Whether the robot continues to move during the weaving stop time is determined b
 This setting determines whether the part perfoming the weaving motion is the robot or an auxiliary axis.
 When set to an auxiliary axis, the robot will move as recorded, and only the auxiliary axis will move according to the set distance and frequency to implement weaving.
 If an auxiliary axis is selected, the auxiliary axis specified in the 'Auxiliary Axis Number' field will perform the weaving motion.
+
+[__SOURCE](6_Weaving_function/1_Weaving_function/2_configuration_.md)
 # 6.1.2 Weaving Type    
 
 
@@ -1832,6 +2067,8 @@ Set the pattern shape of the weaving as shown in the following figure.
   <em><p align="center">Figure 6.1.2. Weaving Pattern Type</p></em>
 </p>
 
+
+[__SOURCE](6_Weaving_function/1_Weaving_function/3_frequency.md)
 # 6.1.3 Frequency
 
 
@@ -1841,7 +2078,9 @@ To specify the repetition cycle using the frequency method, a value other than '
 The frequency is releated to both the leteral and longitudinal distances.
 As the frequency increases, the available lateral and longitudinal distances decrease, resulting in a smaller amplitude. Conversely, as the frequency decreases, the amplitude can be increased.
 In the case of a triangular weaving pattern, the sum of the lateral and longitudinal move times equals the diagonal move time. 
- 
+ 
+
+[__SOURCE](6_Weaving_function/1_Weaving_function/4_pattern.md)
 # 6.1.4 Default Pattern
 
 다음 그림에서의 각 요소를 설정합니다. 
@@ -1908,7 +2147,9 @@ The boundary limitation setting allows you to choose whether the weaving should 
 <p align="center">
   <img src="../../_assets/6_1_5.png" width="60%"></img>
   <em><p align="center">Figure 6.1.5 Weaving Boundary Limitation</p></em>
-</p> 
+</p> 
+
+[__SOURCE](6_Weaving_function/1_Weaving_function/5_weaving_section.md)
 # 6.1.5 Weaving Section Setting
 
 ### (1)	Robot Behavior when Weaving Stops  
@@ -1922,7 +2163,7 @@ If set to **Move**, the robot behaves as shown on the left in the figure; if set
 <p align="center">
   <img src="../../_assets/6_1_8.png" width="40%"></img>
   <em><p align="center">Figure 6.1.8. Robot Behavior when Weaving Stops</p></em>
-</p> 
+</p> 
 
 ### (2)	Move Time
 
@@ -1932,7 +2173,7 @@ The move time for unused sections (e.g., sections 3 and 4 in simple oscillation)
 <p align="center">
   <img src="../../_assets/6_1_7.png" width="90%"></img>
   <em><p align="center">Figure 6.1.7. Movement Section by Weaving Pattern</p></em>
-</p> 
+</p> 
 
 
 ### (3)	Timer (Weaving Stop)
@@ -1950,11 +2191,13 @@ When the weaving frequency is set, the robot's move time during the weaving cycl
 <p align="center">
   <img src="../../_assets/6_1_8.png"  width="40%"></img>
   <em><p align="center">Figure 6.1.8. Trajectory Example When Timer is Set</p></em>
-</p>   
+</p>   
 
 {% hint style="warning" %}
   if "Robot Behavior when Weaving Stops" is set to **Stop**, the movement trajectory also stops, but the robot's speed remains the same.
-{% endhint %}# 6.2 Reference Point(refp) Features
+{% endhint %}
+[__SOURCE](6_Weaving_function/2_Reference_point/README.md)
+# 6.2 Reference Point(refp) Features
 
 
 To perform weaving, a weaving coordinate system is required to determine the location where the weaving pattern will be created, as explained in [[6.1 Weaving Functions]](../1_Weaving_function/README.md).
@@ -1967,13 +2210,15 @@ However, in some cases, such as when the welding start pose, the shape of the ba
 
 {% hint style="info" %}
   When the **[Wall Direction]** setting is configured as Torch Posture-Based, no other `refp` commands except `refp3` are used.
-{% endhint %}# 6.2.1 Reference Point Type
+{% endhint %}
+[__SOURCE](6_Weaving_function/2_Reference_point/1_sorts.md)
+# 6.2.1 Reference Point Type
 
 
 <p align="center">
   <img src="../../_assets/6_2_1.png" width="50%"></img>
   <em><p align="center">Figure 6.2.1. Weaving Coordinate System</p></em>
-</p> 
+</p> 
 
 
 ### (1)	refp 1  
@@ -2011,14 +2256,14 @@ When using this command to specify the angle, the value set in `Angle` will be i
 <p align="center">
   <img src="../../_assets/6_2_2.png" width="65%"></img>
   <em><p align="center">Figure 6.2.2. Weaving Direction and Reference Point</p></em>
-</p> 
+</p> 
     
 
 <p align="center">
   <img src="../../_assets/6_2_3.png" width="65%"></img>
   <img src="../../_assets/6_2_3_1.png" width="65%"></img>
   <em><p align="center">Figure 6.2.3. Usage of Different Reference Points</p></em>
-</p>   
+</p>   
 
 
 {% hint style="info" %}
@@ -2026,12 +2271,14 @@ When using this command to specify the angle, the value set in `Angle` will be i
   - refp 2: Ensure the distance from the wall direction plane is at least 5mm.
   - refp 3: Ensure the distance from the start point is at least 5mm.
   - refp 4: Set the angle when it is difficult to measure the angle of the weaving pattern.
-{% endhint %}# 6.2.2 Reference Point Edit
+{% endhint %}
+[__SOURCE](6_Weaving_function/2_Reference_point/2_editing.md)
+# 6.2.2 Reference Point Edit
 
 ### (1) Recording Reference Points : Similar to the Move Command
 
 - ① **Move the Cursor**: Move the cursor to the location where the reference point will be recorded (typically just above the `weaving on` command step).
-- ② **Record the Reference Point Command**: Press [**Command Input > arcweld > refp**] to record the reference point command.
+- ② **Record the Reference Point Command**: Press `[F6: cmd. Input] - arcweld - refp` to record the reference point command.
 - ③ **Enter the Reference Point Number**
 - ④ Pose Method:
   - The *Hidden Pose Method* records the current robot position.
@@ -2069,6 +2316,8 @@ When moving, the interpolation type is set to linear, and the movement speed, to
 - ③ Input the new reference point number and press **[ENTER]**.
 - ④ Press **[ENTER]** again to confirm the change of the reference point number.
 
+
+[__SOURCE](6_Weaving_function/3_Weav_sync_out/README.md)
 # 6.3 Weaving Sync Out
 
 
@@ -2120,7 +2369,9 @@ To use this feature, enter the [**property**] window of the `weaving` command an
       </td>
     </tr>
   </tbody>
-</table># 7. Arc Welding Data Monitoring
+</table>
+[__SOURCE](7_Monitoring/README.md)
+# 7. Arc Welding Data Monitoring
 
 During arc welding, there are instances where the current/voltage command values sent form the robot controller to the welder are compared with the actual current/voltage values output from the welder to the robot controller. In such cases, the arc welding data graph monitoring function can be used to check the welding-related data in real time.
 
@@ -2131,8 +2382,12 @@ Our controller offers 2-type of monitoring functions for welding data monitoring
 (1) **Detailed Information Monitoring**: Allows you to check all available data.
 
 (2) Arc Welding Data Graph: Enalbes viewing of the command and actual current/voltage data in waveform.
+
+[__SOURCE](7_Monitoring/1_Realtime_monitoring/README.md)
 # 7.1 Arc Weld data Real-time Monitoring
 
+
+[__SOURCE](7_Monitoring/1_Realtime_monitoring/1_detail_mon.md)
 # 7.1.1 Detailed Information Monitoring
 
 This function allows you to check detailed data related to arc welding. The information provided may vary depending on the set welder, so the monitoring window may differ based on the configured welder. If a communication error occurs with the welder or if there is no communication connection, the "Welder Error Code" or "Welder Communication Status" items will be displayed with a red background. The following data can be monitored in the detailed information monitoring.
@@ -2166,17 +2421,19 @@ This function allows you to check detailed data related to arc welding. The info
 
 12. Additional Information Window: This section displays useful additional information such as the upper and lower limits of current/voltage and their units. 
 
-13. Input Signals: Signals sent from the welder to the robot controller.(Can be checked under **[System > 5: Initialization > 3: Usage Setting > Welder Setting - Input signal assign]**)
+13. Input Signals: Signals sent from the welder to the robot controller.(Can be checked under `[F2: System] - 5: Initialization - 3: Usage Setting - Welder Setting - Input signal assign`)
 
-14. Output Signals: Signals sent from the robot controller to the welder.(Can be checked under **[System > 5: Initialization > 3: Usage Setting > Welder Setting - Output signal assign]**)
+14. Output Signals: Signals sent from the robot controller to the welder.(Can be checked under `[F2: System] - 5: Initialization - 3: Usage Setting - Welder Setting - Output signal assign`)
 
 15. Command Values: Frequently used commands that can be manually output.
 
+
+[__SOURCE](7_Monitoring/1_Realtime_monitoring/2_data_graph.md)
 # 7.1.2 Arc welding data graph
 
 Arc welding data graph displays information related to the welding data's waveform, allowing you to view not only the real-time data but also past data at a glance.
 
-To use this feature, on TP, press **[pane layout > select > arc data graph]** sequentially. 
+To use this feature, on TP, press `[pane layout] - select - arc data graph` sequentially. 
 
  
 <p align="center">
@@ -2200,16 +2457,20 @@ The following items can be checked in the monitoring window:
 
 Arc Welding data graph offers left/right and up/down movement functions. You can also add rows and columns to view more data. By toggling the [**Auto scroll**] button, you can review the past welding screens even during the current welding process.
 
-You can increase the number of rows in the graph by pressing the **[Row]** or **[Col]** button at the bottom of the arc welding data graph screen. If you want to zoom in on the data graph further, you can press **[SHIFT] + [Row]** or **[SHIFT] + [Col]** to enlarge the display.# 8. Arc Welding Application Functions
+You can increase the number of rows in the graph by pressing the **[Row]** or **[Col]** button at the bottom of the arc welding data graph screen. If you want to zoom in on the data graph further, you can press **[SHIFT] + [Row]** or **[SHIFT] + [Col]** to enlarge the display.
+[__SOURCE](8_Application_function/README.md)
+# 8. Arc Welding Application Functions
 
 We provide various application features to enhance the quality and stability of arc welding. This section briefly introduces these features. Detailed explanations and applications can be found in separate feature manuals, so please refer to the respective manuals for more in-depth information.
+
+[__SOURCE](8_Application_function/1_Arc_cond/README.md)
 # 8.1 Arccond - Arc Welding Condition DB & interpolation
 
 
 Welding conditions can be stored in a database (DB) for use or interpolated during the welding process.
 The usage of this function is as follows:
 
-**[Command input > arcweld > arccond]** to enter the command in the JOB file.
+`[F6: cmd. input] - arcweld - arccond` to enter the command in the JOB file.
 
 The command format is as follows:
 ```arccond <interpolation type>, cnd=<condition number>, gap=<gap>, spd=<welding speed>, rd=<wall direction>, ld=<sie direction>, freq=<weaving frequency>, cur=<crruent>, vol=<voltage>```
@@ -2218,14 +2479,18 @@ The command format is as follows:
 <br>
 
 - **interpolation type**: D(stepped, immediate application) / L(Linear interpolation)
-- **cnd**: condition number (WDB-welding database- and interpolation conditions can be edited via the properties window)# 8.1.1 Step Change using Command Factors
+- **cnd**: condition number (WDB-welding database- and interpolation conditions can be edited via the properties window)
+[__SOURCE](8_Application_function/1_Arc_cond/1_cmd_para.md)
+# 8.1.1 Step Change using Command Factors
 
 The stepped change function can be used in the command arguments as follows:
 
 | Method | Example |
 | :--- | :--- |
-| Changing IV(Current, Voltage) |move L, spd=60%, …<br/>move L, spd=10%, …   <span style="color: green"> # Weld point(seam) Entry Step </span> <br>    arcon cnd=1  <br>    move L, spd=40cm/min, ... <br>   <b>  arccond D, cur=175, vol=20 </b>  <span style="color: green"> # Change current to 175A, voltage to 20V </span> <br>   move L, spd=30cm/min, …  <br>    arcof <br>   end |
-| Changing Welding Speed and Weaving Parameter | move L, spd=60%, …  <br>   move L, spd=10%, …    <span style="color: green"> # Weld point(seam) Entry Step  </span> <br> weaving on, cnd=1 <br>   arcon cnd=1   move L, spd=40cm/min, … <br> <b>  arccond D, spd=80, rd=20, ld=10, freq=1.5, cur=175, vol=20 </b> <br> <span style="color: green">  # Change welding speed to 80cm/min, weaving width to 20/10mm, frequency to 1.5HZ, current to 175A, and voltage ot 20V </span> <br>  move L, spd=30cm/min, …  <br>   weaving off <br>   arcof  <br> end |# 8.1.2 Step Change using WDB(Welding DataBase)
+| Changing IV(Current, Voltage) |move L, spd=60%, ...<br/>move L, spd=10%, ...   <span style="color: green"> # Weld point(seam) Entry Step </span> <br>    arcon cnd=1  <br>    move L, spd=40cm/min, ... <br>   <b>  arccond D, cur=175, vol=20 </b>  <span style="color: green"> # Change current to 175A, voltage to 20V </span> <br>   move L, spd=30cm/min, ...  <br>    arcof <br>   end |
+| Changing Welding Speed and Weaving Parameter | move L, spd=60%, ...  <br>   move L, spd=10%, ...    <span style="color: green"> # Weld point(seam) Entry Step  </span> <br> weaving on, cnd=1 <br>   arcon cnd=1   move L, spd=40cm/min, ... <br> <b>  arccond D, spd=80, rd=20, ld=10, freq=1.5, cur=175, vol=20 </b> <br> <span style="color: green">  # Change welding speed to 80cm/min, weaving width to 20/10mm, frequency to 1.5HZ, current to 175A, and voltage ot 20V </span> <br>  move L, spd=30cm/min, ...  <br>   weaving off <br>   arcof  <br> end |
+[__SOURCE](8_Application_function/1_Arc_cond/2_wdb_step.md)
+# 8.1.2 Step Change using WDB(Welding DataBase)
 
 ```python
     arccond D, cnd=1
@@ -2247,15 +2512,17 @@ You can add or delete **cnd**(welding conditions), allowing you to store and use
 Using this, the following JOB configuration can be created:
 
 ```python
-    move L, spd=60%, …
-    move L, spd=10%, …	    # Weld point(seam) Entry Step
+    move L, spd=60%, ...
+    move L, spd=10%, ...	    # Weld point(seam) Entry Step
     arcon cnd=1
-    move L, spd=40cm/min, …
+    move L, spd=40cm/min, ...
     arccond D, cnd=1  	    # Immediately change to Welding DB Condition 1
-    move L, spd=30cm/min, …
+    move L, spd=30cm/min, ...
     arcof
     end
-```# 8.1.3 Continuous Interpolation Change using WDB(Welding DataBase)
+```
+[__SOURCE](8_Application_function/1_Arc_cond/3_wdb_continuous.md)
+# 8.1.3 Continuous Interpolation Change using WDB(Welding DataBase)
 
 
 For example, this function allows for linear interpolation of welding condition(such as current, voltage, welding speed, weaving width, and weaving frequency) while welding a workpiece where the butt gap is 5mm at the start and 25mm at the end.
@@ -2272,17 +2539,19 @@ In this case, the continuous change of welding conditions (L interpolation) is p
 Using the above items from DB 1 and DB 2, a JOB utilizing continuous interpolation change is as follows: 
 
 ```python
-move L, spd=60%, …
-move L, spd=10%, …	    # Weld point(seam) Entry Step
+move L, spd=60%, ...
+move L, spd=10%, ...	    # Weld point(seam) Entry Step
 arcon cnd=1
-move L, spd=40cm/min, …
+move L, spd=40cm/min, ...
 arccond L, cnd=1  	    # Continuous interpolation change from Welding DB 1 -> 2
-move L, spd=30cm/min, …    # In this step, the conditions linearly change from cnd(DB) 1 -> 2
+move L, spd=30cm/min, ...    # In this step, the conditions linearly change from cnd(DB) 1 -> 2
 arccond L, cnd=2  	    # The next step requires arcof
 arcoff
-move L, spd=10%, …	    # Weld point(seam) Exit Step
+move L, spd=10%, ...	    # Weld point(seam) Exit Step
 end
-```# 8.1.4 Changing the welding Speed and Weaving Width Using Interpolation Condition
+```
+[__SOURCE](8_Application_function/1_Arc_cond/4_interpolation.md)
+# 8.1.4 Changing the welding Speed and Weaving Width Using Interpolation Condition
 
 
 This feature is separate from the previously mentioned functionalities. It allows welding conditions to be set based on the reference gap, and then automatically calculates the welding speed and weaving width by measuring the gap at the start and end points through actual touch sensing.  
@@ -2310,7 +2579,7 @@ The operation of this function is as follows:
 </p> 
 
 <br>
- 
+ 
 
 The gap-speed graph can be illustrated as follows:  
 
@@ -2325,17 +2594,19 @@ As shown in the figure above, the welding speed increases linearly between the t
 An example of the JOB configuration is as follows:
 
 ```python
-    move L, spd=60%, …
-    move L, spd=10%, …	    # Weld point(seam) Entry Step
+    move L, spd=60%, ...
+    move L, spd=10%, ...	    # Weld point(seam) Entry Step
     arcon cnd=1
-    move L, spd=40cm/min, …
+    move L, spd=40cm/min, ...
     arccond L, cnd=1, gap=20  
-    move L, spd=30cm/min, …    # In this step, welding speed and weaving width change linearly
+    move L, spd=30cm/min, ...    # In this step, welding speed and weaving width change linearly
     arccond L, cnd=2, gap=10   
     arcoff
-    move L, spd=10%, …	    # Weld point(seam) Exit Step
+    move L, spd=10%, ...	    # Weld point(seam) Exit Step
     end
-```# 8.2	Touch Sensing
+```
+[__SOURCE](8_Application_function/2_Touch_sensing/README.md)
+# 8.2	Touch Sensing
 
 
 Welding workpieces are not always in a fixed position due to errors in the jig, positioner, or workpiece mounting.
@@ -2363,7 +2634,7 @@ The touch sensing supports a total of 5-types, as shown in [Figure 8.2.1] (Butt,
 
 ### (2) Touch Sensing Command and Setting Parameters
 
-The touch sensing command can be recorded by entering **[Command input > Arcweld > touchsen]** on the TP.
+The touch sensing command can be recorded by entering `[F6: cmd. input] - arcweld - touchsen` on the TP.
 
 Assuming the condition 1 set for Fillet, condition 2 set for Butt, and condition 3 for V-groove in the command (where the workpiece type is defined in the properties), the example is as follows:
 
@@ -2404,7 +2675,7 @@ Assuming the condition 1 set for Fillet, condition 2 set for Butt, and condition
 </center>
 
 
-In the touch sensing command, pressing on [**Property**] will bring up a winow as shown in [Figure 8.2.3]  
+In the touch sensing command, pressing on `Property` will bring up a winow as shown in [Figure 8.2.3]  
 You can set conditions such as sensing distance, retreat distance, proceed distance, sensing speed, retreat speed, and detection type (contact,  release of contact), among others.  
 
 
@@ -2502,7 +2773,7 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 </p>   
 
 ---
- 
+ 
 #### [3] BUTT
 
 <p align="center">
@@ -2586,6 +2857,8 @@ The shift amount is then recorded in the variable specified by the `mshift` inpu
 ```  
 
 - For example, in master mode, the sensed pose is saved in the `P10` pose variable, and in execution mode, when sensing is performed, the shift amount between the master mode pose and the current sensed pose is automatically calculated and stored in the sft_var1 variable.
+
+[__SOURCE](8_Application_function/3_Arc_sensing/README.md)
 # 8.3 Arc Sensing and Multi Pass
 
 {% hint style="info" %}
@@ -2621,6 +2894,8 @@ Then, the saved trajectory is shifted to generate two or more passes for welding
 
 Typically, Arc Sensing is used to perform multi-pass welding, and multi-pass welding is conducted using Arc Sensing.
 
+
+[__SOURCE](8_Application_function/3_Arc_sensing/1_arcsen_concept.md)
 # 8.3.1 Arc Sensing Overview
 
 When weaving during arc welding, the distance between the torch and the base material changes.
@@ -2658,6 +2933,8 @@ Or, instead of using the starting position current reference value, **the user c
 As shown in the figure, when the torch is tilted to the left or right, the current weavform changes, and this can be used to track the seam in the left and right directions.
 Additionally, the current at the middle of the weaving section can be used to correct the vertical direction.
 
+
+[__SOURCE](8_Application_function/3_Arc_sensing/2_arcsen_spec.md)
 # 8.3.2 Arc Sensing Support Specifications
 
 
@@ -2705,6 +2982,8 @@ The specifications below are based on data obtained from extensive testing condu
 ### (6) Other Functions
   - Sensing Trajectory Deviation Limiting Function
   - Torch Height Setting Function during Sensing
+
+[__SOURCE](8_Application_function/3_Arc_sensing/3_1_arcsen_condition_general.md)
 # 8.3.3.1 Arc Sensing Condition(General)
 
 
@@ -2792,6 +3071,8 @@ Set to 0. (Not Supported)
 
 ### (11) Real-Time Gap Sensing Speed: [ ]  
 
+
+[__SOURCE](8_Application_function/3_Arc_sensing/3_2_arcsen_condition_advanced.md)
 # 8.3.3.2 Arc Sensing Condition(Advanced)
 
 
@@ -2881,6 +3162,8 @@ This setting defines the acceptable current error during regression. For smaller
 This setting defines the method for processing sampled data during regression: Raw, Median, or Average.
 
 </br>
+
+[__SOURCE](8_Application_function/3_Arc_sensing/3_3_arcsen_calibration.md)
 # 8.3.3.3 Arc Sensing Calibration
 
 To use the arc sensing function, a calibration process must be completed first.  
@@ -2967,6 +3250,8 @@ At this time, the delay time value represents the degree of current lead or lag.
 
 Once the calibration process is completed, change the sensing sensitivity for both vertical/horizontal directions to 5 to enable the arc sensing function.
 
+
+[__SOURCE](8_Application_function/3_Arc_sensing/4_arcsen_command.md)
 # 8.3.4 Setting Weaving and Arc Sensing Conditions Using Commands
 
 ### (1) Necessity of Functionality
@@ -2977,7 +3262,7 @@ Therefore, the conditions can be modified using commands, and the changes will o
 
 ### (2) Method of Using Commands  
 
-To insert the command, enter [**cmd input > var_io > assignment**] while in manual mode. Then, move the cursor to the left variable and select [**System Variables > arcweld > _weaving.`parameter`**], where you can input the desired value.  <br>
+To insert the command, enter `[F6: cmd input] - var_io - assignment` while in manual mode. Then, move the cursor to the left variable and select `[F3: System Variables] - arcweld - _weaving.{parameter}`, where you can input the desired value.  <br>
 
 The entered command will appear in the following format:  
 ```e.g. _weaving.frequency=2.0```  
@@ -3023,7 +3308,7 @@ The applicability of the settings for each element of _weaving to the functional
 
 <!-- ### (3) 위빙 파라미터 명령어 종류 및 내용은 다음 링크를 참고해주세요.
 
-[로봇언어 HRScript_weaving문](https://hrbook-hrc.web.app/#/view/doc-hrscript/korean/10-etc/3-sysvar/_weaving)   -->
+[로봇언어 HRScript_weaving문](https://hrbook-hrc.web.app/#/view/doc-hrscript/ko/10-etc/3-sysvar/_weaving)   -->
 
 
 
@@ -3062,16 +3347,18 @@ BaseCur: 상하센싱 기준전류
 토치와 모재의 거리를 더 멀리 하려면 이 값을 낮추십시오. 
 반대로 토치와 모재를 가까이 하려면 이 값을 높이십시오.
 
-StickOut: 아크 센싱 중 상하방향으로 토치를 이동시키기 위한 값. 입력된 mm만큼 토치 높이가 변경됩니다. +값 입력 시 토치와 모재간 거리가 멀어지고 –값 입력 시 토치가 모재와 가까워 집니다.
+StickOut: 아크 센싱 중 상하방향으로 토치를 이동시키기 위한 값. 입력된 mm만큼 토치 높이가 변경됩니다. +값 입력 시 토치와 모재간 거리가 멀어지고 -값 입력 시 토치가 모재와 가까워 집니다.
 
 asymetric_sensing_ratio: 좌우 비대칭 센싱 비율
 
  -->
+
+[__SOURCE](8_Application_function/3_Arc_sensing/5_arcsen_monitoring.md)
 # 8.3.5 Arc Sensing Monitoring
 
 ### (1) Monitoring Execution
 
-By accessing [**pane layout > select > arc sensing**], the Arc Sensing Monitoring window will be activated.
+By accessing `[pane layout] - select - arc sensing`, the Arc Sensing Monitoring window will be activated.
 This feature is only available when the Arc Sensing license is valid.
 
 
@@ -3104,6 +3391,8 @@ This feature is only available when the Arc Sensing license is valid.
 
 멀티패스: 저장된 멀티패스 데이터의 현재/전체 카운트, 시프트 거리, 각도를 표시합니다. -->
 
+
+[__SOURCE](8_Application_function/3_Arc_sensing/6_multipass_overview.md)
 # 8.3.6 Multi-pass Overview
 
 The multi-pass welding feature is used when the required weld length in thick plate arc welding is too wide to be completed in a single pass, or when the volume to be filled by welding is too large, requiring multiple welding passes.  
@@ -3132,7 +3421,9 @@ This will result in a stacked configuration as shown below.
 <p align="center">
   <img src="../../_assets/8_3_10.png" width="60%"></img>
   <em><p align="center">Figure 8.3.10 Multi-pass Stacked Shape with Inclination</p></em>
-</p># 8.3.7 Multi-pass Command
+</p>
+[__SOURCE](8_Application_function/3_Arc_sensing/7_multipass_command.md)
+# 8.3.7 Multi-pass Command
 
 
 ### (1) Command
@@ -3231,6 +3522,8 @@ The concept of angles for each item is illusatrated in the following figures:
  <img src="../_assets/3_5.png" width="60%"></img>
  <em><p align="center">그림 3.5 멀티패스 각도 시프트 개념</p></em>
 </p> -->
+
+[__SOURCE](8_Application_function/3_Arc_sensing/8_example_fillet.md)
 # 8.3.8 Fillet Welding Example Using Touch Sensing and Arc Sensing
 
 In general, the Arc Sensing function is used together with the touch sensing function. Touch sensing is used to accurately detect the welding start and end positions, while arc sensing is used to determine the correct welding direciton during movement after welding has started.  
@@ -3271,6 +3564,8 @@ S5   move L,p10,spd=60cm/min,accu=3,tool=1      ' 9: Move to welding end point
 S6   move P,spd=60%,accu=3,tool=1               '12: Motion end point  
      END  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[__SOURCE](8_Application_function/3_Arc_sensing/9_example_butt_gap.md)
 # 8.3.9 Arc Sensing Example : Automatic Weaving Width Setting Using Touch Sensing
 
 
@@ -3330,7 +3625,7 @@ S3   move L,spd=30%,accu=3,tool=1              ' 4: Touch sensing position for w
      V3=7.0                                     ' Welding speed at start  
      ELSEIF gap_var1>8.0 THEN                   ' If gap ≥ 8 mm, fix speed to 4 mm/s  
      V3=4.0                                     ' Welding speed at start  
-     ELSE                                       ' Linear interpolation for gap range 4–8 mm  
+     ELSE                                       ' Linear interpolation for gap range 4-8 mm  
      V3=(7-3.5)/(4-8)*gap_var1+10.5             ' Linearly interpolated welding speed at start  
      ENDIF  
 
@@ -3346,7 +3641,7 @@ S3   move L,spd=30%,accu=3,tool=1              ' 4: Touch sensing position for w
      V13=7.0                                    ' Welding speed at end  
      ELSEIF gap_var11>8.0 THEN                  ' If gap ≥ 8 mm, fix speed to 4 mm/s  
      V13=4.0                                    ' Welding speed at end  
-     ELSE                                       ' Linear interpolation for gap range 4–8 mm  
+     ELSE                                       ' Linear interpolation for gap range 4-8 mm  
      V13=(7-3.5)/(4-8)*gap_var11+10.5           ' Linearly interpolated welding speed at end  
      ENDIF  
 
@@ -3372,13 +3667,15 @@ S6   move P,spd=60%,accu=3,tool=1               '14: Motion end point
      STOP                                      '17: Stop robot  
      END  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[__SOURCE](8_Application_function/4_Height_sensing/README.md)
 # 8.4 Height Sensing
 
 
 This function is used in cases where the robot tool needs to maintain a constant distance from the workpiece, such as TIG welding. In TIG welding, the height is proportional to the arc length, which is why this function is called Arc Voltage Control(AVC). The distance from the workpiece is adjusted by the analog voltage input from the sensor, a correction parameter for the Arc length detected by the welder, and the welding current or voltage values.
 
-<!-- 본 기능의 사용을 위해서는 센싱 기능을 위한 데이터 입력 설정을 ‘유효’로 선택해야 합니다.
-센싱 기능을 위한 데이터 입력 설정의 세부 내용은 ‘1.3 Arc 용접 응용 조건 설정’을 참고하여 주십시오.  -- ???? -->
+<!-- 본 기능의 사용을 위해서는 센싱 기능을 위한 데이터 입력 설정을 '유효'로 선택해야 합니다.
+센싱 기능을 위한 데이터 입력 설정의 세부 내용은 '1.3 Arc 용접 응용 조건 설정'을 참고하여 주십시오.  -- ???? -->
 
 Once the setup for the sensing function input data is complete, the height sensing function can be used through the following procedure.
 
@@ -3418,6 +3715,8 @@ The opration sequence of height sensing is as follows:
  <em><p align="center">Figure 8.4.1. Height Sensing Function Operation Sequence</p></em>
 </p>
 
+
+[__SOURCE](8_Application_function/4_Height_sensing/1_hsen_condition.md)
 # 8.4.1 Height Sensing Condition
 
 
@@ -3495,10 +3794,10 @@ Start with a very small value and gradually adjust it to an appropriate setting 
 
 <!-- 
 ### (12) 초기 기준 데이터: [-500.0 ~ 500.0]
-    용접 초반에 별도의 기준 데이터를 적용하려고 할 때 설정합니다. 입력 데이터 무시 시간이 지난 후 ‘초기설정된 시기준 데이터 적용 시간’에서 설정된 시간동안 이 기준 데이터를 이용하여 높이 센싱이 수행됩니다.
+    용접 초반에 별도의 기준 데이터를 적용하려고 할 때 설정합니다. 입력 데이터 무시 시간이 지난 후 '초기설정된 시기준 데이터 적용 시간'에서 설정된 시간동안 이 기준 데이터를 이용하여 높이 센싱이 수행됩니다.
 
 ### (13) 초기 기준 데이터 적용 시간: [0.0 ~ 10.0]  
-    초기 기준 데이터로 높이 센싱을 수행할 시간을 설정합니다. 이 시간이 지난 후에는 ‘기준 데이터 설정’ 항목에서 입력한 데이터로 높이센싱이 수행됩니다.
+    초기 기준 데이터로 높이 센싱을 수행할 시간을 설정합니다. 이 시간이 지난 후에는 '기준 데이터 설정' 항목에서 입력한 데이터로 높이센싱이 수행됩니다.
 
 ### (14) 입력 데이터 평균 시간: [0.5 ~ 10.0]  
     기준데이터 설정방법이 Average input data(입력데이터 평균)인 경우 표시되는 항목입니다. 입력 무시시간이 지난 후 기준데이터 계산을 위해 입력데이터를 평균하는 시간입니다.
@@ -3515,7 +3814,11 @@ Start with a very small value and gradually adjust it to an appropriate setting 
 
 ### (18) 높이 센싱 범위: [-300.0 ~ 0.0], [0.0 ~ 200.0]  
     높이센싱의 총 추종거리 제한치를 설정합니다. -->
+
+[__SOURCE](8_Application_function/5_LVS_tracking/README.md)
 # 8.5 LVS(Laser Vision Sensor) Seam Finding and Tracking
+
+[__SOURCE](8_Application_function/5_LVS_tracking/1_overall.md)
 # 8.5.1 LVS Overview and Specifications
 
 {% hint style="info" %}
@@ -3538,7 +3841,7 @@ In other words, through seam tracking, welding can still be performed even if th
 
 ## Command
 
-The LVS Seam Finding and Tracking function is executed through the `lvs` command, which can be entered by selecting **[cmd. input > arcweld > lvs]** in the TP.
+The LVS Seam Finding and Tracking function is executed through the `lvs` command, which can be entered by selecting `[F6: cmd. input] - arcweld - lvs` in the TP.
 
 The structure of the command is as follows:
 
@@ -3584,7 +3887,7 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
     <tr>
       <td style="text-align:left">auto_calib</td>
       <td style="text-align:left">
-        Performs auto-calibration between TCP and LVS.(refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/3_calibration">LVS Calibration</a>)
+        Performs auto-calibration between TCP and LVS.(refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/3_calibration?cont_model=${cont_model}">LVS Calibration</a>)
       </td>
     </tr>
     <tr>
@@ -3592,7 +3895,7 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
       <td style="text-align:left">
         The starting point is found while moving in the +ToolX, -ToolX directions, and tracking preparation is performed. <br>
         The detected starting point is stored in the pose variable specified by the 'sp' argument of the command.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/6_search">LVS search func.</a>)
+        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">LVS search func.</a>)
       </td>
     </tr>
     <tr>
@@ -3600,7 +3903,7 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
       <td style="text-align:left">
         The starting point or the start point of a multi-bead is found while moving int the +ToolX, -ToolX directions. <br>
         The detected starting point is stored in the pose variable specified by the 'sp' argument of the command.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/6_search">LVS search func.</a>)
+        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">LVS search func.</a>)
       </td>
     </tr>
     <tr>
@@ -3634,14 +3937,14 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
       <td colspan="2">pose variable of the master position</td>
       <td>
         This is the reference pose variable registered in master mode.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/5_lvs_master_mode">8.5.5 LVS Master mode func.</a>)
+        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS Master mode func.</a>)
       </td>
     </tr>
     <tr>
       <td colspan="2">shift variable of the current sensing position relative to the master</td>
       <td>
         The shift of the current sensed position relative to the mp(master pose) is stored.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/english/8_Application_function/5_LVS_tracking/5_lvs_master_mode">8.5.5 LVS Master mode func.</a>)
+        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS Master mode func.</a>)
       </td>
     </tr>
     <tr>
@@ -3723,7 +4026,9 @@ The tracking function using the ```lvs``` command can be used as follows:
       <td style="text-align:left">0.35 mm</td>
     </tr>
   </tbody>
-</table># 8.5.2 LVS Settings
+</table>
+[__SOURCE](8_Application_function/5_LVS_tracking/2_settings.md)
+# 8.5.2 LVS Settings
 
 
 To use LVS functionality, sensor installation and communication settings are required.
@@ -3767,7 +4072,7 @@ The LVS sensor must be installed so that the laser is positioned perpendicular t
 ### (2) Communication Settings
 
 Connect the LVS sensor controller and the robot controller using an Ethernet cable.<br>
-Navigate to **[System > 4: Application parameter > 5: LVS tracking > 1: Envrionment setting]**.<br>
+Navigate to `[F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting`.<br>
 
 In the **[Communication]** tab, configure the following items:
 
@@ -3838,7 +4143,7 @@ Preferences have been completed through the above process.
 </p>
 
 As shown in the figure above, select the LVS brand as FULL, then check the IP address of the LVS sensor in the Full-V softeware.  <br>
-Enter the IP in the **[System > 4: Application parameter > 5: LVS tracking > 1: Envrionment setting]** window.  <br> Afterward, click the "connect" button at the bottom and verify that the connection status shows.  <br>
+Enter the IP in the `[F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting` window.  <br> Afterward, click the "connect" button at the bottom and verify that the connection status shows.  <br>
 If "disconnected" appears, check the hardware connection and IP address.<br>
 
 Refer to the manual provided by Full-V and the figure below to register the seam you wish to use in the Full-V software.  
@@ -3847,7 +4152,9 @@ Refer to the manual provided by Full-V and the figure below to register the seam
 <p align="center">
  <img src="../../_assets/8_5_6_lvs_setting_fullv_2.png" width="90%"></img>
  <em><p align="center">Figure 8.5.6. Example of Seam Setting in Full-V Software</p></em>
-</p># 8.5.3 LVS Calibration
+</p>
+[__SOURCE](8_Application_function/5_LVS_tracking/3_calibration.md)
+# 8.5.3 LVS Calibration
 
 
 In order to use the LVS funtionality, calibration between the TCP and sensor coordinate system must be performed first.
@@ -3936,13 +4243,15 @@ If you perform automatic calibration for tool 0 and want to use tool 1 or tool 2
 
 If you want to use the same tool information but with different numbers, you can enter the following window to copy and apply the calibration information.
 
-- Navigate to **[System > 4: Application parameter > 5: LVS tracking > 2: LVS Calibration]**.<br>
+- Navigate to `[F2: System] - 4: Application parameter - 5: LVS tracking - 2: LVS Calibration`.<br>
 
 <p align="center">
   <img src="../../_assets/8_5_8_lvs_tool_calibmat.png" width="80%"></img>
   <em><p align="center">Figure 8.5.8. LVS Calibration Information</p></em>
 </p>   
-</br># 8.5.4 LVS Seam Finding Func.
+</br>
+[__SOURCE](8_Application_function/5_LVS_tracking/4_seam_finding.md)
+# 8.5.4 LVS Seam Finding Func.
 
 ### (1) Seam Finding Overview
 
@@ -4020,7 +4329,7 @@ The retry process is performed in the following sequence:
 
 ### (3) LVS Seam Finding Monitoring
 
-To view the LVS seam finding monitoring screen, click **[pane layout > select > LVS seamfind]** in the TP  
+To view the LVS seam finding monitoring screen, click `[pane layout] - select - LVS seamfind` in the TP  
 
 
 <p align="center">
@@ -4078,13 +4387,15 @@ If the master pose is registered, you can check the sensing history for the curr
   For more details on the master mode, please refer to [8.5.5 LVS Master mode func.](./5_lvs_master_mode.md).
 {% endhint %}
 
+
+[__SOURCE](8_Application_function/5_LVS_tracking/5_lvs_master_mode.md)
 # 8.5.5 LVS Master Mode Func.
 
 ### (1) Master Mode Overview
 
 The Master Mode function stores a reference position (Master pose) and calculates the shift between the current sensed position and the reference position during actual production.
 
-To enable this functionality, **[user key > Master Mode]** must be activated to register the reference position(Master pose) in advance.
+To enable this functionality, `user key - Master Mode` must be activated to register the reference position(Master pose) in advance.
 
 
 <p align="center">
@@ -4137,7 +4448,9 @@ If the shift value exceeds the user-defined range during seam finding, an error 
 If the `sp` parameter is not declared, it will be treated as a local pose.<br>
 If the `mp` parameter is not declared, it will be treated as a global pose.<br>
 If the `ms` parameter is not declared, it will be treated as a global pose.
-{% endhint %}# 8.5.6 LVS Search Func.
+{% endhint %}
+[__SOURCE](8_Application_function/5_LVS_tracking/6_search.md)
+# 8.5.6 LVS Search Func.
 
 ### (1) How to Use the Search Function
 
@@ -4228,7 +4541,9 @@ It can be used as follows:
     lvs step_search, cnd=1, seam=1, sp=po_100
     move L, tg=po_100, spd=40cm/min, accu=3, tool=1 # Move to the found location.
     end
-```# 8.5.7 LVS Tracking Func. and Monitoring
+```
+[__SOURCE](8_Application_function/5_LVS_tracking/7_tracking_monitoring.md)
+# 8.5.7 LVS Tracking Func. and Monitoring
 
 ### (1) LVS Tracking Overview
 
@@ -4308,7 +4623,7 @@ If you want to track with an offset from the seam (instead of exactly following 
 </br>
 
 
-LVS Monitoring can be activated by selecting **[pane layout > select > LVS tracking]**.
+LVS Monitoring can be activated by selecting `[pane layout] - select - LVS tracking`.
 
 In the monitoring, the follwing items can be checked:
 
@@ -4324,7 +4639,11 @@ In the monitoring, the follwing items can be checked:
 | Information | Displays the progress of the auto-calibration and other relevant information. |
 | Real-time Image | Displays the points to be tracked, represented by red circles, that are stored in the buffer. |
 
-# 8.6 STITCH Function# 8.6.1  STITCH Func. Overview
+
+[__SOURCE](8_Application_function/6_Stitch/README.md)
+# 8.6 STITCH Function
+[__SOURCE](8_Application_function/6_Stitch/1_overall_.md)
+# 8.6.1  STITCH Func. Overview
 
 Stitch welding is a function where welding is performed intermittently, similar to stitching. In [Figure 8.6.2], stitch welding is performed by setting start and end points on the specimen. In stitch welding, parameters `a` and `b` are set as shown in [Figure 8.6.1] to determine the length of the welding section and the non-welding section, thus forming the stitch pattern.
 
@@ -4369,6 +4688,8 @@ Stitch welding is a function where welding is performed intermittently, similar 
 
 
 
+
+[__SOURCE](8_Application_function/6_Stitch/2_command.md)
 # 8.6.2 STITCH Func. Command
  
 
@@ -4379,7 +4700,7 @@ Stitch welding is a function where welding is performed intermittently, similar 
 
 
 ```stitch``` Command: 
-After selecting **[cmd.input > arcweld > stitch]** in sequence, choose on/off and press **[ENTER]**.
+After selecting `[F6: cmd.input] - arcweld - stitch` in sequence, choose on/off and press **[ENTER]**.
 
 
 {% hint style="warning" %}
@@ -4387,7 +4708,9 @@ After selecting **[cmd.input > arcweld > stitch]** in sequence, choose on/off an
 	- L : Ensure that linear interpolation is selected.  
 	- 200mm/sec : Welding speed - the speed during the ON section of the stitch welding. the unit must be set to mm/sec
 - ```arcon / arcoff``` Use the command together to start welding.
-{% endhint %}# 8.6.3 STITCH Func. Parameter setting
+{% endhint %}
+[__SOURCE](8_Application_function/6_Stitch/3_parameter.md)
+# 8.6.3 STITCH Func. Parameter setting
 
 
 <p align="center">
@@ -4445,11 +4768,15 @@ The descriptions of the parameters for each figure are as follows:
 - **(11) Stitch Enable Port, (12) Equipment enable Port, (13) Equipment Output Port**: All must be set to 1 for the stitch welding welding to proceed during playback. If not set, welding will not occur, and only the stitch motion will proceed.
 {% endhint %}
 
+
+[__SOURCE](8_Application_function/6_Stitch/4_aux_spec.md)
 # 8.5.4 STITCH Func. Additional Specifications
 
 - **Emergency Stop, Restart**  
 
-During stitch welding, the process can resume after an emergency stop or playback stop. However, if the controller power is turned off and rebooted, the stitch welding cannot be restarted.# 8.7 Arc Trajectory Manager
+During stitch welding, the process can resume after an emergency stop or playback stop. However, if the controller power is turned off and rebooted, the stitch welding cannot be restarted.
+[__SOURCE](8_Application_function/7_Arc_trj_mgr/README.md)
+# 8.7 Arc Trajectory Manager
 
 This features displays the trajectory, current, voltage, and torch position (welding angle, push-pull angle) in real-time during arc welding.
 
@@ -4457,7 +4784,7 @@ Through this, you can monitor the welding angle, current, and voltage in real ti
 
 To enable this feature, follow these steps:
 
-Set "Arc trajectory monitoring" to 'activation on' under **[System > 2: Application parameter > 2: Arc welding]**.
+Set "Arc trajectory monitoring" to 'activation on' under `[System] - 2: Application parameter - 2: Arc welding`.
 
 
 {% hint style="info" %}
@@ -4479,4 +4806,365 @@ The welding angle and push/pull angle are calculated base on the welding directi
 The welding plane automatically rotates according to the welding trajectory.
 {% endhint %}
 
+
+
+[__SOURCE](8_Application_function/8_LPS/README.md)
+# 8.8 LPS(Laser Point Sensing)  
+
+{% hint style="info" %}
+This function is supported in versions 70.00-00 and later.
+{% endhint %}
+
+This function is used to achieve effects similar to touch sensing, such as detecting the weld start point, intermediate points, and end point.
+Since touch sensing requires the welding wire to make direct contact with the base material, it takes a longer execution time and may cause interference due to the welding torch.  
+
+To overcome these limitations, the Laser Point Sensing (LPS) function using a 1D-type laser distance sensor is provided.
+By utilizing a laser, sensing time is reduced and interference constraints are minimized, allowing weld points to be detected more easily and quickly under simple conditions.  
+
+Once the laser sensor is installed on the tool flange equipped with the welding torch using a bracket, and tool-to-sensor calibration is performed once, the pose of the position indicated by the laser can be obtained easily.
+In addition to step detection, the pose of a weld point can be obtained easily regardless of the base material shape, without requiring complex condition settings.
+Similar to touch sensing, Master mode can be used, and when a workpiece is introduced, the amount of shift from the reference position can be calculated automatically.  
+
+
+In the following sections, you will complete the sensor setup and begin using the LPS function.
+
+
+
+[__SOURCE](8_Application_function/8_LPS/1_settings.md)
+# 8.8.1 Laser Sensor Setup  
+
+
+To use the LPS function, it is necessary to first install the laser sensor and configure communication specifications and related settings.
+<br/>
+
+### (1) Mounting the Laser Sensor Using a Connection Bracket
+
+The connection bracket may be designed and fabricated by the user, or provided by our company or the sensor manufacturer.
+
+<p align="center">
+  <img src="../../_assets/8_8_1.png" width="80%"></img>
+  <em><p align="center">Figure 8.8.1. Installation of the laser sensor using a bracket</p></em>
+</p>
+
+A laser distance sensor consists of a transmitter and a receiver.
+When the robot is aligned with the arc torch, ensure that the transmitter/receiver of the laser sensor is aligned with the tool-based X direction (refer to the laser manufacturer's specifications).
+In addition, it is recommended to install the sensor on the right side of the tool Y direction (right side when facing the torch).  
+
+When the laser is installed and powered on, keeping the distance between the tool tip and the laser point as short as possible is advantageous in terms of interference prevention and CT (Cycle Time).
+Finally, the sensor installation position relative to the tool tip must be suitable for the specifications of the laser sensor being used (measurement range), and should be installed higher than the minimum specified distance.
+
+
+
+{% hint style="warning" %}
+  It is recommended to mount the sensor bracket directly to the robot flange. In other words, install the mechanical structure in the following order: **Flange - Laser sensor and bracket - Shock sensor - Torch.**
+{% endhint %}
+
+
+### (2) Communication Setup
+
+The laser sensor can be connected according to its specifications by referring to the following link.
+(Refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-${cont_model}/README?cont_model=${cont_model}))
+
+This page describes examples for selected sensors only.
+
+* Before proceeding with the setup, connect the sensor head, controller, communication unit (if applicable), and SMPS, and then supply power.
+(If the connection order is incorrect, sensing values may not be received. Therefore, ensure that the sensor is connected first during subsequent setups as well.)
+
+
+#### Serial - Example: Keyence LK-G400
+
+First, configure the sensor controller settings.
+
+* Communication Speed Setting (Required)  
+1. Press and hold the `SET` key, then press the `[UP]` key to select `Enu`.
+2. Press the `ENT` key and use the `[RIGHT]` key to select function `A` (RS-232C).
+3. Press the `ENT` key to check the current value (A-b0 to b4; 9600 / 19200 / 38400 / 57600 / 115200).
+
+* Display Unit Setting (Optional)  
+1. Press and hold the `SET` key, then press the `[UP]` key to select `oUt-1`.
+2. Press the `ENT` key and use the `[RIGHT]` key to select function `G`.
+3. Press the `ENT` key and use the `[UP]` key to set the desired number of decimal places (G-0 to ; 0.01, 0.001, ...).
+
+Navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting`.
+
+<p align="center">
+  <img src="../../_assets/8_8_2.png" width="80%"></img>
+  <em><p align="center">Figure 8.8.2. Laser Communication Setup (Keyence LK-G)</p></em>
+</p>
+</br>
+
+Select Keyence as the LPS brand to configure the settings.
+Once the setup is complete, verify that the value displayed in the **Sensing Distance (mm)** field matches the output value from the controller.
+
+<br/>
+
+
+#### EtherNet/IP - Example: Baumer OM-70
+
+Connect the sensor to a PC and access the web interface.
+(The default fixed IP address is 192.168.0.250.)
+
+<p align="center">
+  <img src="../../_assets/8_8_3.png" width="80%"></img>
+  <em><p align="center">Figure 8.8.3. Baumer Sensor Web Configuration</p></em>
+</p>
+</br>  
+
+Navigate to `Device Configuration` tab and set the communication method according to the intended purpose.
+At this time, enable only the method that matches the currently used communication protocol in the Process Interface section.
+
+If **Ethernet/IP** is used, complete the network settings accordingly. In the ${cont_model}, network ranges 0, 1, and 2 are used by default, so a different range must be assigned. (e.g. 192.168.10.250.)
+
+<p align="center">
+  <img src="../../_assets/8_8_4.png" width="80%"></img>
+  <em><p align="center">Figure 8.8.4. Baumer Sensor Network Settings</p></em>
+</p>
+</br>   
+
+Afterward, proceed step by step by following the link below.
+Note that Hi6 does not support built-in Ethernet, so a communication card must be used ([Hi6 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-Hi6/1-cifx-pci-communication/3-cifx-pci-settings-industrial-communication/3-EtherNet-IP/README?cont_model=Hi6)).
+From Hi7 and later, built-in Ethernet is supported, allowing communication to be established using the controller alone ([Hi7 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-Hi7/2-ethernet-ip/4-scanner/README?cont_model=Hi7)).
+
+
+
+<p align="center">
+  <img src="../../_assets/8_8_5.png" width="80%"></img>
+  <em><p align="center">Figure 8.8.5. Baumer Sensor Signal Assignment</p></em>
+</p>
+</br>
+
+Once the above steps are completed, navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting - Signal tab`.
+Configure the input signals for the assigned blocks.
+You can then confirm that the distance (current value) is output as the sensor value. (Additional settings are required if sensor-to-distance mapping is needed.)
+
+
+#### EtherNet/IP - Example: Keyence IL-300
+
+* Refer to the manufacturer's manual and our manual to connect the sensor in the same manner as the Baumer sensor.
+As described above, the Ethernet connection method differs depending on whether an Hi6 or Hi7 controller is used.
+
+[__SOURCE](8_Application_function/8_LPS/2_calibration.md)
+# 8.8.2 TCP-Sensor Calibration  
+
+
+Before using the LPS function, calibration between the TCP and the sensor must be performed.
+The following section describes how to perform TCP-to-sensor calibration.
+
+<br/>
+
+### (1) Preparation of the Calibration Specimen
+
+When a license is purchased through our company, a calibration specimen for automatic calibration is provided.
+
+<br/>
+
+
+### (2) Preparation  
+
+Before performing calibration, the tool must be perfectly aligned with the calibration plane.
+Teach the tool manually in the X and Y directions based on the tool coordinate system, and check that the laser output remains constant (with the error kept within 0.5 or less). Adjust the RX and RY values as necessary.  
+
+Once the tool is aligned, position the wire tip at the edge of the calibration plane.
+When teaching in the tool-based X-Y directions, adjust the RZ value so that the laser point moves along the edge corner.  
+
+<br/>
+
+<p align="center">
+  <img src="../../_assets/8_8_2_1.png" width="60%"></img>
+  <em><p align="center">Figure 8.8.2.1 Preparation before calibration</p></em>
+</p><br/>  
+
+After completing the above steps, all preparations required for performing calibration are complete.
+
+
+### (3) Performing Automatic Calibration
+
+Position the wire tip at one vertex of the calibration plane.
+In addition, ensure that the laser point is located inside the calibration plane.  
+
+<br/>
+
+<p align="center">
+ <img src="../../_assets/8_8_2_2.png" width="50%"></img>
+ <em><p align="center">Figure 8.8.2.2 Start of calibration</p></em>
+</p><br/>  
+
+From the lower panel, select `[F6: cmd. input] - arcweld - lps` and insert the following command.
+
+```py
+  lps auto_calib, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool
+```
+
+At this time, the movement distance must be set greater than the distance the laser is required to travel.
+If detection fails within the specified parameters, a calibration error will occur.  
+
+When executed in automatic method, calibration is performed through the following sequence of operations:  
+
+1. The laser point moves in the Tx and Ty directions, initially moving toward the tool tip direction.
+2. The robot is lifted in the +Z direction based on the robot coordinate system, and the same process as in Step 1 is performed.
+3. The robot moves downward in the -Z direction based on the robot coordinate system, while interpolation is performed toward the transmitter/receiver direction of the sensor (current bracket specification Tx).  
+
+Once calibration is fully completed, an execution mark appears on the left side of the step, and all motion stops.  
+
+
+### (4) Calbration Information
+
+Navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 2: Calibration` to check the calibration results.
+When the value in the **Calibration done** field changes to "2", it indicates that all calibration processes, including interpolation, have been completed.  
+Calibration information is stored per tool number, which is useful when using tool change functions.
+If the tool information is the same but a different tool number is to be used, the calibration data can be copied and reused.
+
+<br/>
+
+<p align="center">
+ <img src="../../_assets/8_8_2_3.png" width="80%"></img>
+ <em><p align="center">Figure 8.8.2.3 Calibration Result</p></em>
+</p><br/>  
+
+
+
+[__SOURCE](8_Application_function/8_LPS/3_function.md)
+# 8.8.3 Using the LPS Function  
+
+
+{% hint style="warning" %}
+If tool-to-sensor calibration (ref. 8.8.2) has not been performed before using this function, invalid poses may be stored.
+{% endhint %}
+
+### Property Window
+
+The properties of the LPS command are as follows.  
+<br/>
+
+<p align="center">
+  <img src="../../_assets/8_8_3_0.png" width="80%"></img>
+  <em><p align="center">Figure 8.8.3.0 LPS Property</p></em>
+</p><br/>  
+
+#### Gap Coefficient
+
+  This parameter is used to detect step differences in **Step mode (stepp)** and allows the user to specify the detected height difference.
+  However, this parameter is not used during the calibration process, as a separate calibration specimen is used.
+
+#### Step Sensitivity
+
+  This parameter sets the data processing sensitivity based on repeatability.
+  In most cases, users can use the default value, and no additional adjustment is required.
+
+#### Slope Threshold (Slope Degree)
+
+  This parameter is used to detect edges.
+  In addition to the step coefficient, it can be configured during tool-to-sensor calibration operations and step detection.
+  Since edges are not always vertical, this parameter allows the system to respond to sloped surfaces.
+
+#### Pose Coordinates / Shift Coordinates
+
+  This setting specifies the coordinate system in which data is stored when each mode is executed.
+  In particular, Shift Coordinates are used when Master mode is enabled.
+
+<br/>
+
+### (1) Spot Mode  
+
+**Spot mode** is used to verify calibration results or to obtain the pose of the position currently indicated by the laser.  
+
+<br/>
+
+<p align="center">
+  <img src="../../_assets/8_8_3_1.png" width="60%"></img>
+  <em><p align="center">Figure 8.8.3.1 Spot Mode</p></em>
+</p><br/>  
+
+```py
+  var p10=cpo()
+  lps spot,cnd=1,pose=p10
+  move L,tg=p10,spd=10%,acc=0,tool=0
+```
+
+{% hint style="warning" %}
+  In this case, only the position is recorded in the pose specified by the sp parameter.
+  The tool orientation (Rx, Ry, Rz) prior to sensing is not preserved.
+{% endhint %}
+
+<br/>
+
+
+### (2) Step Mode
+
+**Step Mode** is used to detect positions where a height difference occurs on the base material.
+Depending on whether the height difference is lower or higher, the scan direction should be reserved accordingly.  
+
+<br/>
+
+<p align="center">
+  <img src="../../_assets/8_8_3_2.png" width="60%"></img>
+  <em><p align="center">Figure 8.8.3.2 Step Mode</p></em>
+</p><br/>  
+
+```py
+  var p10=cpo()
+  lps stepp,cnd=1,Tx=50,spd=5,pose=p10
+  move L,tg=p10,spd=10%,acc=0,tool=0
+```
+
+
+The system moves by the specified distance in the X or Y direction based on the tool while searching for a step difference.
+If no step is detected within the specified distance, a detection error occurs.  
+
+<br/>
+
+
+### (3) Scan Mode
+
+<p align="center">
+ <img src="../../_assets/8_8_3_3.png" width="80%"></img>
+ <em><p align="center">Figure 8.8.3.3 Scan Mode on various geometries</p></em>
+</p><br/>  
+
+```py
+  var p10=cpo()
+  lps scan,cnd=1,Ty=50,spd=5,pose=p10
+  move L,tg=p10,spd=10%,acc=0,tool=0
+```
+
+Scan mode detects weld points while moving by the specified distance in the X or Y direction based on the tool.
+It can be executed with a single command regardless of the joint geometry, such as fillet, V-groove, or butt joints.
+Detection results can be retrieved via the REST API, or verified by registering and using the application provided by our company.  
+
+For instructions on how to register and use the application, please refer to the following link: [Software Development Kit (SDK)](https://hrbook-hrc.web.app/#/view/doc-hi6-sdk/en/README?cont_model=${cont_model})  
+
+
+{% hint style="warning" %}
+  Set the movement distance sufficiently to include the weld seam, and ensure that the tool motion is not parallel to the scanned surface.
+{% endhint %}  
+
+
+#### (3-1) Monitoring Screen  
+
+<p align="center">
+  <img src="../../_assets/8_8_3_4.png" width="80%"></img>
+  <em><p align="center">Figure 8.8.3.4 LPS Graph</p></em>
+</p><br/>  
+
+After registering the application, the monitoring screen can be accessed through the following method: `[Pane layout] - select - LPS Graph` 
+
+<br/>
+
+<p align="center">
+  <img src="../../_assets/8_8_3_5.png" width="80%"></img>
+  <em><p align="center">Figure 8.8.3.5 Example screen - V-groove</p></em>
+</p><br/>  
+
+<p align="center">
+  <img src="../../_assets/8_8_3_6.png" width="80%"></img>
+  <em><p align="center">Figure 8.8.3.6 Example screen - Butt joint</p></em>
+</p><br/>  
+
+
+When the function is executed, results can be viewed as shown in the figure above.
+The currently provided screen offers the following features:  
+
+1. The screen can be refreshed by clicking the Refresh button in the upper-left corner.
+2. The numeric value displayed in the upper-right corner represents the real-time output value of the laser sensor.
+3. The calculated weld point is indicated by a red dot.
 

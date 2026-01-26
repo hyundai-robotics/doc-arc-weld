@@ -19,7 +19,7 @@ The detailed content and setup method for this function are as follows:  <br/>
 <br>
 
 1. Perform arc welding in automatic mode.
-2. Navigate to **[pane layout > select > arc change IV]**
+2. Navigate to `[pane layout] - select - arc change IV`
 3. Click the **[+/-]** button to enter the adjustment button window.
 
 ---  
@@ -53,7 +53,7 @@ The detailed content and setup method for this function are as follows:  <br/>
 
 ### Arc welding Current/Voltage Auto saving settings
 
-- Navigate to **[System > 4: Application parameter > 2: Arc welding]**
+- Navigate to `[F2: System] - 4: Application parameter - 2: Arc welding`
 - **[Arc welding I/V change auto saving]**
     - **Disable**  
     Not saved

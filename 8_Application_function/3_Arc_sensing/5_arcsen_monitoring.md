@@ -2,7 +2,7 @@
 
 ### (1) Monitoring Execution
 
-By accessing [**pane layout > select > arc sensing**], the Arc Sensing Monitoring window will be activated.
+By accessing `[pane layout] - select - arc sensing`, the Arc Sensing Monitoring window will be activated.
 This feature is only available when the Arc Sensing license is valid.
 
 

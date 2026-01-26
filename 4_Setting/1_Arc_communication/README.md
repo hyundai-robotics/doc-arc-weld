@@ -23,9 +23,9 @@ After completing the below steps, the sycon screen will appear as shown above. (
 6. Right-click the welder icon and select **disconnect**, then go to **configuration > General > UCM** tab and set UCMM to Group3.
 7. Right-click the welder icon and select **upload**, then right-click the cifx icon and select **download**.
 
-On the Robot TP, navigate to **[System > 2: Control parameter > 2: Input/Output signal setting > 6: fb block allocation]** and assign the blocks to be used.
+On the Robot TP, navigate to `[F2: System] - 2: Control parameter - 2: Input/Output signal setting - 6: fb block allocation` and assign the blocks to be used.
 Once this is completed, the data transmitted from the welder to the controller will be displayed in bold within the assigned blocks.
-(Verify this in **[pane layout > select > public input > assigned fb block]**)
+(Verify this in `[pane layout] - select - public input - assigned fb block`)
 
 
 {% hint style="info" %}

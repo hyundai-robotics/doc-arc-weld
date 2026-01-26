@@ -78,7 +78,7 @@ If you want to track with an offset from the seam (instead of exactly following 
 </br>
 
 
-LVS Monitoring can be activated by selecting **[pane layout > select > LVS tracking]**.
+LVS Monitoring can be activated by selecting `[pane layout] - select - LVS tracking`.
 
 In the monitoring, the follwing items can be checked:
 
