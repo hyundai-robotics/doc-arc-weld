@@ -1,66 +1,78 @@
-﻿# 8.8.2 TCP-센서 캘리브레이션  
+﻿# 8.8.2 TCP-Sensor Calibration  
 
-LPS 기능을 사용하기 위해서는 TCP와 센서 간 캘리브레이션이 선행되어야 합니다.
 
-지금부터 TCP-센서 간 캘리브레이션 수행 방법을 살펴보겠습니다.  
-
-<br/>
-
-### (1) 캘리브레이션 시편 준비
-
-당사를 통해 라이센스 구입을 하면 자동 캘리브레이션용 시편을 제공합니다.
+Before using the LPS function, calibration between the TCP and the sensor must be performed.
+The following section describes how to perform TCP-to-sensor calibration.
 
 <br/>
 
+### (1) Preparation of the Calibration Specimen
 
-### (2) 준비 사항  
+When a license is purchased through our company, a calibration specimen for automatic calibration is provided.
 
-캘리브레이션을 수행하기 전에 툴을 캘리브레이션 평면에 대해 완벽히 정렬시켜야 합니다. 툴 좌표계 기준으로 X와 Y 방향으로 직접 교시하며 레이저 출력이 일정한지 확인하고(오차가 최소 0.5 이내로 오도록) RX, RY 값을 조정합니다.
-툴을 정렬시켰다면 와이어 끝을 캘리브레이션 평면 끝에 위치시킵니다. 툴 기준 X-Y 방향으로 교시할 때 레이저 포인트가 모서리 끝에 타고 움직일 수 있도록 RZ 값을 조정합니다.
+<br/>
+
+
+### (2) Preparation  
+
+Before performing calibration, the tool must be perfectly aligned with the calibration plane.
+Teach the tool manually in the X and Y directions based on the tool coordinate system, and check that the laser output remains constant (with the error kept within 0.5 or less). Adjust the RX and RY values as necessary.  
+
+Once the tool is aligned, position the wire tip at the edge of the calibration plane.
+When teaching in the tool-based X–Y directions, adjust the RZ value so that the laser point moves along the edge corner.  
+
+<br/>
 
 <p align="center">
   <img src="../../_assets/8_8_2_1.png" width="60%"></img>
-  <em><p align="center">그림 8.8.2.1 캘리브레이션 전 준비 사항</p></em>
+  <em><p align="center">Figure 8.8.2.1 Preparation before calibration</p></em>
 </p><br/>  
 
-위 과정을 완료했다면 캘리브레이션 수행을 위한 준비가 모두 끝났습니다.
+After completing the above steps, all preparations required for performing calibration are complete.
 
 
-### (3) 자동 캘리브레이션 수행
+### (3) Performing Automatic Calibration
 
-TCP 끝을 캘리브레이션 평면의 한 쪽 꼭짓점에 위치하도록 합니다. 또 레이저 포인트는 캘리브레이션 평면 안쪽에 위치해야 합니다.
+Position the wire tip at one vertex of the calibration plane.
+In addition, ensure that the laser point is located inside the calibration plane.  
+
+<br/>
 
 <p align="center">
  <img src="../../_assets/8_8_2_2.png" width="50%"></img>
- <em><p align="center">그림 8.8.2.2 캘리브레이션 시작</p></em>
+ <em><p align="center">Figure 8.8.2.2 Start of calibration</p></em>
 </p><br/>  
 
-하단 패널에서 `[F6: 명령입력] - arcweld - lps`를 클릭하여 하기 명령어를 삽입합니다.
+From the lower panel, select `[F6: cmd. input] – arcweld – lps` and insert the following command.
 
 ```py
-  lps auto_calib, cnd=1, Tx=<툴 기준 X 방향 이동거리>, Ty=<툴 기준 Y 방향 이동거리>
+  lps auto_calib, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool
 ```
 
-이때 이동거리는 레이저가 이동해야 하는 거리보다 크게 입력합니다. 만약 해당 인자 내에 검출하지 못한다면 캘리브레이션 에러가 발생합니다.
+At this time, the movement distance must be set greater than the distance the laser is required to travel.
+If detection fails within the specified parameters, a calibration error will occur.  
 
-이제 자동 모드로 수행하면 다음과 같은 동작을 수행하며 캘리브레이션을 진행합니다.
+When executed in automatic method, calibration is performed through the following sequence of operations:  
 
-1. 레이저 포인트가 Tx, Ty 방향으로 이동하며 처음 툴 끝 방향으로 이동.
-2. 로봇 좌표계 기준 +Z 방향으로 들어올린 후, 1번과 같은 과정 수행.
-3. 로봇 좌표계 기준 -Z 방향으로 하강하며 센서 발/수광부 방향(현재 브라켓 사양 Tx)에 대해 보간을 수행.
+1. The laser point moves in the Tx and Ty directions, initially moving toward the tool tip direction.
+2. The robot is lifted in the +Z direction based on the robot coordinate system, and the same process as in Step 1 is performed.
+3. The robot moves downward in the –Z direction based on the robot coordinate system, while interpolation is performed toward the transmitter/receiver direction of the sensor (current bracket specification Tx).  
 
-캘리브레이션이 모두 완료되면 스탭 좌측에 실행마크가 찍히며 움직임이 종료됩니다.
+Once calibration is fully completed, an execution mark appears on the left side of the step, and all motion stops.  
 
 
-### (4) 캘리브레이션 정보
+### (4) Calbration Information
 
-`[F2: 시스템] - 4: 응용 파라미터 - 6: 레이저 포인트 센싱 - 2: 캘리브레이션` 에 진입하여 캘리브레이션 결과를 확인할 수 있습니다. "캘리브레이션 완료" 칸에 "2"로 바뀌면 보간까지 모두 완료되었음을 의미합니다.
-캘리브레이션 정보는 툴 번호마다 갖고 있고 툴 체인지 사용 시 유용합니다. 만약 툴 정보는 같지만 다른 번호를 사용하고자 할 때에는 복사하여 사용할 수 있습니다.  
+Navigate to `[F2: System] – 4: Application Parameters – 6: Laser Point Sensing – 2: Calibration` to check the calibration results.
+When the value in the **Calibration done** field changes to "2", it indicates that all calibration processes, including interpolation, have been completed.  
+Calibration information is stored per tool number, which is useful when using tool change functions.
+If the tool information is the same but a different tool number is to be used, the calibration data can be copied and reused.
 
+<br/>
 
 <p align="center">
  <img src="../../_assets/8_8_2_3.png" width="80%"></img>
- <em><p align="center">그림 8.8.2.3 캘리브레이션 결과</p></em>
+ <em><p align="center">Figure 8.8.2.3 Calibration Result</p></em>
 </p><br/>  
 
 
