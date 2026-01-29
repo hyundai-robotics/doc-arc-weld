@@ -2643,9 +2643,9 @@ Assuming the condition 1 set for Fillet, condition 2 set for Butt, and condition
     var P10=cpo() # Save the current pose to a local variable P10 before touch sensing.
     touchsen cnd=1, crd="tool_prj", dir=["tf","td"], pose=P10       # Condition 1, tool projection direction, 2-point touch
     touchsen cnd=1, crd="robot", dir=["+x","-y","-z"], pose=P10     # Condition 1, robot coordinate direction, 3-point touch
-    touchsen cnd=1, crd="tool", dir="+tz", pose=P10           # Condition 1, tool coordinate direction, 1-point touch in +TZ
-    touchsen cnd=2, crd="tool", dir="+tx", lift_up=3, pose=P10, gap=var1 # Condition 2, tool coordinate direction, touch the bottom and rise 3mm
-    touchsen cnd=3, crd="tool", dir="-ty", lift_up=5, pose=P10   # Condition 3, tool coordinate direction, touch the bottom and rise 5mm
+    touchsen cnd=1, crd="tool", dir="+z", pose=P10           # Condition 1, tool coordinate direction, 1-point touch in +Z
+    touchsen cnd=2, crd="tool", dir="+x", lift_up=3, pose=P10, gap=var1 # Condition 2, tool coordinate direction, touch the bottom and rise 3mm
+    touchsen cnd=3, crd="tool", dir="-y", lift_up=5, pose=P10   # Condition 3, tool coordinate direction, touch the bottom and rise 5mm
 ```
 
 - **Sensing Distance** : The distance in the sensing direction [mm], and an error occurs if the workpiece is not detected upon reaching this distance.
@@ -2739,7 +2739,7 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 ```python
   touchsen cnd=1, crd="robot", dir=["+x","-y", "-z"], pose=P10
   touchsen cnd=1, crd="tool_prj", dir=["tf", "td"], pose=P10
-  touchsen cnd=1, crd="tool", dir=["+tz"], pose=P10
+  touchsen cnd=1, crd="tool", dir=["+z"], pose=P10
 ```  
   - 1-Point sensing : Only one sensing direction is specified.
   - 2-Point sensing : Two sensing directions are specified sequentially.
@@ -2761,7 +2761,7 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
   touchsen cnd=3, crd="tool", dir=[-ty], lift_up=3, pose=P10    # Condition 3, tool coordinate direction
 ```  
   - V-Groove Type can be used for sensing workpieces with a Groove shape. However, it is recommended to teach the tool posture so that it is positioned along the bisector of the angle, similar to the figure above, before starting the sensing.  
-  - The direction parameter corresponds to one direction for the left-right sequence. The downward sequence direction is fixed in the `+Tz` direction.  
+  - The direction parameter corresponds to one direction for the left-right sequence. The downward sequence direction is fixed in the `+z` direction relative to the tool.  
   - For stable sensing, it is recommended to set the lift-up amount to at least 3mm.  
 
 - Sensing Sequence  
@@ -2784,11 +2784,11 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 
 - Examples of Command
 ```python
-    touchsen cnd=2, crd="tool", dir="+tx", lift_up=3, pose=P10, gap=var_gap   
+    touchsen cnd=2, crd="tool", dir="+x", lift_up=3, pose=P10, gap=var_gap   
     # Condition 2, tool coordinate direction, touch the bottom and rise 3mm
 ```  
   - Butt Type is recommended to teach the tool posture vertically to the floor surface before starting the sensing, as shown in the figure above.
-  - The direction parameter corresponds to one direction for the left-right sequence. The downward sequence direction is fixed in the `+Tz` direction.  
+  - The direction parameter corresponds to one direction for the left-right sequence. The downward sequence direction is fixed in the `+z` direction relative to the tool.  
   - After bottom sensing, it is recommended to set the lift-up amount to at least 3mm for stable sensing. The size of the sensed gap may change depending on the lift-up amount.  
 
 - Sensing Sequence
