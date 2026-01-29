@@ -33,9 +33,9 @@
    var P10=cpo() # 터치센싱 전 현재 포즈를 P10이라는 로컬변수에 저장
    touchsen cnd=1, crd="tool_prj", dir=["tf","td"], pose=P10       #1번 조건, 툴프로젝션 방향, 2점 터치
    touchsen cnd=1, crd="robot", dir=["+x","-y","-z"], pose=P10     #1번 조건, 로봇좌표 방향, 3점 터치
-   touchsen cnd=1, crd="tool", dir="+tz", pose=P10           #1번 조건, 툴좌표 방향, +TZ방향으로 1점 터치 
-   touchsen cnd=2, crd="tool", dir="+tx", lift_up=3, pose=P10, gap=var1 #2번 조건, 툴좌표계 방향, 바닥터치 후 3mm 상승
-   touchsen cnd=3, crd="tool", dir="-ty", lift_up=5, pose=P10   #3번 조건, 툴좌표계 방향, 바닥터치 후 5mm 상승
+   touchsen cnd=1, crd="tool", dir="+z", pose=P10           #1번 조건, 툴좌표계 방향, +Z방향으로 1점 터치 
+   touchsen cnd=2, crd="tool", dir="+x", lift_up=3, pose=P10, gap=var1 #2번 조건, 툴좌표계 방향, 바닥터치 후 3mm 상승
+   touchsen cnd=3, crd="tool", dir="-y", lift_up=5, pose=P10   #3번 조건, 툴좌표계 방향, 바닥터치 후 5mm 상승
  ```
 
 - 센싱 거리 : 센싱 방향에 대한 거리[mm]이며 이 거리에 도달해도 작업물을 감지하지 못할 경우 에러가 발생합니다.   
@@ -128,7 +128,7 @@
 ```python
   touchsen cnd=1, crd="robot", dir=["+x","-y", "-z"], pose=P10
   touchsen cnd=1, crd="tool_prj", dir=["tf", "td"], pose=P10
-  touchsen cnd=1, crd="tool", dir=["+tz"], pose=P10
+  touchsen cnd=1, crd="tool", dir=["+z"], pose=P10
 ```  
   - 1점 센싱 : 센싱 방향을 한 개만 지정
   - 2점 센싱 : 센싱 방향을 순차적으로 2개 지정
@@ -152,7 +152,7 @@
   touchsen cnd=3, crd="tool", dir=[-ty], lift_up=3, pose=P10    #3번 조건, 툴좌표계 방향
 ```  
   - V그루브 타입은 Groove 형상의 작업물 센싱에 사용할 수 있습니다. 단, 센싱시작 전 툴자세는 위 그림과 유사하게 각의 2등분선 상에 위치하도록 티칭을 권장합니다.
-  - 방향인자는 좌우 시퀀스에 해당하는 방향으로 1가지 입니다. 하강 시퀀스 방향은 +tz 방향으로 고정됩니다.
+  - 방향인자는 좌우 시퀀스에 해당하는 방향으로 1가지 입니다. 하강 시퀀스 방향은 툴 좌표계 기준 +z 방향으로 고정됩니다.
   - 안정적인 센싱을 위해 상승량(lift_up)은 최소 3mm이상 설정하는 것을 권장합니다.
 
 - 센싱 시퀀스  
@@ -176,11 +176,11 @@
 
 - 명령어 작성 예시
 ```python
-    touchsen cnd=2, crd="tool", dir="+tx", lift_up=3, pose=P10, gap=var_gap   
-    #2번 조건, 툴좌표계 방향, 바닥 센싱 후3mm 상승상승
+    touchsen cnd=2, crd="tool", dir="+x", lift_up=3, pose=P10, gap=var_gap   
+    #2번 조건, 툴좌표계 방향, 바닥 센싱 후3mm 상승
 ```  
   - Butt 타입은 그림과 같이 센싱시작 전 툴 자세를 바닥면에 수직으로 티칭하는 것을 권장합니다.
-  - 방향인자는 좌우 시퀀스에 해당하는 방향으로 1가지 입니다. 하강 시퀀스 방향은 +tz 방향으로 고정됩니다.
+  - 방향인자는 좌우 시퀀스에 해당하는 방향으로 1가지 입니다. 하강 시퀀스 방향은 툴 좌표계 기준 +z 방향으로 고정됩니다.
   -	센싱을 위해 바닥센싱 후 상승량(lift_up)은 최소 3mm이상 설정하는 것을 권장합니다. 상승량에 따라서 센싱한 gap의 크기가 바뀔 수 있습니다.
 
 - 센싱 시퀀스

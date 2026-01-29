@@ -43,7 +43,7 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
       <td>방향</td>
       <td>
         터치센싱 방향 (센싱 타입별 지원 방향 상이함)
-        ("+x", ["+x","-z"], ["+ty", "+tz"])
+        ("+x", ["+x","-z"])
       <td>문자열 배열</td>
     </tr>
     <tr>
@@ -98,7 +98,7 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
   var var1=0      # butt 작업물 센싱시 측정된 gap을 저장할 변수를 선언한다.
   var P10=cpo()   # 포즈변수 P10을 선언하고 현재포즈를 저장해둔다.
   touchsen cnd=2, crd="tool", dir=["+y"], lift_up=3, pose=P10, gap=var1  # 2번 조건, 툴좌표계 방향, 바닥센싱 후 3mm 상승, 갭은 var1변수에 저장
-  touchsen cnd=1, crd="tool", dir=["tf", "td"], pose=P10, 0  # 1번 조건, 툴프로젝션 방향, 2점 터치
+  touchsen cnd=1, crd="tool_prj", dir=["tf", "td"], pose=P10, 0  # 1번 조건, 툴프로젝션 방향, 2점 터치
   touchsen cnd=1, crd="base", dir=["+x","-y","-z"], pose=P10, 0  # 1번 조건, 베이스좌표 방향, 3점 터치
 ```  
 <br/>

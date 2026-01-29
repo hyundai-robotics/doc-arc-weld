@@ -43,9 +43,9 @@ S2   move L,spd=30%,accu=3,tool=1  			' 2: 종료점 터치센싱 위치
      var p1=cpo()
      var gap_var1=0
      var gap_var11=0
-     touchsen cnd=2,crd="tool",dir="+ty",lift_up=5,pose=p10,gap=gap_var11		' 3: 종료점 터치센싱. P10에 위치 저장
+     touchsen cnd=2,crd="tool",dir="+y",lift_up=5,pose=p10,gap=gap_var11		' 3: 종료점 터치센싱. P10에 위치 저장
 S3   move L,spd=30%,accu=3,tool=1  			' 4: 시작점 터치센싱 위치
-     touchsen cnd=3,crd="+ty",lift_up=5,pose=p1,gap=gap_var1		' 5: 시작점 터치센싱. P1에 위치 저장
+     touchsen cnd=3,crd="+y",lift_up=5,pose=p1,gap=gap_var1		' 5: 시작점 터치센싱. P1에 위치 저장
      'Calc. weld speed, width according to Gap 1!	갭에 따른 속도 설정
      var V3=0
      IF gap_var1<2.0 OR gap_var1>10.0 THEN		' 허용 범위 초과
