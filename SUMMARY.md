@@ -24,6 +24,7 @@
   * [2.6 refp](2_Command/6_refp.md)
   * [2.7 lvs](2_Command/7_lvson.md)
   <!-- * [2.8 atdc](2_Command/8_atdc.md) -->
+  * [2.8 lps](2_Command/8_lps.md)
   * [2.9 heightsen on](2_Command/9_hsenson.md)
   * [2.10 heightsen off](2_Command/10_hsensoff.md)
   * [2.11 multipass](2_Command/11_multipass.md)
@@ -31,7 +32,6 @@
   * [2.13 touchsen](2_Command/13_touchsen.md)
   * [2.14 stitch](2_Command/14_stitch.md)
   * [2.15 calshift](2_Command/15_calcshift.md)
-  * [2.16 lps](2_Command/16_lps.md)
 * [3. Command Property](3_Property/README.md)
   * [3.1 Overview](3_Property/1_overall.md)
   <!-- * [3.2 Details](3_Property/2_details.md) -->
