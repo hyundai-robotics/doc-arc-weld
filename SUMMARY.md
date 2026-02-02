@@ -23,6 +23,7 @@
   * [2.5 arccond](2_Command/5_arccond.md)
   * [2.6 refp](2_Command/6_refp.md)
   * [2.7 lvs](2_Command/7_lvson.md)
+  * [2.8 lps](2_Command/8_lps.md)
   <!-- * [2.8 atdc](2_Command/8_atdc.md) -->
   * [2.9 heightsen on](2_Command/9_hsenson.md)
   * [2.10 heightsen off](2_Command/10_hsensoff.md)
@@ -31,7 +32,6 @@
   * [2.13 touchsen](2_Command/13_touchsen.md)
   * [2.14 stitch](2_Command/14_stitch.md)
   * [2.15 calshift](2_Command/15_calcshift.md)
-  * [2.16 lps](2_Command/16_lps.md)
 * [3. 명령어 속성창](3_Property/README.md)
   * [3.1 개요](3_Property/1_overall.md)
   <!-- * [3.2 상세 내용](3_Property/2_details.md) -->
