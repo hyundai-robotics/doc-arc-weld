@@ -23,7 +23,7 @@ When the arc welding settings are digital and the cursor is placed on the comman
 
  
 
-After editing the conditions, pressing the [**ESC**] key will close the dialog box without saving the changes, while pressing [**OK**] key will save the settings and close the dialog box.
+After editing the conditions, pressing the `[ESC]` key will close the dialog box without saving the changes, while pressing `[OK]` key will save the settings and close the dialog box.
 
 The following items apply to all welder in common. For model-specific settings, please refer to the following chapter.
 
@@ -60,7 +60,7 @@ Records the description for the specified welding start condition.
 </br>  
     
 ### (3)	Synergic Code  
-Sets the synergic code to b transmitted to the welder. The code value is configured in a separate synergic selection screen. The synergic selection screen can be accessed by pressing the [**Synergic Selection**] button on the welding start condition creen.
+Sets the synergic code to b transmitted to the welder. The code value is configured in a separate synergic selection screen. The synergic selection screen can be accessed by pressing the `[Synergic Selection]` button on the welding start condition creen.
 
 <center>
 

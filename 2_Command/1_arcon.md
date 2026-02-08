@@ -44,6 +44,6 @@ Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md)
 
 
 {% hint style="warning" %}
-[**Caution**]  
+[Caution]
  - Some welder models can store various welding settings as jobs internally. In this case, you can use 'Job number of the Welder' item.
 {% endhint %}

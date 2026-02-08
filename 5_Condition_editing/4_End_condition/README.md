@@ -9,7 +9,7 @@ When the arc welding settings are digital and [End condition] tab is pressed in 
 </p> 
 
 
-After editing the welding end conditions, pressing the [**ESC**] key will close the dialog box without saving the changes, while pressing [**OK**] key will save the settings and close the dialog box.
+After editing the welding end conditions, pressing the `[ESC]` key will close the dialog box without saving the changes, while pressing `[OK]` key will save the settings and close the dialog box.
 
 </br>
 

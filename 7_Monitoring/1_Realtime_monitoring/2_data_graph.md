@@ -24,6 +24,6 @@ The following items can be checked in the monitoring window:
 
 6. Upper and lower limits of welding current and voltage
 
-Arc Welding data graph offers left/right and up/down movement functions. You can also add rows and columns to view more data. By toggling the [**Auto scroll**] button, you can review the past welding screens even during the current welding process.
+Arc Welding data graph offers left/right and up/down movement functions. You can also add rows and columns to view more data. By toggling the `[Auto scroll]` button, you can review the past welding screens even during the current welding process.
 
 You can increase the number of rows in the graph by pressing the **[Row]** or **[Col]** button at the bottom of the arc welding data graph screen. If you want to zoom in on the data graph further, you can press **[SHIFT] + [Row]** or **[SHIFT] + [Col]** to enlarge the display.

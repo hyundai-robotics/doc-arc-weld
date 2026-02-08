@@ -162,7 +162,7 @@ The details for each item are as follows:
 * Inching speed(%)
 | Item | Description |
 |------|------|
-|**(Low)**[1 ~ 50] %<br>**(High)**[10 ~ 100] %| This refers to the wire feed speed when jogging the wire forward(`[SHIFT]+[2]` (wire inching)) or backward(`[SHIFT]+[3]` (wire retreat)).<br> You can set the feed speed for both low-speed and high-speed operation (when the key is pressed for 3 seconds or more).|
+|`(Low)`[1 ~ 50] %<br>`(High)`[10 ~ 100] %| This refers to the wire feed speed when jogging the wire forward(`[SHIFT]+[2]` (wire inching)) or backward(`[SHIFT]+[3]` (wire retreat)).<br> You can set the feed speed for both low-speed and high-speed operation (when the key is pressed for 3 seconds or more).|
 
 * `[GUN]` key status output signal
 | Item | Description |
@@ -172,7 +172,7 @@ The details for each item are as follows:
 * `[GUN]` key control disable input
 | Item | Description |
 |------|------|
-|Input signal| Assign an input signal to externally control the `[Gun]` key's on/off status. Once this signal is assigned, you won't be able to change the arc welding on/off status by pressing the `[GUN]` key on the TP. This function helps prevent issues where welding might be skipped in a welding section due to accidential presses of the `[GUN]` key.<br> (When the assigned signal is received, the LED of the `[GUN]` key turns off, and the robot enters a **Dry Run** state where no welding is performed in the arc welding section, despite the robot running.)|
+|Input signal| Assign an input signal to externally control the `[Gun]` key's on/off status. Once this signal is assigned, you won't be able to change the arc welding on/off status by pressing the `[GUN]` key on the TP. This function helps prevent issues where welding might be skipped in a welding section due to accidential presses of the `[GUN]` key.<br> (When the assigned signal is received, the LED of the `[GUN]` key turns off, and the robot enters a `Dry Run` state where no welding is performed in the arc welding section, despite the robot running.)|
 
 * Coolant Error Input Signal
 | Item | Description |
@@ -183,54 +183,54 @@ The details for each item are as follows:
 * Welder Error treat
 | Item | Description |
 |------|------|
-|[**Disable**, **Error**, **Error**]| Set how to handle welder errors.|
+|[`Disable`, `Error`, `Error`]| Set how to handle welder errors.|
 
 * Wire Empty error treat
 | Item | Description |
 |------|------|
-|[**Disable**, **Error**, **Error**]| Set the error handling method when no welding wire is present.|
+|[`Disable`, `Error`, `Error`]| Set the error handling method when no welding wire is present.|
 
 * Gas Pressure Error treat
 | Item | Description |
 |------|------|
-|[**Disable**,**Error**, **Error**]| Set the error handling method in case of gas pressure abnormalities.|
+|[`Disable`,`Error`, `Error`]| Set the error handling method in case of gas pressure abnormalities.|
 
 * Arc Welding I/V change auto saving
 | Item | Description |
 |------|------|
-|[**Disable**, **Enable**]| This setting determines whether to automatically save changes to current and voltage values when they are changed within the **arc change IV(Arc Welding Current/Voltage Adjustment dialog box)**. For more details, please refer to [[1.3.3 Change the Current/Voltage during Welding]](../3_Convenient_functions/3_change_current_voltage/README.md).|
+|[`Disable`, `Enable`]| This setting determines whether to automatically save changes to current and voltage values when they are changed within the `arc change IV(Arc Welding Current/Voltage Adjustment dialog box)`. For more details, please refer to [[1.3.3 Change the Current/Voltage during Welding]](../3_Convenient_functions/3_change_current_voltage/README.md).|
 
 * Vibration reduction for heavy torch
 | Item | Description |
 |------|------|
-|[**Disable**, **Welding point**, **All range**]| This setting is designed to reduce vibrations when using heavy torches. It helps to minimize vibrations that may occur when using heavy torches such as water-cooled or push-pull torches.<br> When set to **Welding Points**, a significant reduction in vibrations can be achieved in the welding point entry section without substantial changes in the robot's operating speed.<br> When set to **All range**, a filter specifically designed for heavy Arc torches is applied, virtually eliminating vibrations throughout the entire preocess. However, this may result in a decrease in the robot's operating speed.|
+|[`Disable`, `Welding point`, `All range`]| This setting is designed to reduce vibrations when using heavy torches. It helps to minimize vibrations that may occur when using heavy torches such as water-cooled or push-pull torches.<br> When set to `Welding Points`, a significant reduction in vibrations can be achieved in the welding point entry section without substantial changes in the robot's operating speed.<br> When set to `All range`, a filter specifically designed for heavy Arc torches is applied, virtually eliminating vibrations throughout the entire preocess. However, this may result in a decrease in the robot's operating speed.|
 
 * Arc welding enable during manual mode
 | Item | Description |
 |------|------|
-|[**Disable**, **Enable**]| This setting determines whether welding can be performed through ste-forward in manual mode.<br> When set to **Enable**, welding can be performed by stepping forward to the Arc welding section, with the execution unit set to **End**. For more details, please refer to [[1.3.4 Manual mode Arc Welding]](../3_Convenient_functions/4_manual_mode.md).|
+|[`Disable`, `Enable`]| This setting determines whether welding can be performed through ste-forward in manual mode.<br> When set to `Enable`, welding can be performed by stepping forward to the Arc welding section, with the execution unit set to `End`. For more details, please refer to [[1.3.4 Manual mode Arc Welding]](../3_Convenient_functions/4_manual_mode.md).|
 
 * Stick check at cycle start
 | Item | Description |
 |------|------|
-|[**Check**, **Ignore**]| This setting determines whether a wire stick check will be performed when the robot starts its first cycle.<br> When **"check"** is enabled, the robot will perform a check for approximately 0.2 seconds at the beginning before proceeding with movement.|
+|[`Check`, `Ignore`]| This setting determines whether a wire stick check will be performed when the robot starts its first cycle.<br> When `"check"` is enabled, the robot will perform a check for approximately 0.2 seconds at the beginning before proceeding with movement.|
 
 * TCP speed ratio monitoring
 | Item | Description |
 |------|------|
-|[**Disable**, **Enable**]| This setting determines whether to monitor the rate of change in the TCP speed.|
+|[`Disable`, `Enable`]| This setting determines whether to monitor the rate of change in the TCP speed.|
 
 #### [Touch Sensing]
 * Touch Sensing Stop Setting
 | Item | Description |
 |------|------|
-|[**Immediately**, **Normal**]|Set whether to **immediately stop** or **normal stop** when Touch Sensing detects a work piece.<br>If wire bending increases during a normal stop, set it to **immediately stop**|
+|[`Immediately`, `Normal`]|Set whether to `immediately stop` or `normal stop` when Touch Sensing detects a work piece.<br>If wire bending increases during a normal stop, set it to `immediately stop`|
 
 #### [Arc trajectory Monitoring]
 * Activation
 | Item | Description |
 |------|------|
-|[**Disable**, **Enable**]|Sets whether to monitor the Arc trajectory.|
+|[`Disable`, `Enable`]|Sets whether to monitor the Arc trajectory.|
 
 
 [__SOURCE](1_Basic_information/2_Function_setting/3_crash_sensor.md)
@@ -547,7 +547,7 @@ Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md)
 
 
 {% hint style="warning" %}
-[**Caution**]  
+[Caution]
  - Some welder models can store various welding settings as jobs internally. In this case, you can use 'Job number of the Welder' item.
 {% endhint %}
 [__SOURCE](2_Command/2_arcoff.md)
@@ -1318,7 +1318,7 @@ It is frequently used to calculate shifts based on pose variables saved from tou
 
 When teaching an arc welding program, not only the welding conditions such as voltage and current but also detailed settings related to weaving, retries/overlaps, and the characteristics of the welder are necessary.
 Furthermore, in general robot operation, there may be cases where the position information (coordinates and orientation) of the taught steps or auxiliary points needs to be verified.  
-By placing the cursor on the command and pressing the [**Property**] button located on the left side of the TP, a function is provided that allows easy and quick editing of these files.
+By placing the cursor on the command and pressing the `[Property] button located on the left side of the TP, a function is provided that allows easy and quick editing of these files.
 
 
 ### Example of Command [Property]
@@ -1333,11 +1333,11 @@ By placing the cursor on the command and pressing the [**Property**] button loca
 
 
 
-As an example of editing welding start conditions, when the cursor is placed on the `arcon` command, which turns on the arc, pressing the [**Property**] button will display the details of the condition number currently used in the welding start conditions.
+As an example of editing welding start conditions, when the cursor is placed on the `arcon` command, which turns on the arc, pressing the `[Property] button will display the details of the condition number currently used in the welding start conditions.
 In this screen, you can view or modify the detailed settings of the welding start conditions.
 
-Similarly, after placing the cursor on a specific command and entering the [**Property**] window, you can easily and quickly check and modify the settings, such as the conditions or positions recorded in the steps.
-If you wish to save the changes and exit, press [**OK**]; if you wish to exit without saving, press the [**ESC**] key on the teaching pendant.
+Similarly, after placing the cursor on a specific command and entering the `[Property] window, you can easily and quickly check and modify the settings, such as the conditions or positions recorded in the steps.
+If you wish to save the changes and exit, press `[OK]`; if you wish to exit without saving, press the `[ESC]` key on the teaching pendant.
 
 
 <p align="center">
@@ -1478,7 +1478,7 @@ When the arc welding settings are digital and the cursor is placed on the comman
 
  
 
-After editing the conditions, pressing the [**ESC**] key will close the dialog box without saving the changes, while pressing [**OK**] key will save the settings and close the dialog box.
+After editing the conditions, pressing the `[ESC]` key will close the dialog box without saving the changes, while pressing `[OK]` key will save the settings and close the dialog box.
 
 The following items apply to all welder in common. For model-specific settings, please refer to the following chapter.
 
@@ -1515,7 +1515,7 @@ Records the description for the specified welding start condition.
 </br>  
     
 ### (3)	Synergic Code  
-Sets the synergic code to b transmitted to the welder. The code value is configured in a separate synergic selection screen. The synergic selection screen can be accessed by pressing the [**Synergic Selection**] button on the welding start condition creen.
+Sets the synergic code to b transmitted to the welder. The code value is configured in a separate synergic selection screen. The synergic selection screen can be accessed by pressing the `[Synergic Selection]` button on the welding start condition creen.
 
 <center>
 
@@ -1758,7 +1758,7 @@ When the arc welding settings are digital and [End condition] tab is pressed in 
 </p> 
 
 
-After editing the welding end conditions, pressing the [**ESC**] key will close the dialog box without saving the changes, while pressing [**OK**] key will save the settings and close the dialog box.
+After editing the welding end conditions, pressing the `[ESC]` key will close the dialog box without saving the changes, while pressing `[OK]` key will save the settings and close the dialog box.
 
 </br>
 
@@ -1986,7 +1986,7 @@ The weaving function is used in arc welding to widen the weld bead width. The de
 [__SOURCE](6_Weaving_function/1_Weaving_function/1_condition_.md)
 # 6.1.1 Weaving Condition
 
-When the cursor is placed above the `weaving ...` command, pressing the [**property**] key will display the weaving condition editing screen as shown below.  
+When the cursor is placed above the `weaving ...` command, pressing the `[Property] key will display the weaving condition editing screen as shown below.  
 
 
 <p align="center">
@@ -2334,7 +2334,7 @@ This feature allows for smooth control of heat input (weld deposit) by adjusting
 
 As shown in the figure above, this feature is used when it is necessary to control the heat input and weld deposit during left and right weaving, or when the bead shape needs to be adjusted.
 
-To use this feature, enter the [**property**] window of the `weaving` command and configure the following settings.
+To use this feature, enter the `[Property] window of the `weaving` command and configure the following settings.
 
 
 <p align="center">
@@ -2455,7 +2455,7 @@ The following items can be checked in the monitoring window:
 
 6. Upper and lower limits of welding current and voltage
 
-Arc Welding data graph offers left/right and up/down movement functions. You can also add rows and columns to view more data. By toggling the [**Auto scroll**] button, you can review the past welding screens even during the current welding process.
+Arc Welding data graph offers left/right and up/down movement functions. You can also add rows and columns to view more data. By toggling the `[Auto scroll]` button, you can review the past welding screens even during the current welding process.
 
 You can increase the number of rows in the graph by pressing the **[Row]** or **[Col]** button at the bottom of the arc welding data graph screen. If you want to zoom in on the data graph further, you can press **[SHIFT] + [Row]** or **[SHIFT] + [Col]** to enlarge the display.
 [__SOURCE](8_Application_function/README.md)
@@ -3183,7 +3183,7 @@ This process calculates the delay time to synchronize the weaving cycle and the 
 
 #### Step 1.  
 
-Enter the [**Property**] window of the weaving command and set the wall direction to vertical.
+Enter the `[Property] window of the weaving command and set the wall direction to vertical.
 
 #### Step 2.  
 
@@ -4719,8 +4719,6 @@ After selecting `[F6: cmd.input] - arcweld - stitch` in sequence, choose on/off 
 </p>
 
 
-[그림 8.6.5]는 스티치 용접 과정을 보여줍니다. 이 차트에 따라 `stitch` 명령어의 옵션들을 설정할 수 있습니다.
-
 [Figure 8.6.5] illustrates the stitch welding process. Based on this chart, you can configure the options for the `stitch` command.
 
 <p align="center">
@@ -4734,9 +4732,7 @@ After selecting `[F6: cmd.input] - arcweld - stitch` in sequence, choose on/off 
 </p>
 
 
-[그림 8.6.6]은 `stitch` 명령어에 커서를 두고 TP 좌측 화면에서 [**속성**] 버튼을 눌러 접근할 수 있습니다. [그림 8.6.7]은 이전 화면에서 [**구분**] 탭을 눌러 접근합니다. 각 그림에 대한 파라미터 설명은 다음과 같습니다.
-
-[Figure 8.6.6] shows the screen accessed by placing the cursor on the `stitch` command and pressing the [**Property**] button on the left side of the TP screen. [Figure 8.6.7] is accessed by selecting the [**Section**] tab from the previous screen.
+[Figure 8.6.6] shows the screen accessed by placing the cursor on the `stitch` command and pressing the `[Property]` button on the left side of the TP screen. [Figure 8.6.7] is accessed by selecting the `[Section]` tab from the previous screen.
 The descriptions of the parameters for each figure are as follows:
 
 - Condition Number: Select from the list of conditions on the right
@@ -4763,9 +4759,9 @@ The descriptions of the parameters for each figure are as follows:
 
 
 {% hint style="warning" %}
-- **(6) on dist, (7) off dist, (8) count**: All of these must be entered to set the conditions for section2.
-- **(9) on speed**: The speed for the welding (ON) section in the stitch section is set as the step speed.
-- **(11) Stitch Enable Port, (12) Equipment enable Port, (13) Equipment Output Port**: All must be set to 1 for the stitch welding welding to proceed during playback. If not set, welding will not occur, and only the stitch motion will proceed.
+- `(6) on dist, (7) off dist, (8) count`: All of these must be entered to set the conditions for section2.
+- `(9) on speed`: The speed for the welding (ON) section in the stitch section is set as the step speed.
+- `(11) Stitch Enable Port, (12) Equipment enable Port, (13) Equipment Output Port`: All must be set to 1 for the stitch welding welding to proceed during playback. If not set, welding will not occur, and only the stitch motion will proceed.
 {% endhint %}
 
 
