@@ -2,6 +2,14 @@
 [__SOURCE](README.md)
 # ${cont_model} Robot Controller Functional Manual - Arc Welding
 
+[__SOURCE](0-about-this-manual/precautions.md)
+# Precautions
+
+{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/en/precautions.md" %}
+
+[__SOURCE](0-about-this-manual/structure.md)
+# Book Structure
+
 This manual consist of 8 chapters.
 
 ### Chapter 1: Arc Welding Basics
