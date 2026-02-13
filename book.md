@@ -2,6 +2,15 @@
 [__SOURCE](README.md)
 # ${cont_model} 제어기 기능설명서 - 아크 용접
 
+[__SOURCE](0-about-this-manual/precautions.md)
+# 사전 주의사항
+
+{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/ko/precautions.md" %}
+
+[__SOURCE](0-about-this-manual/structure.md)
+# 책의 구성
+
+
 이 매뉴얼은 8개의 장으로 이루어져 있습니다.
 
 ### 1장 Arc 용접 기본사항
@@ -2621,9 +2630,9 @@ Arc 용접 실행 중에 로봇 제어기에서 용접기로 전송되는 전류
 5. 입력전류, 전압의 이동평균 필터링된 그래프  
 6. 용접 전류전압의 상/하한 값  
   
-용접파형 모니터링은 좌/우, 상/하 이동 기능을 제공합니다. 또한 행과 열을 추가하여 볼 수 있습니다. [**자동 스크롤**] 버튼을 토글시키면 용접 도중에도 지난 용접 화면을 살펴볼 수 있습니다. 
+용접파형 모니터링은 좌/우, 상/하 이동 기능을 제공합니다. 또한 행과 열을 추가하여 볼 수 있습니다. `[자동 스크롤]` 버튼을 토글시키면 용접 도중에도 지난 용접 화면을 살펴볼 수 있습니다. 
 
-아크 용접 데이터 그래프 화면 아래 **[Row]** 혹은 **[Col]** 버튼을 눌러 그래프의 줄을 늘릴 수 있습니다. 만약 그래프를 더 확대하고 싶다면, **[SHIFT] + [Row]** 혹은 **[SHIFT] + [Col]** 을 눌러 화면을 더 확대하여 볼 수 있습니다.
+아크 용접 데이터 그래프 화면 아래 `[Row]` 혹은 `[Col]` 버튼을 눌러 그래프의 줄을 늘릴 수 있습니다. 만약 그래프를 더 확대하고 싶다면, `[SHIFT] + [Row]` 혹은 `[SHIFT] + [Col]` 을 눌러 화면을 더 확대하여 볼 수 있습니다.
 [__SOURCE](8_Application_function/README.md)
 # 8. Arc 용접 응용기능
 
