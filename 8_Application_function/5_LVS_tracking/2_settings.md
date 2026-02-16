@@ -8,10 +8,8 @@ LVS기능을 사용하기 위해서는 센서 설치 및 통신 설정이 필요
 
 연결 브라켓은 직접 설계하여 사용하거나 HD현대로보틱스 또는 LVS 제조사로부터 받아 사용하십시오.<br>
 
-<p align="center">
- <img src="../../_assets/8_5_3_lvs_mount_setup.png" width="60%"></img>
- <em><p align="center">그림 8.5.3. LVS 장착시 주의점</p></em>
-</p>
+![](../../_assets/8_5_3_lvs_mount_setup.png)<br>
+*그림 8.5.3. LVS 장착시 주의점*
 
 {% hint style="warning" %}
 반복 정확도 (Accuracy) 및 정밀도(Precision) 달성을 위해 로봇의 플랜지에 LVS 마운트를 직결하십시오.<br>
@@ -22,10 +20,8 @@ LVS기능을 사용하기 위해서는 센서 설치 및 통신 설정이 필요
 
 LVS 센서는 직선인 용접선을 기준으로 수직으로 레이저가 위치하도록 설치해야 합니다. (그림 참조)
 
-<p align="center">
- <img src="../../_assets/8_5_4.png" width="90%"></img>
- <em><p align="center">그림 8.5.4. TCP와 센서설치, 툴좌표계의 설정</p></em>
-</p>
+![](../../_assets/8_5_4.png)<br>
+*그림 8.5.4. TCP와 센서설치, 툴좌표계의 설정*
 
 {% hint style="info" %}
 툴 좌표계를 설정하는 방법은 툴 캘리브레이션 및 각도보정 메뉴얼 항목을 참고하십시오.
@@ -102,17 +98,13 @@ LVS센서 제어기와 로봇 제어기간에 이더넷 케이블을 이용해 �
 
 ### Full-V 센서 설정 예시
 
-<p align="center">
- <img src="../../_assets/8_5_5_lvs_setting_fullv_1.png" width="90%"></img>
- <em><p align="center">그림 8.5.5. Full-V 센서 연결 설정</p></em>
-</p>
+![](../../_assets/8_5_5_lvs_setting_fullv_1.png)<br>
+*그림 8.5.5. Full-V 센서 연결 설정*
 
 위 그림과 같이 LVS 브랜드를 FULL로 선택한 후 Full-V S/W에서 LVS 센서의 IP를 확인한 후 `[F2: 시스템] - 4: 응용파라미터 - 5: lvs 추종 - 1: 사용환경 설정` 으로 진입해 IP에 입력하십시오. 그 후 하단의 "연결" 버튼을 눌러 연결 상태가 "연결됨"이 되는지 확인하십시오.<br>
 "연결 실패"라고 뜨는 경우에는 하드웨어 연결 및 IP를 확인하십시오.<br>
 
 Full-V S/W에서 사용하고자 하는 seam을 Full-V사에서 제공하는 메뉴얼과 하기 그림을 참조하여 등록하십시오.
 
-<p align="center">
- <img src="../../_assets/8_5_6_lvs_setting_fullv_2.png" width="90%"></img>
- <em><p align="center">그림 8.5.6. Full-V S/W에서 seam 설정 예시</p></em>
-</p>
+![](../../_assets/8_5_6_lvs_setting_fullv_2.png)<br>
+*그림 8.5.6. Full-V S/W에서 seam 설정 예시*

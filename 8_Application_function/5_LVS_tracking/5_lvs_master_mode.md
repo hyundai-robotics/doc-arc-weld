@@ -6,10 +6,8 @@
 
 이를 위해서는 **[사용자키] - [마스터 모드]** 를 활성화 하여 기준위치(마스터포즈)를 미리 등록해 두어야 합니다.
 
-<p align="center">
- <img src="../../_assets/8_5_12_lvs_seamfind_mastermode.png" width="90%"></img>
- <em><p align="center">그림 8.5.12. 마스터모드와 실제 기동시의 동작의 예</p></em>
-</p>   
+![](../../_assets/8_5_12_lvs_seamfind_mastermode.png)<br>
+*그림 8.5.12. 마스터모드와 실제 기동시의 동작의 예*   
 </br>
 
 위 그림의 왼쪽과 같이 마스터 모드를 활성화 한 상태에서 마스터포즈를 `lvs` 명령어의 mp인자에 할당된 포즈변수에 저장합니다.
@@ -34,10 +32,8 @@
 {% endhint %}
 
 
-<p align="center">
- <img src="../../_assets/8_5_13_lvs_seamfind_mastermode_warn.png" width="90%"></img>
- <em><p align="center">그림 8.5.13. 마스터 포즈 등록시 유의점</p></em>
-</p>   
+![](../../_assets/8_5_13_lvs_seamfind_mastermode_warn.png)<br>
+*그림 8.5.13. 마스터 포즈 등록시 유의점*   
 </br>
 
 ---

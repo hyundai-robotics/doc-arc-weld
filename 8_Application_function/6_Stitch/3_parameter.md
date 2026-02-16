@@ -1,22 +1,16 @@
 ﻿# 8.6.3 stitch 기능 파라미터 설정
 
 
-<p align="center">
- <img src="../../_assets/8_6_5.png" width="80%"></img>
- <em><p align="center">그림 8.6.5. 스티치 용접 과정에 따른 Profile</p></em>
-</p>
+![](../../_assets/8_6_5.png)<br>
+*그림 8.6.5. 스티치 용접 과정에 따른 Profile*
 
 [그림 8.6.5]는 스티치 용접 과정을 보여줍니다. 이 차트에 따라 `stitch` 명령어의 옵션들을 설정할 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/8_6_6.png" width="70%"></img>
- <em><p align="center">그림 8.6.6. 스티치 용접 조건 대화상자1</p></em>
-</p>
+![](../../_assets/8_6_6.png)<br>
+*그림 8.6.6. 스티치 용접 조건 대화상자1*
 
-<p align="center">
- <img src="../../_assets/8_6_7.png" width="70%"></img>
- <em><p align="center">그림 8.6.7. 스티치 용접 조건 대화상자2</p></em>
-</p>
+![](../../_assets/8_6_7.png)<br>
+*그림 8.6.7. 스티치 용접 조건 대화상자2*
 
 
 [그림 8.6.6]은 `stitch` 명령어에 커서를 두고 TP 좌측 화면에서 [속성] 버튼을 눌러 접근할 수 있습니다. [그림 8.6.7]은 이전 화면에서 [구분] 탭을 눌러 접근합니다. 각 그림에 대한 파라미터 설명은 다음과 같습니다.

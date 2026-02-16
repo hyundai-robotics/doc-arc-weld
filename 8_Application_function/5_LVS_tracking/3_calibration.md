@@ -49,10 +49,8 @@ end
 등록한 번호를 lvs 명령어의 seam인자에 설정하십시오.
 {% endhint %}
 
-<p align="center">
- <img src="../../_assets/8_5_7_lvs_autocalib.png" width="80%"></img>
- <em><p align="center">그림 8.5.7. lvs 자동 캘리브레이션</p></em>
-</p>   
+![](../../_assets/8_5_7_lvs_autocalib.png)<br>
+*그림 8.5.7. lvs 자동 캘리브레이션*   
 </br>
 
 ---
@@ -84,8 +82,6 @@ end
 
 `[F2: 시스템] - 4: 응용파라미터 - 5: LVS 추종 - 2: LVS 캘리브레이션`
 
-<p align="center">
- <img src="../../_assets/8_5_8_lvs_tool_calibmat.png" width="80%"></img>
- <em><p align="center">그림 8.5.8. lvs 자동 캘리브레이션</p></em>
-</p>   
+![](../../_assets/8_5_8_lvs_tool_calibmat.png)<br>
+*그림 8.5.8. lvs 자동 캘리브레이션*   
 </br>

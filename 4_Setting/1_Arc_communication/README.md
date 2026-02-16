@@ -12,10 +12,8 @@ PC와 제어기를 이더넷 케이블로 연결하기 위해 아래 순서대�
 4. cifx 아이콘을 우클릭하여 **download** 합니다. 
 5. cifx 아이콘을 우클릭하여 **네트워크 스캔**을 누릅니다.
 
-<p align="center">
- <img src="../../_assets/4_1_1.png" width="60%"></img>
- <em><p align="center">그림 4.1.1. Sycon 통신 상태</p></em>
-</p> 
+![](../../_assets/4_1_1.png)<br>
+*그림 4.1.1. Sycon 통신 상태* 
  
 여기까지 진행할 경우 Sycon은 위와 같은 화면이 됩니다. (현대PNS용접기 연결시)  
 

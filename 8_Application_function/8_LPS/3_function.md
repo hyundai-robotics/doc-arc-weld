@@ -9,10 +9,8 @@
 
 LPS 명령어 속성은 다음과 같습니다.  
 
-<p align="center">
-  <img src="../../_assets/8_8_3_0.png" width="80%"></img>
-  <em><p align="center">그림 8.8.3.0 LPS 속성</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_0.png)<br>
+*그림 8.8.3.0 LPS 속성*<br/>  
 
 #### 단차 계수
 
@@ -36,10 +34,8 @@ LPS 명령어 속성은 다음과 같습니다.
 
 한 점 모드는 캘리브레이션 결과를 확인하거나, 현재 레이저가 가리키는 지점의 포즈를 얻을 때 사용합니다.  
 
-<p align="center">
-  <img src="../../_assets/8_8_3_1.png" width="60%"></img>
-  <em><p align="center">그림 8.8.3.1 한 점 모드(spot)</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_1.png)<br>
+*그림 8.8.3.1 한 점 모드(spot)*<br/>  
 
 ```py
   var p10=cpo()
@@ -58,10 +54,8 @@ LPS 명령어 속성은 다음과 같습니다.
 
 단차 모드는 모재의 높이 차이가 있는(단차가 발생하는) 지점을 검출합니다. 이때 높이 차가 발생하는 지점이 아래인지 위인지에 따라 스캔 방향을 반대로 하면 됩니다.  
 
-<p align="center">
-  <img src="../../_assets/8_8_3_2.png" width="60%"></img>
-  <em><p align="center">그림 8.8.3.2 단차 모드(stepp)</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_2.png)<br>
+*그림 8.8.3.2 단차 모드(stepp)*<br/>  
 
 ```py
   var p10=cpo()
@@ -76,10 +70,8 @@ LPS 명령어 속성은 다음과 같습니다.
 
 ### (3) 스캔 모드(scan)
 
-<p align="center">
- <img src="../../_assets/8_8_3_3.png" width="80%"></img>
- <em><p align="center">그림 8.8.3.3 다양한 형상에서의 스캔 모드(scan)</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_3.png)<br>
+*그림 8.8.3.3 다양한 형상에서의 스캔 모드(scan)*<br/>  
 
 ```py
   var p10=cpo()
@@ -99,22 +91,16 @@ LPS 명령어 속성은 다음과 같습니다.
 
 #### (3-1) 모니터링 화면
 
-<p align="center">
-  <img src="../../_assets/8_8_3_4.png" width="80%"></img>
-  <em><p align="center">그림 8.8.3.4 LPS 그래프</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_4.png)<br>
+*그림 8.8.3.4 LPS 그래프*<br/>  
 
 앱을 등록하면 다음 과정을 통해 모니터링 화면을 조회할 수 있습니다. `[(우측 패널)창조정] - 선택 - LPS 그래프` 
 
-<p align="center">
-  <img src="../../_assets/8_8_3_5.png" width="80%"></img>
-  <em><p align="center">그림 8.8.3.5 예시 화면 - V-그루브 형상</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_5.png)<br>
+*그림 8.8.3.5 예시 화면 - V-그루브 형상*<br/>  
 
-<p align="center">
-  <img src="../../_assets/8_8_3_6.png" width="80%"></img>
-  <em><p align="center">그림 8.8.3.6 예시 화면 - Butt 형상</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_6.png)<br>
+*그림 8.8.3.6 예시 화면 - Butt 형상*<br/>  
 
 
 기능을 수행하면 위 이미지와 같이 결과를 확인할 수 있습니다. 현재 제공하는 화면에서는 다음과 같은 기능을 제공합니다.  

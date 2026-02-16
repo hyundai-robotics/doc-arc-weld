@@ -37,10 +37,8 @@ LVS 명령어 구성은 다음과 같이 설정해야 합니다.
 search 명령어 수행과정은 다음 그림과 같습니다. (탐색 유효, 방향 0 설정시)  
 유효하지 않은 점을 시작점으로 찾아 sp에 저장한 후 시작점으로 이동하면서 데이터 버퍼를 채웁니다.
 
-<p align="center">
- <img src="../../_assets/8_5_17.png" width="80%"></img>
- <em><p align="center">그림 8.5.17. lvs search 과정</p></em>
-</p>   
+![](../../_assets/8_5_17.png)<br>
+*그림 8.5.17. lvs search 과정*   
 </br>
 
 
@@ -76,10 +74,8 @@ lvs 모니터링은 `[(우측 패널)창조정] - 선택 - LVS 추종` 순서로
 
 모니터링에서는 다음과 같은 항목을 확인할 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/8_5_18_tracking_monitoring.png" width="80%"></img>
- <em><p align="center">그림 8.5.18. lvs 모니터링</p></em>
-</p>   
+![](../../_assets/8_5_18_tracking_monitoring.png)<br>
+*그림 8.5.18. lvs 모니터링*   
 </br>
 
 <table>

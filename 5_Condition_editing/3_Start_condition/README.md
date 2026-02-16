@@ -4,23 +4,17 @@
 Arc용접 설정이 디지털이고, ```arcon cnd=X``` 명령라인에 커서가 있을 때, [속성]키를 누르면 다음과 같이 용접시작조건의 편집화면이 나타납니다.
 
  
-<p align="center">
- <img src="../../_assets/5_3_1.png" width="70%"></img>
- <em><p align="center">그림 5.3.1. 효성 용접기 조건 설정</p></em>
-</p>
+![](../../_assets/5_3_1.png)<br>
+*그림 5.3.1. 효성 용접기 조건 설정*
   
  
-<p align="center">
- <img src="../../_assets/5_3_2.png" width="70%"></img>
- <em><p align="center">그림 5.3.2. Fronius 용접기 조건 설정</p></em>
-</p>
+![](../../_assets/5_3_2.png)<br>
+*그림 5.3.2. Fronius 용접기 조건 설정*
 
  
  
-<p align="center">
- <img src="../../_assets/5_3_3.png" width="70%"></img>
- <em><p align="center">그림 5.3.3. EWM 용접기 조건 설정</p></em>
-</p>
+![](../../_assets/5_3_3.png)<br>
+*그림 5.3.3. EWM 용접기 조건 설정*
 
  
 

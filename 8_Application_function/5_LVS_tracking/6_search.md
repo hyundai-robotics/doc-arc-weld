@@ -29,10 +29,8 @@ search는 다음과 같이 사용합니다.
 `lvs` 명령어에서 **[속성]** 에 진입하면 다음과 같이 search 설정을 수행할 수 있습니다.
 
 
-<p align="center">
- <img src="../../_assets/8_5_14_lvs_search_setting.png" width="80%"></img>
- <em><p align="center">그림 8.5.14. lvs search 설정화면</p></em>
-</p>   
+![](../../_assets/8_5_14_lvs_search_setting.png)<br>
+*그림 8.5.14. lvs search 설정화면*   
 </br>
 
 <table>
@@ -73,10 +71,8 @@ search는 다음과 같이 사용합니다.
   </tbody>
 </table>
 
-<p align="center">
- <img src="../../_assets/8_5_15_lvs_search_example.png" width="80%"></img>
- <em><p align="center">그림 8.5.15. lvs search 예시</p></em>
-</p>   
+![](../../_assets/8_5_15_lvs_search_example.png)<br>
+*그림 8.5.15. lvs search 예시*   
 </br>
 
 다음과 같이 search 및 seam tracking을 티칭할 수 있습니다.

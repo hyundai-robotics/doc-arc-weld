@@ -12,10 +12,8 @@
 본 기능은 60.30-00 버전부터 지원합니다.
 {% endhint %}
 
-<p align="center">
- <img src="../../_assets/8_7_1_arc_trj_mgr.png" width="90%"></img>
- <em><p align="center">그림 8.7.1. 실시간 용접 궤적 모니터링</p></em>
-</p>
+![](../../_assets/8_7_1_arc_trj_mgr.png)<br>
+*그림 8.7.1. 실시간 용접 궤적 모니터링*
 
 `arcon` 부터 `arcoff` 구간 까지의 궤적 및 용접정보를 실시간으로 확인할 수 있습니다.
 

@@ -57,10 +57,8 @@ Arc 용접 응용 기능으로 특수한 상황에서 유용하게 사용될 수
 다음 그림과 같은 Arc용접 작업을 티칭 합니다.
 
 
-<p align="center">
- <img src="../../_assets/1_1_1.png" width="60%"></img>
- <em><p align="center">그림 1.1.1. 기본 Arc 용접 티칭</p></em>
-</p>
+![](../../_assets/1_1_1.png)<br>
+*그림 1.1.1. 기본 Arc 용접 티칭*
 
 </br>
 
@@ -72,10 +70,8 @@ Arc 용접 응용 기능으로 특수한 상황에서 유용하게 사용될 수
 
 (4)	여기까지 진행하면 티치펜던트 화면은 아래 그림과 같이 표시됩니다.
 
-<p align="center">
- <img src="../../_assets/1_1_2.png" width="70%"></img>
- <em><p align="center">그림 1.1.2. 신규 프로그램 번호가 선택된 화면</p></em>
-</p>
+![](../../_assets/1_1_2.png)<br>
+*그림 1.1.2. 신규 프로그램 번호가 선택된 화면*
 
 </br>
 
@@ -89,19 +85,15 @@ Arc 용접 응용 기능으로 특수한 상황에서 유용하게 사용될 수
 - 툴 번호는 `[툴]` 키를 누른 후 원하는 툴 번호를 입력합니다.
 
 
-<p align="center">
- <img src="../../_assets/1_1_3.png" width="40%"></img>
- <em><p align="center">그림 1.1.3. 기록조건 표시내용</p></em>
-</p>
+![](../../_assets/1_1_3.png)<br>
+*그림 1.1.3. 기록조건 표시내용*
 
 </br>
 
 - `[기록]`키를 누르면 아래 그림과 같이 스텝이 기록됩니다.
 
-<p align="center">
- <img src="../../_assets/1_1_4.png" width="70%"></img>
- <em><p align="center">그림 1.1.4. 스텝 기록 화면 (1)</p></em>
-</p>
+![](../../_assets/1_1_4.png)<br>
+*그림 1.1.4. 스텝 기록 화면 (1)*
 
 </br>
 
@@ -109,10 +101,8 @@ Arc 용접 응용 기능으로 특수한 상황에서 유용하게 사용될 수
 
  
 
-<p align="center">
- <img src="../../_assets/1_1_5.png" width="70%"></img>
- <em><p align="center">그림 1.1.5. 스텝 기록 화면 (2)</p></em>
-</p>
+![](../../_assets/1_1_5.png)<br>
+*그림 1.1.5. 스텝 기록 화면 (2)*
 
 (9) 용접구간이 스텝2 ~ 스텝3이므로, 스텝2로 커서를 이동합니다. 
 
@@ -132,10 +122,8 @@ Arc 용접 응용 기능으로 특수한 상황에서 유용하게 사용될 수
 (12) 마지막으로 프로그램을 종료하는 **[end]** 명령을 입력합니다.
 `[F6: 명령입력] - FLOW제어 - end` 키를 누르면 **[end]** 명령이 입력됩니다.
 
-<p align="center">
- <img src="../../_assets/1_1_6.png" width="70%"></img>
- <em><p align="center">그림 1.1.6. 티칭이 완료된 화면</p></em>
-</p>
+![](../../_assets/1_1_6.png)<br>
+*그림 1.1.6. 티칭이 완료된 화면*
 [__SOURCE](1_Basic_information/2_Function_setting/README.md)
 # 1.2 Arc 용접기능 설정
 [__SOURCE](1_Basic_information/2_Function_setting/1_usage.md)
@@ -150,20 +138,16 @@ Arc 용접 응용 기능으로 특수한 상황에서 유용하게 사용될 수
 (4)	용접기 특성 파일의 자세한 설정은 [[4장 Arc용접기 설정](../../4_Setting/)]을 참고하시기 바랍니다.
 
 
-<p align="center">
- <img src="../../_assets/1_2_1.png" width="70%"></img>
- <em><p align="center">그림 1.2.1. 용도설정 대화상자</p></em>
-</p>
+![](../../_assets/1_2_1.png)<br>
+*그림 1.2.1. 용도설정 대화상자*
 [__SOURCE](1_Basic_information/2_Function_setting/2_signals_functions.md)
 # 1.2.2 Arc 용접 각종 신호 및 기능 설정
 
 수동모드 화면에서 `[F2: 시스템] - 4: 응용 파라미터 - 2: 아크용접` 을 누르면 다음 화면과 같이 Arc용접의 응용을 위한 각종 조건들을 설정할 수 있는 화면이 나타납니다.
 
 
-<p align="center">
- <img src="../../_assets/1_2_2.png" width="70%"></img>
- <em><p align="center">그림 1.2.2. Arc용접 응용조건 대화상자</p></em>
-</p>
+![](../../_assets/1_2_2.png)<br>
+*그림 1.2.2. Arc용접 응용조건 대화상자*
  
 
 각 항목별 내용은 다음과 같습니다.
@@ -261,10 +245,8 @@ Arc 용접 응용 기능으로 특수한 상황에서 유용하게 사용될 수
 
 - `[F2: 시스템] - 2: 제어파라미터 - 2: 입출력 신호 설정 - 1: 입력 신호 속성` 순으로 진입하여 `[F1: 추가]` 클릭 및 부논리 체크박스로 논리 변경
 
-<p align="center">
- <img src="../../_assets/1_2_3.png" width="70%"></img>
- <em><p align="center">그림 1.2.3. 신호 논리 반전 방법</p></em>
-</p>
+![](../../_assets/1_2_3.png)<br>
+*그림 1.2.3. 신호 논리 반전 방법*
 
 {% hint style="info" %}
 [기타 항목] 
@@ -358,10 +340,8 @@ Arc 용접작업을 티칭할 때 적절한 용접 전류/전압을 찾기 위�
 
 ### Arc 용접 전류/전압 변경 대화상자 진입
 
-<p align="center">
- <img src="../../_assets/1_3_1.png" width="70%"></img>
- <em><p align="center">그림 1.3.1. Arc용접 프로그램 및 전류전압 변경</p></em>
-</p>
+![](../../_assets/1_3_1.png)<br>
+*그림 1.3.1. Arc용접 프로그램 및 전류전압 변경*
 
 <br>
 
@@ -414,10 +394,8 @@ Arc 용접작업을 티칭할 때 적절한 용접 전류/전압을 찾기 위�
 
 대화상자의 항목 별 내용은 다음과 같습니다. 
 
-<p align="center">
- <img src="../../_assets/1_3_2.png" width="25%"></img>
- <em><p align="center">그림 1.3.2. Arc 용접 전류/전압 변경 대화상자</p></em>
-</p>   
+![](../../_assets/1_3_2.png)<br>
+*그림 1.3.2. Arc 용접 전류/전압 변경 대화상자*   
 
 <br>
 
@@ -464,10 +442,8 @@ Arc 용접 신호 시험 기능은 용접에 필요한 주요한 신호의 입�
 
 본 기능을 사용하기 위해서는 티칭 펜던트 기본화면에서 **[창조정]** 을 눌러 **[선택]** 에서 **[아크용접]** 을 선택합니다. 아크 용접 패널에서 스크롤을 하단으로 움직여 입력/출력 신호 항목을 확인할 수 있습니다.  
 
-<p align="center">
- <img src="../../_assets/1_3_3.png" width="70%"></img>
- <em><p align="center">그림 1.3.3. Arc 용접 모니터링</p></em>
-</p>
+![](../../_assets/1_3_3.png)<br>
+*그림 1.3.3. Arc 용접 모니터링*
 
 | 항목          | 설명                                                        |
 | ------------- | ---------------------------------------------------------- |
@@ -481,10 +457,8 @@ Arc 용접을 수행한 가동정보를 모니터링 창을 이용하여 확인�
 
 본 기능을 사용하기 위해서는 티칭 펜던트 기본화면에서 **[창조정]** 을 눌러 **[선택]** 에서 **[아크 가동정보]** 를 선택합니다. 
 
-<p align="center">
- <img src="../../_assets/1_3_4.png" width="70%"></img>
- <em><p align="center">그림 1.3.4. 아크용접 가동정보 모니터링 창</p></em>
-</p>  
+![](../../_assets/1_3_4.png)<br>
+*그림 1.3.4. 아크용접 가동정보 모니터링 창*  
 
 | 항목                | 설명                                                                                                         |
 | ----------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -1616,10 +1590,8 @@ Arc용접을 위한 작업 프로그램을 티칭할 때 전압, 전류 등 용�
 이처럼 특정 명령문에 커서를 위치시킨 후 `속성` 창에 진입하면 조건을 설정하거나 스텝에 기록된 위치 등 세부내용을 쉽고 빠르게 확인 및 변경 할 수 있습니다. 변경된 내용을 파일에 저장 후 종료를 원할 경우 `확인`을, 저장하지 않고 종료를 원할 경우 티칭 펜던트의 `ESC`키를 누릅니다.
 
  
-<p align="center">
- <img src="../_assets/3_1_1.png" width="65%"></img>
- <em><p align="center">그림 3.1.1. 로봇 프로그램에서 '속성'</p></em>
-</p>
+![](../_assets/3_1_1.png)<br>
+*그림 3.1.1. 로봇 프로그램에서 '속성'*
 
  
 {% hint style="info" %}
@@ -1642,10 +1614,8 @@ PC와 제어기를 이더넷 케이블로 연결하기 위해 아래 순서대�
 4. cifx 아이콘을 우클릭하여 **download** 합니다. 
 5. cifx 아이콘을 우클릭하여 **네트워크 스캔**을 누릅니다.
 
-<p align="center">
- <img src="../../_assets/4_1_1.png" width="60%"></img>
- <em><p align="center">그림 4.1.1. Sycon 통신 상태</p></em>
-</p> 
+![](../../_assets/4_1_1.png)<br>
+*그림 4.1.1. Sycon 통신 상태* 
  
 여기까지 진행할 경우 Sycon은 위와 같은 화면이 됩니다. (현대PNS용접기 연결시)  
 
@@ -1671,24 +1641,18 @@ PC와 제어기를 이더넷 케이블로 연결하기 위해 아래 순서대�
 이 화면에서 `용접기 설정` 버튼을 누르면 해당 용접기의 조건 편집화면이 나타납니다.
 
 
-<p align="center">
- <img src="../../_assets/1_2_1.png" width="70%"></img>
- <em><p align="center">그림 4.2.1. 용도설정 대화상자</p></em>
-</p> 
+![](../../_assets/1_2_1.png)<br>
+*그림 4.2.1. 용도설정 대화상자* 
 
 </br>
 
-<p align="center">
- <img src="../../_assets/4_2_2.png" width="70%"></img>
- <em><p align="center">그림 4.2.2. 현대 용접기 조건 설정</p></em>
-</p>   
+![](../../_assets/4_2_2.png)<br>
+*그림 4.2.2. 현대 용접기 조건 설정*   
 
 </br>
 
-<p align="center">
- <img src="../../_assets/4_2_3.png" width="70%"></img>
- <em><p align="center">그림 4.2.3. 현대 용접기 입출력 신호 할당</p></em>
-</p>   
+![](../../_assets/4_2_3.png)<br>
+*그림 4.2.3. 현대 용접기 입출력 신호 할당*   
 
 
 용접기 조건 화면에서는 용접기와 관련된 특성에 대한 편집 기능을 제공하기 때문에 편집 가능한 항목은 용접기 별로 차이가 있습니다. 다음 항목들은 용접기 조건 화면에서 공통적으로 편집 가능한 항목들입니다.  
@@ -1719,10 +1683,8 @@ Arc 용접 조건은 다음과 같이 구성되어 있습니다.
 디지털 Arc용접의 타임차트입니다. 각 조건설정은 이후 각 명령어 별 대화상자 설명을 참조하세요.
 
  
-<p align="center">
- <img src="../../_assets/5_2_1.png" width="80%"></img>
- <em><p align="center">그림 5.2.1. 디지털 Arc용접 타임차트</p></em>
-</p>
+![](../../_assets/5_2_1.png)<br>
+*그림 5.2.1. 디지털 Arc용접 타임차트*
 
 
 [__SOURCE](5_Condition_editing/3_Start_condition/README.md)
@@ -1732,23 +1694,17 @@ Arc 용접 조건은 다음과 같이 구성되어 있습니다.
 Arc용접 설정이 디지털이고, ```arcon cnd=X``` 명령라인에 커서가 있을 때, [속성]키를 누르면 다음과 같이 용접시작조건의 편집화면이 나타납니다.
 
  
-<p align="center">
- <img src="../../_assets/5_3_1.png" width="70%"></img>
- <em><p align="center">그림 5.3.1. 효성 용접기 조건 설정</p></em>
-</p>
+![](../../_assets/5_3_1.png)<br>
+*그림 5.3.1. 효성 용접기 조건 설정*
   
  
-<p align="center">
- <img src="../../_assets/5_3_2.png" width="70%"></img>
- <em><p align="center">그림 5.3.2. Fronius 용접기 조건 설정</p></em>
-</p>
+![](../../_assets/5_3_2.png)<br>
+*그림 5.3.2. Fronius 용접기 조건 설정*
 
  
  
-<p align="center">
- <img src="../../_assets/5_3_3.png" width="70%"></img>
- <em><p align="center">그림 5.3.3. EWM 용접기 조건 설정</p></em>
-</p>
+![](../../_assets/5_3_3.png)<br>
+*그림 5.3.3. EWM 용접기 조건 설정*
 
  
 
@@ -2020,10 +1976,8 @@ EWM AlphaQ 용접기에서 지원하는 용접모드를 설정합니다. 각 모
 
 Arc용접 설정이 디지털이고 용접시작조건 대화상자에서 [종료조건] 키를 누르면 다음과 같은 용접종료조건 편집화면이 나타납니다.
 
-<p align="center">
- <img src="../../_assets/5_4_1.png" width="70%"></img>
- <em><p align="center">그림 5.4.1. 용접종료조건 설정 (디지털 EWM 용접기 예)</p></em>
-</p> 
+![](../../_assets/5_4_1.png)<br>
+*그림 5.4.1. 용접종료조건 설정 (디지털 EWM 용접기 예)* 
 
 
 용접 종료 조건의 항목을 수정 후 `ESC`키를 누르면 수정된 내용을 저장하지 않고 용접시작조건 대화상자로 이동합니다. `완료`키를 누르면 수정된 내용을 저장하고 용접시작조건 대화상자로 이동합니다.
@@ -2068,10 +2022,8 @@ Arc용접 설정이 디지털이고 용접시작조건 대화상자에서 [종�
 ### (4)	Downslope 시간(Crate Time): [ 0.10 ] 초 (범위: 0.0 ~ 10.0)  
 본 조건과 종료조건 사이에 전류 변화를 슬로프로 처리하는 시간을 설정합니다.  
 
-<p align="center">
- <img src="../../_assets/5_4_2.png" width="30%"></img>
- <em><p align="center">그림 5.4.2. DownSlope 시간과 Crate 시간 차트</p></em>
-</p>
+![](../../_assets/5_4_2.png)<br>
+*그림 5.4.2. DownSlope 시간과 Crate 시간 차트*
 
 ### (5)	조건유지시간: [ 1 ] 초 (범위: 0.1 ~ 10.0)   
 용접종료조건의 '전류비율' 항목에서 지정된 출력 값을 유지하는 시간을 설정합니다.
@@ -2113,10 +2065,8 @@ Arc 용접을 시작할 때 모재의 용접 시작점 부근에 부착된 이�
 Arc용접 설정이 디지털일 때 용접시작조건 대화상자에서 `보조조건` 키를 누르면 다음과 같은 용접 보조 조건 편집화면이 나타납니다.
 
   
-<p align="center">
- <img src="../../_assets/5_5_1.png" width="70%"></img>
- <em><p align="center">그림 5.5.1. 용접보조조건(재시도) 설정(EWM 용접기)</p></em>
-</p>
+![](../../_assets/5_5_1.png)<br>
+*그림 5.5.1. 용접보조조건(재시도) 설정(EWM 용접기)*
 
 {% hint style="info" %}
 [참고 사항]   
@@ -2160,10 +2110,8 @@ Arc 점화를 재시도 할 때 사용할 용접조건의 번호를 입력합니
 동작모드가 시프트로 설정된 경우, 토치가 이동하는 거리입니다. 
     
 
-<p align="center">
- <img src="../../_assets/5_5_2.png" width="80%"></img>
- <em><p align="center">그림 5.5.2 재시도 기능 순서</p></em>
-</p>
+![](../../_assets/5_5_2.png)<br>
+*그림 5.5.2 재시도 기능 순서*
 
 
 [__SOURCE](5_Condition_editing/5_Aux_condition/2_restart.md)
@@ -2176,10 +2124,8 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 해당 장에서는 재기동 조건과 오버랩 설정에 대해 설명하고 있습니다.
 
  
-<p align="center">
- <img src="../../_assets/5_5_3.png" width="70%"></img>
- <em><p align="center">그림 5.5.3. 용접보조조건(재기동) 설정(EWM 용접기)</p></em>
-</p>
+![](../../_assets/5_5_3.png)<br>
+*그림 5.5.3. 용접보조조건(재기동) 설정(EWM 용접기)*
 
 
 ### (1)	재기동 횟수: [ 3 ] 회 (범위: 0 ~ 9)   
@@ -2201,10 +2147,8 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 
 ---
 
-<p align="center">
- <img src="../../_assets/5_5_4.png" width="80%"></img>
- <em><p align="center">그림 5.5.4. 재기동 동작 과정</p></em>
-</p>
+![](../../_assets/5_5_4.png)<br>
+*그림 5.5.4. 재기동 동작 과정*
 
 
 ### (6)	오버랩 조건설정  
@@ -2290,10 +2234,8 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 다음 그림과 같은 위빙의 패턴 모양을 설정합니다. 
 
  
-<p align="center">
- <img src="../../_assets/6_1_2.png" width="60%"></img>
- <em><p align="center">그림 6.1.2. 위빙 패턴 종류</p></em>
-</p>
+![](../../_assets/6_1_2.png)<br>
+*그림 6.1.2. 위빙 패턴 종류*
 
 
 [__SOURCE](6_Weaving_function/1_Weaving_function/3_frequency.md)
@@ -2335,10 +2277,8 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 ### (6)	진행 각도
 용접선에 대한 위빙 진동 방향의 각도입니다. 설정 가능한 범위는 -90.0 ~ 90.0도입니다. 0도 설정 시 용접선과 직각으로 위빙이 동작합니다.
 
-<p align="center">
- <img src="../../_assets/6_1_4.png" width="60%"></img>
- <em><p align="center">그림 6.1.4. 위빙 진행 각도</p></em>
-</p>
+![](../../_assets/6_1_4.png)<br>
+*그림 6.1.4. 위빙 진행 각도*
 
 
 
@@ -2346,10 +2286,8 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 진행각도가 0도가 아닌 위빙은 위빙 구간의 시작 밑 끝 부분에서 구간 경계를 넘어가는 경우가 발생할 수 있습니다. 경계제한 설정으로 구간 경계를 제한하여 구간 경계를 넘어가지 않게 위빙 동작을 수행할 것인지 제한 없이 위빙 동작을 수행할 것인지를 설정합니다.<br/>  
 
  
-<p align="center">
- <img src="../../_assets/6_1_5.png" width="60%"></img>
- <em><p align="center">그림 6.1.5 위빙 경계 제한</p></em>
-</p> 
+![](../../_assets/6_1_5.png)<br>
+*그림 6.1.5 위빙 경계 제한* 
 
 [__SOURCE](6_Weaving_function/1_Weaving_function/5_weaving_section.md)
 # 6.1.5 위빙 구간 설정
@@ -2360,19 +2298,15 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 
 이동 설정 시 하기 그림의 좌측과 같은 동작을 수행하며 정지 설정 시 우측과 같은 동작을 수행합니다.
  
-<p align="center">
- <img src="../../_assets/6_1_8.png" width="40%"></img>
- <em><p align="center">그림 6.1.8. 위빙 정지시 로봇 동작</p></em>
-</p> 
+![](../../_assets/6_1_8.png)<br>
+*그림 6.1.8. 위빙 정지시 로봇 동작* 
 
 ### (2)	이동시간
 
 `주파수`값을 '0'으로 지정했을 때 위빙 반복주기 설정에 사용되는 항목입니다. 다음 그림과 같이 구간별 이동시간을 개별적으로 지정합니다. 위빙에 사용되는 구간은 위빙의 형태에 따라 달라지게 됩니다. 따라서 설정된 위빙형태에서 사용되지 않는 구간(Ex. 단진동의 경우 3, 4번)에 설정된 이동시간은 무시됩니다.
 
-<p align="center">
- <img src="../../_assets/6_1_7.png" width="90%"></img>
- <em><p align="center">그림 6.1.7. 위빙 패턴별 이동구간</p></em>
-</p> 
+![](../../_assets/6_1_7.png)<br>
+*그림 6.1.7. 위빙 패턴별 이동구간* 
 
 
 
@@ -2390,10 +2324,8 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 {% endhint %}
  
  
-<p align="center">
- <img src="../../_assets/6_1_8.png"  width="40%"></img>
- <em><p align="center">그림 6.1.8. 타이머 지정 시 궤적 예시</p></em>
-</p> 
+![](../../_assets/6_1_8.png)<br>
+*그림 6.1.8. 타이머 지정 시 궤적 예시* 
 
 
 
@@ -2414,10 +2346,8 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 # 6.2.1 참조점 종류
 
  
-<p align="center">
- <img src="../../_assets/6_2_1.png" width="50%"></img>
- <em><p align="center">그림 6.2.1. 위빙 좌표계</p></em>
-</p> 
+![](../../_assets/6_2_1.png)<br>
+*그림 6.2.1. 위빙 좌표계* 
 
 
 ### (1)	refp 1 (참조점 1)  
@@ -2437,10 +2367,8 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 ```refp 4```는 벽방향과 타방향의 각도를 설정하는 명령어 입니다. [그림 6.2.3]은 90도로 설정했을 때의 예시입니다. 이 명령어를 이용하여 각도를 지정하는 경우 [기본 패턴] -> [각도]에서 설정한 값은 무시됩니다.
 
 
-<p align="center">
- <img src="../../_assets/6_2_2.png" width="65%"></img>
- <em><p align="center">그림 6.2.2. 위빙 방향과 참조점</p></em>
-</p> 
+![](../../_assets/6_2_2.png)<br>
+*그림 6.2.2. 위빙 방향과 참조점* 
 
 
 <p align="center">
@@ -2506,19 +2434,15 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 본 기능은 60.30-00 버전부터 지원합니다.
 {% endhint %}
 
-<p align="center">
- <img src="../../_assets/6_3_1_weav_sync_out.png" width="90%"></img>
- <em><p align="center">그림 6.3.1. 위빙 싱크 출력 기능 동작 예</p></em>
-</p>   
+![](../../_assets/6_3_1_weav_sync_out.png)<br>
+*그림 6.3.1. 위빙 싱크 출력 기능 동작 예*   
 
 위 그림과 같이 좌우 위빙에서 입열량, 용착량을 조절할 필요가 있는 경우 또는 비드의 모양을 다르게 만들어야 할 경우 사용합니다.
 
 `weaving` 명령어의 `[속성]`창에 진입하여 다음 항목을 설정하여 사용할 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/6_3_2_weav_sync_out_setting.png" width="90%"></img>
- <em><p align="center">그림 6.3.2. 위빙 싱크 출력 기능 설정</p></em>
-</p>   
+![](../../_assets/6_3_2_weav_sync_out_setting.png)<br>
+*그림 6.3.2. 위빙 싱크 출력 기능 설정*   
 
 <table>
   <thead>
@@ -2571,10 +2495,8 @@ Arc 용접 실행 중에 로봇 제어기에서 용접기로 전송되는 전류
 
 본 기능은 아크 용접과 관련된 세부 데이터를 확인할 수 있는 기능입니다. 설정된 용접기에 따라 제공하는 정보가 다르기 때문에 해당 모니터링 창은 설정된 용접기에 따라 다를 수 있습니다. 용접기와 통신 오류가 발생하거나 통신 연결이 되어 있지 않은 경우 '용접기 에러코드'나 '용접기 통신상태' 항목이 붉은색 배경으로 표시됩니다. 세부정보 모니터링으로 다음과 같은 데이터를 확인할 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/7_1_1.png" width="70%"></img>
- <em><p align="center">그림 7.1.1. 아크 용접 세부 정보 모니터링</p></em>
-</p>
+![](../../_assets/7_1_1.png)<br>
+*그림 7.1.1. 아크 용접 세부 정보 모니터링*
 
 1. 전류 입력: 로봇에서 용접기로 출력하는 지령 용접 전류(A)
 
@@ -2615,10 +2537,8 @@ Arc 용접 실행 중에 로봇 제어기에서 용접기로 전송되는 전류
 이 기능을 사용하려면 `[(우측 패널)창조정] - 선택 - 아크 데이터 그래프`를 순차적으로 눌러 진입합니다.
 
  
-<p align="center">
- <img src="../../_assets/7_1_2.png" width="70%"></img>
- <em><p align="center">그림 7.1.2. Arc용접 파형 모니터링</p></em>
-</p>
+![](../../_assets/7_1_2.png)<br>
+*그림 7.1.2. Arc용접 파형 모니터링*
 
 
 모니터링 창에서 확인할 수 있는 내용은 다음과 같습니다.  
@@ -2670,10 +2590,8 @@ arccond D, cnd=1
 ```
 위 명령어에서 속성창에 진입하면 다음과 같은 설정항목을 볼 수 있습니다.
  
-<p align="center">
- <img src="../../_assets/8_1_1.png" width="70%"></img>
- <em><p align="center">그림 8.1.1. 용접 조건 대화상자</p></em>
-</p> 
+![](../../_assets/8_1_1.png)<br>
+*그림 8.1.1. 용접 조건 대화상자* 
 
 <br>
 
@@ -2699,10 +2617,8 @@ end
 예를들면, 해당기능은 용접 시작위치에서 Butt gap이 5mm이고 용접 종료위치에서 Butt gap이 25mm인 작업물을 용접할 때, 용접을 하면서 전류, 전압, 용접속도, 위빙폭, 위빙주파수 등을 선형적으로 보간하며 용접이 가능합니다.  
 이때, 용접 조건의 연속변경(L, 보간)은 다음과 같이 직선형태로 이루어집니다.
  
-<p align="center">
- <img src="../../_assets/8_1_2.png" width="70%"></img>
- <em><p align="center">그림 8.1.2. 용접 조건의 직선 보간</p></em>
-</p> 
+![](../../_assets/8_1_2.png)<br>
+*그림 8.1.2. 용접 조건의 직선 보간* 
 
 <br>
 
@@ -2726,25 +2642,19 @@ end
 이 기능은 위의 기능들과 별개인 기능입니다. 기준 gap에 따라 용접조건을 설정해 놓고, 실제 터치센싱으로 용접시점과 끝점의 gap을 계산하여 용접속도와 위빙폭을 자동으로 계산해주는 기능입니다.
 ```arccond``` 명령어의 속성창에서 "Gap correction" 항목 탭에 진입하면 조건별로 Gap에 따른 속도와 폭을 설정할 수 있습니다. 창분할에서 "아크보간"을 클릭하면 여기서 설정한 것을 그래프로 볼 수 있습니다.  
 
-<p align="center">
-  <img src="../../_assets/8_1_3.png" width="70%"></img>
-  <em><p align="center">그림 8.1.3. 용접 조건(갭 보간) 대화상자</p></em>
-</p> 
+![](../../_assets/8_1_3.png)<br>
+*그림 8.1.3. 용접 조건(갭 보간) 대화상자* 
 
-<p align="center">
-  <img src="../../_assets/8_1_4.png" width="70%"></img>
-  <em><p align="center">그림 8.1.4. 아크보간 모니터링</p></em>
-</p> 
+![](../../_assets/8_1_4.png)<br>
+*그림 8.1.4. 아크보간 모니터링* 
 
 <br>
 
 이 기능의 동작은 다음과 같습니다.  
 <br/>
 
-<p align="center">
-  <img src="../../_assets/8_1_5.png" width="70%"></img>
-  <em><p align="center">그림 8.1.5. 용접 조건의 보간 동작</p></em>
-</p> 
+![](../../_assets/8_1_5.png)<br>
+*그림 8.1.5. 용접 조건의 보간 동작* 
 
 <br>
  
@@ -2779,19 +2689,15 @@ end
 터치센싱을 이용하여 기준 위치를 기록해 놓으면 작업물이 들어왔을 때 기준위치에서 얼만큼 쉬프트 되어있는지 계산할 수 있습니다. 
 마스터모드 기능을 사용하면 기준 티칭을 통해 마스터포즈를 저장해놓고 실제 기동시 터치센싱을 통해 쉬프트량을 자동으로 계산할 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/8_2_1.png"></img>
- <em><p align="center">그림 8.2.1. 터치센싱의 예</p></em>
-</p>
+![](../../_assets/8_2_1.png)<br>
+*그림 8.2.1. 터치센싱의 예*
 
 ### (1) 터치센싱 타입
 
 터치센싱은 그림 8.2.1와 같이 총 5가지 타입(버트, 필렛, V그루브, LR센터, 그루브 감지-Detect groove)을 지원합니다.   
 
-<p align="center">
- <img src="../../_assets/8_2_2.png" width="90%"></img>
- <em><p align="center">그림 8.2.2. 터치센싱 타입</p></em>
-</p>
+![](../../_assets/8_2_2.png)<br>
+*그림 8.2.2. 터치센싱 타입*
 
 ### (2) 터치센싱 명령어 및 설정 파라미터
 
@@ -2839,10 +2745,8 @@ end
 
 센싱 거리, 후퇴 거리, 진행 거리, 센싱 속도, 퇴피 속도, 검지 타입(접촉 시, 접촉 해제 시) 등과 같은 조건들을 설정할 수 있습니다.  
 
-<p align="center">
- <img src="../../_assets/8_2_3.png" width="70%" ></img>
- <em><p align="center">그림 8.2.3. 터치센싱 조건 편집화면</p></em>
-</p>
+![](../../_assets/8_2_3.png)<br>
+*그림 8.2.3. 터치센싱 조건 편집화면*
 
 {% hint style="info" %}
   명령어 사용과 파라미터에 대한 자세한 설명은 다음 링크를 참고해주십시오. [2.13 touchsen](../../2_Command/13_touchsen.md)<br>
@@ -2890,10 +2794,8 @@ end
 
 #### [1] Fillet 타입
 
-<p align="center">
- <img src="../../_assets/8_2_4.png" width="60%"></img>
- <em><p align="center">그림 8.2.4. 터치센싱 예 - Fillet 타입</p></em>
-</p>
+![](../../_assets/8_2_4.png)<br>
+*그림 8.2.4. 터치센싱 예 - Fillet 타입*
 
 - 명령어 작성 예시
 ```python
@@ -2913,10 +2815,8 @@ end
 
 #### [2] V Groove 타입
 
-<p align="center">
- <img src="../../_assets/8_2_5.png" width="70%"></img>
- <em><p align="center">그림 8.2.5. 터치센싱 예 - V Groove 타입</p></em>
-</p>   
+![](../../_assets/8_2_5.png)<br>
+*그림 8.2.5. 터치센싱 예 - V Groove 타입*   
 
 - 명령어 작성 예시
 ```python
@@ -2929,20 +2829,16 @@ end
 - 센싱 시퀀스  
   - 센싱은 상단 좌우 - 중간 복귀 - 하단 - 하단 좌우 - 중간 으로 진행됩니다.  
 
-<p align="center">
- <img src="../../_assets/8_2_6.png" width="60%"></img>
- <em><p align="center">그림 8.2.6. 터치센싱 시퀀스 VGroove 타입</p></em>
-</p>   
+![](../../_assets/8_2_6.png)<br>
+*그림 8.2.6. 터치센싱 시퀀스 VGroove 타입*   
 
 
 ---
  
 #### [3] BUTT 타입
 
-<p align="center">
- <img src="../../_assets/8_2_7.png" width="30%"></img>
- <em><p align="center">그림 8.2.7. 터치센싱 예 - Butt 타입</p></em>
-</p>   
+![](../../_assets/8_2_7.png)<br>
+*그림 8.2.7. 터치센싱 예 - Butt 타입*   
 
 
 - 명령어 작성 예시
@@ -2956,10 +2852,8 @@ end
 
 - 센싱 시퀀스
 
-<p align="center">
- <img src="../../_assets/8_2_8.png" width="60%"></img>
- <em><p align="center">그림 8.2.8. 터치센싱 시퀀스 Butt 타입</p></em>
-</p>   
+![](../../_assets/8_2_8.png)<br>
+*그림 8.2.8. 터치센싱 시퀀스 Butt 타입*   
 
 센싱은 상단 좌우 - 중간 복귀 - 하단 - 하단 좌우 - 중간 으로 진행됩니다.
 
@@ -2976,10 +2870,8 @@ end
 
 그림 8.2.9은 필렛과 그루브 감지 작업물에서 Y축 또는 TL축으로 30도 회전한 예입니다.  
 
-<p align="center">
- <img src="../../_assets/8_2_9.png" width="300"></img>
- <em><p align="center">그림 8.2.9. 터치센싱 예 - 각도설정</p></em>
-</p>       
+![](../../_assets/8_2_9.png)<br>
+*그림 8.2.9. 터치센싱 예 - 각도설정*       
 
 - 명령어 작성 예시
 
@@ -3080,10 +2972,8 @@ ${cont_model}에서 새롭게 추가된 아크 센싱 기능은 weaving 명령�
 ```  
 <br/>
 
-<p align="center">
- <img src="../../_assets/8_3_1.png" width="70%"></img>
- <em><p align="center">그림 8.3.1. 아크 센싱 개념도</p></em>
-</p>
+![](../../_assets/8_3_1.png)<br>
+*그림 8.3.1. 아크 센싱 개념도*
 
 
 위 그림과 같이 좌측이나 우측으로 쏠린 상태에서는 전류의 개형이 변하고 이를 이용하여 용접선을 좌우로 추종할 수 있습니다. 위빙 중간지점에서의 전류를 이용하여 높이방향 또한 보정할 수 있습니다.
@@ -3136,10 +3026,8 @@ ${cont_model}에서 새롭게 추가된 아크 센싱 기능은 weaving 명령�
 
 `weaving` 명령어에서 `[속성]`을 누르면 위빙 파일 조건 편집 화면이 나타납니다. 이 창의 두 번째 탭은 아래와 같이 위빙 중에 사용이 가능한 아크 센싱에 관한 설정을 하는 부분입니다.  
 
-<p align="center">
- <img src="../../_assets/8_3_2.png" width="70%"></img>
- <em><p align="center">그림 8.3.2. 아크 센싱 조건(일반) 대화상자</p></em>
-</p>
+![](../../_assets/8_3_2.png)<br>
+*그림 8.3.2. 아크 센싱 조건(일반) 대화상자*
 
 
 각 항목별 설정 및 조작방법은 다음과 같습니다.
@@ -3217,10 +3105,8 @@ weaving on, arc on 바로 다음에 weavings_.height_sensing_reference_current =
 ```이 탭의 내용은 가급적이면 기본(default)값을 사용하십시오.```
 
 
-<p align="center">
- <img src="../../_assets/8_3_3.png" width="70%"></img>
- <em><p align="center">그림 8.3.3. 아크 센싱 조건(고급) 대화상자</p></em>
-</p>
+![](../../_assets/8_3_3.png)<br>
+*그림 8.3.3. 아크 센싱 조건(고급) 대화상자*
 
 
 각 항목별 설정 및 조작방법은 다음과 같습니다.
@@ -3261,10 +3147,8 @@ weaving on, arc on 바로 다음에 weavings_.height_sensing_reference_current =
 전류 데이터에서 비정상으로 판단할 전류값 마진을 설정합니다. 기본값은 150% 입니다. 
 아래 그림과 같이 한구간의 전류에 대해 Q1-1.5*IQR, Q3+1.5*IQR 범위를 기본으로 합니다.
 
-<p align="center">
- <img src="../../_assets/8_3_4.png" width="40%"></img>
- <em><p align="center">그림 8.3.4. 비정상 판별 마진</p></em>
-</p>
+![](../../_assets/8_3_4.png)<br>
+*그림 8.3.4. 비정상 판별 마진*
 <br>
 
 ### (7) 비정상 판별 시간: [10 ~ 1000] ms  
@@ -3309,10 +3193,8 @@ weaving 명령어의 `[속성]`창에 진입하여 벽방향을 vertical로 설�
 #### Step 2. 
 weaving 명령어의 속성창의 아크 센싱(일반)탭에 진입하여 타입을 "용접선 추정 & 전류차" 로 설정한 후 좌우/상하 민감도를 모두 -1로 설정하십시오.
 
-<p align="center">
- <img src="../../_assets/8_3_5.png" width="70%"></img>
- <em><p align="center">그림 8.3.5. 아크 센싱 캘리브레이션</p></em>
-</p>
+![](../../_assets/8_3_5.png)<br>
+*그림 8.3.5. 아크 센싱 캘리브레이션*
 <br>
 
 #### Step 3. 
@@ -3335,18 +3217,14 @@ weaving 명령어의 속성창에서 지연시간테이블 탭에 진입하십�
 
 이 과정을 완료하면 위빙 조건 편집 화면의 4번째 탭에서 아크 센싱(지연 테이블 추종 게인) 결과를 확인할 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/8_3_6.png" width="70%"></img>
- <em><p align="center">그림 8.3.6. 아크 센싱 조건(추종 게인) 대화상자</p></em>
-</p>
+![](../../_assets/8_3_6.png)<br>
+*그림 8.3.6. 아크 센싱 조건(추종 게인) 대화상자*
 <br>
 
 이 때, 지연시간의 값은 다음과 같이 전류의 선행/후행 정도를 의미합니다.
 
-<p align="center">
- <img src="../../_assets/8_3_6-2.png" width="70%"></img>
- <em><p align="center">그림 8.3.6-2. 아크센싱 지연시간의 의미</p></em>
-</p>
+![](../../_assets/8_3_6-2.png)<br>
+*그림 8.3.6-2. 아크센싱 지연시간의 의미*
 <br>
 
 {% hint style="info" %}
@@ -3467,10 +3345,8 @@ asymetric_sensing_ratio: 좌우 비대칭 센싱 비율
 
 ### (2)	모니터링 항목 설명
 
-<p align="center">
- <img src="../../_assets/8_3_7.png" width="60%"></img>
- <em><p align="center">그림 8.3.7 아크 센싱 모니터링</p></em>
-</p>
+![](../../_assets/8_3_7.png)<br>
+*그림 8.3.7 아크 센싱 모니터링*
 
 
 - 좌우 추종: 좌우방향으로 센싱에 의한 추종 속도, 거리, 전류차 방식으로 계산된 보정할 좌우 거리를 표시합니다.
@@ -3504,22 +3380,16 @@ asymetric_sensing_ratio: 좌우 비대칭 센싱 비율
 
 멀티패스의 작업 프로그램 위치는 초층 궤적과 동일하게 유지하면 되므로 초층 작업프로그램을 그대로 복사한 후 멀티패스 명령어만 삽입하여 간단하게 멀티패스를 수행할 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/8_3_8.png" width="60%"></img>
- <em><p align="center">그림 8.3.8 초층 아크센싱(좌) 후 2, 3층 멀티패스 용접</p></em>
-</p>
+![](../../_assets/8_3_8.png)<br>
+*그림 8.3.8 초층 아크센싱(좌) 후 2, 3층 멀티패스 용접*
 
-<p align="center">
- <img src="../../_assets/8_3_9.png" width="60%"></img>
- <em><p align="center">그림 8.3.9 실제 멀티패스 용접</p></em>
-</p>
+![](../../_assets/8_3_9.png)<br>
+*그림 8.3.9 실제 멀티패스 용접*
 
 멀티패스 비드를 상기 그림 2와 같이 경사진 적층형으로 생성하는 경우 용접 시작점과 종료점만 수정하여 약간 당겨 기록하면 하기와 같은 적층형으로 용접이 가능합니다.
 
-<p align="center">
- <img src="../../_assets/8_3_10.png" width="60%"></img>
- <em><p align="center">그림 8.3.10 경사가 있는 적층형 멀티패스 형상</p></em>
-</p>
+![](../../_assets/8_3_10.png)<br>
+*그림 8.3.10 경사가 있는 적층형 멀티패스 형상*
 [__SOURCE](8_Application_function/3_Arc_sensing/7_multipass_command.md)
 # 8.3.7 멀티패스 명령어
 
@@ -3545,20 +3415,16 @@ asymetric_sensing_ratio: 좌우 비대칭 센싱 비율
 
 멀티패스 재현 시 원래 궤적에서 시프트 하는 거리를 설정합니다. 토치의 위빙이 툴과 직각이므로 각 시프트는 아래와 같이 설정됩니다. 즉, 좌우 방향은 위빙면이 되고 상하 방향은 위빙면과 수직인 면이 됩니다.
 
-<p align="center">
- <img src="../../_assets/8_3_11.png" width="60%"></img>
- <em><p align="center">그림 8.3.11 멀티패스 시프트 방향</p></em>
-</p>
+![](../../_assets/8_3_11.png)<br>
+*그림 8.3.11 멀티패스 시프트 방향*
 
 - 각도 시프트: TAS, WAS  
 
 멀티패스 용접을 수행할 때 품질을 위해 토치를 기울여야 하는 경우 설정합니다.
 각 항목의 각도 개념은 하기 그림과 같습니다.
 
-<p align="center">
- <img src="../../_assets/8_3_12.png" width="60%"></img>
- <em><p align="center">그림 8.3.12 멀티패스 각도 시프트 개념</p></em>
-</p>
+![](../../_assets/8_3_12.png)<br>
+*그림 8.3.12 멀티패스 각도 시프트 개념*
 
 
 <!-- MULTIPASS 기능은 아크센싱 수행 시 정해진 거리마다 지정된 궤적 번호에 카운트, 위치, 보정량을 기록합니다. 이 궤적은 여러 세트를 저장할 수 있습니다. 작업물에 따라 변형을 최소화 하기 위해 2개 이상의 용접구간을 번갈아 용접하는 경우 다양한 번호의 궤적을 사용할 수 있습니다.
@@ -3599,19 +3465,15 @@ asymetric_sensing_ratio: 좌우 비대칭 센싱 비율
 <!-- ### (5) 좌우/상하 시프트
 멀티패스 재현 시 원래 궤적에서 시프트 하는 거리를 설정합니다. 토치의 위빙이 툴과 직각이므로 각 시프트는 아래와 같이 설정됩니다. 즉, 좌우 방향은 위빙면이 되고 상하 방향은 위빙면과 수직인 면이 됩니다.
 
-<p align="center">
- <img src="../_assets/3_4.png" width="60%"></img>
- <em><p align="center">그림 3.4 멀티패스 시프트 방향</p></em>
-</p>
+![](../_assets/3_4.png)<br>
+*그림 3.4 멀티패스 시프트 방향*
 
 ### (6) 각도 시프트: TAS, WAS  
 멀티패스 용접을 수행할 때 품질을 위해 토치를 기울여야 하는 경우 설정합니다.
 각 항목의 각도 개념은 하기 그림과 같습니다.
 
-<p align="center">
- <img src="../_assets/3_5.png" width="60%"></img>
- <em><p align="center">그림 3.5 멀티패스 각도 시프트 개념</p></em>
-</p> -->
+![](../_assets/3_5.png)<br>
+*그림 3.5 멀티패스 각도 시프트 개념* -->
 
 [__SOURCE](8_Application_function/3_Arc_sensing/8_example_fillet.md)
 # 8.3.8 터치센싱과 아크센싱을 이용한 필렛용접 예시
@@ -3626,10 +3488,8 @@ asymetric_sensing_ratio: 좌우 비대칭 센싱 비율
 3)	종료 위치 근처 이동 후 터치센싱을 이용하여 용접 종료 위치 탐색
 4)	용접 시작위치에서 위빙 명령어, 아크용접 명령어를 이용하여 작업 수행
 
-<p align="center">
- <img src="../../_assets/8_3_13.png" width="60%"></img>
- <em><p align="center">그림 8.3.13 필렛 터치센싱과 아크센싱</p></em>
-</p>
+![](../../_assets/8_3_13.png)<br>
+*그림 8.3.13 필렛 터치센싱과 아크센싱*
 
 
 예시 프로그램은 다음과 같습니다.
@@ -3659,10 +3519,8 @@ S6   move P,spd=60%,accu=3,tool=1 	        '12: 동작 종료점
 
 하기와 같은 두 작업물에 모두 적용할 수 있는 하나의 작업 프로그램을 생성합니다.
 
-<p align="center">
- <img src="../../_assets/8_3_14.png" width="60%"></img>
- <em><p align="center">그림 8.3.14 Butt 터치센싱, 아크센싱 작업물</p></em>
-</p>
+![](../../_assets/8_3_14.png)<br>
+*그림 8.3.14 Butt 터치센싱, 아크센싱 작업물*
 
 작업 환경은 다음과 같이 가정합니다.
 
@@ -3683,10 +3541,8 @@ S6   move P,spd=60%,accu=3,tool=1 	        '12: 동작 종료점
 6)	계산된 값을 이용하여 위빙 폭, 용접진행속도를 자동 입력하여 작업 진행
 7)	작업 진행이 완료된 후 원래 시작 위치로 복귀
 
-<p align="center">
- <img src="../../_assets/8_3_15.png" width="60%"></img>
- <em><p align="center">그림 8.3.15 Butt 터치센싱과 아크센싱</p></em>
-</p>
+![](../../_assets/8_3_15.png)<br>
+*그림 8.3.15 Butt 터치센싱과 아크센싱*
 
 예시프로그램은 다음과 같습니다.
 
@@ -3784,10 +3640,8 @@ S6   move P,spd=60%,accu=3,tool=1  		'14: 동작 종료점
 높이센싱의 동작 순서는 다음과 같습니다.
 
  
-<p align="center">
- <img src="../../_assets/8_4_1.png" width="40%"></img>
- <em><p align="center">그림 8.4.1. 높이센싱 기능 동작 순서</p></em>
-</p>
+![](../../_assets/8_4_1.png)<br>
+*그림 8.4.1. 높이센싱 기능 동작 순서*
 
 
 [__SOURCE](8_Application_function/4_Height_sensing/1_hsen_condition.md)
@@ -3796,10 +3650,8 @@ S6   move P,spd=60%,accu=3,tool=1  		'14: 동작 종료점
 ```heightsen on,cnd= ``` 명령어에서 `속성` 키를 눌러 **높이센싱 조건** 설정 화면으로 진입합니다. 조건설정 화면은 아래 그림과 같습니다.
 
  
-<p align="center">
- <img src="../../_assets/8_4_2.png" width="70%"></img>
- <em><p align="center">그림 8.4.2. 높이센싱 조건 대화상자</p></em>
-</p>
+![](../../_assets/8_4_2.png)<br>
+*그림 8.4.2. 높이센싱 조건 대화상자*
 
 ---
 
@@ -3901,10 +3753,8 @@ LVS는 로봇의 플렌지에 직결되어야 하며, 센서는 용접선을 인
 즉, 용접선 추적을 통해 용접 대상물의 위치가 변하여 기존 교시점에서 벗어나는 경우에도 용접을 수행할 수 있습니다.
 
 
-<p align="center">
- <img src="../../_assets/8_5_1.png" width="90%"></img>
- <em><p align="center">그림 8.5.1. LVS 용접선 추적 데이터 흐름도</p></em>
-</p>
+![](../../_assets/8_5_1.png)<br>
+*그림 8.5.1. LVS 용접선 추적 데이터 흐름도*
 
 </br>
 
@@ -4018,10 +3868,8 @@ LVS 용접선 찾기 및 추적 기능은 ```lvs``` 명령어를 통해 수행�
 
 ```lvs``` 명령어를 이용한 트래킹기능은 다음과 같이 사용할 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/8_5_2.png" width="60%"></img>
- <em><p align="center">그림 8.5.2. LVS 용접선 추적을 위한 티칭 방법</p></em>
-</p>
+![](../../_assets/8_5_2.png)<br>
+*그림 8.5.2. LVS 용접선 추적을 위한 티칭 방법*
 
 
 ---
@@ -4088,10 +3936,8 @@ LVS기능을 사용하기 위해서는 센서 설치 및 통신 설정이 필요
 
 연결 브라켓은 직접 설계하여 사용하거나 HD현대로보틱스 또는 LVS 제조사로부터 받아 사용하십시오.<br>
 
-<p align="center">
- <img src="../../_assets/8_5_3_lvs_mount_setup.png" width="60%"></img>
- <em><p align="center">그림 8.5.3. LVS 장착시 주의점</p></em>
-</p>
+![](../../_assets/8_5_3_lvs_mount_setup.png)<br>
+*그림 8.5.3. LVS 장착시 주의점*
 
 {% hint style="warning" %}
 반복 정확도 (Accuracy) 및 정밀도(Precision) 달성을 위해 로봇의 플랜지에 LVS 마운트를 직결하십시오.<br>
@@ -4102,10 +3948,8 @@ LVS기능을 사용하기 위해서는 센서 설치 및 통신 설정이 필요
 
 LVS 센서는 직선인 용접선을 기준으로 수직으로 레이저가 위치하도록 설치해야 합니다. (그림 참조)
 
-<p align="center">
- <img src="../../_assets/8_5_4.png" width="90%"></img>
- <em><p align="center">그림 8.5.4. TCP와 센서설치, 툴좌표계의 설정</p></em>
-</p>
+![](../../_assets/8_5_4.png)<br>
+*그림 8.5.4. TCP와 센서설치, 툴좌표계의 설정*
 
 {% hint style="info" %}
 툴 좌표계를 설정하는 방법은 툴 캘리브레이션 및 각도보정 메뉴얼 항목을 참고하십시오.
@@ -4182,20 +4026,16 @@ LVS센서 제어기와 로봇 제어기간에 이더넷 케이블을 이용해 �
 
 ### Full-V 센서 설정 예시
 
-<p align="center">
- <img src="../../_assets/8_5_5_lvs_setting_fullv_1.png" width="90%"></img>
- <em><p align="center">그림 8.5.5. Full-V 센서 연결 설정</p></em>
-</p>
+![](../../_assets/8_5_5_lvs_setting_fullv_1.png)<br>
+*그림 8.5.5. Full-V 센서 연결 설정*
 
 위 그림과 같이 LVS 브랜드를 FULL로 선택한 후 Full-V S/W에서 LVS 센서의 IP를 확인한 후 `[F2: 시스템] - 4: 응용파라미터 - 5: lvs 추종 - 1: 사용환경 설정` 으로 진입해 IP에 입력하십시오. 그 후 하단의 "연결" 버튼을 눌러 연결 상태가 "연결됨"이 되는지 확인하십시오.<br>
 "연결 실패"라고 뜨는 경우에는 하드웨어 연결 및 IP를 확인하십시오.<br>
 
 Full-V S/W에서 사용하고자 하는 seam을 Full-V사에서 제공하는 메뉴얼과 하기 그림을 참조하여 등록하십시오.
 
-<p align="center">
- <img src="../../_assets/8_5_6_lvs_setting_fullv_2.png" width="90%"></img>
- <em><p align="center">그림 8.5.6. Full-V S/W에서 seam 설정 예시</p></em>
-</p>
+![](../../_assets/8_5_6_lvs_setting_fullv_2.png)<br>
+*그림 8.5.6. Full-V S/W에서 seam 설정 예시*
 [__SOURCE](8_Application_function/5_LVS_tracking/3_calibration.md)
 # 8.5.3 LVS(Laser Vision Sensor) TCP-센서 캘리브레이션
 
@@ -4248,10 +4088,8 @@ end
 등록한 번호를 lvs 명령어의 seam인자에 설정하십시오.
 {% endhint %}
 
-<p align="center">
- <img src="../../_assets/8_5_7_lvs_autocalib.png" width="80%"></img>
- <em><p align="center">그림 8.5.7. lvs 자동 캘리브레이션</p></em>
-</p>   
+![](../../_assets/8_5_7_lvs_autocalib.png)<br>
+*그림 8.5.7. lvs 자동 캘리브레이션*   
 </br>
 
 ---
@@ -4283,10 +4121,8 @@ end
 
 `[F2: 시스템] - 4: 응용파라미터 - 5: LVS 추종 - 2: LVS 캘리브레이션`
 
-<p align="center">
- <img src="../../_assets/8_5_8_lvs_tool_calibmat.png" width="80%"></img>
- <em><p align="center">그림 8.5.8. lvs 자동 캘리브레이션</p></em>
-</p>   
+![](../../_assets/8_5_8_lvs_tool_calibmat.png)<br>
+*그림 8.5.8. lvs 자동 캘리브레이션*   
 </br>
 [__SOURCE](8_Application_function/5_LVS_tracking/4_seam_finding.md)
 # 8.5.4 LVS(Laser Vision Sensor) seam finding 기능
@@ -4317,10 +4153,8 @@ ms인자가 선언되어 있지 않다면 전역 쉬프트로 생성됩니다.
 {% endhint %}
 
 
-<p align="center">
- <img src="../../_assets/8_5_9_lvs_seamfind_ex.png" width="80%"></img>
- <em><p align="center">그림 8.5.9. lvs 센싱 자세에 따른 포즈에서의 자세</p></em>
-</p>   
+![](../../_assets/8_5_9_lvs_seamfind_ex.png)<br>
+*그림 8.5.9. lvs 센싱 자세에 따른 포즈에서의 자세*   
 </br>
 
 {% hint style="warning" %}
@@ -4359,10 +4193,8 @@ Seam finding 시 seam 인식이 불가능할 경우 재시도를 수행합니다
 
 재시도는 다음과 같은 시퀀스로 수행됩니다.
 
-<p align="center">
- <img src="../../_assets/8_5_10_lvs_seamfind_retry.png" width="60%"></img>
- <em><p align="center">그림 8.5.10. seam finding 재시도 기능</p></em>
-</p>   
+![](../../_assets/8_5_10_lvs_seamfind_retry.png)<br>
+*그림 8.5.10. seam finding 재시도 기능*   
 </br>
 
 {% hint style="warning" %}
@@ -4375,10 +4207,8 @@ Seam finding 시 seam 인식이 불가능할 경우 재시도를 수행합니다
 
 TP 우측의 **[창조절]** 버튼을 눌러 "LVS 용접선 탐색" 항목을 선택하면 lvs seamfinding 모니터링을 볼 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/8_5_11_seamfind monitoring.png" width="60%"></img>
- <em><p align="center">그림 8.5.11. seam finding 모니터링 기능</p></em>
-</p>   
+![](../../_assets/8_5_11_seamfind monitoring.png)<br>
+*그림 8.5.11. seam finding 모니터링 기능*   
 </br>
 <table>
   <thead>
@@ -4440,10 +4270,8 @@ TP 우측의 **[창조절]** 버튼을 눌러 "LVS 용접선 탐색" 항목을 �
 
 이를 위해서는 **[사용자키] - [마스터 모드]** 를 활성화 하여 기준위치(마스터포즈)를 미리 등록해 두어야 합니다.
 
-<p align="center">
- <img src="../../_assets/8_5_12_lvs_seamfind_mastermode.png" width="90%"></img>
- <em><p align="center">그림 8.5.12. 마스터모드와 실제 기동시의 동작의 예</p></em>
-</p>   
+![](../../_assets/8_5_12_lvs_seamfind_mastermode.png)<br>
+*그림 8.5.12. 마스터모드와 실제 기동시의 동작의 예*   
 </br>
 
 위 그림의 왼쪽과 같이 마스터 모드를 활성화 한 상태에서 마스터포즈를 `lvs` 명령어의 mp인자에 할당된 포즈변수에 저장합니다.
@@ -4468,10 +4296,8 @@ TP 우측의 **[창조절]** 버튼을 눌러 "LVS 용접선 탐색" 항목을 �
 {% endhint %}
 
 
-<p align="center">
- <img src="../../_assets/8_5_13_lvs_seamfind_mastermode_warn.png" width="90%"></img>
- <em><p align="center">그림 8.5.13. 마스터 포즈 등록시 유의점</p></em>
-</p>   
+![](../../_assets/8_5_13_lvs_seamfind_mastermode_warn.png)<br>
+*그림 8.5.13. 마스터 포즈 등록시 유의점*   
 </br>
 
 ---
@@ -4521,10 +4347,8 @@ search는 다음과 같이 사용합니다.
 `lvs` 명령어에서 **[속성]** 에 진입하면 다음과 같이 search 설정을 수행할 수 있습니다.
 
 
-<p align="center">
- <img src="../../_assets/8_5_14_lvs_search_setting.png" width="80%"></img>
- <em><p align="center">그림 8.5.14. lvs search 설정화면</p></em>
-</p>   
+![](../../_assets/8_5_14_lvs_search_setting.png)<br>
+*그림 8.5.14. lvs search 설정화면*   
 </br>
 
 <table>
@@ -4565,10 +4389,8 @@ search는 다음과 같이 사용합니다.
   </tbody>
 </table>
 
-<p align="center">
- <img src="../../_assets/8_5_15_lvs_search_example.png" width="80%"></img>
- <em><p align="center">그림 8.5.15. lvs search 예시</p></em>
-</p>   
+![](../../_assets/8_5_15_lvs_search_example.png)<br>
+*그림 8.5.15. lvs search 예시*   
 </br>
 
 다음과 같이 search 및 seam tracking을 티칭할 수 있습니다.
@@ -4647,10 +4469,8 @@ LVS 명령어 구성은 다음과 같이 설정해야 합니다.
 search 명령어 수행과정은 다음 그림과 같습니다. (탐색 유효, 방향 0 설정시)  
 유효하지 않은 점을 시작점으로 찾아 sp에 저장한 후 시작점으로 이동하면서 데이터 버퍼를 채웁니다.
 
-<p align="center">
- <img src="../../_assets/8_5_17.png" width="80%"></img>
- <em><p align="center">그림 8.5.17. lvs search 과정</p></em>
-</p>   
+![](../../_assets/8_5_17.png)<br>
+*그림 8.5.17. lvs search 과정*   
 </br>
 
 
@@ -4686,10 +4506,8 @@ lvs 모니터링은 `[(우측 패널)창조정] - 선택 - LVS 추종` 순서로
 
 모니터링에서는 다음과 같은 항목을 확인할 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/8_5_18_tracking_monitoring.png" width="80%"></img>
- <em><p align="center">그림 8.5.18. lvs 모니터링</p></em>
-</p>   
+![](../../_assets/8_5_18_tracking_monitoring.png)<br>
+*그림 8.5.18. lvs 모니터링*   
 </br>
 
 <table>
@@ -4760,27 +4578,21 @@ lvs 모니터링은 `[(우측 패널)창조정] - 선택 - LVS 추종` 순서로
 
 </br>
 
-<p align="center">
- <img src="../../_assets/8_6_1.png" width="40%"></img>
- <em><p align="center">그림 8.6.1. 스티치 기능 기본 파라미터</p></em>
-</p> 
+![](../../_assets/8_6_1.png)<br>
+*그림 8.6.1. 스티치 기능 기본 파라미터* 
 
 </br>
 
 
 
-<p align="center">
- <img src="../../_assets/8_6_2.png" width="50%"></img>
- <em><p align="center">그림 8.6.2. 스티치 용접 시험 시편</p></em>
-</p> 
+![](../../_assets/8_6_2.png)<br>
+*그림 8.6.2. 스티치 용접 시험 시편* 
  
 </br>
 
 
-<p align="center">
- <img src="../../_assets/8_6_3.png" width="60%"></img>
- <em><p align="center">그림 8.6.3. 스티치 용접 프로세스</p></em>
-</p> 
+![](../../_assets/8_6_3.png)<br>
+*그림 8.6.3. 스티치 용접 프로세스* 
 
 
 
@@ -4802,10 +4614,8 @@ lvs 모니터링은 `[(우측 패널)창조정] - 선택 - LVS 추종` 순서로
 # 8.6.2 stitch 명령어 작성 
  
 
-<p align="center">
- <img src="../../_assets/8_6_4.png" width="60%"></img>
- <em><p align="center">그림 8.6.4. 스티치 명령어 작성 예시</p></em>
-</p>  
+![](../../_assets/8_6_4.png)<br>
+*그림 8.6.4. 스티치 명령어 작성 예시*  
 
 
 ```stitch``` 명령어 입력
@@ -4822,22 +4632,16 @@ lvs 모니터링은 `[(우측 패널)창조정] - 선택 - LVS 추종` 순서로
 # 8.6.3 stitch 기능 파라미터 설정
 
 
-<p align="center">
- <img src="../../_assets/8_6_5.png" width="80%"></img>
- <em><p align="center">그림 8.6.5. 스티치 용접 과정에 따른 Profile</p></em>
-</p>
+![](../../_assets/8_6_5.png)<br>
+*그림 8.6.5. 스티치 용접 과정에 따른 Profile*
 
 [그림 8.6.5]는 스티치 용접 과정을 보여줍니다. 이 차트에 따라 `stitch` 명령어의 옵션들을 설정할 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/8_6_6.png" width="70%"></img>
- <em><p align="center">그림 8.6.6. 스티치 용접 조건 대화상자1</p></em>
-</p>
+![](../../_assets/8_6_6.png)<br>
+*그림 8.6.6. 스티치 용접 조건 대화상자1*
 
-<p align="center">
- <img src="../../_assets/8_6_7.png" width="70%"></img>
- <em><p align="center">그림 8.6.7. 스티치 용접 조건 대화상자2</p></em>
-</p>
+![](../../_assets/8_6_7.png)<br>
+*그림 8.6.7. 스티치 용접 조건 대화상자2*
 
 
 [그림 8.6.6]은 `stitch` 명령어에 커서를 두고 TP 좌측 화면에서 [속성] 버튼을 눌러 접근할 수 있습니다. [그림 8.6.7]은 이전 화면에서 [구분] 탭을 눌러 접근합니다. 각 그림에 대한 파라미터 설명은 다음과 같습니다.
@@ -4893,10 +4697,8 @@ Stitch 용접 진행 중, 비상정지나 playback 정지 후 재기동이 되�
 본 기능은 60.30-00 버전부터 지원합니다.
 {% endhint %}
 
-<p align="center">
- <img src="../../_assets/8_7_1_arc_trj_mgr.png" width="90%"></img>
- <em><p align="center">그림 8.7.1. 실시간 용접 궤적 모니터링</p></em>
-</p>
+![](../../_assets/8_7_1_arc_trj_mgr.png)<br>
+*그림 8.7.1. 실시간 용접 궤적 모니터링*
 
 `arcon` 부터 `arcoff` 구간 까지의 궤적 및 용접정보를 실시간으로 확인할 수 있습니다.
 
@@ -4938,10 +4740,8 @@ LPS 기능을 사용하기 위해서는 최초 레이저 센서를 설치하고 
 
 연결 브라켓은 직접 설계하여 사용하거나 당사 혹은 센서 제조사로부터 받아 사용하십시오.
 
-<p align="center">
-  <img src="../../_assets/8_8_1.png" width="80%"></img>
-  <em><p align="center">그림 8.8.1. 브라켓을 이용한 레이저 센서 설치</p></em>
-</p>
+![](../../_assets/8_8_1.png)<br>
+*그림 8.8.1. 브라켓을 이용한 레이저 센서 설치*
 
 레이저 변위 센서는 발/수광부가 존재합니다. 아크 토치에 대해 로봇을 정렬시켰을 때 **레이저 센서의 발/수광부가 툴 기준 X 방향과 정렬이 되도록** 해야 합니다.(레이저 제조사 스펙 참고) 또한 툴의 Y 방향에 대해 우측(토치 바라봤을 때 우측)에 설치할 것을 권장합니다.
 레이저를 설치하여 전원을 인가했을 때 툴의 끝과 레이저 포인트가 가까울수록 간섭이나 CT에 유리합니다. 마지막으로 툴 끝에 대해 센서 설치 위치는 사용하고자 하는 레이저 센서 사양(측정 범위)에 적합해야 하며, 사양 최소 거리보다는 높게 설치되어야 합니다.
@@ -4979,10 +4779,8 @@ LPS 기능을 사용하기 위해서는 최초 레이저 센서를 설치하고 
 
 `[F2: 시스템] - 4: 응용 파라미터 - 6: 레이저 포인트 센싱 - 1: 사용환경 설정`에 진입합니다. 
 
-<p align="center">
-  <img src="../../_assets/8_8_2.png" width="80%"></img>
-  <em><p align="center">그림 8.8.2. 레이저 통신 설정(키엔스 LK-G)</p></em>
-</p>
+![](../../_assets/8_8_2.png)<br>
+*그림 8.8.2. 레이저 통신 설정(키엔스 LK-G)*
 </br>
 
 LPS 브랜드 - Keyence를 클릭하여 설정합니다. 설정이 완료되면 **센싱 거리(mm)** 칸에 컨트롤러의 출력값과 동일하게 값이 들어옴을 확인할 수 있습니다.  
@@ -4994,28 +4792,22 @@ LPS 브랜드 - Keyence를 클릭하여 설정합니다. 설정이 완료되면 
 
 PC와 연결하여 웹에 접속합니다.(최초 고정 IP는 192.168.0.250)
 
-<p align="center">
-  <img src="../../_assets/8_8_3.png" width="80%"></img>
-  <em><p align="center">그림 8.8.3. 바우머 센서 웹 설정</p></em>
-</p>
+![](../../_assets/8_8_3.png)<br>
+*그림 8.8.3. 바우머 센서 웹 설정*
 </br>  
 
 `장치 구성(Device Configuration)` 탭에 진입하여 목적에 맞게 통신 방식을 설정합니다. 이때 프로세스 인터페이스에서 현재 통신 프로토콜에 맞는 방식만 활성화합니다.
 그리고 이더넷IP를 사용한다면 네트워크 설정을 완료합니다. ${cont_model} 에서는 0번과 1번, 2번을 default로 사용하고 있으므로 다른 영역대를 사용해야 합니다.(예시: 192.168.10.250)
 
-<p align="center">
-  <img src="../../_assets/8_8_4.png" width="80%"></img>
-  <em><p align="center">그림 8.8.4. 바우머 센서 네트워크 설정</p></em>
-</p>
+![](../../_assets/8_8_4.png)<br>
+*그림 8.8.4. 바우머 센서 네트워크 설정*
 </br>   
 
 이후 과정은 다음 링크를 따라 하나씩 수행하면 됩니다. 단, hi6에서는 내장 이더넷을 지원하지 않으므로 통신 카드를 이용해야 하고([Hi6 - 산업용 통신](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-Hi6/1-cifx-pci-communication/3-cifx-pci-settings-industrial-communication/3-EtherNet-IP/README?cont_model=Hi6)), hi7부터는 내장 이더넷을 지원하므로 제어기만으로 통신 연결이 가능합니다.([Hi7 - 산업용 통신](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-Hi7/2-ethernet-ip/4-scanner/README?cont_model=Hi7))
 
 
-<p align="center">
-  <img src="../../_assets/8_8_5.png" width="80%"></img>
-  <em><p align="center">그림 8.8.5. 바우머 센서 신호 할당</p></em>
-</p>
+![](../../_assets/8_8_5.png)<br>
+*그림 8.8.5. 바우머 센서 신호 할당*
 </br>
 
 위 과정이 완료되었으면 `[F2: 시스템] - 4: 응용 파라미터 - 6: 레이저 포인트 센싱 - 1: 사용환경 설정 - 신호 탭`에 진입합니다. 위에서 할당된 블럭에 대해 입력 신호를 설정하면 센서 값에 대해 거리(현재값)가 출력되는 것을 볼 수 있습니다.(센서-거리 맵핑이 필요하다면 추가 설정 필요)
@@ -5045,10 +4837,8 @@ LPS 기능을 사용하기 위해서는 TCP와 센서 간 캘리브레이션이 
 캘리브레이션을 수행하기 전에 툴을 캘리브레이션 평면에 대해 완벽히 정렬시켜야 합니다. 툴 좌표계 기준으로 X와 Y 방향으로 직접 교시하며 레이저 출력이 일정한지 확인하고(오차가 최소 0.5 이내로 오도록) RX, RY 값을 조정합니다.
 툴을 정렬시켰다면 와이어 끝을 캘리브레이션 평면 끝에 위치시킵니다. 툴 기준 X-Y 방향으로 교시할 때 레이저 포인트가 모서리 끝에 타고 움직일 수 있도록 RZ 값을 조정합니다.
 
-<p align="center">
-  <img src="../../_assets/8_8_2_1.png" width="60%"></img>
-  <em><p align="center">그림 8.8.2.1 캘리브레이션 전 준비 사항</p></em>
-</p><br/>  
+![](../../_assets/8_8_2_1.png)<br>
+*그림 8.8.2.1 캘리브레이션 전 준비 사항*<br/>  
 
 위 과정을 완료했다면 캘리브레이션 수행을 위한 준비가 모두 끝났습니다.
 
@@ -5057,10 +4847,8 @@ LPS 기능을 사용하기 위해서는 TCP와 센서 간 캘리브레이션이 
 
 TCP 끝을 캘리브레이션 평면의 한 쪽 꼭짓점에 위치하도록 합니다. 또 레이저 포인트는 캘리브레이션 평면 안쪽에 위치해야 합니다.
 
-<p align="center">
- <img src="../../_assets/8_8_2_2.png" width="50%"></img>
- <em><p align="center">그림 8.8.2.2 캘리브레이션 시작</p></em>
-</p><br/>  
+![](../../_assets/8_8_2_2.png)<br>
+*그림 8.8.2.2 캘리브레이션 시작*<br/>  
 
 하단 패널에서 `[F6: 명령입력] - arcweld - lps`를 클릭하여 하기 명령어를 삽입합니다.
 
@@ -5085,10 +4873,8 @@ TCP 끝을 캘리브레이션 평면의 한 쪽 꼭짓점에 위치하도록 합
 캘리브레이션 정보는 툴 번호마다 갖고 있고 툴 체인지 사용 시 유용합니다. 만약 툴 정보는 같지만 다른 번호를 사용하고자 할 때에는 복사하여 사용할 수 있습니다.  
 
 
-<p align="center">
- <img src="../../_assets/8_8_2_3.png" width="80%"></img>
- <em><p align="center">그림 8.8.2.3 캘리브레이션 결과</p></em>
-</p><br/>  
+![](../../_assets/8_8_2_3.png)<br>
+*그림 8.8.2.3 캘리브레이션 결과*<br/>  
 
 
 
@@ -5104,10 +4890,8 @@ TCP 끝을 캘리브레이션 평면의 한 쪽 꼭짓점에 위치하도록 합
 
 LPS 명령어 속성은 다음과 같습니다.  
 
-<p align="center">
-  <img src="../../_assets/8_8_3_0.png" width="80%"></img>
-  <em><p align="center">그림 8.8.3.0 LPS 속성</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_0.png)<br>
+*그림 8.8.3.0 LPS 속성*<br/>  
 
 #### 단차 계수
 
@@ -5131,10 +4915,8 @@ LPS 명령어 속성은 다음과 같습니다.
 
 한 점 모드는 캘리브레이션 결과를 확인하거나, 현재 레이저가 가리키는 지점의 포즈를 얻을 때 사용합니다.  
 
-<p align="center">
-  <img src="../../_assets/8_8_3_1.png" width="60%"></img>
-  <em><p align="center">그림 8.8.3.1 한 점 모드(spot)</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_1.png)<br>
+*그림 8.8.3.1 한 점 모드(spot)*<br/>  
 
 ```py
   var p10=cpo()
@@ -5153,10 +4935,8 @@ LPS 명령어 속성은 다음과 같습니다.
 
 단차 모드는 모재의 높이 차이가 있는(단차가 발생하는) 지점을 검출합니다. 이때 높이 차가 발생하는 지점이 아래인지 위인지에 따라 스캔 방향을 반대로 하면 됩니다.  
 
-<p align="center">
-  <img src="../../_assets/8_8_3_2.png" width="60%"></img>
-  <em><p align="center">그림 8.8.3.2 단차 모드(stepp)</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_2.png)<br>
+*그림 8.8.3.2 단차 모드(stepp)*<br/>  
 
 ```py
   var p10=cpo()
@@ -5171,10 +4951,8 @@ LPS 명령어 속성은 다음과 같습니다.
 
 ### (3) 스캔 모드(scan)
 
-<p align="center">
- <img src="../../_assets/8_8_3_3.png" width="80%"></img>
- <em><p align="center">그림 8.8.3.3 다양한 형상에서의 스캔 모드(scan)</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_3.png)<br>
+*그림 8.8.3.3 다양한 형상에서의 스캔 모드(scan)*<br/>  
 
 ```py
   var p10=cpo()
@@ -5194,22 +4972,16 @@ LPS 명령어 속성은 다음과 같습니다.
 
 #### (3-1) 모니터링 화면
 
-<p align="center">
-  <img src="../../_assets/8_8_3_4.png" width="80%"></img>
-  <em><p align="center">그림 8.8.3.4 LPS 그래프</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_4.png)<br>
+*그림 8.8.3.4 LPS 그래프*<br/>  
 
 앱을 등록하면 다음 과정을 통해 모니터링 화면을 조회할 수 있습니다. `[(우측 패널)창조정] - 선택 - LPS 그래프` 
 
-<p align="center">
-  <img src="../../_assets/8_8_3_5.png" width="80%"></img>
-  <em><p align="center">그림 8.8.3.5 예시 화면 - V-그루브 형상</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_5.png)<br>
+*그림 8.8.3.5 예시 화면 - V-그루브 형상*<br/>  
 
-<p align="center">
-  <img src="../../_assets/8_8_3_6.png" width="80%"></img>
-  <em><p align="center">그림 8.8.3.6 예시 화면 - Butt 형상</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_6.png)<br>
+*그림 8.8.3.6 예시 화면 - Butt 형상*<br/>  
 
 
 기능을 수행하면 위 이미지와 같이 결과를 확인할 수 있습니다. 현재 제공하는 화면에서는 다음과 같은 기능을 제공합니다.  

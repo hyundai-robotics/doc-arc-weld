@@ -8,19 +8,15 @@
 터치센싱을 이용하여 기준 위치를 기록해 놓으면 작업물이 들어왔을 때 기준위치에서 얼만큼 쉬프트 되어있는지 계산할 수 있습니다. 
 마스터모드 기능을 사용하면 기준 티칭을 통해 마스터포즈를 저장해놓고 실제 기동시 터치센싱을 통해 쉬프트량을 자동으로 계산할 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/8_2_1.png"></img>
- <em><p align="center">그림 8.2.1. 터치센싱의 예</p></em>
-</p>
+![](../../_assets/8_2_1.png)<br>
+*그림 8.2.1. 터치센싱의 예*
 
 ### (1) 터치센싱 타입
 
 터치센싱은 그림 8.2.1와 같이 총 5가지 타입(버트, 필렛, V그루브, LR센터, 그루브 감지-Detect groove)을 지원합니다.   
 
-<p align="center">
- <img src="../../_assets/8_2_2.png" width="90%"></img>
- <em><p align="center">그림 8.2.2. 터치센싱 타입</p></em>
-</p>
+![](../../_assets/8_2_2.png)<br>
+*그림 8.2.2. 터치센싱 타입*
 
 ### (2) 터치센싱 명령어 및 설정 파라미터
 
@@ -68,10 +64,8 @@
 
 센싱 거리, 후퇴 거리, 진행 거리, 센싱 속도, 퇴피 속도, 검지 타입(접촉 시, 접촉 해제 시) 등과 같은 조건들을 설정할 수 있습니다.  
 
-<p align="center">
- <img src="../../_assets/8_2_3.png" width="70%" ></img>
- <em><p align="center">그림 8.2.3. 터치센싱 조건 편집화면</p></em>
-</p>
+![](../../_assets/8_2_3.png)<br>
+*그림 8.2.3. 터치센싱 조건 편집화면*
 
 {% hint style="info" %}
   명령어 사용과 파라미터에 대한 자세한 설명은 다음 링크를 참고해주십시오. [2.13 touchsen](../../2_Command/13_touchsen.md)<br>
@@ -119,10 +113,8 @@
 
 #### [1] Fillet 타입
 
-<p align="center">
- <img src="../../_assets/8_2_4.png" width="60%"></img>
- <em><p align="center">그림 8.2.4. 터치센싱 예 - Fillet 타입</p></em>
-</p>
+![](../../_assets/8_2_4.png)<br>
+*그림 8.2.4. 터치센싱 예 - Fillet 타입*
 
 - 명령어 작성 예시
 ```python
@@ -142,10 +134,8 @@
 
 #### [2] V Groove 타입
 
-<p align="center">
- <img src="../../_assets/8_2_5.png" width="70%"></img>
- <em><p align="center">그림 8.2.5. 터치센싱 예 - V Groove 타입</p></em>
-</p>   
+![](../../_assets/8_2_5.png)<br>
+*그림 8.2.5. 터치센싱 예 - V Groove 타입*   
 
 - 명령어 작성 예시
 ```python
@@ -158,20 +148,16 @@
 - 센싱 시퀀스  
   - 센싱은 상단 좌우 - 중간 복귀 - 하단 - 하단 좌우 - 중간 으로 진행됩니다.  
 
-<p align="center">
- <img src="../../_assets/8_2_6.png" width="60%"></img>
- <em><p align="center">그림 8.2.6. 터치센싱 시퀀스 VGroove 타입</p></em>
-</p>   
+![](../../_assets/8_2_6.png)<br>
+*그림 8.2.6. 터치센싱 시퀀스 VGroove 타입*   
 
 
 ---
  
 #### [3] BUTT 타입
 
-<p align="center">
- <img src="../../_assets/8_2_7.png" width="30%"></img>
- <em><p align="center">그림 8.2.7. 터치센싱 예 - Butt 타입</p></em>
-</p>   
+![](../../_assets/8_2_7.png)<br>
+*그림 8.2.7. 터치센싱 예 - Butt 타입*   
 
 
 - 명령어 작성 예시
@@ -185,10 +171,8 @@
 
 - 센싱 시퀀스
 
-<p align="center">
- <img src="../../_assets/8_2_8.png" width="60%"></img>
- <em><p align="center">그림 8.2.8. 터치센싱 시퀀스 Butt 타입</p></em>
-</p>   
+![](../../_assets/8_2_8.png)<br>
+*그림 8.2.8. 터치센싱 시퀀스 Butt 타입*   
 
 센싱은 상단 좌우 - 중간 복귀 - 하단 - 하단 좌우 - 중간 으로 진행됩니다.
 
@@ -205,10 +189,8 @@
 
 그림 8.2.9은 필렛과 그루브 감지 작업물에서 Y축 또는 TL축으로 30도 회전한 예입니다.  
 
-<p align="center">
- <img src="../../_assets/8_2_9.png" width="300"></img>
- <em><p align="center">그림 8.2.9. 터치센싱 예 - 각도설정</p></em>
-</p>       
+![](../../_assets/8_2_9.png)<br>
+*그림 8.2.9. 터치센싱 예 - 각도설정*       
 
 - 명령어 작성 예시
 

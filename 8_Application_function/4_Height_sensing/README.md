@@ -35,8 +35,6 @@
 높이센싱의 동작 순서는 다음과 같습니다.
 
  
-<p align="center">
- <img src="../../_assets/8_4_1.png" width="40%"></img>
- <em><p align="center">그림 8.4.1. 높이센싱 기능 동작 순서</p></em>
-</p>
+![](../../_assets/8_4_1.png)<br>
+*그림 8.4.1. 높이센싱 기능 동작 순서*
 

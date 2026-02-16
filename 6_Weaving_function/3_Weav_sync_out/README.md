@@ -6,19 +6,15 @@
 본 기능은 60.30-00 버전부터 지원합니다.
 {% endhint %}
 
-<p align="center">
- <img src="../../_assets/6_3_1_weav_sync_out.png" width="90%"></img>
- <em><p align="center">그림 6.3.1. 위빙 싱크 출력 기능 동작 예</p></em>
-</p>   
+![](../../_assets/6_3_1_weav_sync_out.png)<br>
+*그림 6.3.1. 위빙 싱크 출력 기능 동작 예*   
 
 위 그림과 같이 좌우 위빙에서 입열량, 용착량을 조절할 필요가 있는 경우 또는 비드의 모양을 다르게 만들어야 할 경우 사용합니다.
 
 `weaving` 명령어의 `[속성]`창에 진입하여 다음 항목을 설정하여 사용할 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/6_3_2_weav_sync_out_setting.png" width="90%"></img>
- <em><p align="center">그림 6.3.2. 위빙 싱크 출력 기능 설정</p></em>
-</p>   
+![](../../_assets/6_3_2_weav_sync_out_setting.png)<br>
+*그림 6.3.2. 위빙 싱크 출력 기능 설정*   
 
 <table>
   <thead>

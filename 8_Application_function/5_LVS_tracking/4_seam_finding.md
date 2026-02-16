@@ -26,10 +26,8 @@ ms인자가 선언되어 있지 않다면 전역 쉬프트로 생성됩니다.
 {% endhint %}
 
 
-<p align="center">
- <img src="../../_assets/8_5_9_lvs_seamfind_ex.png" width="80%"></img>
- <em><p align="center">그림 8.5.9. lvs 센싱 자세에 따른 포즈에서의 자세</p></em>
-</p>   
+![](../../_assets/8_5_9_lvs_seamfind_ex.png)<br>
+*그림 8.5.9. lvs 센싱 자세에 따른 포즈에서의 자세*   
 </br>
 
 {% hint style="warning" %}
@@ -68,10 +66,8 @@ Seam finding 시 seam 인식이 불가능할 경우 재시도를 수행합니다
 
 재시도는 다음과 같은 시퀀스로 수행됩니다.
 
-<p align="center">
- <img src="../../_assets/8_5_10_lvs_seamfind_retry.png" width="60%"></img>
- <em><p align="center">그림 8.5.10. seam finding 재시도 기능</p></em>
-</p>   
+![](../../_assets/8_5_10_lvs_seamfind_retry.png)<br>
+*그림 8.5.10. seam finding 재시도 기능*   
 </br>
 
 {% hint style="warning" %}
@@ -84,10 +80,8 @@ Seam finding 시 seam 인식이 불가능할 경우 재시도를 수행합니다
 
 TP 우측의 **[창조절]** 버튼을 눌러 "LVS 용접선 탐색" 항목을 선택하면 lvs seamfinding 모니터링을 볼 수 있습니다.
 
-<p align="center">
- <img src="../../_assets/8_5_11_seamfind monitoring.png" width="60%"></img>
- <em><p align="center">그림 8.5.11. seam finding 모니터링 기능</p></em>
-</p>   
+![](../../_assets/8_5_11_seamfind monitoring.png)<br>
+*그림 8.5.11. seam finding 모니터링 기능*   
 </br>
 <table>
   <thead>

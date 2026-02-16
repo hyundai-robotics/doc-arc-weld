@@ -4,10 +4,8 @@ arccond D, cnd=1
 ```
 위 명령어에서 속성창에 진입하면 다음과 같은 설정항목을 볼 수 있습니다.
  
-<p align="center">
- <img src="../../_assets/8_1_1.png" width="70%"></img>
- <em><p align="center">그림 8.1.1. 용접 조건 대화상자</p></em>
-</p> 
+![](../../_assets/8_1_1.png)<br>
+*그림 8.1.1. 용접 조건 대화상자* 
 
 <br>
 
