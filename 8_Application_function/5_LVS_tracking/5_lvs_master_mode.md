@@ -7,10 +7,8 @@ The Master Mode function stores a reference position (Master pose) and calculate
 To enable this functionality, `user key - Master Mode` must be activated to register the reference position(Master pose) in advance.
 
 
-<p align="center">
- <img src="../../_assets/8_5_12_lvs_seamfind_mastermode.png" width="90%"></img>
- <em><p align="center">Figure 8.5.12. Example of Master Mode and Actual Motion</p></em>
-</p>   
+![](../../_assets/8_5_12_lvs_seamfind_mastermode.png)<br>
+*Figure 8.5.12. Example of Master Mode and Actual Motion*   
 </br>
 
 As shown in the left part of the figure, after activating Master Mode, the Master Pose is saved to the pose variable assigned to the `mp` parameter in the `lvs` command.
@@ -37,10 +35,8 @@ Important notes when registering master pose.
 {% endhint %}
 
 
-<p align="center">
- <img src="../../_assets/8_5_13_lvs_seamfind_mastermode_warn.png" width="90%"></img>
- <em><p align="center">Figure 8.5.13. Important Considerations When Registering Master Pose</p></em>
-</p>   
+![](../../_assets/8_5_13_lvs_seamfind_mastermode_warn.png)<br>
+*Figure 8.5.13. Important Considerations When Registering Master Pose*   
 </br>
 
 ---

@@ -20,10 +20,8 @@ If you wish to use it for testing purpose, please contact us to prepare the cali
 
 ### (2) Automatic Calibration Teaching
 
-<p align="center">
- <img src="../../_assets/8_5_7_lvs_autocalib.png" width="80%"></img>
- <em><p align="center">Figure 8.5.7. LVS Auto Calibration</p></em>
-</p>   
+![](../../_assets/8_5_7_lvs_autocalib.png)<br>
+*Figure 8.5.7. LVS Auto Calibration*   
 </br>
 
 As shown in the figure above, move the TCP to the reference point of the specimen using the jog function.
@@ -89,8 +87,6 @@ If you want to use the same tool information but with different numbers, you can
 
 - Navigate to `[F2: System] - 4: Application parameter - 5: LVS tracking - 2: LVS Calibration`.<br>
 
-<p align="center">
-  <img src="../../_assets/8_5_8_lvs_tool_calibmat.png" width="80%"></img>
-  <em><p align="center">Figure 8.5.8. LVS Calibration Information</p></em>
-</p>   
+![](../../_assets/8_5_8_lvs_tool_calibmat.png)<br>
+*Figure 8.5.8. LVS Calibration Information*   
 </br>

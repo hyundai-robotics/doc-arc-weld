@@ -10,19 +10,15 @@ By recording the reference position using touch sensing, the shift of the workpi
 When using the master mode, a mster pose can be saved through reference teaching, and the shift amount is automatically calculated via touch sensing during actual operation.
 
 
-<p align="center">
- <img src="../../_assets/8_2_1.png"></img>
- <em><p align="center">Figure 8.2.1. Example of Touch Sensing</p></em>
-</p>
+![](../../_assets/8_2_1.png)<br>
+*Figure 8.2.1. Example of Touch Sensing*
 
 ### (1) Touch Sensing Types
 
 The touch sensing supports a total of 5-types, as shown in [Figure 8.2.1] (Butt, Fillet, V-groove, LR Center, and Groove Detections).
 
-<p align="center">
- <img src="../../_assets/8_2_2.png" width="90%"></img>
- <em><p align="center">Figure 8.2.2. Touch Sensing Types</p></em>
-</p>
+![](../../_assets/8_2_2.png)<br>
+*Figure 8.2.2. Touch Sensing Types*
 
 ### (2) Touch Sensing Command and Setting Parameters
 
@@ -71,10 +67,8 @@ In the touch sensing command, pressing on `Property` will bring up a winow as sh
 You can set conditions such as sensing distance, retreat distance, proceed distance, sensing speed, retreat speed, and detection type (contact,  release of contact), among others.  
 
 
-<p align="center">
- <img src="../../_assets/8_2_3.png" width="70%" ></img>
- <em><p align="center">Figure 8.2.3. Touch Sensing Condition Edit Screen</p></em>
-</p>
+![](../../_assets/8_2_3.png)<br>
+*Figure 8.2.3. Touch Sensing Condition Edit Screen*
 
 {% hint style="info" %}
   For detailed instructions on using the command and parameters, please refer to [2.13 touchsen](../../2_Command/13_touchsen.md) <br>
@@ -122,10 +116,8 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 
 #### [1] Fillet
 
-<p align="center">
- <img src="../../_assets/8_2_4.png" width="60%"></img>
- <em><p align="center">Figure 8.2.4. Example of Touch Sensing - Fillet</p></em>
-</p>
+![](../../_assets/8_2_4.png)<br>
+*Figure 8.2.4. Example of Touch Sensing - Fillet*
 
 - Examples of Command
 ```python
@@ -143,10 +135,8 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 
 #### [2] V Groove
 
-<p align="center">
- <img src="../../_assets/8_2_5.png" width="70%"></img>
- <em><p align="center">Figure 8.2.5. Example of Touch Sensing - V Groove</p></em>
-</p>   
+![](../../_assets/8_2_5.png)<br>
+*Figure 8.2.5. Example of Touch Sensing - V Groove*   
 
 - Examples of Command
 ```python
@@ -159,19 +149,15 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 - Sensing Sequence  
   - The sensing sequence proceeds as follows: upper left-right → middle return → bottom → bottom left-right → middle  
 
-<p align="center">
- <img src="../../_assets/8_2_6.png" width="60%"></img>
- <em><p align="center">Figure 8.2.6. Touch Sensing Sequence - V-Groove</p></em>
-</p>   
+![](../../_assets/8_2_6.png)<br>
+*Figure 8.2.6. Touch Sensing Sequence - V-Groove*   
 
 ---
  
 #### [3] BUTT
 
-<p align="center">
- <img src="../../_assets/8_2_7.png" width="30%"></img>
- <em><p align="center">Figure 8.2.7. Example of Touch Sensing - Butt</p></em>
-</p>   
+![](../../_assets/8_2_7.png)<br>
+*Figure 8.2.7. Example of Touch Sensing - Butt*   
 
 
 - Examples of Command
@@ -186,10 +172,8 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 - Sensing Sequence
   - The sensing sequence proceeds as follows: upper left-right → middle return → bottom → bottom left-right → middle  
 
-<p align="center">
- <img src="../../_assets/8_2_8.png" width="60%"></img>
- <em><p align="center">Figure 8.2.8. Touch Sensing Sequence - Butt</p></em>
-</p>   
+![](../../_assets/8_2_8.png)<br>
+*Figure 8.2.8. Touch Sensing Sequence - Butt*   
 
 
 
@@ -203,10 +187,8 @@ Angle specification rotates the entire search direction by the specified angle a
 [FIgure 8.2.9] shows an example where the Fillet and Groove detection workpieces are rotated by 30 degrees along the Y-axis or TL axis.
 
 
-<p align="center">
- <img src="../../_assets/8_2_9.png" width="300"></img>
- <em><p align="center">Figure 8.2.9. Example of Touch Sensing - Angle setting</p></em>
-</p>       
+![](../../_assets/8_2_9.png)<br>
+*Figure 8.2.9. Example of Touch Sensing - Angle setting*       
 
 - Examples of Command
 

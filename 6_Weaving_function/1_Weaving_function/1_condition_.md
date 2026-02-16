@@ -3,10 +3,8 @@
 When the cursor is placed above the `weaving ...` command, pressing the `[Property] key will display the weaving condition editing screen as shown below.  
 
 
-<p align="center">
- <img src="../../_assets/6_1_1.png" width="70%"></img>
- <em><p align="center">Figure 6.1.1. Weaving Condition Settings</p></em>
-</p>
+![](../../_assets/6_1_1.png)<br>
+*Figure 6.1.1. Weaving Condition Settings*
 
 ---
 

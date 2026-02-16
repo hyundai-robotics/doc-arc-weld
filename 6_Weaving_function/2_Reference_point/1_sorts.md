@@ -1,10 +1,8 @@
 ﻿# 6.2.1 Reference Point Type
 
 
-<p align="center">
-  <img src="../../_assets/6_2_1.png" width="50%"></img>
-  <em><p align="center">Figure 6.2.1. Weaving Coordinate System</p></em>
-</p> 
+![](../../_assets/6_2_1.png)<br>
+*Figure 6.2.1. Weaving Coordinate System* 
 
 
 ### (1)	refp 1  
@@ -39,10 +37,8 @@ The `refp 4` command sets the angle between the wall direction and the other dir
 When using this command to specify the angle, the value set in `Angle` will be ignored.
 
     
-<p align="center">
-  <img src="../../_assets/6_2_2.png" width="65%"></img>
-  <em><p align="center">Figure 6.2.2. Weaving Direction and Reference Point</p></em>
-</p> 
+![](../../_assets/6_2_2.png)<br>
+*Figure 6.2.2. Weaving Direction and Reference Point* 
     
 
 <p align="center">

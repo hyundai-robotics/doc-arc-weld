@@ -6,24 +6,18 @@ By entering the "Gap correction" tab in the properties window of the `arccond` c
 In the split window, clicking on "Arc interpolation" will display this setting as a graph.
 
 
-<p align="center">
-  <img src="../../_assets/8_1_3.png" width="70%"></img>
-  <em><p align="center">Figure 8.1.3. Arc Welding Condition(Gap correction) Dialog box</p></em>
-</p> 
+![](../../_assets/8_1_3.png)<br>
+*Figure 8.1.3. Arc Welding Condition(Gap correction) Dialog box* 
 
-<p align="center">
-  <img src="../../_assets/8_1_4.png" width="70%"></img>
-  <em><p align="center">Figure 8.1.4. Arc Interpolation Monitoring</p></em>
-</p> 
+![](../../_assets/8_1_4.png)<br>
+*Figure 8.1.4. Arc Interpolation Monitoring* 
 
 <br>
 
 The operation of this function is as follows:
 
-<p align="center">
-  <img src="../../_assets/8_1_5.png" width="70%"></img>
-  <em><p align="center">Figure 8.1.5. Welding Condition Interpolation Operation</p></em>
-</p> 
+![](../../_assets/8_1_5.png)<br>
+*Figure 8.1.5. Welding Condition Interpolation Operation* 
 
 <br>
  

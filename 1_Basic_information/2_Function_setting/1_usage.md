@@ -9,7 +9,5 @@
 (4) For detailed settings of the welder characteristic file, please refer to [4. Arc Welder Settings](../../4_Setting/README.md).
 
 
-<p align="center">
- <img src="../../_assets/1_2_1.png" width="70%"></img>
- <em><p align="center">Figure 1.2.1. Usage Setting Dialog</p></em>
-</p>
+![](../../_assets/1_2_1.png)<br>
+*Figure 1.2.1. Usage Setting Dialog*

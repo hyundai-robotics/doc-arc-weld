@@ -1,23 +1,17 @@
 ﻿# 8.6.3 STITCH Func. Parameter setting
 
 
-<p align="center">
- <img src="../../_assets/8_6_5.png" width="80%"></img>
- <em><p align="center">Figure 8.6.5. Stitch Welding Process Profile</p></em>
-</p>
+![](../../_assets/8_6_5.png)<br>
+*Figure 8.6.5. Stitch Welding Process Profile*
 
 
 [Figure 8.6.5] illustrates the stitch welding process. Based on this chart, you can configure the options for the `stitch` command.
 
-<p align="center">
- <img src="../../_assets/8_6_6.png" width="70%"></img>
- <em><p align="center">Figure 8.6.6. Stitch Welding Condition Dialog Box1 (General)</p></em>
-</p>
+![](../../_assets/8_6_6.png)<br>
+*Figure 8.6.6. Stitch Welding Condition Dialog Box1 (General)*
 
-<p align="center">
- <img src="../../_assets/8_6_7.png" width="70%"></img>
- <em><p align="center">Figure 8.6.7. Stitch Welding Condition Dialog Box2 (Section)</p></em>
-</p>
+![](../../_assets/8_6_7.png)<br>
+*Figure 8.6.7. Stitch Welding Condition Dialog Box2 (Section)*
 
 
 [Figure 8.6.6] shows the screen accessed by placing the cursor on the `stitch` command and pressing the `[Property]` button on the left side of the TP screen. [Figure 8.6.7] is accessed by selecting the `[Section]` tab from the previous screen.

@@ -39,8 +39,6 @@ The opration sequence of height sensing is as follows:
 
 
  
-<p align="center">
- <img src="../../_assets/8_4_1.png" width="40%"></img>
- <em><p align="center">Figure 8.4.1. Height Sensing Function Operation Sequence</p></em>
-</p>
+![](../../_assets/8_4_1.png)<br>
+*Figure 8.4.1. Height Sensing Function Operation Sequence*
 

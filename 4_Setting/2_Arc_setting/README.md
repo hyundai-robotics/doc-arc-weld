@@ -7,24 +7,18 @@ User can operate various welders together with our Arc Welding Robots. To suppor
 > The currently selected welder maker number is displayed. You can check the welder numbers for each maker by clicking the **[Welder information]** button. By clicking the **[Welder setting]** button on this screen, the condition editing screen for the selected welder will appear.
 
 
-<p align="center">
- <img src="../../_assets/1_2_1.png" width="70%"></img>
- <em><p align="center">Figure 4.2.1. Usage Setting Dialog box</p></em>
-</p> 
+![](../../_assets/1_2_1.png)<br>
+*Figure 4.2.1. Usage Setting Dialog box* 
 
 </br>
 
-<p align="center">
- <img src="../../_assets/4_2_2.png" width="70%"></img>
- <em><p align="center">Figure 4.2.2. Hyundai Welder Condition Settings</p></em>
-</p>   
+![](../../_assets/4_2_2.png)<br>
+*Figure 4.2.2. Hyundai Welder Condition Settings*   
 
 </br>
 
-<p align="center">
- <img src="../../_assets/4_2_3.png" width="70%"></img>
- <em><p align="center">Figure 4.2.3. Hyundai Welder I/O Signal Assignment</p></em>
-</p>   
+![](../../_assets/4_2_3.png)<br>
+*Figure 4.2.3. Hyundai Welder I/O Signal Assignment*   
 
 
 The welder condition screen provides editing functions related to welder characteristics, so the editable items differ by welder. The following items are commonly editable in the welder condition screen.

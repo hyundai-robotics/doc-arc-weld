@@ -49,10 +49,8 @@ When using our Arc Welding Robots for the first time, we recommend reading Chapt
 Teach the Arc welding operation as shown in the following figure.
 
 
-<p align="center">
-  <img src="../../_assets/1_1_1.png" width="60%"></img>
-  <em><p align="center">Figure 1.1.1. Basic Arc Weld Teaching</p></em>
-</p>
+![](../../_assets/1_1_1.png)<br>
+*Figure 1.1.1. Basic Arc Weld Teaching*
 
 </br>
 
@@ -64,10 +62,8 @@ Teach the Arc welding operation as shown in the following figure.
 
 (4) If you proceed this far, the TP screen will be displayed as shown below.
 
-<p align="center">
-  <img src="../../_assets/1_1_2.png" width="70%"></img>
-  <em><p align="center">Figure 1.1.2. Screen with new program number selected</p></em>
-</p>
+![](../../_assets/1_1_2.png)<br>
+*Figure 1.1.2. Screen with new program number selected*
 
 </br>
 
@@ -81,29 +77,23 @@ Teach the Arc welding operation as shown in the following figure.
 - press the `[tool]` key and enter the desired tool number.
 
 
-<p align="center">
- <img src="../../_assets/1_1_3.png" width="40%"></img>
- <em><p align="center">Figure 1.1.3. Recording Conditions</p></em>
-</p>
+![](../../_assets/1_1_3.png)<br>
+*Figure 1.1.3. Recording Conditions*
 
 </br>
 
 - Press the `[rec. cond]` key to record the step as shown below.
 
-<p align="center">
- <img src="../../_assets/1_1_4.png" width="70%"></img>
- <em><p align="center">Figure 1.1.4. Program with recorded Step (1)</p></em>
-</p>
+![](../../_assets/1_1_4.png)<br>
+*Figure 1.1.4. Program with recorded Step (1)*
 
 </br>
 
 (8)	Repeat steps 5 through 7 for steps 2 through 4.
  
 
-<p align="center">
- <img src="../../_assets/1_1_5.png" width="70%"></img>
- <em><p align="center">Figure 1.1.5. Program with recorded Step (2)</p></em>
-</p>
+![](../../_assets/1_1_5.png)<br>
+*Figure 1.1.5. Program with recorded Step (2)*
 
 (9) Since the welding area is from Step 2 to Step 3, move the cursor to Step 2.
 
@@ -122,10 +112,8 @@ Teach the Arc welding operation as shown in the following figure.
 
 (12) Finally, enter the `[F6: cmd. input] - flowctrl - end` command to terminate the program.
 
-<p align="center">
- <img src="../../_assets/1_1_6.png" width="70%"></img>
- <em><p align="center">Figure 1.1.6. Teaching Completion Screen</p></em>
-</p>
+![](../../_assets/1_1_6.png)<br>
+*Figure 1.1.6. Teaching Completion Screen*
 [__SOURCE](1_Basic_information/2_Function_setting/README.md)
 # 1.2 Arc Welding function settings
 [__SOURCE](1_Basic_information/2_Function_setting/1_usage.md)
@@ -140,20 +128,16 @@ Teach the Arc welding operation as shown in the following figure.
 (4) For detailed settings of the welder characteristic file, please refer to [4. Arc Welder Settings](../../4_Setting/README.md).
 
 
-<p align="center">
- <img src="../../_assets/1_2_1.png" width="70%"></img>
- <em><p align="center">Figure 1.2.1. Usage Setting Dialog</p></em>
-</p>
+![](../../_assets/1_2_1.png)<br>
+*Figure 1.2.1. Usage Setting Dialog*
 [__SOURCE](1_Basic_information/2_Function_setting/2_signals_functions.md)
 # 1.2.2 Arc Welding various signals and funtion settings
 
 On the manual mode screen, press `[F2: System] - 4: Application parameter - 2: Arc welding` to bring up a screen where you can set various conditions for Arc welding applications, as shown below.
 
 
-<p align="center">
- <img src="../../_assets/1_2_2.png" width="70%"></img>
- <em><p align="center">Figure 1.2.2. Arc Welding Application parameter Dialog</p></em>
-</p>
+![](../../_assets/1_2_2.png)<br>
+*Figure 1.2.2. Arc Welding Application parameter Dialog*
  
 
 The details for each item are as follows:
@@ -255,10 +239,8 @@ If the tool collides and the collision sensor signal turns on, the motor will no
 - `[F2: System] - 2: Control parameter - 2: Input/Output signal setting - 1: Input signal attribute` - Adding a Signal and Checking the Negative Logic Box  
 
 
-<p align="center">
- <img src="../../_assets/1_2_3.png" width="70%"></img>
- <em><p align="center">Figure 1.2.3. How to Change Signal Logic</p></em>
-</p>
+![](../../_assets/1_2_3.png)<br>
+*Figure 1.2.3. How to Change Signal Logic*
 
 {% hint style="info" %}
 When you set up a collision sensor in the system's input signal settings, the system will prioritize the input from this signal. Any collision sensor signals received via welder communication will be ignored.
@@ -354,10 +336,8 @@ The detailed content and setup method for this function are as follows:  <br/>
 
 ### Entering the Arc Welding Current/Voltage Change Dialog Box
 
-<p align="center">
- <img src="../../_assets/1_3_1.png" width="70%"></img>
- <em><p align="center">Figure 1.3.1. Arc Weld program and Change I/V</p></em>
-</p>
+![](../../_assets/1_3_1.png)<br>
+*Figure 1.3.1. Arc Weld program and Change I/V*
 
 <br>
 
@@ -411,10 +391,8 @@ The detailed content and setup method for this function are as follows:  <br/>
 
 The details for each item in the dialog box are as shown in the following figure.
 
-<p align="center">
- <img src="../../_assets/1_3_2.png" width="70%"></img>
- <em><p align="center">Figure 1.3.2. Arc Welding Change I/V dialog box</p></em>
-</p>
+![](../../_assets/1_3_2.png)<br>
+*Figure 1.3.2. Arc Welding Change I/V dialog box*
 
 {% hint style="info" %}
 - Current/Voltage changes are saved only to the welding Start Conditions, not to the End Conditions.
@@ -464,10 +442,8 @@ The Arc Welding Signal Test function lets you test the input/output status of ke
 To use this feature, on TP, press `[pane layout] - select - arc welding` sequentially. In the Arc Welding panel, scroll down to see the input/output signal items.
 
 
-<p align="center">
- <img src="../../_assets/1_3_3.png" width="70%"></img>
- <em><p align="center">Figure 1.3.3. Arc Welding Monitoring</p></em>
-</p>
+![](../../_assets/1_3_3.png)<br>
+*Figure 1.3.3. Arc Welding Monitoring*
 
 | Item | Description |
 | ------------- | ---------------------------------------------------------- |
@@ -483,10 +459,8 @@ This function allows you to monitor the operational information of arc welding. 
 To use this feature, on TP, press `[pane layout] - select - arc operation info.` sequentially. 
 
 
-<p align="center">
- <img src="../../_assets/1_3_4.png" width="70%"></img>
- <em><p align="center">Figure 1.3.4. Arc Welding Operation Information Monitoring</p></em>
-</p>  
+![](../../_assets/1_3_4.png)<br>
+*Figure 1.3.4. Arc Welding Operation Information Monitoring*  
 
 | Item | Description |
 | --- | --- |
@@ -1340,10 +1314,8 @@ Similarly, after placing the cursor on a specific command and entering the `[Pro
 If you wish to save the changes and exit, press `[OK]`; if you wish to exit without saving, press the `[ESC]` key on the teaching pendant.
 
 
-<p align="center">
- <img src="../_assets/3_1_1.png" width="65%"></img>
- <em><p align="center">Figure 3.1.1. Property in Robot Program Command</p></em>
-</p>
+![](../_assets/3_1_1.png)<br>
+*Figure 3.1.1. Property in Robot Program Command*
 
 
 {% hint style="info" %}
@@ -1367,10 +1339,8 @@ Follow the steps below to connect the PC and controller using an Ethernet cable:
 4. Right-click the cifx icon and select **network scan**.
 
 
-<p align="center">
- <img src="../../_assets/4_1_1.png" width="60%"></img>
- <em><p align="center">Figure 4.1.1. Sycon Communication Status</p></em>
-</p>  
+![](../../_assets/4_1_1.png)<br>
+*Figure 4.1.1. Sycon Communication Status*  
 
 After completing the below steps, the sycon screen will appear as shown above. (when connected to Hyundai PNS Welder)
 
@@ -1396,24 +1366,18 @@ User can operate various welders together with our Arc Welding Robots. To suppor
 > The currently selected welder maker number is displayed. You can check the welder numbers for each maker by clicking the **[Welder information]** button. By clicking the **[Welder setting]** button on this screen, the condition editing screen for the selected welder will appear.
 
 
-<p align="center">
- <img src="../../_assets/1_2_1.png" width="70%"></img>
- <em><p align="center">Figure 4.2.1. Usage Setting Dialog box</p></em>
-</p> 
+![](../../_assets/1_2_1.png)<br>
+*Figure 4.2.1. Usage Setting Dialog box* 
 
 </br>
 
-<p align="center">
- <img src="../../_assets/4_2_2.png" width="70%"></img>
- <em><p align="center">Figure 4.2.2. Hyundai Welder Condition Settings</p></em>
-</p>   
+![](../../_assets/4_2_2.png)<br>
+*Figure 4.2.2. Hyundai Welder Condition Settings*   
 
 </br>
 
-<p align="center">
- <img src="../../_assets/4_2_3.png" width="70%"></img>
- <em><p align="center">Figure 4.2.3. Hyundai Welder I/O Signal Assignment</p></em>
-</p>   
+![](../../_assets/4_2_3.png)<br>
+*Figure 4.2.3. Hyundai Welder I/O Signal Assignment*   
 
 
 The welder condition screen provides editing functions related to welder characteristics, so the editable items differ by welder. The following items are commonly editable in the welder condition screen.
@@ -1446,10 +1410,8 @@ Arc welding conditions are structed as follows:
 
 This is the Time Flowchart for digital Arc Welding. For each condition setting, please refer to the dialog box desciptions for each command below.
  
-<p align="center">
- <img src="../../_assets/5_2_1.png" width="80%"></img>
- <em><p align="center">Figure 5.2.1. Digital Arc Welding FlowChart</p></em>
-</p>
+![](../../_assets/5_2_1.png)<br>
+*Figure 5.2.1. Digital Arc Welding FlowChart*
 
 
 [__SOURCE](5_Condition_editing/3_Start_condition/README.md)
@@ -1459,22 +1421,16 @@ This is the Time Flowchart for digital Arc Welding. For each condition setting, 
 When the arc welding settings are digital and the cursor is placed on the command line `arcon cnd=_`, pressing the [property] key will bring up the editing screen for the welding start conditions.
 
  
-<p align="center">
- <img src="../../_assets/5_3_1.png" width="70%"></img>
- <em><p align="center">Figure 5.3.1. Hyosung welder setting</p></em>
-</p>  
+![](../../_assets/5_3_1.png)<br>
+*Figure 5.3.1. Hyosung welder setting*  
 
 
-<p align="center">
- <img src="../../_assets/5_3_2.png" width="70%"></img>
- <em><p align="center">Figure 5.3.2. Fronius welder setting</p></em>
-</p>  
+![](../../_assets/5_3_2.png)<br>
+*Figure 5.3.2. Fronius welder setting*  
 
  
-<p align="center">
- <img src="../../_assets/5_3_3.png" width="70%"></img>
- <em><p align="center">Figure 5.3.3. EWM welder setting</p></em>
-</p>
+![](../../_assets/5_3_3.png)<br>
+*Figure 5.3.3. EWM welder setting*
 
  
 
@@ -1752,10 +1708,8 @@ Set whether to use the lift arc function at the start of welding. Using the lift
 When the arc welding settings are digital and [End condition] tab is pressed in the welding start condition dialog box, the following welding end condition editing screen appears.
 
 
-<p align="center">
- <img src="../../_assets/5_4_1.png" width="70%"></img>
- <em><p align="center">Figure 5.4.1. Welding End Condition Setting (e.g. EWM)</p></em>
-</p> 
+![](../../_assets/5_4_1.png)<br>
+*Figure 5.4.1. Welding End Condition Setting (e.g. EWM)* 
 
 
 After editing the welding end conditions, pressing the `[ESC]` key will close the dialog box without saving the changes, while pressing `[OK]` key will save the settings and close the dialog box.
@@ -1797,10 +1751,8 @@ Set the voltage value to be output during crater treatment. The voltage is speci
 ### (4)	Downslope Time(Crate Time): [0] sec (Range: 0.0 ~ 10.0)  
 Sets the time for processing the current change between the main condition and the end condition as a slope.
 
-<p align="center">
- <img src="../../_assets/5_4_2.png" width="30%"></img>
- <em><p align="center">Figure 5.4.2. DownSlope Time and Crate Time Chart</p></em>
-</p>
+![](../../_assets/5_4_2.png)<br>
+*Figure 5.4.2. DownSlope Time and Crate Time Chart*
 
 ### (5)	Condition Hold time: [1] second (Range: 0.1 ~ 10.0)   
 Set the time to maintain the output value specified in the 'current ratio' item under the welding end condition.
@@ -1843,10 +1795,8 @@ When the arc welding settings are digital and [Auxiliary condition] tab is press
 There may be cases where the arc does not ignite due to foreign materials attached near the weld start point of the base material when starting arc welding. The retry function automatically attempts to reignite the arc in such cases of arc ignition failure, enabling continuous operation without robot stoppage.
 
   
-<p align="center">
- <img src="../../_assets/5_5_1.png" width="70%"></img>
- <em><p align="center">Figure 5.5.1. Welding Auxiliary condition (Retry) Setting(e.g. EWM)</p></em>
-</p>
+![](../../_assets/5_5_1.png)<br>
+*Figure 5.5.1. Welding Auxiliary condition (Retry) Setting(e.g. EWM)*
 
 {% hint style="info" %}
 [Note]   
@@ -1891,10 +1841,8 @@ The left section of [Figure 5.5.1] represents the retry conditions in the weldin
   When the operation mode is set to Shift, this is the distance the torch moves during the retry.  
     
 
-<p align="center">
- <img src="../../_assets/5_5_2.png" width="80%"></img>
- <em><p align="center">Figure 5.5.2 Retry Function Sequence</p></em>
-</p>
+![](../../_assets/5_5_2.png)<br>
+*Figure 5.5.2 Retry Function Sequence*
 
 
 [__SOURCE](5_Condition_editing/5_Aux_condition/2_restart.md)
@@ -1910,10 +1858,8 @@ It moves backward along the weld line for a certain distance and then resumes we
 This section describes the restart conditions and overlap settings.
 
  
-<p align="center">
- <img src="../../_assets/5_5_3.png" width="70%"></img>
- <em><p align="center">Figure 5.5.3. Welding Auxiliary condition (Restart) Setting(e.g. EWM)</p></em>
-</p>
+![](../../_assets/5_5_3.png)<br>
+*Figure 5.5.3. Welding Auxiliary condition (Restart) Setting(e.g. EWM)*
 
 
 ### (1)	Restart Repetition: [ 3 ] times (Range: 0 ~ 9)   
@@ -1941,10 +1887,8 @@ However, if an error occurs during the overlap welding, the robot will not repea
 
 ---
 
-<p align="center">
- <img src="../../_assets/5_5_4.png" width="80%"></img>
- <em><p align="center">Figure 5.5.4. Restart Function Sequence</p></em>
-</p>
+![](../../_assets/5_5_4.png)<br>
+*Figure 5.5.4. Restart Function Sequence*
 
 
 ### (6)	Overlap Condition Settings  
@@ -1989,10 +1933,8 @@ The weaving function is used in arc welding to widen the weld bead width. The de
 When the cursor is placed above the `weaving ...` command, pressing the `[Property] key will display the weaving condition editing screen as shown below.  
 
 
-<p align="center">
- <img src="../../_assets/6_1_1.png" width="70%"></img>
- <em><p align="center">Figure 6.1.1. Weaving Condition Settings</p></em>
-</p>
+![](../../_assets/6_1_1.png)<br>
+*Figure 6.1.1. Weaving Condition Settings*
 
 ---
 
@@ -2062,10 +2004,8 @@ If an auxiliary axis is selected, the auxiliary axis specified in the 'Auxiliary
 
 Set the pattern shape of the weaving as shown in the following figure.
  
-<p align="center">
-  <img src="../../_assets/6_1_2.png" width="60%"></img>
-  <em><p align="center">Figure 6.1.2. Weaving Pattern Type</p></em>
-</p>
+![](../../_assets/6_1_2.png)<br>
+*Figure 6.1.2. Weaving Pattern Type*
 
 
 [__SOURCE](6_Weaving_function/1_Weaving_function/3_frequency.md)
@@ -2132,10 +2072,8 @@ This refers to the angle of the weaving vibration direction relative to the weld
 When set to 0°, the weaving will move perpendicular to the welding line.
 
 
-<p align="center">
-  <img src="../../_assets/6_1_4.png" width="60%"></img>
-  <em><p align="center">Figure 6.1.4. Weaving Forward Angle</p></em>
-</p>
+![](../../_assets/6_1_4.png)<br>
+*Figure 6.1.4. Weaving Forward Angle*
 
     
 ### (7)	Boundary Limitation
@@ -2144,10 +2082,8 @@ For weaving with a forward angle other than 0°, the weaving may exceed the boun
 The boundary limitation setting allows you to choose whether the weaving should be confined within the section boundaries or if it can proceed without any restrictions beyond the section boundaries.
 
  
-<p align="center">
-  <img src="../../_assets/6_1_5.png" width="60%"></img>
-  <em><p align="center">Figure 6.1.5 Weaving Boundary Limitation</p></em>
-</p> 
+![](../../_assets/6_1_5.png)<br>
+*Figure 6.1.5 Weaving Boundary Limitation* 
 
 [__SOURCE](6_Weaving_function/1_Weaving_function/5_weaving_section.md)
 # 6.1.5 Weaving Section Setting
@@ -2160,20 +2096,16 @@ In this state, you can configure whether the robot will continue to move or stop
 If set to **Move**, the robot behaves as shown on the left in the figure; if set to **Stop**, the behavior is as shown on the right.  
 
 
-<p align="center">
-  <img src="../../_assets/6_1_8.png" width="40%"></img>
-  <em><p align="center">Figure 6.1.8. Robot Behavior when Weaving Stops</p></em>
-</p> 
+![](../../_assets/6_1_8.png)<br>
+*Figure 6.1.8. Robot Behavior when Weaving Stops* 
 
 ### (2)	Move Time
 
 This setting defines the move time for each section when "Frequency" is set to '0'.
 The move time for unused sections (e.g., sections 3 and 4 in simple oscillation) will be ignored.
 
-<p align="center">
-  <img src="../../_assets/6_1_7.png" width="90%"></img>
-  <em><p align="center">Figure 6.1.7. Movement Section by Weaving Pattern</p></em>
-</p> 
+![](../../_assets/6_1_7.png)<br>
+*Figure 6.1.7. Movement Section by Weaving Pattern* 
 
 
 ### (3)	Timer (Weaving Stop)
@@ -2188,10 +2120,8 @@ When the weaving frequency is set, the robot's move time during the weaving cycl
 {% endhint %}
  
  
-<p align="center">
-  <img src="../../_assets/6_1_8.png"  width="40%"></img>
-  <em><p align="center">Figure 6.1.8. Trajectory Example When Timer is Set</p></em>
-</p>   
+![](../../_assets/6_1_8.png)<br>
+*Figure 6.1.8. Trajectory Example When Timer is Set*   
 
 {% hint style="warning" %}
   if "Robot Behavior when Weaving Stops" is set to **Stop**, the movement trajectory also stops, but the robot's speed remains the same.
@@ -2215,10 +2145,8 @@ However, in some cases, such as when the welding start pose, the shape of the ba
 # 6.2.1 Reference Point Type
 
 
-<p align="center">
-  <img src="../../_assets/6_2_1.png" width="50%"></img>
-  <em><p align="center">Figure 6.2.1. Weaving Coordinate System</p></em>
-</p> 
+![](../../_assets/6_2_1.png)<br>
+*Figure 6.2.1. Weaving Coordinate System* 
 
 
 ### (1)	refp 1  
@@ -2253,10 +2181,8 @@ The `refp 4` command sets the angle between the wall direction and the other dir
 When using this command to specify the angle, the value set in `Angle` will be ignored.
 
     
-<p align="center">
-  <img src="../../_assets/6_2_2.png" width="65%"></img>
-  <em><p align="center">Figure 6.2.2. Weaving Direction and Reference Point</p></em>
-</p> 
+![](../../_assets/6_2_2.png)<br>
+*Figure 6.2.2. Weaving Direction and Reference Point* 
     
 
 <p align="center">
@@ -2327,20 +2253,16 @@ This feature allows for smooth control of heat input (weld deposit) by adjusting
   The functionality is supported from version 60.30-00.
 {% endhint %}  
 
-<p align="center">
-  <img src="../../_assets/6_3_1_weav_sync_out.png" width="90%"></img>
-  <em><p align="center">그림 6.3.1. Example of Weaving Sync Output Function</p></em>
-</p>   
+![](../../_assets/6_3_1_weav_sync_out.png)<br>
+*그림 6.3.1. Example of Weaving Sync Output Function*   
 
 As shown in the figure above, this feature is used when it is necessary to control the heat input and weld deposit during left and right weaving, or when the bead shape needs to be adjusted.
 
 To use this feature, enter the `[Property] window of the `weaving` command and configure the following settings.
 
 
-<p align="center">
-  <img src="../../_assets/6_3_2_weav_sync_out_setting.png" width="90%"></img>
-  <em><p align="center">Figure 6.3.2. Weaving Sync Output Function Settings</p></em>
-</p>   
+![](../../_assets/6_3_2_weav_sync_out_setting.png)<br>
+*Figure 6.3.2. Weaving Sync Output Function Settings*   
 
 <table>
   <thead>
@@ -2392,10 +2314,8 @@ Our controller offers 2-type of monitoring functions for welding data monitoring
 
 This function allows you to check detailed data related to arc welding. The information provided may vary depending on the set welder, so the monitoring window may differ based on the configured welder. If a communication error occurs with the welder or if there is no communication connection, the "Welder Error Code" or "Welder Communication Status" items will be displayed with a red background. The following data can be monitored in the detailed information monitoring.
 
-<p align="center">
- <img src="../../_assets/7_1_1.png" width="70%"></img>
- <em><p align="center">Figure 7.1.1. Arc Welding Detailed Information Monitoring</p></em>
-</p>
+![](../../_assets/7_1_1.png)<br>
+*Figure 7.1.1. Arc Welding Detailed Information Monitoring*
 
 1. Current Input: The commanded welding current sent from the robot to the welder (A)
 
@@ -2436,10 +2356,8 @@ Arc welding data graph displays information related to the welding data's wavefo
 To use this feature, on TP, press `[pane layout] - select - arc data graph` sequentially. 
 
  
-<p align="center">
- <img src="../../_assets/7_1_2.png" width="70%"></img>
- <em><p align="center">Figure 7.1.2. Arc Welding data graph</p></em>
-</p>
+![](../../_assets/7_1_2.png)<br>
+*Figure 7.1.2. Arc Welding data graph*
 
 The following items can be checked in the monitoring window:
 
@@ -2499,10 +2417,8 @@ The stepped change function can be used in the command arguments as follows:
 In the command above, by entering the properties window, you can view the following configuration window.
 
  
-<p align="center">
- <img src="../../_assets/8_1_1.png" width="70%"></img>
- <em><p align="center">Figure 8.1.1. Arc Welding Condition Dialog</p></em>
-</p> 
+![](../../_assets/8_1_1.png)<br>
+*Figure 8.1.1. Arc Welding Condition Dialog* 
 
 <br>
 
@@ -2529,10 +2445,8 @@ For example, this function allows for linear interpolation of welding condition(
 In this case, the continuous change of welding conditions (L interpolation) is performed in a linear fashion as shown below.
 
  
-<p align="center">
- <img src="../../_assets/8_1_2.png" width="70%"></img>
- <em><p align="center">Figure 8.1.2. Linear Interpolation of Welding Conditions</p></em>
-</p> 
+![](../../_assets/8_1_2.png)<br>
+*Figure 8.1.2. Linear Interpolation of Welding Conditions* 
 
 <br>
 
@@ -2559,24 +2473,18 @@ By entering the "Gap correction" tab in the properties window of the `arccond` c
 In the split window, clicking on "Arc interpolation" will display this setting as a graph.
 
 
-<p align="center">
-  <img src="../../_assets/8_1_3.png" width="70%"></img>
-  <em><p align="center">Figure 8.1.3. Arc Welding Condition(Gap correction) Dialog box</p></em>
-</p> 
+![](../../_assets/8_1_3.png)<br>
+*Figure 8.1.3. Arc Welding Condition(Gap correction) Dialog box* 
 
-<p align="center">
-  <img src="../../_assets/8_1_4.png" width="70%"></img>
-  <em><p align="center">Figure 8.1.4. Arc Interpolation Monitoring</p></em>
-</p> 
+![](../../_assets/8_1_4.png)<br>
+*Figure 8.1.4. Arc Interpolation Monitoring* 
 
 <br>
 
 The operation of this function is as follows:
 
-<p align="center">
-  <img src="../../_assets/8_1_5.png" width="70%"></img>
-  <em><p align="center">Figure 8.1.5. Welding Condition Interpolation Operation</p></em>
-</p> 
+![](../../_assets/8_1_5.png)<br>
+*Figure 8.1.5. Welding Condition Interpolation Operation* 
 
 <br>
  
@@ -2618,19 +2526,15 @@ By recording the reference position using touch sensing, the shift of the workpi
 When using the master mode, a mster pose can be saved through reference teaching, and the shift amount is automatically calculated via touch sensing during actual operation.
 
 
-<p align="center">
- <img src="../../_assets/8_2_1.png"></img>
- <em><p align="center">Figure 8.2.1. Example of Touch Sensing</p></em>
-</p>
+![](../../_assets/8_2_1.png)<br>
+*Figure 8.2.1. Example of Touch Sensing*
 
 ### (1) Touch Sensing Types
 
 The touch sensing supports a total of 5-types, as shown in [Figure 8.2.1] (Butt, Fillet, V-groove, LR Center, and Groove Detections).
 
-<p align="center">
- <img src="../../_assets/8_2_2.png" width="90%"></img>
- <em><p align="center">Figure 8.2.2. Touch Sensing Types</p></em>
-</p>
+![](../../_assets/8_2_2.png)<br>
+*Figure 8.2.2. Touch Sensing Types*
 
 ### (2) Touch Sensing Command and Setting Parameters
 
@@ -2679,10 +2583,8 @@ In the touch sensing command, pressing on `Property` will bring up a winow as sh
 You can set conditions such as sensing distance, retreat distance, proceed distance, sensing speed, retreat speed, and detection type (contact,  release of contact), among others.  
 
 
-<p align="center">
- <img src="../../_assets/8_2_3.png" width="70%" ></img>
- <em><p align="center">Figure 8.2.3. Touch Sensing Condition Edit Screen</p></em>
-</p>
+![](../../_assets/8_2_3.png)<br>
+*Figure 8.2.3. Touch Sensing Condition Edit Screen*
 
 {% hint style="info" %}
   For detailed instructions on using the command and parameters, please refer to [2.13 touchsen](../../2_Command/13_touchsen.md) <br>
@@ -2730,10 +2632,8 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 
 #### [1] Fillet
 
-<p align="center">
- <img src="../../_assets/8_2_4.png" width="60%"></img>
- <em><p align="center">Figure 8.2.4. Example of Touch Sensing - Fillet</p></em>
-</p>
+![](../../_assets/8_2_4.png)<br>
+*Figure 8.2.4. Example of Touch Sensing - Fillet*
 
 - Examples of Command
 ```python
@@ -2751,10 +2651,8 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 
 #### [2] V Groove
 
-<p align="center">
- <img src="../../_assets/8_2_5.png" width="70%"></img>
- <em><p align="center">Figure 8.2.5. Example of Touch Sensing - V Groove</p></em>
-</p>   
+![](../../_assets/8_2_5.png)<br>
+*Figure 8.2.5. Example of Touch Sensing - V Groove*   
 
 - Examples of Command
 ```python
@@ -2767,19 +2665,15 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 - Sensing Sequence  
   - The sensing sequence proceeds as follows: upper left-right → middle return → bottom → bottom left-right → middle  
 
-<p align="center">
- <img src="../../_assets/8_2_6.png" width="60%"></img>
- <em><p align="center">Figure 8.2.6. Touch Sensing Sequence - V-Groove</p></em>
-</p>   
+![](../../_assets/8_2_6.png)<br>
+*Figure 8.2.6. Touch Sensing Sequence - V-Groove*   
 
 ---
  
 #### [3] BUTT
 
-<p align="center">
- <img src="../../_assets/8_2_7.png" width="30%"></img>
- <em><p align="center">Figure 8.2.7. Example of Touch Sensing - Butt</p></em>
-</p>   
+![](../../_assets/8_2_7.png)<br>
+*Figure 8.2.7. Example of Touch Sensing - Butt*   
 
 
 - Examples of Command
@@ -2794,10 +2688,8 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 - Sensing Sequence
   - The sensing sequence proceeds as follows: upper left-right → middle return → bottom → bottom left-right → middle  
 
-<p align="center">
- <img src="../../_assets/8_2_8.png" width="60%"></img>
- <em><p align="center">Figure 8.2.8. Touch Sensing Sequence - Butt</p></em>
-</p>   
+![](../../_assets/8_2_8.png)<br>
+*Figure 8.2.8. Touch Sensing Sequence - Butt*   
 
 
 
@@ -2811,10 +2703,8 @@ Angle specification rotates the entire search direction by the specified angle a
 [FIgure 8.2.9] shows an example where the Fillet and Groove detection workpieces are rotated by 30 degrees along the Y-axis or TL axis.
 
 
-<p align="center">
- <img src="../../_assets/8_2_9.png" width="300"></img>
- <em><p align="center">Figure 8.2.9. Example of Touch Sensing - Angle setting</p></em>
-</p>       
+![](../../_assets/8_2_9.png)<br>
+*Figure 8.2.9. Example of Touch Sensing - Angle setting*       
 
 - Examples of Command
 
@@ -2925,10 +2815,8 @@ Or, instead of using the starting position current reference value, **the user c
 ```  
 <br/>
 
-<p align="center">
- <img src="../../_assets/8_3_1.png" width="70%"></img>
- <em><p align="center">Figure 8.3.1. Arc Sensing Concept</p></em>
-</p>
+![](../../_assets/8_3_1.png)<br>
+*Figure 8.3.1. Arc Sensing Concept*
 
 As shown in the figure, when the torch is tilted to the left or right, the current weavform changes, and this can be used to track the seam in the left and right directions.
 Additionally, the current at the middle of the weaving section can be used to correct the vertical direction.
@@ -2991,10 +2879,8 @@ In the `Weaving` command, clickin on [Properties] opens the Weaving Condition Ed
 The second tab of this window is where settings related to arc sensing during weaving can be configured, as shown below.  
 
 
-<p align="center">
- <img src="../../_assets/8_3_2.png" width="70%"></img>
- <em><p align="center">Figure 8.3.2. Arc Sensing Condition(General) Dialog Box</p></em>
-</p>
+![](../../_assets/8_3_2.png)<br>
+*Figure 8.3.2. Arc Sensing Condition(General) Dialog Box*
 
 The settings and operation methods for each item are as follows:  
 
@@ -3081,10 +2967,8 @@ In the third tab of the Weaving Condition Edit Screen, advanced settings can be 
 ```It is recommended to use the default values in this tab whenver possible.```
 
 
-<p align="center">
- <img src="../../_assets/8_3_3.png" width="70%"></img>
- <em><p align="center">Figure 8.3.3. Arc Sensing Condition(Advanced) Dialog Box</p></em>
-</p>
+![](../../_assets/8_3_3.png)<br>
+*Figure 8.3.3. Arc Sensing Condition(Advanced) Dialog Box*
 
 
 The settings and operation methods for each item are as follows:
@@ -3134,10 +3018,8 @@ This setting defines the margin for determining abnormal current values from the
 As shown in the figure below, the range is based on 'Q1 - 1.5 * IQR' for the lower bound and 'Q3 + 1.5 * IQR' for the upper bound.
 
 
-<p align="center">
-  <img src="../../_assets/8_3_4.png" width="40%"></img>
-  <em><p align="center">Figure 8.3.4. Abnormal Detection Margin</p></em>
-</p>
+![](../../_assets/8_3_4.png)<br>
+*Figure 8.3.4. Abnormal Detection Margin*
 <br>
 
 ### (7) Detection Time: [10 ~ 1000] ms
@@ -3190,10 +3072,8 @@ Enter the `[Property] window of the weaving command and set the wall direction t
 Enter the Arc Sensing (General) in the property window of the weaving command, set the type to "Welding Seam Estimation & Current Difference", and set both the left/right and up/down sensitivities to -1.  
 
 
-<p align="center">
-  <img src="../../_assets/8_3_5.png" width="70%"></img>
-  <em><p align="center">Figure 8.3.5. Arc Sensing Calibration</p></em>
-</p>
+![](../../_assets/8_3_5.png)<br>
+*Figure 8.3.5. Arc Sensing Calibration*
 <br>
 
 
@@ -3224,19 +3104,15 @@ Repeat Steps 2 through 5 for frequencies ranging from 0.5 Hz ~ 3.0 Hz.
 After completing this process, you can check the arc sensing (delay table tracking gain) results on the forth tab of the weaving condition editing screen.
 
 
-<p align="center">
- <img src="../../_assets/8_3_6.png" width="70%"></img>
- <em><p align="center">Figure 8.3.6. Arc Sensing Condition Tab(Tracking gain) Dialog Box</p></em>
-</p>
+![](../../_assets/8_3_6.png)<br>
+*Figure 8.3.6. Arc Sensing Condition Tab(Tracking gain) Dialog Box*
 <br>
 
 
 At this time, the delay time value represents the degree of current lead or lag.
 
-<p align="center">
- <img src="../../_assets/8_3_6-2.png" width="70%"></img>
- <em><p align="center">Figure 8.3.6-2. Meaning of Arc Sensing Delay Time</p></em>
-</p>
+![](../../_assets/8_3_6-2.png)<br>
+*Figure 8.3.6-2. Meaning of Arc Sensing Delay Time*
 <br>
 
 
@@ -3364,10 +3240,8 @@ This feature is only available when the Arc Sensing license is valid.
 
 ### (2)	Explanation of Monitoring Items
 
-<p align="center">
- <img src="../../_assets/8_3_7.png" width="50%"></img>
- <em><p align="center">Figure 8.3.7 Arc Sensing Monitoring</p></em>
-</p>
+![](../../_assets/8_3_7.png)<br>
+*Figure 8.3.7 Arc Sensing Monitoring*
 
 - Left/Right Tracking: Displays the left and right distance to be corrected, calculated based on the tracking speed, distance, and current diffrential in the left-right direction by sensing.
 
@@ -3404,24 +3278,18 @@ The trajectory of this pass is tehn saved, and the stored trajectory is shifted 
 Since the position of the multi-pass work program is the same as that of the root pass trajectory, it is easy to perform multi-pass welding by simply copying the root pass work program and inserting the multi-pass command.
 
 
-<p align="center">
-  <img src="../../_assets/8_3_8.png" width="60%"></img>
-  <em><p align="center">Figure 8.3.8 Root Pass Arc sensing (left) and Multi-pass welding for 2-3 layers</p></em>
-</p>
+![](../../_assets/8_3_8.png)<br>
+*Figure 8.3.8 Root Pass Arc sensing (left) and Multi-pass welding for 2-3 layers*
 
-<p align="center">
-  <img src="../../_assets/8_3_9.png" width="60%"></img>
-  <em><p align="center">Figure 8.3.9 Actual Multi-Pass Welding</p></em>
-</p>
+![](../../_assets/8_3_9.png)<br>
+*Figure 8.3.9 Actual Multi-Pass Welding*
 
 When creating multi-pass beads in a stacked, inclined configuration as shown in Figure 2 above, welding can be performed by modifying only the start and end points of the weld and slightly shifting them.  
 This will result in a stacked configuration as shown below.
 
 
-<p align="center">
-  <img src="../../_assets/8_3_10.png" width="60%"></img>
-  <em><p align="center">Figure 8.3.10 Multi-pass Stacked Shape with Inclination</p></em>
-</p>
+![](../../_assets/8_3_10.png)<br>
+*Figure 8.3.10 Multi-pass Stacked Shape with Inclination*
 [__SOURCE](8_Application_function/3_Arc_sensing/7_multipass_command.md)
 # 8.3.7 Multi-pass Command
 
@@ -3454,10 +3322,8 @@ This sets the distance by which the trajectory is shifted from the original path
 Since the torch weaving is perpendicular to the tool, each shift is set as follows:
 the left/right direction becomes the weaving plane, and the up/down direction becomes the plane perpendicular to the weaving plane.
 
-<p align="center">
-  <img src="../../_assets/8_3_11.png" width="60%"></img>
-  <em><p align="center">Figure 8.3.11 Multipass Shift Direction</p></em>
-</p>
+![](../../_assets/8_3_11.png)<br>
+*Figure 8.3.11 Multipass Shift Direction*
 
 
 - Angle Shift: TAS, WAS  
@@ -3465,10 +3331,8 @@ the left/right direction becomes the weaving plane, and the up/down direction be
 When performing multi-pass welding, the torch must be tilted for quality control. This setting is used to define the required tilt.
 The concept of angles for each item is illusatrated in the following figures:  
 
-<p align="center">
-  <img src="../../_assets/8_3_12.png" width="60%"></img>
-  <em><p align="center">Figure 8.3.12 Multipass Angle Shift Concept</p></em>
-</p>
+![](../../_assets/8_3_12.png)<br>
+*Figure 8.3.12 Multipass Angle Shift Concept*
 
 
 <!-- MULTIPASS 기능은 아크센싱 수행 시 정해진 거리마다 지정된 궤적 번호에 카운트, 위치, 보정량을 기록합니다. 이 궤적은 여러 세트를 저장할 수 있습니다. 작업물에 따라 변형을 최소화 하기 위해 2개 이상의 용접구간을 번갈아 용접하는 경우 다양한 번호의 궤적을 사용할 수 있습니다.
@@ -3509,19 +3373,15 @@ The concept of angles for each item is illusatrated in the following figures:
 <!-- ### (5) 좌우/상하 시프트
 멀티패스 재현 시 원래 궤적에서 시프트 하는 거리를 설정합니다. 토치의 위빙이 툴과 직각이므로 각 시프트는 아래와 같이 설정됩니다. 즉, 좌우 방향은 위빙면이 되고 상하 방향은 위빙면과 수직인 면이 됩니다.
 
-<p align="center">
- <img src="../_assets/3_4.png" width="60%"></img>
- <em><p align="center">그림 3.4 멀티패스 시프트 방향</p></em>
-</p>
+![](../_assets/3_4.png)<br>
+*그림 3.4 멀티패스 시프트 방향*
 
 ### (6) 각도 시프트: TAS, WAS  
 멀티패스 용접을 수행할 때 품질을 위해 토치를 기울여야 하는 경우 설정합니다.
 각 항목의 각도 개념은 하기 그림과 같습니다.
 
-<p align="center">
- <img src="../_assets/3_5.png" width="60%"></img>
- <em><p align="center">그림 3.5 멀티패스 각도 시프트 개념</p></em>
-</p> -->
+![](../_assets/3_5.png)<br>
+*그림 3.5 멀티패스 각도 시프트 개념* -->
 
 [__SOURCE](8_Application_function/3_Arc_sensing/8_example_fillet.md)
 # 8.3.8 Fillet Welding Example Using Touch Sensing and Arc Sensing
@@ -3538,10 +3398,8 @@ The work sequence is as follows:
 4) Perform the welding operation from the welding start position using the weaving command and the arc welding command.
 
 
-<p align="center">
- <img src="../../_assets/8_3_13" width="60%"></img>
- <em><p align="center">Figure 8.3.13 Fillet Touch Sensing and Arc Sensing</p></em>
-</p>
+![](../../_assets/8_3_13)<br>
+*Figure 8.3.13 Fillet Touch Sensing and Arc Sensing*
 
 
 The example program is shown below.
@@ -3571,10 +3429,8 @@ S6   move P,spd=60%,accu=3,tool=1               '12: Motion end point
 
 Create a single job program that can be applied to both workpieces shown below.
 
-<p align="center">
- <img src="../../_assets/8_3_14.png" width="60%"></img>
- <em><p align="center">Figure 8.3.14 Butt Joint Workpieces for Touch Sensing and Arc Sensing</p></em>
-</p>
+![](../../_assets/8_3_14.png)<br>
+*Figure 8.3.14 Butt Joint Workpieces for Touch Sensing and Arc Sensing*
 
 Assumed Operating Conditions  
 
@@ -3595,10 +3451,8 @@ The work sequence is as follows:
 7) After completing the operation, return to the original start position.
 
 
-<p align="center">
- <img src="../../_assets/8_3_15.png" width="60%"></img>
- <em><p align="center">Figure 8.3.15 Butt Joint Touch Sensing and Arc Sensing</p></em>
-</p>
+![](../../_assets/8_3_15.png)<br>
+*Figure 8.3.15 Butt Joint Touch Sensing and Arc Sensing*
 
 The example program is shown below.
 
@@ -3710,10 +3564,8 @@ The opration sequence of height sensing is as follows:
 
 
  
-<p align="center">
- <img src="../../_assets/8_4_1.png" width="40%"></img>
- <em><p align="center">Figure 8.4.1. Height Sensing Function Operation Sequence</p></em>
-</p>
+![](../../_assets/8_4_1.png)<br>
+*Figure 8.4.1. Height Sensing Function Operation Sequence*
 
 
 [__SOURCE](8_Application_function/4_Height_sensing/1_hsen_condition.md)
@@ -3722,10 +3574,8 @@ The opration sequence of height sensing is as follows:
 
 Press the **[Property]** key in the `heightsen` command to access the "Heigth Sensing Condition" settings screen. The condition settings screen is shown below.
  
-<p align="center">
- <img src="../../_assets/8_4_2.png" width="70%"></img>
- <em><p align="center">Figure 8.4.2. Height Sensing Condition Dialog Box</p></em>
-</p>
+![](../../_assets/8_4_2.png)<br>
+*Figure 8.4.2. Height Sensing Condition Dialog Box*
 
 ---
 
@@ -3832,10 +3682,8 @@ The LVS must be directly connected to the robot's flange. The sensor detects the
 In other words, through seam tracking, welding can still be performed even if the position of the welding target changes and deviates from the original reference points.
 
 
-<p align="center">
- <img src="../../_assets/8_5_1.png" width="90%"></img>
- <em><p align="center">Figure 8.5.1. LVS Seam Tracking Flowchart</p></em>
-</p>
+![](../../_assets/8_5_1.png)<br>
+*Figure 8.5.1. LVS Seam Tracking Flowchart*
 
 </br>
 
@@ -3967,10 +3815,8 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
 The tracking function using the ```lvs``` command can be used as follows:
 
 
-<p align="center">
- <img src="../../_assets/8_5_2.png" width="60%"></img>
- <em><p align="center">Figure 8.5.2. Teaching Method for LVS Seam Tracking</p></em>
-</p>
+![](../../_assets/8_5_2.png)<br>
+*Figure 8.5.2. Teaching Method for LVS Seam Tracking*
 
 
 ---
@@ -4039,10 +3885,8 @@ Let's now look at the process involved.
 
 The connection bracket can either be designed and used by yourself, or you may receive one from HD Hyundai Robotics or the LVS manufacturer. <br>
 
-<p align="center">
-  <img src="../../_assets/8_5_3_lvs_mount_setup.png" width="60%"></img>
-  <em><p align="center">Figure 8.5.3. LVS Mounting Precautions</p></em>
-</p>
+![](../../_assets/8_5_3_lvs_mount_setup.png)<br>
+*Figure 8.5.3. LVS Mounting Precautions*
 
 {% hint style="warning" %}
   - To achieve repetition accruacy and precision, directly mount the LVS bracket to the robot flange<br>
@@ -4054,10 +3898,8 @@ The tool coordinate system should be set as follows: the welding direction oppos
 The LVS sensor must be installed so that the laser is positioned perpendicular to the welding seam, which is straight (see figure)
 
 
-<p align="center">
-  <img src="../../_assets/8_5_4.png" width="90%"></img>
-  <em><p align="center">Figure 8.5.4. TCP and Sensor Installation, Tool Coordinate System Setup</p></em>
-</p>
+![](../../_assets/8_5_4.png)<br>
+*Figure 8.5.4. TCP and Sensor Installation, Tool Coordinate System Setup*
 
 {% hint style="info" %}
   For instructions on setting the tool coordinate system, refer to the Tool Calibration and Angle Correction Manual(Angle Calibration) section.
@@ -4137,10 +3979,8 @@ Preferences have been completed through the above process.
 
 #### Full-V Sensor Configuration Example
 
-<p align="center">
- <img src="../../_assets/8_5_5_lvs_setting_fullv_1.png" width="90%"></img>
- <em><p align="center">Figure 8.5.5. Full-V Sensor Connection Settings</p></em>
-</p>
+![](../../_assets/8_5_5_lvs_setting_fullv_1.png)<br>
+*Figure 8.5.5. Full-V Sensor Connection Settings*
 
 As shown in the figure above, select the LVS brand as FULL, then check the IP address of the LVS sensor in the Full-V softeware.  <br>
 Enter the IP in the `[F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting` window.  <br> Afterward, click the "connect" button at the bottom and verify that the connection status shows.  <br>
@@ -4149,10 +3989,8 @@ If "disconnected" appears, check the hardware connection and IP address.<br>
 Refer to the manual provided by Full-V and the figure below to register the seam you wish to use in the Full-V software.  
 
 
-<p align="center">
- <img src="../../_assets/8_5_6_lvs_setting_fullv_2.png" width="90%"></img>
- <em><p align="center">Figure 8.5.6. Example of Seam Setting in Full-V Software</p></em>
-</p>
+![](../../_assets/8_5_6_lvs_setting_fullv_2.png)<br>
+*Figure 8.5.6. Example of Seam Setting in Full-V Software*
 [__SOURCE](8_Application_function/5_LVS_tracking/3_calibration.md)
 # 8.5.3 LVS Calibration
 
@@ -4176,10 +4014,8 @@ If you wish to use it for testing purpose, please contact us to prepare the cali
 
 ### (2) Automatic Calibration Teaching
 
-<p align="center">
- <img src="../../_assets/8_5_7_lvs_autocalib.png" width="80%"></img>
- <em><p align="center">Figure 8.5.7. LVS Auto Calibration</p></em>
-</p>   
+![](../../_assets/8_5_7_lvs_autocalib.png)<br>
+*Figure 8.5.7. LVS Auto Calibration*   
 </br>
 
 As shown in the figure above, move the TCP to the reference point of the specimen using the jog function.
@@ -4245,10 +4081,8 @@ If you want to use the same tool information but with different numbers, you can
 
 - Navigate to `[F2: System] - 4: Application parameter - 5: LVS tracking - 2: LVS Calibration`.<br>
 
-<p align="center">
-  <img src="../../_assets/8_5_8_lvs_tool_calibmat.png" width="80%"></img>
-  <em><p align="center">Figure 8.5.8. LVS Calibration Information</p></em>
-</p>   
+![](../../_assets/8_5_8_lvs_tool_calibmat.png)<br>
+*Figure 8.5.8. LVS Calibration Information*   
 </br>
 [__SOURCE](8_Application_function/5_LVS_tracking/4_seam_finding.md)
 # 8.5.4 LVS Seam Finding Func.
@@ -4276,10 +4110,8 @@ After executing this, as shown below, the position sensed by the LVS will be sto
 {% endhint %}
 
 
-<p align="center">
- <img src="../../_assets/8_5_9_lvs_seamfind_ex.png" width="80%"></img>
- <em><p align="center">Figure 8.5.9. Pose in the LVS sensing position</p></em>
-</p>   
+![](../../_assets/8_5_9_lvs_seamfind_ex.png)<br>
+*Figure 8.5.9. Pose in the LVS sensing position*   
 </br>
 
 {% hint style="info" %}
@@ -4315,10 +4147,8 @@ If sensing is still impossible after the specified number of retries, an error w
 
 The retry process is performed in the following sequence:
 
-<p align="center">
- <img src="../../_assets/8_5_10_lvs_seamfind_retry.png" width="60%"></img>
- <em><p align="center">Figure 8.5.10. LVS Seam Finding Retry</p></em>
-</p>   
+![](../../_assets/8_5_10_lvs_seamfind_retry.png)<br>
+*Figure 8.5.10. LVS Seam Finding Retry*   
 </br>
 
 {% hint style="warning" %}
@@ -4332,10 +4162,8 @@ The retry process is performed in the following sequence:
 To view the LVS seam finding monitoring screen, click `[pane layout] - select - LVS seamfind` in the TP  
 
 
-<p align="center">
- <img src="../../_assets/8_5_11_seamfind monitoring.png" width="60%"></img>
- <em><p align="center">Figure 8.5.11. LVS Seam Finding Monitoring</p></em>
-</p>   
+![](../../_assets/8_5_11_seamfind monitoring.png)<br>
+*Figure 8.5.11. LVS Seam Finding Monitoring*   
 </br>
 <table>
   <thead>
@@ -4398,10 +4226,8 @@ The Master Mode function stores a reference position (Master pose) and calculate
 To enable this functionality, `user key - Master Mode` must be activated to register the reference position(Master pose) in advance.
 
 
-<p align="center">
- <img src="../../_assets/8_5_12_lvs_seamfind_mastermode.png" width="90%"></img>
- <em><p align="center">Figure 8.5.12. Example of Master Mode and Actual Motion</p></em>
-</p>   
+![](../../_assets/8_5_12_lvs_seamfind_mastermode.png)<br>
+*Figure 8.5.12. Example of Master Mode and Actual Motion*   
 </br>
 
 As shown in the left part of the figure, after activating Master Mode, the Master Pose is saved to the pose variable assigned to the `mp` parameter in the `lvs` command.
@@ -4428,10 +4254,8 @@ Important notes when registering master pose.
 {% endhint %}
 
 
-<p align="center">
- <img src="../../_assets/8_5_13_lvs_seamfind_mastermode_warn.png" width="90%"></img>
- <em><p align="center">Figure 8.5.13. Important Considerations When Registering Master Pose</p></em>
-</p>   
+![](../../_assets/8_5_13_lvs_seamfind_mastermode_warn.png)<br>
+*Figure 8.5.13. Important Considerations When Registering Master Pose*   
 </br>
 
 ---
@@ -4483,10 +4307,8 @@ By performing the search function, the system becomes ready to perform "seam tra
 To configure the search function, enter **[property]** in the `lvs` command, where the search settings can be adjusted as follows:
 
 
-<p align="center">
- <img src="../../_assets/8_5_14_lvs_search_setting.png" width="80%"></img>
- <em><p align="center">Figure 8.5.14. lvs search settings</p></em>
-</p>   
+![](../../_assets/8_5_14_lvs_search_setting.png)<br>
+*Figure 8.5.14. lvs search settings*   
 </br>
 
 | Item | Description |
@@ -4499,10 +4321,8 @@ To configure the search function, enter **[property]** in the `lvs` command, whe
 
 <br>
 
-<p align="center">
- <img src="../../_assets/8_5_15_lvs_search_example.png" width="80%"></img>
- <em><p align="center">Figure 8.5.15. lvs search Example</p></em>
-</p>   
+![](../../_assets/8_5_15_lvs_search_example.png)<br>
+*Figure 8.5.15. lvs search Example*   
 </br>
 
 The **search** and **seam tracking** functions can be taught as shown below.
@@ -4583,10 +4403,8 @@ The configuration of the lvs command should be set as follows:
 The processs of executing the search command is illustrated in the following figure (when search is set to valid and direction is set to 0).
 An invalid point is found and stored in the `sp` parameter as the starting point, then the TCP moves to the starting point while filling the data buffer. 
 
-<p align="center">
- <img src="../../_assets/8_5_17.png" width="80%"></img>
- <em><p align="center">Figure 8.5.17. LVS search process</p></em>
-</p>   
+![](../../_assets/8_5_17.png)<br>
+*Figure 8.5.17. LVS search process*   
 </br>
 
 ### (2) How to Use Tracking with an Offset Value
@@ -4616,10 +4434,8 @@ If you want to track with an offset from the seam (instead of exactly following 
 
 ### (3) LVS Monitoring
 
-<p align="center">
- <img src="../../_assets/8_5_18_tracking_monitoring.png" width="80%"></img>
- <em><p align="center">Figure 8.5.18. LVS Monitoring</p></em>
-</p>   
+![](../../_assets/8_5_18_tracking_monitoring.png)<br>
+*Figure 8.5.18. LVS Monitoring*   
 </br>
 
 
@@ -4651,27 +4467,21 @@ Stitch welding is a function where welding is performed intermittently, similar 
 
 </br>
 
-<p align="center">
- <img src="../../_assets/8_6_1.png" width="40%"></img>
- <em><p align="center">Figure 8.6.1. Stitch Func. basic parameter</p></em>
-</p> 
+![](../../_assets/8_6_1.png)<br>
+*Figure 8.6.1. Stitch Func. basic parameter* 
 
 </br>
 
 
 
-<p align="center">
- <img src="../../_assets/8_6_2.png" width="50%"></img>
- <em><p align="center">Figure 8.6.2. Stitch Welding specimen</p></em>
-</p> 
+![](../../_assets/8_6_2.png)<br>
+*Figure 8.6.2. Stitch Welding specimen* 
  
 </br>
 
 
-<p align="center">
- <img src="../../_assets/8_6_3.png" width="60%"></img>
- <em><p align="center">Figure 8.6.3. Stitch Welding Process</p></em>
-</p> 
+![](../../_assets/8_6_3.png)<br>
+*Figure 8.6.3. Stitch Welding Process* 
 
 
 
@@ -4693,10 +4503,8 @@ Stitch welding is a function where welding is performed intermittently, similar 
 # 8.6.2 STITCH Func. Command
  
 
-<p align="center">
- <img src="../../_assets/8_6_4.png" width="60%"></img>
- <em><p align="center">Figure 8.6.4. Stitch Command Example</p></em>
-</p>  
+![](../../_assets/8_6_4.png)<br>
+*Figure 8.6.4. Stitch Command Example*  
 
 
 ```stitch``` Command: 
@@ -4713,23 +4521,17 @@ After selecting `[F6: cmd.input] - arcweld - stitch` in sequence, choose on/off 
 # 8.6.3 STITCH Func. Parameter setting
 
 
-<p align="center">
- <img src="../../_assets/8_6_5.png" width="80%"></img>
- <em><p align="center">Figure 8.6.5. Stitch Welding Process Profile</p></em>
-</p>
+![](../../_assets/8_6_5.png)<br>
+*Figure 8.6.5. Stitch Welding Process Profile*
 
 
 [Figure 8.6.5] illustrates the stitch welding process. Based on this chart, you can configure the options for the `stitch` command.
 
-<p align="center">
- <img src="../../_assets/8_6_6.png" width="70%"></img>
- <em><p align="center">Figure 8.6.6. Stitch Welding Condition Dialog Box1 (General)</p></em>
-</p>
+![](../../_assets/8_6_6.png)<br>
+*Figure 8.6.6. Stitch Welding Condition Dialog Box1 (General)*
 
-<p align="center">
- <img src="../../_assets/8_6_7.png" width="70%"></img>
- <em><p align="center">Figure 8.6.7. Stitch Welding Condition Dialog Box2 (Section)</p></em>
-</p>
+![](../../_assets/8_6_7.png)<br>
+*Figure 8.6.7. Stitch Welding Condition Dialog Box2 (Section)*
 
 
 [Figure 8.6.6] shows the screen accessed by placing the cursor on the `stitch` command and pressing the `[Property]` button on the left side of the TP screen. [Figure 8.6.7] is accessed by selecting the `[Section]` tab from the previous screen.
@@ -4787,10 +4589,8 @@ Set "Arc trajectory monitoring" to 'activation on' under `[System] - 2: Applicat
 This feature is available during from version 60.30-00.
 {% endhint %}
 
-<p align="center">
- <img src="../../_assets/8_7_1_arc_trj_mgr.png" width="90%"></img>
- <em><p align="center">Figure 8.7.1. Real-time Arc trajectory monitoring</p></em>
-</p>
+![](../../_assets/8_7_1_arc_trj_mgr.png)<br>
+*Figure 8.7.1. Real-time Arc trajectory monitoring*
 
 You can monitor the trajectory and welding information in real-time from the `arcon` to the `arcoff` section.
 
@@ -4837,10 +4637,8 @@ To use the LPS function, it is necessary to first install the laser sensor and c
 
 The connection bracket may be designed and fabricated by the user, or provided by our company or the sensor manufacturer.
 
-<p align="center">
-  <img src="../../_assets/8_8_1.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.1. Installation of the laser sensor using a bracket</p></em>
-</p>
+![](../../_assets/8_8_1.png)<br>
+*Figure 8.8.1. Installation of the laser sensor using a bracket*
 
 A laser distance sensor consists of a transmitter and a receiver.
 When the robot is aligned with the arc torch, ensure that the transmitter/receiver of the laser sensor is aligned with the tool-based X direction (refer to the laser manufacturer's specifications).
@@ -4883,10 +4681,8 @@ First, configure the sensor controller settings.
 
 Navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting`.
 
-<p align="center">
-  <img src="../../_assets/8_8_2.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.2. Laser Communication Setup (Keyence LK-G)</p></em>
-</p>
+![](../../_assets/8_8_2.png)<br>
+*Figure 8.8.2. Laser Communication Setup (Keyence LK-G)*
 </br>
 
 Select Keyence as the LPS brand to configure the settings.
@@ -4900,10 +4696,8 @@ Once the setup is complete, verify that the value displayed in the **Sensing Dis
 Connect the sensor to a PC and access the web interface.
 (The default fixed IP address is 192.168.0.250.)
 
-<p align="center">
-  <img src="../../_assets/8_8_3.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.3. Baumer Sensor Web Configuration</p></em>
-</p>
+![](../../_assets/8_8_3.png)<br>
+*Figure 8.8.3. Baumer Sensor Web Configuration*
 </br>  
 
 Navigate to `Device Configuration` tab and set the communication method according to the intended purpose.
@@ -4911,10 +4705,8 @@ At this time, enable only the method that matches the currently used communicati
 
 If **Ethernet/IP** is used, complete the network settings accordingly. In the ${cont_model}, network ranges 0, 1, and 2 are used by default, so a different range must be assigned. (e.g. 192.168.10.250.)
 
-<p align="center">
-  <img src="../../_assets/8_8_4.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.4. Baumer Sensor Network Settings</p></em>
-</p>
+![](../../_assets/8_8_4.png)<br>
+*Figure 8.8.4. Baumer Sensor Network Settings*
 </br>   
 
 Afterward, proceed step by step by following the link below.
@@ -4923,10 +4715,8 @@ From Hi7 and later, built-in Ethernet is supported, allowing communication to be
 
 
 
-<p align="center">
-  <img src="../../_assets/8_8_5.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.5. Baumer Sensor Signal Assignment</p></em>
-</p>
+![](../../_assets/8_8_5.png)<br>
+*Figure 8.8.5. Baumer Sensor Signal Assignment*
 </br>
 
 Once the above steps are completed, navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting - Signal tab`.
@@ -4965,10 +4755,8 @@ When teaching in the tool-based X-Y directions, adjust the RZ value so that the 
 
 <br/>
 
-<p align="center">
-  <img src="../../_assets/8_8_2_1.png" width="60%"></img>
-  <em><p align="center">Figure 8.8.2.1 Preparation before calibration</p></em>
-</p><br/>  
+![](../../_assets/8_8_2_1.png)<br>
+*Figure 8.8.2.1 Preparation before calibration*<br/>  
 
 After completing the above steps, all preparations required for performing calibration are complete.
 
@@ -4980,10 +4768,8 @@ In addition, ensure that the laser point is located inside the calibration plane
 
 <br/>
 
-<p align="center">
- <img src="../../_assets/8_8_2_2.png" width="50%"></img>
- <em><p align="center">Figure 8.8.2.2 Start of calibration</p></em>
-</p><br/>  
+![](../../_assets/8_8_2_2.png)<br>
+*Figure 8.8.2.2 Start of calibration*<br/>  
 
 From the lower panel, select `[F6: cmd. input] - arcweld - lps` and insert the following command.
 
@@ -5012,10 +4798,8 @@ If the tool information is the same but a different tool number is to be used, t
 
 <br/>
 
-<p align="center">
- <img src="../../_assets/8_8_2_3.png" width="80%"></img>
- <em><p align="center">Figure 8.8.2.3 Calibration Result</p></em>
-</p><br/>  
+![](../../_assets/8_8_2_3.png)<br>
+*Figure 8.8.2.3 Calibration Result*<br/>  
 
 
 
@@ -5032,10 +4816,8 @@ If tool-to-sensor calibration (ref. 8.8.2) has not been performed before using t
 The properties of the LPS command are as follows.  
 <br/>
 
-<p align="center">
-  <img src="../../_assets/8_8_3_0.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.3.0 LPS Property</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_0.png)<br>
+*Figure 8.8.3.0 LPS Property*<br/>  
 
 #### Gap Coefficient
 
@@ -5066,10 +4848,8 @@ The properties of the LPS command are as follows.
 
 <br/>
 
-<p align="center">
-  <img src="../../_assets/8_8_3_1.png" width="60%"></img>
-  <em><p align="center">Figure 8.8.3.1 Spot Mode</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_1.png)<br>
+*Figure 8.8.3.1 Spot Mode*<br/>  
 
 ```py
   var p10=cpo()
@@ -5092,10 +4872,8 @@ Depending on whether the height difference is lower or higher, the scan directio
 
 <br/>
 
-<p align="center">
-  <img src="../../_assets/8_8_3_2.png" width="60%"></img>
-  <em><p align="center">Figure 8.8.3.2 Step Mode</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_2.png)<br>
+*Figure 8.8.3.2 Step Mode*<br/>  
 
 ```py
   var p10=cpo()
@@ -5112,10 +4890,8 @@ If no step is detected within the specified distance, a detection error occurs.
 
 ### (3) Scan Mode
 
-<p align="center">
- <img src="../../_assets/8_8_3_3.png" width="80%"></img>
- <em><p align="center">Figure 8.8.3.3 Scan Mode on various geometries</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_3.png)<br>
+*Figure 8.8.3.3 Scan Mode on various geometries*<br/>  
 
 ```py
   var p10=cpo()
@@ -5137,24 +4913,18 @@ For instructions on how to register and use the application, please refer to the
 
 #### (3-1) Monitoring Screen  
 
-<p align="center">
-  <img src="../../_assets/8_8_3_4.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.3.4 LPS Graph</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_4.png)<br>
+*Figure 8.8.3.4 LPS Graph*<br/>  
 
 After registering the application, the monitoring screen can be accessed through the following method: `[Pane layout] - select - LPS Graph` 
 
 <br/>
 
-<p align="center">
-  <img src="../../_assets/8_8_3_5.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.3.5 Example screen - V-groove</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_5.png)<br>
+*Figure 8.8.3.5 Example screen - V-groove*<br/>  
 
-<p align="center">
-  <img src="../../_assets/8_8_3_6.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.3.6 Example screen - Butt joint</p></em>
-</p><br/>  
+![](../../_assets/8_8_3_6.png)<br>
+*Figure 8.8.3.6 Example screen - Butt joint*<br/>  
 
 
 When the function is executed, results can be viewed as shown in the figure above.

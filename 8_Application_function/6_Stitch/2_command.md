@@ -1,10 +1,8 @@
 ﻿# 8.6.2 STITCH Func. Command
  
 
-<p align="center">
- <img src="../../_assets/8_6_4.png" width="60%"></img>
- <em><p align="center">Figure 8.6.4. Stitch Command Example</p></em>
-</p>  
+![](../../_assets/8_6_4.png)<br>
+*Figure 8.6.4. Stitch Command Example*  
 
 
 ```stitch``` Command: 

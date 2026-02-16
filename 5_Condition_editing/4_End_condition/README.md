@@ -3,10 +3,8 @@
 When the arc welding settings are digital and [End condition] tab is pressed in the welding start condition dialog box, the following welding end condition editing screen appears.
 
 
-<p align="center">
- <img src="../../_assets/5_4_1.png" width="70%"></img>
- <em><p align="center">Figure 5.4.1. Welding End Condition Setting (e.g. EWM)</p></em>
-</p> 
+![](../../_assets/5_4_1.png)<br>
+*Figure 5.4.1. Welding End Condition Setting (e.g. EWM)* 
 
 
 After editing the welding end conditions, pressing the `[ESC]` key will close the dialog box without saving the changes, while pressing `[OK]` key will save the settings and close the dialog box.
@@ -48,10 +46,8 @@ Set the voltage value to be output during crater treatment. The voltage is speci
 ### (4)	Downslope Time(Crate Time): [0] sec (Range: 0.0 ~ 10.0)  
 Sets the time for processing the current change between the main condition and the end condition as a slope.
 
-<p align="center">
- <img src="../../_assets/5_4_2.png" width="30%"></img>
- <em><p align="center">Figure 5.4.2. DownSlope Time and Crate Time Chart</p></em>
-</p>
+![](../../_assets/5_4_2.png)<br>
+*Figure 5.4.2. DownSlope Time and Crate Time Chart*
 
 ### (5)	Condition Hold time: [1] second (Range: 0.1 ~ 10.0)   
 Set the time to maintain the output value specified in the 'current ratio' item under the welding end condition.

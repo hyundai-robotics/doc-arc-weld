@@ -3,10 +3,8 @@
 Teach the Arc welding operation as shown in the following figure.
 
 
-<p align="center">
-  <img src="../../_assets/1_1_1.png" width="60%"></img>
-  <em><p align="center">Figure 1.1.1. Basic Arc Weld Teaching</p></em>
-</p>
+![](../../_assets/1_1_1.png)<br>
+*Figure 1.1.1. Basic Arc Weld Teaching*
 
 </br>
 
@@ -18,10 +16,8 @@ Teach the Arc welding operation as shown in the following figure.
 
 (4) If you proceed this far, the TP screen will be displayed as shown below.
 
-<p align="center">
-  <img src="../../_assets/1_1_2.png" width="70%"></img>
-  <em><p align="center">Figure 1.1.2. Screen with new program number selected</p></em>
-</p>
+![](../../_assets/1_1_2.png)<br>
+*Figure 1.1.2. Screen with new program number selected*
 
 </br>
 
@@ -35,29 +31,23 @@ Teach the Arc welding operation as shown in the following figure.
 - press the `[tool]` key and enter the desired tool number.
 
 
-<p align="center">
- <img src="../../_assets/1_1_3.png" width="40%"></img>
- <em><p align="center">Figure 1.1.3. Recording Conditions</p></em>
-</p>
+![](../../_assets/1_1_3.png)<br>
+*Figure 1.1.3. Recording Conditions*
 
 </br>
 
 - Press the `[rec. cond]` key to record the step as shown below.
 
-<p align="center">
- <img src="../../_assets/1_1_4.png" width="70%"></img>
- <em><p align="center">Figure 1.1.4. Program with recorded Step (1)</p></em>
-</p>
+![](../../_assets/1_1_4.png)<br>
+*Figure 1.1.4. Program with recorded Step (1)*
 
 </br>
 
 (8)	Repeat steps 5 through 7 for steps 2 through 4.
  
 
-<p align="center">
- <img src="../../_assets/1_1_5.png" width="70%"></img>
- <em><p align="center">Figure 1.1.5. Program with recorded Step (2)</p></em>
-</p>
+![](../../_assets/1_1_5.png)<br>
+*Figure 1.1.5. Program with recorded Step (2)*
 
 (9) Since the welding area is from Step 2 to Step 3, move the cursor to Step 2.
 
@@ -76,7 +66,5 @@ Teach the Arc welding operation as shown in the following figure.
 
 (12) Finally, enter the `[F6: cmd. input] - flowctrl - end` command to terminate the program.
 
-<p align="center">
- <img src="../../_assets/1_1_6.png" width="70%"></img>
- <em><p align="center">Figure 1.1.6. Teaching Completion Screen</p></em>
-</p>
+![](../../_assets/1_1_6.png)<br>
+*Figure 1.1.6. Teaching Completion Screen*

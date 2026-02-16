@@ -13,10 +13,8 @@ Set "Arc trajectory monitoring" to 'activation on' under `[System] - 2: Applicat
 This feature is available during from version 60.30-00.
 {% endhint %}
 
-<p align="center">
- <img src="../../_assets/8_7_1_arc_trj_mgr.png" width="90%"></img>
- <em><p align="center">Figure 8.7.1. Real-time Arc trajectory monitoring</p></em>
-</p>
+![](../../_assets/8_7_1_arc_trj_mgr.png)<br>
+*Figure 8.7.1. Real-time Arc trajectory monitoring*
 
 You can monitor the trajectory and welding information in real-time from the `arcon` to the `arcoff` section.
 

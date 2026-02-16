@@ -10,10 +10,8 @@ It moves backward along the weld line for a certain distance and then resumes we
 This section describes the restart conditions and overlap settings.
 
  
-<p align="center">
- <img src="../../_assets/5_5_3.png" width="70%"></img>
- <em><p align="center">Figure 5.5.3. Welding Auxiliary condition (Restart) Setting(e.g. EWM)</p></em>
-</p>
+![](../../_assets/5_5_3.png)<br>
+*Figure 5.5.3. Welding Auxiliary condition (Restart) Setting(e.g. EWM)*
 
 
 ### (1)	Restart Repetition: [ 3 ] times (Range: 0 ~ 9)   
@@ -41,10 +39,8 @@ However, if an error occurs during the overlap welding, the robot will not repea
 
 ---
 
-<p align="center">
- <img src="../../_assets/5_5_4.png" width="80%"></img>
- <em><p align="center">Figure 5.5.4. Restart Function Sequence</p></em>
-</p>
+![](../../_assets/5_5_4.png)<br>
+*Figure 5.5.4. Restart Function Sequence*
 
 
 ### (6)	Overlap Condition Settings  

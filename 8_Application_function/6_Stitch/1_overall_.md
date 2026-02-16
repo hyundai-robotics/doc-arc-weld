@@ -6,27 +6,21 @@ Stitch welding is a function where welding is performed intermittently, similar 
 
 </br>
 
-<p align="center">
- <img src="../../_assets/8_6_1.png" width="40%"></img>
- <em><p align="center">Figure 8.6.1. Stitch Func. basic parameter</p></em>
-</p> 
+![](../../_assets/8_6_1.png)<br>
+*Figure 8.6.1. Stitch Func. basic parameter* 
 
 </br>
 
 
 
-<p align="center">
- <img src="../../_assets/8_6_2.png" width="50%"></img>
- <em><p align="center">Figure 8.6.2. Stitch Welding specimen</p></em>
-</p> 
+![](../../_assets/8_6_2.png)<br>
+*Figure 8.6.2. Stitch Welding specimen* 
  
 </br>
 
 
-<p align="center">
- <img src="../../_assets/8_6_3.png" width="60%"></img>
- <em><p align="center">Figure 8.6.3. Stitch Welding Process</p></em>
-</p> 
+![](../../_assets/8_6_3.png)<br>
+*Figure 8.6.3. Stitch Welding Process* 
 
 
 

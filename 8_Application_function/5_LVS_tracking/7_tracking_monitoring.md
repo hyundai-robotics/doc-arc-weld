@@ -38,10 +38,8 @@ The configuration of the lvs command should be set as follows:
 The processs of executing the search command is illustrated in the following figure (when search is set to valid and direction is set to 0).
 An invalid point is found and stored in the `sp` parameter as the starting point, then the TCP moves to the starting point while filling the data buffer. 
 
-<p align="center">
- <img src="../../_assets/8_5_17.png" width="80%"></img>
- <em><p align="center">Figure 8.5.17. LVS search process</p></em>
-</p>   
+![](../../_assets/8_5_17.png)<br>
+*Figure 8.5.17. LVS search process*   
 </br>
 
 ### (2) How to Use Tracking with an Offset Value
@@ -71,10 +69,8 @@ If you want to track with an offset from the seam (instead of exactly following 
 
 ### (3) LVS Monitoring
 
-<p align="center">
- <img src="../../_assets/8_5_18_tracking_monitoring.png" width="80%"></img>
- <em><p align="center">Figure 8.5.18. LVS Monitoring</p></em>
-</p>   
+![](../../_assets/8_5_18_tracking_monitoring.png)<br>
+*Figure 8.5.18. LVS Monitoring*   
 </br>
 
 

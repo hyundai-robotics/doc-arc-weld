@@ -7,10 +7,8 @@
 In the command above, by entering the properties window, you can view the following configuration window.
 
  
-<p align="center">
- <img src="../../_assets/8_1_1.png" width="70%"></img>
- <em><p align="center">Figure 8.1.1. Arc Welding Condition Dialog</p></em>
-</p> 
+![](../../_assets/8_1_1.png)<br>
+*Figure 8.1.1. Arc Welding Condition Dialog* 
 
 <br>
 

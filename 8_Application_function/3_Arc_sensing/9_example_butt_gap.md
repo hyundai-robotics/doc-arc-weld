@@ -3,10 +3,8 @@
 
 Create a single job program that can be applied to both workpieces shown below.
 
-<p align="center">
- <img src="../../_assets/8_3_14.png" width="60%"></img>
- <em><p align="center">Figure 8.3.14 Butt Joint Workpieces for Touch Sensing and Arc Sensing</p></em>
-</p>
+![](../../_assets/8_3_14.png)<br>
+*Figure 8.3.14 Butt Joint Workpieces for Touch Sensing and Arc Sensing*
 
 Assumed Operating Conditions  
 
@@ -27,10 +25,8 @@ The work sequence is as follows:
 7) After completing the operation, return to the original start position.
 
 
-<p align="center">
- <img src="../../_assets/8_3_15.png" width="60%"></img>
- <em><p align="center">Figure 8.3.15 Butt Joint Touch Sensing and Arc Sensing</p></em>
-</p>
+![](../../_assets/8_3_15.png)<br>
+*Figure 8.3.15 Butt Joint Touch Sensing and Arc Sensing*
 
 The example program is shown below.
 

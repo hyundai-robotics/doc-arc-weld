@@ -5,10 +5,8 @@ This function allows you to monitor the operational information of arc welding. 
 To use this feature, on TP, press `[pane layout] - select - arc operation info.` sequentially. 
 
 
-<p align="center">
- <img src="../../_assets/1_3_4.png" width="70%"></img>
- <em><p align="center">Figure 1.3.4. Arc Welding Operation Information Monitoring</p></em>
-</p>  
+![](../../_assets/1_3_4.png)<br>
+*Figure 1.3.4. Arc Welding Operation Information Monitoring*  
 
 | Item | Description |
 | --- | --- |

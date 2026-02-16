@@ -4,22 +4,16 @@
 When the arc welding settings are digital and the cursor is placed on the command line `arcon cnd=_`, pressing the [property] key will bring up the editing screen for the welding start conditions.
 
  
-<p align="center">
- <img src="../../_assets/5_3_1.png" width="70%"></img>
- <em><p align="center">Figure 5.3.1. Hyosung welder setting</p></em>
-</p>  
+![](../../_assets/5_3_1.png)<br>
+*Figure 5.3.1. Hyosung welder setting*  
 
 
-<p align="center">
- <img src="../../_assets/5_3_2.png" width="70%"></img>
- <em><p align="center">Figure 5.3.2. Fronius welder setting</p></em>
-</p>  
+![](../../_assets/5_3_2.png)<br>
+*Figure 5.3.2. Fronius welder setting*  
 
  
-<p align="center">
- <img src="../../_assets/5_3_3.png" width="70%"></img>
- <em><p align="center">Figure 5.3.3. EWM welder setting</p></em>
-</p>
+![](../../_assets/5_3_3.png)<br>
+*Figure 5.3.3. EWM welder setting*
 
  
 

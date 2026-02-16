@@ -24,10 +24,8 @@ Enter the `[Property] window of the weaving command and set the wall direction t
 Enter the Arc Sensing (General) in the property window of the weaving command, set the type to "Welding Seam Estimation & Current Difference", and set both the left/right and up/down sensitivities to -1.  
 
 
-<p align="center">
-  <img src="../../_assets/8_3_5.png" width="70%"></img>
-  <em><p align="center">Figure 8.3.5. Arc Sensing Calibration</p></em>
-</p>
+![](../../_assets/8_3_5.png)<br>
+*Figure 8.3.5. Arc Sensing Calibration*
 <br>
 
 
@@ -58,19 +56,15 @@ Repeat Steps 2 through 5 for frequencies ranging from 0.5 Hz ~ 3.0 Hz.
 After completing this process, you can check the arc sensing (delay table tracking gain) results on the forth tab of the weaving condition editing screen.
 
 
-<p align="center">
- <img src="../../_assets/8_3_6.png" width="70%"></img>
- <em><p align="center">Figure 8.3.6. Arc Sensing Condition Tab(Tracking gain) Dialog Box</p></em>
-</p>
+![](../../_assets/8_3_6.png)<br>
+*Figure 8.3.6. Arc Sensing Condition Tab(Tracking gain) Dialog Box*
 <br>
 
 
 At this time, the delay time value represents the degree of current lead or lag.
 
-<p align="center">
- <img src="../../_assets/8_3_6-2.png" width="70%"></img>
- <em><p align="center">Figure 8.3.6-2. Meaning of Arc Sensing Delay Time</p></em>
-</p>
+![](../../_assets/8_3_6-2.png)<br>
+*Figure 8.3.6-2. Meaning of Arc Sensing Delay Time*
 <br>
 
 

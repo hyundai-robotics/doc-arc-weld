@@ -24,10 +24,8 @@ Similarly, after placing the cursor on a specific command and entering the `[Pro
 If you wish to save the changes and exit, press `[OK]`; if you wish to exit without saving, press the `[ESC]` key on the teaching pendant.
 
 
-<p align="center">
- <img src="../_assets/3_1_1.png" width="65%"></img>
- <em><p align="center">Figure 3.1.1. Property in Robot Program Command</p></em>
-</p>
+![](../_assets/3_1_1.png)<br>
+*Figure 3.1.1. Property in Robot Program Command*
 
 
 {% hint style="info" %}

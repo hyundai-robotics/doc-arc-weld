@@ -5,10 +5,8 @@ For example, this function allows for linear interpolation of welding condition(
 In this case, the continuous change of welding conditions (L interpolation) is performed in a linear fashion as shown below.
 
  
-<p align="center">
- <img src="../../_assets/8_1_2.png" width="70%"></img>
- <em><p align="center">Figure 8.1.2. Linear Interpolation of Welding Conditions</p></em>
-</p> 
+![](../../_assets/8_1_2.png)<br>
+*Figure 8.1.2. Linear Interpolation of Welding Conditions* 
 
 <br>
 

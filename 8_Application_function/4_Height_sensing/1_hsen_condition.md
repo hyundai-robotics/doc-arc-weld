@@ -3,10 +3,8 @@
 
 Press the **[Property]** key in the `heightsen` command to access the "Heigth Sensing Condition" settings screen. The condition settings screen is shown below.
  
-<p align="center">
- <img src="../../_assets/8_4_2.png" width="70%"></img>
- <em><p align="center">Figure 8.4.2. Height Sensing Condition Dialog Box</p></em>
-</p>
+![](../../_assets/8_4_2.png)<br>
+*Figure 8.4.2. Height Sensing Condition Dialog Box*
 
 ---
 

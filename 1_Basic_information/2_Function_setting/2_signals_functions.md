@@ -3,10 +3,8 @@
 On the manual mode screen, press `[F2: System] - 4: Application parameter - 2: Arc welding` to bring up a screen where you can set various conditions for Arc welding applications, as shown below.
 
 
-<p align="center">
- <img src="../../_assets/1_2_2.png" width="70%"></img>
- <em><p align="center">Figure 1.2.2. Arc Welding Application parameter Dialog</p></em>
-</p>
+![](../../_assets/1_2_2.png)<br>
+*Figure 1.2.2. Arc Welding Application parameter Dialog*
  
 
 The details for each item are as follows:

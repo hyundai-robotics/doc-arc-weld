@@ -11,10 +11,8 @@ The detailed content and setup method for this function are as follows:  <br/>
 
 ### Entering the Arc Welding Current/Voltage Change Dialog Box
 
-<p align="center">
- <img src="../../_assets/1_3_1.png" width="70%"></img>
- <em><p align="center">Figure 1.3.1. Arc Weld program and Change I/V</p></em>
-</p>
+![](../../_assets/1_3_1.png)<br>
+*Figure 1.3.1. Arc Weld program and Change I/V*
 
 <br>
 
@@ -68,10 +66,8 @@ The detailed content and setup method for this function are as follows:  <br/>
 
 The details for each item in the dialog box are as shown in the following figure.
 
-<p align="center">
- <img src="../../_assets/1_3_2.png" width="70%"></img>
- <em><p align="center">Figure 1.3.2. Arc Welding Change I/V dialog box</p></em>
-</p>
+![](../../_assets/1_3_2.png)<br>
+*Figure 1.3.2. Arc Welding Change I/V dialog box*
 
 {% hint style="info" %}
 - Current/Voltage changes are saved only to the welding Start Conditions, not to the End Conditions.

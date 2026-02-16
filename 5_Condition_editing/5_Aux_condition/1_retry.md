@@ -4,10 +4,8 @@
 There may be cases where the arc does not ignite due to foreign materials attached near the weld start point of the base material when starting arc welding. The retry function automatically attempts to reignite the arc in such cases of arc ignition failure, enabling continuous operation without robot stoppage.
 
   
-<p align="center">
- <img src="../../_assets/5_5_1.png" width="70%"></img>
- <em><p align="center">Figure 5.5.1. Welding Auxiliary condition (Retry) Setting(e.g. EWM)</p></em>
-</p>
+![](../../_assets/5_5_1.png)<br>
+*Figure 5.5.1. Welding Auxiliary condition (Retry) Setting(e.g. EWM)*
 
 {% hint style="info" %}
 [Note]   
@@ -52,8 +50,6 @@ The left section of [Figure 5.5.1] represents the retry conditions in the weldin
   When the operation mode is set to Shift, this is the distance the torch moves during the retry.  
     
 
-<p align="center">
- <img src="../../_assets/5_5_2.png" width="80%"></img>
- <em><p align="center">Figure 5.5.2 Retry Function Sequence</p></em>
-</p>
+![](../../_assets/5_5_2.png)<br>
+*Figure 5.5.2 Retry Function Sequence*
 

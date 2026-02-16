@@ -8,10 +8,8 @@ To use the LPS function, it is necessary to first install the laser sensor and c
 
 The connection bracket may be designed and fabricated by the user, or provided by our company or the sensor manufacturer.
 
-<p align="center">
-  <img src="../../_assets/8_8_1.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.1. Installation of the laser sensor using a bracket</p></em>
-</p>
+![](../../_assets/8_8_1.png)<br>
+*Figure 8.8.1. Installation of the laser sensor using a bracket*
 
 A laser distance sensor consists of a transmitter and a receiver.
 When the robot is aligned with the arc torch, ensure that the transmitter/receiver of the laser sensor is aligned with the tool-based X direction (refer to the laser manufacturer's specifications).
@@ -54,10 +52,8 @@ First, configure the sensor controller settings.
 
 Navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting`.
 
-<p align="center">
-  <img src="../../_assets/8_8_2.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.2. Laser Communication Setup (Keyence LK-G)</p></em>
-</p>
+![](../../_assets/8_8_2.png)<br>
+*Figure 8.8.2. Laser Communication Setup (Keyence LK-G)*
 </br>
 
 Select Keyence as the LPS brand to configure the settings.
@@ -71,10 +67,8 @@ Once the setup is complete, verify that the value displayed in the **Sensing Dis
 Connect the sensor to a PC and access the web interface.
 (The default fixed IP address is 192.168.0.250.)
 
-<p align="center">
-  <img src="../../_assets/8_8_3.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.3. Baumer Sensor Web Configuration</p></em>
-</p>
+![](../../_assets/8_8_3.png)<br>
+*Figure 8.8.3. Baumer Sensor Web Configuration*
 </br>  
 
 Navigate to `Device Configuration` tab and set the communication method according to the intended purpose.
@@ -82,10 +76,8 @@ At this time, enable only the method that matches the currently used communicati
 
 If **Ethernet/IP** is used, complete the network settings accordingly. In the ${cont_model}, network ranges 0, 1, and 2 are used by default, so a different range must be assigned. (e.g. 192.168.10.250.)
 
-<p align="center">
-  <img src="../../_assets/8_8_4.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.4. Baumer Sensor Network Settings</p></em>
-</p>
+![](../../_assets/8_8_4.png)<br>
+*Figure 8.8.4. Baumer Sensor Network Settings*
 </br>   
 
 Afterward, proceed step by step by following the link below.
@@ -94,10 +86,8 @@ From Hi7 and later, built-in Ethernet is supported, allowing communication to be
 
 
 
-<p align="center">
-  <img src="../../_assets/8_8_5.png" width="80%"></img>
-  <em><p align="center">Figure 8.8.5. Baumer Sensor Signal Assignment</p></em>
-</p>
+![](../../_assets/8_8_5.png)<br>
+*Figure 8.8.5. Baumer Sensor Signal Assignment*
 </br>
 
 Once the above steps are completed, navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting - Signal tab`.

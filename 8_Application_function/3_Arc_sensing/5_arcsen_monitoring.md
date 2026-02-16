@@ -8,10 +8,8 @@ This feature is only available when the Arc Sensing license is valid.
 
 ### (2)	Explanation of Monitoring Items
 
-<p align="center">
- <img src="../../_assets/8_3_7.png" width="50%"></img>
- <em><p align="center">Figure 8.3.7 Arc Sensing Monitoring</p></em>
-</p>
+![](../../_assets/8_3_7.png)<br>
+*Figure 8.3.7 Arc Sensing Monitoring*
 
 - Left/Right Tracking: Displays the left and right distance to be corrected, calculated based on the tracking speed, distance, and current diffrential in the left-right direction by sensing.
 

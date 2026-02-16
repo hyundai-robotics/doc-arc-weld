@@ -6,10 +6,8 @@ In the third tab of the Weaving Condition Edit Screen, advanced settings can be 
 ```It is recommended to use the default values in this tab whenver possible.```
 
 
-<p align="center">
- <img src="../../_assets/8_3_3.png" width="70%"></img>
- <em><p align="center">Figure 8.3.3. Arc Sensing Condition(Advanced) Dialog Box</p></em>
-</p>
+![](../../_assets/8_3_3.png)<br>
+*Figure 8.3.3. Arc Sensing Condition(Advanced) Dialog Box*
 
 
 The settings and operation methods for each item are as follows:
@@ -59,10 +57,8 @@ This setting defines the margin for determining abnormal current values from the
 As shown in the figure below, the range is based on 'Q1 - 1.5 * IQR' for the lower bound and 'Q3 + 1.5 * IQR' for the upper bound.
 
 
-<p align="center">
-  <img src="../../_assets/8_3_4.png" width="40%"></img>
-  <em><p align="center">Figure 8.3.4. Abnormal Detection Margin</p></em>
-</p>
+![](../../_assets/8_3_4.png)<br>
+*Figure 8.3.4. Abnormal Detection Margin*
 <br>
 
 ### (7) Detection Time: [10 ~ 1000] ms

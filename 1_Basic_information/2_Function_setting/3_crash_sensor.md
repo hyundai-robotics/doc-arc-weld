@@ -19,10 +19,8 @@ If the tool collides and the collision sensor signal turns on, the motor will no
 - `[F2: System] - 2: Control parameter - 2: Input/Output signal setting - 1: Input signal attribute` - Adding a Signal and Checking the Negative Logic Box  
 
 
-<p align="center">
- <img src="../../_assets/1_2_3.png" width="70%"></img>
- <em><p align="center">Figure 1.2.3. How to Change Signal Logic</p></em>
-</p>
+![](../../_assets/1_2_3.png)<br>
+*Figure 1.2.3. How to Change Signal Logic*
 
 {% hint style="info" %}
 When you set up a collision sensor in the system's input signal settings, the system will prioritize the input from this signal. Any collision sensor signals received via welder communication will be ignored.

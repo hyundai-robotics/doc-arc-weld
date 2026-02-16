@@ -9,10 +9,8 @@ Let's now look at the process involved.
 
 The connection bracket can either be designed and used by yourself, or you may receive one from HD Hyundai Robotics or the LVS manufacturer. <br>
 
-<p align="center">
-  <img src="../../_assets/8_5_3_lvs_mount_setup.png" width="60%"></img>
-  <em><p align="center">Figure 8.5.3. LVS Mounting Precautions</p></em>
-</p>
+![](../../_assets/8_5_3_lvs_mount_setup.png)<br>
+*Figure 8.5.3. LVS Mounting Precautions*
 
 {% hint style="warning" %}
   - To achieve repetition accruacy and precision, directly mount the LVS bracket to the robot flange<br>
@@ -24,10 +22,8 @@ The tool coordinate system should be set as follows: the welding direction oppos
 The LVS sensor must be installed so that the laser is positioned perpendicular to the welding seam, which is straight (see figure)
 
 
-<p align="center">
-  <img src="../../_assets/8_5_4.png" width="90%"></img>
-  <em><p align="center">Figure 8.5.4. TCP and Sensor Installation, Tool Coordinate System Setup</p></em>
-</p>
+![](../../_assets/8_5_4.png)<br>
+*Figure 8.5.4. TCP and Sensor Installation, Tool Coordinate System Setup*
 
 {% hint style="info" %}
   For instructions on setting the tool coordinate system, refer to the Tool Calibration and Angle Correction Manual(Angle Calibration) section.
@@ -107,10 +103,8 @@ Preferences have been completed through the above process.
 
 #### Full-V Sensor Configuration Example
 
-<p align="center">
- <img src="../../_assets/8_5_5_lvs_setting_fullv_1.png" width="90%"></img>
- <em><p align="center">Figure 8.5.5. Full-V Sensor Connection Settings</p></em>
-</p>
+![](../../_assets/8_5_5_lvs_setting_fullv_1.png)<br>
+*Figure 8.5.5. Full-V Sensor Connection Settings*
 
 As shown in the figure above, select the LVS brand as FULL, then check the IP address of the LVS sensor in the Full-V softeware.  <br>
 Enter the IP in the `[F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting` window.  <br> Afterward, click the "connect" button at the bottom and verify that the connection status shows.  <br>
@@ -119,7 +113,5 @@ If "disconnected" appears, check the hardware connection and IP address.<br>
 Refer to the manual provided by Full-V and the figure below to register the seam you wish to use in the Full-V software.  
 
 
-<p align="center">
- <img src="../../_assets/8_5_6_lvs_setting_fullv_2.png" width="90%"></img>
- <em><p align="center">Figure 8.5.6. Example of Seam Setting in Full-V Software</p></em>
-</p>
+![](../../_assets/8_5_6_lvs_setting_fullv_2.png)<br>
+*Figure 8.5.6. Example of Seam Setting in Full-V Software*

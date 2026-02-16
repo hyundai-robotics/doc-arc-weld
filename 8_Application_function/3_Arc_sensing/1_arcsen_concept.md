@@ -27,10 +27,8 @@ Or, instead of using the starting position current reference value, **the user c
 ```  
 <br/>
 
-<p align="center">
- <img src="../../_assets/8_3_1.png" width="70%"></img>
- <em><p align="center">Figure 8.3.1. Arc Sensing Concept</p></em>
-</p>
+![](../../_assets/8_3_1.png)<br>
+*Figure 8.3.1. Arc Sensing Concept*
 
 As shown in the figure, when the torch is tilted to the left or right, the current weavform changes, and this can be used to track the seam in the left and right directions.
 Additionally, the current at the middle of the weaving section can be used to correct the vertical direction.

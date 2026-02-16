@@ -31,10 +31,8 @@ By performing the search function, the system becomes ready to perform "seam tra
 To configure the search function, enter **[property]** in the `lvs` command, where the search settings can be adjusted as follows:
 
 
-<p align="center">
- <img src="../../_assets/8_5_14_lvs_search_setting.png" width="80%"></img>
- <em><p align="center">Figure 8.5.14. lvs search settings</p></em>
-</p>   
+![](../../_assets/8_5_14_lvs_search_setting.png)<br>
+*Figure 8.5.14. lvs search settings*   
 </br>
 
 | Item | Description |
@@ -47,10 +45,8 @@ To configure the search function, enter **[property]** in the `lvs` command, whe
 
 <br>
 
-<p align="center">
- <img src="../../_assets/8_5_15_lvs_search_example.png" width="80%"></img>
- <em><p align="center">Figure 8.5.15. lvs search Example</p></em>
-</p>   
+![](../../_assets/8_5_15_lvs_search_example.png)<br>
+*Figure 8.5.15. lvs search Example*   
 </br>
 
 The **search** and **seam tracking** functions can be taught as shown below.

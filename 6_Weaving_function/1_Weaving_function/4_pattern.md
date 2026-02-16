@@ -49,10 +49,8 @@ This refers to the angle of the weaving vibration direction relative to the weld
 When set to 0°, the weaving will move perpendicular to the welding line.
 
 
-<p align="center">
-  <img src="../../_assets/6_1_4.png" width="60%"></img>
-  <em><p align="center">Figure 6.1.4. Weaving Forward Angle</p></em>
-</p>
+![](../../_assets/6_1_4.png)<br>
+*Figure 6.1.4. Weaving Forward Angle*
 
     
 ### (7)	Boundary Limitation
@@ -61,7 +59,5 @@ For weaving with a forward angle other than 0°, the weaving may exceed the boun
 The boundary limitation setting allows you to choose whether the weaving should be confined within the section boundaries or if it can proceed without any restrictions beyond the section boundaries.
 
  
-<p align="center">
-  <img src="../../_assets/6_1_5.png" width="60%"></img>
-  <em><p align="center">Figure 6.1.5 Weaving Boundary Limitation</p></em>
-</p> 
+![](../../_assets/6_1_5.png)<br>
+*Figure 6.1.5 Weaving Boundary Limitation* 

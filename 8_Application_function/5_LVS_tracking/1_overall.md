@@ -11,10 +11,8 @@ The LVS must be directly connected to the robot's flange. The sensor detects the
 In other words, through seam tracking, welding can still be performed even if the position of the welding target changes and deviates from the original reference points.
 
 
-<p align="center">
- <img src="../../_assets/8_5_1.png" width="90%"></img>
- <em><p align="center">Figure 8.5.1. LVS Seam Tracking Flowchart</p></em>
-</p>
+![](../../_assets/8_5_1.png)<br>
+*Figure 8.5.1. LVS Seam Tracking Flowchart*
 
 </br>
 
@@ -146,10 +144,8 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
 The tracking function using the ```lvs``` command can be used as follows:
 
 
-<p align="center">
- <img src="../../_assets/8_5_2.png" width="60%"></img>
- <em><p align="center">Figure 8.5.2. Teaching Method for LVS Seam Tracking</p></em>
-</p>
+![](../../_assets/8_5_2.png)<br>
+*Figure 8.5.2. Teaching Method for LVS Seam Tracking*
 
 
 ---

@@ -13,10 +13,8 @@ Follow the steps below to connect the PC and controller using an Ethernet cable:
 4. Right-click the cifx icon and select **network scan**.
 
 
-<p align="center">
- <img src="../../_assets/4_1_1.png" width="60%"></img>
- <em><p align="center">Figure 4.1.1. Sycon Communication Status</p></em>
-</p>  
+![](../../_assets/4_1_1.png)<br>
+*Figure 4.1.1. Sycon Communication Status*  
 
 After completing the below steps, the sycon screen will appear as shown above. (when connected to Hyundai PNS Welder)
 

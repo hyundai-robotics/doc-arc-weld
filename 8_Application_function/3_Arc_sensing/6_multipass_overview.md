@@ -9,21 +9,15 @@ The trajectory of this pass is tehn saved, and the stored trajectory is shifted 
 Since the position of the multi-pass work program is the same as that of the root pass trajectory, it is easy to perform multi-pass welding by simply copying the root pass work program and inserting the multi-pass command.
 
 
-<p align="center">
-  <img src="../../_assets/8_3_8.png" width="60%"></img>
-  <em><p align="center">Figure 8.3.8 Root Pass Arc sensing (left) and Multi-pass welding for 2-3 layers</p></em>
-</p>
+![](../../_assets/8_3_8.png)<br>
+*Figure 8.3.8 Root Pass Arc sensing (left) and Multi-pass welding for 2-3 layers*
 
-<p align="center">
-  <img src="../../_assets/8_3_9.png" width="60%"></img>
-  <em><p align="center">Figure 8.3.9 Actual Multi-Pass Welding</p></em>
-</p>
+![](../../_assets/8_3_9.png)<br>
+*Figure 8.3.9 Actual Multi-Pass Welding*
 
 When creating multi-pass beads in a stacked, inclined configuration as shown in Figure 2 above, welding can be performed by modifying only the start and end points of the weld and slightly shifting them.  
 This will result in a stacked configuration as shown below.
 
 
-<p align="center">
-  <img src="../../_assets/8_3_10.png" width="60%"></img>
-  <em><p align="center">Figure 8.3.10 Multi-pass Stacked Shape with Inclination</p></em>
-</p>
+![](../../_assets/8_3_10.png)<br>
+*Figure 8.3.10 Multi-pass Stacked Shape with Inclination*

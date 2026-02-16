@@ -23,10 +23,8 @@ When teaching in the tool-based X-Y directions, adjust the RZ value so that the 
 
 <br/>
 
-<p align="center">
-  <img src="../../_assets/8_8_2_1.png" width="60%"></img>
-  <em><p align="center">Figure 8.8.2.1 Preparation before calibration</p></em>
-</p><br/>  
+![](../../_assets/8_8_2_1.png)<br>
+*Figure 8.8.2.1 Preparation before calibration*<br/>  
 
 After completing the above steps, all preparations required for performing calibration are complete.
 
@@ -38,10 +36,8 @@ In addition, ensure that the laser point is located inside the calibration plane
 
 <br/>
 
-<p align="center">
- <img src="../../_assets/8_8_2_2.png" width="50%"></img>
- <em><p align="center">Figure 8.8.2.2 Start of calibration</p></em>
-</p><br/>  
+![](../../_assets/8_8_2_2.png)<br>
+*Figure 8.8.2.2 Start of calibration*<br/>  
 
 From the lower panel, select `[F6: cmd. input] - arcweld - lps` and insert the following command.
 
@@ -70,9 +66,7 @@ If the tool information is the same but a different tool number is to be used, t
 
 <br/>
 
-<p align="center">
- <img src="../../_assets/8_8_2_3.png" width="80%"></img>
- <em><p align="center">Figure 8.8.2.3 Calibration Result</p></em>
-</p><br/>  
+![](../../_assets/8_8_2_3.png)<br>
+*Figure 8.8.2.3 Calibration Result*<br/>  
 
 

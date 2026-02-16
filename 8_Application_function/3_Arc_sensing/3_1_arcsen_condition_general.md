@@ -5,10 +5,8 @@ In the `Weaving` command, clickin on [Properties] opens the Weaving Condition Ed
 The second tab of this window is where settings related to arc sensing during weaving can be configured, as shown below.  
 
 
-<p align="center">
- <img src="../../_assets/8_3_2.png" width="70%"></img>
- <em><p align="center">Figure 8.3.2. Arc Sensing Condition(General) Dialog Box</p></em>
-</p>
+![](../../_assets/8_3_2.png)<br>
+*Figure 8.3.2. Arc Sensing Condition(General) Dialog Box*
 
 The settings and operation methods for each item are as follows:  
 

@@ -6,10 +6,8 @@ The Arc Welding Signal Test function lets you test the input/output status of ke
 To use this feature, on TP, press `[pane layout] - select - arc welding` sequentially. In the Arc Welding panel, scroll down to see the input/output signal items.
 
 
-<p align="center">
- <img src="../../_assets/1_3_3.png" width="70%"></img>
- <em><p align="center">Figure 1.3.3. Arc Welding Monitoring</p></em>
-</p>
+![](../../_assets/1_3_3.png)<br>
+*Figure 1.3.3. Arc Welding Monitoring*
 
 | Item | Description |
 | ------------- | ---------------------------------------------------------- |

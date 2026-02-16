@@ -5,10 +5,8 @@ Arc welding data graph displays information related to the welding data's wavefo
 To use this feature, on TP, press `[pane layout] - select - arc data graph` sequentially. 
 
  
-<p align="center">
- <img src="../../_assets/7_1_2.png" width="70%"></img>
- <em><p align="center">Figure 7.1.2. Arc Welding data graph</p></em>
-</p>
+![](../../_assets/7_1_2.png)<br>
+*Figure 7.1.2. Arc Welding data graph*
 
 The following items can be checked in the monitoring window:
 

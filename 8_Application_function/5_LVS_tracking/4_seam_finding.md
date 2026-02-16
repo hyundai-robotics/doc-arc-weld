@@ -23,10 +23,8 @@ After executing this, as shown below, the position sensed by the LVS will be sto
 {% endhint %}
 
 
-<p align="center">
- <img src="../../_assets/8_5_9_lvs_seamfind_ex.png" width="80%"></img>
- <em><p align="center">Figure 8.5.9. Pose in the LVS sensing position</p></em>
-</p>   
+![](../../_assets/8_5_9_lvs_seamfind_ex.png)<br>
+*Figure 8.5.9. Pose in the LVS sensing position*   
 </br>
 
 {% hint style="info" %}
@@ -62,10 +60,8 @@ If sensing is still impossible after the specified number of retries, an error w
 
 The retry process is performed in the following sequence:
 
-<p align="center">
- <img src="../../_assets/8_5_10_lvs_seamfind_retry.png" width="60%"></img>
- <em><p align="center">Figure 8.5.10. LVS Seam Finding Retry</p></em>
-</p>   
+![](../../_assets/8_5_10_lvs_seamfind_retry.png)<br>
+*Figure 8.5.10. LVS Seam Finding Retry*   
 </br>
 
 {% hint style="warning" %}
@@ -79,10 +75,8 @@ The retry process is performed in the following sequence:
 To view the LVS seam finding monitoring screen, click `[pane layout] - select - LVS seamfind` in the TP  
 
 
-<p align="center">
- <img src="../../_assets/8_5_11_seamfind monitoring.png" width="60%"></img>
- <em><p align="center">Figure 8.5.11. LVS Seam Finding Monitoring</p></em>
-</p>   
+![](../../_assets/8_5_11_seamfind monitoring.png)<br>
+*Figure 8.5.11. LVS Seam Finding Monitoring*   
 </br>
 <table>
   <thead>
