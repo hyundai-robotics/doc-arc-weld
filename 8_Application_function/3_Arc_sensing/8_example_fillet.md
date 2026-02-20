@@ -12,7 +12,7 @@ The work sequence is as follows:
 4) Perform the welding operation from the welding start position using the weaving command and the arc welding command.
 
 
-![](../../_assets/8_3_13)<br>
+![](../../_assets/8_3_13.png)<br>
 *Figure 8.3.13 Fillet Touch Sensing and Arc Sensing*
 
 

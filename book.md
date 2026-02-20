@@ -2031,12 +2031,12 @@ In the case of a triangular weaving pattern, the sum of the lateral and longitud
 [__SOURCE](6_Weaving_function/1_Weaving_function/4_pattern.md)
 # 6.1.4 Default Pattern
 
-다음 그림에서의 각 요소를 설정합니다. 
+Configure each parameter shown in the following figure. 
   
 <p align="center">
   <img src="../../_assets/6_1_3.png" width="60%"></img>
   <img src="../../_assets/6_1_3_1.png" width="45%"></img>
-  <em><p align="center">그림 6.1.3 벽방향에 따른 위빙 요소</p></em>
+  <em><p align="center">Figure 6.1.3 Weaving Parameters according to Wall Direction</p></em>
 </p>
 
 - **Left Distance(Wall Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
@@ -2104,8 +2104,8 @@ In this state, you can configure whether the robot will continue to move or stop
 If set to **Move**, the robot behaves as shown on the left in the figure; if set to **Stop**, the behavior is as shown on the right.  
 
 
-![](../../_assets/6_1_8.png)<br>
-*Figure 6.1.8. Robot Behavior when Weaving Stops* 
+![](../../_assets/6_1_6.png)<br>
+*Figure 6.1.6. Robot Behavior when Weaving Stops* 
 
 ### (2)	Move Time
 
@@ -3406,7 +3406,7 @@ The work sequence is as follows:
 4) Perform the welding operation from the welding start position using the weaving command and the arc welding command.
 
 
-![](../../_assets/8_3_13)<br>
+![](../../_assets/8_3_13.png)<br>
 *Figure 8.3.13 Fillet Touch Sensing and Arc Sensing*
 
 

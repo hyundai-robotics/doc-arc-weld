@@ -8,8 +8,8 @@ In this state, you can configure whether the robot will continue to move or stop
 If set to **Move**, the robot behaves as shown on the left in the figure; if set to **Stop**, the behavior is as shown on the right.  
 
 
-![](../../_assets/6_1_8.png)<br>
-*Figure 6.1.8. Robot Behavior when Weaving Stops* 
+![](../../_assets/6_1_6.png)<br>
+*Figure 6.1.6. Robot Behavior when Weaving Stops* 
 
 ### (2)	Move Time
 

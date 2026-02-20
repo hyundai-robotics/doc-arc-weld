@@ -1,11 +1,11 @@
 ﻿# 6.1.4 Default Pattern
 
-다음 그림에서의 각 요소를 설정합니다. 
+Configure each parameter shown in the following figure. 
   
 <p align="center">
   <img src="../../_assets/6_1_3.png" width="60%"></img>
   <img src="../../_assets/6_1_3_1.png" width="45%"></img>
-  <em><p align="center">그림 6.1.3 벽방향에 따른 위빙 요소</p></em>
+  <em><p align="center">Figure 6.1.3 Weaving Parameters according to Wall Direction</p></em>
 </p>
 
 - **Left Distance(Wall Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
