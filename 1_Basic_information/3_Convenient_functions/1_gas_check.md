@@ -6,9 +6,11 @@ Arc 용접장치 중 실드 가스 밸브와 와이어 송급장치(wire feeder)
 
 <style>
   table {
-    width: auto;
+    /* width: auto; */
     border-collapse: collapse;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    page-break-inside: avoid; 
+    break-inside: avoid;
   }
 </style>
 
@@ -26,7 +28,7 @@ Arc 용접장치 중 실드 가스 밸브와 와이어 송급장치(wire feeder)
 | ------- | --------------------------- |
 | **단축키** | `[Shift]+[2]`               |
 | **전용키** | 사용자키 `inching`              |
-| **용도**  | 와이어를 토치 앞쪽으로 송급하여 와이어 길이 조절 <li>저속 인칭: 키를 누른 후 3초 이내</li> <li>고속 인칭: 키를 누른 후 3초 이상</li> |
+| **용도**  | 와이어를 토치 앞쪽으로 송급하여 와이어 길이 조절 <li>저속 인칭: 키를 누른 후 3초 이내</li> <li>고속 인칭: 키를 누른 후 3초 이상</li> |  
 
 ### 역인칭 기능
 

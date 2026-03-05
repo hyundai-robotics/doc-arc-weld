@@ -9,7 +9,6 @@
 stitch on, cnd=<조건번호>
 stitch off
 ```  
-<br/>
 
 
 ### 파라미터
@@ -32,7 +31,6 @@ stitch off
     </tr>
   </tbody>
 </table>  
-<br/>
 
 
 ### 사용 예

@@ -10,7 +10,6 @@
 ```python
 heightsen on, cnd=<높이센싱 조건번호>
 ```  
-<br/>
 
 ### 파라미터
 
@@ -33,14 +32,12 @@ heightsen on, cnd=<높이센싱 조건번호>
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### 사용 예
 
 ```python   
    heightsen on, cnd=1        # 높이센싱 1번 조건으로 높이센싱을 시작
 ```  
-<br/>
 
 ### 세부 설명
   [[8.3 높이센싱(Height Sensing)]](../8_Application_function/4_Height_sensing/README.md) 참고

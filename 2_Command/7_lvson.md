@@ -15,7 +15,6 @@ lvs track, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
 lvs seam_find, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
 lvs auto_calib, cnd=<조건번호>, seam=<seam번호>, sp=<seam포즈>, opt=0
 ```   
-<br/>
 
 ### 파라미터
 
@@ -106,7 +105,6 @@ lvs auto_calib, cnd=<조건번호>, seam=<seam번호>, sp=<seam포즈>, opt=0
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### 사용 예
 
@@ -116,8 +114,6 @@ lvs auto_calib, cnd=<조건번호>, seam=<seam번호>, sp=<seam포즈>, opt=0
    lvs track, cnd=1 ,seam=10 , sp=p10           
    # 조건번호 1번, seam번호 10번으로 LVS 용접선 추종 시작
 ```  
-<br/><br/>
-
 
 {% hint style="info" %}
 옵션 기능으로 사용을 위해서는 당사에 문의하시기 바랍니다.

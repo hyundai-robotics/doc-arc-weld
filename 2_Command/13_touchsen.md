@@ -13,7 +13,6 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, rotation=<센싱각�
 touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, lift_up=<들어올릴 양>, pose=<저장할 포즈>, gap=<butt gap 변수>
 touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모드 저장할 기준포즈>, mshift=<양산모드 계산된 쉬프트 변수>
 ```  
-<br/>
 
 ### 파라미터
 
@@ -91,7 +90,6 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### 사용 예
 ```python
@@ -101,10 +99,8 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
   touchsen cnd=1, crd="tool_prj", dir=["tf", "td"], pose=P10, 0  # 1번 조건, 툴프로젝션 방향, 2점 터치
   touchsen cnd=1, crd="base", dir=["+x","-y","-z"], pose=P10, 0  # 1번 조건, 베이스좌표 방향, 3점 터치
 ```  
-<br/>
 
 
 ### 세부 설명  
   [[8.2 터치센싱 기능]](../8_Application_function/2_Touch_sensing/README.md) 참고  
-<br/>
 

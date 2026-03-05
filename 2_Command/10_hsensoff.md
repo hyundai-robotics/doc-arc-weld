@@ -9,7 +9,6 @@
 ```python
 heightsen off
 ```  
-<br/>
 
 
 ### 사용 예
@@ -17,10 +16,8 @@ heightsen off
 ```python   
    heightsen off            # 높이센싱 실행을 종료
 ```  
-<br/>
 
 ### 세부 설명
   [[8.3 높이센싱(Height Sensing)]](../8_Application_function/3_Height_sensing/README.md) 참고  
-<br/>
 
 

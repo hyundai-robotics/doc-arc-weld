@@ -12,7 +12,6 @@ multipass save, trj=<멀티패스 궤적 번호>, period=<궤적 저장 주기 �
 multipass load, trj=<멀티패스 궤적 번호>, side=<좌우 시프트 거리>, height=<상하 시프트 거리>, reverse=<멀티패스 재생방향>, tas=<토치 전후방향 각도 시프트>, was=<토치 좌우방향 각도 시프트>
 multipass off
 ```  
-<br/>
 
 ### 파라미터
 <table>
@@ -92,7 +91,6 @@ multipass off
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### 사용 예
 
@@ -119,4 +117,3 @@ S17  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
      weaving off  
      multipass off
 ```  
-<br/>

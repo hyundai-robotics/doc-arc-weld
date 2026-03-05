@@ -11,7 +11,6 @@
 refp <참조점 번호>,<포즈(번호)>
 refp <참조점 번호>
 ```  
-<br/>
 
 ### 파라미터
 
@@ -40,7 +39,6 @@ refp <참조점 번호>
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### 사용 예
 
@@ -49,13 +47,11 @@ refp <참조점 번호>
    refp 1                      # 위빙의 벽방향을 숨은 포즈를 이용하여 지정
    refp 2, (-1073.33, 739.01, 258.30, 0, 76, 23)  # 위빙면의 위치를 지정
 ```  
-<br/>
 
 ### 세부 설명
-  [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 참고
-  
-<br/>  
-<br/>
+  [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 참고  
+
+
 
 {% hint style="warning" %}
 -	```refp``` 문은 ```move``` 문처럼 스텝에 속합니다.

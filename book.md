@@ -263,9 +263,11 @@ Arc 용접장치 중 실드 가스 밸브와 와이어 송급장치(wire feeder)
 
 <style>
   table {
-    width: auto;
+    /* width: auto; */
     border-collapse: collapse;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    page-break-inside: avoid; 
+    break-inside: avoid;
   }
 </style>
 
@@ -283,7 +285,7 @@ Arc 용접장치 중 실드 가스 밸브와 와이어 송급장치(wire feeder)
 | ------- | --------------------------- |
 | **단축키** | `[Shift]+[2]`               |
 | **전용키** | 사용자키 `inching`              |
-| **용도**  | 와이어를 토치 앞쪽으로 송급하여 와이어 길이 조절 <li>저속 인칭: 키를 누른 후 3초 이내</li> <li>고속 인칭: 키를 누른 후 3초 이상</li> |
+| **용도**  | 와이어를 토치 앞쪽으로 송급하여 와이어 길이 조절 <li>저속 인칭: 키를 누른 후 3초 이내</li> <li>고속 인칭: 키를 누른 후 3초 이상</li> |  
 
 ### 역인칭 기능
 
@@ -357,24 +359,36 @@ Arc 용접작업을 티칭할 때 적절한 용접 전류/전압을 찾기 위�
 | ------ | --------------------- |--------------------- |
 | **용도** | 용접전류 1% 증/감         |용접전류 5% 증/감|
 
+<br/>
+
+
 |      | [+ 전압]/[- 전압]                   |`[SHIFT]` + [+ 전압]/[- 전압] |
 | ------ | --------------------- |--------------------- |
 | **용도** | 용접전압 1% 증/감         |용접전압 5% 증/감|
+
+<br/>
+
 
 |      | [+ 위빙L]/[- 위빙L]                   |`[SHIFT]` + [+ 위빙L]/[- 위빙L] |
 | ------ | --------------------- |--------------------- |
 | **용도** | 위빙 폭(좌) 0.1[mm] 증/감         |위빙 폭(좌) 0.5[mm] 증/감|
 
+<br/>
+
+
 |      | [+ 위빙R]/[- 위빙R]                   |`[SHIFT]` + [+ 위빙R]/[- 위빙R] |
 | ------ | --------------------- |--------------------- |
 | **용도** | 위빙 폭(우) 0.1[mm] 증/감         |위빙 폭(우) 0.5[mm] 증/감|
 
+<br/>
+
+
 |      | [+ 주파수]/[- 주파수]                   |`[SHIFT]` + [+ 주파수]/[- 주파수] |
 | ------ | --------------------- |--------------------- |
-| **용도** | 위빙 주파수 0.1[Hz] 증/감         |위빙 주파수 0.5[Hz] 증/감|
+| **용도** | 위빙 주파수 0.1[Hz] 증/감         |위빙 주파수 0.5[Hz] 증/감|  
 
 
----  
+<br/><br/>
 
 
 ### 전류/전압 변경 자동저장 설정 변경
@@ -490,7 +504,6 @@ arcon cnd=<조건번호>
 arcon cnd=<조건번호>,job=<용접 Job번호>,cur=<전류값>,vol=<전압값>, vol_offset=<전압 옵셋값>
 arcon cnd=<조건번호>,job=<용접 Job번호>  
 ```  
-<br/>
 
 ### 파라미터
 
@@ -541,7 +554,6 @@ arcon cnd=<조건번호>,job=<용접 Job번호>
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### 사용 예
 
@@ -551,11 +563,9 @@ arcon cnd=<조건번호>,job=<용접 Job번호>
    arcon cnd=1,cur=200,vol=22  # 전류, 전압은 입력된 값으로 적용하고 그 외의 용접 조건은 용접시작조건번호의 조건으로 용접개시
    arcon cnd=1,job=5 # 용접 모드는 Job모드로 적용. 5번 job번호 사용. 그 외의 용접 조건은 용접시작조건번호의 조건으로 용접개시
 ```  
-<br/>
 
 ### 세부 설명  
 [[5장 Arc용접 조건 편집]](../5_Condition_editing/README.md) 참고  
-<br/>
 
 
 {% hint style="warning" %}
@@ -575,7 +585,6 @@ arcon cnd=<조건번호>,job=<용접 Job번호>
 arcoff
 arcoff welder=<조건번호>, delay=<지연시간>
 ```  
-<br/>
 
 ### 파라미터
 
@@ -605,7 +614,6 @@ arcoff welder=<조건번호>, delay=<지연시간>
     </tr>
   </tbody>
 </table>  
-<br/>
 
 
 ### 사용 예
@@ -614,7 +622,6 @@ arcoff welder=<조건번호>, delay=<지연시간>
     arcoff                    #특별한 종료처리 없이 Arc 용접을 종료 함
     arcoff welder=2, delay=1  #2번째 용접기 아크를 1초 후 off 
 ```  
-<br/>
 
 ### 세부 설명  
 
@@ -633,7 +640,6 @@ arcoff welder=<조건번호>, delay=<지연시간>
 ```python
 weaving on <위빙조건번호>
 ```  
-<br/>
 
 ### 파라미터
 <table>
@@ -655,7 +661,6 @@ weaving on <위빙조건번호>
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### 사용 예
 
@@ -664,7 +669,6 @@ weaving on <위빙조건번호>
    arcon cnd=1          # arcon 1번 조건으로 실행
    move L,spd=100cm/min,accu=0,tool=0   # 위의 위빙 조건대로 실행하며 로봇 이동
 ```  
-<br/>
 
 
 ### 세부 설명  
@@ -684,14 +688,12 @@ weaving on <위빙조건번호>
 ```python
 weaving off
 ```  
-<br/>
 
 ### 사용 예
 
 ```python
    weaving off
 ```  
-<br/>
 
 ### 세부 설명
 
@@ -713,7 +715,6 @@ weaving off
 ```python
 arccond <보간종류>, cnd=<조건번호>, gap=<gap>, spd=<용접속도>, rd=<벽방향>, ld=<타방향>, freq=<위빙주파수>, cur=<전류>, vol=<전압>
 ```  
-<br/>
 
 ### 파라미터
 
@@ -792,7 +793,6 @@ arccond <보간종류>, cnd=<조건번호>, gap=<gap>, spd=<용접속도>, rd=<�
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### 사용 예
 
@@ -802,7 +802,6 @@ arccond <보간종류>, cnd=<조건번호>, gap=<gap>, spd=<용접속도>, rd=<�
 	arccond D, cnd=1 # 1번 조건으로 즉시변경
 	arccond L, cnd=1, 용접스텝, arccond L, cnd=2 # 1번조건에서 2번조건으로 WDB데이터 연속보간 변경
 ```  
-<br/>
 
 ### 세부 설명
 
@@ -822,7 +821,6 @@ arccond <보간종류>, cnd=<조건번호>, gap=<gap>, spd=<용접속도>, rd=<�
 refp <참조점 번호>,<포즈(번호)>
 refp <참조점 번호>
 ```  
-<br/>
 
 ### 파라미터
 
@@ -851,7 +849,6 @@ refp <참조점 번호>
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### 사용 예
 
@@ -860,13 +857,11 @@ refp <참조점 번호>
    refp 1                      # 위빙의 벽방향을 숨은 포즈를 이용하여 지정
    refp 2, (-1073.33, 739.01, 258.30, 0, 76, 23)  # 위빙면의 위치를 지정
 ```  
-<br/>
 
 ### 세부 설명
-  [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 참고
-  
-<br/>  
-<br/>
+  [[6장 위빙기능(Weaving)]](../6_Weaving_function/README.md) 참고  
+
+
 
 {% hint style="warning" %}
 -	```refp``` 문은 ```move``` 문처럼 스텝에 속합니다.
@@ -891,7 +886,6 @@ lvs track, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
 lvs seam_find, cnd=<조건 번호>, seam=<seam번호>, sp=<seam포즈>
 lvs auto_calib, cnd=<조건번호>, seam=<seam번호>, sp=<seam포즈>, opt=0
 ```   
-<br/>
 
 ### 파라미터
 
@@ -982,7 +976,6 @@ lvs auto_calib, cnd=<조건번호>, seam=<seam번호>, sp=<seam포즈>, opt=0
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### 사용 예
 
@@ -992,8 +985,6 @@ lvs auto_calib, cnd=<조건번호>, seam=<seam번호>, sp=<seam포즈>, opt=0
    lvs track, cnd=1 ,seam=10 , sp=p10           
    # 조건번호 1번, seam번호 10번으로 LVS 용접선 추종 시작
 ```  
-<br/><br/>
-
 
 {% hint style="info" %}
 옵션 기능으로 사용을 위해서는 당사에 문의하시기 바랍니다.
@@ -1022,7 +1013,6 @@ lps scan, cnd=<조건 번호>, Tx=<툴 기준 X 방향 이동거리>, Ty=<툴 �
 # 마스터/양산 모드 사용 시
 lps scan, cnd=<조건 번호>, Tx=<툴 기준 X 방향 이동거리>, Ty=<툴 기준 Y 방향 이동거리>, spd=<로봇 속도>, sp=<저장 포즈>, mp=<마스터 포즈>, ms=<마스터 포즈 대비 시프트>
 ```  
-<br/>
 
 ### 파라미터
 
@@ -1101,7 +1091,6 @@ lps scan, cnd=<조건 번호>, Tx=<툴 기준 X 방향 이동거리>, Ty=<툴 �
     </tr>
   </tbody>
 </table>  
-<br/>
 
 
 ### 사용 예
@@ -1120,7 +1109,6 @@ lps scan, cnd=<조건 번호>, Tx=<툴 기준 X 방향 이동거리>, Ty=<툴 �
     # 마스터 모드 사용 시 - 조건 번호 1번, 툴 기준 X 방향으로 50만큼 설정된 거리만큼 이동이 완료되면 용접점을 검출하여 p10에 저장, mp10와 비교하여 시프트 값을 ms10에 저장
 
 ```  
-<br/><br/>
 
 
 {% hint style="info" %}
@@ -1145,7 +1133,6 @@ lps scan, cnd=<조건 번호>, Tx=<툴 기준 X 방향 이동거리>, Ty=<툴 �
 ```python
 heightsen on, cnd=<높이센싱 조건번호>
 ```  
-<br/>
 
 ### 파라미터
 
@@ -1168,14 +1155,12 @@ heightsen on, cnd=<높이센싱 조건번호>
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### 사용 예
 
 ```python   
    heightsen on, cnd=1        # 높이센싱 1번 조건으로 높이센싱을 시작
 ```  
-<br/>
 
 ### 세부 설명
   [[8.3 높이센싱(Height Sensing)]](../8_Application_function/4_Height_sensing/README.md) 참고
@@ -1194,7 +1179,6 @@ heightsen on, cnd=<높이센싱 조건번호>
 ```python
 heightsen off
 ```  
-<br/>
 
 
 ### 사용 예
@@ -1202,11 +1186,9 @@ heightsen off
 ```python   
    heightsen off            # 높이센싱 실행을 종료
 ```  
-<br/>
 
 ### 세부 설명
   [[8.3 높이센싱(Height Sensing)]](../8_Application_function/3_Height_sensing/README.md) 참고  
-<br/>
 
 
 
@@ -1225,7 +1207,6 @@ multipass save, trj=<멀티패스 궤적 번호>, period=<궤적 저장 주기 �
 multipass load, trj=<멀티패스 궤적 번호>, side=<좌우 시프트 거리>, height=<상하 시프트 거리>, reverse=<멀티패스 재생방향>, tas=<토치 전후방향 각도 시프트>, was=<토치 좌우방향 각도 시프트>
 multipass off
 ```  
-<br/>
 
 ### 파라미터
 <table>
@@ -1305,7 +1286,6 @@ multipass off
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### 사용 예
 
@@ -1332,7 +1312,6 @@ S17  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
      weaving off  
      multipass off
 ```  
-<br/>
 
 [__SOURCE](2_Command/12_posical.md)
 # 2.12 posi_calib
@@ -1358,7 +1337,6 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, rotation=<센싱각�
 touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, lift_up=<들어올릴 양>, pose=<저장할 포즈>, gap=<butt gap 변수>
 touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모드 저장할 기준포즈>, mshift=<양산모드 계산된 쉬프트 변수>
 ```  
-<br/>
 
 ### 파라미터
 
@@ -1436,7 +1414,6 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### 사용 예
 ```python
@@ -1446,12 +1423,10 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
   touchsen cnd=1, crd="tool_prj", dir=["tf", "td"], pose=P10, 0  # 1번 조건, 툴프로젝션 방향, 2점 터치
   touchsen cnd=1, crd="base", dir=["+x","-y","-z"], pose=P10, 0  # 1번 조건, 베이스좌표 방향, 3점 터치
 ```  
-<br/>
 
 
 ### 세부 설명  
   [[8.2 터치센싱 기능]](../8_Application_function/2_Touch_sensing/README.md) 참고  
-<br/>
 
 
 [__SOURCE](2_Command/14_stitch.md)
@@ -1466,7 +1441,6 @@ touchsen cnd=<조건번호>, crd=<좌표계>, dir=<방향>, mpose=<마스터모�
 stitch on, cnd=<조건번호>
 stitch off
 ```  
-<br/>
 
 
 ### 파라미터
@@ -1489,7 +1463,6 @@ stitch off
     </tr>
   </tbody>
 </table>  
-<br/>
 
 
 ### 사용 예
@@ -1517,7 +1490,6 @@ stitch off
 <쉬프트변수인자>=calshift(<포즈변수인자1>, <포즈변수인자2>)
 <쉬프트변수인자>=calshift(<포즈변수인자1>, <포즈변수인자2>,"TV")
 ```  
-<br/>
 
 ### 파라미터
 
@@ -1553,7 +1525,6 @@ stitch off
     </tr>
   </tbody>
 </table>   
-<br/>
 
 ### 사용 예
 ```python
@@ -1565,7 +1536,6 @@ stitch off
     sft_1=calshift(pose_1,pose_2)   
     # pose_1 - pose_2 의 벡터 쉬프트량을 계산하여 sft_1에 저장
 ```  
-<br/>
   
 [__SOURCE](3_Property/README.md)
 # 3. 명령어 속성 창
@@ -2185,7 +2155,7 @@ Arc 용접 진행 중에는 Arc 꺼짐, 용접 전류 및 전압의 제한치 �
 
  
 <p align="center">
-  <img src="../../_assets/6_1_1_1.png" width="70%"></img>
+  <img src="../../_assets/6_1_1_1.png" width="70%"></img><br/><br/>
   <img src="../../_assets/6_1_1_2.png" width="70%"></img>
   <em><p align="center">그림 6.1.1. 위빙조건 설정</p></em>
 </p>
@@ -3636,12 +3606,13 @@ S6   move P,spd=60%,accu=3,tool=1  		'14: 동작 종료점
 
 높이센싱은 명령어 실행 후 ```arcon``` 명령어가 실행되면 동작하기 시작합니다. 일반적으로 용접 초기에는 전류, 전압이 안정화되지 않은 상태이므로 안정화 될 때까지는 입력데이터를 무시합니다. 이후 입력데이터가 안정화되면 기준데이터 설정방식에 따라 평균을 계산합니다. 사용자가 기준데이터를 입력하는 방식인 경우는 바로 높이센싱을 수행하게 됩니다.
 
- 
 높이센싱의 동작 순서는 다음과 같습니다.
 
- 
-![](../../_assets/8_4_1.png)<br>
-*그림 8.4.1. 높이센싱 기능 동작 순서*
+<p align="center">
+  <img src="../../_assets/8_4_1.png" width="50%"></img>
+  <em><p align="center">그림 8.4.1. 높이센싱 기능 동작 순서</p></em>
+</p>
+
 
 
 [__SOURCE](8_Application_function/4_Height_sensing/1_hsen_condition.md)
@@ -3862,7 +3833,6 @@ LVS 용접선 찾기 및 추적 기능은 ```lvs``` 명령어를 통해 수행�
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ---
 

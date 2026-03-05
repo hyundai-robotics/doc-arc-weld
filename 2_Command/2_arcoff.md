@@ -10,7 +10,6 @@
 arcoff
 arcoff welder=<조건번호>, delay=<지연시간>
 ```  
-<br/>
 
 ### 파라미터
 
@@ -40,7 +39,6 @@ arcoff welder=<조건번호>, delay=<지연시간>
     </tr>
   </tbody>
 </table>  
-<br/>
 
 
 ### 사용 예
@@ -49,7 +47,6 @@ arcoff welder=<조건번호>, delay=<지연시간>
     arcoff                    #특별한 종료처리 없이 Arc 용접을 종료 함
     arcoff welder=2, delay=1  #2번째 용접기 아크를 1초 후 off 
 ```  
-<br/>
 
 ### 세부 설명  
 
