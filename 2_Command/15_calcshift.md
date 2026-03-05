@@ -13,7 +13,6 @@ It is frequently used to calculate shifts based on pose variables saved from tou
 <Shift Val>=calshift(<Pose Val 1>, <Pose Val 2>)
 <Shift Val>=calshift(<Pose Val 1>, <Pose Val 2>,"TV")
 ```  
-<br/>
 
 
 ### Parameter
@@ -36,5 +35,4 @@ It is frequently used to calculate shifts based on pose variables saved from tou
     sft_1=calshift(pose_1,pose_2)   
     # calculate the vector shift between pose_1 and pose_2, and store the result in sht_1
 ```  
-<br/>
   

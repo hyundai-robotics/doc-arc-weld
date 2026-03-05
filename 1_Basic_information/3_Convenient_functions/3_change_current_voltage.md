@@ -26,24 +26,37 @@ The detailed content and setup method for this function are as follows:  <br/>
 
 |      | [+ Current]/[- Current]                   |`[SHIFT]` + [+ Current]/[- Current] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Welding Current 1% +/-         | Welding Current 5% +/-|
+| **Function** | Welding Current 1% +/-         | Welding Current 5% +/-|  
+
+<br/>
+
 
 |      | [+ Voltage]/[- Voltage]                   |`[SHIFT]` + [+ Voltage]/[- Voltage] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Welding Voltage 1% +/-         | Welding Voltage 5% +/-|
+| **Function** | Welding Voltage 1% +/-         | Welding Voltage 5% +/-|  
+
+<br/>
+
 
 |      | [+ Weaving L]/[- Weaving L]                   |`[SHIFT]` + [+ Weaving L]/[- Weaving L] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Weaving Width(Left) 0.1[mm] +/-         |Weaving Width(Left) 0.5[mm] +/-|
+| **Function** | Weaving Width(Left) 0.1[mm] +/-         |Weaving Width(Left) 0.5[mm] +/-|  
+
+<br/>
+
 
 |      | [+ Weaving R]/[- Weaving R]                   |`[SHIFT]` + [+ Weaving R]/[- Weaving R] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Weaving Width(Right) 0.1[mm] +/-         |Weaving Width(Right) 0.5[mm] +/-|
+| **Function** | Weaving Width(Right) 0.1[mm] +/-         |Weaving Width(Right) 0.5[mm] +/-|  
+
+<br/>
+
 
 |      | [+ Frequency]/[- Frequency]                   |`[SHIFT]` + [+ Frequency]/[- Frequency] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Weaving Frequency 0.1[Hz] +/-         | Weaving Frequency 0.5[Hz] +/-|
+| **Function** | Weaving Frequency 0.1[Hz] +/-         | Weaving Frequency 0.5[Hz] +/-|  
 
+<br/>
 
 
 ---  

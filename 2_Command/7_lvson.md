@@ -15,7 +15,6 @@
     lvs seam_find, cnd=<Condition Number>, seam=<Seam Number>, sp=<Seam Pose>
     lvs auto_calib, cnd=<Condition Number>, seam=<Seam Number>, sp=<Seam Pose>, opt=0
 ```   
-<br/>
 
 ### Parameter
 
@@ -85,7 +84,6 @@
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### Example
 
@@ -95,7 +93,6 @@
     lvs track, cnd=1 ,seam=10 , sp=p10
     # Start LVS seam tracking with condition number 1 and seam number 10
 ```  
-<br/><br/>
 
 
 {% hint style="info" %}

@@ -12,7 +12,6 @@
 ```python
 heightsen off
 ```  
-<br/>
 
 
 ### Example
@@ -20,7 +19,6 @@ heightsen off
 ```python   
    heightsen off            # End height sensing execution
 ```  
-<br/>
 
 
 ### Details

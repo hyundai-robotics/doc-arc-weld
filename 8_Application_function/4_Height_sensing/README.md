@@ -37,8 +37,8 @@ Once the input data stabilizes, the average is calculated based on the method of
 
 The opration sequence of height sensing is as follows:
 
-
- 
-![](../../_assets/8_4_1.png)<br>
-*Figure 8.4.1. Height Sensing Function Operation Sequence*
+<p align="center">
+  <img src="../../_assets/8_4_1.png" width="50%"></img>
+  <em><p align="center">Figure 8.4.1. Height Sensing Function Operation Sequence</p></em>
+</p>
 

@@ -16,7 +16,6 @@
     # When Using Master / Production Mode
     lps scan, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>, spd=<Robot Speed>, sp=<Stored Pose>, mp=<Pose to save in Master Mode>, ms=<Shift Variable Calculated in Production Mode>
 ```  
-<br/>
 
 ### Parameter
 
@@ -100,7 +99,6 @@
     </tr>
   </tbody>
 </table>  
-<br/>
 
 
 ### Example
@@ -119,7 +117,6 @@
     lps scan, cnd=1, Tx=50, spd=10, sp=p10, mp=mp10, ms=ms10
     # When using Master mode: Using condition number 1, moves 50[mm] in the X direction based on the tool at a speed of 10, detects the weld point upon completion of the movement, stores it in p10, compares it with mp10, and saves the calculated shift value in ms10.
 ```  
-<br/><br/>
 
 
 {% hint style="info" %}

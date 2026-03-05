@@ -14,7 +14,6 @@ multipass save, trj=<Multi-pass trajectory Number>, period=<trajectory save inte
 multipass load, trj=<Multi-pass trajectory Number>, side=<lateral shift distance>, height=<vertical shift distance>, reverse=<Multi-pass run direction>, tas=<torch shift angle (front/rear)>, was=<torch shift angle(left/right)>
 multipass off
 ```  
-<br/>
 
 ### Parameter
 <table>
@@ -79,7 +78,6 @@ multipass off
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### Example
 
@@ -106,4 +104,3 @@ S17  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
      weaving off  
      multipass off
 ```  
-<br/>

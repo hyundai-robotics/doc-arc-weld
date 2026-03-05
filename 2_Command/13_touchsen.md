@@ -16,7 +16,6 @@ touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, rotat
 touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, lift_up=<Lifting Distance>, criteria=<Detection Threshold in Detect Groove>, pose=<Pose to save>, gap=<butt gap value>
 touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, mpose=<Pose to save in Master Mode>, mshift=<Shift Variable Calculated in Production Mode>
 ```  
-<br/>
 
 
 ### Parameter
@@ -44,7 +43,6 @@ touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, mpose
     touchsen cnd=1, crd="tool", dir=["tf", "td"], pose=P10, 0  # condition 1, in Tool projection crd system, 2-points
     touchsen cnd=1, crd="base", dir=["+x","-y","-z"], pose=P10, 0  # condition 1, in base crd system, 3-points
 ```  
-<br/>
 
 
 ### Details

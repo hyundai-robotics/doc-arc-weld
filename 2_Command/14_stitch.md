@@ -13,7 +13,6 @@ When the stitch function is executed, stitch welding starts at the specified pos
 stitch on, cnd=<Condition Number>
 stitch off
 ```  
-<br/>
 
 
 ### Parameter

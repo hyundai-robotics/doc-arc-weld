@@ -10,7 +10,6 @@
 ```python
     weaving on, cnd=<Weaving Condition number>
 ```  
-<br/>
 
 ### Parameter
 
@@ -26,7 +25,6 @@
    arcon cnd=1          # Execute with arc condition number 1
    move L,spd=100cm/min,accu=0,tool=0   # Perform execution according to the above weaving conditions while moving the robot
 ```  
-<br/>
 
 
 ### Details  

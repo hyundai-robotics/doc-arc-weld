@@ -11,7 +11,6 @@
 refp <Reference Point Number>
 refp <Reference Point Number>,<Pose(Num)>
 ```  
-<br/>
 
 ### Parameter
 
@@ -28,12 +27,9 @@ refp <Reference Point Number>,<Pose(Num)>
    refp 1                      # Specify the wall direction of the weaving hidden pose
    refp 2, (-1073.33, 739.01, 258.30, 0, 76, 23)  # Specify the position of the weaving surface
 ```  
-<br/>
 
 ### Details
   Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)  
-<br/>  
-<br/>
 
 
 {% hint style="warning" %}

@@ -265,9 +265,11 @@ Here are the functions and how to use them:
 
 <style>
   table {
-    width: auto;
+    /* width: auto; */
     border-collapse: collapse;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 </style>
 
@@ -359,24 +361,37 @@ The detailed content and setup method for this function are as follows:  <br/>
 
 |      | [+ Current]/[- Current]                   |`[SHIFT]` + [+ Current]/[- Current] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Welding Current 1% +/-         | Welding Current 5% +/-|
+| **Function** | Welding Current 1% +/-         | Welding Current 5% +/-|  
+
+<br/>
+
 
 |      | [+ Voltage]/[- Voltage]                   |`[SHIFT]` + [+ Voltage]/[- Voltage] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Welding Voltage 1% +/-         | Welding Voltage 5% +/-|
+| **Function** | Welding Voltage 1% +/-         | Welding Voltage 5% +/-|  
+
+<br/>
+
 
 |      | [+ Weaving L]/[- Weaving L]                   |`[SHIFT]` + [+ Weaving L]/[- Weaving L] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Weaving Width(Left) 0.1[mm] +/-         |Weaving Width(Left) 0.5[mm] +/-|
+| **Function** | Weaving Width(Left) 0.1[mm] +/-         |Weaving Width(Left) 0.5[mm] +/-|  
+
+<br/>
+
 
 |      | [+ Weaving R]/[- Weaving R]                   |`[SHIFT]` + [+ Weaving R]/[- Weaving R] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Weaving Width(Right) 0.1[mm] +/-         |Weaving Width(Right) 0.5[mm] +/-|
+| **Function** | Weaving Width(Right) 0.1[mm] +/-         |Weaving Width(Right) 0.5[mm] +/-|  
+
+<br/>
+
 
 |      | [+ Frequency]/[- Frequency]                   |`[SHIFT]` + [+ Frequency]/[- Frequency] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Weaving Frequency 0.1[Hz] +/-         | Weaving Frequency 0.5[Hz] +/-|
+| **Function** | Weaving Frequency 0.1[Hz] +/-         | Weaving Frequency 0.5[Hz] +/-|  
 
+<br/>
 
 
 ---  
@@ -499,7 +514,6 @@ arcon cnd=<Condition Number>
 arcon cnd=<Condition Number>,job=<Job Number of the Welder>,cur=<Current>,vol=<Voltage>, vol_offset=<Voltage Offset>
 arcon cnd=<Condition Number>,job=<Job Number of the Welder>  
 ```  
-<br/>
 
 ### Parameter
 
@@ -520,7 +534,6 @@ arcon cnd=<Condition Number>,job=<Job Number of the Welder>
    arcon cnd=1,cur=200,vol=22  # Starts welding with the specified current and voltage(200A, 22V), while other welding conditions follow the settings of the specified welding start condition number(cnd=1)
    arcon cnd=1,job=5 # Starts welding in Job mode, using Job number 5. Other welding conditions follow the settings of the specified welding start condition number(cnd=1)
 ```  
-<br/>
 
 ### Details  
 
@@ -547,7 +560,6 @@ Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md)
 arcoff
 arcoff welder=<Condition Number>, delay=<Delay Time>
 ```  
-<br/>
 
 
 ### Parameter
@@ -564,7 +576,6 @@ arcoff welder=<Condition Number>, delay=<Delay Time>
     arcoff                    # Terminate the arc welding without any special shutdown process
     arcoff welder=2, delay=1  # Trun off the arc of the 2nd welder after a 1-second delay.
 ```  
-<br/>
 
 
 ### Details 
@@ -584,7 +595,6 @@ Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md)
 ```python
     weaving on, cnd=<Weaving Condition number>
 ```  
-<br/>
 
 ### Parameter
 
@@ -600,7 +610,6 @@ Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md)
    arcon cnd=1          # Execute with arc condition number 1
    move L,spd=100cm/min,accu=0,tool=0   # Perform execution according to the above weaving conditions while moving the robot
 ```  
-<br/>
 
 
 ### Details  
@@ -620,14 +629,12 @@ Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md)
 ```python
 weaving off
 ```  
-<br/>
 
 ### Example
 
 ```python
    weaving off
 ```  
-<br/>
 
 ### Details
 
@@ -648,7 +655,6 @@ weaving off
 ```python
 arccond <Interpolation type>, cnd=<Condition Number>, gap=<Gap>, spd=<Welding Speed>, rd=<Wall Direction(right distance)>, ld=<Cross Direction(left distance)>, freq=<Weaving Frequency>, cur=<Current>, vol=<Voltage>
 ```  
-<br/>
 
 ### Parameter
 
@@ -676,7 +682,6 @@ arccond <Interpolation type>, cnd=<Condition Number>, gap=<Gap>, spd=<Welding Sp
     ...               # welding step (move command for welding section)
     arccond L, cnd=2  # Change continuously from condition 1 to condition 2 using WDB data with linear interpolation
 ```  
-<br/>
 
 ### Details  
 
@@ -695,7 +700,6 @@ arccond <Interpolation type>, cnd=<Condition Number>, gap=<Gap>, spd=<Welding Sp
 refp <Reference Point Number>
 refp <Reference Point Number>,<Pose(Num)>
 ```  
-<br/>
 
 ### Parameter
 
@@ -712,12 +716,9 @@ refp <Reference Point Number>,<Pose(Num)>
    refp 1                      # Specify the wall direction of the weaving hidden pose
    refp 2, (-1073.33, 739.01, 258.30, 0, 76, 23)  # Specify the position of the weaving surface
 ```  
-<br/>
 
 ### Details
   Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)  
-<br/>  
-<br/>
 
 
 {% hint style="warning" %}
@@ -743,7 +744,6 @@ refp <Reference Point Number>,<Pose(Num)>
     lvs seam_find, cnd=<Condition Number>, seam=<Seam Number>, sp=<Seam Pose>
     lvs auto_calib, cnd=<Condition Number>, seam=<Seam Number>, sp=<Seam Pose>, opt=0
 ```   
-<br/>
 
 ### Parameter
 
@@ -813,7 +813,6 @@ refp <Reference Point Number>,<Pose(Num)>
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### Example
 
@@ -823,7 +822,6 @@ refp <Reference Point Number>,<Pose(Num)>
     lvs track, cnd=1 ,seam=10 , sp=p10
     # Start LVS seam tracking with condition number 1 and seam number 10
 ```  
-<br/><br/>
 
 
 {% hint style="info" %}
@@ -854,7 +852,6 @@ refp <Reference Point Number>,<Pose(Num)>
     # When Using Master / Production Mode
     lps scan, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>, spd=<Robot Speed>, sp=<Stored Pose>, mp=<Pose to save in Master Mode>, ms=<Shift Variable Calculated in Production Mode>
 ```  
-<br/>
 
 ### Parameter
 
@@ -938,7 +935,6 @@ refp <Reference Point Number>,<Pose(Num)>
     </tr>
   </tbody>
 </table>  
-<br/>
 
 
 ### Example
@@ -957,7 +953,6 @@ refp <Reference Point Number>,<Pose(Num)>
     lps scan, cnd=1, Tx=50, spd=10, sp=p10, mp=mp10, ms=ms10
     # When using Master mode: Using condition number 1, moves 50[mm] in the X direction based on the tool at a speed of 10, detects the weld point upon completion of the movement, stores it in p10, compares it with mp10, and saves the calculated shift value in ms10.
 ```  
-<br/><br/>
 
 
 {% hint style="info" %}
@@ -975,14 +970,12 @@ To use this function as an optional feature, please contact our company.
 ### Description 
 
 ```heightsen on``` command starts the height sensing function(AVC, Arc length control).  
-<br/>
 
 
 ### Syntax
 ```python
     heightsen on, cnd=<Condition Number>
 ```  
-<br/>
 
 ### Parameter
 
@@ -996,7 +989,6 @@ To use this function as an optional feature, please contact our company.
 ```python   
     heightsen on, cnd=1        # Starts height sensing with condition number 1.
 ```  
-<br/>
 
 
 ### Details
@@ -1019,7 +1011,6 @@ To use this function as an optional feature, please contact our company.
 ```python
 heightsen off
 ```  
-<br/>
 
 
 ### Example
@@ -1027,7 +1018,6 @@ heightsen off
 ```python   
    heightsen off            # End height sensing execution
 ```  
-<br/>
 
 
 ### Details
@@ -1053,7 +1043,6 @@ multipass save, trj=<Multi-pass trajectory Number>, period=<trajectory save inte
 multipass load, trj=<Multi-pass trajectory Number>, side=<lateral shift distance>, height=<vertical shift distance>, reverse=<Multi-pass run direction>, tas=<torch shift angle (front/rear)>, was=<torch shift angle(left/right)>
 multipass off
 ```  
-<br/>
 
 ### Parameter
 <table>
@@ -1118,7 +1107,6 @@ multipass off
     </tr>
   </tbody>
 </table>  
-<br/>
 
 ### Example
 
@@ -1145,7 +1133,6 @@ S17  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
      weaving off  
      multipass off
 ```  
-<br/>
 
 [__SOURCE](2_Command/12_posical.md)
 # 2.12 posi_calib
@@ -1180,7 +1167,6 @@ touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, rotat
 touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, lift_up=<Lifting Distance>, criteria=<Detection Threshold in Detect Groove>, pose=<Pose to save>, gap=<butt gap value>
 touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, mpose=<Pose to save in Master Mode>, mshift=<Shift Variable Calculated in Production Mode>
 ```  
-<br/>
 
 
 ### Parameter
@@ -1208,7 +1194,6 @@ touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, mpose
     touchsen cnd=1, crd="tool", dir=["tf", "td"], pose=P10, 0  # condition 1, in Tool projection crd system, 2-points
     touchsen cnd=1, crd="base", dir=["+x","-y","-z"], pose=P10, 0  # condition 1, in base crd system, 3-points
 ```  
-<br/>
 
 
 ### Details
@@ -1232,7 +1217,6 @@ When the stitch function is executed, stitch welding starts at the specified pos
 stitch on, cnd=<Condition Number>
 stitch off
 ```  
-<br/>
 
 
 ### Parameter
@@ -1268,7 +1252,6 @@ It is frequently used to calculate shifts based on pose variables saved from tou
 <Shift Val>=calshift(<Pose Val 1>, <Pose Val 2>)
 <Shift Val>=calshift(<Pose Val 1>, <Pose Val 2>,"TV")
 ```  
-<br/>
 
 
 ### Parameter
@@ -1291,7 +1274,6 @@ It is frequently used to calculate shifts based on pose variables saved from tou
     sft_1=calshift(pose_1,pose_2)   
     # calculate the vector shift between pose_1 and pose_2, and store the result in sht_1
 ```  
-<br/>
   
 [__SOURCE](3_Property/README.md)
 # 3. Command Property
@@ -2821,7 +2803,6 @@ Or, instead of using the starting position current reference value, **the user c
     arc off
     end
 ```  
-<br/>
 
 ![](../../_assets/8_3_1.png)<br>
 *Figure 8.3.1. Arc Sensing Concept*
@@ -3570,10 +3551,10 @@ Once the input data stabilizes, the average is calculated based on the method of
 
 The opration sequence of height sensing is as follows:
 
-
- 
-![](../../_assets/8_4_1.png)<br>
-*Figure 8.4.1. Height Sensing Function Operation Sequence*
+<p align="center">
+  <img src="../../_assets/8_4_1.png" width="50%"></img>
+  <em><p align="center">Figure 8.4.1. Height Sensing Function Operation Sequence</p></em>
+</p>
 
 
 [__SOURCE](8_Application_function/4_Height_sensing/1_hsen_condition.md)
@@ -3817,7 +3798,6 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
     </tr>
   </tbody>
 </table>  
-<br/>
 
 
 The tracking function using the ```lvs``` command can be used as follows:

@@ -3,14 +3,12 @@
 ### Description 
 
 ```heightsen on``` command starts the height sensing function(AVC, Arc length control).  
-<br/>
 
 
 ### Syntax
 ```python
     heightsen on, cnd=<Condition Number>
 ```  
-<br/>
 
 ### Parameter
 
@@ -24,7 +22,6 @@
 ```python   
     heightsen on, cnd=1        # Starts height sensing with condition number 1.
 ```  
-<br/>
 
 
 ### Details

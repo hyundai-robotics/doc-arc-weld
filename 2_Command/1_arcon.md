@@ -14,7 +14,6 @@ arcon cnd=<Condition Number>
 arcon cnd=<Condition Number>,job=<Job Number of the Welder>,cur=<Current>,vol=<Voltage>, vol_offset=<Voltage Offset>
 arcon cnd=<Condition Number>,job=<Job Number of the Welder>  
 ```  
-<br/>
 
 ### Parameter
 
@@ -35,7 +34,6 @@ arcon cnd=<Condition Number>,job=<Job Number of the Welder>
    arcon cnd=1,cur=200,vol=22  # Starts welding with the specified current and voltage(200A, 22V), while other welding conditions follow the settings of the specified welding start condition number(cnd=1)
    arcon cnd=1,job=5 # Starts welding in Job mode, using Job number 5. Other welding conditions follow the settings of the specified welding start condition number(cnd=1)
 ```  
-<br/>
 
 ### Details  
 

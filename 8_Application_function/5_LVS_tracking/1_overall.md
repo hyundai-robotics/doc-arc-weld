@@ -138,7 +138,6 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
     </tr>
   </tbody>
 </table>  
-<br/>
 
 
 The tracking function using the ```lvs``` command can be used as follows:

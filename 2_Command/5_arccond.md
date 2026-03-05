@@ -11,7 +11,6 @@
 ```python
 arccond <Interpolation type>, cnd=<Condition Number>, gap=<Gap>, spd=<Welding Speed>, rd=<Wall Direction(right distance)>, ld=<Cross Direction(left distance)>, freq=<Weaving Frequency>, cur=<Current>, vol=<Voltage>
 ```  
-<br/>
 
 ### Parameter
 
@@ -39,7 +38,6 @@ arccond <Interpolation type>, cnd=<Condition Number>, gap=<Gap>, spd=<Welding Sp
     ...               # welding step (move command for welding section)
     arccond L, cnd=2  # Change continuously from condition 1 to condition 2 using WDB data with linear interpolation
 ```  
-<br/>
 
 ### Details  
 

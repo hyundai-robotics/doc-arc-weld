@@ -11,14 +11,12 @@
 ```python
 weaving off
 ```  
-<br/>
 
 ### Example
 
 ```python
    weaving off
 ```  
-<br/>
 
 ### Details
 

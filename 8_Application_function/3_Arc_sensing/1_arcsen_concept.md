@@ -25,7 +25,6 @@ Or, instead of using the starting position current reference value, **the user c
     arc off
     end
 ```  
-<br/>
 
 ![](../../_assets/8_3_1.png)<br>
 *Figure 8.3.1. Arc Sensing Concept*

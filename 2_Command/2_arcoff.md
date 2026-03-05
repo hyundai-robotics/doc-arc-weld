@@ -12,7 +12,6 @@
 arcoff
 arcoff welder=<Condition Number>, delay=<Delay Time>
 ```  
-<br/>
 
 
 ### Parameter
@@ -29,7 +28,6 @@ arcoff welder=<Condition Number>, delay=<Delay Time>
     arcoff                    # Terminate the arc welding without any special shutdown process
     arcoff welder=2, delay=1  # Trun off the arc of the 2nd welder after a 1-second delay.
 ```  
-<br/>
 
 
 ### Details 
