@@ -760,39 +760,39 @@ refp <Reference Point Number>,<Pose(Num)>
     <tr>
       <td rowspan="10">lvs</td>
       <tr>
-        <td>laser_on</td>
+        <td>`laser_on`</td>
         <td> Turns on the laser </td>
       </tr>
       <tr>
-        <td>laser_off</td>
+        <td>`laser_off`</td>
         <td> Turns off the laser </td>
       </tr>
       <tr>
-        <td>search</td>
+        <td>`search`</td>
         <td> Finds the starting point before performing the track function and prepares for tracking </td>
       </tr>
       <tr>
-        <td>step_search</td>
+        <td>`step_search`</td>
         <td> Find the step difference of the base material and saves it as a pose in the `sp`. </td>
       </tr>
       <tr>
-        <td>track</td>
+        <td>`track`</td>
         <td> Starts following the welding line when `arcon` is encountered (must have executed `search` first) </td>
       </tr>
       <tr>
-        <td>track_stationary</td>
+        <td>`track_stationary`</td>
         <td> Performs stop tracking function. </td>
       </tr>
       <tr>
-        <td>seam_find</td>
+        <td>`seam_find`</td>
         <td> Reflects the current position of the laser sensing location and converts it to a pose, then saves it to the `sp`. </td>
       </tr>
       <tr>
-        <td>seam_find_p</td>
+        <td>`seam_find_p`</td>
         <td> Converts the current laser sensing location to a pose, and saves it to the `sp`. </td>
       </tr>
       <tr>
-        <td>auto_calib</td>
+        <td>`auto_calib`</td>
         <td> Performs automatic calibration between the tool and the LVS Sensor. </td>
       </tr>
     </tr>
@@ -868,25 +868,25 @@ refp <Reference Point Number>,<Pose(Num)>
     <tr>
       <td rowspan="5">lps</td>
       <tr>
-      <td>auto_calib</td>
+      <td>`auto_calib`</td>
       <td>
         Performs automatic calibration between the tool and the sensor.
       </td>
       </tr>
       <tr>
-      <td>spot</td>
+      <td>`spot`</td>
       <td>
         In Spot mode, the pose of the position currently indicated by the laser is obtained.
       </td>
       </tr>
       <tr>
-      <td>stepp</td>
+      <td>`stepp`</td>
       <td>
         In Step mode, the pose of the position where the output value changes abruptly while the laser is moving is obtained.
       </td>
       </tr>
       <tr>
-      <td>scan</td>
+      <td>`scan`</td>
       <td>
         In Scan mode, the pose of the position estimated to be a weld point along the laser movement path is obtained.
       </td>
@@ -901,33 +901,33 @@ refp <Reference Point Number>,<Pose(Num)>
       <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">Tx / Ty</td>
+      <td colspan="2">`Tx / Ty`</td>
       <td>
         Sets the movement distance in the X or Y direction based on the tool.
         Except for auto_calib, only one of the two values must be entered.
       <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">spd</td>
+      <td colspan="2">`spd`</td>
       <td>
         Specifies the speed at which the robot moves while executing the operation.
       <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">sp</td>
+      <td colspan="2">`sp`</td>
       <td>
         Specifies the pose variable in which the current pose found by each command is stored.
       <td>Pose Variable</td>
     </tr>
     <tr>
-      <td colspan="2">mp</td>
+      <td colspan="2">`mp`</td>
       <td>
         In Master mode, the sensing result is stored in mp (master pose).
         In Production mode, it is used to calculate ms (master shift).
       <td>Pose Variable</td>
     </tr>
     <tr>
-      <td colspan="2">ms</td>
+      <td colspan="2">`ms`</td>
       <td>
         A shift variable used in Production mode.
         The difference between the master pose (mp parameter) and the currently sensed pose (sp parameter) is calculated and stored.
@@ -1059,15 +1059,15 @@ multipass off
       <td rowspan="4">multipass</td>
     </tr>
     <tr>
-      <td>save</td>
+      <td>`save`</td>
       <td>Multi-pass trajectory save</td>
     </tr>
     <tr>
-      <td>load</td>
+      <td>`load`</td>
       <td>Multi-pass trajectory load</td>
     </tr>
     <tr>
-      <td>off</td>
+      <td>`off`</td>
       <td>Multi-pass off</td>
     </tr>
     <tr>
@@ -1836,7 +1836,7 @@ The left section of [Figure 5.5.1] represents the retry conditions in the weldin
 
 
 [__SOURCE](5_Condition_editing/5_Aux_condition/2_restart.md)
-# 5.5.2 용접 보조 조건 - 재기동  
+# 5.5.2 Welding Auxiliary condition - Restart  
 
 During arc welding, the process may be interrupted due to factors such as arc failure, exceeding the limits of welding current and voltage, gas pressure drop, wire shortage, cooling water errors, etc.
 When welding is restarted from the point where the process was interrupted, there is a risk of leaving un-welded areas.

@@ -32,25 +32,25 @@
     <tr>
       <td rowspan="5">lps</td>
       <tr>
-      <td>auto_calib</td>
+      <td>`auto_calib`</td>
       <td>
         Performs automatic calibration between the tool and the sensor.
       </td>
       </tr>
       <tr>
-      <td>spot</td>
+      <td>`spot`</td>
       <td>
         In Spot mode, the pose of the position currently indicated by the laser is obtained.
       </td>
       </tr>
       <tr>
-      <td>stepp</td>
+      <td>`stepp`</td>
       <td>
         In Step mode, the pose of the position where the output value changes abruptly while the laser is moving is obtained.
       </td>
       </tr>
       <tr>
-      <td>scan</td>
+      <td>`scan`</td>
       <td>
         In Scan mode, the pose of the position estimated to be a weld point along the laser movement path is obtained.
       </td>
@@ -65,33 +65,33 @@
       <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">Tx / Ty</td>
+      <td colspan="2">`Tx / Ty`</td>
       <td>
         Sets the movement distance in the X or Y direction based on the tool.
         Except for auto_calib, only one of the two values must be entered.
       <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">spd</td>
+      <td colspan="2">`spd`</td>
       <td>
         Specifies the speed at which the robot moves while executing the operation.
       <td>Variable</td>
     </tr>
     <tr>
-      <td colspan="2">sp</td>
+      <td colspan="2">`sp`</td>
       <td>
         Specifies the pose variable in which the current pose found by each command is stored.
       <td>Pose Variable</td>
     </tr>
     <tr>
-      <td colspan="2">mp</td>
+      <td colspan="2">`mp`</td>
       <td>
         In Master mode, the sensing result is stored in mp (master pose).
         In Production mode, it is used to calculate ms (master shift).
       <td>Pose Variable</td>
     </tr>
     <tr>
-      <td colspan="2">ms</td>
+      <td colspan="2">`ms`</td>
       <td>
         A shift variable used in Production mode.
         The difference between the master pose (mp parameter) and the currently sensed pose (sp parameter) is calculated and stored.

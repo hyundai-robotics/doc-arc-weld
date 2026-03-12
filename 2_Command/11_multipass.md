@@ -30,15 +30,15 @@ multipass off
       <td rowspan="4">multipass</td>
     </tr>
     <tr>
-      <td>save</td>
+      <td>`save`</td>
       <td>Multi-pass trajectory save</td>
     </tr>
     <tr>
-      <td>load</td>
+      <td>`load`</td>
       <td>Multi-pass trajectory load</td>
     </tr>
     <tr>
-      <td>off</td>
+      <td>`off`</td>
       <td>Multi-pass off</td>
     </tr>
     <tr>

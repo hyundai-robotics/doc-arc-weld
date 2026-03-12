@@ -1,4 +1,4 @@
-﻿# 5.5.2 용접 보조 조건 - 재기동  
+﻿# 5.5.2 Welding Auxiliary condition - Restart  
 
 During arc welding, the process may be interrupted due to factors such as arc failure, exceeding the limits of welding current and voltage, gas pressure drop, wire shortage, cooling water errors, etc.
 When welding is restarted from the point where the process was interrupted, there is a risk of leaving un-welded areas.

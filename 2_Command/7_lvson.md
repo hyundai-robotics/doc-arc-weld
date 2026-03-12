@@ -31,39 +31,39 @@
     <tr>
       <td rowspan="10">lvs</td>
       <tr>
-        <td>laser_on</td>
+        <td>`laser_on`</td>
         <td> Turns on the laser </td>
       </tr>
       <tr>
-        <td>laser_off</td>
+        <td>`laser_off`</td>
         <td> Turns off the laser </td>
       </tr>
       <tr>
-        <td>search</td>
+        <td>`search`</td>
         <td> Finds the starting point before performing the track function and prepares for tracking </td>
       </tr>
       <tr>
-        <td>step_search</td>
+        <td>`step_search`</td>
         <td> Find the step difference of the base material and saves it as a pose in the `sp`. </td>
       </tr>
       <tr>
-        <td>track</td>
+        <td>`track`</td>
         <td> Starts following the welding line when `arcon` is encountered (must have executed `search` first) </td>
       </tr>
       <tr>
-        <td>track_stationary</td>
+        <td>`track_stationary`</td>
         <td> Performs stop tracking function. </td>
       </tr>
       <tr>
-        <td>seam_find</td>
+        <td>`seam_find`</td>
         <td> Reflects the current position of the laser sensing location and converts it to a pose, then saves it to the `sp`. </td>
       </tr>
       <tr>
-        <td>seam_find_p</td>
+        <td>`seam_find_p`</td>
         <td> Converts the current laser sensing location to a pose, and saves it to the `sp`. </td>
       </tr>
       <tr>
-        <td>auto_calib</td>
+        <td>`auto_calib`</td>
         <td> Performs automatic calibration between the tool and the LVS Sensor. </td>
       </tr>
     </tr>
