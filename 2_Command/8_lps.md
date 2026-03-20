@@ -126,4 +126,4 @@ To use this function as an optional feature, please contact our company.
 
 ### Details
 
-  Refer to [8.8 LPS(Laser Point Sensing)](../8_Application_function/8_LPS/README.md)
+  Refer to [8.7 LPS(Laser Point Sensing)](../8_Application_function/7_LPS/README.md)

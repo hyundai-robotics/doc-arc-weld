@@ -5,7 +5,7 @@
 [__SOURCE](0-about-this-manual/precautions.md)
 # Precautions
 
-{% include url="https://hrcontentsrelay-bmgae5hdbzapc4bc.koreacentral-01.azurewebsites.net/api/proxy?path=doc-common-pages/en/precautions.md" %}
+{% include file="en/precautions.md" %}
 
 [__SOURCE](0-about-this-manual/structure.md)
 # Book Structure
@@ -962,7 +962,7 @@ To use this function as an optional feature, please contact our company.
 
 ### Details
 
-  Refer to [8.8 LPS(Laser Point Sensing)](../8_Application_function/8_LPS/README.md)
+  Refer to [8.7 LPS(Laser Point Sensing)](../8_Application_function/7_LPS/README.md)
 
 [__SOURCE](2_Command/9_hsenson.md)
 # 2.9 heightsen on
@@ -2293,18 +2293,16 @@ Our controller offers 2-type of monitoring functions for welding data monitoring
 
 (1) **Detailed Information Monitoring**: Allows you to check all available data.
 
-(2) Arc Welding Data Graph: Enalbes viewing of the command and actual current/voltage data in waveform.
+(2) **Arc Welding Data Graph**: Enalbes viewing of the command and actual current/voltage data in waveform.
 
-[__SOURCE](7_Monitoring/1_Realtime_monitoring/README.md)
-# 7.1 Arc Weld data Real-time Monitoring
+(3) **Arc Trajectory Monitoring**: You can view the trajectory of the tool tip and the torch in detail while welding.
 
-
-[__SOURCE](7_Monitoring/1_Realtime_monitoring/1_detail_mon.md)
-# 7.1.1 Detailed Information Monitoring
+[__SOURCE](7_Monitoring/1_detail_mon.md)
+# 7.1 Detailed Information Monitoring
 
 This function allows you to check detailed data related to arc welding. The information provided may vary depending on the set welder, so the monitoring window may differ based on the configured welder. If a communication error occurs with the welder or if there is no communication connection, the "Welder Error Code" or "Welder Communication Status" items will be displayed with a red background. The following data can be monitored in the detailed information monitoring.
 
-![](../../_assets/7_1_1.png)<br>
+![](../_assets/7_1_1.png)<br>
 *Figure 7.1.1. Arc Welding Detailed Information Monitoring*
 
 1. Current Input: The commanded welding current sent from the robot to the welder (A)
@@ -2338,16 +2336,16 @@ This function allows you to check detailed data related to arc welding. The info
 15. Command Values: Frequently used commands that can be manually output.
 
 
-[__SOURCE](7_Monitoring/1_Realtime_monitoring/2_data_graph.md)
-# 7.1.2 Arc welding data graph
+[__SOURCE](7_Monitoring/2_data_graph.md)
+# 7.2 Arc welding data graph
 
 Arc welding data graph displays information related to the welding data's waveform, allowing you to view not only the real-time data but also past data at a glance.
 
 To use this feature, on TP, press `[pane layout] - select - arc data graph` sequentially. 
 
  
-![](../../_assets/7_1_2.png)<br>
-*Figure 7.1.2. Arc Welding data graph*
+![](../_assets/7_2_1.png)<br>
+*Figure 7.2.1. Arc Welding data graph*
 
 The following items can be checked in the monitoring window:
 
@@ -2366,6 +2364,37 @@ The following items can be checked in the monitoring window:
 Arc Welding data graph offers left/right and up/down movement functions. You can also add rows and columns to view more data. By toggling the `[Auto scroll]` button, you can review the past welding screens even during the current welding process.
 
 You can increase the number of rows in the graph by pressing the **[Row]** or **[Col]** button at the bottom of the arc welding data graph screen. If you want to zoom in on the data graph further, you can press **[SHIFT] + [Row]** or **[SHIFT] + [Col]** to enlarge the display.
+[__SOURCE](7_Monitoring/3_arc_trj_mgr.md)
+# 7.3 Arc Trajectory Manager
+
+This features displays the trajectory, current, voltage, and torch position (welding angle, push-pull angle) in real-time during arc welding.
+
+Through this, you can monitor the welding angle, current, and voltage in real time during arc welding, making it easier to modify the welding teaching later.
+
+To enable this feature, follow these steps:
+
+Set "Arc trajectory monitoring" to 'activation on' under `[System] - 2: Application parameter - 2: Arc welding`.
+
+
+{% hint style="info" %}
+This feature is available during from version 60.30-00.
+{% endhint %}
+
+![](../_assets/7_3_1_arc_trj_mgr.png)<br>
+*Figure 7.3.1. Real-time Arc trajectory monitoring*
+
+You can monitor the trajectory and welding information in real-time from the `arcon` to the `arcoff` section.
+
+Use the arrow keys to move the plane, or press **[Shift] + [+/-]** keys to zomm in or out.
+
+The welding angle and push/pull angle are calculated base on the welding direction relative to the welding plane.
+
+{% hint style="info" %}
+The welding plane automatically rotates according to the welding trajectory.
+{% endhint %}
+
+
+
 [__SOURCE](8_Application_function/README.md)
 # 8. Arc Welding Application Functions
 
@@ -4561,39 +4590,8 @@ The descriptions of the parameters for each figure are as follows:
 - **Emergency Stop, Restart**  
 
 During stitch welding, the process can resume after an emergency stop or playback stop. However, if the controller power is turned off and rebooted, the stitch welding cannot be restarted.
-[__SOURCE](8_Application_function/7_Arc_trj_mgr/README.md)
-# 8.7 Arc Trajectory Manager
-
-This features displays the trajectory, current, voltage, and torch position (welding angle, push-pull angle) in real-time during arc welding.
-
-Through this, you can monitor the welding angle, current, and voltage in real time during arc welding, making it easier to modify the welding teaching later.
-
-To enable this feature, follow these steps:
-
-Set "Arc trajectory monitoring" to 'activation on' under `[System] - 2: Application parameter - 2: Arc welding`.
-
-
-{% hint style="info" %}
-This feature is available during from version 60.30-00.
-{% endhint %}
-
-![](../../_assets/8_7_1_arc_trj_mgr.png)<br>
-*Figure 8.7.1. Real-time Arc trajectory monitoring*
-
-You can monitor the trajectory and welding information in real-time from the `arcon` to the `arcoff` section.
-
-Use the arrow keys to move the plane, or press **[Shift] + [+/-]** keys to zomm in or out.
-
-The welding angle and push/pull angle are calculated base on the welding direction relative to the welding plane.
-
-{% hint style="info" %}
-The welding plane automatically rotates according to the welding trajectory.
-{% endhint %}
-
-
-
-[__SOURCE](8_Application_function/8_LPS/README.md)
-# 8.8 LPS(Laser Point Sensing)  
+[__SOURCE](8_Application_function/7_LPS/README.md)
+# 8.7 LPS(Laser Point Sensing)  
 
 {% hint style="info" %}
 This function is supported in versions 70.00-00 and later.
@@ -4614,8 +4612,8 @@ In the following sections, you will complete the sensor setup and begin using th
 
 
 
-[__SOURCE](8_Application_function/8_LPS/1_settings.md)
-# 8.8.1 Laser Sensor Setup  
+[__SOURCE](8_Application_function/7_LPS/1_settings.md)
+# 8.7.1 Laser Sensor Setup  
 
 
 To use the LPS function, it is necessary to first install the laser sensor and configure communication specifications and related settings.
@@ -4625,8 +4623,8 @@ To use the LPS function, it is necessary to first install the laser sensor and c
 
 The connection bracket may be designed and fabricated by the user, or provided by our company or the sensor manufacturer.
 
-![](../../_assets/8_8_1.png)<br>
-*Figure 8.8.1. Installation of the laser sensor using a bracket*
+![](../../_assets/8_7_1.png)<br>
+*Figure 8.7.1. Installation of the laser sensor using a bracket*
 
 A laser distance sensor consists of a transmitter and a receiver.
 When the robot is aligned with the arc torch, ensure that the transmitter/receiver of the laser sensor is aligned with the tool-based X direction (refer to the laser manufacturer's specifications).
@@ -4669,8 +4667,8 @@ First, configure the sensor controller settings.
 
 Navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting`.
 
-![](../../_assets/8_8_2.png)<br>
-*Figure 8.8.2. Laser Communication Setup (Keyence LK-G)*
+![](../../_assets/8_7_2.png)<br>
+*Figure 8.7.2. Laser Communication Setup (Keyence LK-G)*
 </br>
 
 Select Keyence as the LPS brand to configure the settings.
@@ -4684,8 +4682,8 @@ Once the setup is complete, verify that the value displayed in the **Sensing Dis
 Connect the sensor to a PC and access the web interface.
 (The default fixed IP address is 192.168.0.250.)
 
-![](../../_assets/8_8_3.png)<br>
-*Figure 8.8.3. Baumer Sensor Web Configuration*
+![](../../_assets/8_7_3.png)<br>
+*Figure 8.7.3. Baumer Sensor Web Configuration*
 </br>  
 
 Navigate to `Device Configuration` tab and set the communication method according to the intended purpose.
@@ -4693,8 +4691,8 @@ At this time, enable only the method that matches the currently used communicati
 
 If **Ethernet/IP** is used, complete the network settings accordingly. In the ${cont_model}, network ranges 0, 1, and 2 are used by default, so a different range must be assigned. (e.g. 192.168.10.250.)
 
-![](../../_assets/8_8_4.png)<br>
-*Figure 8.8.4. Baumer Sensor Network Settings*
+![](../../_assets/8_7_4.png)<br>
+*Figure 8.7.4. Baumer Sensor Network Settings*
 </br>   
 
 Afterward, proceed step by step by following the link below.
@@ -4703,8 +4701,8 @@ From Hi7 and later, built-in Ethernet is supported, allowing communication to be
 
 
 
-![](../../_assets/8_8_5.png)<br>
-*Figure 8.8.5. Baumer Sensor Signal Assignment*
+![](../../_assets/8_7_5.png)<br>
+*Figure 8.7.5. Baumer Sensor Signal Assignment*
 </br>
 
 Once the above steps are completed, navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting - Signal tab`.
@@ -4717,8 +4715,8 @@ You can then confirm that the distance (current value) is output as the sensor v
 * Refer to the manufacturer's manual and our manual to connect the sensor in the same manner as the Baumer sensor.
 As described above, the Ethernet connection method differs depending on whether an Hi6 or Hi7 controller is used.
 
-[__SOURCE](8_Application_function/8_LPS/2_calibration.md)
-# 8.8.2 TCP-Sensor Calibration  
+[__SOURCE](8_Application_function/7_LPS/2_calibration.md)
+# 8.7.2 TCP-Sensor Calibration  
 
 
 Before using the LPS function, calibration between the TCP and the sensor must be performed.
@@ -4743,8 +4741,8 @@ When teaching in the tool-based X-Y directions, adjust the RZ value so that the 
 
 <br/>
 
-![](../../_assets/8_8_2_1.png)<br>
-*Figure 8.8.2.1 Preparation before calibration*<br/>  
+![](../../_assets/8_7_2_1.png)<br>
+*Figure 8.7.2.1 Preparation before calibration*<br/>  
 
 After completing the above steps, all preparations required for performing calibration are complete.
 
@@ -4756,8 +4754,8 @@ In addition, ensure that the laser point is located inside the calibration plane
 
 <br/>
 
-![](../../_assets/8_8_2_2.png)<br>
-*Figure 8.8.2.2 Start of calibration*<br/>  
+![](../../_assets/8_7_2_2.png)<br>
+*Figure 8.7.2.2 Start of calibration*<br/>  
 
 From the lower panel, select `[F6: cmd. input] - arcweld - lps` and insert the following command.
 
@@ -4786,17 +4784,17 @@ If the tool information is the same but a different tool number is to be used, t
 
 <br/>
 
-![](../../_assets/8_8_2_3.png)<br>
-*Figure 8.8.2.3 Calibration Result*<br/>  
+![](../../_assets/8_7_2_3.png)<br>
+*Figure 8.7.2.3 Calibration Result*<br/>  
 
 
 
-[__SOURCE](8_Application_function/8_LPS/3_function.md)
-# 8.8.3 Using the LPS Function  
+[__SOURCE](8_Application_function/7_LPS/3_function.md)
+# 8.7.3 Using the LPS Function  
 
 
 {% hint style="warning" %}
-If tool-to-sensor calibration (ref. 8.8.2) has not been performed before using this function, invalid poses may be stored.
+If tool-to-sensor calibration (ref. 8.7.2) has not been performed before using this function, invalid poses may be stored.
 {% endhint %}
 
 ### Property Window
@@ -4804,8 +4802,8 @@ If tool-to-sensor calibration (ref. 8.8.2) has not been performed before using t
 The properties of the LPS command are as follows.  
 <br/>
 
-![](../../_assets/8_8_3_0.png)<br>
-*Figure 8.8.3.0 LPS Property*<br/>  
+![](../../_assets/8_7_3_0.png)<br>
+*Figure 8.7.3.0 LPS Property*<br/>  
 
 #### Gap Coefficient
 
@@ -4836,8 +4834,8 @@ The properties of the LPS command are as follows.
 
 <br/>
 
-![](../../_assets/8_8_3_1.png)<br>
-*Figure 8.8.3.1 Spot Mode*<br/>  
+![](../../_assets/8_7_3_1.png)<br>
+*Figure 8.7.3.1 Spot Mode*<br/>  
 
 ```py
   var p10=cpo()
@@ -4860,8 +4858,8 @@ Depending on whether the height difference is lower or higher, the scan directio
 
 <br/>
 
-![](../../_assets/8_8_3_2.png)<br>
-*Figure 8.8.3.2 Step Mode*<br/>  
+![](../../_assets/8_7_3_2.png)<br>
+*Figure 8.7.3.2 Step Mode*<br/>  
 
 ```py
   var p10=cpo()
@@ -4878,8 +4876,8 @@ If no step is detected within the specified distance, a detection error occurs.
 
 ### (3) Scan Mode
 
-![](../../_assets/8_8_3_3.png)<br>
-*Figure 8.8.3.3 Scan Mode on various geometries*<br/>  
+![](../../_assets/8_7_3_3.png)<br>
+*Figure 8.7.3.3 Scan Mode on various geometries*<br/>  
 
 ```py
   var p10=cpo()
@@ -4901,18 +4899,18 @@ For instructions on how to register and use the application, please refer to the
 
 #### (3-1) Monitoring Screen  
 
-![](../../_assets/8_8_3_4.png)<br>
-*Figure 8.8.3.4 LPS Graph*<br/>  
+![](../../_assets/8_7_3_4.png)<br>
+*Figure 8.7.3.4 LPS Graph*<br/>  
 
 After registering the application, the monitoring screen can be accessed through the following method: `[Pane layout] - select - LPS Graph` 
 
 <br/>
 
-![](../../_assets/8_8_3_5.png)<br>
-*Figure 8.8.3.5 Example screen - V-groove*<br/>  
+![](../../_assets/8_7_3_5.png)<br>
+*Figure 8.7.3.5 Example screen - V-groove*<br/>  
 
-![](../../_assets/8_8_3_6.png)<br>
-*Figure 8.8.3.6 Example screen - Butt joint*<br/>  
+![](../../_assets/8_7_3_6.png)<br>
+*Figure 8.7.3.6 Example screen - Butt joint*<br/>  
 
 
 When the function is executed, results can be viewed as shown in the figure above.

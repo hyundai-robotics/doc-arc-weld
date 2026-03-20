@@ -1,4 +1,4 @@
-﻿# 8.8 LPS(Laser Point Sensing)  
+﻿# 8.7 LPS(Laser Point Sensing)  
 
 {% hint style="info" %}
 This function is supported in versions 70.00-00 and later.

@@ -8,4 +8,6 @@ Our controller offers 2-type of monitoring functions for welding data monitoring
 
 (1) **Detailed Information Monitoring**: Allows you to check all available data.
 
-(2) Arc Welding Data Graph: Enalbes viewing of the command and actual current/voltage data in waveform.
+(2) **Arc Welding Data Graph**: Enalbes viewing of the command and actual current/voltage data in waveform.
+
+(3) **Arc Trajectory Monitoring**: You can view the trajectory of the tool tip and the torch in detail while welding.

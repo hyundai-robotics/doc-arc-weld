@@ -1,4 +1,4 @@
-﻿# 8.8.2 TCP-Sensor Calibration  
+﻿# 8.7.2 TCP-Sensor Calibration  
 
 
 Before using the LPS function, calibration between the TCP and the sensor must be performed.
@@ -23,8 +23,8 @@ When teaching in the tool-based X-Y directions, adjust the RZ value so that the 
 
 <br/>
 
-![](../../_assets/8_8_2_1.png)<br>
-*Figure 8.8.2.1 Preparation before calibration*<br/>  
+![](../../_assets/8_7_2_1.png)<br>
+*Figure 8.7.2.1 Preparation before calibration*<br/>  
 
 After completing the above steps, all preparations required for performing calibration are complete.
 
@@ -36,8 +36,8 @@ In addition, ensure that the laser point is located inside the calibration plane
 
 <br/>
 
-![](../../_assets/8_8_2_2.png)<br>
-*Figure 8.8.2.2 Start of calibration*<br/>  
+![](../../_assets/8_7_2_2.png)<br>
+*Figure 8.7.2.2 Start of calibration*<br/>  
 
 From the lower panel, select `[F6: cmd. input] - arcweld - lps` and insert the following command.
 
@@ -66,7 +66,7 @@ If the tool information is the same but a different tool number is to be used, t
 
 <br/>
 
-![](../../_assets/8_8_2_3.png)<br>
-*Figure 8.8.2.3 Calibration Result*<br/>  
+![](../../_assets/8_7_2_3.png)<br>
+*Figure 8.7.2.3 Calibration Result*<br/>  
 
 

@@ -1,8 +1,8 @@
-﻿# 8.8.3 Using the LPS Function  
+﻿# 8.7.3 Using the LPS Function  
 
 
 {% hint style="warning" %}
-If tool-to-sensor calibration (ref. 8.8.2) has not been performed before using this function, invalid poses may be stored.
+If tool-to-sensor calibration (ref. 8.7.2) has not been performed before using this function, invalid poses may be stored.
 {% endhint %}
 
 ### Property Window
@@ -10,8 +10,8 @@ If tool-to-sensor calibration (ref. 8.8.2) has not been performed before using t
 The properties of the LPS command are as follows.  
 <br/>
 
-![](../../_assets/8_8_3_0.png)<br>
-*Figure 8.8.3.0 LPS Property*<br/>  
+![](../../_assets/8_7_3_0.png)<br>
+*Figure 8.7.3.0 LPS Property*<br/>  
 
 #### Gap Coefficient
 
@@ -42,8 +42,8 @@ The properties of the LPS command are as follows.
 
 <br/>
 
-![](../../_assets/8_8_3_1.png)<br>
-*Figure 8.8.3.1 Spot Mode*<br/>  
+![](../../_assets/8_7_3_1.png)<br>
+*Figure 8.7.3.1 Spot Mode*<br/>  
 
 ```py
   var p10=cpo()
@@ -66,8 +66,8 @@ Depending on whether the height difference is lower or higher, the scan directio
 
 <br/>
 
-![](../../_assets/8_8_3_2.png)<br>
-*Figure 8.8.3.2 Step Mode*<br/>  
+![](../../_assets/8_7_3_2.png)<br>
+*Figure 8.7.3.2 Step Mode*<br/>  
 
 ```py
   var p10=cpo()
@@ -84,8 +84,8 @@ If no step is detected within the specified distance, a detection error occurs.
 
 ### (3) Scan Mode
 
-![](../../_assets/8_8_3_3.png)<br>
-*Figure 8.8.3.3 Scan Mode on various geometries*<br/>  
+![](../../_assets/8_7_3_3.png)<br>
+*Figure 8.7.3.3 Scan Mode on various geometries*<br/>  
 
 ```py
   var p10=cpo()
@@ -107,18 +107,18 @@ For instructions on how to register and use the application, please refer to the
 
 #### (3-1) Monitoring Screen  
 
-![](../../_assets/8_8_3_4.png)<br>
-*Figure 8.8.3.4 LPS Graph*<br/>  
+![](../../_assets/8_7_3_4.png)<br>
+*Figure 8.7.3.4 LPS Graph*<br/>  
 
 After registering the application, the monitoring screen can be accessed through the following method: `[Pane layout] - select - LPS Graph` 
 
 <br/>
 
-![](../../_assets/8_8_3_5.png)<br>
-*Figure 8.8.3.5 Example screen - V-groove*<br/>  
+![](../../_assets/8_7_3_5.png)<br>
+*Figure 8.7.3.5 Example screen - V-groove*<br/>  
 
-![](../../_assets/8_8_3_6.png)<br>
-*Figure 8.8.3.6 Example screen - Butt joint*<br/>  
+![](../../_assets/8_7_3_6.png)<br>
+*Figure 8.7.3.6 Example screen - Butt joint*<br/>  
 
 
 When the function is executed, results can be viewed as shown in the figure above.

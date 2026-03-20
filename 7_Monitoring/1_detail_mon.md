@@ -1,8 +1,8 @@
-﻿# 7.1.1 Detailed Information Monitoring
+﻿# 7.1 Detailed Information Monitoring
 
 This function allows you to check detailed data related to arc welding. The information provided may vary depending on the set welder, so the monitoring window may differ based on the configured welder. If a communication error occurs with the welder or if there is no communication connection, the "Welder Error Code" or "Welder Communication Status" items will be displayed with a red background. The following data can be monitored in the detailed information monitoring.
 
-![](../../_assets/7_1_1.png)<br>
+![](../_assets/7_1_1.png)<br>
 *Figure 7.1.1. Arc Welding Detailed Information Monitoring*
 
 1. Current Input: The commanded welding current sent from the robot to the welder (A)
