@@ -120,4 +120,4 @@ lps scan, cnd=<조건 번호>, Tx=<툴 기준 X 방향 이동거리>, Ty=<툴 �
 
 ### 세부 설명
 
-  [8.8 LPS(Laser Point Sensing)](../8_Application_function/8_LPS/README.md) 참고
+  [8.7 LPS(Laser Point Sensing)](../8_Application_function/7_LPS/README.md) 참고

@@ -1,4 +1,4 @@
-﻿# 8.8 LPS(Laser Point Sensing)  
+﻿# 8.7 LPS(Laser Point Sensing)  
 
 {% hint style="info" %}
 해당 기능은 70.00-00 이후 버전에서 지원합니다.
