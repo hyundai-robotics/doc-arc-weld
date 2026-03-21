@@ -1,69 +1,68 @@
-﻿# 6.1.1 Weaving Condition
+﻿# 6.1.1 编织条件
 
-When the cursor is placed above the `weaving ...` command, pressing the `[Property]` key will display the weaving condition editing screen as shown below.  
-
+当光标置于 `weaving ...` 命令上时，按下 `[Property]` 键将显示如下所示的编织条件编辑屏幕。  
 
 ![](../../_assets/6_1_1.png)<br>
-*Figure 6.1.1. Weaving Condition Settings*
+*图6.1.1. 编织条件设置*
 
 ---
 
-The details for each field in the weaving conditions are as follows:  
+编织条件中每个字段的详细信息如下：  
 
-### (1)	Condition Number: [1] (Range: 1 ~ 1000)  
+### (1) 条件编号: [1] (范围: 1 ~ 1000)  
 
-This is the condition number where the weaving operation settings are stored.
-Conditions can be added or removed by pressing the [+] or [-] buttons.
-You can navigate to the previous or next condition number to edit the corresponding condition.
+这是存储编织操作设置的条件编号。
+可以通过按下 [+] 或 [-] 按钮添加或删除条件。
+您可以导航到上一个或下一个条件编号以编辑相应的条件。
 
-### (2)	Weaving Type: <Single, Triangle, L type, Circle, DownCurve>  
+### (2) 编织类型: <Single, Triangle, L type, Circle, DownCurve>  
 
-This field specifies the type of weaving motion. (please refer to [[6.1.2 Weaving Type]](../1_Weaving_function/2_configuration_.md))
+此字段指定编织运动的类型。 (请参阅 [[6.1.2 Weaving Type]](../1_Weaving_function/2_configuration_.md))
 
-### (3)	Frequency: [2] Hz (Range: 0.0 ~ 10.0)  
+### (3) 频率: [2] Hz (范围: 0.0 ~ 10.0)  
 
-This field sets the weaving frequency, with a range of `0.0 to 10.0 Hz`. When the frequency is set to '0', the movement time will be applied instead.  
-(please refer to [[6.1.3 Frequency]](../1_Weaving_function/3_frequency.md))  
+此字段设置编织频率，范围为 `0.0 至 10.0 Hz`。当频率设置为 '0' 时，将应用运动时间。  
+(请参阅 [[6.1.3 Frequency]](../1_Weaving_function/3_frequency.md))  
 
-### (4)	Default Pattern  
+### (4) 默认模式  
 
-This field sets the pattern for the weaving motion.
-(please refer to [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
+此字段设置编织运动的模式。
+(请参阅 [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
 
-- **Left Distance(Wall Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
-- **Right Distance(Other Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
-- **Angle** : [90] degrees (Range: 0.1 ~ 180.0)
-- **Offset Angle** : When the torch orientation reference is used, the field specifies the angle at which the tilts to the left or right from its position.
-- **Wall Direaction** : <**Vertical**, **Horizon**, **Base on Torch**>
+- **左侧距离（墙面方向距离）** : [2.5] mm (范围: 1.0 ~ 25.0)
+- **右侧距离（其他方向距离）** : [2.5] mm (范围: 1.0 ~ 25.0)
+- **角度** : [90] 度 (范围: 0.1 ~ 180.0)
+- **偏移角度** : 当使用喷嘴方向参考时，此字段指定倾斜到左侧或右侧的角度。
+- **墙面方向** : <**垂直**, **水平**, **基于喷嘴**>
 
-### (5) Forward Angle: [0] degrees (Range : -90.0 ~ 90.0)  
+### (5) 前向角度: [0] 度 (范围 : -90.0 ~ 90.0)  
 
-This field indicates the weaving angle relative to the forward direction.
-When set to 0 degrees, the forward and weaving directions form a right angle.  
-(please refer to [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
+此字段指示相对于前进方向的编织角度。
+当设置为 0 度时，前进方向和编织方向形成直角。  
+(请参阅 [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
 
-### (6)	Boundary Limitation: <Enable, Disable>  
+### (6) 边界限制: <启用, 禁用>  
 
-This option determines whether the weaving trajectory is restricted by the boundaries at the start and end of the welding section. When this function is enabled, the weaving trajectory is confined within the welding area.  
-(please refer to [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
+此选项确定编织轨迹是否受到焊接段开始和结束时的边界限制。当此功能被启用时，编织轨迹将在焊接区域内限制。  
+(请参阅 [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
 
-### (7)	Robot Behavior when Weaving Stops: <Moving, Stop>
+### (7) 编织停止时的机器人行为: <移动, 停止>
 
-When a timer is set in the weaving pattern, the weaving motion will stop at both the left and right ends of the weaving.
-In this case, this setting determines whether the robot continues to move or stops during the weaving stop period.  
+当在编织模式中设置计时器时，编织运动将在编织的左右两端停止。
+在这种情况下，此设置决定机器人在编织停止期间是否继续移动或停止。  
 
-### (8) Move Time: [1] sec (Range: 0.0 ~ 10.0), Timer(Weaving Stop): [0] (범위 : 0.00 ~ 2.00)  
+### (8) 移动时间: [1] 秒 (范围: 0.0 ~ 10.0), 计时器（编织停止）: [0] (范围 : 0.00 ~ 2.00)  
 
-If the weaving frequency is set to '0', the weaving motion will be performed based on the move time.
-In this case, the move time for each section and the weaving stop time between sections are configured.  
-(please refer to [[6.1.5 Weaving Section Setting]](../1_Weaving_function/5_weaving_section.md))  
+如果编织频率设置为 '0'，则编织运动将根据移动时间进行。
+在这种情况下，每个部分的移动时间和部分之间的编织停止时间进行配置。  
+(请参阅 [[6.1.5 Weaving Section Setting]](../1_Weaving_function/5_weaving_section.md))  
 
-When the 'Weaving Frequency' is set, only the 'Timer (Weaving Stop)' setting can be adjusted.
-Druing the total time set for the specified frequency, the robot performs weaving for the duration excluding the time set in the 'Timer (Weaving Stop)'. During the weaving stop time, weaving stops.
-Whether the robot continues to move during the weaving stop time is determined by the setting of 'Robot Behavior when Weaving Stops'.
+当设置 '编织频率' 时，仅可以调整 '计时器（编织停止）' 设置。
+在设置的指定频率的总时间内，机器人在排除 '计时器（编织停止）' 中设置的时间外进行编织。在编织停止时间内，编织停止。
+机器人在编织停止时间内是否继续移动由 '编织停止时的机器人行为' 的设置决定。
 
-### (9) Weaving Axis Number: [1]  
+### (9) 编织轴编号: [1]  
 
-This setting determines whether the part perfoming the weaving motion is the robot or an auxiliary axis.
-When set to an auxiliary axis, the robot will move as recorded, and only the auxiliary axis will move according to the set distance and frequency to implement weaving.
-If an auxiliary axis is selected, the auxiliary axis specified in the 'Auxiliary Axis Number' field will perform the weaving motion.
+此设置决定执行编织运动的部分是机器人还是辅助轴。
+当设置为辅助轴时，机器人将按记录移动，仅辅助轴将根据设置的距离和频率进行移动，以实施编织。
+如果选择辅助轴，则在 '辅助轴编号' 字段中指定的辅助轴将执行编织运动。

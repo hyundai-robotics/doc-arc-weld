@@ -1,30 +1,28 @@
-﻿# 2.9 heightsen on
+﻿# 2.9 启动高度传感
 
-### Description 
+### 描述 
 
-```heightsen on``` command starts the height sensing function(AVC, Arc length control).  
+```heightsen on``` 命令启动高度传感功能（AVC, 弧长控制）。  
 
 
-### Syntax
+### 语法
 ```python
     heightsen on, cnd=<Condition Number>
 ```  
 
-### Parameter
+### 参数
 
-| Item | Meaning | Remarks |
+| 项目 | 释义 | 备注 |
 | --- | --- | --- |
-| **Condition Number** | The number of the welding condition used to starting Arc Welding and the specific condition (1 ~ 8) | Variable |
+| **条件编号** | 用于启动弧焊的焊接条件编号和具体条件（1 ~ 8） | 变量 |
 
 
-### Example
+### 示例
 
 ```python   
-    heightsen on, cnd=1        # Starts height sensing with condition number 1.
+    heightsen on, cnd=1        # 使用条件编号1启动高度传感。
 ```  
 
 
-### Details
-  Refer to [[8.4 Height Sensing]](../8_Application_function/4_Height_sensing/README.md)
-
-
+### 详细信息
+  请参考 [[8.4 高度传感]](../8_Application_function/4_Height_sensing/README.md)

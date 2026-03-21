@@ -1,21 +1,21 @@
-﻿# 5.3.3 Welding Start condition - EWM-only settings
+﻿# 5.3.3 焊接启动条件 - EWM专用设置
 
-### (1)	JOB mode: `Job mode Disable, Job mode Enable` 
-Set the Job mode supported by the EWM AlphaQ welder. The descriptions for each mode are as follows:
-- Job mode disable: Welding is performed with wire feed speed and voltage offset based on the synergy data stored in the welder.
-- Job mode enable: Welding is pserfored with the job stored in welder.
+### (1)	工作模式: `Job mode Disable, Job mode Enable`  
+设置EWM AlphaQ焊机支持的工作模式。每种模式的描述如下：
+- 工作模式禁用：根据焊机中存储的协同数据进行焊接，焊丝进给速度和电压偏移。
+- 工作模式启用：使用存储在焊机中的作业进行焊接。
 
-### (2)	Welding mode  
-Set whether pulse welding is used.
+### (2)	焊接模式  
+设置是否使用脉冲焊接。
 
-### (3)	Super pulse function  
-When pulse weling is enabled, it configures the use oft the Super Pulse(2-stage pulse) function.
+### (3)	超脉冲功能  
+启用脉冲焊接时，配置使用超脉冲（2级脉冲）功能。
 
-### (4)	Job Number (synergic)  
-Enter the synergy number or job number to be used for welding. Press the [Synergy selection] button at the bottom of the TP to open a dialog box where you can set the job number that corresponds to the welding method, material, gas type, and wire diameter.
+### (4)	作业编号（协同）  
+输入用于焊接的协同号码或作业编号。按下TP底部的[协同选择]按钮以打开对话框，您可以设置与焊接方法、材料、气体类型和焊丝直径相对应的作业编号。
 
-### (5)	Dynamic correction: [ 0 ] (range: -40.0 ~ 40.0)  
-Set the dynamic correction. A smaller value results in a strong and stable arc, but increases the amount of spatter. A larger value generates a smoother arc and reduces the amount of spatter.
+### (5)	动态校正: [ 0 ]（范围: -40.0 ~ 40.0）  
+设置动态校正。较小的值会导致强大而稳定的弧光，但会增加溅射的量。较大的值会产生更平滑的弧光，并减少溅射的量。
 
-### (6)	Lift arc start: `Not use, Use`  
-Set whether to use the lift arc function at the start of welding. Using the lift arc function can reduce the occurrence of excessive spatter during the start of welding.
+### (6)	升弧启动: `Not use, Use`  
+设置焊接开始时是否使用升弧功能。使用升弧功能可以减少焊接开始时过量溅射的发生。

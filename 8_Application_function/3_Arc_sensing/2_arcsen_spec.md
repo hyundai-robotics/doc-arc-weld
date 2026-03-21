@@ -1,47 +1,44 @@
-﻿# 8.3.2 Arc Sensing Support Specifications
+﻿# 8.3.2 弧感应支持规范
 
+弧感应缝跟踪并不支持所有焊接应用。  
+如有任何超出以下列出问题的情况，请联系我们以获取技术支持。
 
-The Arc Sensing Seam Tracking does not support all welding applications.
-For any issues beyond the ones listed below, please contact us for technical support.  
+以下规范基于我们公司进行的广泛测试所获得的数据。  
+（对于超出规定参数的条件，请联系我们以获取基于工件和使用条件的验证测试。）
 
-The specifications below are based on data obtained from extensive testing conducted by our company. 
-(For conditions outside of the specified parameters, please contact us for verification tests based on the workpiece and usage conditions.)  
+### (1) 焊接条件
+  - 焊接方法：CO2, MAG, MIG, FCAW  
+  - 焊丝直径：1.0 ~ 1.6 mm（实心焊丝，药心焊丝）  
+  - 最大焊接速度：根据焊接机特性（10 cm/min ~ 70 cm/min）  
+  - 焊接电流：160[A] ~ 600[A]  
 
+### (2) 工件条件
+  - 最小厚度：2t 或更大  
+  - 最大跟踪性能：由灵敏度设置和每秒最大修正距离决定  
+     - 在提升跟踪性能时，可能会发生焊接路径震动，因此需要进行验证测试。  
 
-### (1) Welding Conditions
-  - Welding Methods: CO2, MAG, MIG, FCAW  
-  - Wire Diameter: 1.0 ~ 1.6 mm (Solid wire, Flux-cored wire)  
-  - Maximum Welding Speed: Depending on the welder chaeracteristics (10 cm/min ~ 70 cm/min)
-  - Welding Current: 160[A] ~ 600[A]  
-
-
-### (2) Workpiece Conditions
-  - Minimum Thickness: 2t or greater  
-  - Maximum Tracking Performance: Determined by sensitivity settings and maximum correction distance per second  
-     - When improving tracking performance, welding path vibrations may occur, so verification tests are required.  
-
-### (3) Weaving Conditions  
-  - Weaving Type: Single oscillation, L-type, Triangular
-  - Frequency Range: 0.5 ~ 4.0 Hz(Single oscillation), 0.1 ~ 3.0 Hz(L-type, Triangular)
-  - Amplitude Range: 1.0 X 1.0 mm or more(Single oscillation), 1.5 X 1.5 mm or more(L-type), 3.0 X 3.0 mm or more(Triangular)
-  - Dwell Time: 0.0 ~ 2.0[sec]
+### (3) 编织条件  
+  - 编织类型：单次摆动，L型，三角形  
+  - 频率范围：0.5 ~ 4.0 Hz（单次摆动），0.1 ~ 3.0 Hz（L型，三角形）  
+  - 振幅范围：1.0 X 1.0 mm 或更多（单次摆动），1.5 X 1.5 mm 或更多（L型），3.0 X 3.0 mm 或更多（三角形）  
+  - 停留时间：0.0 ~ 2.0[秒]  
 
 {% hint style="info" %}
-  Please check the communication specifications of the welding power source.
-  The communication cycle for welding current and seam tracking data must be 10ms or less(e.g. EWM, Fronius).
-  Arc Sensing guarantees weld seam tracking under stable welding conditions(when the current waveform is stable).
+  请检查焊接电源的通信规范。  
+  焊接电流和缝跟踪数据的通信周期必须为10毫秒或更短（例如，EWM，Fronius）。  
+  弧感应在稳定焊接条件下（当电流波形稳定时）保证焊缝跟踪。  
 {% endhint %}
 
-### (4) Interpolation Type
-  - Linear Interpolation: Available
-  - Circular Interpolation: Available
-  - Positioner Synchronization (Linear): Available
-  - Positioner Synchronization (Circular): Available
+### (4) 插补类型
+  - 线性插补：可用  
+  - 圆形插补：可用  
+  - 定位器同步（线性）：可用  
+  - 定位器同步（圆形）：可用  
 
-### (5) Joint Type
-   - Fillet, V-groove  
-   - Maximum Allowable Gap: Depends on weaving width
+### (5) 接头类型
+   - 挤角，V型槽  
+   - 最大允许间隙：取决于编织宽度  
 
-### (6) Other Functions
-  - Sensing Trajectory Deviation Limiting Function
-  - Torch Height Setting Function during Sensing
+### (6) 其他功能
+  - 感应轨迹偏差限制功能  
+  - 感应过程中喷嘴高度设置功能

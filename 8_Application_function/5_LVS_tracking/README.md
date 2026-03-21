@@ -1,1 +1,1 @@
-﻿# 8.5 LVS(Laser Vision Sensor) Seam Finding and Tracking
+﻿# 8.5 LVS（激光视觉传感器）接缝查找和跟踪

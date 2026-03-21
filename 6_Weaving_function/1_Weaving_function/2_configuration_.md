@@ -1,8 +1,6 @@
-﻿# 6.1.2 Weaving Type    
+﻿# 6.1.2 编织类型    
 
+设置编织的图案形状，如下图所示。  
 
-Set the pattern shape of the weaving as shown in the following figure.
- 
 ![](../../_assets/6_1_2.png)<br>
-*Figure 6.1.2. Weaving Pattern Type*
-
+*图 6.1.2. 编织图案类型*

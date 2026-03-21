@@ -1,48 +1,43 @@
-﻿# 8.6.3 STITCH Func. Parameter setting
-
+﻿# 8.6.3 STITCH 功能参数设置
 
 ![](../../_assets/8_6_5.png)<br>
-*Figure 8.6.5. Stitch Welding Process Profile*
+*图 8.6.5. 针焊接工艺曲线*
 
-
-[Figure 8.6.5] illustrates the stitch welding process. Based on this chart, you can configure the options for the `stitch` command.
+[图 8.6.5] 描述了针焊接工艺。根据此图，您可以配置 `stitch` 命令的选项。
 
 ![](../../_assets/8_6_6.png)<br>
-*Figure 8.6.6. Stitch Welding Condition Dialog Box1 (General)*
+*图 8.6.6. 针焊接条件对话框1（常规）*
 
 ![](../../_assets/8_6_7.png)<br>
-*Figure 8.6.7. Stitch Welding Condition Dialog Box2 (Section)*
+*图 8.6.7. 针焊接条件对话框2（部分）*
 
+[图 8.6.6] 显示了通过将光标放在 `stitch` 命令上并按下 TP 屏幕左侧的 `[Property]` 按钮访问的屏幕。[图 8.6.7] 是通过从上一屏幕选择 `[Section]` 选项卡访问的。
+每个图形参数的描述如下：
 
-[Figure 8.6.6] shows the screen accessed by placing the cursor on the `stitch` command and pressing the `[Property]` button on the left side of the TP screen. [Figure 8.6.7] is accessed by selecting the `[Section]` tab from the previous screen.
-The descriptions of the parameters for each figure are as follows:
+- 条件编号：从右侧的条件列表中选择
+- 描述：使用软键盘输入
+- 常规
+  - (1) 开启延迟时间：焊接信号提前开启的时间段
+  - (2) 关闭延迟时间：焊接信号提前关闭的时间段
+  - (3) 开始距：针焊接开始前的速度输入段长度（开段）
+  - (4) 关闭速度：非重叠（关闭）段的焊接速度
 
-- Condition Number: Select from the list of conditions on the right
-- Description: Input using the soft keyboard
-- General
-  - (1) On delay Time: The time period during which the welding signal is turned on in advance
-  - (2) Off delay Time: The time period during which the welding signal is turned off in advance
-  - (3) Distance to Start: The length of the speed entry section before the stitch welding starts(On section)
-  - (4) Off Speed: Welding Speed during the non-overlapping (Off) section
+- 部分
+  - (5) 部分：针焊接条件  <br/>
+    示例：在条件 1 的情况下执行指定次数的针焊接时，针焊接将在条件 2 下进行
+  - (6) 开启距离：焊接段的长度
+  - (7) 关闭距离：非重叠（关闭）段的长度
+  - (8) 计数：针焊接重复次数
+  - (9) 开启速度：焊接段的焊接速度
 
-- Section
-  - (5) Section: Stitch welding condition  <br/>
-    Example. When stitch welding under the conditions of section 1 is performed for the specified count, stitch welding proceeds under the conditions of section 2
-  - (6) On Distance: Length of the welding section
-  - (7) Off Distance: Length of the non-overlapping (Off) section
-  - (8) Count: Number of stitch welding repetitions
-  - (9) On speed: Welding speed during the welding section
-
-- Input/Output
-  - (10) Stitch Enable
-  - (11) Equipment Enable
-  - (12) Equipment Output  <br/>
-    → All three parameters must be set to 1 for stitch welding to proceed during playback
-
+- 输入/输出
+  - (10) 针焊启用
+  - (11) 设备启用
+  - (12) 设备输出  <br/>
+    → 在回放期间，所有三个参数必须设置为 1，才能进行针焊接
 
 {% hint style="warning" %}
-- `(6) on dist, (7) off dist, (8) count`: All of these must be entered to set the conditions for section2.
-- `(9) on speed`: The speed for the welding (ON) section in the stitch section is set as the step speed.
-- `(11) Stitch Enable Port, (12) Equipment enable Port, (13) Equipment Output Port`: All must be set to 1 for the stitch welding welding to proceed during playback. If not set, welding will not occur, and only the stitch motion will proceed.
+- `(6) 开启距离, (7) 关闭距离, (8) 计数`：所有这些必须输入以设置条件 2。
+- `(9) 开启速度`：针段中的焊接（开启）段的速度设置为步进速度。
+- `(11) 针焊启用端口, (12) 设备启用端口, (13) 设备输出端口`：在回放期间，所有必须设置为 1，以便进行针焊接。如果未设置，将不会发生焊接，只会进行针运动。
 {% endhint %}
-

@@ -1,228 +1,216 @@
-﻿# 8.2	Touch Sensing
+﻿# 8.2	触感传感
 
+焊接工件由于夹具、定位器或工件安装的误差，并不总是处于固定位置。在这种情况下，可以使用触感传感来检测焊接起点、中间点和终点，从而实现精确焊接。
 
-Welding workpieces are not always in a fixed position due to errors in the jig, positioner, or workpiece mounting.
-In such cases, touch sensing can be used to detect the welding start point, intermediate points, and end points, enabling accurate welding.
+触感传感功能通过检测工件的位置和焊接的起点、终点或中间点来获取姿态。
 
-The touch sensing func. helps obtain the pose by detecting the position of the workpiece and the welding start, end, or intermediate points.
-
-By recording the reference position using touch sensing, the shift of the workpiece from the reference position can be calculated when the workpiece is loaded.
-When using the master mode, a mster pose can be saved through reference teaching, and the shift amount is automatically calculated via touch sensing during actual operation.
-
+通过使用触感传感记录参考位置，可以在工件装载时计算工件相对于参考位置的位移。当使用主模式时，可以通过参考教学保存主姿态，并且在实际操作中，通过触感传感自动计算位移量。
 
 ![](../../_assets/8_2_1.png)<br>
-*Figure 8.2.1. Example of Touch Sensing*
+*图 8.2.1. 触感传感示例*
 
-### (1) Touch Sensing Types
+### (1) 触感传感类型
 
-The touch sensing supports a total of 5-types, as shown in [Figure 8.2.1] (Butt, Fillet, V-groove, LR Center, and Groove Detections).
+触感传感支持总共五种类型，如[图 8.2.1]所示（对接焊缝、角焊缝、V型槽、LR中心和槽检测）。
 
 ![](../../_assets/8_2_2.png)<br>
-*Figure 8.2.2. Touch Sensing Types*
+*图 8.2.2. 触感传感类型*
 
-### (2) Touch Sensing Command and Setting Parameters
+### (2) 触感传感命令和设置参数
 
-The touch sensing command can be recorded by entering `[F6: cmd. input] - arcweld - touchsen` on the TP.
+可以通过在 TP 上输入 `[F6: cmd. input] - arcweld - touchsen` 来记录触感传感命令。
 
-Assuming the condition 1 set for Fillet, condition 2 set for Butt, and condition 3 for V-groove in the command (where the workpiece type is defined in the properties), the example is as follows:
+假设条件 1 设定为角焊缝，条件 2 设定为对接焊缝，条件 3 设定为 V型槽（工件类型在属性中定义），示例如下：
 
 ```python
-    move L,spd=60%,accu=0,tool=0  # Move to the touch sensing position with acc 0
-    var P10=cpo() # Save the current pose to a local variable P10 before touch sensing.
-    touchsen cnd=1, crd="tool_prj", dir=["tf","td"], pose=P10       # Condition 1, tool projection direction, 2-point touch
-    touchsen cnd=1, crd="robot", dir=["+x","-y","-z"], pose=P10     # Condition 1, robot coordinate direction, 3-point touch
-    touchsen cnd=1, crd="tool", dir="+z", pose=P10           # Condition 1, tool coordinate direction, 1-point touch in +Z
-    touchsen cnd=2, crd="tool", dir="+x", lift_up=3, pose=P10, gap=var1 # Condition 2, tool coordinate direction, touch the bottom and rise 3mm
-    touchsen cnd=3, crd="tool", dir="-y", lift_up=5, pose=P10   # Condition 3, tool coordinate direction, touch the bottom and rise 5mm
+    move L,spd=60%,accu=0,tool=0  # 以加速度0移动到触感传感位置
+    var P10=cpo() # 在触感传感之前将当前位置保存到本地变量 P10。
+    touchsen cnd=1, crd="tool_prj", dir=["tf","td"], pose=P10       # 条件 1，工具投影方向，2点触摸
+    touchsen cnd=1, crd="robot", dir=["+x","-y","-z"], pose=P10     # 条件 1，机器人坐标方向，3点触摸
+    touchsen cnd=1, crd="tool", dir="+z", pose=P10           # 条件 1，工具坐标方向，+Z 方向的1点触摸
+    touchsen cnd=2, crd="tool", dir="+x", lift_up=3, pose=P10, gap=var1 # 条件 2，工具坐标方向，触底后上升3mm
+    touchsen cnd=3, crd="tool", dir="-y", lift_up=5, pose=P10   # 条件 3，工具坐标方向，触底后上升5mm
 ```
 
-- **Sensing Distance** : The distance in the sensing direction [mm], and an error occurs if the workpiece is not detected upon reaching this distance.
+- **感应距离**：传感方向上的距离 [mm]，如果在达到此距离时未检测到工件，则会发生错误。
 
-- **Retreat Distance** : The distance to retreat after the initial sensing in the case of Fillet, and **the distance to raise after touching the bottom in the DetectGroove type**.
+- **后退距离**：在角焊缝初始感应之后退回的距离，以及**在DetectGroove类型中，触底后上升的距离**。
 
-- **Sensing Speed and Retreat Speed** : Specifies the speed during search or retreat.  
+- **感应速度和后退速度**：指定搜寻或后退时的速度。
 
-- **Detection Type** : Supports sensing during contact and release of contact. Typically, sensing during contact is used, and there is alomost no error.<br/>
-  If the situation requires considering even minor errors caused by wire bending during sensing, only use sensing during retreat when absolutely necessary.
-
+- **检测类型**：支持在接触和释放接触过程中进行感应。通常使用接触过程中感应，几乎没有错误。<br/>
+  如果情况需要考虑在感应过程中由于电线弯曲造成的微小错误，仅在绝对必要时使用后退时的感应。
 
 <br/>
 
-- **참고**
+- **参考**
 
 <center>
 
-| Sensing Type |	Max Search</br>Directions |	Orthogonal XYZ </br>(All types </br>Supported)	| Tool Coordinate System |	Tool Projection</br>Coordinate System | Other input parameters |
+| 感应类型 |	最大搜索</br>方向 |	正交 XYZ </br>（所有类型 </br>支持）	| 工具坐标系 |	工具投影</br>坐标系 | 其他输入参数 |
 |:---:|	:---: |	:---:	| :---:|	:---: |:---:|
-| Fillet |	3	|O|	O |	O	|	Retreat Distance |
-| Butt	| 1 |	X	|O	|X	|  |
-| VGroove |	1 |	X |	O	|X | |
-| LRCen |	1	|O |	O	|X |  |	
-| DetectGroove |	2 |	O |	O |	O | Proceed Distance 1</br> Retreat Distance 1 </br> criteria |
+| 角焊缝 |	3	|O|	O |	O	|	后退距离 |
+| 对接焊缝 | 1 |	X	|O	|X	|  |
+| V型槽 |	1 |	X |	O	|X | |
+| LR中心 |	1	|O |	O	|X |  |	
+| 槽检测 |	2 |	O |	O |	O | 前进距离 1</br> 后退距离 1 </br> 标准 |
 
 </center>
 
-
-In the touch sensing command, pressing on `Property` will bring up a winow as shown in [Figure 8.2.3]  
-You can set conditions such as sensing distance, retreat distance, proceed distance, sensing speed, retreat speed, and detection type (contact,  release of contact), among others.  
-
+在触感传感命令中，按下 `属性 (Property)` 会弹出如[图 8.2.3]所示的窗口。  
+您可以设置诸如感应距离、后退距离、前进距离、感应速度、后退速度和检测类型（接触、释放接触）等条件。
 
 ![](../../_assets/8_2_3.png)<br>
-*Figure 8.2.3. Touch Sensing Condition Edit Screen*
+*图 8.2.3. 触感传感条件编辑屏幕*
 
 {% hint style="info" %}
-  For detailed instructions on using the command and parameters, please refer to [2.13 touchsen](../../2_Command/13_touchsen.md) <br>
-  This section explains how to use the function.
+  有关使用命令和参数的详细说明，请参阅 [2.13 touchsen](../../2_Command/13_touchsen.md) <br>
+  本节解释如何使用该功能。
 {% endhint %}
 
-<!-- - **명령어 사용 예시**
+<!-- - **命令使用示例**
 ```python
-    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], pose=<결과포즈 저장변수>, gap=<butt gap 변수>
-    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, pose=<결과포즈 저장변수>, gap=<butt gap 변수>
-    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, mpose=<결과포즈 저장변수>, mshift=<계산된 시프트 변수, gap=butt gap 변수>
+    - touchsen cnd=<条件编号>, crd=<坐标系>, dir=[感应方向1, 感应方向2, 感应方向3], pose=<结果姿势保存变量>, gap=<butt gap 变量>
+    - touchsen cnd=<条件编号>, crd=<坐标系>, dir=[感应方向1, 感应方向2, 感应方向3], rotation=<感应方向角度>, pose=<结果姿势保存变量>, gap=<butt gap 变量>
+    - touchsen cnd=<条件编号>, crd=<坐标系>, dir=[感应方向1, 感应方向2, 感应方向3], rotation=<感应方向角度>, mpose=<结果姿势保存变量>, mshift=<计算的位移变量, gap=butt gap 变量>
 ```   -->
 
-<!-- - **파라미터**
-  - 터치센싱 조건번호 (cnd) : cnd=1	
-  - 터치센싱 좌표계 (crd) : "robot", "base", "tool", "tool_prj" 
-  - 센싱 방향 파라미터 (dir) : "+x", ["+x","-z"], [+tx, +tz], ["tf","td"],  
-  - butt, groove 바닥 탐색 후 상승량 [mm] : lift_up=3		
-  - detect groove 탐지 기준 거리 [mm] : criteria=5
-  - 센싱 결과 포즈변수 : pose=var_po10
-  - butt 하단 갭 변수 (소숫점 첫째 자리에서 반올림) : gap=var_gap 
+<!-- - **参数**
+  - 触感传感条件编号 (cnd) : cnd=1	
+  - 触感传感坐标系 (crd) : "robot", "base", "tool", "tool_prj" 
+  - 感应方向参数 (dir) : "+x", ["+x","-z"], [+tx, +tz], ["tf","td"],  
+  - butt, groove 底部探测后上升量 [mm] : lift_up=3		
+  - detect groove 探测标准距离 [mm] : criteria=5
+  - 感应结果姿势变量 : pose=var_po10
+  - butt 底部间隙变量（四舍五入至小数点后一位） : gap=var_gap 
 
-- **참고**  
-  센싱방향(dir)은 작업물 타입에 따라 다음과 같이 지정할 수 있습니다.
+- **参考**  
+  感应方向(dir)可以根据工件类型指定如下。
 
-  - Fillet	: 최소 1개 ~ 3개 지정
-              +x, -x, +y, -y, +z, -z (crd="robot" 또는 "base")
+  - 角焊缝	：至少指定 1 个 ~ 3 个
+              +x, -x, +y, -y, +z, -z (crd="robot" 或 "base")
               tf, td, tl, tr (crd="tool_prj")
               +tx, -tx, +ty, -ty, +tz, -tz (crd="tool")
-  - Butt 	: 1개 지정, 하강방향은 +tz 방향
+- Butt 	: 1个指定，下降方向为 +tz 方向
             +tx, -tx, +ty, -ty, +tz, -tz (crd="tool")
-  - V Groove 	: 1개 지정, 하강방향은 +tz 방향
+  - V Groove 	: 1个指定，下降方向为 +tz 方向
                 +tx, -tx, +ty, -ty, +tz, -tz (crd="tool")
-  - LRCen 	: 1개 지정
-              +x, -x, +y, -y, +z, -z (crd="robot" 또는 "base")
+  - LRCen 	: 1个指定
+              +x, -x, +y, -y, +z, -z (crd="robot" 或 "base")
               +tx, -tx, +ty, -ty, +tz, -tz (crd="tool")
-  - DetectGroove: 2개 지정 (하강방향, 전진방향 순서)
+  - DetectGroove: 2个指定（下降方向，前进方向顺序）
                   tf, td, tl, tr (crd="tool_prj")
                   +tx, -tx, +ty, -ty, +tz, -tz (crd="tool") -->
 
 
-### (3) Detailed Description of Touch Sensing by Sensing Type
+### (3) 触觉传感详细描述按传感类型
 
 ---
 
-#### [1] Fillet
+#### [1] 倒角
 
 ![](../../_assets/8_2_4.png)<br>
-*Figure 8.2.4. Example of Touch Sensing - Fillet*
+*图 8.2.4. 触觉传感示例 - 倒角*
 
-- Examples of Command
+- 命令示例
 ```python
   touchsen cnd=1, crd="robot", dir=["+x","-y", "-z"], pose=P10
   touchsen cnd=1, crd="tool_prj", dir=["tf", "td"], pose=P10
   touchsen cnd=1, crd="tool", dir=["+z"], pose=P10
 ```  
-  - 1-Point sensing : Only one sensing direction is specified.
-  - 2-Point sensing : Two sensing directions are specified sequentially.
-  - 3-Point sensing : Three sensing directions are specified sequentially.
-- Tool Projection Method (crd="tool_prj") : For convenience, the forward, downward, left, and right directions are determined based on the torch posture.  <br> The directioon can be specified as tf(forward), td(downward), tl(left), tr(right). (tl = RotZ(90) * tf, tr = RotZ(-90) * tf)
-- For workpieces with rotational amounts (RX, RY, RZ), such as tilted Fillets, the sensing direction can be changed using the angle specification option. Please refer to the bottom of the manual for usage.
+  - 1-点传感：仅指定一个传感方向。
+  - 2-点传感：顺序指定两个传感方向。
+  - 3-点传感：顺序指定三个传感方向。
+- 工具投影方法 (crd="tool_prj")：为方便起见，前进、下降、左、右方向是基于焊接姿态确定的。<br> 可以指定为 tf（前进），td（下降），tl（左），tr（右）。 (tl = RotZ(90) * tf, tr = RotZ(-90) * tf)
+- 对于有旋转量 (RX, RY, RZ) 的工件，例如倾斜的倒角，可以使用角度规格选项改变传感方向。请参考手册底部的使用说明。
 
 ---
 
 #### [2] V Groove
 
 ![](../../_assets/8_2_5.png)<br>
-*Figure 8.2.5. Example of Touch Sensing - V Groove*   
+*图 8.2.5. 触觉传感示例 - V Groove*   
 
-- Examples of Command
+- 命令示例
 ```python
-  touchsen cnd=3, crd="tool", dir=[-ty], lift_up=3, pose=P10    # Condition 3, tool coordinate direction
+  touchsen cnd=3, crd="tool", dir=[-ty], lift_up=3, pose=P10    # 条件 3，工具坐标方向
 ```  
-  - V-Groove Type can be used for sensing workpieces with a Groove shape. However, it is recommended to teach the tool posture so that it is positioned along the bisector of the angle, similar to the figure above, before starting the sensing.  
-  - The direction parameter corresponds to one direction for the left-right sequence. The downward sequence direction is fixed in the `+z` direction relative to the tool.  
-  - For stable sensing, it is recommended to set the lift-up amount to at least 3mm.  
+  - V-Groove 类型适用于具有槽形的工件进行传感。然而，建议在开始传感之前，教导工具姿态，使其位置与角的平分线对齐，如上图所示。  
+  - 方向参数对应于左右顺序的一个方向。下降顺序方向在 `+z` 相对于工具固定。  
+  - 为了稳定的传感，建议将抬起量设置为至少 3mm。  
 
-- Sensing Sequence  
-  - The sensing sequence proceeds as follows: upper left-right → middle return → bottom → bottom left-right → middle  
+- 传感顺序  
+  - 传感顺序如下进行：上左-右 → 中间返回 → 底部 → 底部左-右 → 中间  
 
 ![](../../_assets/8_2_6.png)<br>
-*Figure 8.2.6. Touch Sensing Sequence - V-Groove*   
+*图 8.2.6. 触觉传感顺序 - V-Groove*   
 
 ---
  
-#### [3] BUTT
+#### [3] 扁平接头
 
 ![](../../_assets/8_2_7.png)<br>
-*Figure 8.2.7. Example of Touch Sensing - Butt*   
+*图 8.2.7. 触觉传感示例 - 扁平接头*   
 
-
-- Examples of Command
+- 命令示例
 ```python
     touchsen cnd=2, crd="tool", dir="+x", lift_up=3, pose=P10, gap=var_gap   
-    # Condition 2, tool coordinate direction, touch the bottom and rise 3mm
+    # 条件 2，工具坐标方向，触摸底部并上升 3mm
 ```  
-  - Butt Type is recommended to teach the tool posture vertically to the floor surface before starting the sensing, as shown in the figure above.
-  - The direction parameter corresponds to one direction for the left-right sequence. The downward sequence direction is fixed in the `+z` direction relative to the tool.  
-  - After bottom sensing, it is recommended to set the lift-up amount to at least 3mm for stable sensing. The size of the sensed gap may change depending on the lift-up amount.  
+  - 扁平接头类型建议在开始传感之前将工具姿态垂直于地面，如上图所示。
+  - 方向参数对应于左右顺序的一个方向。下降顺序方向在 `+z` 相对于工具固定。  
+  - 自底部传感后，建议将抬起量设置为至少 3mm，以确保稳定的传感。感测的间隙大小可能会根据抬起量的变化而变化。  
 
-- Sensing Sequence
-  - The sensing sequence proceeds as follows: upper left-right → middle return → bottom → bottom left-right → middle  
+- 传感顺序
+  - 传感顺序如下进行：上左-右 → 中间返回 → 底部 → 底部左-右 → 中间  
 
 ![](../../_assets/8_2_8.png)<br>
-*Figure 8.2.8. Touch Sensing Sequence - Butt*   
+*图 8.2.8. 触觉传感顺序 - 扁平接头*   
 
 
 
-### (4) Sensing Direction Angle Transformation
+### (4) 传感方向角度变换
 
-Angle transformation of the sensing direction is supported in Fillet and Groove Detection types.
-By specifying an angle for the sensing direction, you can change the direction of the search process.
-In the command, the rotation parameter is entered as "X30", "Y-30", "TL20", etc.  
+在倒角和沟槽检测类型中支持传感方向的角度变换。
+通过指定角度，可以改变搜索过程的方向。
+在命令中，旋转参数以 "X30"，"Y-30"，"TL20" 等形式输入。  
 
-Angle specification rotates the entire search direction by the specified angle along one of the selected axes, either the TL axis or the orthogonal XYZ axes.
-[FIgure 8.2.9] shows an example where the Fillet and Groove detection workpieces are rotated by 30 degrees along the Y-axis or TL axis.
-
+角度规格沿所选轴之一旋转整个搜索方向，可以是 TL 轴或正交 XYZ 轴。
+[图 8.2.9] 显示了一个示例，其中倒角和沟槽检测工件沿 Y 轴或 TL 轴旋转 30 度。
 
 ![](../../_assets/8_2_9.png)<br>
-*Figure 8.2.9. Example of Touch Sensing - Angle setting*       
+*图 8.2.9. 触觉传感示例 - 角度设置*       
 
-- Examples of Command
+- 命令示例
 
 ```python
    touchsen cnd=1, crd="robot", dir=["+x","-z"], rotation="Y30", pose=P100
    touchsen cnd=1, crd="robot", dir=["+x","-z"], rotation="TL30", pose=P100
    touchsen cnd=2, crd="tool_prj", dir=["td","tf"], lift_up=5, rotation="Y-30", pose=P100
-   touchsen cnd=2, crd="tool_prj", dir=["td","tf"], rotation="TL-30", pose=P100   # Detect Groove 
+   touchsen cnd=2, crd="tool_prj", dir=["td","tf"], rotation="TL-30", pose=P100   # 检测沟槽 
 ```
-
-- The angle rotation axes that can be specified depending on the workpiece type and the sensing direction coordinate system designated in the command are as shown in the table below.
+- 根据工件类型和在命令中指定的传感方向坐标系统，可以指定的角度旋转轴如下表所示。
 
 <center>
 
-| Sensing Type	| Sensing Direction </br> Coordinate System	| Angle Specification Axis |
+| 传感类型	| 传感方向 </br> 坐标系统	| 角度指定轴 |
 |:---:|:---:|:---:|
-|Fillet	| All	| Orthogonal XYZ axes </br> TL axis |
-|Detect Groove |	Tool (crd="tool") </br> Tool Projection (crd="tool_prj") |	Orthogonal XYZ axes </br> TL axis |
+|坡口	| 所有	| 正交XYZ轴 </br> TL轴 |
+|检测槽 |	工具 (crd="tool") </br> 工具投影 (crd="tool_prj") |	正交XYZ轴 </br> TL轴 |
 
 </center>
 
+### (5) 接触传感中的主模式/执行模式
 
-### (5) Master/Execution Mode in Touch Sensing
+可以使用用户键打开/关闭主模式。  
+当在主模式下进行接触传感时，可以保存主姿态并用作教学参考。  
+在实际操作中，主模式被关闭，并进行接触传感。在这种情况下，系统自动计算工件相对于主姿态的偏移量，基于当前的传感姿态。  
 
-The master mode can be turned On/Off using the user key.
-When touch sensing is performed with the master mode On, the master pose can be saved and used as a reference for teaching.  
-During actual operation, the master mode is turned Off, and touch sensing is performed. In this case, the system automatically calculates the shift amount of the workpiece relative to the master pose based on the current sensing pose.  
+在主模式下，感测的姿态保存在`touch sensing`命令的`mpose`输入参数指定的变量中。  
+在执行模式（当主模式为OFF时），当前感测姿态与主模式下感测的姿态进行比较，并计算偏移量。  
+然后，将偏移量记录在`mshift`输入参数指定的变量中。  
 
-In master mode, the sensed pose is saved in the variable specified by the `mpose` input parameter of the touch sensing command.
-In execution mode (when master mode is OFF), the current sensed pose is compared with the pose sensed in master mode, and the shift amount is calculated.
-The shift amount is then recorded in the variable specified by the `mshift` input parameter.
-
-
-- Examples of Command
+- 命令示例  
 ```python
    var P10=cpo()
    var sft_var1=Shift(0,0,0,0,0,0,"base")
@@ -230,4 +218,4 @@ The shift amount is then recorded in the variable specified by the `mshift` inpu
    touchsen cnd=1, crd="robot", dir=["+x","-z"], mpose=P10, mshift=sft_var1
 ```  
 
-- For example, in master mode, the sensed pose is saved in the `P10` pose variable, and in execution mode, when sensing is performed, the shift amount between the master mode pose and the current sensed pose is automatically calculated and stored in the sft_var1 variable.
+- 例如，在主模式下，感测的姿态保存在`P10`姿态变量中，而在执行模式下，进行感测时，自动计算主模式姿态与当前感测姿态之间的偏移量，并将其存储在sft_var1变量中。

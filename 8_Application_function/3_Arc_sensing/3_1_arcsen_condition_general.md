@@ -1,85 +1,74 @@
-﻿# 8.3.3.1 Arc Sensing Condition(General)
+# 8.3.3.1 弧感测条件（通用）
 
-
-In the `Weaving` command, clickin on [Properties] opens the Weaving Condition Edit Screen.
-The second tab of this window is where settings related to arc sensing during weaving can be configured, as shown below.  
-
+在 `Weaving` 命令中，点击 [Properties] 打开织造条件编辑屏幕。  
+此窗口的第二个选项卡是设置与织造过程中弧感测相关的配置，如下所示。  
 
 ![](../../_assets/8_3_2.png)<br>
-*Figure 8.3.2. Arc Sensing Condition(General) Dialog Box*
+*图 8.3.2. 弧感测条件（通用）对话框*
 
-The settings and operation methods for each item are as follows:  
+每个项目的设置和操作方法如下：  
 
-### (1) Arc Sensing Activation: <Disable, Enable> 
+### (1) 弧感测激活： <禁用, 启用>  
 
-This option allows you to set whether the arc sensing function is enabled or disabled.
-When set to "Enabled", arc sensing tracking will be applied starting from the move command after "arc on" and "weaving" have been executed.
+此选项允许您设置弧感测功能是启用还是禁用。  
+当设置为“启用”时，弧感测跟踪将在执行“弧打开”和“织造”后的移动命令开始应用。  
 
-
-### (2) Sensing Type Selection: <Welding Seam, Current Difference, Current Difference + Gap, Welding Seam Estimation & Current Difference>  
+### (2) 感测类型选择： <焊缝, 电流差, 电流差 + 间隙, 焊缝估计 & 电流差>  
 
 <br/>
 
-```For ${cont_model}, it is recommended to use "Welding Seam Estimation & Current Difference."```<br/>
-The options for Welding Seam, Current Difference, and Current Difference + Gap are the same as for Hi5a, so please refer to the Hi5a controller manual.
+```对于 ${cont_model}，建议使用 "焊缝估计 & 电流差。"```<br/>
+焊缝、电流差和电流差 + 间隙的选项与 Hi5a 的相同，请参阅 Hi5a 控制器手册。  
 
+### (3) 左/右感测灵敏度：[0 ~ 10]  
 
-### (3) Left/Right Sensing Sensitivity: [0 ~ 10]
-
-This setting adjusts the sensitivity for left and right sensing on the weaving plane.<br>
-The default value is 5, which changes the strength of the left/right sensing.<br>
-```When performing delay time calibration, set this to -1.```
-
-{% hint style="info" %}
-  During arc sensing, executing the system variable `weavings_.side_sensing_sensitivity=0` will disable tracking. To enable tracking agian, set this value to a positive number.
-{% endhint %}
-
-
-### (4) Left/Right Sensing Start Cycle: [0 ~ 9]
-
-This setting determines the cycle at which left/right sensing will begin on the weaving plane.<br>
-```For stable operation, set it to 4 or higher.```
-
-
-### (5) Height (Up/Down) Sensing Sensitivity: [0 ~ 10]
-
-This setting adjusts the sensitivity for up and down sensing on the weaving plane.<br>
-The default value is 5, which changes the strength of the up/down sensing.<br>
-```When performing delay time calibration, set this to -1.```
+此设置调整织造平面上左侧和右侧感测的灵敏度。<br>
+默认值为 5，改变左/右感测的强度。<br>
+```在进行延迟时间校准时，请将此设置为 -1。```  
 
 {% hint style="info" %}
-  During arc sensing, executing the system variable `weavings_.height_sensing_sensitivity=0` will disable tracking. To enable tracking agian, set this value to a positive number.
+  在弧感测期间，执行系统变量 `weavings_.side_sensing_sensitivity=0` 将禁用跟踪。要重新启用跟踪，请将此值设置为正数。
 {% endhint %}
 
+### (4) 左/右感测启动周期：[0 ~ 9]  
 
-### (6) Height (Up/Down) Sensing Start Cycle: [Left/Right Start Cycle +1 ~ 10]
+此设置确定左/右感测将在织造平面上开始的周期。<br>
+```为了稳定操作，请将其设置为 4 或更高。```  
 
-This setting determines the cycle at which up/down sensing will begin on the weaving plane.<br>
-```For stable operation, set it to 4 or higher.```
+### (5) 高度（上/下）感测灵敏度：[0 ~ 10]  
 
-
-### (7) Hight (Up/Down) Sensing Reference Current: [0 ~ 1000]
-
-This setting determines the reference current for up/down sensing. <br>
-The torch height during arc sensing welding wire tracking is based on this setting.<br>
-```When set to 0, the average value of the initial section current will be used as the reference. (If there is a tack weld at the start of the weld, be cautious as an unintended high initial current may be used as the reference.) ```
+此设置调整织造平面上上下感测的灵敏度。<br>
+默认值为 5，改变上下感测的强度。<br>
+```在进行延迟时间校准时，请将此设置为 -1。```  
 
 {% hint style="info" %}
-  When `weavings_.height_sensing_reference_current=200` is executed immediately after `weaving on` and `arc on`, tracking will be maintained while keeping a height of 200A.
+  在弧感测期间，执行系统变量 `weavings_.height_sensing_sensitivity=0` 将禁用跟踪。要重新启用跟踪，请将此值设置为正数。
 {% endhint %}
 
+### (6) 高度（上/下）感测启动周期：[左/右启动周期 +1 ~ 10]  
 
-### (8) Real-Time Gap Sensing Sensitivity: [0(disabled) ~ 10]
+此设置确定上下感测将在织造平面上开始的周期。<br>
+```为了稳定操作，请将其设置为 4 或更高。```  
 
-<!-- This function automatically adjusts welding speed and weaving based on the gap. When not in use, set it to 0. <br>
-When enabled, this setting adjusts the sensitivity of the width variation. The value should be set according to bead quality and the degree of width variation. -->
+### (7) 高度（上/下）感测参考电流：[0 ~ 1000]  
 
-Set to 0. (Not Supported)
+此设置确定上下感测的参考电流。<br>
+在弧感测焊接线材跟踪期间，焊枪高度是基于此设置的。<br>
+```当设置为 0 时，将使用初始部分电流的平均值作为参考。（如果焊接开始时有点焊，请谨慎，因为意外的高初始电流可能会用作参考。）```  
 
+{% hint style="info" %}
+  当 `weavings_.height_sensing_reference_current=200` 在 `weaving on` 和 `arc on` 之后立即执行时，将保持 200A 的高度进行跟踪。
+{% endhint %}
 
-### (9) Real-Time Gap Sensing Resolution: [ ]  
+### (8) 实时间隙感测灵敏度：[0（禁用）~ 10]  
 
-### (10) Real-Time Sensing Gap: [ ]  
+<!-- 此功能会根据间隙自动调整焊接速度和织造。当不使用时，请将其设置为 0。<br>
+启用时，此设置调整宽度变化的灵敏度。值应根据焊珠质量和宽度变化的程度进行设置。 -->
 
-### (11) Real-Time Gap Sensing Speed: [ ]  
+设置为 0.（不支持）  
 
+### (9) 实时间隙感测分辨率：[ ]  
+
+### (10) 实时感测间隙：[ ]  
+
+### (11) 实时间隙感测速度：[ ]  

@@ -1,22 +1,20 @@
-﻿# 8.3.5 Arc Sensing Monitoring
+﻿# 8.3.5 弧形传感监控
 
-### (1) Monitoring Execution
+### (1) 监控执行
 
-By accessing `[pane layout] - select - arc sensing`, the Arc Sensing Monitoring window will be activated.
-This feature is only available when the Arc Sensing license is valid.
+通过访问 `[pane layout] - 选择 - 弧形传感 ([pane layout] - select - arc sensing)`，将激活弧形传感监控窗口。  
+此功能仅在弧形传感许可证有效时可用。
 
-
-### (2)	Explanation of Monitoring Items
+### (2) 监控项目解释
 
 ![](../../_assets/8_3_7.png)<br>
-*Figure 8.3.7 Arc Sensing Monitoring*
+*图 8.3.7 弧形传感监控*
 
-- Left/Right Tracking: Displays the left and right distance to be corrected, calculated based on the tracking speed, distance, and current diffrential in the left-right direction by sensing.
+- 左/右追踪：显示需要纠正的左侧和右侧距离，根据追踪速度、距离以及根据传感计算的左右方向的当前差异进行计算。
 
-- Up/Down Tracking: Displays the up and down distance to be corrected, calculated based on the tracking speed, distance, and welding seam in the up-down direction by sensing.
+- 上/下追踪：显示需要纠正的上下距离，根据追踪速度、距离以及根据传感计算的上下方向的焊接缝进行计算。
 
-- XYZ Tracking: Displays the distance tracked so far compared to the original trajectory, in terms of the Base coordinate system's X, Y, and Z directions.
-
+- XYZ 追踪：显示与原始轨迹相比，到目前为止追踪的距离，按基础坐标系统的 X、Y 和 Z 方向进行表示。
 
 <!-- 센싱 데이터
 
@@ -32,4 +30,3 @@ This feature is only available when the Arc Sensing license is valid.
 위빙 데이터: 현재 위빙폭, 위빙 주파수, 지연시간, 모드 번호를 표시합니다.
 
 멀티패스: 저장된 멀티패스 데이터의 현재/전체 카운트, 시프트 거리, 각도를 표시합니다. -->
-

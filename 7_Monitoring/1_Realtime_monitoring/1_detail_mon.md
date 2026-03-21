@@ -1,37 +1,36 @@
-﻿# 7.1.1 Detailed Information Monitoring
+﻿# 7.1.1 详细信息监控
 
-This function allows you to check detailed data related to arc welding. The information provided may vary depending on the set welder, so the monitoring window may differ based on the configured welder. If a communication error occurs with the welder or if there is no communication connection, the "Welder Error Code" or "Welder Communication Status" items will be displayed with a red background. The following data can be monitored in the detailed information monitoring.
+此功能允许您检查与弧焊相关的详细数据。提供的信息可能会因设置的焊机而异，因此监控窗口可能会根据配置的焊机有所不同。如果与焊机发生通信错误或没有通信连接，“焊机错误代码”或“焊机通信状态”项目将以红色背景显示。可以在详细信息监控中监控以下数据。
 
 ![](../../_assets/7_1_1.png)<br>
-*Figure 7.1.1. Arc Welding Detailed Information Monitoring*
+*图 7.1.1. 弧焊详细信息监控*
 
-1. Current Input: The commanded welding current sent from the robot to the welder (A)
+1. 电流输入：从机器人发送到焊机的指令焊接电流（A）
 
-2. Current Output: The actual welding current currently being output by the welder (A)
+2. 电流输出：焊机当前输出的实际焊接电流（A）
 
-3. Voltage Iutput: The commanded welding voltage sent from the robot to the welder (V)
+3. 电压输入：从机器人发送到焊机的指令焊接电压（V）
 
-4. Voltage Output: The actual welding voltage currently being output by the welder (V)
+4. 电压输出：焊机当前输出的实际焊接电压（V）
 
-5. Welding Process
+5. 焊接过程
 
-6. Feeding Speed: The wire feeding speed (m/min)
+6. 送料速度：焊丝送料速度（m/min）
 
-7. Operation Mode: Arc welding mode
+7. 操作模式：弧焊模式
 
-8. Prog/Job Number
+8. 程序/作业编号
 
-9. Feed Motor Current: The current driving the actual fedding motor (A)
+9. 送料电机电流：驱动实际送料电机的电流（A）
 
-10. Welder Error Number
+10. 焊机错误编号
 
-11. Pulse Dynamic Compensation
+11. 脉冲动态补偿
 
-12. Additional Information Window: This section displays useful additional information such as the upper and lower limits of current/voltage and their units. 
+12. 附加信息窗口：此部分显示有用的附加信息，例如电流/电压的上下限及其单位。
 
-13. Input Signals: Signals sent from the welder to the robot controller.(Can be checked under `[F2: System] - 5: Initialization - 3: Usage Setting - Welder Setting - Input signal assign`)
+13. 输入信号：从焊机发送到机器人控制器的信号。（可在`[F2: 系统] - 5: 初始化 - 3: 使用设置 - 焊机设置 - 输入信号分配 ([F2: System] - 5: Initialization - 3: Usage Setting - Welder Setting - Input signal assign)`下检查）
 
-14. Output Signals: Signals sent from the robot controller to the welder.(Can be checked under `[F2: System] - 5: Initialization - 3: Usage Setting - Welder Setting - Output signal assign`)
+14. 输出信号：从机器人控制器发送到焊机的信号。（可在`[F2: 系统] - 5: 初始化 - 3: 使用设置 - 焊机设置 - 输出信号分配 ([F2: System] - 5: Initialization - 3: Usage Setting - Welder Setting - Output signal assign)`下检查）
 
-15. Command Values: Frequently used commands that can be manually output.
-
+15. 指令值：可以手动输出的常用指令。

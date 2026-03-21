@@ -1,27 +1,27 @@
-﻿# 7.1.2 Arc welding data graph
+﻿# 7.1.2 弧焊数据图
 
-Arc welding data graph displays information related to the welding data's waveform, allowing you to view not only the real-time data but also past data at a glance.
+弧焊数据图显示与焊接数据波形相关的信息，使您不仅能实时查看数据，还能一目了然地查看过去的数据。
 
-To use this feature, on TP, press `[pane layout] - select - arc data graph` sequentially. 
+要使用此功能，请在TP上依次按下`[pane layout] - 选择 - 弧数据 图表 ([pane layout] - select - arc data graph)`。
 
  
 ![](../../_assets/7_1_2.png)<br>
-*Figure 7.1.2. Arc Welding data graph*
+*图 7.1.2. 弧焊数据图*
 
-The following items can be checked in the monitoring window:
+在监控窗口中可以检查以下项目：
 
-1. Welding Status(initial conditions, gas pre-flow, end conditions, gas post-flow, crater movement, main welding, etc.)
+1. 焊接状态（初始条件、气体预流、结束条件、气体后流、凹坑运动、主焊接等）
 
-2. Job/Prog no, Synergic settings
+2. 工作/程序号，协同设置
 
-3. Input Current / Command current graph
+3. 输入电流/命令电流图
 
-4. Input voltage / Command voltage graph
+4. 输入电压/命令电压图
 
-5. Moving average filtered graph of input current and voltage
+5. 输入电流和电压的移动平均滤波图
 
-6. Upper and lower limits of welding current and voltage
+6. 焊接电流和电压的上下限
 
-Arc Welding data graph offers left/right and up/down movement functions. You can also add rows and columns to view more data. By toggling the `[Auto scroll]` button, you can review the past welding screens even during the current welding process.
+弧焊数据图提供左右和上下移动功能。您还可以添加行和列以查看更多数据。通过切换`[自动滚动]`按钮，您可以在当前焊接过程中查看过去的焊接屏幕。
 
-You can increase the number of rows in the graph by pressing the **[Row]** or **[Col]** button at the bottom of the arc welding data graph screen. If you want to zoom in on the data graph further, you can press **[SHIFT] + [Row]** or **[SHIFT] + [Col]** to enlarge the display.
+您可以通过按下弧焊数据图屏幕底部的**[Row]**或**[Col]**按钮来增加图中的行数。如果您想进一步放大数据图，可以按**[SHIFT] + [Row]**或**[SHIFT] + [Col]**来放大显示。

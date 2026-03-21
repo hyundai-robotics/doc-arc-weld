@@ -1,14 +1,13 @@
-﻿# 1.3.5 High weight arc torch vibration reduction function
+﻿# 1.3.5 重型火炬振动降低功能
 
-This function aims to reduce vibrations that can occur when using heavy torches (such as water-cooled torches or push-pull torches) on a small robot. You can configure this feature as described below.
+此功能旨在降低在小型机器人上使用重型火炬（如水冷火炬或推拉火炬）时可能发生的振动。您可以按照以下说明配置此功能。
 
-- `[F2: System] - 4: Application parameter - 2: Arc welding - Vibration reduction for heavy torch`: Disable / Welding Point / All range
+- `[F2: 系统] - 4: 应用参数 - 2: 弧焊 - 重型火炬的振动降低功能设置 ([F2: System] - 4: Application parameter - 2: Arc welding - Vibration reduction for heavy torch)`: 禁用 / 焊接点 / 全范围
 
-To reduce vibrations, two methods are provided, each with its own advantages and disadvantages. You can refer to the pros and cons below to choose the method that best suits your situation.
+为了减少振动，提供了两种方法，每种方法都有其优缺点。您可以参考以下的利弊来选择最符合您情况的方法。
 
-
-| Item | Description |
+| 项目 | 描述 |
 | --- | --- |
-| **Disable**  |  |
-| **Welding Point**  | Significantly reduces a considerable amount of vibrations. No impact on robot cycle time. |
-| **All range** | Reduces most vibrations. Increases robot cycle time. |
+| **禁用**  |  |
+| **焊接点**  | 显著降低相当数量的振动。对机器人循环时间没有影响。 |
+| **全范围** | 降低大部分振动。增加机器人循环时间。 |

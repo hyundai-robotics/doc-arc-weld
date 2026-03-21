@@ -1,28 +1,27 @@
-﻿# 2.11 multipass
+﻿# 2.11 多重通道
 
-### Description  
+### 描述  
 
-```multipass``` command is used for multi-pass welding to reproduce the arc sensing path.  
-Using this command, you can perform welding by reproducing the original arc welding path with a specified amount of shift.  
+```multipass``` 命令用于多重通道焊接，以重现电弧感应路径。  
+使用此命令，您可以通过指定的位移量重现原始的电弧焊接路径进行焊接。  
 <br/>
 
-
-### Syntax
+### 语法
 
 ```python  
-multipass save, trj=<Multi-pass trajectory Number>, period=<trajectory save interval distance>
-multipass load, trj=<Multi-pass trajectory Number>, side=<lateral shift distance>, height=<vertical shift distance>, reverse=<Multi-pass run direction>, tas=<torch shift angle (front/rear)>, was=<torch shift angle(left/right)>
+multipass save, trj=<多重通道轨迹编号>, period=<轨迹保存间隔距离>
+multipass load, trj=<多重通道轨迹编号>, side=<横向位移距离>, height=<纵向位移距离>, reverse=<多重通道运行方向>, tas=<火炬位移角度（前/后）>, was=<火炬位移角度（左/右）>
 multipass off
 ```  
 
-### Parameter
+### 参数
 <table>
   <thead>
     <tr>
-      <th>Major Category</th>
-      <th>Sub Category</th>
-      <th>Meaning</th>
-      <th>Remarks</th>
+      <th>主要类别</th>
+      <th>子类别</th>
+      <th>含义</th>
+      <th>备注</th>
     </tr>
   </thead>
   <tbody>
@@ -30,60 +29,60 @@ multipass off
       <td rowspan="4">multipass</td>
     </tr>
     <tr>
-      <td>`save`</td>
-      <td>Multi-pass trajectory save</td>
+      <td>`保存 (save)`</td>
+      <td>多重通道轨迹保存</td>
     </tr>
     <tr>
       <td>`load`</td>
-      <td>Multi-pass trajectory load</td>
+      <td>多重通道轨迹加载</td>
     </tr>
     <tr>
-      <td>`off`</td>
-      <td>Multi-pass off</td>
+      <td>` (off)`</td>
+      <td>多重通道关闭</td>
     </tr>
     <tr>
-      <td colspan="2">Multi-pass trajectory Number</td>
-      <td> Trajectory Number to save/load the multi-pass (1 ~ 50)</td>
-      <td>Variable</td>
+      <td colspan="2">多重通道轨迹编号</td>
+      <td>保存/加载多重通道的轨迹编号（1 ~ 50）</td>
+      <td>变量</td>
     </tr>
     <tr>
-      <td colspan="2">trajectory save interval distance</td>
-      <td> Sampling interval distance when saving the multi-pass trajectory (5 ~ 100)[mm] </td>
-      <td>Variable</td>
+      <td colspan="2">轨迹保存间隔距离</td>
+      <td>保存多重通道轨迹时的采样间隔距离（5 ~ 100）[mm]</td>
+      <td>变量</td>
     </tr>
     <tr>
-      <td colspan="2">lateral shift distance</td>
-      <td> Shift distance in the left/right direction from the origin Arc sensing path (-20 ~ 20)[mm] </td>
-      <td>Variable</td>
+      <td colspan="2">横向位移距离</td>
+      <td>从原点电弧感应路径的左右方向位移距离（-20 ~ 20）[mm]</td>
+      <td>变量</td>
     </tr>
     <tr>
-      <td colspan="2">vertical shift distance</td>
-      <td> Shift distance in the up/down direction from the origin Arc sensing path (-20 ~ 20)[mm] </td>
-      <td>Variable</td>
+      <td colspan="2">纵向位移距离</td>
+      <td>从原点电弧感应路径的上下方向位移距离（-20 ~ 20）[mm]</td>
+      <td>变量</td>
     </tr>
     <tr>
-      <td colspan="2">Multi-pass run direction</td>
-      <td> Whether to reproduce the path in the reverse direction (0: forward, 1: reverse) </td>
-      <td>Variable</td>
+      <td colspan="2">多重通道运行方向</td>
+      <td>是否以反方向重现路径（0：前进，1：反向）</td>
+      <td>变量</td>
     </tr>
     <tr>
-      <td colspan="2">torch shift angle (front/rear)</td>
-      <td> Torch tilt angle shift in the front/rear direction during multi-pass reproduction (-20 ~ 20)[deg] </td>
-      <td>Variable</td>
+      <td colspan="2">火炬位移角度（前/后）</td>
+      <td>在多重通道重现过程中，火炬在前/后方向的倾斜角度位移（-20 ~ 20）[度]</td>
+      <td>变量</td>
     </tr>
     <tr>
-      <td colspan="2">torch shift angle (left/right)</td>
-      <td> Torch tilt angle shift in the left/right direction during multi-pass reproduction (-20 ~ 20)[deg] </td>
-      <td>Variable</td>
+      <td colspan="2">火炬位移角度（左/右）</td>
+      <td>在多重通道重现过程中，火炬在左右方向的倾斜角度位移（-20 ~ 20）[度]</td>
+      <td>变量</td>
     </tr>
   </tbody>
 </table>  
 
-### Example
+### 示例
 
 ```python
      weaving on, cnd=1 
-     multipass save, trj=1, period=10       # Save to trajectory 1 at 10mm intervals
+     multipass save, trj=1, period=10       # 以10mm的间隔保存到轨迹1
      arcon cnd=1
 S10  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
 S11  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
@@ -94,8 +93,8 @@ S12  move L,spd=50%,accu=3,tool=1
 S13  move L,spd=50%,accu=3,tool=1
 S14  move L,spd=50%,accu=3,tool=1
      multipass load,trj=1,side=3,height=3,reverse=0,tas=0,was=0
-     # Load trajectory 1 with a 3mm shift to the left, 3mm upward, in forward direction, with no angle shift
-S15  move L,R2,spd=50%,accu=0,tool=1       # Move step to the Multi-pass starting position
+     # 加载轨迹1，左移3mm，向上3mm，前进方向，无角度位移
+S15  move L,R2,spd=50%,accu=0,tool=1       # 移动到多重通道起始位置
      weaving on, cnd=11
      arcon cnd=1 
 S16  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1  

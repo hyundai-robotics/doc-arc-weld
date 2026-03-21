@@ -1,35 +1,34 @@
-﻿# 8.3 Arc Sensing and Multi Pass
+﻿# 8.3 弧感应与多次焊接
 
 {% hint style="info" %}
-  - To use this feature, an Arc sensing license is required.<br> Please contact us to purchase and obtain the license.
-  - Additionally, this feature requires **the weaving funtion** to be enabled.<br> Please refer to the weaving section before starting. **[6. Weaving Function](../../6_Weaving_function/README.md)**
+  - 要使用此功能，需获得弧感应许可证。<br> 请联系您以购买和获得许可证。
+  - 此外，此功能要求 **启用织造功能**。<br> 在开始之前，请参阅织造部分。 **[6. 织造功能](../../6_Weaving_function/README.md)**
 {% endhint %}
 
-Arc Sensing is a seam tracking feature that can be used for arc welding on thick materials(such as thick plates).
-When using this feature, even if there are seam deviations due to workpiece tolerance or deformation, the welding can be performed accurately.
+弧感应是一种接缝跟踪功能，可用于对厚材料（如厚板）进行弧焊。
+使用此功能时，即使由于工件公差或变形而产生接缝偏差，焊接仍可准确进行。
 <br>
 
-The typical usage method is as follows: <br>
-1. Teach the reference points (starting point, intermediate points, and endpoint) for the welding area by sensing the seam on the reference workpiece (register the master pose)
-2. Perform seam sensing at the same locations on the actual workpiece (calculate the shift relative to the master pose)
-3. Apply the calculated shift to each point
-4. Use arc sensing for real-time seam tracking during welding
+典型的使用方法如下： <br>
+1. 通过在参考工件上感应接缝，教授焊接区域的参考点（起始点、中间点和终点）（注册主姿态）
+2. 在实际工件上的相同位置进行接缝感应（计算相对于主姿态的偏移）
+3. 将计算出的偏移应用于每个点
+4. 在焊接期间使用弧感应进行实时接缝跟踪
 
 
 {% hint style="info" %}
-  - Before using this function, it is necessary to first perform Arc Sensing delay time calibration.
-  - Seam sensing refers to the process of finding the starting point, intermediate points, and endpoint of the welding area.
-  - Seam sensing can be performed using touch sensing, LVS seamfinding, LPS(Laser Point Sensing) features.
+  - 在使用此功能之前，必须首先进行弧感应延迟时间校准。
+  - 接缝感应是指找到焊接区域的起始点、中间点和终点的过程。
+  - 接缝感应可以使用触觉感应、LVS接缝查找、LPS（激光点感应）功能进行。
 {% endhint %}
 
-This manual explains the newly added Arc Sensing feature in ${cont_model}.  
-The newly added Arc Sensing feature in ${cont_model} is activated by entering the properties window of the `weaving` command and setting the **'type' in the Arc Sensing (General) tab to 'seam & cur_diff'**.
+本手册解释了在 ${cont_model} 中新添加的弧感应功能。  
+在 ${cont_model} 中新添加的弧感应功能通过进入 `weaving` 命令的属性窗口并将弧感应（一般）标签中的 **'type' 设置为 'seam & cur_diff'** 来激活。
 
 ---
 
-**Multi-Pass** is a feature used when welding needs to be repeated over multiple passes rather than in a single pass.
-Using this, the first layer (root pass) is welded, and since sensing may be unstable, the tracking trajectory is saved.
-Then, the saved trajectory is shifted to generate two or more passes for welding.  
+**多次焊接** 是一种用于在多次传递而不是单次传递中进行焊接时使用的功能。
+通过此功能，首先焊接第一层（根焊缝），由于感应可能不稳定，因此保存跟踪轨迹。
+然后，将保存的轨迹进行偏移，以生成两个或更多的焊接传递。  
 
-Typically, Arc Sensing is used to perform multi-pass welding, and multi-pass welding is conducted using Arc Sensing.
-
+通常，弧感应用于执行多次焊接，多次焊接使用弧感应进行。

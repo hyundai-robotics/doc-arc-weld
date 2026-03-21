@@ -1,11 +1,11 @@
-﻿# 7. Arc Welding Data Monitoring
+﻿# 7. 弧焊数据监测
 
-During arc welding, there are instances where the current/voltage command values sent form the robot controller to the welder are compared with the actual current/voltage values output from the welder to the robot controller. In such cases, the arc welding data graph monitoring function can be used to check the welding-related data in real time.
+在弧焊期间，机器人控制器发送给焊机的电流/电压命令值与焊机输出给机器人控制器的实际电流/电压值进行比较的情况时有发生。在这种情况下，可以使用弧焊数据图监测功能实时检查与焊接相关的数据。
 
 </br>
 
-Our controller offers 2-type of monitoring functions for welding data monitoring:
+我们的控制器提供两种焊接数据监测的监测功能：
 
-(1) **Detailed Information Monitoring**: Allows you to check all available data.
+(1) **详细信息监测**：允许您检查所有可用的数据。
 
-(2) Arc Welding Data Graph: Enalbes viewing of the command and actual current/voltage data in waveform.
+(2) 弧焊数据图：使您能够以波形查看命令和实际电流/电压数据。

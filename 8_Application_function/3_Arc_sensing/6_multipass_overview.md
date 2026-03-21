@@ -1,23 +1,18 @@
-﻿# 8.3.6 Multi-pass Overview
+﻿# 8.3.6 多次焊接概述
 
-The multi-pass welding feature is used when the required weld length in thick plate arc welding is too wide to be completed in a single pass, or when the volume to be filled by welding is too large, requiring multiple welding passes.  
+多次焊接功能用于当厚板弧焊所需焊接长度过宽，无法在一次通过中完成，或当焊接填充的体积过大，需要多次焊接时。
 
-Due to the inherent characteristics of arc sensing, the sensing may be unstable except for the root pass, which is the first layer.
-Therefore, only the root pass is tracked using arc sensing.
-The trajectory of this pass is tehn saved, and the stored trajectory is shifted to create passes for the second layer and beyond.  
+由于弧传感的固有特性，除了根通道（第一层）外，传感可能不稳定。因此，仅跟踪根通道的弧传感。该通道的轨迹随后被保存，并将存储的轨迹移动以创建第二层及以后的通道。
 
-Since the position of the multi-pass work program is the same as that of the root pass trajectory, it is easy to perform multi-pass welding by simply copying the root pass work program and inserting the multi-pass command.
-
+由于多次通道工作程序的位置与根通道轨迹的位置相同，因此只需复制根通道工作程序并插入多次命令，就可以轻松进行多次焊接。
 
 ![](../../_assets/8_3_8.png)<br>
-*Figure 8.3.8 Root Pass Arc sensing (left) and Multi-pass welding for 2-3 layers*
+*图 8.3.8 根通道弧传感（左）和 2-3 层的多次焊接*
 
 ![](../../_assets/8_3_9.png)<br>
-*Figure 8.3.9 Actual Multi-Pass Welding*
+*图 8.3.9 实际的多次焊接*
 
-When creating multi-pass beads in a stacked, inclined configuration as shown in Figure 2 above, welding can be performed by modifying only the start and end points of the weld and slightly shifting them.  
-This will result in a stacked configuration as shown below.
-
+在创建如上图 2 所示的堆叠、倾斜配置的多次焊缝时，可以通过仅修改焊接的起始点和结束点并稍微移动它们来进行焊接。这样将导致如下所示的堆叠配置。
 
 ![](../../_assets/8_3_10.png)<br>
-*Figure 8.3.10 Multi-pass Stacked Shape with Inclination*
+*图 8.3.10 带倾斜的多次堆叠形状*

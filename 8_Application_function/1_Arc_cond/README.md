@@ -1,16 +1,14 @@
-﻿# 8.1 Arccond - Arc Welding Condition DB & interpolation
+﻿# 8.1 Arccond - 弧焊条件数据库与插值
 
+焊接条件可以存储在数据库（DB）中以备使用或在焊接过程中进行插值。
+该功能的使用方法如下：
 
-Welding conditions can be stored in a database (DB) for use or interpolated during the welding process.
-The usage of this function is as follows:
+`[F6: cmd. input] - arcweld - arccond` 输入命令到 JOB 文件中。
 
-`[F6: cmd. input] - arcweld - arccond` to enter the command in the JOB file.
-
-The command format is as follows:
-```arccond <interpolation type>, cnd=<condition number>, gap=<gap>, spd=<welding speed>, rd=<wall direction>, ld=<sie direction>, freq=<weaving frequency>, cur=<crruent>, vol=<voltage>```
-
+命令格式如下：
+```arccond <插值类型>, cnd=<条件编号>, gap=<间隙>, spd=<焊接速度>, rd=<壁面方向>, ld=<焊接方向>, freq=<编织频率>, cur=<电流>, vol=<电压>```
 
 <br>
 
-- **interpolation type**: D(stepped, immediate application) / L(Linear interpolation)
-- **cnd**: condition number (WDB-welding database- and interpolation conditions can be edited via the properties window)
+- **插值类型**: D（阶跃，立即应用） / L（线性插值）
+- **cnd**: 条件编号（焊接数据库和插值条件可以通过属性窗口编辑）

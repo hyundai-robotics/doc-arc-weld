@@ -1,33 +1,28 @@
-﻿# 3.1 Overview
+﻿# 3.1 概述
 
-When teaching an arc welding program, not only the welding conditions such as voltage and current but also detailed settings related to weaving, retries/overlaps, and the characteristics of the welder are necessary.
-Furthermore, in general robot operation, there may be cases where the position information (coordinates and orientation) of the taught steps or auxiliary points needs to be verified.  
-By placing the cursor on the command and pressing the `[Property]` button located on the left side of the TP, a function is provided that allows easy and quick editing of these files.
+在教学弧焊程序时，不仅需要焊接条件，如电压和电流，还需要与编织、重试/重叠以及焊接机特性相关的详细设置。
+此外，在一般的机器人操作中，可能需要验证所教步骤或辅助点的位置相关信息（坐标和方向）。
+通过将光标放在命令上并按下位于 TP 左侧的 `[Property]` 按钮，可以提供一个方便快捷地编辑这些文件的功能。
 
+### 命令 [Property] 示例
 
-### Example of Command [Property]
-
-| Command | Property | 
+| 命令 | 属性 | 
 | -----| -------| 
-| `arcon `| Set the current, voltage, synergic, initial/aux/end conditions, etc. | 
-| `weaving on `| Set weaving type, frequency, width, and weaving direction, etc. |
-| `lvs `| Configure tracking-related informations, seam finding settings, etc. |
-| `arccond `| Manage welding condition database(WDB) with settings for current, voltage, frequency, and weaving width. |
-| `move `| Change the current recorded position to base coordinate system, robot coordinate system, or joint coordinate system. |
+| `arcon (arcon )`| 设置电流、电压、协同、初始/辅助/结束条件等。 | 
+| `weaving on (weaving on )`| 设置编织类型、频率、宽度和编织方向等。 |
+| `lvs (lvs )`| 配置跟踪相关信息、缝隙寻找设置等。 |
+| `arccond (arccond )`| 管理焊接条件数据库（WDB），包括电流、电压、频率和编织宽度的设置。 |
+| `move (move )`| 将当前记录的位置更改为基坐标系、机器人坐标系或关节坐标系。 |
 
+作为编辑焊接开始条件的示例，当光标放在开启弧的 `arcon` 命令上时，按下 `[Property]` 按钮将显示当前在焊接开始条件中使用的条件编号的详细信息。
+在此屏幕上，您可以查看或修改焊接开始条件的详细设置。
 
-
-As an example of editing welding start conditions, when the cursor is placed on the `arcon` command, which turns on the arc, pressing the `[Property]` button will display the details of the condition number currently used in the welding start conditions.
-In this screen, you can view or modify the detailed settings of the welding start conditions.
-
-Similarly, after placing the cursor on a specific command and entering the `[Property]` window, you can easily and quickly check and modify the settings, such as the conditions or positions recorded in the steps.
-If you wish to save the changes and exit, press `[OK]`; if you wish to exit without saving, press the `[ESC]` key on the teaching pendant.
-
+同样，在将光标放在特定命令上并进入 `[Property]` 窗口后，您可以方便快捷地检查和修改设置，例如在步骤中记录的条件或位置。
+如果您希望保存更改并退出，请按 `[OK]`；如果您希望在不保存的情况下退出，请按教学挂件上的 `[ESC]` 键。
 
 ![](../_assets/3_1_1.png)<br>
-*Figure 3.1.1. Property in Robot Program Command*
-
+*图 3.1.1. 机器人程序命令中的属性*
 
 {% hint style="info" %}
-    For more details, please refer to [2. Inserting Commands]
+    有关更多详细信息，请参考 [2. 插入命令]
 {% endhint %}

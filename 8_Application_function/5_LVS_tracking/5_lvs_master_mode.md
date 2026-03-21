@@ -1,56 +1,53 @@
-﻿# 8.5.5 LVS Master Mode Func.
+﻿# 8.5.5 LVS 主模式功能
 
-### (1) Master Mode Overview
+### (1) 主模式概述
 
-The Master Mode function stores a reference position (Master pose) and calculates the shift between the current sensed position and the reference position during actual production.
+主模式功能存储一个参考位置（主位姿），并在实际生产过程中计算当前感知位置与参考位置之间的偏移量。
 
-To enable this functionality, `user key - Master Mode` must be activated to register the reference position(Master pose) in advance.
-
+要启用此功能，必须激活 `用户键 - 主模式 (user key - Master Mode)` 以提前注册参考位置（主位姿）。
 
 ![](../../_assets/8_5_12_lvs_seamfind_mastermode.png)<br>
-*Figure 8.5.12. Example of Master Mode and Actual Motion*   
+*图 8.5.12. 主模式和实际运动的示例*   
 </br>
 
-As shown in the left part of the figure, after activating Master Mode, the Master Pose is saved to the pose variable assigned to the `mp` parameter in the `lvs` command.
+如图左侧所示，激活主模式后，主位姿被保存到分配给 `mp` 参数的位姿变量中。
 
-Typically, the sensing points are pre-taught, and once Master Mode is activated, the system automatically plays back to the complete the master teaching.
+通常，感知点是预先教授的，一旦主模式被激活，系统会自动回放以完成主教学。
 
-In thick welding application, several tens of welding waypoints will typically be registered as Master Poses.
+在厚焊接应用中，通常会注册几十个焊接航点作为主位姿。
 
-Once the Master Teaching is completed, the Master Mode is turned off. There is no need to turn Master Mode back on after completing the Master Teaching.
+一旦主教学完成，主模式便会关闭。完成主教学后，无需再将主模式重新打开。
 
-During production, the robot operates in automatic or remote mode and senses each welding point to calculate the shift.
+在生产过程中，机器人在自动模式或远程模式下运行，感知每个焊接点以计算偏移。
 
-At this point, the shift relative to the Master Pose is automatically calculated and stored in the shift variable designated by the `ms` parameter in the `lvs` command.
+此时，相对于主位姿的偏移会自动计算并存储在由 ` (ms)` 参数指定的偏移变量中。
 
-This shift value is then applied to the `tg` parameter in the `move` command to compensate for the shift in the welding position, allowing the welding operation to be carried out accurately.
-
+该偏移值随后应用于 `move` 命令中的 `tg` 参数，以补偿焊接位置的偏移，从而准确地进行焊接操作。
 
 {% hint style="warning" %}
-Important notes when registering master pose.
+注册主位姿时的重要注意事项。
 
-* During the registeration of the Master Pose, ensure that the side and height of the seam sensed by the LVS S/W at the sensing position are both close to 0.
-* By teaching as described above, sensing can be performed stably, and Master Pose management, as well as the detection of any misalignment in the LVS or tool, can be easily recognized.
+* 在注册主位姿时，请确保LVS软件在感知位置感知的接缝的边缘和高度都接近于0。
+* 通过上述方法教学，可以稳定地进行感知，并且主位姿管理以及LVS或工具的任何错位检测都可以很容易地识别。
 
 {% endhint %}
 
-
 ![](../../_assets/8_5_13_lvs_seamfind_mastermode_warn.png)<br>
-*Figure 8.5.13. Important Considerations When Registering Master Pose*   
+*图 8.5.13. 注册主位姿时的重要注意事项*   
 </br>
 
 ---
 
-### (2) Shift Quantity Check Function Relaive to Master Mode
+### (2) 相对于主模式的偏移量检查功能
 
-The shift quantity(in mm) between the current sensed pose and the Master Pose can be checked to verify if it falls within the user-defined range.
+当前感知位姿与主位姿之间的偏移量（以毫米为单位）可以进行检查，以验证其是否在用户定义的范围内。
 
-To set the range, access the **[property]** window in the lvs command, and enter the desired distance from the reference position in the "distance from reference position" field under the "Seam finding option"(in mm). 
+要设置范围，请访问 lvs 命令中的 **[property]** 窗口，并在“接缝查找选项”下的“距离参考位置”字段中输入从参考位置的期望距离（以毫米为单位）。
 
-If the shift value exceeds the user-defined range during seam finding, an error will occur.
+如果在接缝查找过程中偏移值超过用户定义的范围，将会发生错误。
 
 {% hint style="warning" %}
-If the `sp` parameter is not declared, it will be treated as a local pose.<br>
-If the `mp` parameter is not declared, it will be treated as a global pose.<br>
-If the `ms` parameter is not declared, it will be treated as a global pose.
+如果 `sp` 参数未声明，将被视为局部位姿。<br>
+如果 `mp` 参数未声明，将被视为全局位姿。<br>
+如果 ` (ms)` 参数未声明，将被视为全局位姿。
 {% endhint %}

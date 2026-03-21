@@ -1,78 +1,76 @@
-﻿# 5.4 Welding End condition
+﻿# 5.4 焊接结束条件
 
-When the arc welding settings are digital and [End condition] tab is pressed in the welding start condition dialog box, the following welding end condition editing screen appears.
-
+当弧焊设置为数字化并在焊接启动条件对话框中按下[结束条件]选项卡时，将显示以下焊接结束条件编辑屏幕。
 
 ![](../../_assets/5_4_1.png)<br>
-*Figure 5.4.1. Welding End Condition Setting (e.g. EWM)* 
+*图 5.4.1. 焊接结束条件设置（例如 EWM）* 
 
-
-After editing the welding end conditions, pressing the `[ESC]` key will close the dialog box without saving the changes, while pressing `[OK]` key will save the settings and close the dialog box.
-
-</br>
-
-The descriptions for each item are as follows:
+编辑焊接结束条件后，按下`[ESC]`键将关闭对话框而不保存更改，按下`[OK]`键将保存设置并关闭对话框。
 
 </br>
 
-### (1)	Condition Number: [1] (Range: changes not allowed)  
-Displays the welding start condition number. In digital arc welding, the end condition number and start condition number are managed as one. Therefore, to change the end condition number, the start condition number must also be changed.  
+每个项目的描述如下：
 
-### (2)	End Welding Current / Welding Power / Wire Feed Speed  
-Set the current value to be output during crater treatment. This is set as a percentage(%) relative to the current welding conditions (welding current, welding power, and wire feed speed). However, for EWM welders, this is set in m/min, the same as the welding conditions.
+</br>
+
+### (1)	条件编号：[1]（范围：不允许更改）  
+显示焊接起始条件编号。在数字化弧焊中，结束条件编号和开始条件编号作为一个进行管理。因此，要更改结束条件编号，必须同时更改开始条件编号。
+
+### (2)	结束焊接电流 / 焊接功率 / 送丝速度  
+设置在凹槽处理过程中输出的电流值。该值相对于当前的焊接条件（焊接电流、焊接功率和送丝速度）以百分比（%）设置。但是，对于 EWM 焊机，这一数值以 m/min 设置，与焊接条件相同。
 
 <center>
 
-| supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | End Welding Current | % |10 ~ 100 | 70 |
-| Fronius | End Welding Power | % | 10 ~ 100 | 70 |
-| EWM | End Wire Feed Speed | m/min | 0.0 ~ 25.0 | 7.0 |
+| Hyosung | 结束焊接电流 | % |10 ~ 100 | 70 |
+| Fronius | 结束焊接功率 | % | 10 ~ 100 | 70 |
+| EWM | 结束送丝速度 | m/min | 0.0 ~ 25.0 | 7.0 |
 
 </center>
 
-### (3)	End Welding voltage/ Arc length correction  
-Set the voltage value to be output during crater treatment. The voltage is specified and output according to the set value.
+### (3)	结束焊接电压 / 弧长校正  
+设置在凹槽处理过程中输出的电压值。电压根据设定值指定并输出。
 <center>
 
-| supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | End Welding voltage | % | 50.0 ~ 150.0| 100 |
-| EWM | End Welding voltage | V | -10.0 ~ 10.0 | 0 |
-| Fronius | End Arc length correction |  % | -30.0 ~ 30.0 | 0 |
+| Hyosung | 结束焊接电压 | % | 50.0 ~ 150.0| 100 |
+| EWM | 结束焊接电压 | V | -10.0 ~ 10.0 | 0 |
+| Fronius | 结束弧长校正 |  % | -30.0 ~ 30.0 | 0 |
 
 </center>
 
-### (4)	Downslope Time(Crate Time): [0] sec (Range: 0.0 ~ 10.0)  
-Sets the time for processing the current change between the main condition and the end condition as a slope.
+### (4)	下降时间（凹槽时间）：[0] 秒（范围：0.0 ~ 10.0）  
+设置主条件和结束条件之间电流变化的处理时间为斜坡。
 
 ![](../../_assets/5_4_2.png)<br>
-*Figure 5.4.2. DownSlope Time and Crate Time Chart*
+*图 5.4.2. 下降时间和凹槽时间图表*
 
-### (5)	Condition Hold time: [1] second (Range: 0.1 ~ 10.0)   
-Set the time to maintain the output value specified in the 'current ratio' item under the welding end condition.
+### (5)	条件保持时间：[1] 秒（范围：0.1 ~ 10.0）  
+设置在焊接结束条件下维持`电流比率`项目所规定的输出值的时间。
 
-### (6)	Wire Burnback: [  0] % (Range: -20 ~ 20)  
-Configures burnback processing. May vary depending on the welder.
+### (6)	送丝回烧：[0] %（范围：-20 ~ 20）  
+配置回烧处理。可能因焊机而异。
 
-### (7)	Gas Post Flow: [ 0] second (Range: 0.0 ~ 10.0)  
-Set the time to continue the shielding gas output even after the arc is turned off.
+### (7)	气体后流：[0] 秒（范围：0.0 ~ 10.0）  
+设置在电弧关闭后继续输出保护气体的时间。
 
-### (8)	Crater move time: [ 0 ] second (Range: 0.0 ~ 10.0) / Crater move distance : [0] mm (Range: 0.0 ~ 100.0)
-During crater treatment, sets the distance the robot will move backward during the DownSlope time and condition hold time. The speed is automatically determined based on the distance and time.
+### (8)	凹槽移动时间：[0] 秒（范围：0.0 ~ 10.0）/ 凹槽移动距离：[0] 毫米（范围：0.0 ~ 100.0）  
+在凹槽处理过程中，设置机器人在下降时间和条件保持时间内向后移动的距离。速度将根据距离和时间自动确定。
 
-### (9) Auto Stick Release Count : [0] times (Range: 0 to 9) / Condition : [0] (Range: 0 to 32) / Time: [0] sec (Range: 0.0 to 10.0)  
-During arc welding, the welding wire may stick to the base material at the end of welding. To prevent this, the welding power source temporarily increases the voltage at the end of welding as an anti-sticking process.
-However, sticking may still occur even after this process. Therefore, the robot controller sends a post-weld sticking detection signal to the welding power source to check whether sticking has occurred.
-The auto stick release function automaticllay performs a burnback release when sticking is detected after welding, allowing the robot to continue operation without stopping.
-This process is repeated for the configured number of times. If the sticking is not released after the specified number of attempts is exceeded, the robot will stop.
+### (9) 自动送丝释放次数：[0] 次（范围：0 到 9）/ 条件：[0]（范围：0 到 32）/ 时间：[0] 秒（范围：0.0 到 10.0）  
+在弧焊过程中，焊接电线可能在焊接结束时粘附到基材上。为防止这种情况，焊接电源会在焊接结束时暂时提高电压作为防粘处理。
+但是，即使在此过程后，粘附仍可能发生。因此，机器人控制器向焊接电源发送焊后粘附检测信号以检查是否发生了粘附。
+自动送丝释放功能在焊接后检测到粘附时自动执行回烧释放，允许机器人在不停止的情况下继续操作。
+此过程将根据配置的次数重复。如果在超过指定尝试次数后仍未释放粘附，机器人将停止。
 
-* Count : [0] times (Range: 0 to 9)
-    This parameter specifies the maximum number of burnback release attempts. If the sticking is not released within the configured number of attempts, an error will occur. 
-    Exceptionally, when set to 0, the sticking check is skipped and the system proceeds directly to the next step.
+* 次数：[0] 次（范围：0 到 9）  
+此参数指定最大回烧释放尝试次数。如果在配置的尝试次数内未释放粘附，将发生错误。  
+例外情况下，设置为 0 时，跳过粘附检查，系统直接进入下一个步骤。
 
-* Condition : [0] (Range: 0 to 32)
-    This parameter specifies the welding condition number used for the burnback release process. When set to 0, the burnback release is performed using the current welding start condition.
+* 条件：[0]（范围：0 到 32）  
+此参数指定用于回烧释放过程的焊接条件编号。设置为 0 时，使用当前焊接启动条件执行回烧释放。
 
-* Time: [0] sec (Range: 0.0 to 10.0)
-    This parameter specifies the duration for which the burnback release condition output is maintained.
+* 时间：[0] 秒（范围：0.0 到 10.0）  
+此参数指定维持回烧释放条件输出的持续时间。

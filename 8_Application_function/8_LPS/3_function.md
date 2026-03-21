@@ -1,49 +1,48 @@
-﻿# 8.8.3 Using the LPS Function  
-
+﻿# 8.8.3 使用 LPS 功能  
 
 {% hint style="warning" %}
-If tool-to-sensor calibration (ref. 8.8.2) has not been performed before using this function, invalid poses may be stored.
+如果在使用此功能之前未执行工具与传感器的校准 (参见 8.8.2)，则可能会存储无效的姿态。
 {% endhint %}
 
-### Property Window
+### 属性窗口
 
-The properties of the LPS command are as follows.  
+LPS 命令的属性如下：  
 <br/>
 
 ![](../../_assets/8_8_3_0.png)<br>
-*Figure 8.8.3.0 LPS Property*<br/>  
+*图 8.8.3.0 LPS 属性*<br/>  
 
-#### Gap Coefficient
+#### 间隙系数
 
-  This parameter is used to detect step differences in **Step mode (stepp)** and allows the user to specify the detected height difference.
-  However, this parameter is not used during the calibration process, as a separate calibration specimen is used.
+此参数用于检测 **步进模式 (stepp)** 中的阶梯差异，并允许用户指定检测到的高度差异。  
+但是，此参数在校准过程中不使用，因为使用了单独的校准样本。
 
-#### Step Sensitivity
+#### 步进灵敏度
 
-  This parameter sets the data processing sensitivity based on repeatability.
-  In most cases, users can use the default value, and no additional adjustment is required.
+此参数根据重复性设置数据处理灵敏度。  
+在大多数情况下，用户可以使用默认值，并且无需进行额外调整。
 
-#### Slope Threshold (Slope Degree)
+#### 倾斜阈值（倾斜角度）
 
-  This parameter is used to detect edges.
-  In addition to the step coefficient, it can be configured during tool-to-sensor calibration operations and step detection.
-  Since edges are not always vertical, this parameter allows the system to respond to sloped surfaces.
+此参数用于检测边缘。  
+除了步进系数外，可以在工具与传感器的校准操作和步骤检测过程中进行配置。  
+由于边缘不一定是垂直的，因此此参数允许系统响应倾斜表面。
 
-#### Pose Coordinates / Shift Coordinates
+#### 姿态坐标 / 移动坐标
 
-  This setting specifies the coordinate system in which data is stored when each mode is executed.
-  In particular, Shift Coordinates are used when Master mode is enabled.
+此设置指定在执行每种模式时存储数据的坐标系统。  
+特别是，在启用主模式时使用移动坐标。
 
 <br/>
 
-### (1) Spot Mode  
+### (1) 点模式  
 
-**Spot mode** is used to verify calibration results or to obtain the pose of the position currently indicated by the laser.  
+**点模式**用于验证校准结果或获取激光当前指示位置的姿态。  
 
 <br/>
 
 ![](../../_assets/8_8_3_1.png)<br>
-*Figure 8.8.3.1 Spot Mode*<br/>  
+*图 8.8.3.1 点模式*<br/>  
 
 ```py
   var p10=cpo()
@@ -52,22 +51,21 @@ The properties of the LPS command are as follows.
 ```
 
 {% hint style="warning" %}
-  In this case, only the position is recorded in the pose specified by the sp parameter.
-  The tool orientation (Rx, Ry, Rz) prior to sensing is not preserved.
+在这种情况下，仅记录由 sp 参数指定的姿态中的位置。  
+感应前的工具方向 (Rx, Ry, Rz) 不会保留。
 {% endhint %}
 
 <br/>
 
+### (2) 步进模式
 
-### (2) Step Mode
-
-**Step Mode** is used to detect positions where a height difference occurs on the base material.
-Depending on whether the height difference is lower or higher, the scan direction should be reserved accordingly.  
+**步进模式**用于检测基材上发生高度差异的位置。  
+根据高度差异是否更低或更高，应相应保留扫描方向。  
 
 <br/>
 
 ![](../../_assets/8_8_3_2.png)<br>
-*Figure 8.8.3.2 Step Mode*<br/>  
+*图 8.8.3.2 步进模式*<br/>  
 
 ```py
   var p10=cpo()
@@ -75,17 +73,15 @@ Depending on whether the height difference is lower or higher, the scan directio
   move L,tg=p10,spd=10%,acc=0,tool=0
 ```
 
-
-The system moves by the specified distance in the X or Y direction based on the tool while searching for a step difference.
-If no step is detected within the specified distance, a detection error occurs.  
+系统根据工具在 X 或 Y 方向按指定距离移动，同时寻找阶梯差异。  
+如果在指定距离内未检测到阶梯，则会发生检测错误。  
 
 <br/>
 
-
-### (3) Scan Mode
+### (3) 扫描模式
 
 ![](../../_assets/8_8_3_3.png)<br>
-*Figure 8.8.3.3 Scan Mode on various geometries*<br/>  
+*图 8.8.3.3 在各种几何形状上的扫描模式*<br/>  
 
 ```py
   var p10=cpo()
@@ -93,38 +89,35 @@ If no step is detected within the specified distance, a detection error occurs.
   move L,tg=p10,spd=10%,acc=0,tool=0
 ```
 
-Scan mode detects weld points while moving by the specified distance in the X or Y direction based on the tool.
-It can be executed with a single command regardless of the joint geometry, such as fillet, V-groove, or butt joints.
-Detection results can be retrieved via the REST API, or verified by registering and using the application provided by our company.  
+扫描模式在根据工具在 X 或 Y 方向按指定距离移动时检测焊接点。  
+可以通过单个命令执行，无论接头几何形状是如角焊缝、V型槽或对接焊缝。  
+检测结果可以通过 REST API 检索，或者通过注册并使用我们公司提供的应用程序进行验证。  
 
-For instructions on how to register and use the application, please refer to the following link: [Software Development Kit (SDK)](https://hrbook-hrc.web.app/#/view/doc-hi6-sdk/en/README?cont_model=${cont_model})  
-
-
+有关如何注册和使用该应用程序的说明，请参阅以下链接：[软件开发工具包 (SDK)](https://hrbook-hrc.web.app/#/view/doc-hi6-sdk/zh/README?cont_model=${cont_model})  
 {% hint style="warning" %}
-  Set the movement distance sufficiently to include the weld seam, and ensure that the tool motion is not parallel to the scanned surface.
+  设置运动距离以充分包含焊缝，并确保工具运动不与扫描表面平行。
 {% endhint %}  
 
 
-#### (3-1) Monitoring Screen  
+#### (3-1) 监控屏幕  
 
 ![](../../_assets/8_8_3_4.png)<br>
-*Figure 8.8.3.4 LPS Graph*<br/>  
+*图 8.8.3.4 LPS 图表*<br/>  
 
-After registering the application, the monitoring screen can be accessed through the following method: `[Pane layout] - select - LPS Graph` 
+注册应用程序后，可以通过以下方法访问监控屏幕：`[Pane layout] - 选择 - LPS Graph ([Pane layout] - select - LPS Graph)` 
 
 <br/>
 
 ![](../../_assets/8_8_3_5.png)<br>
-*Figure 8.8.3.5 Example screen - V-groove*<br/>  
+*图 8.8.3.5 示例屏幕 - V型槽*<br/>  
 
 ![](../../_assets/8_8_3_6.png)<br>
-*Figure 8.8.3.6 Example screen - Butt joint*<br/>  
+*图 8.8.3.6 示例屏幕 - 平头接头*<br/>  
 
 
-When the function is executed, results can be viewed as shown in the figure above.
-The currently provided screen offers the following features:  
+当功能执行时，可以如上图所示查看结果。
+当前提供的屏幕具有以下功能：  
 
-1. The screen can be refreshed by clicking the Refresh button in the upper-left corner.
-2. The numeric value displayed in the upper-right corner represents the real-time output value of the laser sensor.
-3. The calculated weld point is indicated by a red dot.
-
+1. 可以通过单击左上角的刷新按钮更新屏幕。
+2. 右上角显示的数值表示激光传感器的实时输出值。
+3. 计算的焊点用红点表示。

@@ -1,57 +1,53 @@
-﻿# 8.5.3 LVS Calibration
+﻿# 8.5.3 LVS 校准
 
+为了使用 LVS 功能，必须首先在 TCP 和传感器坐标系统之间进行校准。
 
-In order to use the LVS funtionality, calibration between the TCP and sensor coordinate system must be performed first.
+${cont_model} 控制器支持自动校准。
 
-${cont_model} controller supports automatic calibration.
+现在我们来看看如何在 TCP 和 LVS 传感器之间进行自动校准。
 
-Let's now look at how to perform automatic calibration between TCP and LVS sensor.
+### (1) 校准样本的准备
 
-### (1) Preparation of Calibration Specimen
-
-If you purchase a license through our company, an automatic calibration specimen will be provided.
-
+如果您通过我们公司购买许可证，将提供自动校准样本。
 
 {% hint style="info" %}
-If you wish to use it for testing purpose, please contact us to prepare the calibration specimen.
+如果您希望将其用于测试目的，请联系我们准备校准样本。
 {% endhint %}
 
 ---
 
-### (2) Automatic Calibration Teaching
+### (2) 自动校准教学
 
 ![](../../_assets/8_5_7_lvs_autocalib.png)<br>
-*Figure 8.5.7. LVS Auto Calibration*   
+*图 8.5.7. LVS 自动校准*   
 </br>
 
-As shown in the figure above, move the TCP to the reference point of the specimen using the jog function.
+如上图所示，使用 jog 功能将 TCP 移动到样本的参考点。
 
-The torch orientation should be perpendicular to the specimen (both Roll and Pitch direction should be vertical).
+焊枪的方向应与样本垂直（滚转和俯仰方向应保持垂直）。
 
-Position the laser line perpendicular to the edge of the specimen using jog (typically controlled by Tool Z).
+使用 jog 将激光线垂直于样本边缘定位（通常由工具 Z 控制）。
 
-In this state(where the torch is positioned perpendicular to the specimen and the laser line is perpendicular to the edge of the specimen), press **[Record]** to insert the `move` command.
+在此状态下（焊枪垂直于样本且激光线垂直于样本边缘），按 **[记录]** 插入 `move` 命令。
 
 {% hint style="warning" %}
-- Use a level to precisely align the torch's orientation perpendicular to the calibration specimen.
-- The vertical accuracy of the torch and the accuracy with which the laser line is perpendicular to the edge of the specimen will affect the calibration accuracy.
+- 使用水平仪精确对齐焊枪的方向，以保持与校准样本垂直。
+- 焊枪的垂直精度以及激光线垂直于样本边缘的准确性将影响校准精度。
 {% endhint %}
 
+插入 `delay 0.5` 后，输入 `lvs` 命令。
 
-After inserting `delay 0.5`, input the `lvs` command.
-
-The seam parameter of the `lvs` command is the number corresponding to the shape and conditions registered in the LVS controller.
+`lvs` 命令的接缝参数是与在 LVS 控制器中注册的形状和条件相对应的编号。
 
 {% hint style="info" %}
-For calibration, register the seam as a lap joint in the LVS controller's software.<br>
-Set the registered number in the seam parameter of the lvs command.
+对于校准，请将接缝注册为 LVS 控制器软件中的搭接焊接。<br>
+将注册的编号设置在 lvs 命令的接缝参数中。
 {% endhint %}
 
-
-The program written as described is shown below:
+按如下方式编写的程序如下所示：
 
 ```python
-    move L,spd=60%,accu=0,tool=0  # Calibration specimen reference point
+    move L,spd=60%,accu=0,tool=0  # 校准样本参考点
     delay 0.5
     lvs auto_calib, cnd=1, seam=1, sp=p1, opt=0
     end
@@ -59,34 +55,33 @@ The program written as described is shown below:
 
 ---
 
-### (3) Preparations
+### (3) 准备工作
 
-Automatic Calibration involves motions such as front/back, left/right, roll direction rotation, and height adjustments, so ensure safety precautions are followed.
+自动校准涉及前后、左右、滚转方向旋转和高度调整等动作，因此确保遵循安全预防措施。
 
 {% hint style="warning" %}
-* Adjust the LVS settings (exposure time, laser intensity, shape settings) so that the LVS can recognize the seam of the specimen even at higher positions.
-* When the laser is pointing to the flat surface outside the reference point of the specimen, the LVS controller should not be able to recognize the seam.
+* 调整 LVS 设置（曝光时间、激光强度、形状设置），以便 LVS 即使在更高的位置也能识别样本的接缝。
+* 当激光指向样本参考点外的平面时，LVS 控制器应无法识别接缝。
 {% endhint %}
 
+---
+
+### (4) 执行
+
+一旦校准完成，“comp！”指示器将在“LVS 跟踪”监控表的'info'部分出现。
 
 ---
 
-### (4) Execution
+### (5) 工具和 LVS 校准信息
 
-Once calibration is complete, the "comp!" indicator will appear in the 'info' section of the 'LVS tracking' monitoring table.
+每个工具编号都有其自己的 LVS 校准，这在使用工具更换时非常有用。
 
----
+如果您对工具 0 执行自动校准并想使用工具 1 或工具 2，还需要对这些工具进行自动校准。
 
-### (5) Tool and LVS Calibration Information
+如果您想使用相同的工具信息但不同的编号，可以输入以下窗口来复制和应用校准信息。
 
-Each tool number has its own LVS calibration, which is useful when using tool changing.
-
-If you perform automatic calibration for tool 0 and want to use tool 1 or tool 2, you will need to perform automatic calibration for those tools as well.
-
-If you want to use the same tool information but with different numbers, you can enter the following window to copy and apply the calibration information.
-
-- Navigate to `[F2: System] - 4: Application parameter - 5: LVS tracking - 2: LVS Calibration`.<br>
+- 导航至`[F2: 系统] - 4: 应用参数 - 5: LVS 追踪 - 2: LVS 校准 ([F2: System] - 4: Application parameter - 5: LVS tracking - 2: LVS Calibration)`。<br>
 
 ![](../../_assets/8_5_8_lvs_tool_calibmat.png)<br>
-*Figure 8.5.8. LVS Calibration Information*   
+*图 8.5.8. LVS 校准信息*   
 </br>

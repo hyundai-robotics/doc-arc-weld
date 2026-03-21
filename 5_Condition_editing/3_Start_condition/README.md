@@ -1,228 +1,221 @@
-﻿# 5.3 Welding Start condition
+﻿# 5.3 焊接起始条件
 
-
-When the arc welding settings are digital and the cursor is placed on the command line `arcon cnd=_`, pressing the [property] key will bring up the editing screen for the welding start conditions.
+当弧焊设置为数字时，光标位于命令行 `arcon cnd=_` 上，按下 [property] 键将打开焊接起始条件的编辑屏幕。
 
  
 ![](../../_assets/5_3_1.png)<br>
-*Figure 5.3.1. Hyosung welder setting*  
+*图 5.3.1. Hyosung 焊机设置*  
 
 
 ![](../../_assets/5_3_2.png)<br>
-*Figure 5.3.2. Fronius welder setting*  
+*图 5.3.2. Fronius 焊机设置*  
 
  
 ![](../../_assets/5_3_3.png)<br>
-*Figure 5.3.3. EWM welder setting*
+*图 5.3.3. EWM 焊机设置*
 
  
 
-After editing the conditions, pressing the `[ESC]` key will close the dialog box without saving the changes, while pressing `[OK]` key will save the settings and close the dialog box.
+编辑条件后，按 `[ESC]` 键将关闭对话框而不保存更改，而按 `[OK]` 键将保存设置并关闭对话框。
 
-The following items apply to all welder in common. For model-specific settings, please refer to the following chapter.
+以下条目适用于所有焊机的共同部分。有关特定型号的设置，请参见以下章节。
 
-The contents of common items may vary in name, unit, and range for each welder. Please refer to the respective table for model-specific differences.
+共同项的内容名称、单位和范围可能因焊机而异。请参阅相应的表格以了解特定型号的区别。
 
 </br>
 
 ---
 
-### (1)	Condition Number  
-Specifies the welding start condition number to be edited.(Max: 32) 
+### (1)	条件编号  
+指定要编辑的焊接起始条件编号。(最大：32) 
 
 <center>
 
-| Item | Name | Range |
+| 项目 | 名称 | 范围 |
 | :---: | :---: | :---: |
-| Common to all welders | Condition Number | 1 ~ 32 |
+| 所有焊机通用 | 条件编号 | 1 ~ 32 |
 
 </center>
 
 </br>  
 
-### (2)	Description  
-Records the description for the specified welding start condition.
+### (2)	描述  
+记录指定焊接起始条件的描述。
 
 <center>
 
-| Supported Welder | Name |
+| 支持的焊机 | 名称 |
 | :---: | :---: |
-| Common to all welders | Comment |
+| 所有焊机通用 | 注释 |
 
 </center>
 
 </br>  
     
-### (3)	Synergic Code  
-Sets the synergic code to b transmitted to the welder. The code value is configured in a separate synergic selection screen. The synergic selection screen can be accessed by pressing the `[Synergic Selection]` button on the welding start condition creen.
+### (3)	协同代码  
+设置要传输到焊机的协同代码。代码值在单独的协同选择屏幕中配置。可以通过按下焊接起始条件屏幕上的 `[Synergic Selection]` 按钮访问协同选择屏幕。
 
 <center>
 
-| Supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Synergic Code | - |- | 040 |
-| Fronius </br>(Not supported) |-|-|-|-|
-| EWM | JOB Nr.(synergic) | - |- | 185|
+| Hyosung | 协同代码 | - |- | 040 |
+| Fronius </br>(不支持) |-|-|-|-|
+| EWM | JOB Nr.(协同) | - |- | 185|
 
 </center>
     
 </br>  
 
-### (4)	Welding Current / Welding Power / Wire Feed Speed  
-Set the welding current value. This is the current used during the welding process. The current of the initial and final conditions is determined as a ratio of this value.
+### (4)	焊接电流 / 焊接功率 / 焊丝送进速率  
+设置焊接电流值。这是在焊接过程中使用的电流。初始和最终条件的电流作为该值的比率确定。
 <center>
 
-| Supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Welding Current | A |0.0 ~ 500.0 | 100 |
-| Fronius | Welding Power | % | 0.0 ~ 100.0 | 10 |
-| EWM | Wire Feed Speed |  m/min | 0.0 ~ 25.0 | 3.1 |
+| Hyosung | 焊接电流 | A |0.0 ~ 500.0 | 100 |
+| Fronius | 焊接功率 | % | 0.0 ~ 100.0 | 10 |
+| EWM | 焊丝送进速率 |  m/min | 0.0 ~ 25.0 | 3.1 |
 
 </center>
     
 </br>
 
-### (5)	Welding voltage / Arc length correction  
-In digital welding, the welding voltage is often not entered directly, but instead selected automatically based on welding current from the synergic data. If you wish to modify the welding voltage automatically selected by the synergic data, set the offset value for the voltage to be adjusted based on the selected welding voltage.
+### (5)	焊接电压 / 电弧长度修正  
+在数字焊接中，焊接电压通常不是直接输入的，而是基于协同数据自动选择的。如果您希望修改协同数据自动选择的焊接电压，请设置要根据选择的焊接电压调整的电压偏移值。
 <center>
 
-| Supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Welding voltage | % | 50.0 ~ 150.0 | 100 |
-| Fronius | arc length correction | % | -30.0 ~ 30.0 | 0 |
-| EWM | Welding voltage Correction | V | -10.0 ~ 10.0 | 0 |
+| Hyosung | 焊接电压 | % | 50.0 ~ 150.0 | 100 |
+| Fronius | 电弧长度修正 | % | -30.0 ~ 30.0 | 0 |
+| EWM | 焊接电压修正 | V | -10.0 ~ 10.0 | 0 |
 </center>
     
 </br>
 
-### (6)	Gas preflow
-Set the time to preflow shileld gas before starting the arc welding to isolate and prepare the welding area.
-
+### (6)	气体预流  
+设置在启动弧焊之前预流保护气体的时间，以隔离和准备焊接区域。
 <center>  
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Common to all welders | gas preflow | sec | 0.0 ~ 10.0 | 0.5 |  
+| Common to all welders | 气体预流 | 秒 | 0.0 ~ 10.0 | 0.5 |  
 
 </center>
 
 </br>  
 
-### (7)	WCR Wait Time  
-Indicates the time waiting for the WCR input. If the WCR signal is not received within this time, a retry will be performed. However, if the retry count is set to 0, an error will be displayed, and the robot will stop. Retry methods and retry counts can be configured in the welding auxiliary conditions. (Refer to [5.5 Welding Auxiliary condition](../5_Aux_condition/README.md))
+### (7) WCR等待时间  
+指示等待WCR输入的时间。如果在此时间内未收到WCR信号，则将执行重试。但是，如果重试计数设置为0，则将显示错误，机器人将停止。可以在焊接辅助条件中配置重试方法和重试计数。(请参阅 [5.5 焊接辅助条件](../5_Aux_condition/README.md))
 
 <center>
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Common to all welders | WCR Wait Time | sec | 0.0 ~ 10.0 | 2 |
+| Common to all welders | WCR等待时间 | 秒 | 0.0 ~ 10.0 | 2 |
 
 
 </center>
     
 </br>
 
-### (8)	Robot delay time  
-After the arc welding has started normally, sets the time the robot will wait before moving along the welding line to perform the welding. This is independent of the initial conditions, and the robot can move even while processing initial conditions.
+### (8) 机器人延迟时间  
+当电弧焊正常启动后，设置机器人在沿焊接线移动以执行焊接之前等待的时间。这与初始条件无关，机器人在处理初始条件时也可以移动。
 <center>
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Common to all welders | Robot delay time | sec | 0.0 ~ 10.0 | 0 |
+| Common to all welders | 机器人延迟时间 | 秒 | 0.0 ~ 10.0 | 0 |
 
 </center>
     
 </br>
 
-### (9) Initial condition maintain time  
-Sets the time for maintaining the initial current value at the start of arc welding.
+### (9) 初始条件保持时间  
+设置电弧焊开始时保持初始电流值的时间。
 <center>
 
 | Supported Welder | Name | Unit | Range | 
 | :---: | :---: | :---: |:---: |
-| Common to all welders | Initial condition maintain time | sec | 0.0 ~ 10.0 | 
+| Common to all welders | 初始条件保持时间 | 秒 | 0.0 ~ 10.0 | 
 
 </center>
     
 </br>
 
-### (10) Initial Welding Current / Welding Power / Wire Feed Speed  
-Sets the welding current to be output during the initial condition hold time at the start of arc welding.
-This is set as a percent(%) relative to the welding current of the main condition.
+### (10) 初始焊接电流 / 焊接功率 / 送丝速度  
+设置电弧焊开始时在初始条件保持时间内输出的焊接电流。
+此值相对于主要条件的焊接电流设置为百分比(%)。
 <center>
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Initial Welding Current | % | 20 ~ 200 | 120 |
-| Fronius | Initial Welding Power | % | 20 ~ 200 | 120 |
-| EWM | Initial Wire Feed Speed | % | 20 ~ 200 | 120 |
+| Hyosung | 初始焊接电流 | % | 20 ~ 200 | 120 |
+| Fronius | 初始焊接功率 | % | 20 ~ 200 | 120 |
+| EWM | 初始送丝速度 | % | 20 ~ 200 | 120 |
 
 </center>
     
 </br>
 
-### (11) Initial Welding voltage / Arc length correction  
-Sets the welding voltage to be output during the initial condition hold time at the start of arc welding.
-This is set as a correction value relative to the synergic voltage.  
+### (11) 初始焊接电压 / 弧长度修正  
+设置电弧焊开始时在初始条件保持时间内输出的焊接电压。
+此值相对于协同电压设置为修正值。  
 <center>
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Initial Welding voltage | % | 50.0 ~ 150.0 | 100 |
-| EWM | Initial Welding voltage | V | -10.0 ~ 10.0 | 0 |
-| Fronius | Initial Arc length correction | %| -30.0 ~ 30.0 | 0 |
+| Hyosung | 初始焊接电压 | % | 50.0 ~ 150.0 | 100 |
+| EWM | 初始焊接电压 | V | -10.0 ~ 10.0 | 0 |
+| Fronius | 初始弧长度修正 | %| -30.0 ~ 30.0 | 0 |
 
 </center>
     
 </br>
 
-### (12) Slope Time  
-Sets the time to process the current change between the initial condition and this condition as a slope.
+### (12) 斜率时间  
+设置处理初始条件和此条件之间的电流变化时间为斜率。
 <center>
 
 | Supported Welder | Name | Unit | Range | 
 | :---: | :---: | :---: |:---: |
-| Common to all welders | Slope Time | 초 | 0.0 ~ 10.0 | 
-
+| Common to all welders | 斜率时间 | 秒 | 0.0 ~ 10.0 | 
 
 </center>
     
 </br>
 
-### (13) Excess Allowed Time  
-Sets the allowable time for exceeding the welding voltage/current and feed motor current limits. If the welding voltage/current or feed motor current exceeds the limits for longer than this time, a restart will be performed. However, If the restart count is set to 0, an error will be displayed, and the robot will stop. The restart method and restart count, as well as other restart-related features, can be configured in the welding auxiliary conditions. If this time is set to 0 seconds, the arc limits monitoring function will not be used.
+### (13) 允许超时  
+设置焊接电压/电流和送丝电机电流极限的允许超时时间。如果焊接电压/电流或送丝电机电流超出限值的时间超过此值，则将执行重启。但是，如果重启计数设置为0，则将显示错误，机器人将停止。重启方法和重启计数，以及其他与重启相关的功能，可以在焊接辅助条件中配置。如果此时间设置为0秒，则不会使用弧限制监控功能。
 <center>
 
 | Supported Welder | Name | Unit | Range | Default | 
 | :---: | :---: | :---: |:---: |:---: |
-| Common to all welders | Excess Allowed Time | 초 | 0.0 ~ 10.0 | 0 | 
+| Common to all welders | 允许超时 | 秒 | 0.0 ~ 10.0 | 0 | 
+</center>
+    
+</br>
 
+### (14) 焊接电压上下限  
+设置焊接过程中电压的上下限。如果超过允许时间的限制，将会发生错误。
+<center>
+
+| 支持的焊接机 | 名称 | 单位 | 范围 | 
+| :---: | :---: | :---: |:---: |
+| 所有焊接机通用 | 焊接电压上下限 | V | 0.0 ~ 100.0 | 
 
 </center>
     
 </br>
 
-### (14) Welding Voltage upper/lower limit  
-Sets the upper and lower voltage limits during welding. If the limits are exceeded for longer than the allowed time, an error will occur.
+### (15) 焊接电流上下限  
+设置焊接过程中电流的上下限。如果超过允许时间的限制，将会发生错误。
 <center>
 
-| Supported Welder | Name | Unit | Range | 
+| 支持的焊接机 | 名称 | 单位 | 范围 | 
 | :---: | :---: | :---: |:---: |
-| Common to all welders | Welding Voltage upper/lower limit | V | 0.0 ~ 100.0 | 
-
-
-</center>
-    
-</br>
-
-### (15) Welding Current upper/lower limit  
-Sets the upper and lower current limits during welding. If the limits are exceeded for longer than the allowed time, an error will occur.
-<center>
-
-| Supported Welder | Name | Unit | Range | 
-| :---: | :---: | :---: |:---: |
-| Common to all welders | Welding Current upper/lower limit | A | 0.0 ~ 1000 | 
-
+| 所有焊接机通用 | 焊接电流上下限 | A | 0.0 ~ 1000 | 
 
 </center>
     

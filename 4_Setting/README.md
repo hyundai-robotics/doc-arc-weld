@@ -1,1 +1,1 @@
-﻿# 4. Arc Welder Settings
+﻿# 4. 弧焊机设置

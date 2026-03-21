@@ -1,24 +1,23 @@
-﻿# 2.4 weaving off
+﻿# 2.4 停止编织
 
 
-### Description
+### 描述
 
-```weaving off``` command is used to stop the weaving motion.  
+```weaving off``` 命令用于停止编织运动。  
 <br/>
 
-### Syntax
+### 语法
 
 ```python
 weaving off
 ```  
 
-### Example
+### 示例
 
 ```python
    weaving off
 ```  
 
-### Details
+### 详情
 
-  Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)
-
+参考 [[6. Weaving Function]](../6_Weaving_function/README.md)

@@ -1,1 +1,1 @@
-﻿# 8.6 STITCH Function
+﻿# 8.6 STITCH 函数

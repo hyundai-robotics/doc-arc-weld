@@ -1,12 +1,12 @@
 ﻿# 2.2 arcoff
 
-### Description
+### 描述
 
-```arcoff``` command is used to stop Arc Welding. This command can be used in 2 different forms. However, commands not supported by the configured welder cannot be used.
+```arcoff``` 命令用于停止弧焊。此命令可以以两种不同形式使用。但是，配置的焊机不支持的命令无法使用。
 
 <br/>
 
-### Syntax
+### 语法
 
 ```python
 arcoff
@@ -14,22 +14,22 @@ arcoff welder=<Condition Number>, delay=<Delay Time>
 ```  
 
 
-### Parameter
+### 参数
 
-| Item | Meaning | Remarks |
+| 项目 | 含义 | 备注 |
 | --- | --- | --- |
-| Condition Number | When using two welders, set the welder number to be turned off. (1 ~ 2) | Variable |
-| Delay Time | When using two welders, set the delay time to be turned off. (1 ~ 2) | Variable |
+| Condition Number | 使用两个焊机时，设置要关闭的焊机编号。 (1 ~ 2) | 可变 |
+| Delay Time | 使用两个焊机时，设置关闭的延迟时间。 (1 ~ 2) | 可变 |
 
 
-### Example
+### 示例
 
 ```python
-    arcoff                    # Terminate the arc welding without any special shutdown process
-    arcoff welder=2, delay=1  # Trun off the arc of the 2nd welder after a 1-second delay.
+    arcoff                    # 在没有任何特殊关机过程的情况下终止弧焊
+    arcoff welder=2, delay=1  # 在1秒延迟后关闭第2个焊机的电弧。
 ```  
 
 
-### Details 
+### 详细信息 
 
-Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md) 
+请参阅 [[5. 编辑弧焊条件]](../5_Condition_editing/README.md) 

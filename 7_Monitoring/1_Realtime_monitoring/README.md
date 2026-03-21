@@ -1,2 +1,1 @@
-﻿# 7.1 Arc Weld data Real-time Monitoring
-
+﻿# 7.1 弧焊数据实时监控

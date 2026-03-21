@@ -1,14 +1,9 @@
-﻿# 6.2 Reference Point(refp) Features
+﻿# 6.2 参考点(refp) 特性
 
+为了进行编织，需要一个编织坐标系统来确定将创建编织图案的位置，如 [[6.1 编织功能]](../1_Weaving_function/README.md) 所述。配置的编织坐标系统用于设置编织功能的详细参数。默认情况下，当编织运动开始时，机器人的坐标系统的 Z 轴设置为墙面方向。编织坐标系统（矩形坐标系统）是通过接近焊接起始点的位置和焊接过程中的火炬方向自动创建的。
 
-To perform weaving, a weaving coordinate system is required to determine the location where the weaving pattern will be created, as explained in [[6.1 Weaving Functions]](../1_Weaving_function/README.md).
-The configured weaving coordinate system is usde to set the detailed parameters for the weaving function.
-By default, when the weaving motion begins, the Z-axis of the robot's coordinate system is set to the wall direction.
-The weaving coordinate system (rectangular coordinate system) is automatically created using the position of the pose approaching the welding start point and the direction of the torch during the welding process.  
-
-However, in some cases, such as when the welding start pose, the shape of the base material, or its position prevent the creation of the weaving coordinate system, or when modifications to the default weaving coordinate system are needed (e.g., when the angle between the wall direction and the other direction is not 90 degrees), the reference point function can be used to create a desired weaving coordinate system and align the weaving pattern with the base material.
-
+然而，在某些情况下，例如当焊接起始姿势、基材的形状或其位置阻止创建编织坐标系统，或者需要对默认编织坐标系统进行修改（例如，当墙面方向和其他方向之间的角度不是 90 度时），可以使用参考点功能来创建所需的编织坐标系统，并将编织图案与基材对齐。
 
 {% hint style="info" %}
-  When the **[Wall Direction]** setting is configured as Torch Posture-Based, no other `refp` commands except `refp3` are used.
+  当 **[墙面方向]** 设置为基于火炬姿势时，除 `refp3` 外不使用其他 `refp` 命令。
 {% endhint %}

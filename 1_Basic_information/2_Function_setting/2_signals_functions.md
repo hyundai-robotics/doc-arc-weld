@@ -1,85 +1,81 @@
-﻿# 1.2.2 Arc Welding various signals and funtion settings
+# 1.2.2 弧焊的各种信号和功能设置
 
-On the manual mode screen, press `[F2: System] - 4: Application parameter - 2: Arc welding` to bring up a screen where you can set various conditions for Arc welding applications, as shown below.
-
+在手动模式屏幕上，按 `[F2: 系统] - 4: 应用参数 - 2: 弧焊 ([F2: System] - 4: Application parameter - 2: Arc welding)` 以调出可以设置弧焊应用的各种条件的屏幕，如下所示。
 
 ![](../../_assets/1_2_2.png)<br>
-*Figure 1.2.2. Arc Welding Application parameter Dialog*
- 
+*图 1.2.2. 弧焊应用参数对话框*
 
-The details for each item are as follows:
+各项的详细信息如下：
 
-#### [General]
-* Inching speed(%)
-| Item | Description |
+#### [常规]
+* 进给速度(%)
+| 项目 | 描述 |
 |------|------|
-|`(Low)`[1 ~ 50] %<br>`(High)`[10 ~ 100] %| This refers to the wire feed speed when jogging the wire forward(`[SHIFT]+[2]` (wire inching)) or backward(`[SHIFT]+[3]` (wire retreat)).<br> You can set the feed speed for both low-speed and high-speed operation (when the key is pressed for 3 seconds or more).|
+|`(低速) ((Low))`[1 ~ 50] %<br>`(高速) ((High))`[10 ~ 100] %| 这是指在前进(`[SHIFT]+[2]` (线材进给))或后退(`[SHIFT]+[3]` (线材退回))时的送丝速度。<br>您可以为低速和高速操作设置进给速度（当按键按下超过3秒）。|
 
-* `[GUN]` key status output signal
-| Item | Description |
+* `[GUN]` 键状态输出信号
+| 项目 | 描述 |
 |------|------|
-|output signal| Set the signal to output the current status of the `[GUN]` key on the TP.|
+|输出信号| 设置信号以输出 `[GUN]` 键在 TP 上的当前状态。|
 
-* `[GUN]` key control disable input
-| Item | Description |
+* `[GUN]` 键控制禁用输入
+| 项目 | 描述 |
 |------|------|
-|Input signal| Assign an input signal to externally control the `[Gun]` key's on/off status. Once this signal is assigned, you won't be able to change the arc welding on/off status by pressing the `[GUN]` key on the TP. This function helps prevent issues where welding might be skipped in a welding section due to accidential presses of the `[GUN]` key.<br> (When the assigned signal is received, the LED of the `[GUN]` key turns off, and the robot enters a `Dry Run` state where no welding is performed in the arc welding section, despite the robot running.)|
+|输入信号| 指派一个输入信号以外部控制 `[Gun]` 键的开/关状态。一旦分配了此信号，您将无法通过按下 TP 上的 `[GUN]` 键更改弧焊的开/关状态。此功能有助于防止由于意外按下 `[GUN]` 键而导致焊接段被跳过的问题。<br>（当接收到分配的信号时，`[GUN]` 键的 LED 会关闭，机器人进入 `干运行` 状态，在此状态下，尽管机器人运行，但不会在弧焊段执行焊接。）|
 
-* Coolant Error Input Signal
-| Item | Description |
+* 冷却液错误输入信号
+| 项目 | 描述 |
 |------|------|
-|Input Signal| For water-cooled Arc welding torches, a signal is configured to detect issues with coolant circulation. When this signal is received during welding, it is considered an error, which triggers the robot's operation and welding process to stop.|
+|输入信号| 对于水冷弧焊枪，配置一个信号以检测冷却液循环问题。当在焊接过程中接收到该信号时，将视为错误，触发机器人的操作和焊接过程停止。|
 
-
-* Welder Error treat
-| Item | Description |
+* 焊机错误处理
+| 项目 | 描述 |
 |------|------|
-|[`Disable`, `Error`, `Error`]| Set how to handle welder errors.|
+|[`禁用 (Disable)`, `错误 (Error)`, `错误 (Error)`]| 设置如何处理焊机错误。|
 
-* Wire Empty error treat
-| Item | Description |
+* 线材缺少错误处理
+| 项目 | 描述 |
 |------|------|
-|[`Disable`, `Error`, `Error`]| Set the error handling method when no welding wire is present.|
+|[`禁用 (Disable)`, `错误 (Error)`, `错误 (Error)`]| 设置在没有焊接线材时的错误处理方法。|
 
-* Gas Pressure Error treat
-| Item | Description |
+* 气体压力错误处理
+| 项目 | 描述 |
 |------|------|
-|[`Disable`,`Error`, `Error`]| Set the error handling method in case of gas pressure abnormalities.|
+|[`禁用 (Disable)`,`错误 (Error)`, `错误 (Error)`]| 设置在气体压力异常情况下的错误处理方法。|
 
-* Arc Welding I/V change auto saving
-| Item | Description |
+* 弧焊 I/V 变化自动保存
+| 项目 | 描述 |
 |------|------|
-|[`Disable`, `Enable`]| This setting determines whether to automatically save changes to current and voltage values when they are changed within the `arc change IV(Arc Welding Current/Voltage Adjustment dialog box)`. For more details, please refer to [[1.3.3 Change the Current/Voltage during Welding]](../3_Convenient_functions/3_change_current_voltage/README.md).|
+|[`禁用 (Disable)`, `启用 (Enable)`]| 此设置决定在 `弧变化 IV（弧焊电流/电压调整对话框）` 中更改当前和电压值时是否自动保存更改。有关更多详细信息，请参阅 [[1.3.3 焊接期间更改电流/电压]](../3_Convenient_functions/3_change_current_voltage/README.md)。|
 
-* Vibration reduction for heavy torch
-| Item | Description |
+* 重型焊枪的振动减少
+| 项目 | 描述 |
 |------|------|
-|[`Disable`, `Welding point`, `All range`]| This setting is designed to reduce vibrations when using heavy torches. It helps to minimize vibrations that may occur when using heavy torches such as water-cooled or push-pull torches.<br> When set to `Welding Points`, a significant reduction in vibrations can be achieved in the welding point entry section without substantial changes in the robot's operating speed.<br> When set to `All range`, a filter specifically designed for heavy Arc torches is applied, virtually eliminating vibrations throughout the entire preocess. However, this may result in a decrease in the robot's operating speed.|
+|[`禁用 (Disable)`, `焊接点 (Welding point)`, `所有范围 (All range)`]| 此设置旨在减少使用重型焊枪时的振动。它有助于最小化在使用水冷或推拉焊枪时可能发生的振动。<br> 当设置为 `焊接点` 时，可以在焊接点入口部分显著减少振动，而无需显著更改机器人的操作速度。<br> 当设置为 `所有范围 (All range)` 时，将应用专为重型弧焊枪设计的过滤器，几乎消除整个过程中的振动。然而，这可能导致机器人的操作速度下降。|
 
-* Arc welding enable during manual mode
-| Item | Description |
+* 手动模式下的弧焊启用
+| 项目 | 描述 |
 |------|------|
-|[`Disable`, `Enable`]| This setting determines whether welding can be performed through ste-forward in manual mode.<br> When set to `Enable`, welding can be performed by stepping forward to the Arc welding section, with the execution unit set to `End`. For more details, please refer to [[1.3.4 Manual mode Arc Welding]](../3_Convenient_functions/4_manual_mode.md).|
+|[`禁用 (Disable)`, `启用 (Enable)`]| 此设置决定在手动模式中是否可以通过前进步骤进行焊接。<br> 当设置为 `启用 (Enable)` 时，可以通过前进到弧焊部分进行焊接，执行单元设置为 `结束 (End)`。有关更多详细信息，请参阅 [[1.3.4 手动模式弧焊]](../3_Convenient_functions/4_manual_mode.md)。|
 
-* Stick check at cycle start
-| Item | Description |
+* 周期开始时的线材检查
+| 项目 | 描述 |
 |------|------|
-|[`Check`, `Ignore`]| This setting determines whether a wire stick check will be performed when the robot starts its first cycle.<br> When `"check"` is enabled, the robot will perform a check for approximately 0.2 seconds at the beginning before proceeding with movement.|
+|[`检查 (Check)`, `忽略 (Ignore)`]| 此设置决定在机器人开始第一周期时是否进行线材检查。<br> 当“检查”启用时，机器人将在移动之前的大约 0.2 秒内执行检查。|
 
-* TCP speed ratio monitoring
-| Item | Description |
+* TCP 速度比监测
+| 项目 | 描述 |
 |------|------|
-|[`Disable`, `Enable`]| This setting determines whether to monitor the rate of change in the TCP speed.|
+|[`禁用 (Disable)`, `启用 (Enable)`]| 此设置决定是否监测 TCP 速度的变化率。|
 
-#### [Touch Sensing]
-* Touch Sensing Stop Setting
-| Item | Description |
+#### [触摸传感]
+* 触摸传感停止设置
+| 项目 | 描述 |
 |------|------|
-|[`Immediately`, `Normal`]|Set whether to `immediately stop` or `normal stop` when Touch Sensing detects a work piece.<br>If wire bending increases during a normal stop, set it to `immediately stop`|
+|[`立即 (Immediately)`, `正常 (Normal)`]| 设置触摸传感检测到工件时是否 `立即停止` 或 `正常停止`。<br> 如果在正常停止期间线材弯曲增加，则将其设置为 `立即停止`。|
 
-#### [Arc trajectory Monitoring]
-* Activation
-| Item | Description |
+#### [弧轨迹监测]
+* 激活
+| 项目 | 描述 |
 |------|------|
-|[`Disable`, `Enable`]|Sets whether to monitor the Arc trajectory.|
-
+|[`禁用 (Disable)`, `启用 (Enable)`]| 设置是否监测弧轨迹。|

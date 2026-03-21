@@ -2,19 +2,19 @@
 
 ### Description 
 
-```lps``` command is used to perform functions such as obtaining the pose of the laser position using a laser distance sensor (Spot Mode), detecting step differences (Step mode), and searching for a weld seam (Scan mode).
+```lps``` 命令用于执行一些功能，例如使用激光距离传感器获取激光位置的姿态（点模式）、检测高度差（步进模式）以及搜索焊缝（扫描模式）。
 
 <br/>
 
 ### Syntax
 
 ```python
-    lps auto_calib, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>
-    lps spot, cnd=<Condition Number>, sp=<Stored Pose>
-    lps stepp, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>, spd=<Robot Speed>, sp=<Stored Pose>
-    lps scan, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>, spd=<Robot Speed>, sp=<Stored Pose>
-    # When Using Master / Production Mode
-    lps scan, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>, spd=<Robot Speed>, sp=<Stored Pose>, mp=<Pose to save in Master Mode>, ms=<Shift Variable Calculated in Production Mode>
+    lps auto_calib, cnd=<条件编号>, Tx=<基于工具的X方向移动距离>, Ty=<基于工具的Y方向移动距离>
+    lps spot, cnd=<条件编号>, sp=<存储姿态>
+    lps stepp, cnd=<条件编号>, Tx=<基于工具的X方向移动距离>, Ty=<基于工具的Y方向移动距离>, spd=<机器人速度>, sp=<存储姿态>
+    lps scan, cnd=<条件编号>, Tx=<基于工具的X方向移动距离>, Ty=<基于工具的Y方向移动距离>, spd=<机器人速度>, sp=<存储姿态>
+    # 使用主控/生产模式时
+    lps scan, cnd=<条件编号>, Tx=<基于工具的X方向移动距离>, Ty=<基于工具的Y方向移动距离>, spd=<机器人速度>, sp=<存储姿态>, mp=<在主控模式下保存的姿态>, ms=<在生产模式下计算的移位变量>
 ```  
 
 ### Parameter
@@ -22,10 +22,10 @@
 <table>
   <thead>
     <tr>
-      <th>Major Category</th>
-      <th>Sub Category</th>
-      <th>Meaning</th>
-      <th>Remarks</th>
+      <th>主要类别</th>
+      <th>子类别</th>
+      <th>含义</th>
+      <th>备注</th>
     </tr>
   </thead>
   <tbody>
@@ -34,96 +34,94 @@
       <tr>
       <td>`auto_calib`</td>
       <td>
-        Performs automatic calibration between the tool and the sensor.
+        执行工具和传感器之间的自动校准。
       </td>
       </tr>
       <tr>
       <td>`spot`</td>
       <td>
-        In Spot mode, the pose of the position currently indicated by the laser is obtained.
+        在点模式下，获取激光当前指示的位置的姿态。
       </td>
       </tr>
       <tr>
       <td>`stepp`</td>
       <td>
-        In Step mode, the pose of the position where the output value changes abruptly while the laser is moving is obtained.
+        在步进模式下，获取激光移动时输出值骤然变化的位置的姿态。
       </td>
       </tr>
       <tr>
       <td>`scan`</td>
       <td>
-        In Scan mode, the pose of the position estimated to be a weld point along the laser movement path is obtained.
+        在扫描模式下，获取估计为激光移动路径上的焊接点的位置的姿态。
       </td>
       </tr>
     </tr>
     <tr>
       <td colspan="2">cnd</td>
       <td>
-        Condition numbers (1 to 8) used when executing the LPS function.
-        The information displayed in the command property window varies depending on the condition number.
-        This information is used for sensitivity settings in Automatic Calibration and Step mode, and coordinate system configuration when storing poses.
-      <td>Variable</td>
+        执行 LPS 功能时使用的条件编号（1 到 8）。
+        命令属性窗口中显示的信息根据条件编号而异。
+        此信息用于自动校准和步进模式中的灵敏度设置，以及存储姿态时的坐标系配置。
+      <td>变量</td>
     </tr>
     <tr>
       <td colspan="2">`Tx / Ty`</td>
       <td>
-        Sets the movement distance in the X or Y direction based on the tool.
-        Except for auto_calib, only one of the two values must be entered.
-      <td>Variable</td>
+        设置基于工具的X或Y方向的移动距离。
+        除了auto_calib，两个值中只能输入一个。
+      <td>变量</td>
     </tr>
     <tr>
       <td colspan="2">`spd`</td>
       <td>
-        Specifies the speed at which the robot moves while executing the operation.
-      <td>Variable</td>
+        指定机器人在执行操作时的移动速度。
+      <td>变量</td>
     </tr>
     <tr>
       <td colspan="2">`sp`</td>
       <td>
-        Specifies the pose variable in which the current pose found by each command is stored.
-      <td>Pose Variable</td>
+        指定用于存储每个命令找到的当前姿态的姿态变量。
+      <td>姿态变量</td>
     </tr>
     <tr>
       <td colspan="2">`mp`</td>
       <td>
-        In Master mode, the sensing result is stored in mp (master pose).
-        In Production mode, it is used to calculate ms (master shift).
-      <td>Pose Variable</td>
+        在主控模式下，感应结果存储在mp（主姿态）中。
+        在生产模式下，用于计算ms（主移位）。
+      <td>姿态变量</td>
     </tr>
     <tr>
-      <td colspan="2">`ms`</td>
+      <td colspan="2">` (ms)`</td>
       <td>
-        A shift variable used in Production mode.
-        The difference between the master pose (mp parameter) and the currently sensed pose (sp parameter) is calculated and stored.
-      <td>Shift Variable</td>
+        在生产模式下使用的移位变量。
+        计算并存储主姿态（mp参数）与当前感应姿态（sp参数）之间的差异。
+      <td>移位变量</td>
     </tr>
   </tbody>
 </table>  
-
-
-### Example
+### 示例
 
 ```python
     lps auto_calib, cnd=1, Tx=50, Ty=-100
-    # Performs Automatic Calibration within the specified distance range of +50 in the X direction and -100 in the Y direction, based on the tool, using condition number 1
+    # 在指定的距离范围内执行自动校准，X方向为+50，Y方向为-100，基于工具，使用条件编号1
     lps spot, cnd=1, sp=p10
-    # Using condition number 1, stores the pose of the current laser position in p10, based on the coordinate system defined in the condition settings.
+    # 使用条件编号1，将当前激光位置的姿态存储在p10中，基于条件设置中定义的坐标系。
     lps stepp, cnd=1, Tx=50, sp=p10
-    # Using condition number 1, moves 50[mm] in the X direction based on the tool, stops immediately when a step difference is detected, and stores the pose in p10.
+    # 使用条件编号1，基于工具在X方向上移动50[mm]，在检测到步进差异时立即停止，并将姿态存储在p10中。
     lps scan, cnd=1, Tx=50, spd=10, sp=p10
-    # Using condition number 1, moves 50[mm] in the X direction based on the tool at a speed of 10, detects the weld point upon completion of the movement, and stores it in p10.
-    # 조건 번호 1번, 툴 기준 X 방향으로 50만큼 설정된 거리만큼 이동이 완료되면 용접점을 검출하여 p10에 저장
+    # 使用条件编号1，基于工具以10的速度在X方向上移动50[mm]，在移动完成后检测焊接点，并将其存储在p10中。
+    # 条件编号1，工具基准X方向移动50时，完成后检测焊接点并存储于p10
     
     lps scan, cnd=1, Tx=50, spd=10, sp=p10, mp=mp10, ms=ms10
-    # When using Master mode: Using condition number 1, moves 50[mm] in the X direction based on the tool at a speed of 10, detects the weld point upon completion of the movement, stores it in p10, compares it with mp10, and saves the calculated shift value in ms10.
+    # 当使用主模式时：使用条件编号1，基于工具以10的速度在X方向上移动50[mm]，在移动完成后检测焊接点，存储在p10中，与mp10进行比较，并将计算的位移值保存到ms10中。
 ```  
 
 
 {% hint style="info" %}
-To use this function as an optional feature, please contact our company.
+要将此功能用作可选功能，请联系我公司。
 {% endhint %}
 
 
-### Details
+### 细节
 
-  Refer to [8.8 LPS(Laser Point Sensing)](../8_Application_function/8_LPS/README.md)
+  参见 [8.8 LPS(激光点传感)](../8_Application_function/8_LPS/README.md)

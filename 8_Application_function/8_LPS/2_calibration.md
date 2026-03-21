@@ -1,72 +1,59 @@
-﻿# 8.8.2 TCP-Sensor Calibration  
+# 8.8.2 TCP-传感器校准  
 
-
-Before using the LPS function, calibration between the TCP and the sensor must be performed.
-The following section describes how to perform TCP-to-sensor calibration.
+在使用LPS功能之前，必须进行TCP与传感器之间的校准。以下部分描述了如何进行TCP到传感器的校准。
 
 <br/>
 
-### (1) Preparation of the Calibration Specimen
+### (1) 校准样本的准备
 
-When a license is purchased through our company, a calibration specimen for automatic calibration is provided.
+通过我们公司购买许可证时，会提供用于自动校准的校准样本。
 
 <br/>
 
+### (2) 准备  
 
-### (2) Preparation  
+在进行校准之前，工具必须与校准平面完美对齐。根据工具坐标系手动在X和Y方向上教授工具，并检查激光输出是否保持恒定（误差保持在0.5或更小）。如有必要，调整RX和RY值。  
 
-Before performing calibration, the tool must be perfectly aligned with the calibration plane.
-Teach the tool manually in the X and Y directions based on the tool coordinate system, and check that the laser output remains constant (with the error kept within 0.5 or less). Adjust the RX and RY values as necessary.  
-
-Once the tool is aligned, position the wire tip at the edge of the calibration plane.
-When teaching in the tool-based X-Y directions, adjust the RZ value so that the laser point moves along the edge corner.  
+一旦工具对齐，将线尖定位在校准平面的边缘。当在基于工具的X-Y方向上进行教学时，调整RZ值，使激光点沿边缘角移动。  
 
 <br/>
 
 ![](../../_assets/8_8_2_1.png)<br>
-*Figure 8.8.2.1 Preparation before calibration*<br/>  
+*图8.8.2.1 校准前的准备*<br/>  
 
-After completing the above steps, all preparations required for performing calibration are complete.
+完成以上步骤后，进行校准所需的所有准备工作已完成。
 
+### (3) 执行自动校准
 
-### (3) Performing Automatic Calibration
-
-Position the wire tip at one vertex of the calibration plane.
-In addition, ensure that the laser point is located inside the calibration plane.  
+将线尖定位在校准平面的一个顶点。此外，确保激光点位于校准平面内部。  
 
 <br/>
 
 ![](../../_assets/8_8_2_2.png)<br>
-*Figure 8.8.2.2 Start of calibration*<br/>  
+*图8.8.2.2 校准开始*<br/>  
 
-From the lower panel, select `[F6: cmd. input] - arcweld - lps` and insert the following command.
+从下方面板中选择`[F6: cmd. input] - arcweld - lps`并插入以下命令。
 
 ```py
-  lps auto_calib, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool
+  lps auto_calib, cnd=<条件编号>, Tx=<基于工具的X方向移动距离>, Ty=<基于工具的Y方向移动距离>
 ```
 
-At this time, the movement distance must be set greater than the distance the laser is required to travel.
-If detection fails within the specified parameters, a calibration error will occur.  
+此时，移动距离必须设置为大于激光需要移动的距离。如果在指定参数范围内检测失败，将发生校准错误。  
 
-When executed in automatic method, calibration is performed through the following sequence of operations:  
+在自动方法执行时，通过以下操作顺序进行校准：  
 
-1. The laser point moves in the Tx and Ty directions, initially moving toward the tool tip direction.
-2. The robot is lifted in the +Z direction based on the robot coordinate system, and the same process as in Step 1 is performed.
-3. The robot moves downward in the -Z direction based on the robot coordinate system, while interpolation is performed toward the transmitter/receiver direction of the sensor (current bracket specification Tx).  
+1. 激光点在Tx和Ty方向上移动，初始朝向工具尖端方向移动。
+2. 基于机器人坐标系，机器人在+Z方向上抬起，并执行与步骤1相同的过程。
+3. 基于机器人坐标系，机器人在-Z方向上移动，同时朝向传输/接收器方向进行插值（当前支架规格Tx）。  
 
-Once calibration is fully completed, an execution mark appears on the left side of the step, and all motion stops.  
+一旦校准完全完成，执行标记将出现在步骤的左侧，所有运动停止。  
 
+### (4) 校准信息
 
-### (4) Calbration Information
-
-Navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 2: Calibration` to check the calibration results.
-When the value in the **Calibration done** field changes to "2", it indicates that all calibration processes, including interpolation, have been completed.  
-Calibration information is stored per tool number, which is useful when using tool change functions.
-If the tool information is the same but a different tool number is to be used, the calibration data can be copied and reused.
+导航至`[F2: 系统] - 4: 应用参数 - 6: 激光点传感 - 2: 校准 ([F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 2: Calibration)`以检查校准结果。当**校准完成**字段中的值变化为“2”时，表示包括插值在内的所有校准过程已完成。  
+校准信息按工具编号存储，这在使用工具更换功能时很有用。如果工具信息相同但要使用不同的工具编号，则可以复制和重用校准数据。
 
 <br/>
 
 ![](../../_assets/8_8_2_3.png)<br>
-*Figure 8.8.2.3 Calibration Result*<br/>  
-
-
+*图8.8.2.3 校准结果*<br/>  

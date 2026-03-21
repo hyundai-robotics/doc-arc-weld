@@ -1,47 +1,47 @@
-﻿# 8.5.4 LVS Seam Finding Func.
+﻿# 8.5.4 LVS 接缝查找功能
 
-### (1) Seam Finding Overview
+### (1) 接缝查找概述
 
-This function stores the position sensed by the LVS as a pose, and can be used as a substitute for touch sensing.
+此功能将 LVS 传感器感知的位置存储为姿势，可以用作触觉感应的替代。
 
 {% hint style="warning" %}
-  If the TCP-LVS sensor calibration has not been performed before using this function, an abnormal pose will be saved.
+如果在使用此功能之前未进行 TCP-LVS 传感器校准，将会保存异常姿势。
 {% endhint %}
 
-The command format is as follows:  
-After executing this, as shown below, the position sensed by the LVS will be stored in the po_100 variable.
+命令格式如下：  
+执行后，如下所示，LVS 传感器感知的位置将存储在 po_100 变量中。
 
 ```python
-  var po_100=cpo()  # The current pose is stored in the variable po_100
-  lvs seam_find, cnd=1, seam=1, sp=po_100 # If there is no variable with the name entered in the sp parameter, it will be automatically declared as a local pose variable.
+  var po_100=cpo()  # 当前姿势存储在变量 po_100 中
+  lvs seam_find, cnd=1, seam=1, sp=po_100 # 如果在 sp 参数中输入的名称没有变量，将自动声明为局部姿势变量。
 ```
 
 {% hint style="warning" %}
-  If the **sp** parameter is not declared, it will be declared as a local pose. <br>
-  If the **mp** parameter is not declared, it will be declared as a global pose. <br>
-  If the **ms** parameter is not declared, it will be declared as a global shift.
+如果 **sp** 参数未声明，将声明为局部姿势。 <br>
+如果 **mp** 参数未声明，将声明为全局姿势。 <br>
+如果 **ms** 参数未声明，将声明为全局偏移。
 {% endhint %}
 
 
 ![](../../_assets/8_5_9_lvs_seamfind_ex.png)<br>
-*Figure 8.5.9. Pose in the LVS sensing position*   
+*图 8.5.9. 在 LVS 感应位置中的姿势*   
 </br>
 
 {% hint style="info" %}
-  - The orientation of the pose stored in the sp parameter with the **seam_find** command will maintain the tool's orientation (Rx, Ry, Rz) before sensing.
-  - On the other hand, with the **seam_find_p** command, only the position is recorded in the pose stored in the sp parameter.
+- 使用 **seam_find** 命令时，存储在 sp 参数中的姿势的方向将保持在感应前工具的方向 (Rx, Ry, Rz)。
+- 另一方面，使用 **seam_find_p** 命令，仅记录位置在存储在 sp 参数中的姿势中。
 {% endhint %}
 
-* If you want to store only the position in the pose regardless of the pre-sensing orientation, use the following command format.<br>
-This function is useful when you want to record the welding posture in the pose and then make the position (X, Y, Z) correspond to the point sensed by the LVS.
+* 如果你想无视预感应方向，仅在姿势中存储位置，请使用以下命令格式。<br>
+当你想记录焊接姿势并使位置 (X, Y, Z) 对应于 LVS 感知的点时，此功能非常有用。
 
 ```python
 var po_100=cpo()
 lvs seam_find_p, cnd=1, seam=1, sp=po_100
 ```
 
-* The pose shifted in the direction of Tool Y and Tool Z from the sensed position can be calculated as follows. <br>
-This command calculates a pose that has shifted by 10mm in the Tool Y direction and 10mm in the Tool Z direction, based on the tool orientation during sensing.
+* 从感知位置向 Tool Y 和 Tool Z 方向偏移的姿势可以根据如下方式计算。 <br>
+此命令计算在感应时工具方向上偏移 10mm 的 Tool Y 和 10mm 的 Tool Z 的姿势。
 
 ```python
 var po_100=cpo()
@@ -50,81 +50,79 @@ lvs seam_find, cnd=1, seam=1, side=10, height=10, sp=po_100
 
 ---
 
-### (2) LVS Seam Finding Retry
+### (2) LVS 接缝查找重试
 
-If the seam cannot be recognized during seam finding, a retry will be performed. 
+如果在接缝查找过程中无法识别接缝，将进行重试。
 
-The number of retries is specified in the **"no of retry"** under the Seam finding option in the LVS command's properties window.
+重试次数在 LVS 命令属性窗口的接缝查找选项中的 **"重试次数"** 指定。
 
-If sensing is still impossible after the specified number of retries, an error will occur.
+如果在指定的重试次数后仍然无法感应，将会出现错误。
 
-The retry process is performed in the following sequence:
+重试过程以以下顺序进行：
 
 ![](../../_assets/8_5_10_lvs_seamfind_retry.png)<br>
-*Figure 8.5.10. LVS Seam Finding Retry*   
+*图 8.5.10. LVS 接缝查找重试*   
 </br>
 
 {% hint style="warning" %}
-* When using the master-shift function, be aware that retries will cause the position to shift forward and backward(by +ToolX, -ToolX).
+* 使用主偏移功能时，请注意重试会导致位置前后移动（由 +ToolX, -ToolX）。
 {% endhint %}
 
 ---
 
-### (3) LVS Seam Finding Monitoring
+### (3) LVS 接缝查找监控
 
-To view the LVS seam finding monitoring screen, click `[pane layout] - select - LVS seamfind` in the TP  
+要查看 LVS 接缝查找监控屏幕，请在 TP 中点击 `[pane layout] - 选择 - LVS 焊缝寻址 ([pane layout] - select - LVS seamfind)`  
 
 
 ![](../../_assets/8_5_11_seamfind monitoring.png)<br>
-*Figure 8.5.11. LVS Seam Finding Monitoring*   
+*图 8.5.11. LVS 接缝查找监控*   
 </br>
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Item</th>
-      <th style="text-align:left">Description</th>
+      <th style="text-align:left">项目</th>
+      <th style="text-align:left">描述</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">Position (X, Y, Z)</td>
+      <td style="text-align:left">位置 (X, Y, Z)</td>
       <td style="text-align:left">
-        Displays the current sensed position (in base coordinates)<br>
-        Spec : The position of the master pose. If not registered, it will display as (-1, -1, -1)<br>
-        Sensing : Current sensed position 
+        显示当前感知的位置（以基坐标表示）<br>
+        规格：主姿势的位置。如果未注册，将显示为 (-1, -1, -1)<br>
+        感应：当前感知到的位置 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Gap</td>
+      <td style="text-align:left">间隙</td>
       <td style="text-align:left">
-        Spec : Master gap [mm]<br>
-        Sensing : Current sensed gap [mm]
+        规格：主间隙 [mm]<br>
+        感应：当前感知到的间隙 [mm]
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Area</td>
+      <td style="text-align:left">面积</td>
       <td style="text-align:left">
-        Internal area width of groove or butt shape [mm^2]<br>
-        Spec : Master area [mm]<br>
-        Sensing : Current sensed area [mm]
+        槽或对接形状的内部面积宽度 [mm^2]<br>
+        规格：主面积 [mm]<br>
+        感应：当前感知到的面积 [mm]
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Mismatch</td>
+      <td style="text-align:left">不匹配</td>
       <td style="text-align:left">
-        Mismatch value typically refers to the height difference of the left-right shape.
+        不匹配值通常指的是左右形状的高度差。
       </td>
     </tr>
   </tbody>
 </table>
-
 {% hint style="info" %}
-  Gap, area, mismatch, and similar values are displayed only for seams supported by the manufacturer's LVS controller.
+  仅在制造商的LVS控制器支持的接缝处显示间隙、区域、不匹配和类似值。
 {% endhint %}
 
-If the master pose is registered, you can check the sensing history for the current job by pressing prev or next button.
+如果主姿态已注册，您可以通过按上一页或下一页按钮查看当前工作的传感历史记录。
 
 {% hint style="info" %}
-  For more details on the master mode, please refer to [8.5.5 LVS Master mode func.](./5_lvs_master_mode.md).
+  有关主模式的更多详细信息，请参阅 [8.5.5 LVS主模式功能](./5_lvs_master_mode.md)。
 {% endhint %}
-

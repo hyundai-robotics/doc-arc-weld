@@ -1,10 +1,9 @@
-﻿# 6.1.3 Frequency
+﻿# 6.1.3 频率
 
 
-"**Frequency**" refers to the repetition cycle of the weaving. When the "Frequency" is set to '0', the repetition cycle is defined by the move time method instead of the frequency method.
-To specify the repetition cycle using the frequency method, a value other than '0' must be set.  
+“**频率**”是指编织的重复周期。当“频率”设置为'0'时，重复周期是通过移动时间方法而不是频率方法定义的。  
+要使用频率方法指定重复周期，必须设置一个非'0'的值。
 
-The frequency is releated to both the leteral and longitudinal distances.
-As the frequency increases, the available lateral and longitudinal distances decrease, resulting in a smaller amplitude. Conversely, as the frequency decreases, the amplitude can be increased.
-In the case of a triangular weaving pattern, the sum of the lateral and longitudinal move times equals the diagonal move time. 
- 
+频率与横向和纵向距离都有关。  
+随着频率的增加，可用的横向和纵向距离减少，从而导致振幅变小。相反，随着频率的降低，振幅可以增加。  
+在三角形编织模式的情况下，横向和纵向移动时间的总和等于对角线移动时间。

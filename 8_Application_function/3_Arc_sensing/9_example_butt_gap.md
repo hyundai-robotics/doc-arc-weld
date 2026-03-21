@@ -1,97 +1,95 @@
-﻿# 8.3.9 Arc Sensing Example : Automatic Weaving Width Setting Using Touch Sensing
+﻿# 8.3.9 弧感应示例：使用触摸感应自动设定编织宽度
 
-
-Create a single job program that can be applied to both workpieces shown below.
+创建一个可以应用于以下两个工件的单一作业程序。
 
 ![](../../_assets/8_3_14.png)<br>
-*Figure 8.3.14 Butt Joint Workpieces for Touch Sensing and Arc Sensing*
+*图 8.3.14 用于触摸感应和弧感应的对接接头工件*
 
-Assumed Operating Conditions  
+假设操作条件  
 
-- A process that welds the joint between two workpieces, 180° planar weaving, 
-- Welding travel direction: X+. Touch sensing is performed left and right along the Y direction.
-- Arc Sensing parameter settings are assumed to have been completed in advance.
-- When the gap is 4.0 mm, the welding speed is 7.0mm/sec
-- When the gap is 8.0 mm, the welding speed is 3.5mm/sec
+- 连接两个工件的焊接过程，180° 平面编织， 
+- 焊接行进方向：X+。触摸感应在 Y 方向上左右进行。
+- 弧感应参数设置假设已提前完成。
+- 当间隙为 4.0 mm 时，焊接速度为 7.0 mm/sec
+- 当间隙为 8.0 mm 时，焊接速度为 3.5 mm/sec
 
-The work sequence is as follows:
+工作顺序如下：
 
-1) Using the touch sensing command, measure the weld center position and the gap distance at **the end point** of the butt joint.
-2) Using the touch sensing command, measure the weld center position and the gap distance at **the start point** of the butt joint.
-3) Check whether the gap_var value is within the allowable range. Stop the robot if the gap is outside 2.0 mm to 10.0 mm.
-4) Set half of the measured gap distance as the weaving offset for each side: left (wall side) and right (opposite side).
-5) Calculate the welding speed by interpolation using the speeds at 4.0 mm and 8.0 mm gap. If the gap is less than 4.0 mm, apply a fixed speed of 7.0 mm/s. If the gap exceeds 8.0 mm, apply a fixed speed of 4.0 mm/s.
-6) Automatically apply the calculated weaving width and welding travel speed, and then perform the welding operation.
-7) After completing the operation, return to the original start position.
-
+1) 使用触摸感应命令，测量对接接头 **终点** 的焊缝中心位置和间隙距离。
+2) 使用触摸感应命令，测量对接接头 **起点** 的焊缝中心位置和间隙距离。
+3) 检查 gap_var 值是否在允许范围内。如果间隙在 2.0 mm 到 10.0 mm 之外，停止机器人。
+4) 将测量的间隙距离的一半设定为每侧的编织偏移量：左侧（墙侧）和右侧（对侧）。
+5) 使用 4.0 mm 和 8.0 mm 间隙的速度通过插值计算焊接速度。如果间隙小于 4.0 mm，则施加固定速度 7.0 mm/s。如果间隙超过 8.0 mm，则施加固定速度 4.0 mm/s。
+6) 自动应用计算出的编织宽度和焊接行进速度，然后执行焊接操作。
+7) 操作完成后，返回原始起始位置。
 
 ![](../../_assets/8_3_15.png)<br>
-*Figure 8.3.15 Butt Joint Touch Sensing and Arc Sensing*
+*图 8.3.15 对接接头触摸感应和弧感应*
 
-The example program is shown below.
+示例程序如下。
 
-~~~~~~~Arc sensing program: 0002.JOB~~~~~~~~~~~~~~~ 
-     ' Butt joint arc sensing program 
-     ' Condition No. 1: start condition, Condition No. 10: end condition
-S1   move P,spd=60%,accu=3,tool=1              ' 1: Motion start point  
-S2   move L,spd=30%,accu=3,tool=1              ' 2: Touch sensing position for welding end point  
+~~~~~~~弧感应程序: 0002.JOB~~~~~~~~~~~~~~~ 
+     ' 对接接头弧感应程序 
+     ' 条件编号 1：起始条件，条件编号 10：结束条件
+S1   move P,spd=60%,accu=3,tool=1              ' 1: 运动起始点  
+S2   move L,spd=30%,accu=3,tool=1              ' 2: 焊接终点的触摸感应位置  
      var p10=cpo()  
      var p1=cpo()  
      var gap_var1=0  
      var gap_var11=0  
      touchsen cnd=2,crd="tool",dir="+ty",lift_up=5,pose=p10,gap=gap_var11  
-                                                ' 3: Touch sensing for welding end point. Position stored in P10  
-S3   move L,spd=30%,accu=3,tool=1              ' 4: Touch sensing position for welding start point  
+                                                ' 3: 焊接终点的触摸感应。位置存储在 P10  
+S3   move L,spd=30%,accu=3,tool=1              ' 4: 焊接起点的触摸感应位置  
      touchsen cnd=3,crd="+ty",lift_up=5,pose=p1,gap=gap_var1  
-                                                ' 5: Touch sensing for welding start point. Position stored in P1  
+                                                ' 5: 焊接起点的触摸感应。位置存储在 P1  
 
-     ' Calculate welding speed and weaving width according to gap at the start point  
+     ' 根据起点的间隙计算焊接速度和编织宽度  
      var V3=0  
-     IF gap_var1<2.0 OR gap_var1>10.0 THEN      ' Gap out of allowable range  
+     IF gap_var1<2.0 OR gap_var1>10.0 THEN      ' 间隙超出允许范围  
      GOTO *Error  
-     ELSEIF gap_var1<4.0 THEN                   ' If gap ≤ 4 mm, fix speed to 7 mm/s  
-     V3=7.0                                     ' Welding speed at start  
-     ELSEIF gap_var1>8.0 THEN                   ' If gap ≥ 8 mm, fix speed to 4 mm/s  
-     V3=4.0                                     ' Welding speed at start  
-     ELSE                                       ' Linear interpolation for gap range 4-8 mm  
-     V3=(7-3.5)/(4-8)*gap_var1+10.5             ' Linearly interpolated welding speed at start  
+     ELSEIF gap_var1<4.0 THEN                   ' 如果间隙 ≤ 4 mm，则固定速度为 7 mm/s  
+     V3=7.0                                     ' 起始焊接速度  
+     ELSEIF gap_var1>8.0 THEN                   ' 如果间隙 ≥ 8 mm，则固定速度为 4 mm/s  
+     V3=4.0                                     ' 起始焊接速度  
+     ELSE                                       ' 线性插值间隙范围 4-8 mm  
+     V3=(7-3.5)/(4-8)*gap_var1+10.5             ' 起始线性插值焊接速度  
      ENDIF  
 
-     var V4=gap_var1/2.0                        ' Left-side weaving width (half of gap)  
-     var V5=gap_var1/2.0                        ' Right-side weaving width (half of gap)  
+     var V4=gap_var1/2.0                        ' 左侧编织宽度（间隙的一半）  
+     var V5=gap_var1/2.0                        ' 右侧编织宽度（间隙的一半）  
 
      '--------------------------------------------------------  
-     ' Calculate welding speed and weaving width according to gap at the end point  
+     ' 根据终点的间隙计算焊接速度和编织宽度  
      var V13=0  
-     IF gap_var11<2.0 OR gap_var11>10.0 THEN    ' Gap out of allowable range  
+     IF gap_var11<2.0 OR gap_var11>10.0 THEN    ' 间隙超出允许范围  
      GOTO *Error  
-     ELSEIF gap_var11<4.0 THEN                  ' If gap ≤ 4 mm, fix speed to 7 mm/s  
-     V13=7.0                                    ' Welding speed at end  
-     ELSEIF gap_var11>8.0 THEN                  ' If gap ≥ 8 mm, fix speed to 4 mm/s  
-     V13=4.0                                    ' Welding speed at end  
-     ELSE                                       ' Linear interpolation for gap range 4-8 mm  
-     V13=(7-3.5)/(4-8)*gap_var11+10.5           ' Linearly interpolated welding speed at end  
+     ELSEIF gap_var11<4.0 THEN                  ' 如果间隙 ≤ 4 mm，则固定速度为 7 mm/s  
+     V13=7.0                                    ' 结束焊接速度  
+     ELSEIF gap_var11>8.0 THEN                  ' 如果间隙 ≥ 8 mm，则固定速度为 4 mm/s  
+     V13=4.0                                    ' 结束焊接速度  
+     ELSE                                       ' 线性插值间隙范围 4-8 mm  
+     V13=(7-3.5)/(4-8)*gap_var11+10.5           ' 结束线性插值焊接速度  
      ENDIF  
 
-     var V14=gap_var11/2.0                      ' Left-side weaving width  
-     var V15=gap_var11/2.0                      ' Right-side weaving width  
+     var V14=gap_var11/2.0                      ' 左侧编织宽度  
+     var V15=gap_var11/2.0                      ' 右侧编织宽度  
 
      '---------------------------------------------------------  
-S4   move L,1,S=20%,A=3,T=1                     ' 6: Move to welding start point  
-     weaving on, cnd=2                          ' 7: Start weaving and arc sensing  
-     arcon cnd=2                                ' 8: Start welding  
-     arc_cond L,spd=V3,ld=V4,rd=V5,freq=2       ' 9: Continuous change of welding parameters (start)  
+S4   move L,1,S=20%,A=3,T=1                     ' 6: 移动到焊接起点  
+     weaving on, cnd=2                          ' 7: 开始编织和弧感应  
+     arcon cnd=2                                ' 8: 开始焊接  
+     arc_cond L,spd=V3,ld=V4,rd=V5,freq=2       ' 9: 焊接参数的连续变化（开始）  
 
-S5   move L,p10,spd=60cm/min,accu=3,tool=1      '10: Move to welding end point  
-     arc_cond L,spd=V13,ld=V14,rd=V15,freq=2    '11: Continuous change of welding parameters (end)  
-     arcoff                                     '12: End welding  
-     weaving off                                '13: End weaving and arc sensing  
+S5   move L,p10,spd=60cm/min,accu=3,tool=1      ' 10: 移动到焊接终点  
+     arc_cond L,spd=V13,ld=V14,rd=V15,freq=2    ' 11: 焊接参数的连续变化（结束）  
+     arcoff                                     ' 12: 结束焊接  
+     weaving off                                ' 13: 结束编织和弧感应  
 
-S6   move P,spd=60%,accu=3,tool=1               '14: Motion end point  
+S6   move P,spd=60%,accu=3,tool=1               ' 14: 运动结束点  
      END  
 
-     *Error                                     '15: Escape routine when gap is out of range  
-     DO200=1                                   '16: Output signal to indicate error  
-     STOP                                      '17: Stop robot  
+     *Error                                     ' 15: 当间隙超出范围时的逃逸例程  
+     DO200=1                                   ' 16: 输出信号以指示错误  
+     STOP                                      ' 17: 停止机器人  
      END  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

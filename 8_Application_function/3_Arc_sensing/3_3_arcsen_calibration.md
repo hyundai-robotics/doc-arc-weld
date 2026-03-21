@@ -1,80 +1,79 @@
-﻿# 8.3.3.3 Arc Sensing Calibration
+# 8.3.3.3 弧感应校准
 
-To use the arc sensing function, a calibration process must be completed first.  
-This process calculates the delay time to synchronize the weaving cycle and the current data cycle.
+要使用弧感应功能，必须首先完成校准过程。  
+该过程计算延迟时间以同步编织周期和当前数据周期。
 
 {% hint style="info" %}
-  Arc sensing is dependent on welder settings, including welding mdoe, operation mode, Job/Prog number, and synergic code, and thus has a corresponding delay time.<br>
-  Up to 3 calibration data sets can be stored.<br>
-  Example: When the settings are Pulse, Synergic 185, Job 0 (disabled), the corresponding calibration information will be loaded and used during arc sensing.
+  弧感应依赖于焊接机的设置，包括焊接模式、操作模式、作业/程序编号和协同代码，因此具有相应的延迟时间。<br>
+  最多可以存储3组校准数据集。<br>
+  例如：当设置为脉冲、协同185、作业0（禁用）时，相应的校准信息将在弧感应期间加载和使用。
 {% endhint %}
 
-### Calibration Process
+### 校准过程
 
 <br>
 
-#### Preparation: Prepare a flat specimen for bead-on-plate welding.
+#### 准备：准备一个平坦的试样以进行焊珠对板焊接。
 
-#### Step 1.  
+#### 步骤1。
 
-Enter the `[Property]` window of the weaving command and set the wall direction to vertical.
+进入编织命令的`[Property]`窗口，将墙体方向设置为垂直。
 
-#### Step 2.  
+#### 步骤2。
 
-Enter the Arc Sensing (General) in the property window of the weaving command, set the type to "Welding Seam Estimation & Current Difference", and set both the left/right and up/down sensitivities to -1.  
+在编织命令的属性窗口中进入弧感应（普通），将类型设置为“焊接接缝估算与电流差”，并将左右和上下的敏感度都设置为-1。  
 
 
 ![](../../_assets/8_3_5.png)<br>
-*Figure 8.3.5. Arc Sensing Calibration*
+*图8.3.5. 弧感应校准*
 <br>
 
 
-#### Step 3. 
+#### 步骤3。
 
-Create an entry step to approach from the opposite direction of the virtual wall as shown in the figure above, and teach the starting and ending points with a 60 cm gap between them.  
-In this case, keep the torch working angle (Roll angle) consistent within the range of 30 to 45 degrees.
+创建一个进入虚拟墙对面方向的入场步骤，如上图所示，并在起始点和结束点之间保持60厘米的间隔。  
+在这种情况下，保持焊炬工作角度（滚转角度）在30到45度之间的一致性。
 
-#### Step 4.  
+#### 步骤4。
 
-Perform the actual arc welding in automatic mode.  
+在自动模式中执行实际弧焊。
 
-#### Step 5.  
+#### 步骤5。
 
-Navigate to the delay time table tab in the property window of the weaving command. <br>
-Click on the "Auto Calib" option at the bottom left to check the currently calibrated delay time.
+在编织命令的属性窗口中导航到延迟时间表选项卡。<br>
+点击左下角的“自动校准”选项，以检查当前校准的延迟时间。
 
-#### Step 6.  
+#### 步骤6。
 
-Enter the corresponding value into the field for the current weaving frequency (the frequency applied during calibrations).
+在当前编织频率的字段中输入相应的值（在校准期间应用的频率）。
 
-#### Step 7.  
+#### 步骤7。
 
-Repeat Steps 2 through 5 for frequencies ranging from 0.5 Hz ~ 3.0 Hz.  
+对频率从0.5 Hz ~ 3.0 Hz重复步骤2到5。  
 
 <br>
 
-After completing this process, you can check the arc sensing (delay table tracking gain) results on the forth tab of the weaving condition editing screen.
+完成此过程后，您可以在编织条件编辑屏幕的第四个选项卡上检查弧感应（延迟表跟踪增益）结果。
 
 
 ![](../../_assets/8_3_6.png)<br>
-*Figure 8.3.6. Arc Sensing Condition Tab(Tracking gain) Dialog Box*
+*图8.3.6. 弧感应条件选项卡（跟踪增益）对话框*
 <br>
 
 
-At this time, the delay time value represents the degree of current lead or lag.
+此时，延迟时间值表示电流的提前或滞后程度。
 
 ![](../../_assets/8_3_6-2.png)<br>
-*Figure 8.3.6-2. Meaning of Arc Sensing Delay Time*
+*图8.3.6-2. 弧感应延迟时间的意义*
 <br>
 
 
 {% hint style="info" %}
-  The delay time must be within the range of **-40 ~ +40**. The vertical and horizontal tracking gains (mm/A) are recommended to be set within the range of **0.2 ~ 0.5**.
+  延迟时间必须在**-40 ~ +40**范围内。垂直和水平跟踪增益（mm/A）建议设置在**0.2 ~ 0.5**范围内。
 {% endhint %}
 
 {% hint style="info" %}
-  Once all weaving operations from from 0.5 Hz to 3.0 Hz have been performed, navigate to the "Auto Calib" option at the bottom left of the delay time table tab in the weaving command property window, and click "Apply" to apply all settings in bulk.
+  一旦执行了从0.5 Hz到3.0 Hz的所有编织操作，请导航到编织命令属性窗口中延迟时间表选项卡左下角的“自动校准”选项，并点击“应用”以批量应用所有设置。
 {% endhint %}
 
-Once the calibration process is completed, change the sensing sensitivity for both vertical/horizontal directions to 5 to enable the arc sensing function.
-
+校准过程完成后，将垂直/水平方向的感应灵敏度改为5，以启用弧感应功能。

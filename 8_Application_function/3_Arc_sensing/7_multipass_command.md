@@ -1,10 +1,9 @@
-﻿# 8.3.7 Multi-pass Command
+# 8.3.7 多次命令
 
+### (1) 命令
 
-### (1) Command
-
-The sensing trajectory can be saved and loaded using the multipass command. 
-This command can be used in three different forms:
+传感轨迹可以使用多次命令进行保存和加载。  
+此命令可以以三种不同的形式使用：
 <br>
 
 ```py
@@ -13,79 +12,27 @@ This command can be used in three different forms:
     multipass off
 ```
 
-### (2) Multi-pass Parameters
+### (2) 多次参数
 
-For detailed information on the multi-pass command parameters, please refer to the following link: <br>
+有关多次命令参数的详细信息，请参阅以下链接： <br>
 [2.11 multipass](../../2_Command/11_multipass.md)
 
 <br>
 
-This section will explain only the following two items:  
+本节将仅解释以下两个项目：  
 
+- 左右/上下位移
 
-- Left-Right/Up-Down Shift
-
-This sets the distance by which the trajectory is shifted from the original path during multipass reproduction.
-Since the torch weaving is perpendicular to the tool, each shift is set as follows:
-the left/right direction becomes the weaving plane, and the up/down direction becomes the plane perpendicular to the weaving plane.
+此设置轨迹在多次再现过程中与原始路径的偏移距离。  
+由于焊枪的编织与工具垂直，每个偏移设置如下：左右方向成为编织面，上下方向成为与编织面垂直的面。
 
 ![](../../_assets/8_3_11.png)<br>
-*Figure 8.3.11 Multipass Shift Direction*
+*图 8.3.11 多次位移方向*
 
+- 角度偏移：TAS, WAS  
 
-- Angle Shift: TAS, WAS  
-
-When performing multi-pass welding, the torch must be tilted for quality control. This setting is used to define the required tilt.
-The concept of angles for each item is illusatrated in the following figures:  
+在进行多次焊接时，焊枪必须倾斜以控制质量。此设置用于定义所需的倾斜。  
+每个项目的角度概念在以下图中说明：  
 
 ![](../../_assets/8_3_12.png)<br>
-*Figure 8.3.12 Multipass Angle Shift Concept*
-
-
-<!-- MULTIPASS 기능은 아크센싱 수행 시 정해진 거리마다 지정된 궤적 번호에 카운트, 위치, 보정량을 기록합니다. 이 궤적은 여러 세트를 저장할 수 있습니다. 작업물에 따라 변형을 최소화 하기 위해 2개 이상의 용접구간을 번갈아 용접하는 경우 다양한 번호의 궤적을 사용할 수 있습니다.
-
-멀티 패스를 위한 데이터 저장 시작 명령어는 아래와 같습니다.
-
-```multipass save, trj=[궤적 번호], period=[샘플링 거리]```
-- 궤적 번호: 아크센싱의 보정량, 위치를 저장할 궤적 번호입니다. [1~50]
-- 샘플링 거리: 저장할 궤적의 간격 거리입니다. [Default는 10mm. 범위: 5~100mm]
-- 일반적으로 default 설정을 사용하여 궤적을 저장하십시오.
-- 용접 구간이 길어 저장 궤적 범위를 초과하는 경우 간격을 늘리십시오.
-- 용접 구간의 굴곡이 심한 경우 이 거리를 짧게 설정하십시오.
-
-### (3) 멀티패스 궤적 재생
-
-멀티 패스를 위해 저장된 데이터 로딩 및 재생 시작 명령어는 아래와 같습니다.
-
-```multipass load, trj=[궤적 번호], side=[좌우 시프트], height=[상하 시프트], reverse= [재생 방향], tas=[TAS 각도], was=[WAS 각도]```
-- **궤적 번호**: 로딩할 궤적 번호. 1~50번
-- **좌우/상하 시프트**: 원래 궤적에서 시프트 할 거리. [Default: 0, 범위: -20~20mm]
-- **재생 방향**: 멀티 패스 재현을 정방향으로 할 것인지 역방향으로 할 것인지 설정
-[0: default정방향, 1: 역방향]
-- **TAS(Travel Angle Shift)**: 전후진 방향으로 기울어 지는 시프트. [-20~20도]
-- **WAS(Work Angle Shift)**: 토치가 양쪽 면 방향으로 기울어지는 시프트. [-20~20도]
-
-### (4) 멀티패스 재생 방향
-아크센싱 멀티패스는 저장된 궤적 재생 방향을 2가지로 사용 가능합니다. 재생 방향의 결정은 작업물의 변형 정도, 용접 비드 형상, 사이클 타임 등을 고려하여 현장 상황에 맞게 선택합니다.
-
-#### 정방향 멀티패스
-다음 pass 진행 방향: 아크센싱을 수행한 저장 궤적의 방향과 동일
-작업 프로그램은 원래 초층 용접의 궤적을 그대로 사용
-
-#### 역방향 멀티패스
-다음 pass 진행 방향: 아크센싱을 수행한 저장 궤적의 방향과 반대
-작업 프로그램은 초층 용접의 궤적을 스텝 순서를 역순으로 반전하여 사용. 이 경우 위치 지정에 혼동이 발생할 수 있으므로 반드시 궤적을 확인해야 합니다. -->
-
-
-<!-- ### (5) 좌우/상하 시프트
-멀티패스 재현 시 원래 궤적에서 시프트 하는 거리를 설정합니다. 토치의 위빙이 툴과 직각이므로 각 시프트는 아래와 같이 설정됩니다. 즉, 좌우 방향은 위빙면이 되고 상하 방향은 위빙면과 수직인 면이 됩니다.
-
-![](../_assets/3_4.png)<br>
-*그림 3.4 멀티패스 시프트 방향*
-
-### (6) 각도 시프트: TAS, WAS  
-멀티패스 용접을 수행할 때 품질을 위해 토치를 기울여야 하는 경우 설정합니다.
-각 항목의 각도 개념은 하기 그림과 같습니다.
-
-![](../_assets/3_5.png)<br>
-*그림 3.5 멀티패스 각도 시프트 개념* -->
+*图 8.3.12 多次角度偏移概念*

@@ -1,70 +1,65 @@
-﻿# 1.1 Overview
+﻿# 1.1 概述
 
-Teach the Arc welding operation as shown in the following figure.
-
+按照下图所示进行弧焊操作的教学。
 
 ![](../../_assets/1_1_1.png)<br>
-*Figure 1.1.1. Basic Arc Weld Teaching*
+*图 1.1.1. 基础弧焊教学*
 
 </br>
 
-(1) Turn on the power switch on the front of the Controller.
+(1) 打开控制器前面的电源开关。
 
-(2) Select the `[mode witch]` on the (Teach Pendant)TP in manual mode.
+(2) 在手动模式下选择 (Teach Pendant)TP上的 `[mode witch]` 。
 
-(3) Press the `[Program]` on the TP and enter the program number.
+(3) 按下 TP上的 `[Program]` 并输入程序编号。
 
-(4) If you proceed this far, the TP screen will be displayed as shown below.
+(4) 如果进行到这里，TP屏幕将显示如下所示。
 
 ![](../../_assets/1_1_2.png)<br>
-*Figure 1.1.2. Screen with new program number selected*
+*图 1.1.2. 选择新程序编号的屏幕*
 
 </br>
 
-(5) Press the `[Motor On]` button on the TP to power the robot's motor.
+(5) 按下 TP上的 `[Motor On]` 按钮以供电给机器人的电机。
 
-(6) Use the axis control key to move the robot's torch to the position in Step 1.
+(6) 使用轴控制键将机器人的焊炬移动到步骤 1 中的位置。
 
-(7) Press the `[rec. cond]` key, then specify the desired interpolation type, speed, accuracy, and tool number.  
+(7) 按下 `[rec. cond]` 键，然后指定所需的插补类型、速度、精度和工具编号。
 
-- After moving to the desired item using the direction key, set the value and press the `[ENTER]` key to save the setting
-- press the `[tool]` key and enter the desired tool number.
-
+- 使用方向键移动到所需项目后，设置值并按 `[ENTER]` 键保存设置
+- 按 `[tool]` 键并输入所需的工具编号。
 
 ![](../../_assets/1_1_3.png)<br>
-*Figure 1.1.3. Recording Conditions*
+*图 1.1.3. 录制条件*
 
 </br>
 
-- Press the `[rec. cond]` key to record the step as shown below.
+- 按下 `[rec. cond]` 键以记录如下所示的步骤。
 
 ![](../../_assets/1_1_4.png)<br>
-*Figure 1.1.4. Program with recorded Step (1)*
+*图 1.1.4. 录制步骤（1）的程序*
 
 </br>
 
-(8)	Repeat steps 5 through 7 for steps 2 through 4.
- 
+(8) 对步骤 2 到步骤 4 重复步骤 5 到 7。
 
 ![](../../_assets/1_1_5.png)<br>
-*Figure 1.1.5. Program with recorded Step (2)*
+*图 1.1.5. 录制步骤（2）的程序*
 
-(9) Since the welding area is from Step 2 to Step 3, move the cursor to Step 2.
+(9) 由于焊接区域是从步骤 2 到步骤 3，请将光标移动到步骤 2。
 
-- Enter the `[F6: cmd. Input] - arcweld - weaving`, input the condition number, and press the `[ENTER]` key.
-- In the same way, enter the **[arcon]**, input the condition number, and press the `[ENTER]` key.
-(For Arc Welding condition settings, refer to [5. Editing Arc Welding Conditions](../../5_Condition_editing/README.md).)
+- 输入 `[F6: cmd. Input] - arcweld - weaving`，输入条件编号，然后按 `[ENTER]` 键。
+- 以同样的方式，输入 **[arcon]**，输入条件编号，并按 `[ENTER]` 键。
+（有关弧焊条件设置，请参阅 [5. 编辑弧焊条件](../../5_Condition_editing/README.md).）
 
+(10) 将光标移动到步骤 3，这是弧焊结束的步骤。
 
-(10) Move the cursor to Step 3, which is the step where Arc Welding ends.
- 
-- Again, enter the **[weaving]** and set it to off.
-- Also, enter the **[arcoff]**.
+- 再次输入 **[weaving]** 并将其设置为关闭。
+- 还要输入 **[arcoff]**。
 
+(11) 将步骤 3 的速度修改为您所需的焊接速度（例如，20mm/s）。
 
-(11) Modify the speed of Step 3 to your desired welding speed (e.g., 20mm/s).
-
-(12) Finally, enter the `[F6: cmd. input] - flowctrl - end` command to terminate the program.
+(12) 最后，输入 `[F6: cmd. input] - flowctrl - end` 命令以终止程序。
 
 ![](../../_assets/1_1_6.png)<br>
-*Figure 1.1.6. Teaching Completion Screen*
+*图 1.1.6. 教学完成屏幕*
