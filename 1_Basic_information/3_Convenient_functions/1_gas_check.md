@@ -4,15 +4,6 @@ This describes the functionality for controlling the shield gas valve and the wi
 
 Here are the functions and how to use them: 
 
-<style>
-  table {
-    /* width: auto; */
-    border-collapse: collapse;
-    /* margin-bottom: 20px; */
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-</style>
 
 ### Gas Check
 

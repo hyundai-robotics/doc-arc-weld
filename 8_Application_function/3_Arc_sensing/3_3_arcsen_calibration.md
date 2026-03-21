@@ -17,7 +17,7 @@ This process calculates the delay time to synchronize the weaving cycle and the 
 
 #### Step 1.  
 
-Enter the `[Property] window of the weaving command and set the wall direction to vertical.
+Enter the `[Property]` window of the weaving command and set the wall direction to vertical.
 
 #### Step 2.  
 

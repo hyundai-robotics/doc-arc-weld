@@ -12,7 +12,7 @@ This feature allows for smooth control of heat input (weld deposit) by adjusting
 
 As shown in the figure above, this feature is used when it is necessary to control the heat input and weld deposit during left and right weaving, or when the bead shape needs to be adjusted.
 
-To use this feature, enter the `[Property] window of the `weaving` command and configure the following settings.
+To use this feature, enter the `[Property]` window of the `weaving` command and configure the following settings.
 
 
 ![](../../_assets/6_3_2_weav_sync_out_setting.png)<br>
