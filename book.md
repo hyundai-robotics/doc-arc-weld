@@ -263,15 +263,6 @@ This describes the functionality for controlling the shield gas valve and the wi
 
 Here are the functions and how to use them: 
 
-<style>
-  table {
-    /* width: auto; */
-    border-collapse: collapse;
-    /* margin-bottom: 20px; */
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-</style>
 
 ### Gas Check
 
@@ -1282,7 +1273,7 @@ It is frequently used to calculate shifts based on pose variables saved from tou
 
 When teaching an arc welding program, not only the welding conditions such as voltage and current but also detailed settings related to weaving, retries/overlaps, and the characteristics of the welder are necessary.
 Furthermore, in general robot operation, there may be cases where the position information (coordinates and orientation) of the taught steps or auxiliary points needs to be verified.  
-By placing the cursor on the command and pressing the `[Property] button located on the left side of the TP, a function is provided that allows easy and quick editing of these files.
+By placing the cursor on the command and pressing the `[Property]` button located on the left side of the TP, a function is provided that allows easy and quick editing of these files.
 
 
 ### Example of Command [Property]
@@ -1297,10 +1288,10 @@ By placing the cursor on the command and pressing the `[Property] button located
 
 
 
-As an example of editing welding start conditions, when the cursor is placed on the `arcon` command, which turns on the arc, pressing the `[Property] button will display the details of the condition number currently used in the welding start conditions.
+As an example of editing welding start conditions, when the cursor is placed on the `arcon` command, which turns on the arc, pressing the `[Property]` button will display the details of the condition number currently used in the welding start conditions.
 In this screen, you can view or modify the detailed settings of the welding start conditions.
 
-Similarly, after placing the cursor on a specific command and entering the `[Property] window, you can easily and quickly check and modify the settings, such as the conditions or positions recorded in the steps.
+Similarly, after placing the cursor on a specific command and entering the `[Property]` window, you can easily and quickly check and modify the settings, such as the conditions or positions recorded in the steps.
 If you wish to save the changes and exit, press `[OK]`; if you wish to exit without saving, press the `[ESC]` key on the teaching pendant.
 
 
@@ -1920,7 +1911,7 @@ The weaving function is used in arc welding to widen the weld bead width. The de
 [__SOURCE](6_Weaving_function/1_Weaving_function/1_condition_.md)
 # 6.1.1 Weaving Condition
 
-When the cursor is placed above the `weaving ...` command, pressing the `[Property] key will display the weaving condition editing screen as shown below.  
+When the cursor is placed above the `weaving ...` command, pressing the `[Property]` key will display the weaving condition editing screen as shown below.  
 
 
 ![](../../_assets/6_1_1.png)<br>
@@ -2248,7 +2239,7 @@ This feature allows for smooth control of heat input (weld deposit) by adjusting
 
 As shown in the figure above, this feature is used when it is necessary to control the heat input and weld deposit during left and right weaving, or when the bead shape needs to be adjusted.
 
-To use this feature, enter the `[Property] window of the `weaving` command and configure the following settings.
+To use this feature, enter the `[Property]` window of the `weaving` command and configure the following settings.
 
 
 ![](../../_assets/6_3_2_weav_sync_out_setting.png)<br>
@@ -2393,6 +2384,102 @@ The welding angle and push/pull angle are calculated base on the welding directi
 The welding plane automatically rotates according to the welding trajectory.
 {% endhint %}
 
+
+
+[__SOURCE](7_Monitoring/4_arc_monitoring/README.md)
+# 7.4 Arc Monitoring
+
+{% hint style="info" %}
+This feature is supported in version 70.00-00 and later.  
+{% endhint %}
+
+This function allows you to view monitoring features related to arc welding on a single screen.
+It integrates the following features: Arc Welding, Real-time change welding data, Arc sensing and multi-pass, Arc operation information, Arc trajectory monitoring  
+
+
+To access this function, navigate to `[(right panel) pane layout] - select - arc monitoring`.
+The following sections describe each screen and the available monitoring functions.  
+
+
+[__SOURCE](7_Monitoring/4_arc_monitoring/1_arc_welding.md)
+# 7.4.1 Arc Welding
+
+
+When entering the "Arc Monitoring" screen for the first time, this screen is displayed by default.
+To switch to this screen from another screen, click `[F1: Arc Welding]` on the bottom panel.
+This screen displays the analog and digital signals exchanged with the welder.
+
+![](../../_assets/7_4_1_1.png)<br>
+*Figure 7.4.1.1. Arc Welding Monitoring*  
+
+On the "Arc Welding" screen, click the `[F7: Select]` button on the bottom panel to change the panel contents and access the following functions:  
+
+
+### (1) Welder set.
+
+![](../../_assets/7_4_1_2.png)<br>
+*Figure 7.4.1.2. Manual Welder Setup*  
+
+Click the `[F1: welder set.]` button on the bottom panel to open the following window.
+In this window, you can manually configure the welding machine.
+
+
+### (2) Manual Output
+
+![](../../_assets/7_4_1_3.png)<br>
+*Figure 7.4.1.3. Manual Output*  
+
+Select the desired signal from either the analog output singals or digital output signals(e.g. "Stick Check" or "OFF (fb1.12)" as shown in the figure), and then click the `[F2: Manual Output]` button on the bottom panel.
+A window will appear where you can configure the selected signal to be output.  
+
+
+### (3) I/O Setup
+
+A wide variety of data is exchanged between the robot controller and the welder in the form of analog and digital signals(refer to `[F2: System] - 5: Initialization - 3: Usage setting - [F2: Welder setting]`).
+However, the signals that operators need to monitor are typically limited.
+Click the `[F3: Set I/O]` button on the bottom panel to open the following window.  
+
+![](../../_assets/7_4_1_4.png)<br>
+*Figure 7.4.1.4. I/O Output Setup*  
+
+This window displays all signals exchanged between the robot controller and the welder.
+Select only the required data and click to `OK` to monitor the selected signals only.
+You can also use the `Select All` or `Clear All` buttons at the top to enable or disable all items at once.  
+
+[__SOURCE](7_Monitoring/4_arc_monitoring/2_arc_sensing.md)
+# 7.4.2 Arc Sensing
+
+
+This screen is displayed when the `[F2: Arc Sensing]` button on the bottom panel is clicked from the "Arc Monitoring" screen.
+For details on the information available on this screen, refer to the following link: [[8.3.5 Arc Sensing Monitoring]](../../8_Application_function/3_Arc_sensing/5_arcsen_monitoring.md)  
+
+ 
+[__SOURCE](7_Monitoring/4_arc_monitoring/3_arc_operinfo.md)
+# 7.4.3 Arc Operation Information
+
+
+This screen is displayed when the `[F3: Arc OperInfo]` button on the bottom panel is clicked from the "Arc Monitoring" screen.
+For details on the information available on this screen, refert to the following link: [[1.3.7 Arc Welding Operation Information]](../../1_Basic_information/3_Convenient_functions/7_operation_info.md)  
+
+
+
+[__SOURCE](7_Monitoring/4_arc_monitoring/4_arc_trj_monitor.md)
+# 7.4.4 Arc Trajectory Monitoring
+
+
+To use this function, first navigate to `[F2: System] - 4: Application parameter - 2: Arc welding` and set the **"Arc Trajectory monitoring"** to **"Enable"**.
+On the left side, the table data selected from the bottom panel is displayed, and on the right side, the "Arc Trajectory Monitoring" screen is shown.
+This screen provides real-time visualization of the welding trajectory and the torch posture (work angle and push/pull angle) during arc welding.  
+(You can monitor the trajectory and welding information in real time from `arcon` to `arcoff`)
+
+
+![](../../_assets/7_4_4_1.png)<br>
+*Figure 7.4.4.1. Arc Trajectory Monitoring*  
+
+You can adjust the size of the table and canvas by clicking and dragging the center divider.
+(However, one view cannot completely cover the other. If the screen is minimized and then restored to full-screen, the layout will be reset)
+Use the `+/-` key along with the `[shift]` key to zoom in or out.  
+Within the canvas, you can drag to adjust the view position.  
 
 
 [__SOURCE](8_Application_function/README.md)
@@ -3083,7 +3170,7 @@ This process calculates the delay time to synchronize the weaving cycle and the 
 
 #### Step 1.  
 
-Enter the `[Property] window of the weaving command and set the wall direction to vertical.
+Enter the `[Property]` window of the weaving command and set the wall direction to vertical.
 
 #### Step 2.  
 
