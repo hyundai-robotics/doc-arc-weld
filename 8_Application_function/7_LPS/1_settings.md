@@ -81,8 +81,8 @@ If **Ethernet/IP** is used, complete the network settings accordingly. In the ${
 </br>   
 
 Afterward, proceed step by step by following the link below.
-Note that Hi6 does not support built-in Ethernet, so a communication card must be used ([Hi6 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-Hi6/1-cifx-pci-communication/3-cifx-pci-settings-industrial-communication/3-EtherNet-IP/README?cont_model=Hi6)).
-From Hi7 and later, built-in Ethernet is supported, allowing communication to be established using the controller alone ([Hi7 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-Hi7/2-ethernet-ip/4-scanner/README?cont_model=Hi7)).
+Note that Hi6 does not support built-in Ethernet, so a communication card must be used ([Hi6 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en-Hi6/1-cifx-pci-communication/3-cifx-pci-settings-industrial-communication/3-EtherNet-IP/README?cont_model=Hi6)).
+From Hi7 and later, built-in Ethernet is supported, allowing communication to be established using the controller alone ([Hi7 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en-Hi7/2-ethernet-ip/4-scanner/README?cont_model=Hi7)).
 
 
 
