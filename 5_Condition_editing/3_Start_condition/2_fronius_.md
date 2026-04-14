@@ -1,6 +1,6 @@
 ﻿# 5.3.2 용접 시작 조건 - Fronius 전용 설정
 
-### (1)	동작모드: `Prog-Std, Prog-Pulse, CMT, JOB`  
+### (1)	동작모드: `Prog-Std, Prog-Pulse, CMT, JOB, TIG`  
 Fronius 용접기에서 지원하는 용접모드를 설정합니다. 각 모드에 대한 설명은 아래와 같습니다.
 
 - **Prog-Std**: 용접기에 저장된 일반 용접의 program을 사용
