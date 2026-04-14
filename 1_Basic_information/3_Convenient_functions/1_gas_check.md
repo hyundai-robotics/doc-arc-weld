@@ -13,6 +13,7 @@ Here are the functions and how to use them:
 | **Dedicated Key** | User Key `GAS CHK`         |
 | **Function**  | Open the shield gas valve to verify the gas flow rate |
 
+
 ### Wire Inching
 
 | Item      | Description                          |
@@ -21,6 +22,7 @@ Here are the functions and how to use them:
 | **Dedicated Key** | User Key `inching`              |
 | **Function**  | Feed the wire forward out of the torch to adjust its length <li>Slow Inching: Press the key for less than 3 seconds</li> <li>Fast Inching: Press the key for 3 seconds or more</li> |
 
+
 ### Wire Retract
 
 | Item      | Description                 |
@@ -28,9 +30,10 @@ Here are the functions and how to use them:
 | **HotKey** | `[Shift]+[3]`      |
 | **Dedicated Key** | User Key `retract`     |
 | **Function**  | Rewind the wire to adjust its length <li>Slow Inching: Press the key for less than 3 seconds</li> <li>Fast Inching: Press the key for 3 seconds or more</li> |
-<br/>
+
 
 ### Inching Speed Setting
+
  >- Navigate to `[F2: System] - 4: Application parameter - 2: Arc welding`
  >- Within the Arc welding settings menu, Set your values for both low and high speeds: **Inching speed(%): Low=[---]%, High=[---]%**
  >- The speed is displayed as a percentage of the maximum inching speed.

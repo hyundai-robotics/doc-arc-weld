@@ -27,5 +27,5 @@ Once this is completed, the data transmitted from the welder to the controller w
 
 
 {% hint style="info" %}
-  For more information, please refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en/README?cont_model=${cont_model})  
+  For more information, please refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en-${cont_model}/README?cont_model=${cont_model}) 
 {% endhint %}

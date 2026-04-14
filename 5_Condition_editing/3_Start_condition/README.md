@@ -182,7 +182,7 @@ Sets the time to process the current change between the initial condition and th
 
 | Supported Welder | Name | Unit | Range | 
 | :---: | :---: | :---: |:---: |
-| Common to all welders | Slope Time | 초 | 0.0 ~ 10.0 | 
+| Common to all welders | Slope Time | sec | 0.0 ~ 10.0 | 
 
 
 </center>
@@ -195,7 +195,7 @@ Sets the allowable time for exceeding the welding voltage/current and feed motor
 
 | Supported Welder | Name | Unit | Range | Default | 
 | :---: | :---: | :---: |:---: |:---: |
-| Common to all welders | Excess Allowed Time | 초 | 0.0 ~ 10.0 | 0 | 
+| Common to all welders | Excess Allowed Time | sec | 0.0 ~ 10.0 | 0 | 
 
 
 </center>

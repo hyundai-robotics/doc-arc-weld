@@ -248,6 +248,7 @@ Here are the functions and how to use them:
 | **Dedicated Key** | User Key `GAS CHK`         |
 | **Function**  | Open the shield gas valve to verify the gas flow rate |
 
+
 ### Wire Inching
 
 | Item      | Description                          |
@@ -256,6 +257,7 @@ Here are the functions and how to use them:
 | **Dedicated Key** | User Key `inching`              |
 | **Function**  | Feed the wire forward out of the torch to adjust its length <li>Slow Inching: Press the key for less than 3 seconds</li> <li>Fast Inching: Press the key for 3 seconds or more</li> |
 
+
 ### Wire Retract
 
 | Item      | Description                 |
@@ -263,9 +265,10 @@ Here are the functions and how to use them:
 | **HotKey** | `[Shift]+[3]`      |
 | **Dedicated Key** | User Key `retract`     |
 | **Function**  | Rewind the wire to adjust its length <li>Slow Inching: Press the key for less than 3 seconds</li> <li>Fast Inching: Press the key for 3 seconds or more</li> |
-<br/>
+
 
 ### Inching Speed Setting
+
  >- Navigate to `[F2: System] - 4: Application parameter - 2: Arc welding`
  >- Within the Arc welding settings menu, Set your values for both low and high speeds: **Inching speed(%): Low=[---]%, High=[---]%**
  >- The speed is displayed as a percentage of the maximum inching speed.
@@ -1112,7 +1115,7 @@ However, when the positioner is changed using a servo tool changer, calibration 
 This command allows calibration to be performed directly within the robot program.
 
 
-- For detailed instructions on using this command, please refer to [2.3.4 posi_calib](https://hrbook-hrc.web.app/#/view/doc-positioner-sync/en/2-system_settings/2-3-positioner-calibration/4_posi_calib)
+- For detailed instructions on using this command, please refer to [2.3.4 posi_calib](https://hrbook-hrc.web.app/#/view/doc-positioner-sync/en/2-system_settings/2-3-positioner-calibration/4_posi_calib?cont_model=${cont_model})
 
 
 [__SOURCE](2_Command/13_touchsen.md)
@@ -1310,7 +1313,7 @@ Once this is completed, the data transmitted from the welder to the controller w
 
 
 {% hint style="info" %}
-  For more information, please refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en/README?cont_model=${cont_model})  
+  For more information, please refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en-${cont_model}/README?cont_model=${cont_model}) 
 {% endhint %}
 
 [__SOURCE](4_Setting/2_Arc_setting/README.md)
@@ -1556,7 +1559,7 @@ Sets the time to process the current change between the initial condition and th
 
 | Supported Welder | Name | Unit | Range | 
 | :---: | :---: | :---: |:---: |
-| Common to all welders | Slope Time | 초 | 0.0 ~ 10.0 | 
+| Common to all welders | Slope Time | sec | 0.0 ~ 10.0 | 
 
 
 </center>
@@ -1569,7 +1572,7 @@ Sets the allowable time for exceeding the welding voltage/current and feed motor
 
 | Supported Welder | Name | Unit | Range | Default | 
 | :---: | :---: | :---: |:---: |:---: |
-| Common to all welders | Excess Allowed Time | 초 | 0.0 ~ 10.0 | 0 | 
+| Common to all welders | Excess Allowed Time | sec | 0.0 ~ 10.0 | 0 | 
 
 
 </center>
@@ -1639,10 +1642,10 @@ Set the dynamic correction value. A smaller value results in a strong and stable
 [__SOURCE](5_Condition_editing/3_Start_condition/3_ewm.md)
 # 5.3.3 Welding Start condition - EWM-only settings
 
-### (1)	JOB mode: `Job mode Disable, Job mode Enable` 
+### (1)	JOB mode: `Disable, Enable` 
 Set the Job mode supported by the EWM AlphaQ welder. The descriptions for each mode are as follows:
-- Job mode disable: Welding is performed with wire feed speed and voltage offset based on the synergy data stored in the welder.
-- Job mode enable: Welding is pserfored with the job stored in welder.
+- disable: Welding is performed with wire feed speed and voltage offset based on the synergy data stored in the welder.
+- enable: Welding is pserfored with the job stored in welder.
 
 ### (2)	Welding mode  
 Set whether pulse welding is used.
@@ -1711,16 +1714,16 @@ Sets the time for processing the current change between the main condition and t
 ![](../../_assets/5_4_2.png)<br>
 *Figure 5.4.2. DownSlope Time and Crate Time Chart*
 
-### (5)	Condition Hold time: [1] second (Range: 0.1 ~ 10.0)   
+### (5)	Condition Hold time: [1] sec (Range: 0.1 ~ 10.0)   
 Set the time to maintain the output value specified in the 'current ratio' item under the welding end condition.
 
-### (6)	Wire Burnback: [  0] % (Range: -20 ~ 20)  
+### (6)	Wire Burnback: [ 0 ] ms (Range: 0.0 ~ 200.0)  
 Configures burnback processing. May vary depending on the welder.
 
-### (7)	Gas Post Flow: [ 0] second (Range: 0.0 ~ 10.0)  
+### (7)	Gas Post Flow: [ 0 ] sec (Range: 0.0 ~ 10.0)  
 Set the time to continue the shielding gas output even after the arc is turned off.
 
-### (8)	Crater move time: [ 0 ] second (Range: 0.0 ~ 10.0) / Crater move distance : [0] mm (Range: 0.0 ~ 100.0)
+### (8)	Crater move time: [ 0 ] sec (Range: 0.0 ~ 10.0) / Crater move distance : [0] mm (Range: 0.0 ~ 100.0)
 During crater treatment, sets the distance the robot will move backward during the DownSlope time and condition hold time. The speed is automatically determined based on the distance and time.
 
 ### (9) Auto Stick Release Count : [0] times (Range: 0 to 9) / Condition : [0] (Range: 0 to 32) / Time: [0] sec (Range: 0.0 to 10.0)  
@@ -1763,7 +1766,7 @@ The retry function is activated when arc ignition fails after an attempt, while 
 
 The left section of [Figure 5.5.1] represents the retry conditions in the welding auxiliary conditions. The descriptions for each item of the retry conditions are as follows:  
 
-### (1)	Retract Time: [0.3] second (Range: 0.00 ~ 10.00)  
+### (1)	Retract Time: [0] sec (Range: 0.00 ~ 10.00)  
   The retry function is performed after attempting to weld by feeding the wire and failing to ignite the arc. As a result, the wire may be excessively fed during the retry process. In this case, the wire might contact the base material and cause fusion or get too close to the base material, resulting in unstable arc ignition. To address this, the function supports retracting the wire before the retry to create an optimal environment for welding. This setting specifies the time for retracting the wire. If this value is not 0, the wire will be retracted, the torch will move, and then the arc ignition will be attempted.  
 
 ### (2)	Retract speed: [10] % (Range: 0.0 ~ 100.0)  
@@ -2340,7 +2343,7 @@ Through this, you can monitor the welding angle, current, and voltage in real ti
 
 To enable this feature, follow these steps:
 
-Set "Arc trajectory monitoring" to 'activation on' under `[System] - 2: Application parameter - 2: Arc welding`.
+Set "Arc trajectory monitoring" to 'activation on' under `[F2: System] - 4: Application parameter - 2: Arc welding`.
 
 
 {% hint style="info" %}
@@ -4648,7 +4651,7 @@ The descriptions of the parameters for each figure are as follows:
 
 
 [__SOURCE](8_Application_function/6_Stitch/4_aux_spec.md)
-# 8.5.4 STITCH Func. Additional Specifications
+# 8.6.4 STITCH Func. Additional Specifications
 
 - **Emergency Stop, Restart**  
 
@@ -4706,7 +4709,7 @@ Finally, the sensor installation position relative to the tool tip must be suita
 ### (2) Communication Setup
 
 The laser sensor can be connected according to its specifications by referring to the following link.
-(Refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-${cont_model}/README?cont_model=${cont_model}))
+(Refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en-${cont_model}/README?cont_model=${cont_model}))
 
 This page describes examples for selected sensors only.
 

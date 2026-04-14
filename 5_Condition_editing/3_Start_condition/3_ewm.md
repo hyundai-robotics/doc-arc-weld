@@ -1,9 +1,9 @@
 ﻿# 5.3.3 Welding Start condition - EWM-only settings
 
-### (1)	JOB mode: `Job mode Disable, Job mode Enable` 
+### (1)	JOB mode: `Disable, Enable` 
 Set the Job mode supported by the EWM AlphaQ welder. The descriptions for each mode are as follows:
-- Job mode disable: Welding is performed with wire feed speed and voltage offset based on the synergy data stored in the welder.
-- Job mode enable: Welding is pserfored with the job stored in welder.
+- disable: Welding is performed with wire feed speed and voltage offset based on the synergy data stored in the welder.
+- enable: Welding is pserfored with the job stored in welder.
 
 ### (2)	Welding mode  
 Set whether pulse welding is used.

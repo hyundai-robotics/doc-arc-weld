@@ -15,7 +15,7 @@ The retry function is activated when arc ignition fails after an attempt, while 
 
 The left section of [Figure 5.5.1] represents the retry conditions in the welding auxiliary conditions. The descriptions for each item of the retry conditions are as follows:  
 
-### (1)	Retract Time: [0.3] second (Range: 0.00 ~ 10.00)  
+### (1)	Retract Time: [0] sec (Range: 0.00 ~ 10.00)  
   The retry function is performed after attempting to weld by feeding the wire and failing to ignite the arc. As a result, the wire may be excessively fed during the retry process. In this case, the wire might contact the base material and cause fusion or get too close to the base material, resulting in unstable arc ignition. To address this, the function supports retracting the wire before the retry to create an optimal environment for welding. This setting specifies the time for retracting the wire. If this value is not 0, the wire will be retracted, the torch will move, and then the arc ignition will be attempted.  
 
 ### (2)	Retract speed: [10] % (Range: 0.0 ~ 100.0)  

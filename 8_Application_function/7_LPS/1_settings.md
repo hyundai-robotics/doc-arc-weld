@@ -28,7 +28,7 @@ Finally, the sensor installation position relative to the tool tip must be suita
 ### (2) Communication Setup
 
 The laser sensor can be connected according to its specifications by referring to the following link.
-(Refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/ko-${cont_model}/README?cont_model=${cont_model}))
+(Refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en-${cont_model}/README?cont_model=${cont_model}))
 
 This page describes examples for selected sensors only.
 

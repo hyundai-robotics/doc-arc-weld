@@ -1,4 +1,4 @@
-﻿# 8.5.4 STITCH Func. Additional Specifications
+﻿# 8.6.4 STITCH Func. Additional Specifications
 
 - **Emergency Stop, Restart**  
 

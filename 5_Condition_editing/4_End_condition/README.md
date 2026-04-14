@@ -49,16 +49,16 @@ Sets the time for processing the current change between the main condition and t
 ![](../../_assets/5_4_2.png)<br>
 *Figure 5.4.2. DownSlope Time and Crate Time Chart*
 
-### (5)	Condition Hold time: [1] second (Range: 0.1 ~ 10.0)   
+### (5)	Condition Hold time: [1] sec (Range: 0.1 ~ 10.0)   
 Set the time to maintain the output value specified in the 'current ratio' item under the welding end condition.
 
-### (6)	Wire Burnback: [  0] % (Range: -20 ~ 20)  
+### (6)	Wire Burnback: [ 0 ] ms (Range: 0.0 ~ 200.0)  
 Configures burnback processing. May vary depending on the welder.
 
-### (7)	Gas Post Flow: [ 0] second (Range: 0.0 ~ 10.0)  
+### (7)	Gas Post Flow: [ 0 ] sec (Range: 0.0 ~ 10.0)  
 Set the time to continue the shielding gas output even after the arc is turned off.
 
-### (8)	Crater move time: [ 0 ] second (Range: 0.0 ~ 10.0) / Crater move distance : [0] mm (Range: 0.0 ~ 100.0)
+### (8)	Crater move time: [ 0 ] sec (Range: 0.0 ~ 10.0) / Crater move distance : [0] mm (Range: 0.0 ~ 100.0)
 During crater treatment, sets the distance the robot will move backward during the DownSlope time and condition hold time. The speed is automatically determined based on the distance and time.
 
 ### (9) Auto Stick Release Count : [0] times (Range: 0 to 9) / Condition : [0] (Range: 0 to 32) / Time: [0] sec (Range: 0.0 to 10.0)  
