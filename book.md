@@ -178,7 +178,7 @@ Warn gives a warnning message, Error makes robot stop moving with error message.
 {% endhint %}
 
 Arc Welding I/V change auto saving: 
-|[`Disable`, `Enable`]|, This setting determines whether to automatically save changes to current and voltage values when they are changed within the `arc change IV(Arc Welding Current/Voltage Adjustment dialog box)`. For more details, please refer to [[1.3.3 Change the Current/Voltage during Welding]](../3_Convenient_functions/3_change_current_voltage/README.md).
+|[`Disable`, `Enable`]|, This setting determines whether to automatically save changes to current and voltage values when they are changed within the `arc change IV(Arc Welding Current/Voltage Adjustment dialog box)`. For more details, please refer to [[1.3.3 Change the Current/Voltage during Welding]](../3_Convenient_functions/3_change_current_voltage.md).
 
 Vibration reduction for heavy torch: 
 |[`Disable`, `Welding point`, `All range`]|, This setting is designed to reduce vibrations when using heavy torches. It helps to minimize vibrations that may occur when using heavy torches such as water-cooled or push-pull torches.<br> When set to `Welding Points`, a significant reduction in vibrations can be achieved in the welding point entry section without substantial changes in the robot's operating speed.<br> When set to `All range`, a filter specifically designed for heavy Arc torches is applied, virtually eliminating vibrations throughout the entire preocess. However, this may result in a decrease in the robot's operating speed.
@@ -1939,7 +1939,7 @@ This option determines whether the weaving trajectory is restricted by the bound
 When a timer is set in the weaving pattern, the weaving motion will stop at both the left and right ends of the weaving.
 In this case, this setting determines whether the robot continues to move or stops during the weaving stop period.  
 
-### (8) Move Time: [1] sec (Range: 0.0 ~ 10.0), Timer(Weaving Stop): [0] (범위 : 0.00 ~ 2.00)  
+### (8) Move Time: [1] sec (Range: 0.0 ~ 10.0), Timer(Weaving Stop): [0] (Range : 0.00 ~ 2.00)  
 
 If the weaving frequency is set to '0', the weaving motion will be performed based on the move time.
 In this case, the move time for each section and the weaving stop time between sections are configured.  

@@ -52,7 +52,7 @@ This option determines whether the weaving trajectory is restricted by the bound
 When a timer is set in the weaving pattern, the weaving motion will stop at both the left and right ends of the weaving.
 In this case, this setting determines whether the robot continues to move or stops during the weaving stop period.  
 
-### (8) Move Time: [1] sec (Range: 0.0 ~ 10.0), Timer(Weaving Stop): [0] (범위 : 0.00 ~ 2.00)  
+### (8) Move Time: [1] sec (Range: 0.0 ~ 10.0), Timer(Weaving Stop): [0] (Range : 0.00 ~ 2.00)  
 
 If the weaving frequency is set to '0', the weaving motion will be performed based on the move time.
 In this case, the move time for each section and the weaving stop time between sections are configured.  
