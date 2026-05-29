@@ -1,4 +1,10 @@
-﻿# 8.7.1 레이저 센서 기본설정  
+﻿<script id="page-config" type="application/json">
+{
+	"permittedStrs": ["Hi6", "Hi7"]
+}
+</script>
+
+# 8.7.1 레이저 센서 기본설정  
 
 LPS 기능을 사용하기 위해서는 최초 레이저 센서를 설치하고 통신 사양 등을 설정하는 과정이 필요합니다.  
 <br/>
