@@ -1,4 +1,10 @@
-﻿# 8.7.1 Laser Sensor Setup  
+﻿<script id="page-config" type="application/json">
+{
+	"permittedStrs": ["Hi6", "Hi7"]
+}
+</script>
+
+# 8.7.1 Laser Sensor Setup  
 
 
 To use the LPS function, it is necessary to first install the laser sensor and configure communication specifications and related settings.
