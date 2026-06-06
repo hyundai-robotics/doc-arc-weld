@@ -1,10 +1,24 @@
 ﻿
 [__SOURCE](README.md)
 # ${cont_model} 机器人控制器功能手册 - 弧焊
+[__SOURCE](0-about-this-manual/README.md)
+# 关于手册
+
+在使用产品之前，您必须充分理解手册的内容。此外，请将手册放在身边，以便随时参考。
+
+本手册可作为已购买HD Hyundai Robotics产品客户的参考材料，或可用作内部培训材料。
+
+本手册是基于标准规格编写的，因此某些内容可能因您购买的产品型号而有所不同。此外，为了改善产品性能，本手册的内容和规格可能会随时更改，HD Hyundai Robotics对因手册中的不准确或错字而可能导致的情况不承担责任。有关手册修订的详细信息，您需要访问我们的互联网网站 [http://www.hyundai-robotics.cn/](http://www.hyundai-robotics.cn/)。
+
 [__SOURCE](0-about-this-manual/precautions.md)
 # 注意事项
 
 {% include file="zh/precautions.md" %}
+[__SOURCE](0-about-this-manual/safety-notice.md)
+# 安全注意事项
+
+{% include file="zh/safety-notice.md" %}
+
 [__SOURCE](0-about-this-manual/structure.md)
 # 书籍结构
 

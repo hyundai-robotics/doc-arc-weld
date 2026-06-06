@@ -1,8 +1,11 @@
 ﻿# Table of contents
 
 * [${cont_model} 机器人控制器功能手册 - 弧焊](README.md)
-* [注意事项](0-about-this-manual/precautions.md)
-* [书籍结构](0-about-this-manual/structure.md)
+
+* [关于手册](0-about-this-manual/README.md)
+  * [注意事项](0-about-this-manual/precautions.md)
+  * [安全注意事项](0-about-this-manual/safety-notice.md)
+  * [书籍结构](0-about-this-manual/structure.md)
 * [1. 弧焊基础](1_Basic_information/README.md)
   * [1.1 概述](1_Basic_information/1_Introduction/README.md)
   * [1.2 弧焊功能设置](1_Basic_information/2_Function_setting/README.md)
