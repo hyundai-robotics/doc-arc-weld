@@ -1,8 +1,10 @@
 ﻿# Table of contents
 
 * [${cont_model} 제어기 기능설명서 - 아크 용접](README.md)
-* [사전 주의사항](0-about-this-manual/precautions.md)
-* [책의 구성](0-about-this-manual/structure.md)
+* [이 설명서에 대하여](0-about-this-manual/README.md)
+  * [사전 주의사항](0-about-this-manual/precautions.md)
+  * [안전 주의 사항](0-about-this-manual/safety-notice.md)
+  * [책의 구성](0-about-this-manual/structure.md)
 * [1. Arc 용접 기본사항](1_Basic_information/README.md)
   * [1.1 개요](1_Basic_information/1_Introduction/README.md)
   * [1.2  Arc 용접기능 설정](1_Basic_information/2_Function_setting/README.md)
