@@ -4045,7 +4045,7 @@ Let's now look at how to perform automatic calibration between TCP and LVS senso
 
 ### (1) Preparation of Calibration Specimen
 
-If you purchase a license through our company, an automatic calibration specimen will be provided.
+Prepare a 15 cm long lap joint specimen with a 3 mm step.
 
 
 {% hint style="info" %}
