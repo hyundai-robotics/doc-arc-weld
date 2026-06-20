@@ -15,7 +15,7 @@
   * [1.3 Arc Welding Convenience Functions](1_Basic_information/3_Convenient_functions/README.md)
     * [1.3.1 Gas Check, Wire Inching, and Wire Retract](1_Basic_information/3_Convenient_functions/1_gas_check.md)
     * [1.3.2 High-speed mobility function](1_Basic_information/3_Convenient_functions/2_high_speed.md)
-    * [1.3.3 Change the Current/Voltage during Welding](1_Basic_information/3_Convenient_functions/3_change_current_voltage.md)
+    * [1.3.3 Change the Current/Voltage during Welding](1_Basic_information/3_Convenient_functions/3_change_iv.md)
     * [1.3.4 Manual mode Arc Welding](1_Basic_information/3_Convenient_functions/4_manual_mode.md)
     * [1.3.5 High weight arc torch vibration reduction function](1_Basic_information/3_Convenient_functions/5_vibration_reduction.md)
     * [1.3.6 Arc Welding signal test function](1_Basic_information/3_Convenient_functions/6_signal_test.md)
@@ -28,8 +28,8 @@
   * [2.5 arccond](2_Command/5_arccond.md)
   * [2.6 refp](2_Command/6_refp.md)
   * [2.7 lvs](2_Command/7_lvson.md)
-  <!-- * [2.8 atdc](2_Command/8_atdc.md) -->
   * [2.8 lps](2_Command/8_lps.md)
+  <!-- * [2.8 atdc](2_Command/8_atdc.md) -->
   * [2.9 heightsen on](2_Command/9_hsenson.md)
   * [2.10 heightsen off](2_Command/10_hsensoff.md)
   * [2.11 multipass](2_Command/11_multipass.md)
@@ -48,7 +48,7 @@
   * [5.2 Arc Welding FlowChart](5_Condition_editing/2_Time_chart/README.md)
   * [5.3 Welding Start condition](5_Condition_editing/3_Start_condition/README.md)
     * [5.3.1 Welding Start condition - hyosung-only settings](5_Condition_editing/3_Start_condition/1_hyosung.md)
-    * [5.3.2 Welding Start condition - Fronius-only settings](5_Condition_editing/3_Start_condition/2_fronius_.md)
+    * [5.3.2 Welding Start condition - Fronius-only settings](5_Condition_editing/3_Start_condition/2_fronius.md)
     * [5.3.3 Welding Start condition - EWM-only settings](5_Condition_editing/3_Start_condition/3_ewm.md)
   * [5.4 Welding End condition](5_Condition_editing/4_End_condition/README.md)
   * [5.5 Welding Auxiliary condition](5_Condition_editing/5_Aux_condition/README.md)
