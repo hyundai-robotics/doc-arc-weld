@@ -1871,7 +1871,7 @@ Arc 용접 시작 시 초기조건 유지시간 동안 출력할 용접전압를
 </br>
     
 </br>
-[__SOURCE](5_Condition_editing/3_Start_condition/1_hyosung_.md)
+[__SOURCE](5_Condition_editing/3_Start_condition/1_hyosung.md)
 # 5.3.1 용접 시작 조건 - 효성 전용 설정
 
 
@@ -1885,7 +1885,7 @@ Arc 발생전까지 와이어를 송급하는 기본 속도의 옵셋을 설정�
 ### (3)	인덕터 효과: [  100] % (범위: 0 ~ 255)  
 인덕터 효과를 설정합니다.
 
-[__SOURCE](5_Condition_editing/3_Start_condition/2_fronius_.md)
+[__SOURCE](5_Condition_editing/3_Start_condition/2_fronius.md)
 # 5.3.2 용접 시작 조건 - Fronius 전용 설정
 
 ### (1)	동작모드: `Prog-Std, Prog-Pulse, CMT, JOB, TIG`  
@@ -2482,7 +2482,7 @@ Arc 용접 실행 중에 로봇 제어기에서 용접기로 전송되는 전류
 15. 지령값: 수동으로 출력할 수 있는, 자주 사용하는 지령들을 나타낸다.
 
 
-[__SOURCE](7_Monitoring/2_wave_type.md)
+[__SOURCE](7_Monitoring/2_data_graph.md)
 # 7.2 용접파형 모니터링
 
 용접파형 모니터링은 용접 데이터의 파형과 관련된 정보를 표시하여 용접 데이터의 순간적인 정보뿐만 아니라 과거 정보도 한 눈에 알아볼 수 있게 합니다. 
