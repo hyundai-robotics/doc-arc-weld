@@ -310,7 +310,7 @@ The operation method is as follows:
 | ------ | --------------------- |--------------------- |
 | **Operation** | Move the robot forward/backward at manual maximum speed. | Robot stops, then moves at manual maximum speed |
 
-[__SOURCE](1_Basic_information/3_Convenient_functions/3_change_current_voltage.md)
+[__SOURCE](1_Basic_information/3_Convenient_functions/3_change_iv.md)
 # 1.3.3 Change the Current/Voltage during Welding
 
 This function is used when teaching Arc welding tasks and there's a need to change the welding current/voltage during welding to find the appropriate settings.
@@ -1626,7 +1626,7 @@ Adjust the offset for the wire feed speed before the arc is initiated.
 ### (3)	Inductor Effect: [  100] % (range: 0 ~ 255)  
 Set the inductor effect.
 
-[__SOURCE](5_Condition_editing/3_Start_condition/2_fronius_.md)
+[__SOURCE](5_Condition_editing/3_Start_condition/2_fronius.md)
 # 5.3.2 Welding Start condition - Fronius-only settings
 
 ### (1)	Operation Mode: `Prog-Std, Prog-Pulse, CMT, JOB, TIG`  
