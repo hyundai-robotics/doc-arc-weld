@@ -1,1 +1,1 @@
-﻿# 1.3 Arc Welding Convenience Functions
+# 1.3 弧焊便利功能

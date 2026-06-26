@@ -1,85 +1,74 @@
-﻿# 8.3.3.2 Arc Sensing Condition(Advanced)
+# 8.3.3.2 弧感应条件（高级）
 
+在编织条件编辑屏幕的第三个选项卡中，可以配置高级设置。<br>
 
-In the third tab of the Weaving Condition Edit Screen, advanced settings can be configured.<br>
-
-```It is recommended to use the default values in this tab whenver possible.```
-
+```建议在此选项卡中尽可能使用默认值。```
 
 ![](../../_assets/8_3_3.png)<br>
-*Figure 8.3.3. Arc Sensing Condition(Advanced) Dialog Box*
+*图 8.3.3. 弧感应条件（高级）对话框*
 
+各项的设置和操作方法如下：
 
-The settings and operation methods for each item are as follows:
+### (1) 最大跟踪速度: [0.1~ 20.0] mm/s
 
-### (1) Maximum Tracking Speed: [0.1~ 20.0] mm/s
+此设置定义了在1秒钟内可以跟踪的最大左右/上下距离（或速度）。
 
-This setting defines the maximum left/rgiht/up/down distance (or speed) that can be tracked in 1 second.
+### (2) 跟踪限制距离: [0 ~ 200] mm (0: 禁用)
 
+此设置定义了左右/上下弧感应跟踪距离的限制。  
+如果跟踪超出弧感应设置的限制，将会发生错误并停止操作。
 
-### (2) Tracking Limit Distance: [0 ~ 200] mm (0: Disabled)
+### (3) 计算范围: [1 ~ 100] % (默认: 50%)
 
-This setting defines the limit for the left/right/up/down arc sensing tracking distance.
-If tracking exceeds the limit set by the arc sensing, an error will occur and stop the operation.
+此设置定义了计算左右电流的范围。<br>
+```当编织幅度减小时，将此值设置得更小是有利的。（例如，对于1mm幅度，设置为50%；对于0.5 mm幅度，推荐40%。）```
 
+### (4) 不对称感应比: [-50 ~ 50] %
 
-### (3) Calculation Range: [1 ~ 100] % (default: 50%)
-
-This setting defines the range for calculating the left/right current. <br>
-```As the weaving amplitude decreases, it is advantageous to set this value smaller. (e.g. for 1mm amplitude, set to 50%; for 0.5 mm amplitude, 40% is recommended.)```
-
-
-### (4) Asymmetric Sensing Ratio: [-50 ~ 50] %
-
-This setting defines the asymmetric sensing ratio when the left and right bead widths are different.<br>
-A positive value indicates the right direction when viewed from the back of the torch in the welding direction, and a negative value indicates the left direction.
+此设置定义了在左侧和右侧焊疤宽度不同的情况下的不对称感应比。<br>
+正值表示从焊接方向的火炬后面看是右方向，负值表示左方向。
 
 {% hint style="info" %}
-  During arc sensing, if `weavings_.asymetric_sensing_ratio=10` is executed, asymmetric tracking will occur towards the right, maintaining the right-side current 10A higher.
-  If this value is set to a negative number, asymmetric tracking will occur towards the left.
+  在弧感应期间，如果执行`weavings_.asymetric_sensing_ratio=10`，将向右发生不对称跟踪，保持右侧电流高出10A。  
+  如果此值设置为负数，将向左发生不对称跟踪。
 {% endhint %}
 
-
 ---
 
-### (5) Abnormal Data Handling Method: <Error, Warning, Disable>
+### (5) 异常数据处理方法: <错误, 警告, 禁用>
 
-This setting defines how to handle data when the normal current range, calculated using the "detection margin," exceeds the limit for the "detection time."
+此设置定义了当使用“检测余量”计算的正常电流范围超过“检测时间”的限制时如何处理数据。
 
-- Error: The robot diplays an error and stops.
-- Warning: The robot displays a warning and continues the operation.
-- Disable: The robot continues the operation without any interruption.
+- 错误: 机器人显示错误并停止。  
+- 警告: 机器人显示警告并继续操作。  
+- 禁用: 机器人在没有任何中断的情况下继续操作。  
 
+### (6) 检测余量: [100 ~ 200] %
 
-### (6) Detection Margin: [100 ~ 200] %
-
-This setting defines the margin for determining abnormal current values from the current data. The default value is 150 %.<br>
-As shown in the figure below, the range is based on 'Q1 - 1.5 * IQR' for the lower bound and 'Q3 + 1.5 * IQR' for the upper bound.
-
+此设置定义了从电流数据中确定异常电流值的余量。默认值为150%。<br>
+如下图所示，范围基于“Q1 - 1.5 * IQR”的下限和“Q3 + 1.5 * IQR”的上限。
 
 ![](../../_assets/8_3_4.png)<br>
-*Figure 8.3.4. Abnormal Detection Margin*
+*图 8.3.4. 异常检测余量*
 <br>
 
-### (7) Detection Time: [10 ~ 1000] ms
+### (7) 检测时间: [10 ~ 1000] ms
 
-This setting defines the amount of time allowed for current input that exceeds the abnormal detection margin.<br>
-If the margin is exceeded for a period longer than this time, the robot will operate based on the selected handling method (error, warning, or disable).
+此设置定义了超出异常检测余量的电流输入被允许的时间。<br>
+如果超出余量的时间超过此时间，机器人将根据选定的处理方法（错误、警告或禁用）进行操作。
 
 ---
 
-### (8) Hybrid Mode ```(Welding Seam Estimation + Current Difference)``` <br>
+### (8) 混合模式 ```(焊接缝估计 + 电流差)``` <br>
 
-This setting determines whether the current will be regressed at the end of each weaving half-cycle or at the end of each full weaving cycle.
+此设置决定电流是在每个编织半周期结束时还是在每个完整编织周期结束时进行回归。
 
+### (9) 电流回归误差容忍度 ```(焊接缝估计 + 电流差)``` <br>
 
-### (9) Current Regression Error Tolerance ```(Welding Seam Estimation + Current Difference)``` <br>
+此设置定义了回归过程中可以接受的电流误差。对于较小的编织宽度或轻微改善角度，应选择较小的值。默认值为1A。
 
-This setting defines the acceptable current error during regression. For smaller weaving widths or minor improvement angles, a smaller value should be selected. The default value is 1A.
+### (10) 回归期间的数据采样选项 ```(焊接缝估计 + 电流差)``` <br>
 
-
-### (10) Data Sampling Option during Regression ```(Welding Seam Estimation + Current Difference)``` <br>
-
-This setting defines the method for processing sampled data during regression: Raw, Median, or Average.
+此设置定义了回归过程中对采样数据的处理方法：原始、中位数或平均数。
 
 </br>

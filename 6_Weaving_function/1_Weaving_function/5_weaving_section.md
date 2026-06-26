@@ -1,40 +1,40 @@
-﻿# 6.1.5 Weaving Section Setting
+﻿# 6.1.5 编织部分设置
 
-### (1)	Robot Behavior when Weaving Stops  
+### (1) 编织停止时的机器人行为  
 
-When the Timer (Weaving Stop) is set to a value other than 0, the weaving pattern will stop at the end of the weaving section for the specified duration.
-In this state, you can configure whether the robot will continue to move or stop.
+当定时器（编织停止）设置为除0以外的值时，编织模式将在指定持续时间内在编织部分结束时停止。
+在这种状态下，您可以配置机器人是否继续移动或停止。
 
-If set to **Move**, the robot behaves as shown on the left in the figure; if set to **Stop**, the behavior is as shown on the right.  
+如果设置为**移动**，机器人表现如图左所示；如果设置为**停止**，行为如图右所示。  
 
 
 ![](../../_assets/6_1_6.png)<br>
-*Figure 6.1.6. Robot Behavior when Weaving Stops* 
+*图 6.1.6. 编织停止时的机器人行为* 
 
-### (2)	Move Time
+### (2) 移动时间
 
-This setting defines the move time for each section when "Frequency" is set to '0'.
-The move time for unused sections (e.g., sections 3 and 4 in simple oscillation) will be ignored.
+当“频率”设置为'0'时，此设置定义每个部分的移动时间。
+未使用部分的移动时间（例如，简单振荡中的第3和第4部分）将被忽略。
 
 ![](../../_assets/6_1_7.png)<br>
-*Figure 6.1.7. Movement Section by Weaving Pattern* 
+*图 6.1.7. 按编织模式的运动部分* 
 
 
-### (3)	Timer (Weaving Stop)
+### (3) 定时器（编织停止）
 
-Set the weaving stop time at the endpoint of each section as shown in the figure below.
-This setting also applies when the weaving frequency is configured.
-When the weaving frequency is set, the robot's move time during the weaving cycle is calculated as follows:  
-* Robot Move Time = (1 / Weaving Frequency) - Total Timer Time
+在下图所示的每个部分的端点处设置编织停止时间。
+此设置在配置编织频率时也适用。
+当编织频率设置时，机器人的移动时间在编织周期内计算如下：  
+* 机器人移动时间 = (1 / 编织频率) - 总定时器时间
 
 {% hint style="warning" %}
-  if "Robot Behavior when Weaving Stops" is set to **Move**, the movement trajectory does not stop, and it will follow a straight path, as shown in the figure below.
+  如果“编织停止时的机器人行为”设置为**移动**，则移动轨迹不会停止，并且将沿直线路径运动，如下图所示。
 {% endhint %}
  
  
 ![](../../_assets/6_1_8.png)<br>
-*Figure 6.1.8. Trajectory Example When Timer is Set*   
+*图 6.1.8. 设置定时器时的轨迹示例*   
 
 {% hint style="warning" %}
-  if "Robot Behavior when Weaving Stops" is set to **Stop**, the movement trajectory also stops, but the robot's speed remains the same.
+  如果“编织停止时的机器人行为”设置为**停止**，则移动轨迹也会停止，但机器人的速度保持不变。
 {% endhint %}

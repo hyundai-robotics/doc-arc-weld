@@ -1,117 +1,115 @@
-﻿# 8.5.2 LVS Settings
+﻿# 8.5.2 LVS 设置
 
 
-To use LVS functionality, sensor installation and communication settings are required.
+要使用 LVS 功能，需要传感器安装和通信设置。
 
-Let's now look at the process involved.
+现在让我们看看涉及的过程。
 
-### (1) Mounting the LVS Sensor using the connection bracket
+### (1) 使用连接支架安装 LVS 传感器
 
-The connection bracket can either be designed and used by yourself, or you may receive one from HD Hyundai Robotics or the LVS manufacturer. <br>
+连接支架可以由您自行设计和使用，也可以从 HD Hyundai Robotics 或 LVS 制造商那里获得。 <br>
 
 ![](../../_assets/8_5_3_lvs_mount_setup.png)<br>
-*Figure 8.5.3. LVS Mounting Precautions*
+*图 8.5.3. LVS 安装注意事项*
 
 {% hint style="warning" %}
-  - To achieve repetition accruacy and precision, directly mount the LVS bracket to the robot flange<br>
-  - In other words, install the mechanical assembly as follows: flange - LVS mount, LVS sensor - shock sensor(if used) - torch.
+  - 为实现重复精度和精确度，必须将 LVS 支架直接安装到机器人法兰上<br>
+  - 换句话说，机械装配应如下安装：法兰 - LVS 支架，LVS 传感器 - 冲击传感器（如使用） - 焊枪。
 {% endhint %}
 
-The tool coordinate system should be set as follows: the welding direction opposite to the progress direction should be set as the +Tool X direction, and the wire direction should be set as the +Tool Z direction, as shown in the diagram below.
+工具坐标系应如下设置：焊接方向与进度方向相反应设置为 +Tool X 方向，焊丝方向应设置为 +Tool Z 方向，如下图所示。
 
-The LVS sensor must be installed so that the laser is positioned perpendicular to the welding seam, which is straight (see figure)
-
+LVS 传感器必须安装，以便激光垂直于焊缝，且是直的（见图）
 
 ![](../../_assets/8_5_4.png)<br>
-*Figure 8.5.4. TCP and Sensor Installation, Tool Coordinate System Setup*
+*图 8.5.4. TCP 和传感器安装，工具坐标系设置*
 
 {% hint style="info" %}
-  For instructions on setting the tool coordinate system, refer to the Tool Calibration and Angle Correction Manual(Angle Calibration) section.
+  有关设置工具坐标系的说明，请参阅工具校准和角度校正手册（角度校准）部分。
 {% endhint %}
 
 {% hint style="warning" %}
-  In order to use LVS, the laser should be positioned ahead of the welding direction, and the tool coordinate system must be set as shown in the diagram above.
+  为了使用 LVS，激光应位于焊接方向的前方，并且工具坐标系必须如上图所示进行设置。
 {% endhint %}
 
 ---
 
-### (2) Communication Settings
+### (2) 通信设置
 
-Connect the LVS sensor controller and the robot controller using an Ethernet cable.<br>
-Navigate to `[F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting`.<br>
+使用以太网电缆连接 LVS 传感器控制器和机器人控制器。<br>
+导航到 `[F2: 系统] - 4: 应用参数 - 5: LVS 跟踪 - 1: Envrionment setting ([F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting)`。<br>
 
-In the **[Communication]** tab, configure the following items:
+在 **[通信]** 选项卡中，配置以下项目：
 
-- LVS brand : Scansonic, Oxford (or Meta), Full-v<br>
-- IP Address : Enter the IP address of the sensor controller.
-- Local Port : The port for the robot controller. (For Oxford, 8000)
-- Remote Port : The port for the sensor controller. (For Oxford, 8002)
+- LVS 品牌 : Scansonic, Oxford (或 Meta), Full-v<br>
+- IP 地址 : 输入传感器控制器的 IP 地址。
+- 本地端口 : 机器人控制器的端口。（对于 Oxford, 8000）
+- 远程端口 : 传感器控制器的端口。（对于 Oxford, 8002）
 
-After entering the above information, click **[connect]**. If the status shows "connected," the connection is successfully established.
-
+输入上述信息后，点击 **[connect]**。如果状态显示“已连接”，则连接成功建立。
 
 {% hint style="info" %}
-- [IP Address] : The IP address used for sending data from the LVS controller to the robot controller is set in the LVS controller.
-  - If the settings are incorrect, the connection may fial. In such cases, refer to the LVS manufacturer's manual.
-- [Port] : When selecting a brand, the default values will automatically be applied, so there is no need for the user to modify them.
-  - If the port is incorrect, the connection may fial. In such cases, refer to the LVS manufacturer's manual.
+- [IP 地址] : 用于将数据从 LVS 控制器发送到机器人控制器的 IP 地址在 LVS 控制器中设置。
+  - 如果设置不正确，连接可能会失败。在这种情况下，请参阅 LVS 制造商的手册。
+- [端口] : 选择品牌时，默认值将自动应用，因此用户无需修改它们。
+  - 如果端口不正确，连接可能会失败。在这种情况下，请参阅 LVS 制造商的手册。
 {% endhint %}
 
 ---
 
-### (3) Basic Settings
+### (3) 基本设置
 
-In the **[Tracking]** tab, configure the following items: 
-- P gain : Specifies the intensity with which the TCP tracks to the converted position and orientation.
-- D gain : Specifies the speed at which the TCP responds to the converted position and orientation.
-- Max tracking Distance : Specifies the maximum tracking amount per second in [mm/sec].
+在 **[跟踪]** 选项卡中，配置以下项目： 
+- P 增益 : 指定 TCP 跟踪转换位置和方向的强度。
+- D 增益 : 指定 TCP 对转换位置和方向的响应速度。
+- 最大跟踪距离 : 指定每秒的最大跟踪量以 [mm/sec] 为单位。
 
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Item</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Recommended Settings</th>
+      <th style="text-align:left">项目</th>
+      <th style="text-align:left">说明</th>
+      <th style="text-align:left">推荐设置</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">P, D gain</td>
-      <td style="text-align:left">Specifies the intensity with which the TCP tracks to the converted position and orientation.</td>
+      <td style="text-align:left">P, D 增益</td>
+      <td style="text-align:left">指定 TCP 跟踪转换位置和方向的强度。</td>
       <td style="text-align:left">
-        General tracking (without weaving) : Set within the range 1 ~ 10. <br>
-        Weaving tracking (with weaving) : Use the default value of 10. <br>
-        The default values are P gain: 10 and D gain: 10. Adjust these values to suit the actual workpiece.
+        一般跟踪（不使用编织） : 设置在 1 ~ 10 范围内。 <br>
+        编织跟踪（使用编织） : 使用默认值 10。 <br>
+        默认值为 P 增益：10，D 增益：10。根据实际工件调整这些值。
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Max tracking distance/sec [mm/sec]</td>
-      <td style="text-align:left">Specifies the maximum tracking amount per second in [mm/sec].</td>
+      <td style="text-align:left">每秒最大跟踪距离 [mm/sec]</td>
+      <td style="text-align:left">指定每秒的最大跟踪量，以 [mm/sec] 为单位。</td>
       <td style="text-align:left">
-        Set within the range of 1 to 5. The default value is 10.<br>
-        LVS seam tracking is designed to correct small deviations from the taught trajectory, so setting a larger value is not necessary.
+        设置在 1 到 5 之间。默认值为 10。<br>
+        LVS 焊缝跟踪旨在修正与教导轨迹的微小偏差，因此无需设置更大的值。
       </td>
     </tr>
   </tbody>
 </table>
 
 
-Preferences have been completed through the above process.
+通过上述过程完成了偏好设置。
 
 ---
 
-#### Full-V Sensor Configuration Example
+#### Full-V 传感器配置示例
 
 ![](../../_assets/8_5_5_lvs_setting_fullv_1.png)<br>
-*Figure 8.5.5. Full-V Sensor Connection Settings*
+*图 8.5.5. Full-V 传感器连接设置*
 
-As shown in the figure above, select the LVS brand as FULL, then check the IP address of the LVS sensor in the Full-V softeware.  <br>
-Enter the IP in the `[F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting` window.  <br> Afterward, click the "connect" button at the bottom and verify that the connection status shows.  <br>
-If "disconnected" appears, check the hardware connection and IP address.<br>
+如上图所示，选择 LVS 品牌为 FULL，然后在 Full-V 软件中检查 LVS 传感器的 IP 地址。  <br>
+在 `[F2: 系统] - 4: 应用参数 - 5: LVS 跟踪 - 1: Envrionment setting ([F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting)` 窗口中输入 IP。  <br> 然后，点击底部的“connect”按钮，并确认连接状态显示。  <br>
+如果出现“已断开”字样，请检查硬件连接和 IP 地址。<br>
 
-Refer to the manual provided by Full-V and the figure below to register the seam you wish to use in the Full-V software.  
+请参考 Full-V 提供的手册和下图以在 Full-V 软件中注册您希望使用的焊缝。  
 
 
 ![](../../_assets/8_5_6_lvs_setting_fullv_2.png)<br>
-*Figure 8.5.6. Example of Seam Setting in Full-V Software*
+*图 8.5.6. Full-V 软件中焊缝设置示例*

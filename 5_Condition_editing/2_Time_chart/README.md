@@ -1,7 +1,6 @@
-﻿# 5.2 Arc Welding FlowChart
+﻿# 5.2 弧焊流程图
 
-This is the Time Flowchart for digital Arc Welding. For each condition setting, please refer to the dialog box desciptions for each command below.
+这是数字弧焊的时间流程图。有关每个条件设置，请参阅下面每个命令的对话框描述。
  
 ![](../../_assets/5_2_1.png)<br>
-*Figure 5.2.1. Digital Arc Welding FlowChart*
-
+*图 5.2.1. 数字弧焊流程图*

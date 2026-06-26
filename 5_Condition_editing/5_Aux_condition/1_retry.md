@@ -1,55 +1,52 @@
-﻿# 5.5.1 Welding Auxiliary condition - Retry
+﻿# 5.5.1 焊接辅助条件 - 重试
 
-
-There may be cases where the arc does not ignite due to foreign materials attached near the weld start point of the base material when starting arc welding. The retry function automatically attempts to reignite the arc in such cases of arc ignition failure, enabling continuous operation without robot stoppage.
+在开始弧焊时，如果基材焊接起点附近附着了异物，可能会导致弧无法点燃。重试功能会在出现弧点燃失败的情况下自动尝试重新点燃弧，确保在不停机的情况下进行连续操作。
 
   
 ![](../../_assets/5_5_1.png)<br>
-*Figure 5.5.1. Welding Auxiliary condition (Retry) Setting(e.g. EWM)*
+*图 5.5.1. 焊接辅助条件 (重试) 设置(例如 EWM)*
 
 {% hint style="info" %}
-[Note]   
-The retry function is activated when arc ignition fails after an attempt, while the restart function is activated when welding is interrupted during arc welding and needs to be resumed.
+[注意]   
+当弧点燃尝试失败后重试功能被激活，而在弧焊过程中焊接中断需要恢复时重启功能被激活。
 {% endhint %}
 
+[图 5.5.1]的左侧部分表示焊接辅助条件中的重试条件。每个重试条件的描述如下：
 
-The left section of [Figure 5.5.1] represents the retry conditions in the welding auxiliary conditions. The descriptions for each item of the retry conditions are as follows:  
+### (1)	 retract Time: [0] 秒 (范围: 0.00 ~ 10.00)  
+  重试功能是在喂入焊丝并未能点燃弧后执行的。因此，在重试过程中可能会过量喂入焊丝。在这种情况下，焊丝可能会接触基材，并造成熔合，或过于靠近基材，导致弧点燃不稳定。为了解决这个问题，该功能支持在重试之前回收焊丝，以创建一个最佳的焊接环境。此设置指定了回收焊丝的时间。如果该值不是 0，则焊丝将被回收，焊枪将移动，然后尝试点燃弧。
 
-### (1)	Retract Time: [0] sec (Range: 0.00 ~ 10.00)  
-  The retry function is performed after attempting to weld by feeding the wire and failing to ignite the arc. As a result, the wire may be excessively fed during the retry process. In this case, the wire might contact the base material and cause fusion or get too close to the base material, resulting in unstable arc ignition. To address this, the function supports retracting the wire before the retry to create an optimal environment for welding. This setting specifies the time for retracting the wire. If this value is not 0, the wire will be retracted, the torch will move, and then the arc ignition will be attempted.  
+### (2)	Retract speed: [10] % (范围: 0.0 ~ 100.0)  
+  指定在重试过程中焊丝回收的速度。根据焊机型号，此功能可能不被支持。(例如：Saprom 焊机)
 
-### (2)	Retract speed: [10] % (Range: 0.0 ~ 100.0)  
-  Specifies the speed at which the wire is retracted during the retry process. This feature may not be supported depending on the welder model. (e.g. Saprom welders)  
+### (3)	Repetition: [5] 次 (范围: 0 ~ 9)  
+  指定在失败后弧点燃将重试的次数。如果在指定重试次数内未能点燃弧，系统将返回到原点（初始弧点燃尝试点或焊接起点）并停止。
 
-### (3)	Repetition: [5] times (Range: 0 ~ 9)  
-  Specifies the number of times the arc ignition will be retried after failure. If the arc fails to ignite within the specified number of retries, the system will return to the origin(the initial arc ignition attempt point, or the weld start point) and stop.  
-
-### (4)	Retry condition: [0] (Range: 0 ~ 32)  
-  Specifies the welding condition number to be used for retrying the arc ignition. During the retry, welding will be performed according to the conditions (current, voltage, etc.) of the welding start condition that was entered.
-  However, if the entered condition number is "0" or if the operation mode is set to reentry, the welding will be perfomed based on the main condition of the currently active welding start condition.  
+### (4)	Retry condition: [0] (范围: 0 ~ 32)  
+  指定用于重试弧点燃的焊接条件编号。在重试期间，将根据输入的焊接起始条件的条件（电流、电压等）进行焊接。
+  然而，如果输入的条件编号为“0”或操作模式设置为重新进入，则焊接将基于当前活动焊接起始条件的主要条件进行。
 
 ### (5)	Operation mode: ReEnter / Shift / Multi-direc.  
-  Sets the method for moving the torch during a retry. Three different methods are supported, and the torch movement for each setting is as follows: (Please refer to [Figure 5.5.2])  
+  设置在重试期间焊枪移动的方法。支持三种不同的方法，每个设置的焊枪运动如下：（请参考[图 5.5.2]）
 
 - A. ReEnter  
-  When arc ignition fails, the torch steps backward to the previous step and attempts to ignitie the arc again. The distance of this backward movement is set in the welding auxiliary condition retry settings menu under the "Retreat/Weld line dist". After stepping back a certain distance, the torch will step forward again, so the voltage/current conditions follow the welding start conditions.  
+  当弧点燃失败时，焊枪向后退回到上一步，并尝试再次点燃弧。此向后移动的距离在焊接辅助条件重试设置菜单中的“退回/焊接线距离”下设置。在向后退回一定距离后，焊枪将再次向前移动，因此电压/电流条件遵循焊接起始条件。
 
 - B. Shift  
-  After moving by the shift distance set in the retry conditions of the welding auxiliary condition, the torch returns to the arc ignition step. The shift distance can be set in the forward/backward, left/right, and up/down direction relative to the welding line. During the retry, the welding conditions follow the welding start conditions in the retry settings. If arc ignition is successful, the arc is maintained, and the torch moves to the welding start point at the set speed, where welding proceeds.  
+  在焊接辅助条件的重试条件中，根据设置的移动距离，焊枪返回到弧点燃步骤。移动距离可以在相对于焊接线的前后、左右和上下方向进行设置。在重试期间，焊接条件遵循重试设置中的焊接起始条件。如果弧点燃成功，则保持弧，焊枪以设定速度移动到焊接起点，进行焊接。
 
 - C. Multi-direc.  
-  In the retry conditions of the welding auxiliary settings, the "shift Distance" is devided into forward/backward, left/right, and up/down movements. The 1st retry attempts to move along the welding line by the forward/backward distance. The 2nd retry attempts the left/right and up/down movements, considering the distances set for those directions. The 3rd retry moves in the opposite direction of the left/right position from the second retry. For retries 4-6, the same operation is performed at twice the distance compared to retries 1-3, and for retries 7-9, the same operation is performed at three times the distance. Welding starts according to the welding start conditions in the retry settings, and if arc ignition is successful, the arc is maintained, and the torch moves to the welding start point at the set speed, where welding proceeds.  
+  在焊接辅助设置的重试条件中，"移动距离"被划分为前后、左右和上下动作。第一次重试尝试沿焊接线按照前后距离移动。第二次重试尝试考虑设定的左右和上下移动的距离。第三次重试沿第二次重试的左右位置反方向移动。对于重试4-6，按照与重试1-3相比的两倍距离执行相同操作，对于重试7-9，执行三倍距离的相同操作。焊接根据重试设置中的焊接起始条件开始，如果弧点燃成功，则保持弧，焊枪以设定速度移动到焊接起点，进行焊接。
 
-### (6)	Speed: [100]cm/min (Range: 1.0 ~ 999.0)  
-  Specifies the speed at which the torch moves to the retry position or returns to the welding start point during the retry.  
+### (6)	Speed: [100] cm/min (范围: 1.0 ~ 999.0)  
+  指定焊枪在重试期间移动到重试位置或返回焊接起点的速度。
 
-### (7)	Retreat/Weld line dist.: [3] mm (Range: 0.00 ~ 99.99)   
-  When the operation mode is set to ReEnter, this is the distance the torch moves during the retry.  
+### (7)	Retreat/Weld line dist.: [3] mm (范围: 0.00 ~ 99.99)   
+  当操作模式设置为 ReEnter 时，这是焊枪在重试期间移动的距离。
 
-### (8)	Shift distance: FWD/BWD = [ 2 ], L/R = [ 2 ], Up/Down = [ 1 ] mm (Range: -99.99 ~ 99.99)  
-  When the operation mode is set to Shift, this is the distance the torch moves during the retry.  
+### (8)	Shift distance: FWD/BWD = [ 2 ], L/R = [ 2 ], Up/Down = [ 1 ] mm (范围: -99.99 ~ 99.99)  
+  当操作模式设置为 Shift 时，这是焊枪在重试期间移动的距离。  
     
 
 ![](../../_assets/5_5_2.png)<br>
-*Figure 5.5.2 Retry Function Sequence*
-
+*图 5.5.2 重试功能序列*

@@ -1,107 +1,107 @@
-﻿<script id="page-config" type="application/json">
+<script id="page-config" type="application/json">
 {
 	"permittedStrs": ["Hi6", "Hi7"]
 }
 </script>
 
-# 8.7.1 Laser Sensor Setup  
+# 8.7.1 激光传感器设置  
 
 
-To use the LPS function, it is necessary to first install the laser sensor and configure communication specifications and related settings.
+要使用LPS功能，首先需要安装激光传感器，并配置通信规范和相关设置。
 <br/>
 
-### (1) Mounting the Laser Sensor Using a Connection Bracket
+### (1) 使用连接支架安装激光传感器
 
-The connection bracket may be designed and fabricated by the user, or provided by our company or the sensor manufacturer.
+连接支架可以由用户设计和制造，或由我们公司或传感器制造商提供。
 
 ![](../../_assets/8_7_1.png)<br>
-*Figure 8.7.1. Installation of the laser sensor using a bracket*
+*图 8.7.1. 使用支架安装激光传感器*
 
-A laser distance sensor consists of a transmitter and a receiver.
-When the robot is aligned with the arc torch, ensure that the transmitter/receiver of the laser sensor is aligned with the tool-based X direction (refer to the laser manufacturer's specifications).
-In addition, it is recommended to install the sensor on the right side of the tool Y direction (right side when facing the torch).  
+激光距离传感器由发射器和接收器组成。
+当机器人与弧焊枪对齐时，请确保激光传感器的发射器/接收器与基于工具的X方向对齐（请参考激光制造商的规格）。
+此外，建议将传感器安装在工具Y方向的右侧（面向焊枪时的右侧）。  
 
-When the laser is installed and powered on, keeping the distance between the tool tip and the laser point as short as possible is advantageous in terms of interference prevention and CT (Cycle Time).
-Finally, the sensor installation position relative to the tool tip must be suitable for the specifications of the laser sensor being used (measurement range), and should be installed higher than the minimum specified distance.
+安装激光器并通电后，保持工具尖与激光点之间的距离尽可能短，有助于干扰防止和循环时间（CT）。
+最后，传感器安装位置相对于工具尖必须适合所使用的激光传感器的规格（测量范围），并应安装在高于最小规定距离的位置。
 
 
 
 {% hint style="warning" %}
-  It is recommended to mount the sensor bracket directly to the robot flange. In other words, install the mechanical structure in the following order: **Flange - Laser sensor and bracket - Shock sensor - Torch.**
+  建议将传感器支架直接安装到机器人法兰上。换句话说，机械结构的安装顺序为：**法兰 - 激光传感器和支架 - 冲击传感器 - 焊枪。**
 {% endhint %}
 
 
-### (2) Communication Setup
+### (2) 通信设置
 
-The laser sensor can be connected according to its specifications by referring to the following link.
-(Refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en-${cont_model}/README?cont_model=${cont_model}))
+可以根据激光传感器的规范通过参考以下链接进行连接。
+(参考 [${cont_model} - 工业通信](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/zh-${cont_model}/README?cont_model=${cont_model}))
 
-This page describes examples for selected sensors only.
+本页面仅描述所选传感器的示例。
 
-* Before proceeding with the setup, connect the sensor head, controller, communication unit (if applicable), and SMPS, and then supply power.
-(If the connection order is incorrect, sensing values may not be received. Therefore, ensure that the sensor is connected first during subsequent setups as well.)
+* 在进行设置之前，连接传感器头、控制器、通信单元（如果适用）和SMPS，然后供电。
+（如果连接顺序不正确，则可能无法接收传感值。因此，在后续设置中，请确保首先连接传感器。）
 
 
-#### Serial - Example: Keyence LK-G400
+#### 串行 - 示例：Keyence LK-G400
 
-First, configure the sensor controller settings.
+首先，配置传感器控制器设置。
 
-* Communication Speed Setting (Required)  
-1. Press and hold the `SET` key, then press the `[UP]` key to select `Enu`.
-2. Press the `ENT` key and use the `[RIGHT]` key to select function `A` (RS-232C).
-3. Press the `ENT` key to check the current value (A-b0 to b4; 9600 / 19200 / 38400 / 57600 / 115200).
+* 通信速度设置（必需）  
+1. 按住`SET`键，然后按`[UP]`键选择`Enu`。
+2. 按`ENT`键，使用`[RIGHT]`键选择功能` (A)`（RS-232C）。
+3. 按`ENT`键检查当前值（A-b0到b4；9600 / 19200 / 38400 / 57600 / 115200）。
 
-* Display Unit Setting (Optional)  
-1. Press and hold the `SET` key, then press the `[UP]` key to select `oUt-1`.
-2. Press the `ENT` key and use the `[RIGHT]` key to select function `G`.
-3. Press the `ENT` key and use the `[UP]` key to set the desired number of decimal places (G-0 to ; 0.01, 0.001, ...).
+* 显示单位设置（可选）  
+1. 按住`SET`键，然后按`[UP]`键选择`oUt-1`。
+2. 按`ENT`键，使用`[RIGHT]`键选择功能`G`。
+3. 按`ENT`键并使用`[UP]`键设置所需的小数位数（G-0；0.01, 0.001,...）。
 
-Navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting`.
+导航到`[F2: 系统] - 4: 应用参数 - 6: 激光点传感 - 1: 环境设置 ([F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting)`。
 
 ![](../../_assets/8_7_2.png)<br>
-*Figure 8.7.2. Laser Communication Setup (Keyence LK-G)*
+*图 8.7.2. 激光通信设置（Keyence LK-G）*
 </br>
 
-Select Keyence as the LPS brand to configure the settings.
-Once the setup is complete, verify that the value displayed in the **Sensing Distance (mm)** field matches the output value from the controller.
+选择Keyence作为LPS品牌进行设置。
+设置完成后，验证**传感距离（mm）**字段中显示的值是否与控制器的输出值匹配。
 
 <br/>
 
 
-#### EtherNet/IP - Example: Baumer OM-70
+#### EtherNet/IP - 示例：Baumer OM-70
 
-Connect the sensor to a PC and access the web interface.
-(The default fixed IP address is 192.168.0.250.)
+将传感器连接到PC并访问网页界面。
+（默认固定IP地址为192.168.0.250。）
 
 ![](../../_assets/8_7_3.png)<br>
-*Figure 8.7.3. Baumer Sensor Web Configuration*
+*图 8.7.3. Baumer传感器网页配置*
 </br>  
 
-Navigate to `Device Configuration` tab and set the communication method according to the intended purpose.
-At this time, enable only the method that matches the currently used communication protocol in the Process Interface section.
+导航到`设备配置`选项卡，并根据预期目的设置通信方式。
+此时，仅启用与当前在过程接口部分使用的通信协议相匹配的方法。
 
-If **Ethernet/IP** is used, complete the network settings accordingly. In the ${cont_model}, network ranges 0, 1, and 2 are used by default, so a different range must be assigned. (e.g. 192.168.10.250.)
+如果使用**Ethernet/IP**，请相应地完成网络设置。在${cont_model}中，默认使用网络范围0、1和2，因此必须分配不同的范围。（例如：192.168.10.250。）
 
 ![](../../_assets/8_7_4.png)<br>
-*Figure 8.7.4. Baumer Sensor Network Settings*
+*图 8.7.4. Baumer传感器网络设置*
 </br>   
 
-Afterward, proceed step by step by following the link below.
-Note that Hi6 does not support built-in Ethernet, so a communication card must be used ([Hi6 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en-Hi6/1-cifx-pci-communication/3-cifx-pci-settings-industrial-communication/3-EtherNet-IP/README?cont_model=Hi6)).
-From Hi7 and later, built-in Ethernet is supported, allowing communication to be established using the controller alone ([Hi7 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en-Hi7/2-ethernet-ip/4-scanner/README?cont_model=Hi7)).
+然后，按以下链接逐步进行。
+请注意，Hi6不支持内置以太网，因此必须使用通信卡（[Hi6 - 工业通信](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/zh-Hi6/1-cifx-pci-communication/3-cifx-pci-settings-industrial-communication/3-EtherNet-IP/README?cont_model=Hi6)）。
+从Hi7及以后，支持内置以太网，允许仅使用控制器建立通信（[Hi7 - 工业通信](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/zh-Hi7/2-ethernet-ip/4-scanner/README?cont_model=Hi7)）。
 
 
 
 ![](../../_assets/8_7_5.png)<br>
-*Figure 8.7.5. Baumer Sensor Signal Assignment*
+*图 8.7.5. Baumer传感器信号分配*
 </br>
 
-Once the above steps are completed, navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting - Signal tab`.
-Configure the input signals for the assigned blocks.
-You can then confirm that the distance (current value) is output as the sensor value. (Additional settings are required if sensor-to-distance mapping is needed.)
+完成上述步骤后，导航到`[F2: 系统] - 4: 应用参数 - 6: 激光点传感 - 1: 环境设置 - 信号选项卡 ([F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting - Signal tab)`。
+配置所分配块的输入信号。
+然后，可以确认距离（当前值）作为传感器值输出。（如果需要传感与距离的映射，则需要额外设置。）
 
 
-#### EtherNet/IP - Example: Keyence IL-300
+#### EtherNet/IP - 示例：Keyence IL-300
 
-* Refer to the manufacturer's manual and our manual to connect the sensor in the same manner as the Baumer sensor.
-As described above, the Ethernet connection method differs depending on whether an Hi6 or Hi7 controller is used.
+* 根据制造商手册和我们的手册，以与Baumer传感器相同的方式连接传感器。
+如上所述，Ethernet连接方法取决于使用的是Hi6还是Hi7控制器。

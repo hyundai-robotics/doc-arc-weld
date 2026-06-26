@@ -1,26 +1,26 @@
-﻿# 8.5.1 LVS Overview and Specifications
+# 8.5.1 LVS 概述与规格
 
 {% hint style="info" %}
-This feature is available during from version 60.30-03.
+该功能在版本 60.30-03 中可用。
 {% endhint %}
 
-This function performs real-time compensation for workpiece and jig errors by recognize the welding seam using an LVS(Laser Vision Sensor), thereby enabling seam tracking during welding.
+该功能通过使用 LVS（激光视觉传感器）识别焊缝，实现对工件和夹具误差的实时补偿，从而在焊接过程中进行焊缝追踪。
 
-The LVS must be directly connected to the robot's flange. The sensor detects the welding seam, and the robot's tool tracks the seam in real-time.
+LVS 必须直接连接到机器人的法兰。传感器检测焊缝，机器人的工具实时跟踪焊缝。
 
-In other words, through seam tracking, welding can still be performed even if the position of the welding target changes and deviates from the original reference points.
+换句话说，通过焊缝追踪，即使焊接目标的位置发生变化并偏离原始参考点，焊接仍然可以进行。
 
 
 ![](../../_assets/8_5_1.png)<br>
-*Figure 8.5.1. LVS Seam Tracking Flowchart*
+*图 8.5.1. LVS 焊缝追踪流程图*
 
 </br>
 
-#### Command
+#### 命令
 
-The LVS Seam Finding and Tracking function is executed through the `lvs` command, which can be entered by selecting `[F6: cmd. input] - arcweld - lvs` in the TP.
+LVS 焊缝寻找到追踪功能通过 `lvs` 命令执行，可以通过选择 `[F6: cmd. input] - arcweld - lvs` 来输入。
 
-The structure of the command is as follows:
+命令的结构如下：
 
 ```python
 lvs <function argument> cnd=<condition Number>, seam=<profile number to be sensed position>, sp=<pose variable of the sensed position>, mp=<pose variable of the master reference>, ms=<shift variable of the current sensing position relative to the master>
@@ -29,9 +29,9 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
 <table>
   <thead>
     <tr>
-      <th>Major Category</th>
-      <th>Sub Category</th>
-      <th>Meaning</th>
+      <th>主要类别</th>
+      <th>子类别</th>
+      <th>含义</th>
     </tr>
   </thead>
   <tbody>
@@ -40,163 +40,163 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
     </tr>
     <tr>
       <td style="text-align:left">laser_on</td>
-      <td style="text-align:left">Turn on the laser.</td>
+      <td style="text-align:left">打开激光。</td>
     </tr>
     <tr>
       <td style="text-align:left">laser_off</td>
-      <td style="text-align:left">Turn off the laser.</td>
+      <td style="text-align:left">关闭激光。</td>
     </tr>
     <tr>
       <td style="text-align:left">seam_find</td>
       <td style="text-align:left">
-        The seam position of the laser currently being sensed by the sensor is stored in the pose variable specified by the 'sp' argument of the command (robot/base coordinate system). <br>
-        Note that the orientation(RX, RY, RZ) is recorded as the tool's orientation at the time the command is executed.
+        传感器当前正在感知的激光焊缝位置被存储在命令的 'sp' 参数指定的位姿变量中（机器人/基坐标系）。 <br>
+        请注意，方向 (RX, RY, RZ) 在执行命令时记录为工具的方向。
       </td>
     </tr>
     <tr>
       <td style="text-align:left">seam_find_p</td>
       <td style="text-align:left">
-        The seam position of the laser currently being sensed by the sensor is stored in the pose variable specified by the 'sp' argument of the command (robot/base coordinate system). <br>
-        Note that the orientation(RX, RY, RZ) remains as the original pose variable, and only the X, Y, and Z values are updated. <br>
-        This is particularly useful when using functions such as 'intersection', where the intersection point is determined using three points to calculate the pose.
+        传感器当前正在感知的激光焊缝位置被存储在命令的 'sp' 参数指定的位姿变量中（机器人/基坐标系）。 <br>
+        请注意，方向 (RX, RY, RZ) 保持为原始位姿变量，仅更新 X、Y 和 Z 值。 <br>
+        在使用如 'intersection' 的函数时，这特别有用，通过三点计算位姿来决定交点。
       </td>
     </tr>
     <tr>
       <td style="text-align:left">auto_calib</td>
       <td style="text-align:left">
-        Performs auto-calibration between TCP and LVS.(refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/3_calibration?cont_model=${cont_model}">LVS Calibration</a>)
+        执行 TCP 和 LVS 之间的自动校准。（参考 <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/zh/8_Application_function/5_LVS_tracking/3_calibration?cont_model=${cont_model}">LVS 校准</a>）
       </td>
     </tr>
     <tr>
       <td style="text-align:left">search</td>
       <td style="text-align:left">
-        The starting point is found while moving in the +ToolX, -ToolX directions, and tracking preparation is performed. <br>
-        The detected starting point is stored in the pose variable specified by the 'sp' argument of the command.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">LVS search func.</a>)
+        在 +ToolX、-ToolX 方向移动时找到起始点，并进行追踪准备。 <br>
+        检测到的起始点存储在命令的 'sp' 参数指定的位姿变量中。
+        （参考 <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/zh/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">LVS 搜索功能</a>）
       </td>
     </tr>
     <tr>
       <td style="text-align:left">step_search</td>
       <td style="text-align:left">
-        The starting point or the start point of a multi-bead is found while moving int the +ToolX, -ToolX directions. <br>
-        The detected starting point is stored in the pose variable specified by the 'sp' argument of the command.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">LVS search func.</a>)
+        在 +ToolX、-ToolX 方向移动时找到起始点或多焊道的起始点。 <br>
+        检测到的起始点存储在命令的 'sp' 参数指定的位姿变量中。
+        （参考 <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/zh/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">LVS 搜索功能</a>）
       </td>
     </tr>
     <tr>
       <td style="text-align:left">track</td>
       <td style="text-align:left">
-        After the search is completed, the 'arcon' and 'weaving on' actions must be performed before executing. <br>
-        Tracking continues until 'arcoff' is encountered.
+        搜索完成后，必须在执行之前先执行 'arcon' 和 'weaving on' 操作。 <br>
+        跟踪将持续进行，直到遇到 'arcoff'。
       </td>
     </tr>
     <tr>
-      <td colspan="2">condition Number</td>
+      <td colspan="2">条件号</td>
       <td>
-        This is the condition number used to apply the the settings configured in the peroperties window of the lvs command. <br>
-        The properties window allows you to set search speed, search distance, queue interval, tracking limit, and sensing coordinate system(robot/base), among others.
+        这是用于应用在 lvs 命令的属性窗口中配置的设置的条件号。 <br>
+        属性窗口允许您设置搜索速度、搜索距离、队列间隔、追踪限制和感知坐标系统（机器人/基），以及其他参数。
       </td>
     </tr>
   <tr>
-      <td colspan="2">profile number to be sensed position</td>
+      <td colspan="2">要感知的位置的配置文件编号</td>
       <td>
-        This refers to the number corresponding to the sensing shape and sensing conditions registered by the user in the LVS controller. 
-        When the command is executed, the LVS controller loads the sensing shape and conditions associated with this number.
+        这指的是用户在 LVS 控制器中注册的与感知形状和感知条件相对应的编号。
+        当执行命令时，LVS 控制器加载与该编号关联的感知形状和条件。
       </td>
     </tr>
     <tr>
-      <td colspan="2">pose variable of the sensed position</td>
+      <td colspan="2">感知位置的位姿变量</td>
       <td>
-        The position corresponding to the current laser location is stored as a pose variable.
+        当前激光位置对应的位置被存储为位姿变量。
       </td>
     </tr>
     <tr>
-      <td colspan="2">pose variable of the master position</td>
+      <td colspan="2">主位置的位姿变量</td>
       <td>
-        This is the reference pose variable registered in master mode.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS Master mode func.</a>)
+        这是在主模式下注册的参考位姿变量。
+        （参考 <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/zh/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS 主模式功能</a>）
       </td>
     </tr>
     <tr>
-      <td colspan="2">shift variable of the current sensing position relative to the master</td>
+      <td colspan="2">当前感知位置相对于主位置的偏移变量</td>
       <td>
-        The shift of the current sensed position relative to the mp(master pose) is stored.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS Master mode func.</a>)
+        当前感知位置相对于 mp（主位姿）的偏移存储。
+        （参考 <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/zh/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS 主模式功能</a>）
       </td>
     </tr>
     <tr>
       <td colspan="2">opt</td>
       <td>
-        When using the auto_calib command, this value should be set to 0.
+        使用 auto_calib 命令时，此值应设置为 0。
       </td>
     </tr>
     <tr>
       <td colspan="2">find_flag</td>
       <td>
-        If a variable is set for this parameter, it will be set to 1 upon successful seam finding, and to 0 without any error if the seam finding fails.
+        如果为此参数设置了变量，则在成功找到焊缝时将其设置为 1，而在焊缝查找失败时将其设置为 0且没有任何错误。
       </td>
     </tr>
   </tbody>
 </table>  
 
 
-The tracking function using the ```lvs``` command can be used as follows:
+使用 ```lvs``` 命令的追踪功能可以如下使用：
 
 
 ![](../../_assets/8_5_2.png)<br>
-*Figure 8.5.2. Teaching Method for LVS Seam Tracking*
+*图 8.5.2. LVS 焊缝追踪的教学方法*
 
 
 ---
 
-#### LVS Function Specifications
+#### LVS 功能规格
 
-* General motion tracking functionality supported (Linear L interpolation, Circular C interpolation, and composite linear and circular segments)
-* Weaving tracking functionality supported (0.5Hz ~ 3Hz)
-* Positioner synchronized tracking functionality supported (SMOV segment)
-* Positioner synchronized + Weaving tracking functionality supported (0.5Hz ~ 3Hz)
+* 支持一般运动追踪功能（线性 L 插值、圆形 C 插值和复合线性与圆形段）
+* 支持织布追踪功能（0.5Hz ~ 3Hz）
+* 支持定位器同步追踪功能（SMOV 段）
+* 支持定位器同步 + 织布追踪功能（0.5Hz ~ 3Hz）
 
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Item</th>
-      <th style="text-align:left">LVS Manufacturer</th>
-      <th style="text-align:left">Repetition Accuracy</th>
-      <th style="text-align:left">Repetition Precision</th>
+      <th style="text-align:left">项目</th>
+      <th style="text-align:left">LVS 制造商</th>
+      <th style="text-align:left">重复精度</th>
+      <th style="text-align:left">重复精密度</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left" rowspan="3">seam_find / seam_find_p</td>
       <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
-      <td style="text-align:left">Left/Right : 0.1 mm (Reference +- 30mm height),  0.4mm<br>Height : 0.4mm (Reference +- 30mm height), 2mm<br>Front/Back : 0.4mm (Reference +- 30mm height), 1.5mm</td>
+      <td style="text-align:left">左右 : 0.1 mm (参考 ± 30mm 高度)， 0.4mm<br>高度 : 0.4mm (参考 ± 30mm 高度)， 2mm<br>前后 : 0.4mm (参考 ± 30mm 高度)， 1.5mm</td>
       <td style="text-align:left">0.05 mm</td>
     </tr>
     <tr>
       <td style="text-align:left">OXFORD (OSL-50)</td>
-      <td style="text-align:left">Left/Right : 0.4 mm (Reference +- 30mm height),  0.7mm<br>Height : 0.6mm (Reference +- 30mm height), 3mm<br>Front/Back : 0.6mm (Reference +- 30mm height), 2.5mm</td>
+      <td style="text-align:left">左右 : 0.4 mm (参考 ± 30mm 高度)， 0.7mm<br>高度 : 0.6mm (参考 ± 30mm 高度)， 3mm<br>前后 : 0.6mm (参考 ± 30mm 高度)， 2.5mm</td>
       <td style="text-align:left">0.2 mm</td>
     </tr>
     <tr>
       <td style="text-align:left">Full-v</td>
-      <td style="text-align:left">Left/Right : 0.6 mm (Reference +- 30mm height),  2mm<br>Height : 0.8mm (Reference +- 30mm height), 4.5mm<br>Front/Back : 0.6mm (Reference +- 30mm height), 4mm</td>
+      <td style="text-align:left">左右 : 0.6 mm (参考 ± 30mm 高度)， 2mm<br>高度 : 0.8mm (参考 ± 30mm 高度)， 4.5mm<br>前后 : 0.6mm (参考 ± 30mm 高度)， 4mm</td>
       <td style="text-align:left">0.35 mm</td>
     </tr>
     <tr>
       <td style="text-align:left" rowspan="3">track</td>
       <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
-      <td style="text-align:left">0.2mm (Linear)<br>0.4mm (weaving)<br>0.25mm (positioner synchronized)<br>0.5mm (weaving + positioner synchronized)</td>
+      <td style="text-align:left">0.2mm (线性)<br>0.4mm (织布)<br>0.25mm (定位器同步)<br>0.5mm (织布 + 定位器同步)</td>
       <td style="text-align:left">0.05 mm</td>
     </tr>
     <tr>
       <td style="text-align:left">OXFORD (OSL-50)</td>
-      <td style="text-align:left">0.3mm (Linear)<br>0.5mm (weaving)<br>0.4mm (positioner synchronized)<br>0.6mm (weaving + positioner synchronized)</td>
+      <td style="text-align:left">0.3mm (线性)<br>0.5mm (织布)<br>0.4mm (定位器同步)<br>0.6mm (织布 + 定位器同步)</td>
       <td style="text-align:left">0.2 mm</td>
     </tr>
     <tr>
       <td style="text-align:left">Full-v</td>
-      <td style="text-align:left">0.3mm (Linear)<br>0.6mm (weaving)<br>0.4mm (positioner synchronized)<br>0.7mm (weaving + positioner synchronized)</td>
+      <td style="text-align:left">0.3mm (线性)<br>0.6mm (织布)<br>0.4mm (定位器同步)<br>0.7mm (织布 + 定位器同步)</td>
       <td style="text-align:left">0.35 mm</td>
     </tr>
   </tbody>

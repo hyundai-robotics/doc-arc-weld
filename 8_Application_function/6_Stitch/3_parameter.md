@@ -1,39 +1,38 @@
-﻿# 8.6.3 STITCH Func. Parameter setting
+﻿# 8.6.3 STITCH Func. 参数设置
 
 
 ![](../../_assets/8_6_5.png)<br>
-*Figure 8.6.5. Stitch Welding Process Profile*
+*图 8.6.5. 缝焊过程剖面*
 
 
-[Figure 8.6.5] illustrates the stitch welding process. Based on this chart, you can configure the options for the `stitch` command.
+[图 8.6.5] 说明了缝焊过程。根据此图表，您可以配置 `stitch` 命令的选项。
 
 ![](../../_assets/8_6_6.png)<br>
-*Figure 8.6.6. Stitch Welding Condition Dialog Box1 (General)*
+*图 8.6.6. 缝焊条件对话框1 (常规)*
 
 ![](../../_assets/8_6_7.png)<br>
-*Figure 8.6.7. Stitch Welding Condition Dialog Box2 (Section)*
+*图 8.6.7. 缝焊条件对话框2 (段落)*
 
 
-[Figure 8.6.6] shows the screen accessed by placing the cursor on the `stitch` command and pressing the `[Property]` button on the left side of the TP screen. [Figure 8.6.7] is accessed by selecting the `[Section]` tab from the previous screen.
-The descriptions of the parameters for each figure are as follows:
+[图 8.6.6] 显示了通过将光标放置在 `stitch` 命令上并按 TP 屏幕左侧的 `[Property]` 按钮访问的屏幕。[图 8.6.7] 是通过从前一个屏幕选择 `[Section]` 标签访问的。
+每个图的参数描述如下：
 
-- Condition Number: Select from the list of conditions on the right
-- Description: Input using the soft keyboard
-- General
-  - (1) On delay Time: The time period during which the welding signal is turned on in advance
-  - (2) Off delay Time: The time period during which the welding signal is turned off in advance
-  - (3) Distance to Start: The length of the speed entry section before the stitch welding starts(On section)
-  - (4) Off Speed: Welding Speed during the non-overlapping (Off) section
+- 条件编号：从右侧的条件列表中选择
+- 描述：使用软键盘输入
+- 常规
+  - (1) 延时开启时间：焊接信号提前开启的时间段
+  - (2) 延时关闭时间：焊接信号提前关闭的时间段
+  - (3) 启动距离：缝焊开始前的速度输入段的长度（开启段）
+  - (4) 关闭速度：非重叠（关闭）段的焊接速度
 
-- Section
-  - (5) Section: Stitch welding condition  <br/>
-    Example. When stitch welding under the conditions of section 1 is performed for the specified count, stitch welding proceeds under the conditions of section 2
-  - (6) On Distance: Length of the welding section
-  - (7) Off Distance: Length of the non-overlapping (Off) section
-  - (8) Count: Number of stitch welding repetitions
-  - (9) On speed: Welding speed during the welding section
+- 段落
+  - (5) 段落：缝焊条件  <br/>
+    示例。当在段落 1 的条件下进行缝焊指定次数后，缝焊将在段落 2 的条件下进行。
+  - (6) 开启距离：焊接段的长度
+  - (7) 关闭距离：非重叠（关闭）段的长度
+  - (8) 次数：缝焊重复的次数
+  - (9) 开启速度：焊接段的焊接速度
 
 {% hint style="warning" %}
-- `(9) on speed`: The speed for the welding (ON) section in the stitch section is set as the step speed.
+- `(9) 开启速度`：缝段中的焊接（开启）段的速度设置为步幅速度。
 {% endhint %}
-

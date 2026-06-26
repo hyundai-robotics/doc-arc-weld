@@ -1,18 +1,17 @@
-﻿# 1.3.7 Arc Welding Operation Information
+﻿# 1.3.7 电弧焊操作信息
 
-This function allows you to monitor the operational information of arc welding. With this feature, you can easily check and manage the following aspects:
+此功能允许您监控电弧焊的操作信息。利用此功能，您可以轻松检查和管理以下方面：
 
-To use this feature, on TP, press `[pane layout] - select - arc operation info.` sequentially. 
-
+要使用此功能，在 TP 上，依次按下 `[pane layout] - 选择 - 电弧操作信息 ([pane layout] - select - arc operation info.)`。 
 
 ![](../../_assets/1_3_4.png)<br>
-*Figure 1.3.4. Arc Welding Operation Information Monitoring*  
+*图 1.3.4. 电弧焊操作信息监控*  
 
-| Item | Description |
+| 项目 | 描述 |
 | --- | --- |
-| **since init.** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **since system initialization**. |
-| **since pow.** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **since the system was powered on**. |
-| **last cycle** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **of the immediately previous cycle**. |
-| **current cycle** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **for the current cycle**. |
-| **overlap count(by cause)**  | Displays the number of overlaps that occur when the robot stops during welding, categorized by the cause of the stop. |
-| **clear(on fbt)** | When the Arc welding operation info window is activated, the **[clear]** button appears. Clicking this button will display the operation info clear dialog. You can click the button for the item you wish to clear to perform the desired action. |
+| **自初始化以来** | 显示焊接时间，以及**自系统初始化以来**的自动重试次数和自动焊丝伸出释放计数。 |
+| **自开机以来** | 显示焊接时间，以及**自系统开机以来**的自动重试次数和自动焊丝伸出释放计数。 |
+| **上一个循环** | 显示焊接时间，以及**上一个循环的**自动重试次数和自动焊丝伸出释放计数。 |
+| **当前循环** | 显示焊接时间，以及**当前循环的**自动重试次数和自动焊丝伸出释放计数。 |
+| **重叠计数（按原因）** | 显示机器人在焊接过程中停止时发生的重叠次数，并按停止原因分类。 |
+| **清除（在 fbt 上）** | 当电弧焊操作信息窗口激活时，**[清除]** 按钮会出现。点击此按钮将显示操作信息清除对话框。您可以点击希望清除的项目按钮以执行所需的操作。 |

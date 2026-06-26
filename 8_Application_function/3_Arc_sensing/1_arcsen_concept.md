@@ -1,25 +1,24 @@
-﻿# 8.3.1 Arc Sensing Overview
+﻿# 8.3.1 弧感应概述
 
-When weaving during arc welding, the distance between the torch and the base material changes.
-This change in distance causes a variation in wire resistance, which in turn alters the current flowing.
-In other words, by using the current change during the weaving section, the distance to be corrected in the left and right directions of the weaving plane can be calculated, allowing the seam to be tracked.
+在弧焊过程中，当焊枪在焊接时，焊枪与基材之间的距离会变化。
+这种距离的变化会导致电阻的变化，从而改变流动的电流。
+换句话说，通过使用在编织部分的电流变化，可以计算出在编织平面的左右方向上需要进行修正的距离，从而实现焊缝的跟踪。
 
-The height value at the welding start position is used as the reference, and the current value in the middle of the weaving section is used to correct the vertical direction during welding.
-Or, instead of using the starting position current reference value, **the user can directly input a custom current value** as the reference for correction.
+焊接起始位置的高度值作为参考，而编织部分中间的电流值用于在焊接过程中修正垂直方向。
+或者，用户可以直接输入自定义电流值作为修正的参考，而不是使用起始位置电流参考值。
 
-
-<!-- - 좌우 방향 보정 : 좌우 전류차 및 용접선 추출 알고리즘에 의해 로봇이 자동으로 용접선을 추종하여 이동합니다.
-- 상하 방향 보정 : 용접 시작시 높이 (CTWD)를 기준으로하여 이 값을 계속 유지합니다.
-                  만약 용접 도중 높이변화가 필요할 경우 job에 다음 명령어를 이용하여 사용자가 기준 전류값을 입력할 수 있습니다.  -->
+<!-- - 左右方向修正 : 通过左右电流差及焊接线提取算法，机器人自动跟踪焊接线移动。
+- 上下方向修正 : 以焊接开始时的高度 (CTWD) 为基准，持续保持该值。
+                  如果在焊接过程中需要高度变化，用户可以通过以下命令输入基准电流值。  -->
 
 
 ```py
-    move L, spd=30cm/min,accu=3,tool=0  # Entry step
-    move L, spd=30cm/min,accu=3,tool=0  # Welding start step
-    weaving on, cnd=1 # Set the 'Arc Sensing' function to 'Enable' in the [Property] window
+    move L, spd=30cm/min,accu=3,tool=0  # 进入步骤
+    move L, spd=30cm/min,accu=3,tool=0  # 焊接开始步骤
+    weaving on, cnd=1 # 在[属性]窗口中将“弧感应”功能设置为“启用”
     arc on, cnd=1
     move L, spd=30cm/min,accu=3,tool=0
-    _weaving.height_sensing_reference_current=300 # Set the height reference value to 300A
+    _weaving.height_sensing_reference_current=300 # 将高度参考值设置为300A
     move L, spd=30cm/min,accu=3,tool=0
     weaving off
     arc off
@@ -27,8 +26,7 @@ Or, instead of using the starting position current reference value, **the user c
 ```  
 
 ![](../../_assets/8_3_1.png)<br>
-*Figure 8.3.1. Arc Sensing Concept*
+*图 8.3.1. 弧感应概念*
 
-As shown in the figure, when the torch is tilted to the left or right, the current weavform changes, and this can be used to track the seam in the left and right directions.
-Additionally, the current at the middle of the weaving section can be used to correct the vertical direction.
-
+如图所示，当焊枪向左或向右倾斜时，电流波形会发生变化，这可以用于在左右方向上跟踪焊缝。
+此外，编织部分中间的电流可以用于修正垂直方向。

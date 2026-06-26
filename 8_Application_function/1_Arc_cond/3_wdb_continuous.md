@@ -1,26 +1,25 @@
-﻿# 8.1.3 Continuous Interpolation Change using WDB(Welding DataBase)
+﻿# 8.1.3 使用 WDB (焊接数据库) 进行连续插值变化
 
-
-For example, this function allows for linear interpolation of welding condition(such as current, voltage, welding speed, weaving width, and weaving frequency) while welding a workpiece where the butt gap is 5mm at the start and 25mm at the end.
-In this case, the continuous change of welding conditions (L interpolation) is performed in a linear fashion as shown below.
+例如，该功能允许在焊接工件时对焊接条件（如电流、电压、焊接速度、编织宽度和编织频率）进行线性插值，起始的对接间隙为 5mm，结束时为 25mm。
+在这种情况下，焊接条件的连续变化（L 插值）以如下方式以线性方式进行。
 
  
 ![](../../_assets/8_1_2.png)<br>
-*Figure 8.1.2. Linear Interpolation of Welding Conditions* 
+*图 8.1.2. 焊接条件的线性插值* 
 
 <br>
 
-Using the above items from DB 1 and DB 2, a JOB utilizing continuous interpolation change is as follows: 
+使用来自 DB 1 和 DB 2 的上述项目，利用连续插值变化的 JOB 如下： 
 
 ```python
 move L, spd=60%, ...
-move L, spd=10%, ...	    # Weld point(seam) Entry Step
+move L, spd=10%, ...	    # 焊接点（接缝）进入步骤
 arcon cnd=1
 move L, spd=40cm/min, ...
-arccond L, cnd=1  	    # Continuous interpolation change from Welding DB 1 -> 2
-move L, spd=30cm/min, ...    # In this step, the conditions linearly change from cnd(DB) 1 -> 2
-arccond L, cnd=2  	    # The next step requires arcof
+arccond L, cnd=1  	    # 从焊接数据库 1 -> 2 的连续插值变化
+move L, spd=30cm/min, ...    # 在此步骤中，条件线性变化从 cnd(DB) 1 -> 2
+arccond L, cnd=2  	    # 下一步骤需要 arcof
 arcoff
-move L, spd=10%, ...	    # Weld point(seam) Exit Step
+move L, spd=10%, ...	    # 焊接点（接缝）退出步骤
 end
 ```

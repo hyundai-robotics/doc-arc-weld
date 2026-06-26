@@ -1,56 +1,56 @@
-﻿# 6.2.1 Reference Point Type
+# 6.2.1 参考点类型
 
 
 ![](../../_assets/6_2_1.png)<br>
-*Figure 6.2.1. Weaving Coordinate System* 
+*图 6.2.1. 编织坐标系* 
 
 
 ### (1)	refp 1  
 
-The `refp1` command specifies the wall direction of the weaving coordinate system.
-If the wall direction is not specifically defined, the robot will use the vertical direction as the wall direction to perform the weaving opeartion.
-Therefore, if the wall direction is not vertical, this command should be used to set the wall direction.  
+`refp1` 命令指定编织坐标系的墙面方向。  
+如果墙面方向没有被具体定义，机器人将使用垂直方向作为墙面方向来执行编织操作。  
+因此，如果墙面方向不是垂直的，则应使用此命令设置墙面方向。  
 
-* **Usage**: Record a point on the surface of the workpiece in the wall direction as `refp 1`. <br> This point and the welding seam(straight line ⓢⓔ) can be used to determine the wall direction. <br> If only the `refp1` command is used, the other direction will be set by rotating the wall direction by the default pattern angle relative to the direction of movement.
+* **用法**：在墙面方向上记录工件表面的一点作为 `refp 1`。<br> 这点和焊接缝（直线 ⓢⓔ）可以用来确定墙面方向。<br> 如果仅使用 `refp1` 命令，其他方向将通过相对于运动方向的默认模式角度旋转墙面方向来设置。
 
 
 ### (2)	refp 2  
 
-The `refp2` command sets the side of the space when the weaving trajectory will be created, based on the plane that defines the wall direction.
+`refp2` 命令在创建编织轨迹时，基于定义墙面方向的平面设置空间的侧面。
 
-* **Usage**: Record any point in the space on the side where weaving will be performed as `refp 2`. <br> [Figure 6.2.2] shows an example of the weaving coordinate system when `refp 2` is recorded between two base materials. <br> When only the `refp 2` command is used, the Z-axis of the robot's coordinate system is set to the wall direction, and the other direction is determined accordingly.
+* **用法**：在将要进行编织的侧面上记录空间中的任意一点作为 `refp 2`。<br> [图 6.2.2] 显示了在记录 `refp 2` 时位于两个基材料之间的编织坐标系示例。<br> 当仅使用 `refp 2` 命令时，机器人的坐标系统的Z轴被设置为墙面方向，其他方向相应确定。
 
 
 ### (3)	refp 3  
 
-The `refp3` command specifies the direction of weaving in a stationary weaving operation, where the robot remains stationary and only the positioner rotates.  
+`refp3` 命令指定在静态编织操作中编织的方向，机器人保持静止，仅位置器旋转。  
 
-* **Usage**: Record any point along a straight line that indicates the direction of movement, starting from the robot's stationary position, as `refp 3`. <br> The robot will weave along a direction perpendicular to the line formed by the welding start point and `refp 3`. 
+* **用法**：从机器人的静止位置开始，记录指示移动方向的直线上的任意一点作为 `refp 3`。<br> 机器人将在焊接起始点和 `refp 3` 形成的直线垂直方向上进行编织。
 
-* Example: After setting refp3, specify the same positions for the welding start and end steps. The travel speed is set by time. <br> (Note: If `refp 3` is not specified, no weaving will occur, and an error will be triggered.)
+* 示例：设置 `refp3` 后，为焊接起始和结束步骤指定相同的位置。行进速度由时间设置。<br> （注意：如果没有指定 `refp 3`，则不会发生编织，并将触发错误。）
 
 
 ### (4)	refp 4  
 
-The `refp 4` command sets the angle between the wall direction and the other direction.
-[Figure 6.2.3.] shows an example when the angle is set to 90 degrees.
-When using this command to specify the angle, the value set in `Angle` will be ignored.
+`refp 4` 命令设置墙面方向和其他方向之间的角度。  
+[图 6.2.3.] 显示了当角度设置为90度时的示例。  
+使用此命令指定角度时，将忽略在 `角度 (Angle)` 中设置的值。
 
     
 ![](../../_assets/6_2_2.png)<br>
-*Figure 6.2.2. Weaving Direction and Reference Point* 
+*图 6.2.2. 编织方向和参考点* 
     
 
 <p align="center">
   <img src="../../_assets/6_2_3.png" width="65%"></img>
   <img src="../../_assets/6_2_3_1.png" width="65%"></img>
-  <em><p align="center">Figure 6.2.3. Usage of Different Reference Points</p></em>
+  <em><p align="center">图 6.2.3. 不同参考点的使用</p></em>
 </p>   
 
 
 {% hint style="info" %}
-  - refp 1: Ensure the distance from the welding seam is at least 5mm.
-  - refp 2: Ensure the distance from the wall direction plane is at least 5mm.
-  - refp 3: Ensure the distance from the start point is at least 5mm.
-  - refp 4: Set the angle when it is difficult to measure the angle of the weaving pattern.
+  - refp 1: 确保与焊接缝的距离至少为5mm。
+  - refp 2: 确保与墙面方向平面的距离至少为5mm。
+  - refp 3: 确保与起始点的距离至少为5mm。
+  - refp 4: 在难以测量编织模式的角度时设置角度。
 {% endhint %}

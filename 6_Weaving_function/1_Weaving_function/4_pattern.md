@@ -1,63 +1,63 @@
-﻿# 6.1.4 Default Pattern
+﻿# 6.1.4 默认模式
 
-Configure each parameter shown in the following figure. 
+配置下图所示的每个参数。 
   
 <p align="center">
   <img src="../../_assets/6_1_3.png" width="60%"></img>
   <img src="../../_assets/6_1_3_1.png" width="45%"></img>
-  <em><p align="center">Figure 6.1.3 Weaving Parameters according to Wall Direction</p></em>
+  <em><p align="center">图 6.1.3 根据墙壁方向的编织参数</p></em>
 </p>
 
-- **Left Distance(Wall Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
-- **Right Distance(Other Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
+- **左侧距离（墙壁方向距离）** : [2.5] mm (范围: 1.0 ~ 25.0)
+- **右侧距离（其他方向距离）** : [2.5] mm (范围: 1.0 ~ 25.0)
 
-### (1) Left Distance(Wall Direction Distance)
+### (1) 左侧距离（墙壁方向距离）
 
-Set the distance in the left (wall) direction.  
-
-
-### (2) Right Distance(Other Direction Distance)
-
-Set the distance in the right direction.  
+设置左侧（墙壁）方向的距离。  
 
 
-### (3)	Angle
+### (2) 右侧距离（其他方向距离）
 
-As shown in Figure 6.3, set the angle between the left (wall) direction and the right direction.
-The angle is measured from the left (wall) direction to the right direction.
-However, when using **REFP 4**, this angle will be ignored.
+设置右侧方向的距离。  
 
 
-### (4)	Offset Angle (refer to [Figure 6.1.3])
+### (3) 角度
 
-When the wall direction is set based on the torch posture, this setting defines the angle at which the weaving surface rotates relative to the direction of weaving progression (the dirction in Figure (3) marked with ⊙).
-When set to 0°, the angle between the left (wall) direction and the right direction is bisected.
-
-
-### (5) Wal Direction (refer to [Figure 6.1.3])
-
-Set the left (wall) direction to one of the following options: vertical (Figure (1)), horizontal (Figure (2)), or torch posture-based (Figure (3))
-Generally, the left (wall) direction is set to vertical, while the horizontal direction is typically used for weaving with a 180-degree angle on the plane.  
-
-For torch posture-based weaving, the left (wall) direction is set counterclockwise from the direction of weaving progression (the dirction in Figure (3) marked with ⊙).
-Torch posture-based weaving can accommodate all left (wall directions), and it can also adapt when the left (wall) direction changes during the weaving process.
+如图 6.3 所示，设置左侧（墙壁）方向与右侧方向之间的角度。
+该角度是从左侧（墙壁）方向到右侧方向测量的。
+然而，当使用 **REFP 4** 时，此角度将被忽略。
 
 
-### (6) Forward Angle
+### (4) 偏移角度（参见 [图 6.1.3]）
 
-This refers to the angle of the weaving vibration direction relative to the welding line. The adjustable range is -90.0 to 90.0 degrees.
-When set to 0°, the weaving will move perpendicular to the welding line.
+当墙壁方向基于焊枪姿态设置时，此设置定义编织表面相对于编织进展方向（图 (3) 中标记为 ⊙ 的方向）旋转的角度。
+设置为 0° 时，左侧（墙壁）方向与右侧方向之间的角度被二等分。
+
+
+### (5) 墙壁方向（参见 [图 6.1.3]）
+
+将左侧（墙壁）方向设置为以下选项之一：垂直（图 (1)）、水平（图 (2)）或基于焊枪姿态（图 (3)）
+通常，左侧（墙壁）方向设置为垂直，而水平方向通常用于平面上的 180 度角编织。  
+
+对于基于焊枪姿态的编织，左侧（墙壁）方向从编织进展方向逆时针设置（图 (3) 中标记为 ⊙ 的方向）。
+基于焊枪姿态的编织可以适应所有左侧（墙壁）方向，并且在编织过程中左侧（墙壁）方向变化时也可以调节。
+
+
+### (6) 前向角度
+
+这是指编织振动方向相对于焊接线的角度。可调范围为 -90.0 到 90.0 度。
+设置为 0° 时，编织将垂直于焊接线移动。
 
 
 ![](../../_assets/6_1_4.png)<br>
-*Figure 6.1.4. Weaving Forward Angle*
+*图 6.1.4. 编织前向角度*
 
     
-### (7)	Boundary Limitation
+### (7) 边界限制
 
-For weaving with a forward angle other than 0°, the weaving may exceed the boundary of the section at the start and end of the weaving area.  
-The boundary limitation setting allows you to choose whether the weaving should be confined within the section boundaries or if it can proceed without any restrictions beyond the section boundaries.
+对于前向角度不为 0° 的编织，编织可能在编织区域的开始和结束时超出节段的边界。  
+边界限制设置允许您选择编织是否应限制在节段边界内，或者是否可以在节段边界之外不受限制地进行。
 
  
 ![](../../_assets/6_1_5.png)<br>
-*Figure 6.1.5 Weaving Boundary Limitation* 
+*图 6.1.5 编织边界限制* 

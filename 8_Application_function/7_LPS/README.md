@@ -1,20 +1,17 @@
-﻿# 8.7 LPS(Laser Point Sensing)  
+# 8.7 LPS(Laser Point Sensing)  
 
 {% hint style="info" %}
-This function is supported in versions 70.00-00 and later.
+此功能在版本70.00-00及更高版本中受支持。
 {% endhint %}
 
-This function is used to achieve effects similar to touch sensing, such as detecting the weld start point, intermediate points, and end point.
-Since touch sensing requires the welding wire to make direct contact with the base material, it takes a longer execution time and may cause interference due to the welding torch.  
+此功能用于实现类似触觉传感的效果，例如检测焊接起点、中间点和终点。  
+由于触觉传感要求焊接电线与基材直接接触，因此执行时间较长，并可能因焊炬而导致干扰。  
 
-To overcome these limitations, the Laser Point Sensing (LPS) function using a 1D-type laser distance sensor is provided.
-By utilizing a laser, sensing time is reduced and interference constraints are minimized, allowing weld points to be detected more easily and quickly under simple conditions.  
+为了克服这些限制，提供了使用1D型激光距离传感器的激光点传感（LPS）功能。  
+通过利用激光，感应时间缩短，干扰约束最小化，使得在简单条件下更容易更快地检测焊点。  
 
-Once the laser sensor is installed on the tool flange equipped with the welding torch using a bracket, and tool-to-sensor calibration is performed once, the pose of the position indicated by the laser can be obtained easily.
-In addition to step detection, the pose of a weld point can be obtained easily regardless of the base material shape, without requiring complex condition settings.
-Similar to touch sensing, Master mode can be used, and when a workpiece is introduced, the amount of shift from the reference position can be calculated automatically.  
+一旦将激光传感器通过支架安装在配备焊炬的工具法兰上，并进行一次工具与传感器的标定，就可以轻松获取激光指示的位置姿态。  
+除了步检测外，焊点的姿态可以轻松获取，无需复杂的条件设置，无论基材形状如何。  
+与触觉传感类似，可以使用主模式，当工件被引入时，可以自动计算与参考位置的偏移量。  
 
-
-In the following sections, you will complete the sensor setup and begin using the LPS function.
-
-
+在接下来的部分中，您将完成传感器设置并开始使用LPS功能。

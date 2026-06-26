@@ -2,38 +2,38 @@
 
 ### Description
 
-```refp``` command is used to input reference points for the weaving motion. It inputs reference points such as weaving wall and entry direction.
+```refp``` 命令用于输入编织运动的参考点。它输入编织墙和进入方向等参考点。
 <br/>
 
 ### Syntax
 
 ```python
-refp <Reference Point Number>
-refp <Reference Point Number>,<Pose(Num)>
+refp <参考点编号>
+refp <参考点编号>,<姿态(数量)>
 ```  
 
 ### Parameter
 
 | Item | Meaning | Remarks |
 | --- | --- | --- |
-| **Reference Point Number** | Set the number for the type of reference points (1 ~ 8) | Variable |
-| **Pose** | Input the pose of the reference points (However, if a hidden pose is used, it will be omitted) | Variable |
+| **参考点编号** | 设置参考点类型的编号 (1 ~ 8) | Variable |
+| **姿态** | 输入参考点的姿态 (但是，如果使用了隐藏姿态，它将被省略) | Variable |
 
 
 ### Example
 
 ```python
-   refp 1,P1                   # Specify the wall direction of the weaving using P1
-   refp 1                      # Specify the wall direction of the weaving hidden pose
-   refp 2, (-1073.33, 739.01, 258.30, 0, 76, 23)  # Specify the position of the weaving surface
+   refp 1,P1                   # 使用 P1 指定编织的墙面方向
+   refp 1                      # 指定编织隐藏姿态的墙面方向
+   refp 2, (-1073.33, 739.01, 258.30, 0, 76, 23)  # 指定编织表面的位置信息
 ```  
 
 ### Details
-  Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)  
+  参见 [[6. Weaving Function]](../6_Weaving_function/README.md)  
 
 
 {% hint style="warning" %}
--	```refp``` command, likes ```move``` command, belongs to the step category.
-- When the ```refp``` command is entered using a user key, it takes the form of a hidden pose.
-- After setting the execution unit to Cmd or Step, you can move to the taught position.  
+-	```refp``` 命令与 ```move``` 命令一样，属于步骤类别。
+- 当使用用户键输入 ```refp``` 命令时，它将采用隐藏姿态的形式。
+- 在将执行单元设置为 Cmd 或 Step 之后，您可以移动到教导的位置。  
 {% endhint %}

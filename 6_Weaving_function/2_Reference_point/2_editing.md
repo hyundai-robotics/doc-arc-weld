@@ -1,43 +1,38 @@
-﻿# 6.2.2 Reference Point Edit
+﻿# 6.2.2 参考点编辑
 
-### (1) Recording Reference Points : Similar to the Move Command
+### (1) 记录参考点：类似于移动命令
 
-- ① **Move the Cursor**: Move the cursor to the location where the reference point will be recorded (typically just above the `weaving on` command step).
-- ② **Record the Reference Point Command**: Press `[F6: cmd. Input] - arcweld - refp` to record the reference point command.
-- ③ **Enter the Reference Point Number**
-- ④ Pose Method:
-  - The *Hidden Pose Method* records the current robot position.
-  - When using the *Pose Variable Input Method*, enter the pose variable after the reference point number.
+- ① **移动光标**：将光标移动到将要记录参考点的位置（通常位于 `weaving on` 命令步骤的正上方）。
+- ② **记录参考点命令**：按 `[F6: cmd. Input] - arcweld - refp` 记录参考点命令。
+- ③ **输入参考点编号**
+- ④ 位置方法：
+  - *隐藏位置方法* 记录当前机器人位置。
+  - 使用 *位置变量输入方法* 时，在参考点编号后输入位置变量。
 
+### (2) 移动到参考点
 
-### (2) Moving to the Reference Point
+参考点决定了编织模式，因此通常在回放时机器人不会移动到参考点。
+但是，在检查或修改参考点位置时，请遵循以下步骤。
 
-Reference points determine the weaving pattern, so typically, the robot does not move to the reference point during playback.
-However, when checking or modifying the reference point location, follow these steps.  
+- ① 将光标移动到参考点命令。
+- ② 按步进向前键移动到参考点。
 
-- ① Move the cursor to the reference point command.
-- ② Press the step forward key to move to the reference point.  
+移动时，插补类型设置为线性，移动速度、工具和加速度设置将基于编织部分的起始步骤中设定的条件。
 
-When moving, the interpolation type is set to linear, and the movement speed, tool, and acceleration settings will be based on the conditions set in the weaving section's start step.
+### (3) 修改参考点（用于隐藏位置方法）
 
+- ① 将光标移动到参考点命令。
+- ② 使用Jog键移动到参考点的新位置。
+- ③ 按 **[SHIFT] + [位置修改]** 键更改参考点的位置。
 
-### (3)	Modifying the Reference Point (for Hidden Pose Method)
+### (4) 删除参考点命令
 
-- ① Move the Cursor to the reference point command.
-- ② Use the Jog key to move to the new location for the reference point.
-- ③ Press **[SHIFT] + [위치수정]** key to change the reference point's location.
+- ① 将光标移动到参考点命令。
+- ② 按 **[SHIFT] + [DEL]** 删除参考点命令。
 
+### (5) 修改参考点编号
 
-### (4) Deleting the Reference Point Command
-
-- ① Move the cursor to the reference point command.
-- ② Press **[SHIFT] + [DEL]** to delete the reference point command.
-
-
-### (5)	Modifying the Reference Point Number
-
-- ① Move the cursor to the reference point command.
-- ② Press **[ENTER]** key.
-- ③ Input the new reference point number and press **[ENTER]**.
-- ④ Press **[ENTER]** again to confirm the change of the reference point number.
-
+- ① 将光标移动到参考点命令。
+- ② 按 **[ENTER]** 键。
+- ③ 输入新的参考点编号并按 **[ENTER]**。
+- ④ 再次按 **[ENTER]** 确认更改参考点编号。

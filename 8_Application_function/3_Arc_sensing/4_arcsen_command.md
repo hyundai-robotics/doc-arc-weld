@@ -1,37 +1,35 @@
-﻿# 8.3.4 Setting Weaving and Arc Sensing Conditions Using Commands
+# 8.3.4 使用命令设置编织和弧传感条件
 
-### (1) Necessity of Functionality
+### (1) 功能的必要性
 
-Weaving and arc sensing conditions cannot be automatically adjusted during operation. <br>
-Therefore, the conditions can be modified using commands, and the changes will only be effective within the specific weaving section.  
+编织和弧传感条件在操作期间无法自动调整。 <br>
+因此，可以使用命令修改条件，这些更改只对特定的编织部分有效。  
 
+### (2) 使用命令的方法  
 
-### (2) Method of Using Commands  
+要插入命令，请在手动模式下输入 `[F6: cmd input] - var_io - assignment`。然后，将光标移至左侧变量并选择 `[F3: System Variables] - arcweld - _weaving.{parameter}`，在这里您可以输入所需的值。 <br>
 
-To insert the command, enter `[F6: cmd input] - var_io - assignment` while in manual mode. Then, move the cursor to the left variable and select `[F3: System Variables] - arcweld - _weaving.{parameter}`, where you can input the desired value.  <br>
-
-The entered command will appear in the following format:  
+输入的命令将以以下格式出现：  
 ```e.g. _weaving.frequency=2.0```  
 
-
-- Example)
+- 示例)
 ```py
     weaving on, cnd=1	                # Weaving Command (cmd)
     arcon cnd=1
     move L,S=5mm/s,accu=1,tool=2
-    _weaving.right_distance = 4	        # Set the wall direction dist using a cmd
-    _weaving.left_distance = 3	        # Set the wall direction dist using a cmd
-    MOVE L,S=5mm/s,A=1,T=2	            # parameter will be modified starting from this section
+    _weaving.right_distance = 4	        # 使用命令设置墙壁方向距离
+    _weaving.left_distance = 3	        # 使用命令设置墙壁方向距离
+    MOVE L,S=5mm/s,A=1,T=2	            # 参数将从此部分开始修改
 ```
 
-The input values for each command are restricted within the range of condition settings defined in the condition file.  
-For parameters that are not explicitly specified by the command, the conditions set in the weaving command will be used.  
+每个命令的输入值限制在条件文件定义的条件设置范围内。  
+对于命令未明确指定的参数，将使用在编织命令中设置的条件。  
 
-The applicability of the settings for each element of _weaving to the functionality is as follows:  
+_weaving 的每个元素的设置对功能的适用性如下：  
 
 <br>
 
-| Variable Name | Immediately after Weaving Cmd | Weaving without Arc sensing | Weaving with Arc sensing | Continuous Change of Welding Conditions |
+| 变量名称 | 编织命令之后立即 | 没有弧传感的编织 | 具有弧传感的编织 | 持续变化焊接条件 |
 |-------|-------|-------|-------|-------|
 | weave | O | O | O | O |
 | frequency | O | O | O | O |
@@ -52,49 +50,49 @@ The applicability of the settings for each element of _weaving to the functional
 | asymetric_sensing_ratio | O | - | O | O |
 
 
-<!-- ### (3) 위빙 파라미터 명령어 종류 및 내용은 다음 링크를 참고해주세요.
+<!-- ### (3) 编织参数命令种类及内容请参考以下链接。
 
-[로봇언어 HRScript_weaving문](https://hrbook-hrc.web.app/#/view/doc-hrscript/ko/10-etc/3-sysvar/_weaving)   -->
+[机器人语言 HRScript_weaving文](https://hrbook-hrc.web.app/#/view/doc-hrscript/ko/10-etc/3-sysvar/_weaving)   -->
 
 
 
 <!-- 
-(2)에서 설명한 각 파라미터 종류와 설명은 
+(2)中说明的各参数种类和说明是 
 
-weave: 위빙 패턴
+weave: 编织模式
 
-frequency: 위빙 주파수
+frequency: 编织频率
 
-left_distance: 벽방향 거리
+left_distance: 墙壁方向距离
 
-right_distance: 타방향 거리
+right_distance: 另一方向距离
 
-angle: 기본패턴의 각도
+angle: 基本模式的角度
 
-wall_direction: 기본패턴의 벽방향
+wall_direction: 基本模式的墙壁方向
 
-forward_angle: 진행각도
+forward_angle: 前进角度
 
-boundary_limit: 경계제한 사용 여부
+boundary_limit: 是否使用边界限制
 
-segment_time_1: 이동시간 사용 시 각 구간의 시간
+segment_time_1: 使用移动时间时各区间的时间
 
-Dwesegment_delay_1: 이동시간 사용 시 위빙만 정지하는 시간
+segment_delay_1: 使用移动时间时编织仅停止的时间
 
-height_sensing_mode: 아크 센싱 중 상하센싱 실행방법
+height_sensing_mode: 弧传感中上下传感执行方法
 
-side_sensing_sensitivity: 좌우방향 아크 센싱 민감도
+side_sensing_sensitivity: 左右方向弧传感敏感度
 
-height_sensing_sensitivity: 상하방향 아크 센싱 민감도
+height_sensing_sensitivity: 上下方向弧传感敏感度
 
-BaseCur: 상하센싱 기준전류
+BaseCur: 上下传感基准电流
 
-이 값을 설정하여 토치와 모재간 거리를 설정할 수 있습니다. 
-토치와 모재의 거리를 더 멀리 하려면 이 값을 낮추십시오. 
-반대로 토치와 모재를 가까이 하려면 이 값을 높이십시오.
+此值设置可用于设置焊炬和工件之间的距离。 
+要使焊炬和工件之间的距离更远，请降低此值。 
+相反，要使焊炬和工件更近，请提高此值。
 
-StickOut: 아크 센싱 중 상하방향으로 토치를 이동시키기 위한 값. 입력된 mm만큼 토치 높이가 변경됩니다. +값 입력 시 토치와 모재간 거리가 멀어지고 -값 입력 시 토치가 모재와 가까워 집니다.
+StickOut: 在弧传感中上下方向移动焊炬的值。 输入的mm数量将改变焊炬高度。 输入正值时，焊炬和工件之间的距离变远，输入负值时，焊炬与工件之间的距离变近。
 
-asymetric_sensing_ratio: 좌우 비대칭 센싱 비율
+asymetric_sensing_ratio: 左右不对称传感比率
 
  -->

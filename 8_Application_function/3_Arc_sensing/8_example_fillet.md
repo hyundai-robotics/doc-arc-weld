@@ -1,38 +1,36 @@
-﻿# 8.3.8 Fillet Welding Example Using Touch Sensing and Arc Sensing
+# 8.3.8 钢焊接示例使用触觉传感和电弧传感
 
-In general, the Arc Sensing function is used together with the touch sensing function. Touch sensing is used to accurately detect the welding start and end positions, while arc sensing is used to determine the correct welding direciton during movement after welding has started.  
+一般来说，电弧传感功能与触觉传感功能一起使用。触觉传感用于准确检测焊接的起始和结束位置，而电弧传感用于在焊接开始后确定正确的焊接方向。
 
-The first example demonstrates a basic fillet welding operation.
+第一个示例演示了基本的钢焊接操作。
 
-The work sequence is as follows:
+工作顺序如下：
 
-1) Set the weaving conditions, arc sensing conditions, and welding conditions.  
-2) Use touch sensing to search for the welding start position.
-3) Move to a position near the welding end area, and then use touch sensing to search for the welding end position.
-4) Perform the welding operation from the welding start position using the weaving command and the arc welding command.
-
+1) 设置摆动条件、电弧传感条件和焊接条件。  
+2) 使用触觉传感搜索焊接起始位置。  
+3) 移动到接近焊接结束区域的位置，然后使用触觉传感搜索焊接结束位置。  
+4) 从焊接起始位置执行焊接操作，使用摆动命令和电弧焊接命令。  
 
 ![](../../_assets/8_3_13.png)<br>
-*Figure 8.3.13 Fillet Touch Sensing and Arc Sensing*
+*图 8.3.13 钢焊接触觉传感和电弧传感*  
 
+示例程序如下所示。
 
-The example program is shown below.
-
-~~~~~~~Arc sensing program : 0001.JOB~~~~~~~~~~~~~~~ 
-' Arc sensing program  
-S1   move P,spd=60%,accu=3,tool=1              ' 1: Motion start point  
-S2   move L,spd=30%,accu=3,tool=1              ' 2: Touch sensing position for welding end point  
+~~~~~~~电弧传感程序 : 0001.JOB~~~~~~~~~~~~~~~  
+' 电弧传感程序  
+S1   move P,spd=60%,accu=3,tool=1              ' 1: 运动起始点  
+S2   move L,spd=30%,accu=3,tool=1              ' 2: 焊接结束点的触觉传感位置  
      var p10=cpo()  
      var p1=cpo()  
-     touchsen cnd=1,crd="robot", dir=["x","-z"], pose=p10   ' 3: Touch sensing for welding end point. Position stored in P10  
-S3   move L,spd=30%,accu=3,tool=1              ' 4: Touch sensing position for welding start point  
-     touchsen cnd=1,crd="robot",dir=["-x","-z"], pose=p1    ' 5: Touch sensing for welding start point. Position stored in P1  
-S4   move L,p1,spd=20%,accu=3,tool=1            ' 6: Move to welding start point  
-     weaving on, cnd=1                          ' 7: Start weaving and arc sensing  
-     arcon cnd=1                                ' 8: Start welding  
-S5   move L,p10,spd=60cm/min,accu=3,tool=1      ' 9: Move to welding end point  
-     arcoff                                     '10: End welding  
-     weaving off                                '11: End weaving and arc sensing  
-S6   move P,spd=60%,accu=3,tool=1               '12: Motion end point  
+     touchsen cnd=1,crd="robot", dir=["x","-z"], pose=p10   ' 3: 焊接结束点的触觉传感。位置存储在 P10  
+S3   move L,spd=30%,accu=3,tool=1              ' 4: 焊接起始点的触觉传感位置  
+     touchsen cnd=1,crd="robot",dir=["-x","-z"], pose=p1    ' 5: 焊接起始点的触觉传感。位置存储在 P1  
+S4   move L,p1,spd=20%,accu=3,tool=1            ' 6: 移动到焊接起始点  
+     weaving on, cnd=1                          ' 7: 开始摆动和电弧传感  
+     arcon cnd=1                                ' 8: 开始焊接  
+S5   move L,p10,spd=60cm/min,accu=3,tool=1      ' 9: 移动到焊接结束点  
+     arcoff                                     '10: 结束焊接  
+     weaving off                                '11: 结束摆动和电弧传感  
+S6   move P,spd=60%,accu=3,tool=1               '12: 运动结束点  
      END  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

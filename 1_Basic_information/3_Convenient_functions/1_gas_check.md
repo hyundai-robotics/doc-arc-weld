@@ -1,40 +1,39 @@
-﻿# 1.3.1 Gas Check, Wire Inching, and Wire Retract
+﻿# 1.3.1 气体检查、线材微进和线材回收
 
-This describes the functionality for controlling the shield gas valve and the wire feeder motor in an arc welding system. You can check the current shield gas flow rate using the gas check function. The inching and reverse inching(retreat) functions let you adjust the length of the wire protruding from the welding torch.
+这描述了在弧焊系统中控制保护气体阀门和送丝电机的功能。您可以使用气体检查功能检查当前的保护气体流量。微进和反向微进（回撤）功能让您调整从焊接喷嘴突出线材的长度。
 
-Here are the functions and how to use them: 
+以下是功能及其使用方法： 
 
-
-### Gas Check
+### 气体检查
 
 | Item      | Description                     |
 | ------- | ---------------------- |
 | **HotKey** | `[Shift]+[1]`          |
-| **Dedicated Key** | User Key `GAS CHK`         |
-| **Function**  | Open the shield gas valve to verify the gas flow rate |
+| **Dedicated Key** | 用户键 `GAS CHK`         |
+| **Function**  | 打开保护气体阀门以验证气体流量 |
 
 
-### Wire Inching
+### 线材微进
 
 | Item      | Description                          |
 | ------- | --------------------------- |
 | **HotKey** | `[Shift]+[2]`               |
-| **Dedicated Key** | User Key `inching`              |
-| **Function**  | Feed the wire forward out of the torch to adjust its length <li>Slow Inching: Press the key for less than 3 seconds</li> <li>Fast Inching: Press the key for 3 seconds or more</li> |
+| **Dedicated Key** | 用户键 `inching`              |
+| **Function**  | 将线材前送出焊枪以调整其长度 <li>慢速微进: 按键少于 3 秒</li> <li>快速微进: 按键 3 秒或更长时间</li> |
 
 
-### Wire Retract
+### 线材回收
 
 | Item      | Description                 |
 | ------- | ------------------ |
 | **HotKey** | `[Shift]+[3]`      |
-| **Dedicated Key** | User Key `retract`     |
-| **Function**  | Rewind the wire to adjust its length <li>Slow Inching: Press the key for less than 3 seconds</li> <li>Fast Inching: Press the key for 3 seconds or more</li> |
+| **Dedicated Key** | 用户键 `retract`     |
+| **Function**  | 将线材回绕以调整其长度 <li>慢速微进: 按键少于 3 秒</li> <li>快速微进: 按键 3 秒或更长时间</li> |
 
 
-### Inching Speed Setting
+### 微进速度设置
 
- >- Navigate to `[F2: System] - 4: Application parameter - 2: Arc welding`
- >- Within the Arc welding settings menu, Set your values for both low and high speeds: **Inching speed(%): Low=[---]%, High=[---]%**
- >- The speed is displayed as a percentage of the maximum inching speed.
- >- Depending on your specific welder model, changes to the inching speed may not be reflected.
+ >- 导航到 `[F2: 系统] - 4: 应用参数 - 2: 弧焊 ([F2: System] - 4: Application parameter - 2: Arc welding)`
+ >- 在弧焊设置菜单中，设置您的低速和快速速度值: **微进速度(%): 低=[---]%, 高=[---]%**
+ >- 速度以最大微进速度的百分比显示。
+ >- 根据您的具体焊机型号，对微进速度的更改可能不会反映出来。

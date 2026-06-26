@@ -1,1 +1,1 @@
-﻿# ${cont_model} Robot Controller Functional Manual - Arc Welding
+# ${cont_model} Robot Controller Functional Manual - 弧焊

@@ -1,72 +1,69 @@
-﻿# 5.5.2 Welding Auxiliary condition - Restart  
+# 5.5.2 焊接辅助条件 - 重新启动  
 
-During arc welding, the process may be interrupted due to factors such as arc failure, exceeding the limits of welding current and voltage, gas pressure drop, wire shortage, cooling water errors, etc.
-When welding is restarted from the point where the process was interrupted, there is a risk of leaving un-welded areas.
-In such cases, the restart function compensates for the un-welded sections by performing overlap welding.
+在电弧焊接过程中，可能由于电弧故障、焊接电流和电压超限、气体压力下降、焊丝短缺、冷却水错误等因素导致过程被中断。  
+当从中断的地方重新开始焊接时，存在留下未焊接区域的风险。  
+在这种情况下，重新启动功能通过进行重叠焊接来补偿未焊接部分。  
 
-After welding is interrupted, the system automatically restarts or, after eliminating the cause of the interruption, resumes operation.
-It moves backward along the weld line for a certain distance and then resumes welding. This results in an overlap region near the point where welding was stopped, preventing un-welded areas from being created.
+焊接中断后，系统会自动重新启动，或在消除中断原因后恢复操作。  
+它会沿焊接线向后移动一定距离，然后恢复焊接。这将在焊接停止的点附近产生一个重叠区域，防止产生未焊接区域。  
 
-This section describes the restart conditions and overlap settings.
+本节描述了重新启动条件和重叠设置。
 
- 
 ![](../../_assets/5_5_3.png)<br>
-*Figure 5.5.3. Welding Auxiliary condition (Restart) Setting(e.g. EWM)*
+*图 5.5.3. 焊接辅助条件（重新启动）设置（例如 EWM）*
 
 
-### (1)	Restart Repetition: [ 3 ] times (Range: 0 ~ 9)   
-Specifies the maximum number of restart attempts within the same welding section. If this count is exceeded, the error "**E1274 Re-startup count exceeded within the same welding section**" will occur.  
+### (1) 重新启动重复次数: [ 3 ] 次（范围: 0 ~ 9）  
+指定在同一焊接部分内的最大重新启动尝试次数。如果超过此计数，将出现错误“**E1274 在同一焊接部分内重新启动计数超过**”。  
 
-### (2)	Restart Condition: [ 0 ] (Range: 0 ~ 32)   
-Specifies the welding condition number to be used during the overlap region when restarting the welding. The welding will be performed with the specified initial welding conditions(current, voltage, etc.)  
-If the input condition number is "0", welding will proceed with the current welding start conditions from the point of overlap.
+### (2) 重新启动条件: [ 0 ]（范围: 0 ~ 32）  
+指定在重叠区域重新启动焊接时要使用的焊接条件编号。焊接将依据指定的初始焊接条件（电流、电压等）进行。  
+如果输入的条件编号为“0”，焊接将从重叠点的当前焊接起始条件继续进行。  
 
-### (3)	Overlap distance: [ 5 ] mm (Range: 0.0 ~ 99.9)  
-Specifies the length of the overlap (overlap distance) when restarting the welidng. The robot will move back by the specified distance and then resume welding.  
+### (3) 重叠距离: [ 5 ] 毫米（范围: 0.0 ~ 99.9）  
+指定重新启动焊接时的重叠长度（重叠距离）。机器人将向后移动指定的距离，然后恢复焊接。  
 
-### (4)	Moving Speed: [ 50 ] mm/sec (Range: 1.0~150.0)  
-Specifies the speed at which the torch is moved to the overlap start position.
-This corresponds to the movement speed in the section from ③ to ④ in [figure 5.5.4]  
+### (4) 移动速度: [ 50 ] 毫米/秒（范围: 1.0~150.0）  
+指定焊炬移动到重叠起始位置的速度。  
+这对应于从③到④部分的运动速度[图 5.5.4]  
 
-### (5)	Welding Speed: [ 50 ] cm/min (Range: 10.0~999.0)  
-Specifies the robot's speed while performing overlap welding from the start to the end position. This is the speed during the overlap region in section ④ of [Figure 5.5.4].
+### (5) 焊接速度: [ 50 ] 厘米/分钟（范围: 10.0~999.0）  
+指定机器人在从起始位置到结束位置进行重叠焊接时的速度。这是[图 5.5.4]中④部分的重叠区域内的速度。  
 
-When an error occurs during welding from the start point to the end point (⑤), and if the overlap condition is semi-automatic, the user must identify the cause of the welding stop and address the error (①).
-After resolving the issue (②), pressing the `Start` button (③) will resume welding.
-The robot will automatically move to the overlap start position at the speed set by the `Moving speed` (④).
-Once at the position, it will perform overlap welding at the `Welding speed` for the specified distance, and then continue welding at the normal speed.
-However, if an error occurs during the overlap welding, the robot will not repeat the overlap but will directly start welding from that point onward.
+当在从起始点到结束点（⑤）焊接过程中发生错误，并且如果重叠条件为半自动，用户必须识别焊接停止的原因并处理错误（①）。  
+在解决问题后（②），按下`开始 (Start)`按钮（③）将恢复焊接。  
+机器人将以`移动速度 (Moving speed)`（④）设定的速度自动移动到重叠起始位置。  
+一旦到达该位置，将以`焊接速度 (Welding speed)`进行指定距离的重叠焊接，然后以正常速度继续焊接。  
+但是，如果在重叠焊接过程中发生错误，机器人将不再重复重叠，而是直接从该点开始焊接。  
 
 ---
 
 ![](../../_assets/5_5_4.png)<br>
-*Figure 5.5.4. Restart Function Sequence*
+*图 5.5.4. 重新启动功能顺序*
 
 
-### (6)	Overlap Condition Settings  
-The lower section of [Figure 5.5.3] defines how to perform overlap welding when the welding process is interrupted due to reasons such as Arc Off (arc failure), exceeding limits, Gas Off (gas pressure drop), Wire Off (wire shortage), or Coolant Off (coolant error) during arc welding.
-    
--  A. Auto  
-    This setting performs overlap automatically. It can only be configured if welding has been interrupted due to arc stoppage.
-    In the event of an arc stoppage during welding, the process does not stop. Instead, overlap welding is carried out based on the method set in the restart section of the welding auxiliary conditions, after which the main process resumes.
-    However, if the arc stops again during the overlap welding section, welding will resume from that position immediately.  
+### (6) 重叠条件设置  
+[图 5.5.3]的下半部分定义了在由于电弧关闭（电弧故障）、超出限值、气体关闭（气体压力下降）、焊丝关闭（焊丝短缺）或冷却液关闭（冷却液错误）等原因导致焊接过程被中断时如何进行重叠焊接。  
 
-- B. Semi-Auto  
-    This setting allows the user to perform overlap manually. If issues such as Arc Off, exceeding limits, gas pressure drop, wire shortage, or coolant error occur, welding is interrupted, ant the robot is also halted.
-    After addressing the cause, the user must press `Start`, upon which overlap welding will be performed based on the method set in the restart section of the welding auxiliary conditions, and then main process resumes.
-    At this point, if the robot is moved to a different location using the jog function and `Start` is pressed, it will move directly to the overlap welding position and resume welding.
+- A. 自动  
+此设置会自动执行重叠焊接。只有在因电弧停顿导致焊接中断时才能进行配置。  
+在焊接过程中发生电弧停顿时，过程不会停止。相反，重叠焊接将根据焊接辅助条件的重新启动部分中设置的方法进行，之后主要过程将恢复。  
+然而，如果在重叠焊接段期间电弧再次停止，焊接将会立即从该位置恢复。  
 
-- C. Ignore  
-    This setting ignores errors. When this setting is enabled, the robot continues the process without stopping even if welding is interrupted. In other words, the process will proceed regardless of arc stoppage or exceeding the set limits.
-    This method can only be applied when welding has been interrupted due to arc stoppage or exceeding limits, and the process is being restarted.
+- B. 半自动  
+此设置允许用户手动执行重叠焊接。如果发生电弧关闭、超出限值、气体压力下降、焊丝短缺或冷却液错误等问题时，焊接将被中断，机器人也会停止。  
+在处理完原因后，用户必须按下`开始 (Start)`，此时将根据焊接辅助条件的重新启动部分设置的方法执行重叠焊接，然后主要过程恢复。  
+此时，如果用户使用手动功能将机器人移至其他位置并按下`开始 (Start)`，则将直接移动到重叠焊接位置并继续焊接。  
 
-- D. Disable  
-    This setting prohibits overlap welding. If issus such as arc stoppage, exceeding limits, gas pressure drop, wire shortage, or coolant error occur, welding is interrupted and the robot is halted.
-    After addressing the cause, the user must press `Start`, overlap welding will not be performed, and welding will begin from the position where the robot was stopped.
+- C. 忽略  
+此设置会忽略错误。当启用此设置时，即使焊接被中断，机器人也会继续过程。换句话说，无论电弧停止或超出设定限值，过程都会继续。  
+此方法只能适用于因电弧停止或超出限值导致焊接过程被中断，并且过程正在重新启动。  
+
+- D. 禁用  
+此设置禁止进行重叠焊接。如果发生如电弧停止、超出限值、气体压力下降、焊丝短缺或冷却液错误等问题，焊接将被中断，机器人将停止。  
+在处理原因后，用户必须按下`开始 (Start)`，将不执行重叠焊接，并将从机器人停止的位置开始焊接。  
 
 
 {% hint style="warning" %}
-  When moving the robot, pressing the step forward/backward keys will reset the restart information, prventing overlap overlap from being performed. Only jog movements should be used to move the robot.
+  移动机器人时，按下前进/后退键将重置重新启动信息，阻止重叠焊接的执行。只能使用手动移动来移动机器人。
 {% endhint %}
-
-

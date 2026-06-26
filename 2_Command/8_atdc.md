@@ -1,7 +1,7 @@
-﻿# 2.8 atdc
+# 2.8 atdc
 
 ### Description 
 
-```atdc``` command is used to execute the automatic tool data calibration function.  
+```atdc``` 命令用于执行自动工具数据校准功能。  
 
-For detailed instructions on how to use this command, please refer to the Tool Data Calibration manual.
+有关如何使用此命令的详细说明，请参阅工具数据校准手册。

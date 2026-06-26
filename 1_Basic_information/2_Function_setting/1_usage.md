@@ -1,13 +1,12 @@
-﻿# 1.2.1 Arc Welding application settings
+﻿# 1.2.1 弧焊应用设置
 
-(1) Depending on the Robot model, the Arc welding function might not be active. If in this the case, follow the steps below to enable. (Note: Engineer authority is required to set up the Arc welding function)
+(1) 根据机器人型号，弧焊功能可能未激活。如果是这种情况，请按照以下步骤启用。(注：设置弧焊功能需要工程师权限)
 
-(2) In manual mode, press `[F2: System] - 5: Initialization - 3: Usage setting`. A dialog box will appear, as shown in [Figure 1.2.1.], allowing you to configure the robot's application, the welder you want to use, user keys, and I/O signal assignments.
+(2) 在手动模式下，按`[F2: 系统] - 5: 初始化 - 3: 用途设置 ([F2: System] - 5: Initialization - 3: Usage setting)`。对话框将出现，如[图 1.2.1.]所示，允许您配置机器人的应用、您想使用的焊机、用户键和 I/O 信号分配。
 
-(3) [Figure 1.2.1] shows an active Arc welding steps, where the welder number in welder information has been selected as **No.4(Fronius)**. From this screen, pressing **welder setting** will take you to a dialog box where you can configure the conditions for the desired welder.
+(3) [图 1.2.1] 显示了激活的弧焊步骤，其中焊机信息中的焊机编号已选择为 **No.4(Fronius)**。在此屏幕上，按 **焊机设置** 将带您到一个对话框，在该对话框中可以配置所需焊机的条件。
 
-(4) For detailed settings of the welder characteristic file, please refer to [4. Arc Welder Settings](../../4_Setting/README.md).
-
+(4) 有关焊机特性文件的详细设置，请参阅 [4. 弧焊机设置](../../4_Setting/README.md)。
 
 ![](../../_assets/1_2_1.png)<br>
-*Figure 1.2.1. Usage Setting Dialog*
+*图 1.2.1. 用途设置对话框*

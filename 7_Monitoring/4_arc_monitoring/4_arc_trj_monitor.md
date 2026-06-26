@@ -1,17 +1,16 @@
-﻿# 7.4.4 Arc Trajectory Monitoring
+﻿# 7.4.4 弧轨迹监测
 
 
-To use this function, first navigate to `[F2: System] - 4: Application parameter - 2: Arc welding` and set the **"Arc Trajectory monitoring"** to **"Enable"**.
-On the left side, the table data selected from the bottom panel is displayed, and on the right side, the "Arc Trajectory Monitoring" screen is shown.
-This screen provides real-time visualization of the welding trajectory and the torch posture (work angle and push/pull angle) during arc welding.  
-(You can monitor the trajectory and welding information in real time from `arcon` to `arcoff`)
+要使用此功能，首先导航到 `[F2: 系统] - 4: 应用参数 - 2: 弧焊 ([F2: System] - 4: Application parameter - 2: Arc welding)` 并将 **"Arc Trajectory monitoring"** 设置为 **"Enable"**。
+左侧显示从底部面板中选择的表格数据，右侧显示 "Arc Trajectory Monitoring" 屏幕。
+此屏幕提供了弧焊过程中焊接轨迹和焊枪姿态（工作角度和推拉角度）的实时可视化。  
+（您可以实时监控 `arcon` 到 `arcoff` 的轨迹和焊接信息）
 
 
 ![](../../_assets/7_4_4_1.png)<br>
-*Figure 7.4.4.1. Arc Trajectory Monitoring*  
+*图 7.4.4.1. 弧轨迹监测*  
 
-You can adjust the size of the table and canvas by clicking and dragging the center divider.
-(However, one view cannot completely cover the other. If the screen is minimized and then restored to full-screen, the layout will be reset)
-Use the `+/-` key along with the `[shift]` key to zoom in or out.  
-Within the canvas, you can drag to adjust the view position.  
-
+您可以通过点击并拖动中间分隔符来调整表格和画布的大小。
+（然而，一个视图不能完全覆盖另一个视图。如果屏幕最小化后再恢复到全屏，布局将被重置）
+使用 `+/-` 键与 `[shift]` 键一起放大或缩小。  
+在画布内，您可以拖动以调整视图位置。  

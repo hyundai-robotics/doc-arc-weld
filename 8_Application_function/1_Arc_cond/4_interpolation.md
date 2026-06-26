@@ -1,48 +1,44 @@
-﻿# 8.1.4 Changing the welding Speed and Weaving Width Using Interpolation Condition
+﻿# 8.1.4 使用插值条件更改焊接速度和编织宽度
 
-
-This feature is separate from the previously mentioned functionalities. It allows welding conditions to be set based on the reference gap, and then automatically calculates the welding speed and weaving width by measuring the gap at the start and end points through actual touch sensing.  
-By entering the "Gap correction" tab in the properties window of the `arccond` command, you can set speed and width accroding to the gap for each condition.
-In the split window, clicking on "Arc interpolation" will display this setting as a graph.
-
+此功能与之前提到的功能是独立的。它允许根据参考间隙设置焊接条件，然后通过实际触觉传感器在起始点和结束点测量间隙，自动计算焊接速度和编织宽度。  
+通过在`arccond`命令的属性窗口中输入“间隙修正”选项卡，可以根据每个条件的间隙设置速度和宽度。  
+在分割窗口中，单击“弧插值”将以图形形式显示此设置。
 
 ![](../../_assets/8_1_3.png)<br>
-*Figure 8.1.3. Arc Welding Condition(Gap correction) Dialog box* 
+*图 8.1.3. 弧焊接条件（间隙修正）对话框*
 
 ![](../../_assets/8_1_4.png)<br>
-*Figure 8.1.4. Arc Interpolation Monitoring* 
+*图 8.1.4. 弧插值监控*
 
 <br>
 
-The operation of this function is as follows:
+此功能的操作如下：
 
 ![](../../_assets/8_1_5.png)<br>
-*Figure 8.1.5. Welding Condition Interpolation Operation* 
+*图 8.1.5. 焊接条件插值操作*
 
 <br>
- 
 
-The gap-speed graph can be illustrated as follows:  
+间隙-速度图可如下表示：
 
-The gap-spd graph entered in the Gap correction tab of the properties window of the `arccond` command is created.
-At the welding start point, the difference in speed between WDB welding speed and the WDB reference speed (the spd value at the reference gap on the graph) is assumed to be bSpd. The starting speed is then calculated by applying dSpd to the Spd value of the original graph at the current gap.
+在`arccond`命令的属性窗口的间隙修正选项卡中输入的间隙-spd图被创建。  
+在焊接起始点，WDB焊接速度与WDB参考速度之间的速度差（图表上参考间隙的spd值）被假设为bSpd。然后通过将dSpd应用于当前间隙的原始图的Spd值来计算起始速度。
 
-Similarly, at the welding end point, the difference in speed between the WDB welding speed and the WDB reference speed (the spd value at the reference gap on the graph) is assumed to dSpd2. The ending speed is calculated by applying dSpd2 to the Spd value of the original graph at the current gap.
+同样，在焊接结束点，WDB焊接速度与WDB参考速度之间的速度差（图表上参考间隙的spd值）被假设为dSpd2。通过将dSpd2应用于当前间隙的原始图的Spd值来计算结束速度。
 
-As shown in the figure above, the welding speed increases linearly between the two `arccond` commands.
+如上图所示，焊接速度在两个`arccond`命令之间线性增加。
 
-
-An example of the JOB configuration is as follows:
+JOB配置的示例如下：
 
 ```python
     move L, spd=60%, ...
-    move L, spd=10%, ...	    # Weld point(seam) Entry Step
+    move L, spd=10%, ...	    # 焊接点（接缝）入口步骤
     arcon cnd=1
     move L, spd=40cm/min, ...
     arccond L, cnd=1, gap=20  
-    move L, spd=30cm/min, ...    # In this step, welding speed and weaving width change linearly
+    move L, spd=30cm/min, ...    # 在此步骤中，焊接速度和编织宽度线性变化
     arccond L, cnd=2, gap=10   
     arcoff
-    move L, spd=10%, ...	    # Weld point(seam) Exit Step
+    move L, spd=10%, ...	    # 焊接点（接缝）出口步骤
     end
 ```

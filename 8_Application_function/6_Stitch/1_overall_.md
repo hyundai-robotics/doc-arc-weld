@@ -1,39 +1,23 @@
-﻿# 8.6.1  STITCH Func. Overview
+﻿# 8.6.1  STITCH Func. 概述
 
-Stitch welding is a function where welding is performed intermittently, similar to stitching. In [Figure 8.6.2], stitch welding is performed by setting start and end points on the specimen. In stitch welding, parameters `a` and `b` are set as shown in [Figure 8.6.1] to determine the length of the welding section and the non-welding section, thus forming the stitch pattern.
+缝合焊接是一种间歇性进行焊接的功能，类似于缝纫。在 [Figure 8.6.2] 中，通过在样本上设置起始和结束点来进行缝合焊接。在缝合焊接中，如 [Figure 8.6.1] 所示，参数 ` (a)` 和 ` (b)` 被设置，以确定焊接部分和非焊接部分的长度，从而形成缝合图案。
 
-[Figure 8.6.3] provides a simple explanation of the stitch welding process. Positions from P[1] to P[4] are recorded. In this diagram, stitch welding is performed at the P[2] and P[3] sections, using the commands ```stitch on/off``` and ```arcon/arcoff```.
+[Figure 8.6.3] 提供了缝合焊接过程的简单解释。从 P[1] 到 P[4] 的位置被记录。在此图中，使用命令 ```stitch on/off``` 和 ```arcon/arcoff``` 在 P[2] 和 P[3] 部分进行缝合焊接。
 
 </br>
 
 ![](../../_assets/8_6_1.png)<br>
-*Figure 8.6.1. Stitch Func. basic parameter* 
+*Figure 8.6.1. Stitch Func. 基本参数* 
 
 </br>
 
 
 
 ![](../../_assets/8_6_2.png)<br>
-*Figure 8.6.2. Stitch Welding specimen* 
+*Figure 8.6.2. 缝合焊接样本* 
  
 </br>
 
 
 ![](../../_assets/8_6_3.png)<br>
-*Figure 8.6.3. Stitch Welding Process* 
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
+*Figure 8.6.3. 缝合焊接过程* 

@@ -1,91 +1,89 @@
-﻿# 1.3.3 Change the Current/Voltage during Welding
+﻿# 1.3.3 焊接过程中改变电流/电压
 
-This function is used when teaching Arc welding tasks and there's a need to change the welding current/voltage during welding to find the appropriate settings.
+此功能在教授弧焊任务时使用，当需要在焊接过程中改变焊接电流/电压以找到合适的设置时。
 
-Using this function, you can change the current/voltage in real-time during welding to find optimal conditions and then immediately save the verified conditions as welding parameters.
+使用此功能，可以在焊接过程中实时改变电流/电压，以寻找最佳条件，然后立即将验证后的条件保存为焊接参数。
 
-The detailed content and setup method for this function are as follows:  <br/>
-("%" refers to the unit relative to the difference between the welder's minimum and maximum values)
+此功能的详细内容和设置方法如下：  <br/>
+("%"指的是相对焊机最低值和最高值之间的单位)
 
----  
+---
 
-### Entering the Arc Welding Current/Voltage Change Dialog Box
+### 进入弧焊电流/电压变化对话框
 
 ![](../../_assets/1_3_1.png)<br>
-*Figure 1.3.1. Arc Weld program and Change I/V*
+*图 1.3.1. 弧焊程序及电流/电压变化*
 
 <br>
 
-1. Perform arc welding in automatic mode.
-2. Navigate to `[pane layout] - select - arc change IV`
-3. Click the **[+/-]** button to enter the adjustment button window.
+1. 在自动模式下进行弧焊。
+2. 导航至`[pane layout] - 选择 - 电弧变更 IV ([pane layout] - select - arc change IV)`
+3. 点击**[+/-]**按钮以进入调整按钮窗口。
 
----  
+---
 
-### Parameter Adjustment Key during Arc Welding  
+### 弧焊过程中的参数调整键  
 
-|      | [+ Current]/[- Current]                   |`[SHIFT]` + [+ Current]/[- Current] |
+|      | [+ 电流]/[- 电流]                   |`[SHIFT]` + [+ 电流]/[- 电流] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Welding Current 1% +/-         | Welding Current 5% +/-|  
+| **功能** | 焊接电流 1% +/-         | 焊接电流 5% +/-|  
 
 <br/>
 
 
-|      | [+ Voltage]/[- Voltage]                   |`[SHIFT]` + [+ Voltage]/[- Voltage] |
+|      | [+ 电压]/[- 电压]                   |`[SHIFT]` + [+ 电压]/[- 电压] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Welding Voltage 1% +/-         | Welding Voltage 5% +/-|  
+| **功能** | 焊接电压 1% +/-         | 焊接电压 5% +/-|  
 
 <br/>
 
 
-|      | [+ Weaving L]/[- Weaving L]                   |`[SHIFT]` + [+ Weaving L]/[- Weaving L] |
+|      | [+ 编织 L]/[- 编织 L]                   |`[SHIFT]` + [+ 编织 L]/[- 编织 L] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Weaving Width(Left) 0.1[mm] +/-         |Weaving Width(Left) 0.5[mm] +/-|  
+| **功能** | 编织宽度(左) 0.1[mm] +/-         |编织宽度(左) 0.5[mm] +/-|  
 
 <br/>
 
 
-|      | [+ Weaving R]/[- Weaving R]                   |`[SHIFT]` + [+ Weaving R]/[- Weaving R] |
+|      | [+ 编织 R]/[- 编织 R]                   |`[SHIFT]` + [+ 编织 R]/[- 编织 R] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Weaving Width(Right) 0.1[mm] +/-         |Weaving Width(Right) 0.5[mm] +/-|  
+| **功能** | 编织宽度(右) 0.1[mm] +/-         |编织宽度(右) 0.5[mm] +/-|  
 
 <br/>
 
 
-|      | [+ Frequency]/[- Frequency]                   |`[SHIFT]` + [+ Frequency]/[- Frequency] |
+|      | [+ 频率]/[- 频率]                   |`[SHIFT]` + [+ 频率]/[- 频率] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Weaving Frequency 0.1[Hz] +/-         | Weaving Frequency 0.5[Hz] +/-|  
+| **功能** | 编织频率 0.1[Hz] +/-         | 编织频率 0.5[Hz] +/-|  
 
 <br/>
 
 
----  
+---
 
+### 弧焊电流/电压自动保存设置
 
-### Arc welding Current/Voltage Auto saving settings
+- 导航至`[F2: 系统] - 4: 应用参数 - 2: 弧焊 ([F2: System] - 4: Application parameter - 2: Arc welding)`
+- **[弧焊 I/V 变化自动保存]**
+    - **禁用**  
+    不保存
 
-- Navigate to `[F2: System] - 4: Application parameter - 2: Arc welding`
-- **[Arc welding I/V change auto saving]**
-    - **Disable**  
-    Not saved
+    - **启用**  
+    用户更改值后立即保存至焊接条件
 
-    - **Enable**  
-    Save to welding conditions as soon as the user changes the value
+---
 
----  
+### 操作
 
-
-### Operation
-
-The details for each item in the dialog box are as shown in the following figure.
+对话框中每个项目的详细信息如以下图所示。
 
 ![](../../_assets/1_3_2.png)<br>
-*Figure 1.3.2. Arc Welding Change I/V dialog box*
+*图 1.3.2. 弧焊变化 I/V 对话框*
 
 {% hint style="info" %}
-- Current/Voltage changes are saved only to the welding Start Conditions, not to the End Conditions.
+- 电流/电压的变化仅保存到焊接开始条件，而不保存到结束条件。
 
-- If the ```arcon``` command specifically designates current and voltage values, then the changes will only be saved to the welding conditions.
+- 如果```arcon```命令特别指定电流和电压值，则更改将仅保存到焊接条件中。
 
-Example: arcon cnd=1,cur=200,vol=20 # The changed current and voltage are saved to welding start condition #1.
+例如：arcon cnd=1,cur=200,vol=20 # 改变的电流和电压保存到焊接开始条件 #1.
 {% endhint %}

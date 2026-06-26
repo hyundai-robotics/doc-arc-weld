@@ -1,29 +1,26 @@
-﻿# 7.3 Arc Trajectory Manager
+# 7.3 弧线轨迹管理器
 
-This features displays the trajectory, current, voltage, and torch position (welding angle, push-pull angle) in real-time during arc welding.
+此功能在弧焊过程中实时显示轨迹、电流、电压和焊枪位置（焊接角度、推拉角度）。
 
-Through this, you can monitor the welding angle, current, and voltage in real time during arc welding, making it easier to modify the welding teaching later.
+通过此功能，您可以在弧焊过程中实时监控焊接角度、电流和电压，从而更容易修改焊接教学。
 
-To enable this feature, follow these steps:
+要启用此功能，请按照以下步骤操作：
 
-Set "Arc trajectory monitoring" to 'activation on' under `[F2: System] - 4: Application parameter - 2: Arc welding`.
-
+在`[F2: 系统] - 4: 应用参数 - 2: 弧焊 ([F2: System] - 4: Application parameter - 2: Arc welding)`中将“弧线轨迹监控”设置为“激活”。
 
 {% hint style="info" %}
-This feature is available during from version 60.30-00.
+此功能在版本60.30-00及以上可用。
 {% endhint %}
 
 ![](../_assets/7_3_1_arc_trj_mgr.png)<br>
-*Figure 7.3.1. Real-time Arc trajectory monitoring*
+*图 7.3.1. 实时弧线轨迹监控*
 
-You can monitor the trajectory and welding information in real-time from the `arcon` to the `arcoff` section.
+您可以从`arcon`到`arcoff`部分实时监控轨迹和焊接信息。
 
-Use the arrow keys to move the plane, or press **[Shift] + [+/-]** keys to zomm in or out.
+使用箭头键移动平面，或按**[Shift] + [+/-]**键进行放大或缩小。
 
-The welding angle and push/pull angle are calculated base on the welding direction relative to the welding plane.
+焊接角度和推拉角是根据焊接方向相对于焊接平面计算的。
 
 {% hint style="info" %}
-The welding plane automatically rotates according to the welding trajectory.
+焊接平面会根据焊接轨迹自动旋转。
 {% endhint %}
-
-

@@ -1,1 +1,1 @@
-﻿# 1.2 Arc Welding function settings
+# 1.2 弧焊功能设置

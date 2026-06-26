@@ -1,10 +1,10 @@
-﻿# 5.3.1 Welding Start condition - Hyosung-only settings
+﻿# 5.3.1 焊接起始条件 - 仅限Hyosung设置
 
-### (1) Welding Mode: `Normal, Pulse`  
-Set the Arc Welding method.
+### (1) 焊接模式: `Normal, Pulse`  
+设置电弧焊接方法。
 
-### (2)	Slowdown Adjuctment: [ 100 ] % (range: 0 ~ 255)  
-Adjust the offset for the wire feed speed before the arc is initiated.
+### (2)	减速调整: [ 100 ] % (范围: 0 ~ 255)  
+在电弧启动之前调整送丝速度的偏移量。
 
-### (3)	Inductor Effect: [  100] % (range: 0 ~ 255)  
-Set the inductor effect.
+### (3)	电感效应: [  100] % (范围: 0 ~ 255)  
+设定电感效应。

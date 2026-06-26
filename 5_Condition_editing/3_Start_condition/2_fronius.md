@@ -1,19 +1,17 @@
-﻿# 5.3.2 Welding Start condition - Fronius-only settings
+﻿# 5.3.2 焊接启动条件 - 仅限Fronius设置
 
-### (1)	Operation Mode: `Prog-Std, Prog-Pulse, CMT, JOB, TIG`  
-Set the welding mode supported by the Fronius welder. The descriptions for each mode as follows:
+### (1) 操作模式: `Prog-Std, Prog-Pulse, CMT, JOB, TIG`  
+设置Fronius焊机支持的焊接模式。每种模式的描述如下：
 
-- **Prog-Std**: Use the standard welding program stored in the welder.
-- **Prog-Pulse**: Use the pulse welding program stored in the welder.
-- **CMT**: Use the Cool Metal Transfer functions.
-- **JOB**: Use the job stored in the welder.
-- **TIG**: Use of TIG(Tungsten Insert Gas) welding functionality.
+- **Prog-Std**: 使用焊机中存储的标准焊接程序。
+- **Prog-Pulse**: 使用焊机中存储的脉冲焊接程序。
+- **CMT**: 使用冷金属转移功能。
+- **JOB**: 使用焊机中存储的作业。
+- **TIG**: 使用TIG(钨插入气体)焊接功能。
 
-### (2)	Prog/Job Number  
-Set the program or job number to be used from the ones stored in the welder.
-If the operation mode is set to Job, the job number will be used.
+### (2) 程序/作业编号  
+设置从焊机中存储的程序或作业编号。如果操作模式设置为作业，则将使用作业编号。
 
-### (3)	Dynamic correction: [ 0 ]% (range: -5.0 ~ 5.0)  
+### (3) 动态修正: [ 0 ]% (范围: -5.0 ~ 5.0)  
 
-Set the dynamic correction value. A smaller value results in a strong and stable arc, but increases the amount of spatter. A larger value generates a smoother arc and reduces the amount of spatter.
-
+设置动态修正值。较小的值会产生强而稳定的弧光，但会增加飞溅量。较大的值会产生更平滑的弧光，并减少飞溅量。

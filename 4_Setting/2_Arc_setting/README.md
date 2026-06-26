@@ -1,32 +1,28 @@
-﻿# 4.2 Arc Welder Settings
+﻿# 4.2 电弧焊机设置
 
-User can operate various welders together with our Arc Welding Robots. To support this, a function is provided to edit welder-specific settings. The welder configuration screen can be accessed as follows: `[F2: System] - 5: Initialization - 3: Usage setting`
+用户可以与我们的电弧焊接机器人一起操作各种焊机。为此，提供了编辑焊机特定设置的功能。焊机配置屏幕可以通过以下方式访问: `[F2: 系统] - 5: 初始化 - 3: 用途设置 ([F2: System] - 5: Initialization - 3: Usage setting)`
 
-
-###	Welder Maker Number
-> The currently selected welder maker number is displayed. You can check the welder numbers for each maker by clicking the **[Welder information]** button. By clicking the **[Welder setting]** button on this screen, the condition editing screen for the selected welder will appear.
-
+### 焊机制造商编号
+> 当前选择的焊机制造商编号会显示。您可以通过点击 **[焊机信息]** 按钮检查每个制造商的焊机编号。通过点击该屏幕上的 **[焊机设置]** 按钮，将出现所选焊机的条件编辑屏幕。
 
 ![](../../_assets/1_2_1.png)<br>
-*Figure 4.2.1. Usage Setting Dialog box* 
+*图 4.2.1. 用途设置对话框* 
 
 </br>
 
 ![](../../_assets/4_2_2.png)<br>
-*Figure 4.2.2. Hyundai Welder Condition Settings*   
+*图 4.2.2. 现代焊机条件设置*   
 
 </br>
 
 ![](../../_assets/4_2_3.png)<br>
-*Figure 4.2.3. Hyundai Welder I/O Signal Assignment*   
+*图 4.2.3. 现代焊机 I/O 信号分配*   
 
+焊机条件屏幕提供与焊机特性相关的编辑功能，因此可编辑的项目因焊机而异。以下项目在焊机条件屏幕中通常可编辑。
 
-The welder condition screen provides editing functions related to welder characteristics, so the editable items differ by welder. The following items are commonly editable in the welder condition screen.
-
-| Item | Default Value | Description |
+| 项目 | 默认值 | 描述 |
 |---|------|---|
-| Name                   | Supported welder model name | Records the model name of the welder |
-| Comment                | Welder Maker name | Records a description of the welder |
-| Stick detection time   | [0.2] seconds <br>(Range: 0.1 ~ 10.0) | Checks wire fusion during setting time after arc welding ends |
-| ARC OFF detection time | [0.3] seconds <br>(Range: 0.0 ~ 10.0) | Sets the reference time for detecting arc off during arc welding. If the arc is off longer than this time, it is recognized as arc off.<br> It set too low, arc ignition failures may occur frequently.<br> If set too high, robot movement and wire inching continue longer after arc off, increasing the robot travel distance and wire protrusion length after arc off. |
-
+| 名称                   | 支持的焊机型号名称 | 记录焊机的型号名称 |
+| 注释                   | 焊机制造商名称 | 记录焊机的描述 |
+| 电弧检出时间          | [0.2] 秒 <br>(范围: 0.1 ~ 10.0) | 在电弧焊接结束后的设置时间内检查焊丝融合 |
+| 电弧关闭检测时间     | [0.3] 秒 <br>(范围: 0.0 ~ 10.0) | 设置在电弧焊接期间检测电弧关闭的参考时间。如果电弧关闭时间超过此时间，将被识别为电弧关闭。<br> 如果设置得太低，可能会频繁发生电弧点火故障。<br> 如果设置得太高，机器人移动和焊丝进给将在电弧关闭后持续更长时间，从而增加机器人行驶距离和电弧关闭后的焊丝突出长度。 |

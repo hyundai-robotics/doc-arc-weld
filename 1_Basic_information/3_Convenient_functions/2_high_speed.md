@@ -1,26 +1,25 @@
-﻿# 1.3.2 High-speed mobility function
+﻿# 1.3.2 高速移动功能
 
-When an Arc welding program runs, the robot's movement speed in welding sections is very slow. This leads to a significant amount of time being consumed during test runs to verify the robot's working position.
+当弧焊程序运行时，机器人在焊接部分的移动速度非常慢。这导致在测试运行时验证机器人的工作位置消耗了大量时间。
 
-To address this, we offer a high-speed movement function that allows the robot to run through welding sections faster than their recorded speed.
+为了解决这个问题，我们提供了一种高速移动功能，使机器人能够以比其记录速度更快的速度通过焊接部分。
 
 {% hint style="info" %}
-This function is limited to operating only during step forward/backward movements in manual mode.
+该功能仅限于在手动模式下的前进/后退移动时操作。
 {% endhint %}  
 
-The robot's movement speed when the high-speed movement function is active is not limited by the **"Maximum speed during step forward/backward"** in the condition settings. Furthermore, you can enable or disable the high-speed movement function within a welding section, regardless of its current application status(e.g., you can disable it even while it's currently running within a welding section).
+当高速移动功能启用时，机器人的移动速度不受条件设置中**“前进/后退时的最大速度”**的限制。此外，您可以在焊接部分启用或禁用高速移动功能，无论其当前的应用状态如何（例如，您可以在其当前在焊接部分运行时禁用它）。
 
-The operation method is as follows:
+操作方法如下：
 
+### 手动最大速度前进/后退
 
-### Manual Max-speed Step FWD/BWD
-
-| Item              | Description              |
+| 项目              | 描述              |
 | --------------- | --------------- |
-| **Dedicated Key**         | `[Shift]+[FWD]` <br> `[Shift]+[BWD]` |
-| **Function**          | Move the robot FWD/BWD at manual maximum speed. |
+| **专用按键**         | `[Shift]+[FWD]` <br> `[Shift]+[BWD]` |
+| **功能**          | 以手动最大速度前进/后退机器人。 |
 
-### Handling `[SHIFT]` Key Changes During High-speed Movement
-|        | `[SHIFT]` Key Released During High-speed Movement | `[SHIFT]` Key Pressed During Teaching Speed Step FWD/BWD |
+### 在高速移动期间处理 `[SHIFT]` 键的变化
+|        | 在高速移动期间释放 `[SHIFT]` 键 | 在教学速度前进/后退期间按下 `[SHIFT]` 键 |
 | ------ | --------------------- |--------------------- |
-| **Operation** | Move the robot forward/backward at manual maximum speed. | Robot stops, then moves at manual maximum speed |
+| **操作** | 以手动最大速度前进/后退机器人。 | 机器人停止，然后以手动最大速度移动 |

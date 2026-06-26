@@ -1,487 +1,456 @@
 ﻿
 [__SOURCE](README.md)
-# ${cont_model} Robot Controller Functional Manual - Arc Welding
-
+# ${cont_model} Robot Controller Functional Manual - 弧焊
 [__SOURCE](0-about-this-manual/README.md)
-# About the Manual
-
+# 关于手册
 [__SOURCE](0-about-this-manual/precautions.md)
-# Precautions
+# 注意事项
 
-{% include file="en/precautions.md" %}
-
+{% include file="zh/precautions.md" %}
 [__SOURCE](0-about-this-manual/safety-notice.md)
-# Safety Cautions
+# 安全警告
 
-{% include file="en/safety-notice.md" %}
-
+{% include file="zh/safety-notice.md" %}
 [__SOURCE](0-about-this-manual/structure.md)
 # Book Structure
 
-This manual consist of 8 chapters.
+本手册由 8 个章节组成。
 
 ### Chapter 1: Arc Welding Basics
-This chapter explains the settings, basic teaching methods, and convenience function required when using an Arc welding robot for the first time.
+本章解释了首次使用弧焊机器人时所需的设置、基本教学方法和便利功能。
 <br/><br/>
 
 ### Chapter 2: Inserting Commands
-This chapter introduces various Arc welding related commands and their simple setup methods. Through this chapter, you can get a quick overview of the basic functions supported by our company Arc Welidng Robots.
+本章介绍了各种与弧焊相关的命令及其简单设置方法。通过本章，您可以快速了解我们公司弧焊机器人的基本功能。
 <br/><br/>
 
 ### Chapter 3: Command Property
-This chapter explains the property functions for detailed settings of some commands introduced in Chapter 2. It explains how to edit Arc welding conditions, which are essential settings when using an Arc welding robot, and how to edit application function commands.
+本章解释了第 2 章中介绍的一些命令的属性功能。它解释了如何编辑弧焊条件，这是使用弧焊机器人时的必要设置，以及如何编辑应用功能命令。
 <br/><br/>
 
 ### Chapter 4: Arc Welder Settings
-This chapter introduces how to select the Arc Welder you want to use and the items that need to be set for each welder.
+本章介绍了如何选择要使用的弧焊机及每台焊机需要设置的项目。
 <br/><br/>
 
 ### Chapter 5: Editing Arc Welding Conditions
-This chapter explains how to edit Arc welding conditions. It introduces how to set essential parameters for welding, such as current, voltage, welding mode, and gas pre/post-flow. Since welding conditions vary by welder, you can only understand the content about the welder you want to use.
+本章解释了如何编辑弧焊条件。介绍了如何设置焊接的基本参数，如电流、电压、焊接模式以及气体前/后流。由于焊接条件因焊机而异，因此您只能了解与您想要使用的焊机相关的内容。
 <br/><br/>
 
 ### Chapter 6: Weaving Function
-This chapter introduces the weaving function and its detailed settings. You can skip this chapter if you are not using the weaving operation.
+本章介绍了编织功能及其详细设置。如果您不使用编织操作，可以跳过本章。
 <br/><br/>
 
 ### Chapter 7: Arc Welding Data Monitoring
-This chapter explains functions that utilize data sent by the welder during welding process. It describes how to monitor real-time data from the welder and how to save that data to a file. It also describes features for plotting and conveniently reviewing previously saved data as graphs, as well as functions for quantifying welding quality.
+本章解释了在焊接过程中利用焊机发送的数据的功能。描述了如何实时监控焊机数据以及如何将这些数据保存到文件中。还描述了绘图和方便查看以前保存的数据作为图形的功能，以及量化焊接质量的功能。
 <br/><br/>
 
 ### Chapter 8: Arc Welding Application Functions
-This chapter introduces Arc welding application functions that can be useful in special situations.
-It provides a brief overview of functions that can be applied when the welding line of the workpiece is uneven, or when errors in the workpiece position lead to issues with welding quality.
+本章介绍了在特殊情况下可能有用的弧焊应用功能。它提供了在工件焊接线不均匀时，或工件位置错误导致焊接质量问题时可以应用的功能的简要概述。
 <br/><br/>
 
-When using our Arc Welding Robots for the first time, we recommend reading Chapters 1 ~ 5. For Chapters 6 ~ 8, we suggest selectively reading about the functions you need.
+首次使用我们的弧焊机器人时，我们建议您阅读第 1 至第 5 章。对于第 6 至第 8 章，我们建议您选择性地阅读您需要的功能。 
 
 <br>
-
 [__SOURCE](1_Basic_information/README.md)
-# 1. Arc Welding Basics
+# 1. 弧焊基础
 [__SOURCE](1_Basic_information/1_Introduction/README.md)
-# 1.1 Overview
+# 1.1 概述
 
-Teach the Arc welding operation as shown in the following figure.
-
+按照下图进行弧焊操作的教学。
 
 ![](../../_assets/1_1_1.png)<br>
-*Figure 1.1.1. Basic Arc Weld Teaching*
+*图 1.1.1. 基本弧焊教学*
 
 </br>
 
-(1) Turn on the power switch on the front of the Controller.
+(1) 打开控制器前面的电源开关。
 
-(2) Select the `[mode witch]` on the (Teach Pendant)TP in manual mode.
+(2) 在手动模式下选择 `[mode witch]` 的 (Teach Pendant)TP。
 
-(3) Press the `[Program]` on the TP and enter the program number.
+(3) 按下 TP 上的 `[Program]` 并输入程序编号。
 
-(4) If you proceed this far, the TP screen will be displayed as shown below.
+(4) 如果你进行到这里，TP 屏幕会显示如下。
 
 ![](../../_assets/1_1_2.png)<br>
-*Figure 1.1.2. Screen with new program number selected*
+*图 1.1.2. 选择新程序编号的屏幕*
 
 </br>
 
-(5) Press the `[Motor On]` button on the TP to power the robot's motor.
+(5) 按下 TP 上的 `[Motor On]` 按钮以给机器人的电机供电。
 
-(6) Use the axis control key to move the robot's torch to the position in Step 1.
+(6) 使用轴控制键将机器人的焊枪移动到步骤 1 中的位置。
 
-(7) Press the `[rec. cond]` key, then specify the desired interpolation type, speed, accuracy, and tool number.  
+(7) 按下 `[rec. cond]` 键，然后指定所需的插补类型、速度、精度和工具编号。
 
-- After moving to the desired item using the direction key, set the value and press the `[ENTER]` key to save the setting
-- press the `[tool]` key and enter the desired tool number.
-
+- 使用方向键移动到所需项后，设置值并按下 `[ENTER]` 键以保存设置
+- 按下 `[tool]` 键并输入所需的工具编号。
 
 ![](../../_assets/1_1_3.png)<br>
-*Figure 1.1.3. Recording Conditions*
+*图 1.1.3. 记录条件*
 
 </br>
 
-- Press the `[rec. cond]` key to record the step as shown below.
+- 按下 `[rec. cond]` 键以记录步骤，如下所示。
 
 ![](../../_assets/1_1_4.png)<br>
-*Figure 1.1.4. Program with recorded Step (1)*
+*图 1.1.4. 记录步骤 (1) 的程序*
 
 </br>
 
-(8)	Repeat steps 5 through 7 for steps 2 through 4.
+(8)	重复步骤 5 到 7，进行步骤 2 到 4。
  
-
 ![](../../_assets/1_1_5.png)<br>
-*Figure 1.1.5. Program with recorded Step (2)*
+*图 1.1.5. 记录步骤 (2) 的程序*
 
-(9) Since the welding area is from Step 2 to Step 3, move the cursor to Step 2.
+(9) 由于焊接区域从步骤 2 到步骤 3，将光标移动到步骤 2。
 
-- Enter the `[F6: cmd. Input] - arcweld - weaving`, input the condition number, and press the `[ENTER]` key.
-- In the same way, enter the **[arcon]**, input the condition number, and press the `[ENTER]` key.
-(For Arc Welding condition settings, refer to [5. Editing Arc Welding Conditions](../../5_Condition_editing/README.md).)
+- 输入 `[F6: cmd. Input] - arcweld - weaving`，输入条件编号，然后按下 `[ENTER]` 键。
+- 以相同方式，输入 **[arcon]**，输入条件编号，然后按下 `[ENTER]` 键。
+(有关弧焊条件设置，请参考 [5. 编辑弧焊条件](../../5_Condition_editing/README.md)。)
 
-
-(10) Move the cursor to Step 3, which is the step where Arc Welding ends.
+(10) 将光标移动到步骤 3，这是弧焊结束的步骤。
  
-- Again, enter the **[weaving]** and set it to off.
-- Also, enter the **[arcoff]**.
+- 再次输入 **[weaving]** 并将其关闭。
+- 还要输入 **[arcoff]**。
 
+(11) 将步骤 3 的速度修改为您所需的焊接速度（例如，20mm/s）。
 
-(11) Modify the speed of Step 3 to your desired welding speed (e.g., 20mm/s).
-
-(12) Finally, enter the `[F6: cmd. input] - flowctrl - end` command to terminate the program.
+(12) 最后，输入 `[F6: cmd. input] - flowctrl - end` 命令以终止程序。
 
 ![](../../_assets/1_1_6.png)<br>
-*Figure 1.1.6. Teaching Completion Screen*
+*图 1.1.6. 教学完成屏幕*
 [__SOURCE](1_Basic_information/2_Function_setting/README.md)
-# 1.2 Arc Welding function settings
+# 1.2 弧焊功能设置
 [__SOURCE](1_Basic_information/2_Function_setting/1_usage.md)
-# 1.2.1 Arc Welding application settings
+# 1.2.1 弧焊应用设置
 
-(1) Depending on the Robot model, the Arc welding function might not be active. If in this the case, follow the steps below to enable. (Note: Engineer authority is required to set up the Arc welding function)
+(1) 根据机器人型号，弧焊功能可能未激活。如果是这种情况，请按照以下步骤启用。(注：设置弧焊功能需要工程师权限)
 
-(2) In manual mode, press `[F2: System] - 5: Initialization - 3: Usage setting`. A dialog box will appear, as shown in [Figure 1.2.1.], allowing you to configure the robot's application, the welder you want to use, user keys, and I/O signal assignments.
+(2) 在手动模式下，按`[F2: 系统] - 5: 初始化 - 3: 用途设置 ([F2: System] - 5: Initialization - 3: Usage setting)`。对话框将出现，如[图 1.2.1.]所示，允许您配置机器人的应用、您想使用的焊机、用户键和 I/O 信号分配。
 
-(3) [Figure 1.2.1] shows an active Arc welding steps, where the welder number in welder information has been selected as **No.4(Fronius)**. From this screen, pressing **welder setting** will take you to a dialog box where you can configure the conditions for the desired welder.
+(3) [图 1.2.1] 显示了激活的弧焊步骤，其中焊机信息中的焊机编号已选择为 **No.4(Fronius)**。在此屏幕上，按 **焊机设置** 将带您到一个对话框，在该对话框中可以配置所需焊机的条件。
 
-(4) For detailed settings of the welder characteristic file, please refer to [4. Arc Welder Settings](../../4_Setting/README.md).
-
+(4) 有关焊机特性文件的详细设置，请参阅 [4. 弧焊机设置](../../4_Setting/README.md)。
 
 ![](../../_assets/1_2_1.png)<br>
-*Figure 1.2.1. Usage Setting Dialog*
+*图 1.2.1. 用途设置对话框*
 [__SOURCE](1_Basic_information/2_Function_setting/2_signals_functions.md)
-# 1.2.2 Arc Welding various signals and funtion settings
+# 1.2.2 弧焊各种信号和功能设置
 
-On the manual mode screen, press `[F2: System] - 4: Application parameter - 2: Arc welding` to bring up a screen where you can set various conditions for Arc welding applications, as shown below.
-
+在手动模式屏幕上，按 `[F2: 系统] - 4: 应用参数 - 2: 弧焊 ([F2: System] - 4: Application parameter - 2: Arc welding)` 调出可以设置弧焊应用的各种条件的屏幕，如下所示。
 
 ![](../../_assets/1_2_2.png)<br>
-*Figure 1.2.2. Arc Welding Application parameter Dialog*
- 
+*图 1.2.2. 弧焊应用参数对话框*
 
-The details for each item are as follows:
+每个项目的详细信息如下：
 
-#### [General]
-Inching speed(%): 
-|`(Low)`[1 ~ 50] %, `(High)`[10 ~ 100] %|, This refers to the wire feed speed when jogging the wire forward(`[SHIFT]+[2]` (wire inching)) or backward(`[SHIFT]+[3]` (wire retreat)).<br> You can set the feed speed for both low-speed and high-speed operation (when the key is pressed for 3 seconds or more).
+#### [一般]
+进给速度(%): 
+|`(低) ((Low))`[1 ~ 50] %, `(高) ((High))`[10 ~ 100] %|, 这指的是在前进(`[SHIFT]+[2]` (线材进给))或后退(`[SHIFT]+[3]` (线材退回))时的线材进给速度。<br> 您可以设置低速和高速操作的进给速度（当按键按下3秒或更长时间时）。
 
-`[GUN]` key status output signal:
-Set the signal to output the current status of the `[GUN]` key on the TP.
+`[GUN]` 键状态输出信号:
+设置信号以输出 TP 上 `[GUN]` 键的当前状态。
 
-`[GUN]` key control disable input: 
-Assign an input signal to externally control the `[Gun]` key's on/off status. Once this signal is assigned, you won't be able to change the arc welding on/off status by pressing the `[GUN]` key on the TP. This function helps prevent issues where welding might be skipped in a welding section due to accidential presses of the `[GUN]` key.<br> (When the assigned signal is received, the LED of the `[GUN]` key turns off, and the robot enters a `Dry Run` state where no welding is performed in the arc welding section, despite the robot running.)
+`[GUN]` 键控制禁用输入: 
+分配一个输入信号以外部控制 `[Gun]` 键的开/关状态。一旦分配了此信号，您将无法通过按下 TP 上的 `[GUN]` 键更改弧焊的开/关状态。此功能有助于防止由于意外按下 `[GUN]` 键而导致焊接部分焊接可能被跳过的问题。<br> (当接收到分配的信号时，`[GUN]` 键的 LED 关闭，机器人进入 `Dry Run` 状态，即使机器人在运行中也不会在弧焊部分进行焊接。)
 
-Coolant Error Input Signal:
-For water-cooled Arc welding torches, a signal is configured to detect issues with coolant circulation. When this signal is received during welding, it is considered an error, which triggers the robot's operation and welding process to stop.
+冷却液错误输入信号:
+对于水冷弧焊炬，配置信号以检测冷却液循环的问题。当在焊接过程中收到此信号时，视为错误，触发机器人的操作和焊接过程停止。
 
+焊接机错误处理: 
+|[`不执行 (Disable)`, `警告 (Warn)`, `错误 (Error)`]|, 设置如何处理焊接机错误。
 
-Welder Error treat: 
-|[`Disable`, `Warn`, `Error`]|, Set how to handle welder errors.
+线材空缺错误处理: 
+|[`不执行 (Disable)`, `警告 (Warn)`, `错误 (Error)`]|, 设置当没有焊接线材时的错误处理方式。
 
-Wire Empty error treat: 
-|[`Disable`, `Warn`, `Error`]|, Set the error handling method when no welding wire is present.
-
-Gas Pressure Error treat: 
-|[`Disable`,`Warn`, `Error`]|, Set the error handling method in case of gas pressure abnormalities.
+气体压力错误处理: 
+|[`不执行 (Disable)`,`警告 (Warn)`, `错误 (Error)`]|, 设置气体压力异常时的错误处理方式。
 
 {% hint style="info" %}
-Warn gives a warnning message, Error makes robot stop moving with error message.
+警告会发出警告信息，错误会使机器人停止移动并显示错误信息。
 {% endhint %}
 
-Arc Welding I/V change auto saving: 
-|[`Disable`, `Enable`]|, This setting determines whether to automatically save changes to current and voltage values when they are changed within the `arc change IV(Arc Welding Current/Voltage Adjustment dialog box)`. For more details, please refer to [[1.3.3 Change the Current/Voltage during Welding]](../3_Convenient_functions/3_change_current_voltage.md).
+弧焊 I/V 变化自动保存: 
+|[`不执行 (Disable)`, `启用 (Enable)`]|, 此设置决定在 `弧变化 IV(弧焊电流/电压调整对话框)` 中更改当前和电压值时是否自动保存更改。有关更多详细信息，请参见 [[1.3.3 焊接过程中更改电流/电压]](../3_Convenient_functions/3_change_current_voltage.md)。
 
-Vibration reduction for heavy torch: 
-|[`Disable`, `Welding point`, `All range`]|, This setting is designed to reduce vibrations when using heavy torches. It helps to minimize vibrations that may occur when using heavy torches such as water-cooled or push-pull torches.<br> When set to `Welding Points`, a significant reduction in vibrations can be achieved in the welding point entry section without substantial changes in the robot's operating speed.<br> When set to `All range`, a filter specifically designed for heavy Arc torches is applied, virtually eliminating vibrations throughout the entire preocess. However, this may result in a decrease in the robot's operating speed.
+重型炬的振动减少: 
+|[`不执行 (Disable)`, `焊接点 (Welding point)`, `全范围 (All range)`]|, 此设置旨在减少使用重型炬时的振动。它有助于最小化在使用水冷或推拉式炬时可能发生的振动。<br> 当设置为 `焊接点` 时，可以在焊接点入口部分实现显著减少振动，而对机器人的操作速度没有实质性改变。<br> 当设置为 `全范围 (All range)` 时，应用专为重型弧焊炬设计的滤波器，几乎消除了整个过程中的振动。然而，这可能会导致机器人的操作速度降低。
 
-Arc welding enable during manual mode: 
-|[`Disable`, `Enable`]| This setting determines whether welding can be performed through ste-forward in manual mode.<br> When set to `Enable`, welding can be performed by stepping forward to the Arc welding section, with the execution unit set to `End`. For more details, please refer to [[1.3.4 Manual mode Arc Welding]](../3_Convenient_functions/4_manual_mode.md).
+手动模式下的弧焊启用: 
+|[`不执行 (Disable)`, `启用 (Enable)`]| 此设置决定是否可以通过在手动模式下向前移动来执行焊接。<br> 当设置为 `启用 (Enable)` 时，可以通过向前踏入弧焊部分来执行焊接，执行单元设置为 `结束 (End)`。有关更多详细信息，请参见 [[1.3.4 手动模式下的弧焊]](../3_Convenient_functions/4_manual_mode.md)。
 
-Stick check at cycle start: 
-|[`Check`, `Ignore`]| This setting determines whether a wire stick check will be performed when the robot starts its first cycle.<br> When `"check"` is enabled, the robot will perform a check for approximately 0.2 seconds at the beginning before proceeding with movement.
+循环开始时的电缆检查: 
+|[`检查 (Check)`, `忽略 (Ignore)`]| 此设置决定在机器人启动其第一个循环时是否执行线材粘连检查。<br> 当 `"检查"` 被启用时，机器人将在开始前约0.2秒内进行检查，然后继续移动。
 
-TCP speed ratio monitoring: 
-|[`Disable`, `Enable`]| This setting determines whether to monitor the rate of change in the TCP speed.
+TCP 速度比监控: 
+|[`不执行 (Disable)`, `启用 (Enable)`]| 此设置决定是否监控 TCP 速度的变化率。
 
-#### [Touch Sensing]
-Touch Sensing Stop Setting: 
-|[`Immediately`, `Normal`]|, Set whether to `immediately stop` or `normal stop` when Touch Sensing detects a work piece.<br>If wire bending increases during a normal stop, set it to `immediately stop`
+#### [触摸感应]
+触摸感应停止设置: 
+|[`立即 (Immediately)`, `正常 (Normal)`]|, 设置当触摸感应检测到工件时是 `立即停止` 还是 `正常停止`。<br> 如果正常停止期间线材弯曲增大，设置为 `立即停止`。
 
-#### [Arc trajectory Monitoring]
-Activation: 
-|[`Disable`, `Enable`]|, Sets whether to monitor the Arc trajectory.
-
-
+#### [弧轨迹监控]
+激活: 
+|[`不执行 (Disable)`, `启用 (Enable)`]|, 设置是否监控弧轨迹。
 [__SOURCE](1_Basic_information/2_Function_setting/3_crash_sensor.md)
-# 1.2.3 Collision sensor signal settings
+# 1.2.3 碰撞传感器信号设置
 
-Arc welding robot systems uses a collision sensor to prevent torch deformation. The collision sensor basically uses negative logic to immediately detect issues such as a disconnected sensor cable.
+弧焊机器人系统使用碰撞传感器来防止焊枪变形。碰撞传感器基本上使用负逻辑来立即检测诸如传感器电缆断开等问题。
 
-The setup dialog box is as follows:
+设置对话框如下：
 
-You can configure the collision sensor processing method on `[F2: System] - 1: User Environment`.
+您可以在`[F2: 系统] - 1: 用户环境 ([F2: System] - 1: User Environment)`中配置碰撞传感器处理方法。
 
 
-#### [Collision sensor process]
+#### [碰撞传感器处理]
 | item | Description |
 |------|------|
-|**Emergency Stop**|When a collision sensor signal is input, the robot turns off its motor and performs an emergency stop|
-|**Stop**|When a collision sensor signal is input, the robot keeps its motors On and performs a stop|
+|**紧急停止**|当输入碰撞传感器信号时，机器人将关闭电机并执行紧急停止|
+|**停止**|当输入碰撞传感器信号时，机器人保持电机开启并执行停止|
 
-#### [How to Change Signal Logic]
-If the tool collides and the collision sensor signal turns on, the motor will not turn on. In this case, you need to change the signal logic to negative logic as follows.
+#### [如何更改信号逻辑]
+如果工具发生碰撞且碰撞传感器信号打开，电机将不会启动。在这种情况下，您需要将信号逻辑更改为负逻辑，如下所示。
 
-- `[F2: System] - 2: Control parameter - 2: Input/Output signal setting - 1: Input signal attribute` - Adding a Signal and Checking the Negative Logic Box  
+- `[F2: 系统] - 2: 控制参数 - 2: 输入/输出信号设置 - 1: 输入信号属性 ([F2: System] - 2: Control parameter - 2: Input/Output signal setting - 1: Input signal attribute)` - 添加信号并勾选负逻辑框  
 
 
 ![](../../_assets/1_2_3.png)<br>
-*Figure 1.2.3. How to Change Signal Logic*
+*图 1.2.3. 如何更改信号逻辑*
 
 {% hint style="info" %}
-When you set up a collision sensor in the system's input signal settings, the system will prioritize the input from this signal. Any collision sensor signals received via welder communication will be ignored.
+当您在系统的输入信号设置中设置碰撞传感器时，系统将优先考虑来自此信号的输入。通过焊接机通信接收到的任何碰撞传感器信号将被忽略。
 {% endhint %}
-
 [__SOURCE](1_Basic_information/3_Convenient_functions/README.md)
-# 1.3 Arc Welding Convenience Functions
+# 1.3 弧焊便利功能
 [__SOURCE](1_Basic_information/3_Convenient_functions/1_gas_check.md)
-# 1.3.1 Gas Check, Wire Inching, and Wire Retract
+# 1.3.1 气体检查、线材微进和线材回收
 
-This describes the functionality for controlling the shield gas valve and the wire feeder motor in an arc welding system. You can check the current shield gas flow rate using the gas check function. The inching and reverse inching(retreat) functions let you adjust the length of the wire protruding from the welding torch.
+这描述了在弧焊系统中控制保护气体阀门和送丝电机的功能。您可以使用气体检查功能检查当前的保护气体流量。微进和反向微进（回撤）功能让您调整从焊接喷嘴突出线材的长度。
 
-Here are the functions and how to use them: 
+以下是功能及其使用方法： 
 
-
-### Gas Check
+### 气体检查
 
 | Item      | Description                     |
 | ------- | ---------------------- |
 | **HotKey** | `[Shift]+[1]`          |
-| **Dedicated Key** | User Key `GAS CHK`         |
-| **Function**  | Open the shield gas valve to verify the gas flow rate |
+| **Dedicated Key** | 用户键 `GAS CHK`         |
+| **Function**  | 打开保护气体阀门以验证气体流量 |
 
 
-### Wire Inching
+### 线材微进
 
 | Item      | Description                          |
 | ------- | --------------------------- |
 | **HotKey** | `[Shift]+[2]`               |
-| **Dedicated Key** | User Key `inching`              |
-| **Function**  | Feed the wire forward out of the torch to adjust its length <li>Slow Inching: Press the key for less than 3 seconds</li> <li>Fast Inching: Press the key for 3 seconds or more</li> |
+| **Dedicated Key** | 用户键 `inching`              |
+| **Function**  | 将线材前送出焊枪以调整其长度 <li>慢速微进: 按键少于 3 秒</li> <li>快速微进: 按键 3 秒或更长时间</li> |
 
 
-### Wire Retract
+### 线材回收
 
 | Item      | Description                 |
 | ------- | ------------------ |
 | **HotKey** | `[Shift]+[3]`      |
-| **Dedicated Key** | User Key `retract`     |
-| **Function**  | Rewind the wire to adjust its length <li>Slow Inching: Press the key for less than 3 seconds</li> <li>Fast Inching: Press the key for 3 seconds or more</li> |
+| **Dedicated Key** | 用户键 `retract`     |
+| **Function**  | 将线材回绕以调整其长度 <li>慢速微进: 按键少于 3 秒</li> <li>快速微进: 按键 3 秒或更长时间</li> |
 
 
-### Inching Speed Setting
+### 微进速度设置
 
- >- Navigate to `[F2: System] - 4: Application parameter - 2: Arc welding`
- >- Within the Arc welding settings menu, Set your values for both low and high speeds: **Inching speed(%): Low=[---]%, High=[---]%**
- >- The speed is displayed as a percentage of the maximum inching speed.
- >- Depending on your specific welder model, changes to the inching speed may not be reflected.
-
+ >- 导航到 `[F2: 系统] - 4: 应用参数 - 2: 弧焊 ([F2: System] - 4: Application parameter - 2: Arc welding)`
+ >- 在弧焊设置菜单中，设置您的低速和快速速度值: **微进速度(%): 低=[---]%, 高=[---]%**
+ >- 速度以最大微进速度的百分比显示。
+ >- 根据您的具体焊机型号，对微进速度的更改可能不会反映出来。
 [__SOURCE](1_Basic_information/3_Convenient_functions/2_high_speed.md)
-# 1.3.2 High-speed mobility function
+# 1.3.2 高速移动功能
 
-When an Arc welding program runs, the robot's movement speed in welding sections is very slow. This leads to a significant amount of time being consumed during test runs to verify the robot's working position.
+当弧焊程序运行时，机器人在焊接部分的移动速度非常慢。这导致在测试运行时验证机器人的工作位置消耗了大量时间。
 
-To address this, we offer a high-speed movement function that allows the robot to run through welding sections faster than their recorded speed.
+为了解决这个问题，我们提供了一种高速移动功能，使机器人能够以比其记录速度更快的速度通过焊接部分。
 
 {% hint style="info" %}
-This function is limited to operating only during step forward/backward movements in manual mode.
+该功能仅限于在手动模式下的前进/后退移动时操作。
 {% endhint %}  
 
-The robot's movement speed when the high-speed movement function is active is not limited by the **"Maximum speed during step forward/backward"** in the condition settings. Furthermore, you can enable or disable the high-speed movement function within a welding section, regardless of its current application status(e.g., you can disable it even while it's currently running within a welding section).
+当高速移动功能启用时，机器人的移动速度不受条件设置中**“前进/后退时的最大速度”**的限制。此外，您可以在焊接部分启用或禁用高速移动功能，无论其当前的应用状态如何（例如，您可以在其当前在焊接部分运行时禁用它）。
 
-The operation method is as follows:
+操作方法如下：
 
+### 手动最大速度前进/后退
 
-### Manual Max-speed Step FWD/BWD
-
-| Item              | Description              |
+| 项目              | 描述              |
 | --------------- | --------------- |
-| **Dedicated Key**         | `[Shift]+[FWD]` <br> `[Shift]+[BWD]` |
-| **Function**          | Move the robot FWD/BWD at manual maximum speed. |
+| **专用按键**         | `[Shift]+[FWD]` <br> `[Shift]+[BWD]` |
+| **功能**          | 以手动最大速度前进/后退机器人。 |
 
-### Handling `[SHIFT]` Key Changes During High-speed Movement
-|        | `[SHIFT]` Key Released During High-speed Movement | `[SHIFT]` Key Pressed During Teaching Speed Step FWD/BWD |
+### 在高速移动期间处理 `[SHIFT]` 键的变化
+|        | 在高速移动期间释放 `[SHIFT]` 键 | 在教学速度前进/后退期间按下 `[SHIFT]` 键 |
 | ------ | --------------------- |--------------------- |
-| **Operation** | Move the robot forward/backward at manual maximum speed. | Robot stops, then moves at manual maximum speed |
+| **操作** | 以手动最大速度前进/后退机器人。 | 机器人停止，然后以手动最大速度移动 |
 
 [__SOURCE](1_Basic_information/3_Convenient_functions/3_change_iv.md)
-# 1.3.3 Change the Current/Voltage during Welding
+# 1.3.3 焊接过程中改变电流/电压
 
-This function is used when teaching Arc welding tasks and there's a need to change the welding current/voltage during welding to find the appropriate settings.
+此功能在教授弧焊任务时使用，当需要在焊接过程中改变焊接电流/电压以找到合适的设置时。
 
-Using this function, you can change the current/voltage in real-time during welding to find optimal conditions and then immediately save the verified conditions as welding parameters.
+使用此功能，可以在焊接过程中实时改变电流/电压，以寻找最佳条件，然后立即将验证后的条件保存为焊接参数。
 
-The detailed content and setup method for this function are as follows:  <br/>
-("%" refers to the unit relative to the difference between the welder's minimum and maximum values)
+此功能的详细内容和设置方法如下：  <br/>
+("%"指的是相对焊机最低值和最高值之间的单位)
 
----  
+---
 
-### Entering the Arc Welding Current/Voltage Change Dialog Box
+### 进入弧焊电流/电压变化对话框
 
 ![](../../_assets/1_3_1.png)<br>
-*Figure 1.3.1. Arc Weld program and Change I/V*
+*图 1.3.1. 弧焊程序及电流/电压变化*
 
 <br>
 
-1. Perform arc welding in automatic mode.
-2. Navigate to `[pane layout] - select - arc change IV`
-3. Click the **[+/-]** button to enter the adjustment button window.
+1. 在自动模式下进行弧焊。
+2. 导航至`[pane layout] - 选择 - 电弧变更 IV ([pane layout] - select - arc change IV)`
+3. 点击**[+/-]**按钮以进入调整按钮窗口。
 
----  
+---
 
-### Parameter Adjustment Key during Arc Welding  
+### 弧焊过程中的参数调整键  
 
-|      | [+ Current]/[- Current]                   |`[SHIFT]` + [+ Current]/[- Current] |
+|      | [+ 电流]/[- 电流]                   |`[SHIFT]` + [+ 电流]/[- 电流] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Welding Current 1% +/-         | Welding Current 5% +/-|  
+| **功能** | 焊接电流 1% +/-         | 焊接电流 5% +/-|  
 
 <br/>
 
 
-|      | [+ Voltage]/[- Voltage]                   |`[SHIFT]` + [+ Voltage]/[- Voltage] |
+|      | [+ 电压]/[- 电压]                   |`[SHIFT]` + [+ 电压]/[- 电压] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Welding Voltage 1% +/-         | Welding Voltage 5% +/-|  
+| **功能** | 焊接电压 1% +/-         | 焊接电压 5% +/-|  
 
 <br/>
 
 
-|      | [+ Weaving L]/[- Weaving L]                   |`[SHIFT]` + [+ Weaving L]/[- Weaving L] |
+|      | [+ 编织 L]/[- 编织 L]                   |`[SHIFT]` + [+ 编织 L]/[- 编织 L] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Weaving Width(Left) 0.1[mm] +/-         |Weaving Width(Left) 0.5[mm] +/-|  
+| **功能** | 编织宽度(左) 0.1[mm] +/-         |编织宽度(左) 0.5[mm] +/-|  
 
 <br/>
 
 
-|      | [+ Weaving R]/[- Weaving R]                   |`[SHIFT]` + [+ Weaving R]/[- Weaving R] |
+|      | [+ 编织 R]/[- 编织 R]                   |`[SHIFT]` + [+ 编织 R]/[- 编织 R] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Weaving Width(Right) 0.1[mm] +/-         |Weaving Width(Right) 0.5[mm] +/-|  
+| **功能** | 编织宽度(右) 0.1[mm] +/-         |编织宽度(右) 0.5[mm] +/-|  
 
 <br/>
 
 
-|      | [+ Frequency]/[- Frequency]                   |`[SHIFT]` + [+ Frequency]/[- Frequency] |
+|      | [+ 频率]/[- 频率]                   |`[SHIFT]` + [+ 频率]/[- 频率] |
 | ------ | --------------------- |--------------------- |
-| **Function** | Weaving Frequency 0.1[Hz] +/-         | Weaving Frequency 0.5[Hz] +/-|  
+| **功能** | 编织频率 0.1[Hz] +/-         | 编织频率 0.5[Hz] +/-|  
 
 <br/>
 
 
----  
+---
 
+### 弧焊电流/电压自动保存设置
 
-### Arc welding Current/Voltage Auto saving settings
+- 导航至`[F2: 系统] - 4: 应用参数 - 2: 弧焊 ([F2: System] - 4: Application parameter - 2: Arc welding)`
+- **[弧焊 I/V 变化自动保存]**
+    - **禁用**  
+    不保存
 
-- Navigate to `[F2: System] - 4: Application parameter - 2: Arc welding`
-- **[Arc welding I/V change auto saving]**
-    - **Disable**  
-    Not saved
+    - **启用**  
+    用户更改值后立即保存至焊接条件
 
-    - **Enable**  
-    Save to welding conditions as soon as the user changes the value
+---
 
----  
+### 操作
 
-
-### Operation
-
-The details for each item in the dialog box are as shown in the following figure.
+对话框中每个项目的详细信息如以下图所示。
 
 ![](../../_assets/1_3_2.png)<br>
-*Figure 1.3.2. Arc Welding Change I/V dialog box*
+*图 1.3.2. 弧焊变化 I/V 对话框*
 
 {% hint style="info" %}
-- Current/Voltage changes are saved only to the welding Start Conditions, not to the End Conditions.
+- 电流/电压的变化仅保存到焊接开始条件，而不保存到结束条件。
 
-- If the ```arcon``` command specifically designates current and voltage values, then the changes will only be saved to the welding conditions.
+- 如果```arcon```命令特别指定电流和电压值，则更改将仅保存到焊接条件中。
 
-Example: arcon cnd=1,cur=200,vol=20 # The changed current and voltage are saved to welding start condition #1.
+例如：arcon cnd=1,cur=200,vol=20 # 改变的电流和电压保存到焊接开始条件 #1.
 {% endhint %}
-
 [__SOURCE](1_Basic_information/3_Convenient_functions/4_manual_mode.md)
-# 1.3.4 Manual Mode Arc Welding
+# 1.3.4 手动模式弧焊
 
-Generally, Arc Welding is only possible when the robot operates in automatic or remote mode.
+一般来说，弧焊只有在机器人运行于自动或远程模式时才可能。
 
-Manual Mode Arc Welding is a function that allows welding even when the robot is in manual mode. This is convenient for repeatedly testing various welding conditions during setup.
+手动模式弧焊是一种允许在机器人处于手动模式时进行焊接的功能。这对于在设置期间反复测试各种焊接条件非常方便。
 
-To use Manual Mode Arc Welding, it should be set as below.
+要使用手动模式弧焊，应按如下设置。
 
- (1) Go to `[F2: System] - 4: Application parameter - 2: Arc welding - Arc welding enable during manual mode` and check enable.
+ (1) 转到 `[F2: 系统] - 4: 应用参数 - 2: 弧焊 - 手动模式下启用弧焊 ([F2: System] - 4: Application parameter - 2: Arc welding - Arc welding enable during manual mode)` 并检查启用。
 
- (2) Set the **[run to(execution unit)] to "End"** (the second menu on the left side of the TP).
+ (2) 将 **[运行到（执行单元）] 设置为 "结束"**（TP左侧的第二个菜单）。
 
- (3) Execute ```arcon``` using step forward.  <br/>
- * NOTE: If the robot stops during welding(before ```arcoff```) due to a paused step forward movement, ```arcon``` won't execute when you step forward again. In this case, the robot will move to the next teaching point without welding.
-
+ (3) 使用前进步骤执行 ```arcon```。 <br/>
+ * 注意：如果在焊接期间（在 ```arcoff``` 之前）由于暂停的前进运动而导致机器人停止，```arcon``` 在您再次前进时将不会执行。在这种情况下，机器人将移动到下一个教学点而不进行焊接。
 [__SOURCE](1_Basic_information/3_Convenient_functions/5_vibration_reduction.md)
-# 1.3.5 High weight arc torch vibration reduction function
+# 1.3.5 高重量弧焊枪振动减震功能
 
-This function aims to reduce vibrations that can occur when using heavy torches (such as water-cooled torches or push-pull torches) on a small robot. You can configure this feature as described below.
+此功能旨在减少在小型机器人上使用重型焊枪（例如水冷焊枪或推拉焊枪）时可能发生的振动。您可以按照以下描述配置此功能。
 
-- `[F2: System] - 4: Application parameter - 2: Arc welding - Vibration reduction for heavy torch`: Disable / Welding Point / All range
+- `[F2: 系统] - 4: 应用参数 - 2: 弧焊 - 高重量焊枪用减震功能设置 ([F2: System] - 4: Application parameter - 2: Arc welding - Vibration reduction for heavy torch)`: 禁用 / 焊接点 / 全范围
 
-To reduce vibrations, two methods are provided, each with its own advantages and disadvantages. You can refer to the pros and cons below to choose the method that best suits your situation.
+为了减少振动，提供两种方法，每种方法都有其优缺点。您可以参考下面的优缺点，以选择最适合您情况的方法。
 
 
 | Item | Description |
 | --- | --- |
-| **Disable**  |  |
-| **Welding Point**  | Significantly reduces a considerable amount of vibrations. No impact on robot cycle time. |
-| **All range** | Reduces most vibrations. Increases robot cycle time. |
+| **禁用**  |  |
+| **焊接点**  | 显著减少大量振动。对机器人循环时间没有影响。 |
+| **全范围** | 减少大部分振动。增加机器人循环时间。 |
 [__SOURCE](1_Basic_information/3_Convenient_functions/6_signal_test.md)
-# 1.3.6 Arc Welding signal test function
+# 1.3.6 弧焊信号测试功能
 
+弧焊信号测试功能允许您测试关键焊接信号的输入/输出状态并手动释放电线突出。此功能对于检查焊机和通信的状态非常有用，因为它确认特定信号是否正常工作。
 
-The Arc Welding Signal Test function lets you test the input/output status of key welding signals and manually release wire stick-out. This feature is useful for checking the status of welder and communication as it confirms wheter specific signals are operating correctly.
-
-To use this feature, on TP, press `[pane layout] - select - arc welding` sequentially. In the Arc Welding panel, scroll down to see the input/output signal items.
-
+要使用此功能，请在TP上依次按`[pane layout] - 选择 - 弧焊 ([pane layout] - select - arc welding)`。在弧焊面板中，向下滚动以查看输入/输出信号项目。
 
 ![](../../_assets/1_3_3.png)<br>
-*Figure 1.3.3. Arc Welding Monitoring*
+*图 1.3.3. 弧焊监控*
 
-| Item | Description |
+| 项目 | 描述 |
 | ------------- | ---------------------------------------------------------- |
-| **Output Signal** | With the desired output signal selected, click the **[Manual Output]** button to test turnning the signal on/off. |
-| **Input Signal**| You can verify whether input signals are being recieved correctly according to their operation. |
-| **Command Value**| <li>**Manual Wire Stick-out Release**: Select "Stick check" and click the **[Manual Output]** button. </li> <li>**Manual Welder Error Reset**: Select "Welder Error Reset" and click the **[Manual Output]** button. </li>|
-
+| **输出信号** | 选择所需的输出信号后，单击**[手动输出]**按钮以测试打开/关闭信号。 |
+| **输入信号**| 您可以验证输入信号是否根据其操作正确接收。 |
+| **命令值**| <li>**手动电线突出释放**: 选择“突出检查”，然后单击**[手动输出]**按钮。</li> <li>**手动焊机错误重置**: 选择“焊机错误重置”，然后单击**[手动输出]**按钮。</li>|
 [__SOURCE](1_Basic_information/3_Convenient_functions/7_operation_info.md)
-# 1.3.7 Arc Welding Operation Information
+# 1.3.7 电弧焊操作信息
 
-This function allows you to monitor the operational information of arc welding. With this feature, you can easily check and manage the following aspects:
+此功能允许您监控电弧焊的操作信息。利用此功能，您可以轻松检查和管理以下方面：
 
-To use this feature, on TP, press `[pane layout] - select - arc operation info.` sequentially. 
-
+要使用此功能，在 TP 上，依次按下 `[pane layout] - 选择 - 电弧操作信息 ([pane layout] - select - arc operation info.)`。 
 
 ![](../../_assets/1_3_4.png)<br>
-*Figure 1.3.4. Arc Welding Operation Information Monitoring*  
+*图 1.3.4. 电弧焊操作信息监控*  
 
-| Item | Description |
+| 项目 | 描述 |
 | --- | --- |
-| **since init.** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **since system initialization**. |
-| **since pow.** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **since the system was powered on**. |
-| **last cycle** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **of the immediately previous cycle**. |
-| **current cycle** | Displays the welding time, as well as the number of automatic retries and automatic wire stick-out release counts **for the current cycle**. |
-| **overlap count(by cause)**  | Displays the number of overlaps that occur when the robot stops during welding, categorized by the cause of the stop. |
-| **clear(on fbt)** | When the Arc welding operation info window is activated, the **[clear]** button appears. Clicking this button will display the operation info clear dialog. You can click the button for the item you wish to clear to perform the desired action. |
+| **自初始化以来** | 显示焊接时间，以及**自系统初始化以来**的自动重试次数和自动焊丝伸出释放计数。 |
+| **自开机以来** | 显示焊接时间，以及**自系统开机以来**的自动重试次数和自动焊丝伸出释放计数。 |
+| **上一个循环** | 显示焊接时间，以及**上一个循环的**自动重试次数和自动焊丝伸出释放计数。 |
+| **当前循环** | 显示焊接时间，以及**当前循环的**自动重试次数和自动焊丝伸出释放计数。 |
+| **重叠计数（按原因）** | 显示机器人在焊接过程中停止时发生的重叠次数，并按停止原因分类。 |
+| **清除（在 fbt 上）** | 当电弧焊操作信息窗口激活时，**[清除]** 按钮会出现。点击此按钮将显示操作信息清除对话框。您可以点击希望清除的项目按钮以执行所需的操作。 |
 [__SOURCE](2_Command/README.md)
-# 2. Inserting Commands
-
-
+# 2. 插入命令
 [__SOURCE](2_Command/1_arcon.md)
 # 2.1 arcon
 
 
 ### Description
 
-```arcon``` command is used to start the Arc Welding process. This command can be used in 4 different forms. However, commands not supported by the configured welder cannot be used.
+```arcon``` 命令用于启动弧焊过程。此命令可以以4种不同的形式使用。然而，未被配置焊机支持的命令不能被使用。
 <br/>
 
 ### Syntax
@@ -497,42 +466,42 @@ arcon cnd=<Condition Number>,job=<Job Number of the Welder>
 
 | Item | Meaning | Remarks |
 | --- | --- | --- |
-| **Arc Welding Condition Number** | The number of the welding condition used to starting Arc Welding and the specific condition (1~100) | Variable |
-| **Job Number of the Welder** | The Job number stored in the welder to be used(only for welders supporting job mode) (0 ~ 9999) | Variable |
-| **Current** | The output current value for Arc Welding (0 ~ 500)[A] | Variable |
-| **Voltage** | The output voltage value for Arc Welding (20 ~ 40)[V] | Variable |
-| **Voltage Offset** | The voltage offset value for the synergic voltage during Arc Welding (-200 ~ 200)[V] | Variable |
+| **Arc Welding Condition Number** | 用于启动弧焊的焊接条件编号以及特定条件（1~100） | Variable |
+| **Job Number of the Welder** | 存储在焊机中的作业编号（仅适用于支持作业模式的焊机）（0 ~ 9999） | Variable |
+| **Current** | 弧焊的输出电流值（0 ~ 500）[A] | Variable |
+| **Voltage** | 弧焊的输出电压值（20 ~ 40）[V] | Variable |
+| **Voltage Offset** | 弧焊过程中协同电压的电压偏移值（-200 ~ 200）[V] | Variable |
 
 
 ### Example
 
 ```python
-   arcon  # Starts Welding using the previously set welding conditions. Retry or Restart is not executed.
-   arcon cnd=1  # Starts welding according to the specified welding start condition(cnd=1)
-   arcon cnd=1,cur=200,vol=22  # Starts welding with the specified current and voltage(200A, 22V), while other welding conditions follow the settings of the specified welding start condition number(cnd=1)
-   arcon cnd=1,job=5 # Starts welding in Job mode, using Job number 5. Other welding conditions follow the settings of the specified welding start condition number(cnd=1)
+   arcon  # 使用先前设置的焊接条件启动焊接。不会执行重试或重启。
+   arcon cnd=1  # 根据指定的焊接启动条件启动焊接（cnd=1）
+   arcon cnd=1,cur=200,vol=22  # 使用指定的电流和电压（200A, 22V）启动焊接，同时其他焊接条件遵循指定焊接启动条件编号（cnd=1）的设置
+   arcon cnd=1,job=5 # 在作业模式下启动焊接，使用作业编号5。其他焊接条件遵循指定焊接启动条件编号（cnd=1）的设置
 ```  
 
 ### Details  
 
-Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md) 
+请参阅 [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md) 
 <br/>
 
 
 {% hint style="warning" %}
 [Caution]
- - Some welder models can store various welding settings as jobs internally. In this case, you can use 'Job number of the Welder' item.
+ - 某些焊机型号可以将各种焊接设置作为作业内部存储。在这种情况下，您可以使用“焊机的作业编号”项目。
 {% endhint %}
 [__SOURCE](2_Command/2_arcoff.md)
 # 2.2 arcoff
 
-### Description
+### 描述
 
-```arcoff``` command is used to stop Arc Welding. This command can be used in 2 different forms. However, commands not supported by the configured welder cannot be used.
+```arcoff``` 命令用于停止弧焊。此命令可以使用两种不同形式。然而，配置的焊机不支持的命令无法使用。
 
 <br/>
 
-### Syntax
+### 语法
 
 ```python
 arcoff
@@ -540,92 +509,87 @@ arcoff welder=<Condition Number>, delay=<Delay Time>
 ```  
 
 
-### Parameter
+### 参数
 
-| Item | Meaning | Remarks |
+| 项目 | 意义 | 备注 |
 | --- | --- | --- |
-| Condition Number | When using two welders, set the welder number to be turned off. (1 ~ 2) | Variable |
-| Delay Time | When using two welders, set the delay time to be turned off. (1 ~ 2) | Variable |
+| Condition Number | 使用两个焊机时，设置要关闭的焊机编号。（1 ~ 2） | 变量 |
+| Delay Time | 使用两个焊机时，设置关闭的延迟时间。（1 ~ 2） | 变量 |
 
 
-### Example
+### 示例
 
 ```python
-    arcoff                    # Terminate the arc welding without any special shutdown process
-    arcoff welder=2, delay=1  # Trun off the arc of the 2nd welder after a 1-second delay.
+    arcoff                    # 在没有任何特殊关闭过程的情况下终止弧焊
+    arcoff welder=2, delay=1  # 在1秒延迟后关闭第二台焊机的弧。
 ```  
 
 
-### Details 
+### 详细信息 
 
-Refer to [[5. Editing Arc Welding Conditions]](../5_Condition_editing/README.md) 
-
+请参阅 [[5. 编辑弧焊条件]](../5_Condition_editing/README.md) 
 [__SOURCE](2_Command/3_weavon.md)
-# 2.3 weaving on
+# 2.3 编织开启
 
-
-### Description
-```weaving on``` command is used to enable the weaving condition. You can enter the properties window to set the corresponding weaving condition for the specified condition number.  
+### 描述
+```weaving on``` 命令用于启用编织条件。您可以进入属性窗口，为指定的条件编号设置相应的编织条件。  
 <br/>
 
-### Syntax
+### 语法
 
 ```python
     weaving on, cnd=<Weaving Condition number>
 ```  
 
-### Parameter
+### 参数
 
-| Item | Meaning | Remarks |
+| 项目 | 含义 | 备注 |
 | --- | --- | --- |
-| **Weaving Condition number** | Load the Weaving condition number (1 ~ 1000) | Variable |
+| **编织条件编号** | 加载编织条件编号 (1 ~ 1000) | 变量 |
 
 
-### Example
+### 示例
 
 ```python  
-   weaving on, cnd=1    # Load and execute weaving condition number 1
-   arcon cnd=1          # Execute with arc condition number 1
-   move L,spd=100cm/min,accu=0,tool=0   # Perform execution according to the above weaving conditions while moving the robot
+   weaving on, cnd=1    # 加载并执行编织条件编号 1
+   arcon cnd=1          # 用弧形条件编号 1 执行
+   move L,spd=100cm/min,accu=0,tool=0   # 在移动机器人时，根据以上编织条件执行
 ```  
 
 
-### Details  
-  Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)
-
+### 详情  
+  请参阅 [[6. 编织功能]](../6_Weaving_function/README.md)
 [__SOURCE](2_Command/4_weavof.md)
-# 2.4 weaving off
+# 2.4 停止织造
 
 
-### Description
+### 描述
 
-```weaving off``` command is used to stop the weaving motion.  
+```weaving off``` 命令用于停止织造运动。  
 <br/>
 
-### Syntax
+### 语法
 
 ```python
 weaving off
 ```  
 
-### Example
+### 示例
 
 ```python
    weaving off
 ```  
 
-### Details
+### 详情
 
-  Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)
-
-
+  请参阅 [[6. Weaving Function]](../6_Weaving_function/README.md)
 [__SOURCE](2_Command/5_arccond.md)
 # 2.5 arccond
 
 
 ### Description
 
-```arccond``` command is used to configure a job using the welding database(DB), or to continuously change welding conditions using the welding DB.  
+```arccond``` 命令用于使用焊接数据库 (DB) 配置作业，或使用焊接数据库持续更改焊接条件。  
 <br/>
 
 ### Syntax
@@ -638,27 +602,27 @@ arccond <Interpolation type>, cnd=<Condition Number>, gap=<Gap>, spd=<Welding Sp
 
 | Item | Meaning | Remarks |
 | --- | --- | --- |
-| **Interpolation Type** | Interpolation condition setting (D: Immediate change, L: Linear interpolation change)| Character |
-| **Condition Number**| The condition number that stores the welding DB (WDB) and interpolation conditions (1 ~ 1000) | Variable  |
-| **Gap** | The gap value to be input (-1 ~ 1000) [mm]| Variable  |
-| **Welding Speed**| Welding speed for immediate change (1 ~ 1000) [cm/min]| Variable  |
-| **Wall Direction**  | Weaving wall direction width for immediate change (1 ~ 50) [mm]| Variable  |
-| **Cross Direction** | Weaving cross direction width for immediate change (1 ~ 50) [mm]  | Variable  |
-| **Weaving Frequency**  | Weaving frequency for immediate change (1 ~ 10) [Hz]  | Variable  |
-| **Current**| Welding current for immediate change  (The range varies depending on the welder settings)| Variable  |
-| **Voltage**| Welding voltage for immediate change  (The range varies depending on the welder settings)| Variable  |
+| **Interpolation Type** | 插值条件设置 (D: 立即更改, L: 线性插值更改)| Character |
+| **Condition Number**| 存储焊接数据库 (WDB) 和插值条件的条件编号 (1 ~ 1000) | Variable  |
+| **Gap** | 输入的间隙值 (-1 ~ 1000) [mm]| Variable  |
+| **Welding Speed**| 立即更改的焊接速度 (1 ~ 1000) [cm/min]| Variable  |
+| **Wall Direction**  | 立即更改的编织墙面方向宽度 (1 ~ 50) [mm]| Variable  |
+| **Cross Direction** | 立即更改的编织交叉方向宽度 (1 ~ 50) [mm]  | Variable  |
+| **Weaving Frequency**  | 立即更改的编织频率 (1 ~ 10) [Hz]  | Variable  |
+| **Current**| 立即更改的焊接电流  (范围因焊机设置而异)| Variable  |
+| **Voltage**| 立即更改的焊接电压  (范围因焊机设置而异)| Variable  |
 
 
 ### Example
 
 ```python
-  	arccond D, cur=170, vol=10 # Change immediately with a current of 170A and a voltage of 10V
-  	arccond D, spd=80, rd=20, ld=20, freq=1.5 # Change immediately with a welding speed 80cm/min, weaving width of 20mm, and frequency of 1.5Hz
-  	arccond D, cnd=1 # Change immediatelyto condition number 1
+  	arccond D, cur=170, vol=10 # 用170A电流和10V电压立即更改
+  	arccond D, spd=80, rd=20, ld=20, freq=1.5 # 用80cm/min的焊接速度、20mm的编织宽度和1.5Hz的频率立即更改
+  	arccond D, cnd=1 # 立即更改到条件编号1
   
   	arccond L, cnd=1  
-    ...               # welding step (move command for welding section)
-    arccond L, cnd=2  # Change continuously from condition 1 to condition 2 using WDB data with linear interpolation
+    ...               # 焊接步骤 (焊接区域的移动命令)
+    arccond L, cnd=2  # 使用WDB数据通过线性插值从条件1连续更改到条件2
 ```  
 
 ### Details  
@@ -669,47 +633,47 @@ arccond <Interpolation type>, cnd=<Condition Number>, gap=<Gap>, spd=<Welding Sp
 
 ### Description
 
-```refp``` command is used to input reference points for the weaving motion. It inputs reference points such as weaving wall and entry direction.
+```refp``` 命令用于输入编织运动的参考点。它输入编织墙和进入方向等参考点。
 <br/>
 
 ### Syntax
 
 ```python
-refp <Reference Point Number>
-refp <Reference Point Number>,<Pose(Num)>
+refp <参考点编号>
+refp <参考点编号>,<姿态(数量)>
 ```  
 
 ### Parameter
 
 | Item | Meaning | Remarks |
 | --- | --- | --- |
-| **Reference Point Number** | Set the number for the type of reference points (1 ~ 8) | Variable |
-| **Pose** | Input the pose of the reference points (However, if a hidden pose is used, it will be omitted) | Variable |
+| **参考点编号** | 设置参考点类型的编号 (1 ~ 8) | Variable |
+| **姿态** | 输入参考点的姿态 (但是，如果使用了隐藏姿态，它将被省略) | Variable |
 
 
 ### Example
 
 ```python
-   refp 1,P1                   # Specify the wall direction of the weaving using P1
-   refp 1                      # Specify the wall direction of the weaving hidden pose
-   refp 2, (-1073.33, 739.01, 258.30, 0, 76, 23)  # Specify the position of the weaving surface
+   refp 1,P1                   # 使用 P1 指定编织的墙面方向
+   refp 1                      # 指定编织隐藏姿态的墙面方向
+   refp 2, (-1073.33, 739.01, 258.30, 0, 76, 23)  # 指定编织表面的位置信息
 ```  
 
 ### Details
-  Refer to [[6. Weaving Function]](../6_Weaving_function/README.md)  
+  参见 [[6. Weaving Function]](../6_Weaving_function/README.md)  
 
 
 {% hint style="warning" %}
--	```refp``` command, likes ```move``` command, belongs to the step category.
-- When the ```refp``` command is entered using a user key, it takes the form of a hidden pose.
-- After setting the execution unit to Cmd or Step, you can move to the taught position.  
+-	```refp``` 命令与 ```move``` 命令一样，属于步骤类别。
+- 当使用用户键输入 ```refp``` 命令时，它将采用隐藏姿态的形式。
+- 在将执行单元设置为 Cmd 或 Step 之后，您可以移动到教导的位置。  
 {% endhint %}
 [__SOURCE](2_Command/7_lvson.md)
 # 2.7 lvs
 
 ### Description 
 
-```lvs``` command uses the LVS(Laser Vision Sensor) to perform functions such as obtaining the pose of the laser position(`seam_find`), start point detection(`search`), and seam tracking(`track`).
+```lvs``` 命令使用 LVS(激光视觉传感器) 执行功能，例如获取激光位置的姿态(`seam_find`)、起始点检测(`搜索 (search)`)和缝线跟踪(`track`)。
 <br/>
 
 ### Syntax
@@ -739,55 +703,55 @@ refp <Reference Point Number>,<Pose(Num)>
       <td rowspan="10">lvs</td>
       <tr>
         <td>`laser_on`</td>
-        <td> Turns on the laser </td>
+        <td> 打开激光 </td>
       </tr>
       <tr>
         <td>`laser_off`</td>
-        <td> Turns off the laser </td>
+        <td> 关闭激光 </td>
       </tr>
       <tr>
-        <td>`search`</td>
-        <td> Finds the starting point before performing the track function and prepares for tracking </td>
+        <td>`搜索 (search)`</td>
+        <td> 在执行跟踪功能之前找到起始点并为跟踪做准备 </td>
       </tr>
       <tr>
         <td>`step_search`</td>
-        <td> Find the step difference of the base material and saves it as a pose in the `sp`. </td>
+        <td> 找到基材的步骤差，并将其保存为姿态在 `sp` 中。 </td>
       </tr>
       <tr>
         <td>`track`</td>
-        <td> Starts following the welding line when `arcon` is encountered (must have executed `search` first) </td>
+        <td> 当遇到 `arcon` 时开始跟随焊接线（必须先执行 `搜索 (search)`） </td>
       </tr>
       <tr>
         <td>`track_stationary`</td>
-        <td> Performs stop tracking function. </td>
+        <td> 执行停止跟踪功能。 </td>
       </tr>
       <tr>
         <td>`seam_find`</td>
-        <td> Reflects the current position of the laser sensing location and converts it to a pose, then saves it to the `sp`. </td>
+        <td> 反映激光感应位置的当前位置并转换为姿态，然后保存到 `sp` 中。 </td>
       </tr>
       <tr>
         <td>`seam_find_p`</td>
-        <td> Converts the current laser sensing location to a pose, and saves it to the `sp`. </td>
+        <td> 将当前激光感应位置转换为姿态，并保存到 `sp` 中。 </td>
       </tr>
       <tr>
         <td>`auto_calib`</td>
-        <td> Performs automatic calibration between the tool and the LVS Sensor. </td>
+        <td> 执行工具与 LVS 传感器之间的自动校准。 </td>
       </tr>
     </tr>
     <tr>
       <td colspan="2">Condition Number</td>
-      <td> The condition number used when performing the LVS function (1 ~ 32). The properties window for each condition number is different, and this information is used during tracking. </td>
-      <td>Variable</td>
+      <td> 执行 LVS 功能时使用的条件编号 (1 ~ 32)。每个条件编号的属性窗口不同，这些信息在跟踪期间使用。 </td>
+      <td>变量</td>
     </tr>
     <tr>
       <td colspan="2">Seam Number</td>
-      <td>Specifies the seam number. This number is sent to the LVS controller, and the LVS sensor senses the seam corresponding to this number</td>
-      <td>Variable</td>
+      <td>指定缝线编号。该编号发送到 LVS 控制器，LVS 传感器感应与该编号对应的缝线</td>
+      <td>变量</td>
     </tr>
     <tr>
       <td colspan="2">Seam Pose</td>
-      <td> Specifies the pose variable to save the pose found by `seam_find` or the pose found after `search` </td>
-      <td>Pose Variable</td>
+      <td> 指定用于保存 `seam_find` 找到的姿态或 `搜索 (search)` 后找到的姿态的姿态变量 </td>
+      <td>姿态变量</td>
     </tr>
   </tbody>
 </table>  
@@ -796,39 +760,38 @@ refp <Reference Point Number>,<Pose(Num)>
 
 ```python
     lvs seam_find, cnd=1, seam=10, sp=p10    
-    # Perform seam finding with condition number 1 and seam number 10, saving the resulting pose in p10
+    # 使用条件编号 1 和缝线编号 10 执行缝线查找，将结果姿态保存到 p10
     lvs track, cnd=1 ,seam=10 , sp=p10
-    # Start LVS seam tracking with condition number 1 and seam number 10
+    # 使用条件编号 1 和缝线编号 10 启动 LVS 缝线跟踪
 ```  
 
 
 {% hint style="info" %}
-  For use as an optional feature, please contact our company.
+  作为可选功能使用，请联系我们的公司。
 {% endhint %}
 
 
 ### Details  
 
-  Refer to [[8.5 LVS(Laser Vision Sensor) Seam Finding and Tracking]](../8_Application_function/5_LVS_tracking/README.md)
-
+  参考 [[8.5 LVS(激光视觉传感器) 缝线查找和跟踪]](../8_Application_function/5_LVS_tracking/README.md)
 [__SOURCE](2_Command/8_lps.md)
 # 2.8 lps
 
 ### Description 
 
-```lps``` command is used to perform functions such as obtaining the pose of the laser position using a laser distance sensor (Spot Mode), detecting step differences (Step mode), and searching for a weld seam (Scan mode).
+```lps``` 命令用于执行一些功能，例如使用激光测距传感器获取激光位置的姿态（点模式）、检测阶梯差（步进模式）和寻找焊缝（扫描模式）。
 
 <br/>
 
 ### Syntax
 
 ```python
-    lps auto_calib, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>
-    lps spot, cnd=<Condition Number>, sp=<Stored Pose>
-    lps stepp, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>, spd=<Robot Speed>, sp=<Stored Pose>
-    lps scan, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>, spd=<Robot Speed>, sp=<Stored Pose>
-    # When Using Master / Production Mode
-    lps scan, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool>, spd=<Robot Speed>, sp=<Stored Pose>, mp=<Pose to save in Master Mode>, ms=<Shift Variable Calculated in Production Mode>
+    lps auto_calib, cnd=<Condition Number>, Tx=<工具基准的X方向移动距离>, Ty=<工具基准的Y方向移动距离>
+    lps spot, cnd=<Condition Number>, sp=<存储姿态>
+    lps stepp, cnd=<Condition Number>, Tx=<工具基准的X方向移动距离>, Ty=<工具基准的Y方向移动距离>, spd=<机器人速度>, sp=<存储姿态>
+    lps scan, cnd=<Condition Number>, Tx=<工具基准的X方向移动距离>, Ty=<工具基准的Y方向移动距离>, spd=<机器人速度>, sp=<存储姿态>
+    # 当使用主模式/生产模式时
+    lps scan, cnd=<Condition Number>, Tx=<工具基准的X方向移动距离>, Ty=<工具基准的Y方向移动距离>, spd=<机器人速度>, sp=<存储姿态>, mp=<主模式下保存的姿态>, ms=<生产模式下计算的移位变量>
 ```  
 
 ### Parameter
@@ -848,67 +811,67 @@ refp <Reference Point Number>,<Pose(Num)>
       <tr>
       <td>`auto_calib`</td>
       <td>
-        Performs automatic calibration between the tool and the sensor.
+        在工具和传感器之间执行自动校准。
       </td>
       </tr>
       <tr>
-      <td>`spot`</td>
+      <td>`点 (spot)`</td>
       <td>
-        In Spot mode, the pose of the position currently indicated by the laser is obtained.
+        在点模式中，获取激光指示的位置的姿态。
       </td>
       </tr>
       <tr>
       <td>`stepp`</td>
       <td>
-        In Step mode, the pose of the position where the output value changes abruptly while the laser is moving is obtained.
+        在步进模式中，获取激光移动时输出值突然变化位置的姿态。
       </td>
       </tr>
       <tr>
       <td>`scan`</td>
       <td>
-        In Scan mode, the pose of the position estimated to be a weld point along the laser movement path is obtained.
+        在扫描模式中，获取沿激光移动路径估计为焊点的位置的姿态。
       </td>
       </tr>
     </tr>
     <tr>
       <td colspan="2">cnd</td>
       <td>
-        Condition numbers (1 to 8) used when executing the LPS function.
-        The information displayed in the command property window varies depending on the condition number.
-        This information is used for sensitivity settings in Automatic Calibration and Step mode, and coordinate system configuration when storing poses.
+        执行 LPS 功能时使用的条件编号（1 到 8）。
+        命令属性窗口中显示的信息根据条件编号而异。
+        此信息用于自动校准和步进模式中的灵敏度设置，以及存储姿态时的坐标系配置。
       <td>Variable</td>
     </tr>
     <tr>
       <td colspan="2">`Tx / Ty`</td>
       <td>
-        Sets the movement distance in the X or Y direction based on the tool.
-        Except for auto_calib, only one of the two values must be entered.
+        设置基于工具的X或Y方向的移动距离。
+        除了auto_calib，两个值中只能输入一个。
       <td>Variable</td>
     </tr>
     <tr>
       <td colspan="2">`spd`</td>
       <td>
-        Specifies the speed at which the robot moves while executing the operation.
+        指定在执行操作时机器人移动的速度。
       <td>Variable</td>
     </tr>
     <tr>
       <td colspan="2">`sp`</td>
       <td>
-        Specifies the pose variable in which the current pose found by each command is stored.
+        指定当前通过每个命令找到的姿态存储的姿态变量。
       <td>Pose Variable</td>
     </tr>
     <tr>
       <td colspan="2">`mp`</td>
       <td>
-        In Master mode, the sensing result is stored in mp (master pose).
-        In Production mode, it is used to calculate ms (master shift).
+        在主模式下，感测结果存储在 mp（主姿态）中。
+        在生产模式下，用于计算 ms（主移位）。
       <td>Pose Variable</td>
     </tr>
     <tr>
-      <td colspan="2">`ms`</td>
+      <td colspan="2">` (ms)`</td>
       <td>
-        A shift variable used in Production mode.
-        The difference between the master pose (mp parameter) and the currently sensed pose (sp parameter) is calculated and stored.
+        在生产模式下使用的移位变量。
+        计算并存储主姿态（mp参数）与当前感测姿态（sp参数）之间的差。
       <td>Shift Variable</td>
     </tr>
   </tbody>
@@ -919,35 +882,34 @@ refp <Reference Point Number>,<Pose(Num)>
 
 ```python
     lps auto_calib, cnd=1, Tx=50, Ty=-100
-    # Performs Automatic Calibration within the specified distance range of +50 in the X direction and -100 in the Y direction, based on the tool, using condition number 1
+    # 在指定的 +50 的 X 方向和 -100 的 Y 方向的距离范围内，根据工具，使用条件编号 1 执行自动校准
     lps spot, cnd=1, sp=p10
-    # Using condition number 1, stores the pose of the current laser position in p10, based on the coordinate system defined in the condition settings.
+    # 使用条件编号 1，将当前激光位置的姿态存储在 p10 中，基于条件设置中定义的坐标系统。
     lps stepp, cnd=1, Tx=50, sp=p10
-    # Using condition number 1, moves 50[mm] in the X direction based on the tool, stops immediately when a step difference is detected, and stores the pose in p10.
+    # 使用条件编号 1，基于工具在 X 方向移动 50[mm]，在检测到阶梯差时立即停止，并将姿态存储在 p10 中。
     lps scan, cnd=1, Tx=50, spd=10, sp=p10
-    # Using condition number 1, moves 50[mm] in the X direction based on the tool at a speed of 10, detects the weld point upon completion of the movement, and stores it in p10.
-    # 조건 번호 1번, 툴 기준 X 방향으로 50만큼 설정된 거리만큼 이동이 완료되면 용접점을 검출하여 p10에 저장
+    # 使用条件编号 1，基于工具在 X 方向以 10 的速度移动 50[mm]，在完成移动后检测焊点，并将其存储在 p10 中。
+    # 条件编号 1番，工具基准X方向上移动50[mm]并检测焊点，将其存储在 p10 中
     
     lps scan, cnd=1, Tx=50, spd=10, sp=p10, mp=mp10, ms=ms10
-    # When using Master mode: Using condition number 1, moves 50[mm] in the X direction based on the tool at a speed of 10, detects the weld point upon completion of the movement, stores it in p10, compares it with mp10, and saves the calculated shift value in ms10.
+    # 当使用主模式时：使用条件编号 1，基于工具在 X 方向以 10 的速度移动 50[mm]，在完成移动后检测焊点，将其存储在 p10，中与 mp10 进行比较，并将计算的移位值保存到 ms10 中。
 ```  
 
 
 {% hint style="info" %}
-To use this function as an optional feature, please contact our company.
+要将此功能用作可选功能，请联系我们的公司。
 {% endhint %}
 
 
 ### Details
 
-  Refer to [8.7 LPS(Laser Point Sensing)](../8_Application_function/7_LPS/README.md)
-
+  请参见 [8.7 LPS(Laser Point Sensing)](../8_Application_function/7_LPS/README.md)
 [__SOURCE](2_Command/9_hsenson.md)
 # 2.9 heightsen on
 
 ### Description 
 
-```heightsen on``` command starts the height sensing function(AVC, Arc length control).  
+```heightsen on``` 命令启动高度感应功能（AVC，弧长控制）。  
 
 
 ### Syntax
@@ -959,30 +921,26 @@ To use this function as an optional feature, please contact our company.
 
 | Item | Meaning | Remarks |
 | --- | --- | --- |
-| **Condition Number** | The number of the welding condition used to starting Arc Welding and the specific condition (1 ~ 8) | Variable |
+| **Condition Number** | 用于开始弧焊的焊接条件的编号和特定条件 (1 ~ 8) | Variable |
 
 
 ### Example
 
 ```python   
-    heightsen on, cnd=1        # Starts height sensing with condition number 1.
+    heightsen on, cnd=1        # 使用条件编号 1 启动高度感应。
 ```  
 
 
 ### Details
-  Refer to [[8.4 Height Sensing]](../8_Application_function/4_Height_sensing/README.md)
-
-
-
+  请参阅 [[8.4 Height Sensing]](../8_Application_function/4_Height_sensing/README.md)
 [__SOURCE](2_Command/10_hsensoff.md)
 # 2.10 heightsen off
 
 ### Description
 
-```heightsen off``` command is used to stop the height sensing function (AVC, Arc Voltage Control).
+```heightsen off``` 命令用于停止高度感应功能 (AVC, Arc Voltage Control)。
 
 <br/>
-
 
 ### Syntax
   
@@ -990,29 +948,23 @@ To use this function as an optional feature, please contact our company.
 heightsen off
 ```  
 
-
 ### Example
 
 ```python   
-   heightsen off            # End height sensing execution
+   heightsen off            # 结束高度感应执行
 ```  
-
 
 ### Details
   Refer to [[8.4 Height Sensing]](../8_Application_function/4_Height_sensing/README.md)
 <br/>
-
-
-
 [__SOURCE](2_Command/11_multipass.md)
 # 2.11 multipass
 
 ### Description  
 
-```multipass``` command is used for multi-pass welding to reproduce the arc sensing path.  
-Using this command, you can perform welding by reproducing the original arc welding path with a specified amount of shift.  
+```multipass``` 命令用于多次焊接，以重现弧感应路径。  
+使用此命令时，您可以通过指定的偏移量重现原始弧焊路径来进行焊接。  
 <br/>
-
 
 ### Syntax
 
@@ -1037,51 +989,51 @@ multipass off
       <td rowspan="4">multipass</td>
     </tr>
     <tr>
-      <td>`save`</td>
-      <td>Multi-pass trajectory save</td>
+      <td>`保存 (save)`</td>
+      <td>多次轨迹保存</td>
     </tr>
     <tr>
       <td>`load`</td>
-      <td>Multi-pass trajectory load</td>
+      <td>多次轨迹加载</td>
     </tr>
     <tr>
-      <td>`off`</td>
-      <td>Multi-pass off</td>
+      <td>` (off)`</td>
+      <td>多次关闭</td>
     </tr>
     <tr>
-      <td colspan="2">Multi-pass trajectory Number</td>
-      <td> Trajectory Number to save/load the multi-pass (1 ~ 50)</td>
-      <td>Variable</td>
+      <td colspan="2">多次轨迹编号</td>
+      <td> 用于保存/加载多次的轨迹编号 (1 ~ 50)</td>
+      <td>变量</td>
     </tr>
     <tr>
-      <td colspan="2">trajectory save interval distance</td>
-      <td> Sampling interval distance when saving the multi-pass trajectory (5 ~ 100)[mm] </td>
-      <td>Variable</td>
+      <td colspan="2">轨迹保存间隔距离</td>
+      <td> 保存多次轨迹时的采样间隔距离 (5 ~ 100)[mm] </td>
+      <td>变量</td>
     </tr>
     <tr>
-      <td colspan="2">lateral shift distance</td>
-      <td> Shift distance in the left/right direction from the origin Arc sensing path (-20 ~ 20)[mm] </td>
-      <td>Variable</td>
+      <td colspan="2">横向偏移距离</td>
+      <td> 从原始弧感应路径向左/右方向的偏移距离 (-20 ~ 20)[mm] </td>
+      <td>变量</td>
     </tr>
     <tr>
-      <td colspan="2">vertical shift distance</td>
-      <td> Shift distance in the up/down direction from the origin Arc sensing path (-20 ~ 20)[mm] </td>
-      <td>Variable</td>
+      <td colspan="2">纵向偏移距离</td>
+      <td> 从原始弧感应路径向上/下方向的偏移距离 (-20 ~ 20)[mm] </td>
+      <td>变量</td>
     </tr>
     <tr>
-      <td colspan="2">Multi-pass run direction</td>
-      <td> Whether to reproduce the path in the reverse direction (0: forward, 1: reverse) </td>
-      <td>Variable</td>
+      <td colspan="2">多次运行方向</td>
+      <td> 是否在反向重新生成路径 (0: 向前, 1: 反向) </td>
+      <td>变量</td>
     </tr>
     <tr>
-      <td colspan="2">torch shift angle (front/rear)</td>
-      <td> Torch tilt angle shift in the front/rear direction during multi-pass reproduction (-20 ~ 20)[deg] </td>
-      <td>Variable</td>
+      <td colspan="2">焊枪偏移角度 (前/后)</td>
+      <td> 在多次重现过程中，焊枪在前/后方向的倾斜角度偏移 (-20 ~ 20)[度] </td>
+      <td>变量</td>
     </tr>
     <tr>
-      <td colspan="2">torch shift angle (left/right)</td>
-      <td> Torch tilt angle shift in the left/right direction during multi-pass reproduction (-20 ~ 20)[deg] </td>
-      <td>Variable</td>
+      <td colspan="2">焊枪偏移角度 (左/右)</td>
+      <td> 在多次重现过程中，焊枪在左/右方向的倾斜角度偏移 (-20 ~ 20)[度] </td>
+      <td>变量</td>
     </tr>
   </tbody>
 </table>  
@@ -1090,7 +1042,7 @@ multipass off
 
 ```python
      weaving on, cnd=1 
-     multipass save, trj=1, period=10       # Save to trajectory 1 at 10mm intervals
+     multipass save, trj=1, period=10       # 保存在轨迹1中，每10mm间隔
      arcon cnd=1
 S10  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
 S11  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
@@ -1101,8 +1053,8 @@ S12  move L,spd=50%,accu=3,tool=1
 S13  move L,spd=50%,accu=3,tool=1
 S14  move L,spd=50%,accu=3,tool=1
      multipass load,trj=1,side=3,height=3,reverse=0,tas=0,was=0
-     # Load trajectory 1 with a 3mm shift to the left, 3mm upward, in forward direction, with no angle shift
-S15  move L,R2,spd=50%,accu=0,tool=1       # Move step to the Multi-pass starting position
+     # 加载轨迹1，左偏移3mm，向上3mm，前进方向，无角度偏移
+S15  move L,R2,spd=50%,accu=0,tool=1       # 移动到多次开始位置
      weaving on, cnd=11
      arcon cnd=1 
 S16  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1  
@@ -1111,33 +1063,25 @@ S17  move L,tg=R2,spd=LV1!cm/min,accu=3,tool=1
      weaving off  
      multipass off
 ```  
-
 [__SOURCE](2_Command/12_posical.md)
 # 2.12 posi_calib
 
-### Description 
+### 描述
 
-```posi_calib``` command is used to perform positioner calibration, which is required for the positioner to operate synchronously with the robot.
-Typically, positioner calibration is carried out via a settings dialog.
-However, when the positioner is changed using a servo tool changer, calibration must be updated during robot operation.
-This command allows calibration to be performed directly within the robot program.
+```posi_calib``` 命令用于执行定位器校准，这是定位器与机器人同步操作所必需的。通常，通过设置对话框进行定位器校准。然而，当使用伺服工具更换器更换定位器时，必须在机器人操作期间更新校准。此命令允许在机器人程序中直接执行校准。
 
-
-- For detailed instructions on using this command, please refer to [2.3.4 posi_calib](https://hrbook-hrc.web.app/#/view/doc-positioner-sync/en/2-system_settings/2-3-positioner-calibration/4_posi_calib?cont_model=${cont_model})
-
-
+- 有关使用此命令的详细说明，请参阅 [2.3.4 posi_calib](https://hrbook-hrc.web.app/#/view/doc-positioner-sync/zh/2-system_settings/2-3-positioner-calibration/4_posi_calib?cont_model=${cont_model})
 [__SOURCE](2_Command/13_touchsen.md)
 # 2.13 touchsen
 
-### Description
+### 描述
 
-```touchsen``` command performs wire touch sensing. You can configure the sensing type and conditions in the properties window.
-After moving to the desired sensing position using a `move` command, executing the `touchsen` command initiates touch sensing at that position automatically, based on the specified sensing type and condition.
+```touchsen``` 命令执行线触摸感应。您可以在属性窗口中配置感应类型和条件。
+在使用 `移动 (move)` 命令移动到所需的感应位置后，执行 `touchsen` 命令会根据指定的感应类型和条件自动在该位置启动触摸感应。
 
 <br/>
 
-
-### Syntax
+### 语法
 
 ```python
 touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, pose=<Pose to save>
@@ -1146,50 +1090,45 @@ touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, lift_
 touchsen cnd=<Condition number>, crd=<Coordinate System>, dir=<Direction>, mpose=<Pose to save in Master Mode>, mshift=<Shift Variable Calculated in Production Mode>
 ```  
 
+### 参数
 
-### Parameter
-
-| Item | Meaning | Remarks |
+| 项目 | 含义 | 备注 |
 | --- | --- | --- |
-| **Condition number** | Touch sensing Condition number (1 ~ 1000) | Variable |
-| **Coordinate System** | Coordinate system used to define sensing direction ("robot", "base", "tool", "tool_prj") | Variable |
-| **Direction** | Touch sensing direction (supported directions vary by sensing type) ("+x", ["+x", "-z"], ["+ty", "+tz"]) | String Array |
-| **Pose to save** | Specifies the pose variable where the sensing result will be stored. | Variable |
-| **Sensing Angle** | Rotational angle applied to the sensing direction with respect to the selected coordinate system (Y+30, Y-30, X+30, X-30, TL+30, TL-30, TY+30, TY-30) | Variable |
-| **Lifting Distance** | The upward distance the robot moves after bottom detection | Variable |
-| **Criteria(Detection Threshold in Detect Groove)** | Reference distance for groove detection[mm] | Variable |
-| **Butt Gap Value** | Variable to store the lower gap measured via touch sensing in Butt or V-groove type | Variable |
-| **mpose(Pose to save in Master Mode)** | In Master mode, sensing results are stored in `mpose`. In Production mode, `mpose` is used to calculate `mshift`. | Variable |
-| **mshift(Shift Variable Calculated in Production Mode)** | In Production mode, `mshift` stores the calculated shift value as a vecotr difference: (current sensing pose - master pose) | Variable |
+| **Condition number** | 触摸感应条件编号 (1 ~ 1000) | 可变 |
+| **Coordinate System** | 用于定义感应方向的坐标系统 ("robot", "base", "tool", "tool_prj") | 可变 |
+| **Direction** | 触摸感应方向 (受支持方向因感应类型而异) ("+x", ["+x", "-z"], ["+ty", "+tz"]) | 字符串数组 |
+| **Pose to save** | 指定将存储感应结果的姿态变量。 | 可变 |
+| **Sensing Angle** | 应用于根据所选坐标系统的感应方向的旋转角度 (Y+30, Y-30, X+30, X-30, TL+30, TL-30, TY+30, TY-30) | 可变 |
+| **Lifting Distance** | 机器人在底部检测后向上移动的距离 | 可变 |
+| **Criteria(Detection Threshold in Detect Groove)** | 瓦沟检测的参考距离[mm] | 可变 |
+| **Butt Gap Value** | 通过触摸感应测量的下缝隙，存储为变量的 Butt 或 V-groove 类型 | 可变 |
+| **mpose(Pose to save in Master Mode)** | 在主模式下，感应结果存储在 `mpose` 中。在生产模式下，`mpose` 用于计算 `mshift`。 | 可变 |
+| **mshift(Shift Variable Calculated in Production Mode)** | 在生产模式下，`mshift` 存储计算出的位移值作为向量差异: (当前感应姿态 - 主姿态) | 可变 |
 
-
-### Example
+### 示例
 
 ```python
-    var var1=0      # Declare a variable to store the measured gap during butt joint sensing.
-    var P10=cpo()   # Declare a pose variable `P10` and save the current pose to it.
-    touchsen cnd=2, crd="tool", dir=["+y"], lift_up=3, pose=P10, gap=var1  # condition 2, in tool crd system, After bottom sensing, lift by 3mm, and store the gap in var1
-    touchsen cnd=1, crd="tool", dir=["tf", "td"], pose=P10, 0  # condition 1, in Tool projection crd system, 2-points
-    touchsen cnd=1, crd="base", dir=["+x","-y","-z"], pose=P10, 0  # condition 1, in base crd system, 3-points
+    var var1=0      # 声明一个变量以存储在 Butt joint 感应过程中测量的缝隙。
+    var P10=cpo()   # 声明一个姿态变量 `P10` 并将当前姿态保存到它。
+    touchsen cnd=2, crd="tool", dir=["+y"], lift_up=3, pose=P10, gap=var1  # 条件 2，在工具坐标系统中，底部感应后抬升3mm，并将缝隙存储在 var1 中
+    touchsen cnd=1, crd="tool", dir=["tf", "td"], pose=P10, 0  # 条件 1，在工具投影坐标系统中，2点
+    touchsen cnd=1, crd="base", dir=["+x","-y","-z"], pose=P10, 0  # 条件 1，在基座坐标系统中，3点
 ```  
 
-
-### Details
-  Refer to [[8.2 Touch Sensing]](../8_Application_function/2_Touch_sensing/README.md)
+### 细节
+  参考 [[8.2 Touch Sensing]](../8_Application_function/2_Touch_sensing/README.md)
 <br/>
-
-
 [__SOURCE](2_Command/14_stitch.md)
-# 2.14 stitch
+# 2.14 缝合
 
-### Description 
+### 描述
 
-```stitch``` command performs stitch welding. You can set the stitch conditions by placing the cursor on the command and clicking the **Properties** button.
-After moving to the desired stitch welding position using a `move` command, use stitch together with the `arcon` command.
-When the stitch function is executed, stitch welding starts at the specified position and continues until the stitch operation is completed.  
+```stitch``` 命令执行缝合焊接。您可以通过将光标放在命令上并单击 **属性** 按钮来设置缝合条件。
+在使用 `移动 (move)` 命令移动到所需的缝合焊接位置后，使用 `arcon` 命令一起进行缝合。
+当缝合功能被执行时，缝合焊接从指定位置开始，并持续到缝合操作完成。  
 <br/>
 
-### Syntax
+### 语法
 
 ```python
 stitch on, cnd=<Condition Number>
@@ -1197,51 +1136,47 @@ stitch off
 ```  
 
 
-### Parameter
+### 参数
 
-| Item | Meaning | Remarks |
+| 项目 | 说明 | 备注 |
 | --- | --- | --- |
-| **Condition number** | Stitch Condition Number (1 ~ 1000) | Variable |
+| **条件编号** | 缝合条件编号 (1 ~ 1000) | 可变 |
 
 
-### Example
+### 示例
 ```python
-   stitch on, cnd=2         #  execute stitch on condition 2
-   stitch off               #  terminate stitch
+   stitch on, cnd=2         #  执行缝合在条件 2
+   stitch off               #  终止缝合
 ```
 
 
-### Details  
-  Refer to [[8.6 STITCH Function]](../8_Application_function/6_Stitch/README.md)
-
+### 详细信息  
+  请参阅 [[8.6 STITCH Function]](../8_Application_function/6_Stitch/README.md)
 [__SOURCE](2_Command/15_calcshift.md)
 # 2.15 calshift
 
-### Description  
+### 描述  
 
-```calshift``` command calculates the shift using two Pose variables.
-It is frequently used to calculate shifts based on pose variables saved from touch sensing.  
+```calshift``` 命令使用两个姿态变量计算位移。  
+它通常用于根据触觉传感器保存的姿态变量计算位移。  
 <br/>
 
-
-### Syntax
+### 语法
 
 ```python
 <Shift Val>=calshift(<Pose Val 1>, <Pose Val 2>)
 <Shift Val>=calshift(<Pose Val 1>, <Pose Val 2>,"TV")
 ```  
 
+### 参数
 
-### Parameter
-
-| Item | Meaning | Remarks |
+| 项目 | 含义 | 备注 |
 | --- | --- | --- |
-| **Shift Variable Input** | Enter the shift variable to store the calculated shift | Shift Variable |
-| **Pose Variable Input** | Enter the pose variable (1 ~ 9999) | Pose Variable |
-| **TV** | Calculates the shift in the direction perpendicular to the tool (1 ~ 9999) | string |
+| **位移变量输入** | 输入要存储计算位移的位移变量 | 位移变量 |
+| **姿态变量输入** | 输入姿态变量 (1 ~ 9999) | 姿态变量 |
+| **TV** | 计算与工具垂直的方向上的位移 (1 ~ 9999) | 字符串 |
 
-
-### Example
+### 示例
 
 ```python
     move L, spd=30%, ...
@@ -1250,1592 +1185,1440 @@ It is frequently used to calculate shifts based on pose variables saved from tou
     var pose_2 = cpo()
     var sft_1
     sft_1=calshift(pose_1,pose_2)   
-    # calculate the vector shift between pose_1 and pose_2, and store the result in sht_1
+    # 计算 pose_1 和 pose_2 之间的矢量位移，并将结果存储在 sht_1 中
 ```  
-  
 [__SOURCE](3_Property/README.md)
-# 3. Command Property
+# 3. 命令属性
 [__SOURCE](3_Property/1_overall.md)
-# 3.1 Overview
+# 3.1 概述
 
-When teaching an arc welding program, not only the welding conditions such as voltage and current but also detailed settings related to weaving, retries/overlaps, and the characteristics of the welder are necessary.
-Furthermore, in general robot operation, there may be cases where the position information (coordinates and orientation) of the taught steps or auxiliary points needs to be verified.  
-By placing the cursor on the command and pressing the `[Property]` button located on the left side of the TP, a function is provided that allows easy and quick editing of these files.
+在教授弧焊程序时，不仅需要焊接条件，如电压和电流，还需要与编织、重试/重叠以及焊接机特性相关的详细设置。此外，在一般机器人操作中，可能需要验证所教步骤或辅助点的位置信息（坐标和方向）。  
+通过将光标放在命令上并按下位于 TP 左侧的 `[Property]` 按钮，提供了一个便捷快速编辑这些文件的功能。
 
 
-### Example of Command [Property]
+### 命令 [Property] 示例
 
-| Command | Property | 
+| 命令 | 属性 | 
 | -----| -------| 
-| `arcon `| Set the current, voltage, synergic, initial/aux/end conditions, etc. | 
-| `weaving on `| Set weaving type, frequency, width, and weaving direction, etc. |
-| `lvs `| Configure tracking-related informations, seam finding settings, etc. |
-| `arccond `| Manage welding condition database(WDB) with settings for current, voltage, frequency, and weaving width. |
-| `move `| Change the current recorded position to base coordinate system, robot coordinate system, or joint coordinate system. |
+| `arcon (arcon )`| 设置电流、电压、协同、初始/辅助/结束条件等。 | 
+| `weaving on (weaving on )`| 设置编织类型、频率、宽度和编织方向等。 |
+| `lvs (lvs )`| 配置跟踪相关信息、接缝查找设置等。 |
+| `arccond (arccond )`| 管理焊接条件数据库（WDB），并设置电流、电压、频率和编织宽度。 |
+| `移动 (move )`| 将当前记录的位置更改为基坐标系、机器人坐标系或关节坐标系。 |
 
 
 
-As an example of editing welding start conditions, when the cursor is placed on the `arcon` command, which turns on the arc, pressing the `[Property]` button will display the details of the condition number currently used in the welding start conditions.
-In this screen, you can view or modify the detailed settings of the welding start conditions.
+作为编辑焊接开始条件的示例，当光标放在 `arcon` 命令上时，按下 `[Property]` 按钮将显示当前用于焊接开始条件的条件编号的详细信息。在此界面中，您可以查看或修改焊接开始条件的详细设置。
 
-Similarly, after placing the cursor on a specific command and entering the `[Property]` window, you can easily and quickly check and modify the settings, such as the conditions or positions recorded in the steps.
-If you wish to save the changes and exit, press `[OK]`; if you wish to exit without saving, press the `[ESC]` key on the teaching pendant.
+同样，在特定命令上放置光标并进入 `[Property]` 窗口后，您可以轻松快速地检查和修改设置，例如步骤中记录的条件或位置。如果您希望保存更改并退出，请按 `[OK]`；如果您希望在不保存的情况下退出，请按教师挂件上的 `[ESC]` 键。
 
 
 ![](../_assets/3_1_1.png)<br>
-*Figure 3.1.1. Property in Robot Program Command*
+*图 3.1.1. 机器人程序命令中的属性*
 
 
 {% hint style="info" %}
-    For more details, please refer to [2. Inserting Commands]
+    有关更多详细信息，请参阅 [2. 插入命令]
 {% endhint %}
 [__SOURCE](4_Setting/README.md)
-# 4. Arc Welder Settings
+# 4. 弧焊机设置
 [__SOURCE](4_Setting/1_Arc_communication/README.md)
-# 4.1 Arc Welder communication settings
+# 4.1 弧焊机通信设置
 
+按照以下步骤使用以太网电缆连接PC和控制器：
 
-Follow the steps below to connect the PC and controller using an Ethernet cable:
-
-1. Run the **Sycon** program on the PC.
-2. Add the cifx card, then right-click its icon and select **configuration**.
-3. Configure each items as follows:
-  **Driver**: Set to nexX Driver
-  **Bus Parameters**: Set Baud rate to 250kBits/s
-  **Device Assignment**: Select the added cifx card and click OK.
-4. Right-click the cifx icon and select **download**.
-4. Right-click the cifx icon and select **network scan**.
-
+1. 在PC上运行**Sycon**程序。
+2. 添加cifx卡，然后右键单击其图标并选择**配置**。
+3. 按照以下方式配置每个项目：
+  **驱动程序**：设置为nexX驱动程序  
+  **总线参数**：将波特率设置为250kBits/s  
+  **设备分配**：选择添加的cifx卡并点击确定。
+4. 右键单击cifx图标并选择**下载**。  
+4. 右键单击cifx图标并选择**网络扫描**。
 
 ![](../../_assets/4_1_1.png)<br>
-*Figure 4.1.1. Sycon Communication Status*  
+*图 4.1.1. Sycon通信状态*  
 
-After completing the below steps, the sycon screen will appear as shown above. (when connected to Hyundai PNS Welder)
+完成以下步骤后，sycon屏幕将显示如上所示的内容。（当连接到现代PNS焊机时）
 
-6. Right-click the welder icon and select **disconnect**, then go to **configuration > General > UCM** tab and set UCMM to Group3.
-7. Right-click the welder icon and select **upload**, then right-click the cifx icon and select **download**.
+6. 右键单击焊机图标并选择**断开连接**，然后转到**配置 > 一般 > UCM**选项卡并设置UCMM为Group3。
+7. 右键单击焊机图标并选择**上传**，然后右键单击cifx图标并选择**下载**。
 
-On the Robot TP, navigate to `[F2: System] - 2: Control parameter - 2: Input/Output signal setting - 6: fb block allocation` and assign the blocks to be used.
-Once this is completed, the data transmitted from the welder to the controller will be displayed in bold within the assigned blocks.
-(Verify this in `[pane layout] - select - public input - assigned fb block`)
-
+在机器人TP上，导航至`[F2: 系统] - 2: 控制参数 - 2: 输入/输出信号设置 - 6: fb 块分配 ([F2: System] - 2: Control parameter - 2: Input/Output signal setting - 6: fb block allocation)`并分配要使用的块。  
+完成后，从焊机传输到控制器的数据将在分配的块中以粗体显示。  
+（在`[窗格布局] - 选择 - 公共输入 - 已分配fb块 ([pane layout] - select - public input - assigned fb block)`中验证这一点）
 
 {% hint style="info" %}
-  For more information, please refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en-${cont_model}/README?cont_model=${cont_model}) 
+  如需更多信息，请参阅[${cont_model} - 工业通信](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/zh-${cont_model}/README?cont_model=${cont_model}) 
 {% endhint %}
-
 [__SOURCE](4_Setting/2_Arc_setting/README.md)
-# 4.2 Arc Welder Settings
+# 4.2 电弧焊机设置
 
-User can operate various welders together with our Arc Welding Robots. To support this, a function is provided to edit welder-specific settings. The welder configuration screen can be accessed as follows: `[F2: System] - 5: Initialization - 3: Usage setting`
+用户可以与我们的电弧焊接机器人一起操作各种焊机。为此，提供了编辑焊机特定设置的功能。焊机配置屏幕可以通过以下方式访问: `[F2: 系统] - 5: 初始化 - 3: 用途设置 ([F2: System] - 5: Initialization - 3: Usage setting)`
 
-
-###	Welder Maker Number
-> The currently selected welder maker number is displayed. You can check the welder numbers for each maker by clicking the **[Welder information]** button. By clicking the **[Welder setting]** button on this screen, the condition editing screen for the selected welder will appear.
-
+### 焊机制造商编号
+> 当前选择的焊机制造商编号会显示。您可以通过点击 **[焊机信息]** 按钮检查每个制造商的焊机编号。通过点击该屏幕上的 **[焊机设置]** 按钮，将出现所选焊机的条件编辑屏幕。
 
 ![](../../_assets/1_2_1.png)<br>
-*Figure 4.2.1. Usage Setting Dialog box* 
+*图 4.2.1. 用途设置对话框* 
 
 </br>
 
 ![](../../_assets/4_2_2.png)<br>
-*Figure 4.2.2. Hyundai Welder Condition Settings*   
+*图 4.2.2. 现代焊机条件设置*   
 
 </br>
 
 ![](../../_assets/4_2_3.png)<br>
-*Figure 4.2.3. Hyundai Welder I/O Signal Assignment*   
+*图 4.2.3. 现代焊机 I/O 信号分配*   
 
+焊机条件屏幕提供与焊机特性相关的编辑功能，因此可编辑的项目因焊机而异。以下项目在焊机条件屏幕中通常可编辑。
 
-The welder condition screen provides editing functions related to welder characteristics, so the editable items differ by welder. The following items are commonly editable in the welder condition screen.
-
-| Item | Default Value | Description |
+| 项目 | 默认值 | 描述 |
 |---|------|---|
-| Name                   | Supported welder model name | Records the model name of the welder |
-| Comment                | Welder Maker name | Records a description of the welder |
-| Stick detection time   | [0.2] seconds <br>(Range: 0.1 ~ 10.0) | Checks wire fusion during setting time after arc welding ends |
-| ARC OFF detection time | [0.3] seconds <br>(Range: 0.0 ~ 10.0) | Sets the reference time for detecting arc off during arc welding. If the arc is off longer than this time, it is recognized as arc off.<br> It set too low, arc ignition failures may occur frequently.<br> If set too high, robot movement and wire inching continue longer after arc off, increasing the robot travel distance and wire protrusion length after arc off. |
-
-
+| 名称                   | 支持的焊机型号名称 | 记录焊机的型号名称 |
+| 注释                   | 焊机制造商名称 | 记录焊机的描述 |
+| 电弧检出时间          | [0.2] 秒 <br>(范围: 0.1 ~ 10.0) | 在电弧焊接结束后的设置时间内检查焊丝融合 |
+| 电弧关闭检测时间     | [0.3] 秒 <br>(范围: 0.0 ~ 10.0) | 设置在电弧焊接期间检测电弧关闭的参考时间。如果电弧关闭时间超过此时间，将被识别为电弧关闭。<br> 如果设置得太低，可能会频繁发生电弧点火故障。<br> 如果设置得太高，机器人移动和焊丝进给将在电弧关闭后持续更长时间，从而增加机器人行驶距离和电弧关闭后的焊丝突出长度。 |
 [__SOURCE](5_Condition_editing/README.md)
-# 5. Editing Arc Welding Conditions
+# 5. 编辑弧焊条件
 [__SOURCE](5_Condition_editing/1_Condition_config/README.md)
-# 5.1 Configure Arc Welding Condition
+# 5.1 配置弧焊条件
 
-To perform Arc Welding our controller, it is necessary to configure both the welder and the welding conditions. In addition to basic arc welding, special functions such as weaving or arc sensing require detailed settings for each respective feature.
-Our company provides the ability to edit Arc welder characteristic files([[4. Arc Welder Settings]](../../4_Setting/README.md)), arc welding application functions([[1.2.2 Arc Welding various signals and funtion settings]](../../1_Basic_information/2_Function_setting/2_signals_functions.md)), and arc welding condition settings, enabling users to weld in various environments with desired configurations using a variety of welder.
+要执行我们的控制器的弧焊，必须配置焊接机和焊接条件。除了基本的弧焊外，诸如编织或弧感应等特殊功能需要为各自的特性进行详细设置。  
+我们公司提供编辑弧焊机特性文件([[4. Arc Welder Settings]](../../4_Setting/README.md))、弧焊应用功能([[1.2.2 Arc Welding various signals and funtion settings]](../../1_Basic_information/2_Function_setting/2_signals_functions.md))和弧焊条件设置的能力，使用户能够在各种环境中使用所需的配置进行焊接，采用多种焊接机。
 
-Arc welding conditions are structed as follows:
-- Arc welding Start Conditions: Editing settings for welding initiation and main welding parameters
-  - Auxiliary Arc welding Start conditions: Editing retry and restart functions
-- Arc welding End Conditions: Editing settings for welding termination
-  - Auxiliary Arc welding End condiitons: Editing the automatic wire stick-out release
-
-
+弧焊条件的结构如下：
+- 弧焊开始条件：编辑焊接启动和主要焊接参数的设置
+  - 辅助弧焊开始条件：编辑重试和重新启动功能
+- 弧焊结束条件：编辑焊接终止的设置
+  - 辅助弧焊结束条件：编辑自动焊丝伸出释放
 [__SOURCE](5_Condition_editing/2_Time_chart/README.md)
-# 5.2 Arc Welding FlowChart
+# 5.2 弧焊流程图
 
-This is the Time Flowchart for digital Arc Welding. For each condition setting, please refer to the dialog box desciptions for each command below.
+这是数字弧焊的时间流程图。有关每个条件设置，请参阅下面每个命令的对话框描述。
  
 ![](../../_assets/5_2_1.png)<br>
-*Figure 5.2.1. Digital Arc Welding FlowChart*
-
-
+*图 5.2.1. 数字弧焊流程图*
 [__SOURCE](5_Condition_editing/3_Start_condition/README.md)
-# 5.3 Welding Start condition
+# 5.3 焊接起始条件
 
+当弧焊设置为数字化并且光标放置在命令行 `arcon cnd=_` 时，按下 [property] 键将会打开焊接起始条件的编辑界面。
 
-When the arc welding settings are digital and the cursor is placed on the command line `arcon cnd=_`, pressing the [property] key will bring up the editing screen for the welding start conditions.
-
- 
 ![](../../_assets/5_3_1.png)<br>
-*Figure 5.3.1. Hyosung welder setting*  
-
+*图 5.3.1. Hyosung 焊机设置*  
 
 ![](../../_assets/5_3_2.png)<br>
-*Figure 5.3.2. Fronius welder setting*  
+*图 5.3.2. Fronius 焊机设置*  
 
- 
 ![](../../_assets/5_3_3.png)<br>
-*Figure 5.3.3. EWM welder setting*
+*图 5.3.3. EWM 焊机设置*
 
- 
+编辑条件后，按下 `[ESC]` 键将关闭对话框而不保存更改，而按下 `[OK]` 键将保存设置并关闭对话框。
 
-After editing the conditions, pressing the `[ESC]` key will close the dialog box without saving the changes, while pressing `[OK]` key will save the settings and close the dialog box.
+以下项目适用于所有焊机。有关特定型号的设置，请参阅以下章节。
 
-The following items apply to all welder in common. For model-specific settings, please refer to the following chapter.
-
-The contents of common items may vary in name, unit, and range for each welder. Please refer to the respective table for model-specific differences.
+共同项目的内容可能因焊机而有名称、单位和范围的不同。请参阅各自的表格了解特定型号的差异。
 
 </br>
 
 ---
 
-### (1)	Condition Number  
-Specifies the welding start condition number to be edited.(Max: 32) 
+### (1)	条件编号  
+指定要编辑的焊接起始条件编号。(最大: 32)
 
 <center>
 
-| Item | Name | Range |
+| 项目 | 名称 | 范围 |
 | :---: | :---: | :---: |
-| Common to all welders | Condition Number | 1 ~ 32 |
+| 所有焊机共同 | 条件编号 | 1 ~ 32 |
 
 </center>
 
 </br>  
 
-### (2)	Description  
-Records the description for the specified welding start condition.
+### (2)	描述  
+记录指定焊接起始条件的描述。
 
 <center>
 
-| Supported Welder | Name |
+| 支持的焊机 | 名称 |
 | :---: | :---: |
-| Common to all welders | Comment |
+| 所有焊机共同 | 注释 |
 
 </center>
 
 </br>  
     
-### (3)	Synergic Code  
-Sets the synergic code to b transmitted to the welder. The code value is configured in a separate synergic selection screen. The synergic selection screen can be accessed by pressing the `[Synergic Selection]` button on the welding start condition creen.
+### (3)	协同代码  
+设置要传递给焊机的协同代码。代码值在单独的协同选择屏幕中配置。可以通过按下 `[Synergic Selection]` 按钮访问焊接起始条件屏幕的协同选择屏幕。
 
 <center>
 
-| Supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Synergic Code | - |- | 040 |
-| Fronius </br>(Not supported) |-|-|-|-|
-| EWM | Synergic no. | - |- | 185|
+| Hyosung | 协同代码 | - |- | 040 |
+| Fronius </br>(不支持) |-|-|-|-|
+| EWM | 协同号 | - |- | 185|
 
 </center>
     
 </br>  
 
-### (4)	Welding Current / Welding Power / Wire Feed Speed  
-Set the welding current value. This is the current used during the welding process. The current of the initial and final conditions is determined as a ratio of this value.
+### (4)	焊接电流 / 焊接功率 / 焊丝送进速度  
+设置焊接电流值。这是在焊接过程中使用的电流。初始和最终条件的电流是以该值的比率来确定的。
 <center>
 
-| Supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Welding Current | A | 40.0 ~ 350.0 | 100.0 |
-| EWM | Wire Feed Speed |  m/min | 0.0 ~ 25.0 | 3.1 |
-| Fronius(TPS) | Welding Power | % | 0.0 ~ 100.0 | 100.0 |
+| Hyosung | 焊接电流 | A | 40.0 ~ 350.0 | 100.0 |
+| EWM | 焊丝送进速度 |  m/min | 0.0 ~ 25.0 | 3.1 |
+| Fronius(TPS) | 焊接功率 | % | 0.0 ~ 100.0 | 100.0 |
 
 </center>
     
 </br>
 
-### (5)	Welding voltage / Welding voltage Correction / Welding voltage Offset / Arc length correction  
-In digital welding, the welding voltage is often not entered directly, but instead selected automatically based on welding current from the synergic data. If you wish to modify the welding voltage automatically selected by the synergic data, set the offset value for the voltage to be adjusted based on the selected welding voltage.
+### (5)	焊接电压 / 焊接电压修正 / 焊接电压偏置 / 弧长修正  
+在数字焊接中，焊接电压通常不会直接输入，而是基于焊接电流从协同数据中自动选择。如果您想修改由协同数据自动选择的焊接电压，请设置用于根据所选焊接电压进行调整的电压偏置值。
 <center>
 
-| Supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung(Indiv.) | Welding voltage | V | 10.0 ~ 38.0 | 10.0 |
-| Hyosung(Synergic) | Welding voltage Correction | % | 50.0 ~ 150.0 | 50.0 |
-| EWM | Welding voltage Offset | VP | -10.0 ~ 10.0 | 2.0 |
-| Fronius(TPS) | arc length correction | % | -30.0 ~ 30.0 | 0 |
+| Hyosung(Indiv.) | 焊接电压 | V | 10.0 ~ 38.0 | 10.0 |
+| Hyosung(Synergic) | 焊接电压修正 | % | 50.0 ~ 150.0 | 50.0 |
+| EWM | 焊接电压偏置 | VP | -10.0 ~ 10.0 | 2.0 |
+| Fronius(TPS) | 弧长修正 | % | -30.0 ~ 30.0 | 0 |
 </center>
     
 </br>
 
-### (6)	Gas preflow
-Set the time to preflow shileld gas before starting the arc welding to isolate and prepare the welding area.
+### (6)	气体预流
+设置在开始弧焊之前预流保护气体的时间，以隔离和准备焊接区域。
 
 <center>  
 
-| Supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Common to all welders | gas preflow | sec | 0.0 ~ 10.0 | 0.5 |  
+| 所有焊机共同 | 气体预流 | 秒 | 0.0 ~ 10.0 | 0.5 |  
 
 </center>
 
 </br>  
 
-### (7)	WCR Wait Time  
-Indicates the time waiting for the WCR input. If the WCR signal is not received within this time, a retry will be performed. However, if the retry count is set to 0, an error will be displayed, and the robot will stop. Retry methods and retry counts can be configured in the welding auxiliary conditions. (Refer to [5.5 Welding Auxiliary condition](../5_Aux_condition/README.md))
+### (7)	WCR等待时间  
+指示等待 WCR 输入的时间。如果在此时间内未接收到 WCR 信号，将执行重试。然而，如果重试计数设置为 0，将显示错误，并且机器人将停止。重试方法和重试计数可以在焊接辅助条件中配置。(参见 [5.5 焊接辅助条件](../5_Aux_condition/README.md))
 
 <center>
 
-| Supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Common to all welders | WCR Wait Time | sec | 1.0 ~ 10.0 | 2 |
-
+| 所有焊机共同 | WCR等待时间 | 秒 | 1.0 ~ 10.0 | 2 |
 
 </center>
     
 </br>
 
-### (8)	Robot delay time  
-After the arc welding has started normally, sets the time the robot will wait before moving along the welding line to perform the welding. This is independent of the initial conditions, and the robot can move even while processing initial conditions.
+### (8)	机器人延迟时间  
+在正常启动弧焊后，设置机器人在沿焊接线路移动以进行焊接之前的等待时间。这与初始条件无关，机器人可以在处理初始条件时移动。
 <center>
 
-| Supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Common to all welders | Robot delay time | sec | 0.0 ~ 10.0 | 0 |
+| 所有焊机共同 | 机器人延迟时间 | 秒 | 0.0 ~ 10.0 | 0 |
 
 </center>
     
 </br>
 
-### (9) Initial condition maintain time  
-Sets the time for maintaining the initial current value at the start of arc welding.
+### (9) 初始条件保持时间  
+设置在弧焊开始时保持初始电流值的时间。
 <center>
 
-| Supported Welder | Name | Unit | Range | 
+| 支持的焊机 | 名称 | 单位 | 范围 | 
 | :---: | :---: | :---: |:---: |
-| Common to all welders | Initial condition maintain time | sec | 0.0 ~ 10.0 | 
+| 所有焊机共同 | 初始条件保持时间 | 秒 | 0.0 ~ 10.0 | 
 
 </center>
     
 </br>
 
-### (10) Initial Welding Current / Welding Power / Wire Feed Speed  
-Sets the welding current to be output during the initial condition hold time at the start of arc welding.
-This is set as a percent(%) relative to the welding current of the main condition.
+### (10) 初始焊接电流 / 焊接功率 / 焊丝送进速度  
+设置在弧焊开始时初始条件保持时间内输出的焊接电流。
+这是相对于主条件的焊接电流设置为百分比(%)。
 <center>
 
-| Supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Initial Welding Current | A | 40.0 ~ 350.0 | 120 |
-| Fronius | Initial Welding Power | % | 20 ~ 200 | 120 |
-| EWM | Initial Wire Feed Speed | m/min | 0.0 ~ 25.0 | 3.72 |
+| Hyosung | 初始焊接电流 | A | 40.0 ~ 350.0 | 120 |
+| Fronius | 初始焊接功率 | % | 20 ~ 200 | 120 |
+| EWM | 初始焊丝送进速度 | m/min | 0.0 ~ 25.0 | 3.72 |
 
 </center>
     
 </br>
 
-### (11) Initial Welding voltage / Welding voltage Correction / Arc length correction  
-Sets the welding voltage to be output during the initial condition hold time at the start of arc welding.
-This is set as a correction value relative to the synergic voltage.  
+### (11) 初始焊接电压 / 焊接电压修正 / 弧长修正  
+设置在弧焊开始时初始条件保持时间内输出的焊接电压。
+这是相对于协同电压设置的修正值。  
 <center>
 
-| Supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung(Indiv.) | Initial Welding voltage | V | 10.0 ~ 38.0 | 10.0 |
-| Hyosung(Synergic) | Initial Welding voltage Correction | % | 50.0 ~ 150.0 | 50.0 |
-| EWM | Initial Welding voltage Offset | VP | -10.0 ~ 10.0 | 2 |
-| Fronius | Initial Arc Length Correction | %| -30.0 ~ 30.0 | 0 |
+| Hyosung(Indiv.) | 初始焊接电压 | V | 10.0 ~ 38.0 | 10.0 |
+| Hyosung(Synergic) | 初始焊接电压修正 | % | 50.0 ~ 150.0 | 50.0 |
+| EWM | 初始焊接电压偏置 | VP | -10.0 ~ 10.0 | 2 |
+| Fronius | 初始弧长修正 | %| -30.0 ~ 30.0 | 0 |
 </center>
     
 </br>
 
-### (12) Slope Time  
-Sets the time to process the current change between the initial condition and this condition as a slope.
+### (12) 斜坡时间  
+设置在初始条件与该条件之间进行电流变化处理的时间。
 <center>
 
-| Supported Welder | Name | Unit | Range | 
+| 支持的焊机 | 名称 | 单位 | 范围 | 
 | :---: | :---: | :---: |:---: |
-| Common to all welders | Slope Time | sec | 0.0 ~ 10.0 | 
-
+| 所有焊机共同 | 斜坡时间 | 秒 | 0.0 ~ 10.0 | 
 
 </center>
     
 </br>
 
-### (13) Excess Allowed Time  
-Sets the allowable time for exceeding the welding voltage/current and feed motor current limits. If the welding voltage/current or feed motor current exceeds the limits for longer than this time, a restart will be performed. However, If the restart count is set to 0, an error will be displayed, and the robot will stop. The restart method and restart count, as well as other restart-related features, can be configured in the welding auxiliary conditions. If this time is set to 0 seconds, the arc limits monitoring function will not be used.
+### (13) 允许超出时间  
+设置焊接电压/电流和送进电机电流限制超出的允许时间。如果焊接电压/电流或送进电机电流超过限制时间超过此时间，将执行重启。然而，如果重启计数设置为 0，将显示错误，并且机器人将停止。重启方法和重启计数以及其他与重启相关的功能可以在焊接辅助条件中配置。如果此时间设置为 0 秒，则不会使用弧限制监测功能。
 <center>
 
-| Supported Welder | Name | Unit | Range | Default | 
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 | 
 | :---: | :---: | :---: |:---: |:---: |
-| Common to all welders | Excess Allowed Time | sec | 0.0 ~ 10.0 | 0 | 
-
-
-</center>
-    
-</br>
-
-### (14) Welding Voltage upper/lower limit  
-Sets the upper and lower voltage limits during welding. If the limits are exceeded for longer than the allowed time, an error will occur.
-<center>
-
-| Supported Welder | Name | Unit | Range | 
-| :---: | :---: | :---: |:---: |
-| Common to all welders | Welding Voltage upper/lower limit | V | 0.0 ~ 100.0 | 
-
+| 所有焊机共同 | 允许超出时间 | 秒 | 0.0 ~ 10.0 | 0 | 
 
 </center>
     
 </br>
 
-### (15) Welding Current upper/lower limit  
-Sets the upper and lower current limits during welding. If the limits are exceeded for longer than the allowed time, an error will occur.
+### (14) 焊接电压上/下限  
+设置焊接过程中的上限和下限电压。如果超过限制的时间超过允许时间，将发生错误。
 <center>
 
-| Supported Welder | Name | Unit | Range | 
+| 支持的焊机 | 名称 | 单位 | 范围 | 
 | :---: | :---: | :---: |:---: |
-| Common to all welders | Welding Current upper/lower limit | A | 0.0 ~ 1000 | 
-
+| 所有焊机共同 | 焊接电压上/下限 | V | 0.0 ~ 100.0 | 
 
 </center>
     
+</br>
+
+### (15) 焊接电流上/下限  
+设置焊接过程中的上限和下限电流。如果超过限制的时间超过允许时间，将发生错误。
+<center>
+
+| 支持的焊机 | 名称 | 单位 | 范围 | 
+| :---: | :---: | :---: |:---: |
+| 所有焊机共同 | 焊接电流上/下限 | A | 0.0 ~ 1000 | 
+
+</center>
+
 </br>
     
 </br>
 [__SOURCE](5_Condition_editing/3_Start_condition/1_hyosung.md)
-# 5.3.1 Welding Start condition - Hyosung-only settings
+# 5.3.1 焊接起始条件 - 仅限Hyosung设置
 
-### (1) Welding Mode: `Normal, Pulse`  
-Set the Arc Welding method.
+### (1) 焊接模式: `Normal, Pulse`  
+设置电弧焊接方法。
 
-### (2)	Slowdown Adjuctment: [ 100 ] % (range: 0 ~ 255)  
-Adjust the offset for the wire feed speed before the arc is initiated.
+### (2)	减速调整: [ 100 ] % (范围: 0 ~ 255)  
+在电弧启动之前调整送丝速度的偏移量。
 
-### (3)	Inductor Effect: [  100] % (range: 0 ~ 255)  
-Set the inductor effect.
-
+### (3)	电感效应: [  100] % (范围: 0 ~ 255)  
+设定电感效应。
 [__SOURCE](5_Condition_editing/3_Start_condition/2_fronius.md)
-# 5.3.2 Welding Start condition - Fronius-only settings
+# 5.3.2 焊接启动条件 - 仅限Fronius设置
 
-### (1)	Operation Mode: `Prog-Std, Prog-Pulse, CMT, JOB, TIG`  
-Set the welding mode supported by the Fronius welder. The descriptions for each mode as follows:
+### (1) 操作模式: `Prog-Std, Prog-Pulse, CMT, JOB, TIG`  
+设置Fronius焊机支持的焊接模式。每种模式的描述如下：
 
-- **Prog-Std**: Use the standard welding program stored in the welder.
-- **Prog-Pulse**: Use the pulse welding program stored in the welder.
-- **CMT**: Use the Cool Metal Transfer functions.
-- **JOB**: Use the job stored in the welder.
-- **TIG**: Use of TIG(Tungsten Insert Gas) welding functionality.
+- **Prog-Std**: 使用焊机中存储的标准焊接程序。
+- **Prog-Pulse**: 使用焊机中存储的脉冲焊接程序。
+- **CMT**: 使用冷金属转移功能。
+- **JOB**: 使用焊机中存储的作业。
+- **TIG**: 使用TIG(钨插入气体)焊接功能。
 
-### (2)	Prog/Job Number  
-Set the program or job number to be used from the ones stored in the welder.
-If the operation mode is set to Job, the job number will be used.
+### (2) 程序/作业编号  
+设置从焊机中存储的程序或作业编号。如果操作模式设置为作业，则将使用作业编号。
 
-### (3)	Dynamic correction: [ 0 ]% (range: -5.0 ~ 5.0)  
+### (3) 动态修正: [ 0 ]% (范围: -5.0 ~ 5.0)  
 
-Set the dynamic correction value. A smaller value results in a strong and stable arc, but increases the amount of spatter. A larger value generates a smoother arc and reduces the amount of spatter.
-
-
+设置动态修正值。较小的值会产生强而稳定的弧光，但会增加飞溅量。较大的值会产生更平滑的弧光，并减少飞溅量。
 [__SOURCE](5_Condition_editing/3_Start_condition/3_ewm.md)
-# 5.3.3 Welding Start condition - EWM-only settings
+# 5.3.3 焊接起始条件 - EWM仅适用设置
 
-### (1)	JOB mode: `Disable, Enable` 
-Set the Job mode supported by the EWM AlphaQ welder. The descriptions for each mode are as follows:
-- disable: Welding is performed with wire feed speed and voltage offset based on the synergy data stored in the welder.
-- enable: Welding is pserfored with the job stored in welder.
+### (1)	作业模式: `禁用, 启用` 
+设置EWM AlphaQ焊机支持的作业模式。每种模式的描述如下：
+- 禁用: 焊接是基于存储在焊机中的协同数据进行的，采用送丝速度和电压偏移。
+- 启用: 焊接是使用存储在焊机中的作业进行的。
 
-### (2)	Welding mode  
-Set whether pulse welding is used.
+### (2)	焊接模式  
+设置是否使用脉冲焊接。
 
-### (3)	Super pulse function  
-When pulse weling is enabled, it configures the use oft the Super Pulse(2-stage pulse) function.
+### (3)	超级脉冲功能  
+当启用脉冲焊接时，配置使用超级脉冲（2阶段脉冲）功能。
 
-### (4)	Job Number (synergic)  
-Enter the synergy number or job number to be used for welding. Press the [Synergy selection] button at the bottom of the TP to open a dialog box where you can set the job number that corresponds to the welding method, material, gas type, and wire diameter.
+### (4)	作业编号（协同）  
+输入用于焊接的协同编号或作业编号。按下TP底部的[协同选择]按钮打开对话框，您可以在其中设置与焊接方法、材料、气体类型和焊丝直径相对应的作业编号。
 
-### (5)	Dynamic correction: [ 0 ] (range: -40.0 ~ 40.0)  
-Set the dynamic correction. A smaller value results in a strong and stable arc, but increases the amount of spatter. A larger value generates a smoother arc and reduces the amount of spatter.
+### (5)	动态修正: [ 0 ] （范围: -40.0 ~ 40.0）  
+设置动态修正。较小的值会导致强而稳定的电弧，但会增加飞溅量。较大的值则产生更平滑的电弧并减少飞溅量。
 
-### (6)	Lift arc start: `Not use, Use`  
-Set whether to use the lift arc function at the start of welding. Using the lift arc function can reduce the occurrence of excessive spatter during the start of welding.
-
+### (6)	升弧启动: `不使用, 使用`  
+设置是否在焊接开始时使用升弧功能。使用升弧功能可以减少焊接开始时过多飞溅的发生。
 [__SOURCE](5_Condition_editing/4_End_condition/README.md)
-# 5.4 Welding End condition
+# 5.4 焊接结束条件
 
-When the arc welding settings are digital and [End condition] tab is pressed in the welding start condition dialog box, the following welding end condition editing screen appears.
-
+当电弧焊接设置为数字型，并且在焊接起始条件对话框中按下 [结束条件] 标签时，将出现以下焊接结束条件编辑屏幕。
 
 ![](../../_assets/5_4_1.png)<br>
-*Figure 5.4.1. Welding End Condition Setting (e.g. EWM)* 
+*图 5.4.1. 焊接结束条件设置 (例如 EWM)*
 
-
-After editing the welding end conditions, pressing the `[ESC]` key will close the dialog box without saving the changes, while pressing `[OK]` key will save the settings and close the dialog box.
-
-</br>
-
-The descriptions for each item are as follows:
+编辑完焊接结束条件后，按下 `[ESC]` 键会在不保存更改的情况下关闭对话框，而按下 `[OK]` 键会保存设置并关闭对话框。
 
 </br>
 
-### (1)	Condition Number: [1] (Range: changes not allowed)  
-Displays the welding start condition number. In digital arc welding, the end condition number and start condition number are managed as one. Therefore, to change the end condition number, the start condition number must also be changed.  
+每个项目的描述如下：
 
-### (2)	End Welding Current / Welding Power / Wire Feed Speed  
-Set the current value to be output during crater treatment. This is set as a percentage(%) relative to the current welding conditions (welding current, welding power, and wire feed speed). However, for EWM welders, this is set in m/min, the same as the welding conditions.
+</br>
+
+### (1)	条件编号: [1] (范围: 不允许更改)  
+显示焊接起始条件编号。在数字电弧焊接中，结束条件编号和起始条件编号作为一个管理。因此，要更改结束条件编号，也必须更改起始条件编号。
+
+### (2)	结束焊接电流 / 焊接功率 / 送丝速度  
+设置在凹坑处理期间要输出的电流值。相对于当前焊接条件（焊接电流、焊接功率和送丝速度），以百分比 (%) 的形式进行设置。然而，对于 EWM 焊机，这以 m/min 的形式设置，与焊接条件相同。
 
 <center>
 
-| supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | End Welding Current | A |28.0 ~ 350.0 | 28.0 |
-| EWM | End Wire Feed Speed | m/min | 0.0 ~ 25.0 | 2.17 |
-| Fronius | End Welding Power | % | 10 ~ 100 | 70 |
+| Hyosung | 结束焊接电流 | A | 28.0 ~ 350.0 | 28.0 |
+| EWM | 结束送丝速度 | m/min | 0.0 ~ 25.0 | 2.17 |
+| Fronius | 结束焊接功率 | % | 10 ~ 100 | 70 |
 </center>
 
-### (3)	End Welding voltage/ Welding voltage corrction / Arc length correction  
-Set the voltage value to be output during crater treatment. The voltage is specified and output according to the set value.
+### (3)	结束焊接电压 / 焊接电压校正 / 弧长校正  
+设置在凹坑处理期间要输出的电压值。根据设定值指定和输出电压。
 <center>
 
-| supported Welder | Name | Unit | Range | Default |
+| 支持的焊机 | 名称 | 单位 | 范围 | 默认 |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung(Indiv.) | End welding voltage | V | 10.0 ~ 38.0 | 10.0 |
-| Hyosung(Synergic) | End welding voltage correction | % | 50.0 ~ 150.0 | 50.0 |
-| EWM | End Welding voltage offset | VP | -10.0 ~ 10.0 | 2 |
-| Fronius(TPS) | End Arc length correction |  % | -30.0 ~ 30.0 | 0 |
+| Hyosung(Indiv.) | 结束焊接电压 | V | 10.0 ~ 38.0 | 10.0 |
+| Hyosung(Synergic) | 结束焊接电压校正 | % | 50.0 ~ 150.0 | 50.0 |
+| EWM | 结束焊接电压偏移 | VP | -10.0 ~ 10.0 | 2 |
+| Fronius(TPS) | 结束弧长校正 |  % | -30.0 ~ 30.0 | 0 |
 
 </center>
 
-### (4)	Downslope Time(Crate Time): [0] sec (Range: 0.0 ~ 10.0)  
-Sets the time for processing the current change between the main condition and the end condition as a slope.
+### (4)	下坡时间（凹坑时间）: [0] 秒 (范围: 0.0 ~ 10.0)  
+设置从主条件到结束条件电流变化的处理时间为斜坡。
 
 ![](../../_assets/5_4_2.png)<br>
-*Figure 5.4.2. DownSlope Time and Crate Time Chart*
+*图 5.4.2. 下坡时间和凹坑时间图*
 
-### (5)	Condition Hold time: [1] sec (Range: 0.1 ~ 10.0)   
-Set the time to maintain the output value specified in the 'current ratio' item under the welding end condition.
+### (5)	条件保持时间: [1] 秒 (范围: 0.1 ~ 10.0)   
+设置在焊接结束条件下“电流比”项目中指定的输出值的维持时间。
 
-### (6)	Wire Burnback: [ 0 ] ms (Range: 0.0 ~ 200.0)  
-Configures burnback processing. May vary depending on the welder.
+### (6)	焊丝回退: [ 0 ] 毫秒 (范围: 0.0 ~ 200.0)  
+配置回退处理。根据焊机可能有所不同。
 
-### (7)	Gas Post Flow: [ 0 ] sec (Range: 0.0 ~ 10.0)  
-Set the time to continue the shielding gas output even after the arc is turned off.
+### (7)	气体后流: [ 0 ] 秒 (范围: 0.0 ~ 10.0)  
+设置在弧熄灭后继续输出保护气体的时间。
 
-### (8)	Crater move time: [ 0 ] sec (Range: 0.0 ~ 10.0) / Crater move distance : [0] mm (Range: 0.0 ~ 100.0)
-During crater treatment, sets the distance the robot will move backward during the DownSlope time and condition hold time. The speed is automatically determined based on the distance and time.
+### (8)	凹坑移动时间: [ 0 ] 秒 (范围: 0.0 ~ 10.0) / 凹坑移动距离 : [0] 毫米 (范围: 0.0 ~ 100.0)
+在凹坑处理期间，设置机器人在下坡时间和条件保持时间内向后移动的距离。速度是根据距离和时间自动确定的。
 
-### (9) Auto Stick Release Count : [0] times (Range: 0 to 9) / Condition : [0] (Range: 0 to 32) / Time: [0] sec (Range: 0.0 to 10.0)  
-During arc welding, the welding wire may stick to the base material at the end of welding. To prevent this, the welding power source temporarily increases the voltage at the end of welding as an anti-sticking process.
-However, sticking may still occur even after this process. Therefore, the robot controller sends a post-weld sticking detection signal to the welding power source to check whether sticking has occurred.
-The auto stick release function automaticllay performs a burnback release when sticking is detected after welding, allowing the robot to continue operation without stopping.
-This process is repeated for the configured number of times. If the sticking is not released after the specified number of attempts is exceeded, the robot will stop.
+### (9) 自动回退释放次数 : [0] 次 (范围: 0 到 9) / 条件 : [0] (范围: 0 到 32) / 时间: [0] 秒 (范围: 0.0 到 10.0)  
+在电弧焊接期间，焊接丝在焊接结束时可能会粘附在基材上。为防止这种情况，焊接电源在焊接结束时暂时提高电压作为防粘过程。
+然而，即使在此过程后仍可能发生粘附。因此，机器人控制器向焊接电源发送焊后粘附检测信号，以检查是否发生了粘附。
+自动回退释放功能在检测到焊接后粘附时自动执行回退释放，从而允许机器人在不停顿的情况下继续操作。
+此过程会重复配置的次数。如果超过指定次数仍未释放粘附，机器人将停止。
 
-* Count : [0] times (Range: 0 to 9)
-    This parameter specifies the maximum number of burnback release attempts. If the sticking is not released within the configured number of attempts, an error will occur. 
-    Exceptionally, when set to 0, the sticking check is skipped and the system proceeds directly to the next step.
+* 计数 : [0] 次 (范围: 0 到 9)
+    此参数指定最大回退释放尝试次数。如果在配置的尝试次数内未释放粘附，将会出现错误。 
+    特例是，当设置为 0 时，跳过粘附检查，系统直接进入下一步骤。
 
-* Condition : [0] (Range: 0 to 32)
-    This parameter specifies the welding condition number used for the burnback release process. When set to 0, the burnback release is performed using the current welding start condition.
+* 条件 : [0] (范围: 0 到 32)
+    此参数指定用于回退释放过程的焊接条件编号。当设置为 0 时，回退释放是使用当前焊接起始条件进行的。
 
-* Time: [0] sec (Range: 0.0 to 10.0)
-    This parameter specifies the duration for which the burnback release condition output is maintained.
+* 时间: [0] 秒 (范围: 0.0 到 10.0)
+    此参数指定维持回退释放条件输出的持续时间。
 [__SOURCE](5_Condition_editing/5_Aux_condition/README.md)
-# 5.5 Welding Auxiliary condition
+# 5.5 焊接辅助条件
 
-
-When the arc welding settings are digital and [Auxiliary condition] tab is pressed in the welding start condition dialog box, the following welding auxiliary condition editing screen appears.
-
-
+当电弧焊接设置为数字并且在焊接启动条件对话框中按下[Auxiliary condition]选项卡时，以下焊接辅助条件编辑屏幕将出现。
 [__SOURCE](5_Condition_editing/5_Aux_condition/1_retry.md)
-# 5.5.1 Welding Auxiliary condition - Retry
+# 5.5.1 焊接辅助条件 - 重试
 
-
-There may be cases where the arc does not ignite due to foreign materials attached near the weld start point of the base material when starting arc welding. The retry function automatically attempts to reignite the arc in such cases of arc ignition failure, enabling continuous operation without robot stoppage.
+在开始弧焊时，如果基材焊接起点附近附着了异物，可能会导致弧无法点燃。重试功能会在出现弧点燃失败的情况下自动尝试重新点燃弧，确保在不停机的情况下进行连续操作。
 
   
 ![](../../_assets/5_5_1.png)<br>
-*Figure 5.5.1. Welding Auxiliary condition (Retry) Setting(e.g. EWM)*
+*图 5.5.1. 焊接辅助条件 (重试) 设置(例如 EWM)*
 
 {% hint style="info" %}
-[Note]   
-The retry function is activated when arc ignition fails after an attempt, while the restart function is activated when welding is interrupted during arc welding and needs to be resumed.
+[注意]   
+当弧点燃尝试失败后重试功能被激活，而在弧焊过程中焊接中断需要恢复时重启功能被激活。
 {% endhint %}
 
+[图 5.5.1]的左侧部分表示焊接辅助条件中的重试条件。每个重试条件的描述如下：
 
-The left section of [Figure 5.5.1] represents the retry conditions in the welding auxiliary conditions. The descriptions for each item of the retry conditions are as follows:  
+### (1)	 retract Time: [0] 秒 (范围: 0.00 ~ 10.00)  
+  重试功能是在喂入焊丝并未能点燃弧后执行的。因此，在重试过程中可能会过量喂入焊丝。在这种情况下，焊丝可能会接触基材，并造成熔合，或过于靠近基材，导致弧点燃不稳定。为了解决这个问题，该功能支持在重试之前回收焊丝，以创建一个最佳的焊接环境。此设置指定了回收焊丝的时间。如果该值不是 0，则焊丝将被回收，焊枪将移动，然后尝试点燃弧。
 
-### (1)	Retract Time: [0] sec (Range: 0.00 ~ 10.00)  
-  The retry function is performed after attempting to weld by feeding the wire and failing to ignite the arc. As a result, the wire may be excessively fed during the retry process. In this case, the wire might contact the base material and cause fusion or get too close to the base material, resulting in unstable arc ignition. To address this, the function supports retracting the wire before the retry to create an optimal environment for welding. This setting specifies the time for retracting the wire. If this value is not 0, the wire will be retracted, the torch will move, and then the arc ignition will be attempted.  
+### (2)	Retract speed: [10] % (范围: 0.0 ~ 100.0)  
+  指定在重试过程中焊丝回收的速度。根据焊机型号，此功能可能不被支持。(例如：Saprom 焊机)
 
-### (2)	Retract speed: [10] % (Range: 0.0 ~ 100.0)  
-  Specifies the speed at which the wire is retracted during the retry process. This feature may not be supported depending on the welder model. (e.g. Saprom welders)  
+### (3)	Repetition: [5] 次 (范围: 0 ~ 9)  
+  指定在失败后弧点燃将重试的次数。如果在指定重试次数内未能点燃弧，系统将返回到原点（初始弧点燃尝试点或焊接起点）并停止。
 
-### (3)	Repetition: [5] times (Range: 0 ~ 9)  
-  Specifies the number of times the arc ignition will be retried after failure. If the arc fails to ignite within the specified number of retries, the system will return to the origin(the initial arc ignition attempt point, or the weld start point) and stop.  
-
-### (4)	Retry condition: [0] (Range: 0 ~ 32)  
-  Specifies the welding condition number to be used for retrying the arc ignition. During the retry, welding will be performed according to the conditions (current, voltage, etc.) of the welding start condition that was entered.
-  However, if the entered condition number is "0" or if the operation mode is set to reentry, the welding will be perfomed based on the main condition of the currently active welding start condition.  
+### (4)	Retry condition: [0] (范围: 0 ~ 32)  
+  指定用于重试弧点燃的焊接条件编号。在重试期间，将根据输入的焊接起始条件的条件（电流、电压等）进行焊接。
+  然而，如果输入的条件编号为“0”或操作模式设置为重新进入，则焊接将基于当前活动焊接起始条件的主要条件进行。
 
 ### (5)	Operation mode: ReEnter / Shift / Multi-direc.  
-  Sets the method for moving the torch during a retry. Three different methods are supported, and the torch movement for each setting is as follows: (Please refer to [Figure 5.5.2])  
+  设置在重试期间焊枪移动的方法。支持三种不同的方法，每个设置的焊枪运动如下：（请参考[图 5.5.2]）
 
 - A. ReEnter  
-  When arc ignition fails, the torch steps backward to the previous step and attempts to ignitie the arc again. The distance of this backward movement is set in the welding auxiliary condition retry settings menu under the "Retreat/Weld line dist". After stepping back a certain distance, the torch will step forward again, so the voltage/current conditions follow the welding start conditions.  
+  当弧点燃失败时，焊枪向后退回到上一步，并尝试再次点燃弧。此向后移动的距离在焊接辅助条件重试设置菜单中的“退回/焊接线距离”下设置。在向后退回一定距离后，焊枪将再次向前移动，因此电压/电流条件遵循焊接起始条件。
 
 - B. Shift  
-  After moving by the shift distance set in the retry conditions of the welding auxiliary condition, the torch returns to the arc ignition step. The shift distance can be set in the forward/backward, left/right, and up/down direction relative to the welding line. During the retry, the welding conditions follow the welding start conditions in the retry settings. If arc ignition is successful, the arc is maintained, and the torch moves to the welding start point at the set speed, where welding proceeds.  
+  在焊接辅助条件的重试条件中，根据设置的移动距离，焊枪返回到弧点燃步骤。移动距离可以在相对于焊接线的前后、左右和上下方向进行设置。在重试期间，焊接条件遵循重试设置中的焊接起始条件。如果弧点燃成功，则保持弧，焊枪以设定速度移动到焊接起点，进行焊接。
 
 - C. Multi-direc.  
-  In the retry conditions of the welding auxiliary settings, the "shift Distance" is devided into forward/backward, left/right, and up/down movements. The 1st retry attempts to move along the welding line by the forward/backward distance. The 2nd retry attempts the left/right and up/down movements, considering the distances set for those directions. The 3rd retry moves in the opposite direction of the left/right position from the second retry. For retries 4-6, the same operation is performed at twice the distance compared to retries 1-3, and for retries 7-9, the same operation is performed at three times the distance. Welding starts according to the welding start conditions in the retry settings, and if arc ignition is successful, the arc is maintained, and the torch moves to the welding start point at the set speed, where welding proceeds.  
+  在焊接辅助设置的重试条件中，"移动距离"被划分为前后、左右和上下动作。第一次重试尝试沿焊接线按照前后距离移动。第二次重试尝试考虑设定的左右和上下移动的距离。第三次重试沿第二次重试的左右位置反方向移动。对于重试4-6，按照与重试1-3相比的两倍距离执行相同操作，对于重试7-9，执行三倍距离的相同操作。焊接根据重试设置中的焊接起始条件开始，如果弧点燃成功，则保持弧，焊枪以设定速度移动到焊接起点，进行焊接。
 
-### (6)	Speed: [100]cm/min (Range: 1.0 ~ 999.0)  
-  Specifies the speed at which the torch moves to the retry position or returns to the welding start point during the retry.  
+### (6)	Speed: [100] cm/min (范围: 1.0 ~ 999.0)  
+  指定焊枪在重试期间移动到重试位置或返回焊接起点的速度。
 
-### (7)	Retreat/Weld line dist.: [3] mm (Range: 0.00 ~ 99.99)   
-  When the operation mode is set to ReEnter, this is the distance the torch moves during the retry.  
+### (7)	Retreat/Weld line dist.: [3] mm (范围: 0.00 ~ 99.99)   
+  当操作模式设置为 ReEnter 时，这是焊枪在重试期间移动的距离。
 
-### (8)	Shift distance: FWD/BWD = [ 2 ], L/R = [ 2 ], Up/Down = [ 1 ] mm (Range: -99.99 ~ 99.99)  
-  When the operation mode is set to Shift, this is the distance the torch moves during the retry.  
+### (8)	Shift distance: FWD/BWD = [ 2 ], L/R = [ 2 ], Up/Down = [ 1 ] mm (范围: -99.99 ~ 99.99)  
+  当操作模式设置为 Shift 时，这是焊枪在重试期间移动的距离。  
     
 
 ![](../../_assets/5_5_2.png)<br>
-*Figure 5.5.2 Retry Function Sequence*
-
-
+*图 5.5.2 重试功能序列*
 [__SOURCE](5_Condition_editing/5_Aux_condition/2_restart.md)
-# 5.5.2 Welding Auxiliary condition - Restart  
+# 5.5.2 焊接辅助条件 - 重新启动  
 
-During arc welding, the process may be interrupted due to factors such as arc failure, exceeding the limits of welding current and voltage, gas pressure drop, wire shortage, cooling water errors, etc.
-When welding is restarted from the point where the process was interrupted, there is a risk of leaving un-welded areas.
-In such cases, the restart function compensates for the un-welded sections by performing overlap welding.
+在电弧焊接过程中，可能由于电弧故障、焊接电流和电压超限、气体压力下降、焊丝短缺、冷却水错误等因素导致过程被中断。  
+当从中断的地方重新开始焊接时，存在留下未焊接区域的风险。  
+在这种情况下，重新启动功能通过进行重叠焊接来补偿未焊接部分。  
 
-After welding is interrupted, the system automatically restarts or, after eliminating the cause of the interruption, resumes operation.
-It moves backward along the weld line for a certain distance and then resumes welding. This results in an overlap region near the point where welding was stopped, preventing un-welded areas from being created.
+焊接中断后，系统会自动重新启动，或在消除中断原因后恢复操作。  
+它会沿焊接线向后移动一定距离，然后恢复焊接。这将在焊接停止的点附近产生一个重叠区域，防止产生未焊接区域。  
 
-This section describes the restart conditions and overlap settings.
+本节描述了重新启动条件和重叠设置。
 
- 
 ![](../../_assets/5_5_3.png)<br>
-*Figure 5.5.3. Welding Auxiliary condition (Restart) Setting(e.g. EWM)*
+*图 5.5.3. 焊接辅助条件（重新启动）设置（例如 EWM）*
 
 
-### (1)	Restart Repetition: [ 3 ] times (Range: 0 ~ 9)   
-Specifies the maximum number of restart attempts within the same welding section. If this count is exceeded, the error "**E1274 Re-startup count exceeded within the same welding section**" will occur.  
+### (1) 重新启动重复次数: [ 3 ] 次（范围: 0 ~ 9）  
+指定在同一焊接部分内的最大重新启动尝试次数。如果超过此计数，将出现错误“**E1274 在同一焊接部分内重新启动计数超过**”。  
 
-### (2)	Restart Condition: [ 0 ] (Range: 0 ~ 32)   
-Specifies the welding condition number to be used during the overlap region when restarting the welding. The welding will be performed with the specified initial welding conditions(current, voltage, etc.)  
-If the input condition number is "0", welding will proceed with the current welding start conditions from the point of overlap.
+### (2) 重新启动条件: [ 0 ]（范围: 0 ~ 32）  
+指定在重叠区域重新启动焊接时要使用的焊接条件编号。焊接将依据指定的初始焊接条件（电流、电压等）进行。  
+如果输入的条件编号为“0”，焊接将从重叠点的当前焊接起始条件继续进行。  
 
-### (3)	Overlap distance: [ 5 ] mm (Range: 0.0 ~ 99.9)  
-Specifies the length of the overlap (overlap distance) when restarting the welidng. The robot will move back by the specified distance and then resume welding.  
+### (3) 重叠距离: [ 5 ] 毫米（范围: 0.0 ~ 99.9）  
+指定重新启动焊接时的重叠长度（重叠距离）。机器人将向后移动指定的距离，然后恢复焊接。  
 
-### (4)	Moving Speed: [ 50 ] mm/sec (Range: 1.0~150.0)  
-Specifies the speed at which the torch is moved to the overlap start position.
-This corresponds to the movement speed in the section from ③ to ④ in [figure 5.5.4]  
+### (4) 移动速度: [ 50 ] 毫米/秒（范围: 1.0~150.0）  
+指定焊炬移动到重叠起始位置的速度。  
+这对应于从③到④部分的运动速度[图 5.5.4]  
 
-### (5)	Welding Speed: [ 50 ] cm/min (Range: 10.0~999.0)  
-Specifies the robot's speed while performing overlap welding from the start to the end position. This is the speed during the overlap region in section ④ of [Figure 5.5.4].
+### (5) 焊接速度: [ 50 ] 厘米/分钟（范围: 10.0~999.0）  
+指定机器人在从起始位置到结束位置进行重叠焊接时的速度。这是[图 5.5.4]中④部分的重叠区域内的速度。  
 
-When an error occurs during welding from the start point to the end point (⑤), and if the overlap condition is semi-automatic, the user must identify the cause of the welding stop and address the error (①).
-After resolving the issue (②), pressing the `Start` button (③) will resume welding.
-The robot will automatically move to the overlap start position at the speed set by the `Moving speed` (④).
-Once at the position, it will perform overlap welding at the `Welding speed` for the specified distance, and then continue welding at the normal speed.
-However, if an error occurs during the overlap welding, the robot will not repeat the overlap but will directly start welding from that point onward.
+当在从起始点到结束点（⑤）焊接过程中发生错误，并且如果重叠条件为半自动，用户必须识别焊接停止的原因并处理错误（①）。  
+在解决问题后（②），按下`开始 (Start)`按钮（③）将恢复焊接。  
+机器人将以`移动速度 (Moving speed)`（④）设定的速度自动移动到重叠起始位置。  
+一旦到达该位置，将以`焊接速度 (Welding speed)`进行指定距离的重叠焊接，然后以正常速度继续焊接。  
+但是，如果在重叠焊接过程中发生错误，机器人将不再重复重叠，而是直接从该点开始焊接。  
 
 ---
 
 ![](../../_assets/5_5_4.png)<br>
-*Figure 5.5.4. Restart Function Sequence*
+*图 5.5.4. 重新启动功能顺序*
 
 
-### (6)	Overlap Condition Settings  
-The lower section of [Figure 5.5.3] defines how to perform overlap welding when the welding process is interrupted due to reasons such as Arc Off (arc failure), exceeding limits, Gas Off (gas pressure drop), Wire Off (wire shortage), or Coolant Off (coolant error) during arc welding.
-    
--  A. Auto  
-    This setting performs overlap automatically. It can only be configured if welding has been interrupted due to arc stoppage.
-    In the event of an arc stoppage during welding, the process does not stop. Instead, overlap welding is carried out based on the method set in the restart section of the welding auxiliary conditions, after which the main process resumes.
-    However, if the arc stops again during the overlap welding section, welding will resume from that position immediately.  
+### (6) 重叠条件设置  
+[图 5.5.3]的下半部分定义了在由于电弧关闭（电弧故障）、超出限值、气体关闭（气体压力下降）、焊丝关闭（焊丝短缺）或冷却液关闭（冷却液错误）等原因导致焊接过程被中断时如何进行重叠焊接。  
 
-- B. Semi-Auto  
-    This setting allows the user to perform overlap manually. If issues such as Arc Off, exceeding limits, gas pressure drop, wire shortage, or coolant error occur, welding is interrupted, ant the robot is also halted.
-    After addressing the cause, the user must press `Start`, upon which overlap welding will be performed based on the method set in the restart section of the welding auxiliary conditions, and then main process resumes.
-    At this point, if the robot is moved to a different location using the jog function and `Start` is pressed, it will move directly to the overlap welding position and resume welding.
+- A. 自动  
+此设置会自动执行重叠焊接。只有在因电弧停顿导致焊接中断时才能进行配置。  
+在焊接过程中发生电弧停顿时，过程不会停止。相反，重叠焊接将根据焊接辅助条件的重新启动部分中设置的方法进行，之后主要过程将恢复。  
+然而，如果在重叠焊接段期间电弧再次停止，焊接将会立即从该位置恢复。  
 
-- C. Ignore  
-    This setting ignores errors. When this setting is enabled, the robot continues the process without stopping even if welding is interrupted. In other words, the process will proceed regardless of arc stoppage or exceeding the set limits.
-    This method can only be applied when welding has been interrupted due to arc stoppage or exceeding limits, and the process is being restarted.
+- B. 半自动  
+此设置允许用户手动执行重叠焊接。如果发生电弧关闭、超出限值、气体压力下降、焊丝短缺或冷却液错误等问题时，焊接将被中断，机器人也会停止。  
+在处理完原因后，用户必须按下`开始 (Start)`，此时将根据焊接辅助条件的重新启动部分设置的方法执行重叠焊接，然后主要过程恢复。  
+此时，如果用户使用手动功能将机器人移至其他位置并按下`开始 (Start)`，则将直接移动到重叠焊接位置并继续焊接。  
 
-- D. Disable  
-    This setting prohibits overlap welding. If issus such as arc stoppage, exceeding limits, gas pressure drop, wire shortage, or coolant error occur, welding is interrupted and the robot is halted.
-    After addressing the cause, the user must press `Start`, overlap welding will not be performed, and welding will begin from the position where the robot was stopped.
+- C. 忽略  
+此设置会忽略错误。当启用此设置时，即使焊接被中断，机器人也会继续过程。换句话说，无论电弧停止或超出设定限值，过程都会继续。  
+此方法只能适用于因电弧停止或超出限值导致焊接过程被中断，并且过程正在重新启动。  
+
+- D. 禁用  
+此设置禁止进行重叠焊接。如果发生如电弧停止、超出限值、气体压力下降、焊丝短缺或冷却液错误等问题，焊接将被中断，机器人将停止。  
+在处理原因后，用户必须按下`开始 (Start)`，将不执行重叠焊接，并将从机器人停止的位置开始焊接。  
 
 
 {% hint style="warning" %}
-  When moving the robot, pressing the step forward/backward keys will reset the restart information, prventing overlap overlap from being performed. Only jog movements should be used to move the robot.
+  移动机器人时，按下前进/后退键将重置重新启动信息，阻止重叠焊接的执行。只能使用手动移动来移动机器人。
 {% endhint %}
-
-
-
 [__SOURCE](6_Weaving_function/README.md)
-# 6. Weaving Function
-
+# 6. 编织功能
 [__SOURCE](6_Weaving_function/1_Weaving_function/README.md)
-# 6.1 Weaving Functions
+# 6.1 编织功能
 
-The weaving function is used in arc welding to widen the weld bead width. The details of the weaving function are determined by the weaving conditions and reference points. The following settings can be configured in the weaving conditions.  
+编织功能用于弧焊中以加宽焊缝宽度。编织功能的细节由编织条件和参考点决定。可以在编织条件中配置以下设置。  
 
 [__SOURCE](6_Weaving_function/1_Weaving_function/1_condition_.md)
-# 6.1.1 Weaving Condition
+# 6.1.1 编织条件
 
-When the cursor is placed above the `weaving ...` command, pressing the `[Property]` key will display the weaving condition editing screen as shown below.  
-
+当光标放置在 `weaving ...` 命令上时，按下 `[Property]` 键将显示如下所示的编织条件编辑屏幕。  
 
 ![](../../_assets/6_1_1.png)<br>
-*Figure 6.1.1. Weaving Condition Settings*
+*图 6.1.1. 编织条件设置*
 
 ---
 
-The details for each field in the weaving conditions are as follows:  
+编织条件中每个字段的详细信息如下：  
 
-### (1)	Condition Number: [1] (Range: 1 ~ 1000)  
+### (1) 条件编号: [1] (范围: 1 ~ 1000)  
 
-This is the condition number where the weaving operation settings are stored.
-Conditions can be added or removed by pressing the [+] or [-] buttons.
-You can navigate to the previous or next condition number to edit the corresponding condition.
+这是存储编织操作设置的条件编号。  
+可以通过按 [+] 或 [-] 按钮添加或删除条件。  
+您可以导航到前一个或下一个条件编号以编辑相应的条件。
 
-### (2)	Weaving Type: <Single, Triangle, L type, Circle, DownCurve>  
+### (2) 编织类型: <Single, Triangle, L type, Circle, DownCurve>  
 
-This field specifies the type of weaving motion. (please refer to [[6.1.2 Weaving Type]](../1_Weaving_function/2_configuration_.md))
+此字段指定编织运动的类型。 (请参阅 [[6.1.2 编织类型]](../1_Weaving_function/2_configuration_.md))
 
-### (3)	Frequency: [2] Hz (Range: 0.0 ~ 10.0)  
+### (3) 频率: [2] Hz (范围: 0.0 ~ 10.0)  
 
-This field sets the weaving frequency, with a range of `0.0 to 10.0 Hz`. When the frequency is set to '0', the movement time will be applied instead.  
-(please refer to [[6.1.3 Frequency]](../1_Weaving_function/3_frequency.md))  
+此字段设置编织频率，范围为 `0.0 至 10.0 Hz`。当频率设置为 '0' 时，将应用移动时间。  
+(请参阅 [[6.1.3 频率]](../1_Weaving_function/3_frequency.md))  
 
-### (4)	Default Pattern  
+### (4) 默认图案  
 
-This field sets the pattern for the weaving motion.
-(please refer to [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
+此字段设置编织运动的图案。  
+(请参阅 [[6.1.4 默认图案]](../1_Weaving_function/4_pattern.md))  
 
-- **Left Distance(Wall Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
-- **Right Distance(Other Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
-- **Angle** : [90] degrees (Range: 0.1 ~ 180.0)
-- **Offset Angle** : When the torch orientation reference is used, the field specifies the angle at which the tilts to the left or right from its position.
-- **Wall Direaction** : <**Vertical**, **Horizon**, **Base on Torch**>
+- **左侧距离（墙方向距离）** : [2.5] mm (范围: 1.0 ~ 25.0)  
+- **右侧距离（其他方向距离）** : [2.5] mm (范围: 1.0 ~ 25.0)  
+- **角度** : [90] 度 (范围: 0.1 ~ 180.0)  
+- **偏移角度** : 当使用火炬方向参考时，字段指定火炬从其位置向左或向右倾斜的角度。  
+- **墙方向** : <**垂直**, **水平**, **基于火炬**>  
 
-### (5) Forward Angle: [0] degrees (Range : -90.0 ~ 90.0)  
+### (5) 前向角度: [0] 度 (范围 : -90.0 ~ 90.0)  
 
-This field indicates the weaving angle relative to the forward direction.
-When set to 0 degrees, the forward and weaving directions form a right angle.  
-(please refer to [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
+此字段表示相对于前向方向的编织角度。  
+当设置为 0 度时，前向和编织方向形成直角。  
+(请参阅 [[6.1.4 默认图案]](../1_Weaving_function/4_pattern.md))  
 
-### (6)	Boundary Limitation: <Enable, Disable>  
+### (6) 边界限制: <启用, 禁用>  
 
-This option determines whether the weaving trajectory is restricted by the boundaries at the start and end of the welding section. When this function is enabled, the weaving trajectory is confined within the welding area.  
-(please refer to [[6.1.4 Default Pattern]](../1_Weaving_function/4_pattern.md))  
+此选项决定编织轨迹是否受到焊接段起始和结束的边界限制。当启用此功能时，编织轨迹限制在焊接区域内。  
+(请参阅 [[6.1.4 默认图案]](../1_Weaving_function/4_pattern.md))  
 
-### (7)	Robot Behavior when Weaving Stops: <Moving, Stop>
+### (7) 编织停止时的机器人行为: <移动, 停止>  
 
-When a timer is set in the weaving pattern, the weaving motion will stop at both the left and right ends of the weaving.
-In this case, this setting determines whether the robot continues to move or stops during the weaving stop period.  
+当在编织图案中设置计时器时，编织运动将在编织的左右两端停止。  
+在这种情况下，该设置决定机器人在编织停止期间是继续移动还是停止。  
 
-### (8) Move Time: [1] sec (Range: 0.0 ~ 10.0), Timer(Weaving Stop): [0] (Range : 0.00 ~ 2.00)  
+### (8) 移动时间: [1] 秒 (范围: 0.0 ~ 10.0), 计时器（编织停止）: [0] (范围 : 0.00 ~ 2.00)  
 
-If the weaving frequency is set to '0', the weaving motion will be performed based on the move time.
-In this case, the move time for each section and the weaving stop time between sections are configured.  
-(please refer to [[6.1.5 Weaving Section Setting]](../1_Weaving_function/5_weaving_section.md))  
+如果编织频率设置为 '0'，则编织运动将基于移动时间执行。  
+在这种情况下，每个部分的移动时间和部分之间的编织停止时间被配置。  
+(请参阅 [[6.1.5 编织区段设置]](../1_Weaving_function/5_weaving_section.md))  
 
-When the 'Weaving Frequency' is set, only the 'Timer (Weaving Stop)' setting can be adjusted.
-Druing the total time set for the specified frequency, the robot performs weaving for the duration excluding the time set in the 'Timer (Weaving Stop)'. During the weaving stop time, weaving stops.
-Whether the robot continues to move during the weaving stop time is determined by the setting of 'Robot Behavior when Weaving Stops'.
+当设置 '编织频率' 时，仅能调整 '计时器（编织停止）' 设置。  
+在为指定频率设定的总时间内，机器人在排除 '计时器（编织停止）' 中设置的时间的持续时间内执行编织。编织停止时间内，编织停止。  
+机器人在编织停止时间内是否继续移动由 '编织停止时的机器人行为' 的设置决定。
 
-### (9) Weaving Axis Number: [1]  
+### (9) 编织轴编号: [1]  
 
-This setting determines whether the part perfoming the weaving motion is the robot or an auxiliary axis.
-When set to an auxiliary axis, the robot will move as recorded, and only the auxiliary axis will move according to the set distance and frequency to implement weaving.
-If an auxiliary axis is selected, the auxiliary axis specified in the 'Auxiliary Axis Number' field will perform the weaving motion.
-
+此设置决定执行编织运动的部分是机器人还是辅助轴。  
+当设置为辅助轴时，机器人将如记录的那样移动，只有辅助轴将根据设定的距离和频率移动以实现编织。  
+如果选择辅助轴，'辅助轴编号'字段中指定的辅助轴将执行编织运动。
 [__SOURCE](6_Weaving_function/1_Weaving_function/2_configuration_.md)
-# 6.1.2 Weaving Type    
+# 6.1.2 编织类型
 
+设置编织的图案形状，如下图所示。
 
-Set the pattern shape of the weaving as shown in the following figure.
- 
 ![](../../_assets/6_1_2_1.png)<br>
-*Figure 6.1.2. Weaving Pattern Type*
+*图 6.1.2. 编织图案类型*
 
 ![](../../_assets/6_1_2_2.png)<br>
-*Figure 6.1.2. Weaving Pattern Type - Down curve*
-
-
+*图 6.1.2. 编织图案类型 - 向下曲线*
 [__SOURCE](6_Weaving_function/1_Weaving_function/3_frequency.md)
-# 6.1.3 Frequency
+# 6.1.3 频率
 
+"**频率**" 指的是编织的重复周期。当 "频率" 设置为 '0' 时，重复周期由移动时间方法定义，而不是频率方法。
+要使用频率方法指定重复周期，必须设置一个非 '0' 的值。
 
-"**Frequency**" refers to the repetition cycle of the weaving. When the "Frequency" is set to '0', the repetition cycle is defined by the move time method instead of the frequency method.
-To specify the repetition cycle using the frequency method, a value other than '0' must be set.  
-
-The frequency is releated to both the leteral and longitudinal distances.
-As the frequency increases, the available lateral and longitudinal distances decrease, resulting in a smaller amplitude. Conversely, as the frequency decreases, the amplitude can be increased.
-In the case of a triangular weaving pattern, the sum of the lateral and longitudinal move times equals the diagonal move time. 
- 
-
+频率与横向和纵向距离相关。
+随着频率的增加，可用的横向和纵向距离减小，导致幅度变小。相反，随着频率的下降，幅度可以增加。
+在三角形编织图案的情况下，横向和纵向移动时间的总和等于对角线移动时间。
 [__SOURCE](6_Weaving_function/1_Weaving_function/4_pattern.md)
-# 6.1.4 Default Pattern
+# 6.1.4 默认模式
 
-Configure each parameter shown in the following figure. 
+配置下图所示的每个参数。 
   
 <p align="center">
   <img src="../../_assets/6_1_3.png" width="60%"></img>
   <img src="../../_assets/6_1_3_1.png" width="45%"></img>
-  <em><p align="center">Figure 6.1.3 Weaving Parameters according to Wall Direction</p></em>
+  <em><p align="center">图 6.1.3 根据墙壁方向的编织参数</p></em>
 </p>
 
-- **Left Distance(Wall Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
-- **Right Distance(Other Direction Distance)** : [2.5] mm (Range: 1.0 ~ 25.0)
+- **左侧距离（墙壁方向距离）** : [2.5] mm (范围: 1.0 ~ 25.0)
+- **右侧距离（其他方向距离）** : [2.5] mm (范围: 1.0 ~ 25.0)
 
-### (1) Left Distance(Wall Direction Distance)
+### (1) 左侧距离（墙壁方向距离）
 
-Set the distance in the left (wall) direction.  
-
-
-### (2) Right Distance(Other Direction Distance)
-
-Set the distance in the right direction.  
+设置左侧（墙壁）方向的距离。  
 
 
-### (3)	Angle
+### (2) 右侧距离（其他方向距离）
 
-As shown in Figure 6.3, set the angle between the left (wall) direction and the right direction.
-The angle is measured from the left (wall) direction to the right direction.
-However, when using **REFP 4**, this angle will be ignored.
+设置右侧方向的距离。  
 
 
-### (4)	Offset Angle (refer to [Figure 6.1.3])
+### (3) 角度
 
-When the wall direction is set based on the torch posture, this setting defines the angle at which the weaving surface rotates relative to the direction of weaving progression (the dirction in Figure (3) marked with ⊙).
-When set to 0°, the angle between the left (wall) direction and the right direction is bisected.
-
-
-### (5) Wal Direction (refer to [Figure 6.1.3])
-
-Set the left (wall) direction to one of the following options: vertical (Figure (1)), horizontal (Figure (2)), or torch posture-based (Figure (3))
-Generally, the left (wall) direction is set to vertical, while the horizontal direction is typically used for weaving with a 180-degree angle on the plane.  
-
-For torch posture-based weaving, the left (wall) direction is set counterclockwise from the direction of weaving progression (the dirction in Figure (3) marked with ⊙).
-Torch posture-based weaving can accommodate all left (wall directions), and it can also adapt when the left (wall) direction changes during the weaving process.
+如图 6.3 所示，设置左侧（墙壁）方向与右侧方向之间的角度。
+该角度是从左侧（墙壁）方向到右侧方向测量的。
+然而，当使用 **REFP 4** 时，此角度将被忽略。
 
 
-### (6) Forward Angle
+### (4) 偏移角度（参见 [图 6.1.3]）
 
-This refers to the angle of the weaving vibration direction relative to the welding line. The adjustable range is -90.0 to 90.0 degrees.
-When set to 0°, the weaving will move perpendicular to the welding line.
+当墙壁方向基于焊枪姿态设置时，此设置定义编织表面相对于编织进展方向（图 (3) 中标记为 ⊙ 的方向）旋转的角度。
+设置为 0° 时，左侧（墙壁）方向与右侧方向之间的角度被二等分。
+
+
+### (5) 墙壁方向（参见 [图 6.1.3]）
+
+将左侧（墙壁）方向设置为以下选项之一：垂直（图 (1)）、水平（图 (2)）或基于焊枪姿态（图 (3)）
+通常，左侧（墙壁）方向设置为垂直，而水平方向通常用于平面上的 180 度角编织。  
+
+对于基于焊枪姿态的编织，左侧（墙壁）方向从编织进展方向逆时针设置（图 (3) 中标记为 ⊙ 的方向）。
+基于焊枪姿态的编织可以适应所有左侧（墙壁）方向，并且在编织过程中左侧（墙壁）方向变化时也可以调节。
+
+
+### (6) 前向角度
+
+这是指编织振动方向相对于焊接线的角度。可调范围为 -90.0 到 90.0 度。
+设置为 0° 时，编织将垂直于焊接线移动。
 
 
 ![](../../_assets/6_1_4.png)<br>
-*Figure 6.1.4. Weaving Forward Angle*
+*图 6.1.4. 编织前向角度*
 
     
-### (7)	Boundary Limitation
+### (7) 边界限制
 
-For weaving with a forward angle other than 0°, the weaving may exceed the boundary of the section at the start and end of the weaving area.  
-The boundary limitation setting allows you to choose whether the weaving should be confined within the section boundaries or if it can proceed without any restrictions beyond the section boundaries.
+对于前向角度不为 0° 的编织，编织可能在编织区域的开始和结束时超出节段的边界。  
+边界限制设置允许您选择编织是否应限制在节段边界内，或者是否可以在节段边界之外不受限制地进行。
 
  
 ![](../../_assets/6_1_5.png)<br>
-*Figure 6.1.5 Weaving Boundary Limitation* 
-
+*图 6.1.5 编织边界限制* 
 [__SOURCE](6_Weaving_function/1_Weaving_function/5_weaving_section.md)
-# 6.1.5 Weaving Section Setting
+# 6.1.5 编织部分设置
 
-### (1)	Robot Behavior when Weaving Stops  
+### (1) 编织停止时的机器人行为  
 
-When the Timer (Weaving Stop) is set to a value other than 0, the weaving pattern will stop at the end of the weaving section for the specified duration.
-In this state, you can configure whether the robot will continue to move or stop.
+当定时器（编织停止）设置为除0以外的值时，编织模式将在指定持续时间内在编织部分结束时停止。
+在这种状态下，您可以配置机器人是否继续移动或停止。
 
-If set to **Move**, the robot behaves as shown on the left in the figure; if set to **Stop**, the behavior is as shown on the right.  
+如果设置为**移动**，机器人表现如图左所示；如果设置为**停止**，行为如图右所示。  
 
 
 ![](../../_assets/6_1_6.png)<br>
-*Figure 6.1.6. Robot Behavior when Weaving Stops* 
+*图 6.1.6. 编织停止时的机器人行为* 
 
-### (2)	Move Time
+### (2) 移动时间
 
-This setting defines the move time for each section when "Frequency" is set to '0'.
-The move time for unused sections (e.g., sections 3 and 4 in simple oscillation) will be ignored.
+当“频率”设置为'0'时，此设置定义每个部分的移动时间。
+未使用部分的移动时间（例如，简单振荡中的第3和第4部分）将被忽略。
 
 ![](../../_assets/6_1_7.png)<br>
-*Figure 6.1.7. Movement Section by Weaving Pattern* 
+*图 6.1.7. 按编织模式的运动部分* 
 
 
-### (3)	Timer (Weaving Stop)
+### (3) 定时器（编织停止）
 
-Set the weaving stop time at the endpoint of each section as shown in the figure below.
-This setting also applies when the weaving frequency is configured.
-When the weaving frequency is set, the robot's move time during the weaving cycle is calculated as follows:  
-* Robot Move Time = (1 / Weaving Frequency) - Total Timer Time
+在下图所示的每个部分的端点处设置编织停止时间。
+此设置在配置编织频率时也适用。
+当编织频率设置时，机器人的移动时间在编织周期内计算如下：  
+* 机器人移动时间 = (1 / 编织频率) - 总定时器时间
 
 {% hint style="warning" %}
-  if "Robot Behavior when Weaving Stops" is set to **Move**, the movement trajectory does not stop, and it will follow a straight path, as shown in the figure below.
+  如果“编织停止时的机器人行为”设置为**移动**，则移动轨迹不会停止，并且将沿直线路径运动，如下图所示。
 {% endhint %}
  
  
 ![](../../_assets/6_1_8.png)<br>
-*Figure 6.1.8. Trajectory Example When Timer is Set*   
+*图 6.1.8. 设置定时器时的轨迹示例*   
 
 {% hint style="warning" %}
-  if "Robot Behavior when Weaving Stops" is set to **Stop**, the movement trajectory also stops, but the robot's speed remains the same.
+  如果“编织停止时的机器人行为”设置为**停止**，则移动轨迹也会停止，但机器人的速度保持不变。
 {% endhint %}
 [__SOURCE](6_Weaving_function/2_Reference_point/README.md)
-# 6.2 Reference Point(refp) Features
+# 6.2 参考点(refp)特性
 
+要执行编织，需要一个编织坐标系统来确定将创建编织模式的位置，如[[6.1 编织功能]](../1_Weaving_function/README.md)中所述。配置的编织坐标系统用于设置编织功能的详细参数。默认情况下，当编织动作开始时，机器人的坐标系统的Z轴设置为墙壁方向。编织坐标系统（直角坐标系统）是通过接近焊接起始点的姿势位置和焊接过程中火炬的方向自动创建的。
 
-To perform weaving, a weaving coordinate system is required to determine the location where the weaving pattern will be created, as explained in [[6.1 Weaving Functions]](../1_Weaving_function/README.md).
-The configured weaving coordinate system is usde to set the detailed parameters for the weaving function.
-By default, when the weaving motion begins, the Z-axis of the robot's coordinate system is set to the wall direction.
-The weaving coordinate system (rectangular coordinate system) is automatically created using the position of the pose approaching the welding start point and the direction of the torch during the welding process.  
-
-However, in some cases, such as when the welding start pose, the shape of the base material, or its position prevent the creation of the weaving coordinate system, or when modifications to the default weaving coordinate system are needed (e.g., when the angle between the wall direction and the other direction is not 90 degrees), the reference point function can be used to create a desired weaving coordinate system and align the weaving pattern with the base material.
-
+然而，在某些情况下，例如焊接起始姿势、基材的形状或位置阻止创建编织坐标系统，或者需要对默认编织坐标系统进行修改（例如，当墙壁方向与其他方向之间的角度不是90度时），可以使用参考点功能创建所需的编织坐标系统，并将编织模式与基材对齐。
 
 {% hint style="info" %}
-  When the **[Wall Direction]** setting is configured as Torch Posture-Based, no other `refp` commands except `refp3` are used.
+  当**[墙壁方向]**设置为基于火炬姿势时，除了`refp3`外，其他`refp`命令均不使用。
 {% endhint %}
 [__SOURCE](6_Weaving_function/2_Reference_point/1_sorts.md)
-# 6.2.1 Reference Point Type
+# 6.2.1 参考点类型
 
 
 ![](../../_assets/6_2_1.png)<br>
-*Figure 6.2.1. Weaving Coordinate System* 
+*图 6.2.1. 编织坐标系* 
 
 
 ### (1)	refp 1  
 
-The `refp1` command specifies the wall direction of the weaving coordinate system.
-If the wall direction is not specifically defined, the robot will use the vertical direction as the wall direction to perform the weaving opeartion.
-Therefore, if the wall direction is not vertical, this command should be used to set the wall direction.  
+`refp1` 命令指定编织坐标系的墙面方向。  
+如果墙面方向没有被具体定义，机器人将使用垂直方向作为墙面方向来执行编织操作。  
+因此，如果墙面方向不是垂直的，则应使用此命令设置墙面方向。  
 
-* **Usage**: Record a point on the surface of the workpiece in the wall direction as `refp 1`. <br> This point and the welding seam(straight line ⓢⓔ) can be used to determine the wall direction. <br> If only the `refp1` command is used, the other direction will be set by rotating the wall direction by the default pattern angle relative to the direction of movement.
+* **用法**：在墙面方向上记录工件表面的一点作为 `refp 1`。<br> 这点和焊接缝（直线 ⓢⓔ）可以用来确定墙面方向。<br> 如果仅使用 `refp1` 命令，其他方向将通过相对于运动方向的默认模式角度旋转墙面方向来设置。
 
 
 ### (2)	refp 2  
 
-The `refp2` command sets the side of the space when the weaving trajectory will be created, based on the plane that defines the wall direction.
+`refp2` 命令在创建编织轨迹时，基于定义墙面方向的平面设置空间的侧面。
 
-* **Usage**: Record any point in the space on the side where weaving will be performed as `refp 2`. <br> [Figure 6.2.2] shows an example of the weaving coordinate system when `refp 2` is recorded between two base materials. <br> When only the `refp 2` command is used, the Z-axis of the robot's coordinate system is set to the wall direction, and the other direction is determined accordingly.
+* **用法**：在将要进行编织的侧面上记录空间中的任意一点作为 `refp 2`。<br> [图 6.2.2] 显示了在记录 `refp 2` 时位于两个基材料之间的编织坐标系示例。<br> 当仅使用 `refp 2` 命令时，机器人的坐标系统的Z轴被设置为墙面方向，其他方向相应确定。
 
 
 ### (3)	refp 3  
 
-The `refp3` command specifies the direction of weaving in a stationary weaving operation, where the robot remains stationary and only the positioner rotates.  
+`refp3` 命令指定在静态编织操作中编织的方向，机器人保持静止，仅位置器旋转。  
 
-* **Usage**: Record any point along a straight line that indicates the direction of movement, starting from the robot's stationary position, as `refp 3`. <br> The robot will weave along a direction perpendicular to the line formed by the welding start point and `refp 3`. 
+* **用法**：从机器人的静止位置开始，记录指示移动方向的直线上的任意一点作为 `refp 3`。<br> 机器人将在焊接起始点和 `refp 3` 形成的直线垂直方向上进行编织。
 
-* Example: After setting refp3, specify the same positions for the welding start and end steps. The travel speed is set by time. <br> (Note: If `refp 3` is not specified, no weaving will occur, and an error will be triggered.)
+* 示例：设置 `refp3` 后，为焊接起始和结束步骤指定相同的位置。行进速度由时间设置。<br> （注意：如果没有指定 `refp 3`，则不会发生编织，并将触发错误。）
 
 
 ### (4)	refp 4  
 
-The `refp 4` command sets the angle between the wall direction and the other direction.
-[Figure 6.2.3.] shows an example when the angle is set to 90 degrees.
-When using this command to specify the angle, the value set in `Angle` will be ignored.
+`refp 4` 命令设置墙面方向和其他方向之间的角度。  
+[图 6.2.3.] 显示了当角度设置为90度时的示例。  
+使用此命令指定角度时，将忽略在 `角度 (Angle)` 中设置的值。
 
     
 ![](../../_assets/6_2_2.png)<br>
-*Figure 6.2.2. Weaving Direction and Reference Point* 
+*图 6.2.2. 编织方向和参考点* 
     
 
 <p align="center">
   <img src="../../_assets/6_2_3.png" width="65%"></img>
   <img src="../../_assets/6_2_3_1.png" width="65%"></img>
-  <em><p align="center">Figure 6.2.3. Usage of Different Reference Points</p></em>
+  <em><p align="center">图 6.2.3. 不同参考点的使用</p></em>
 </p>   
 
 
 {% hint style="info" %}
-  - refp 1: Ensure the distance from the welding seam is at least 5mm.
-  - refp 2: Ensure the distance from the wall direction plane is at least 5mm.
-  - refp 3: Ensure the distance from the start point is at least 5mm.
-  - refp 4: Set the angle when it is difficult to measure the angle of the weaving pattern.
+  - refp 1: 确保与焊接缝的距离至少为5mm。
+  - refp 2: 确保与墙面方向平面的距离至少为5mm。
+  - refp 3: 确保与起始点的距离至少为5mm。
+  - refp 4: 在难以测量编织模式的角度时设置角度。
 {% endhint %}
 [__SOURCE](6_Weaving_function/2_Reference_point/2_editing.md)
-# 6.2.2 Reference Point Edit
+# 6.2.2 参考点编辑
 
-### (1) Recording Reference Points : Similar to the Move Command
+### (1) 记录参考点：类似于移动命令
 
-- ① **Move the Cursor**: Move the cursor to the location where the reference point will be recorded (typically just above the `weaving on` command step).
-- ② **Record the Reference Point Command**: Press `[F6: cmd. Input] - arcweld - refp` to record the reference point command.
-- ③ **Enter the Reference Point Number**
-- ④ Pose Method:
-  - The *Hidden Pose Method* records the current robot position.
-  - When using the *Pose Variable Input Method*, enter the pose variable after the reference point number.
+- ① **移动光标**：将光标移动到将要记录参考点的位置（通常位于 `weaving on` 命令步骤的正上方）。
+- ② **记录参考点命令**：按 `[F6: cmd. Input] - arcweld - refp` 记录参考点命令。
+- ③ **输入参考点编号**
+- ④ 位置方法：
+  - *隐藏位置方法* 记录当前机器人位置。
+  - 使用 *位置变量输入方法* 时，在参考点编号后输入位置变量。
 
+### (2) 移动到参考点
 
-### (2) Moving to the Reference Point
+参考点决定了编织模式，因此通常在回放时机器人不会移动到参考点。
+但是，在检查或修改参考点位置时，请遵循以下步骤。
 
-Reference points determine the weaving pattern, so typically, the robot does not move to the reference point during playback.
-However, when checking or modifying the reference point location, follow these steps.  
+- ① 将光标移动到参考点命令。
+- ② 按步进向前键移动到参考点。
 
-- ① Move the cursor to the reference point command.
-- ② Press the step forward key to move to the reference point.  
+移动时，插补类型设置为线性，移动速度、工具和加速度设置将基于编织部分的起始步骤中设定的条件。
 
-When moving, the interpolation type is set to linear, and the movement speed, tool, and acceleration settings will be based on the conditions set in the weaving section's start step.
+### (3) 修改参考点（用于隐藏位置方法）
 
+- ① 将光标移动到参考点命令。
+- ② 使用Jog键移动到参考点的新位置。
+- ③ 按 **[SHIFT] + [位置修改]** 键更改参考点的位置。
 
-### (3)	Modifying the Reference Point (for Hidden Pose Method)
+### (4) 删除参考点命令
 
-- ① Move the Cursor to the reference point command.
-- ② Use the Jog key to move to the new location for the reference point.
-- ③ Press **[SHIFT] + [위치수정]** key to change the reference point's location.
+- ① 将光标移动到参考点命令。
+- ② 按 **[SHIFT] + [DEL]** 删除参考点命令。
 
+### (5) 修改参考点编号
 
-### (4) Deleting the Reference Point Command
-
-- ① Move the cursor to the reference point command.
-- ② Press **[SHIFT] + [DEL]** to delete the reference point command.
-
-
-### (5)	Modifying the Reference Point Number
-
-- ① Move the cursor to the reference point command.
-- ② Press **[ENTER]** key.
-- ③ Input the new reference point number and press **[ENTER]**.
-- ④ Press **[ENTER]** again to confirm the change of the reference point number.
-
-
+- ① 将光标移动到参考点命令。
+- ② 按 **[ENTER]** 键。
+- ③ 输入新的参考点编号并按 **[ENTER]**。
+- ④ 再次按 **[ENTER]** 确认更改参考点编号。
 [__SOURCE](6_Weaving_function/3_Weav_sync_out/README.md)
-# 6.3 Weaving Sync Out
+# 6.3 编织同步输出
 
-
-This feature allows for smooth control of heat input (weld deposit) by adjusting the current and voltage on the left and right sides during weaving.  
+此功能允许通过调整编织过程中左右两侧的电流和电压，实现平滑的热输入（焊接沉积）控制。
 
 {% hint style="info" %}
-  The functionality is supported from version 60.30-00.
+  此功能在版本 60.30-00 中得到支持。
 {% endhint %}  
 
 ![](../../_assets/6_3_1_weav_sync_out.png)<br>
-*그림 6.3.1. Example of Weaving Sync Output Function*   
+*图 6.3.1. 编织同步输出功能示例*   
 
-As shown in the figure above, this feature is used when it is necessary to control the heat input and weld deposit during left and right weaving, or when the bead shape needs to be adjusted.
+如上图所示，当需要在左右编织过程中控制热输入和焊接沉积，或需要调整焊接珠形状时，使用此功能。
 
-To use this feature, enter the `[Property]` window of the `weaving` command and configure the following settings.
-
+要使用此功能，请进入 `weaving` 命令的 `[Property]` 窗口并配置以下设置。
 
 ![](../../_assets/6_3_2_weav_sync_out_setting.png)<br>
-*Figure 6.3.2. Weaving Sync Output Function Settings*   
+*图 6.3.2. 编织同步输出功能设置*   
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Item</th>
-      <th style="text-align:left">Description</th>
+      <th style="text-align:left">项目</th>
+      <th style="text-align:left">描述</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">Enable</td>
+      <td style="text-align:left">启用</td>
       <td style="text-align:left">
-        When enabled, it adjusts the current/voltage output during weaving according to the user's settings.
+        启用时，根据用户的设置调整编织过程中的电流/电压输出。
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Output(left/right)</td>
+      <td style="text-align:left">输出（左/右）</td>
       <td style="text-align:left">
-        The percentage of curren/voltage output change relative to the baseline condition within the left and right weaving settings
+        相对于左右编织设置中的基线条件，电流/电压输出变化的百分比。
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Range</td>
+      <td style="text-align:left">范围</td>
       <td style="text-align:left">
-        Set the percentage range of output change during the left and right weaving.
+        设置左右编织过程中输出变化的百分比范围。
       </td>
     </tr>
   </tbody>
 </table>
 [__SOURCE](7_Monitoring/README.md)
-# 7. Arc Welding Data Monitoring
+# 7. 弧焊数据监测
 
-During arc welding, there are instances where the current/voltage command values sent form the robot controller to the welder are compared with the actual current/voltage values output from the welder to the robot controller. In such cases, the arc welding data graph monitoring function can be used to check the welding-related data in real time.
+在弧焊过程中，机器人控制器发送的电流/电压指令值与焊机实际输出到机器人控制器的电流/电压值进行比较的情况是存在的。在这种情况下，可以使用弧焊数据图监测功能实时检查与焊接相关的数据。
 
 </br>
 
-Our controller offers 2-type of monitoring functions for welding data monitoring:
+我们的控制器提供2种焊接数据监测功能：
 
-(1) **Detailed Information Monitoring**: Allows you to check all available data.
+(1) **详细信息监测**：允许您检查所有可用数据。
 
-(2) **Arc Welding Data Graph**: Enalbes viewing of the command and actual current/voltage data in waveform.
+(2) **弧焊数据图**：启用查看指令和实际电流/电压数据的波形。
 
-(3) **Arc Trajectory Monitoring**: You can view the trajectory of the tool tip and the torch in detail while welding.
-
+(3) **弧轨迹监测**：您可以在焊接时详细查看工具尖端和焊枪的轨迹。
 [__SOURCE](7_Monitoring/1_detail_mon.md)
-# 7.1 Detailed Information Monitoring
+# 7.1 详细信息监控
 
-This function allows you to check detailed data related to arc welding. The information provided may vary depending on the set welder, so the monitoring window may differ based on the configured welder. If a communication error occurs with the welder or if there is no communication connection, the "Welder Error Code" or "Welder Communication Status" items will be displayed with a red background. The following data can be monitored in the detailed information monitoring.
+此功能允许您检查与电弧焊接相关的详细数据。提供的信息可能会根据设置的焊机而有所不同，因此监控窗口可能会根据配置的焊机而有所不同。如果与焊机发生通信错误或没有通信连接，"焊机错误代码"或"焊机通信状态"项目将以红色背景显示。以下数据可以在详细信息监控中进行监控。
 
 ![](../_assets/7_1_1.png)<br>
-*Figure 7.1.1. Arc Welding Detailed Information Monitoring*
+*图 7.1.1. 电弧焊接详细信息监控*
 
-1. Current Input: The commanded welding current sent from the robot to the welder (A)
+1. 输入电流：从机器人发送到焊机的指令焊接电流 (A)
 
-2. Current Output: The actual welding current currently being output by the welder (A)
+2. 输出电流：焊机当前实际输出的焊接电流 (A)
 
-3. Voltage Iutput: The commanded welding voltage sent from the robot to the welder (V)
+3. 输入电压：从机器人发送到焊机的指令焊接电压 (V)
 
-4. Voltage Output: The actual welding voltage currently being output by the welder (V)
+4. 输出电压：焊机当前实际输出的焊接电压 (V)
 
-5. Welding Process
+5. 焊接过程
 
-6. Feeding Speed: The wire feeding speed (m/min)
+6. 进给速度：送丝速度 (m/min)
 
-7. Operation Mode: Arc welding mode
+7. 操作模式：电弧焊接模式
 
-8. Prog/Job Number
+8. 程序/作业编号
 
-9. Feed Motor Current: The current driving the actual fedding motor (A)
+9. 进给电机电流：驱动实际送丝电机的电流 (A)
 
-10. Welder Error Number
+10. 焊机错误编号
 
-11. Pulse Dynamic Compensation
+11. 脉冲动态补偿
 
-12. Additional Information Window: This section displays useful additional information such as the upper and lower limits of current/voltage and their units. 
+12. 额外信息窗口：此部分显示有用的额外信息，例如电流/电压的上下限及其单位。
 
-13. Input Signals: Signals sent from the welder to the robot controller.(Can be checked under `[F2: System] - 5: Initialization - 3: Usage Setting - Welder Setting - Input signal assign`)
+13. 输入信号：从焊机发送到机器人控制器的信号。(可以在`[F2: 系统] - 5: 初始化 - 3: 使用设置 - 焊机设置 - 输入信号分配 ([F2: System] - 5: Initialization - 3: Usage Setting - Welder Setting - Input signal assign)`下检查)
 
-14. Output Signals: Signals sent from the robot controller to the welder.(Can be checked under `[F2: System] - 5: Initialization - 3: Usage Setting - Welder Setting - Output signal assign`)
+14. 输出信号：从机器人控制器发送到焊机的信号。(可以在`[F2: 系统] - 5: 初始化 - 3: 使用设置 - 焊机设置 - 输出信号分配 ([F2: System] - 5: Initialization - 3: Usage Setting - Welder Setting - Output signal assign)`下检查)
 
-15. Command Values: Frequently used commands that can be manually output.
-
-
+15. 指令值：可以手动输出的常用指令。
 [__SOURCE](7_Monitoring/2_data_graph.md)
-# 7.2 Arc welding data graph
+# 7.2 焊接电弧数据图
 
-Arc welding data graph displays information related to the welding data's waveform, allowing you to view not only the real-time data but also past data at a glance.
+焊接电弧数据图显示与焊接数据波形相关的信息，让您不仅可以实时查看数据，还可以一目了然地查看过去的数据。
 
-To use this feature, on TP, press `[pane layout] - select - arc data graph` sequentially. 
+要使用此功能，在 TP 上依次按 `[pane layout] - 选择 - 电弧数据 图表 ([pane layout] - select - arc data graph)`。
 
- 
 ![](../_assets/7_2_1.png)<br>
-*Figure 7.2.1. Arc Welding data graph*
+*图 7.2.1. 焊接电弧数据图*
 
-The following items can be checked in the monitoring window:
+可以在监控窗口中检查以下项目：
 
-1. Welding Status(initial conditions, gas pre-flow, end conditions, gas post-flow, crater movement, main welding, etc.)
+1. 焊接状态（初始条件、气体预流、结束条件、气体后流、坑运动、主焊接等）
 
-2. Job/Prog no, Synergic settings
+2. 作业/程序编号，协同设置
 
-3. Input Current / Command current graph
+3. 输入电流 / 指令电流图
 
-4. Input voltage / Command voltage graph
+4. 输入电压 / 指令电压图
 
-5. Moving average filtered graph of input current and voltage
+5. 输入电流和电压的移动平均过滤图
 
-6. Upper and lower limits of welding current and voltage
+6. 焊接电流和电压的上下限
 
-Arc Welding data graph offers left/right and up/down movement functions. You can also add rows and columns to view more data. By toggling the `[Auto scroll]` button, you can review the past welding screens even during the current welding process.
+焊接电弧数据图提供左右和上下移动功能。您还可以添加行和列以查看更多数据。通过切换 `[Auto scroll]` 按钮，您可以在当前焊接过程中回顾过去的焊接屏幕。
 
-You can increase the number of rows in the graph by pressing the **[Row]** or **[Col]** button at the bottom of the arc welding data graph screen. If you want to zoom in on the data graph further, you can press **[SHIFT] + [Row]** or **[SHIFT] + [Col]** to enlarge the display.
+您可以通过按焊接电弧数据图屏幕底部的 **[Row]** 或 **[Col]** 按钮来增加图中的行数。如果您想进一步放大数据图，可以按 **[SHIFT] + [Row]** 或 **[SHIFT] + [Col]** 来放大显示。
 [__SOURCE](7_Monitoring/3_arc_trj_mgr.md)
-# 7.3 Arc Trajectory Manager
+# 7.3 弧线轨迹管理器
 
-This features displays the trajectory, current, voltage, and torch position (welding angle, push-pull angle) in real-time during arc welding.
+此功能在弧焊过程中实时显示轨迹、电流、电压和焊枪位置（焊接角度、推拉角度）。
 
-Through this, you can monitor the welding angle, current, and voltage in real time during arc welding, making it easier to modify the welding teaching later.
+通过此功能，您可以在弧焊过程中实时监控焊接角度、电流和电压，从而更容易修改焊接教学。
 
-To enable this feature, follow these steps:
+要启用此功能，请按照以下步骤操作：
 
-Set "Arc trajectory monitoring" to 'activation on' under `[F2: System] - 4: Application parameter - 2: Arc welding`.
-
+在`[F2: 系统] - 4: 应用参数 - 2: 弧焊 ([F2: System] - 4: Application parameter - 2: Arc welding)`中将“弧线轨迹监控”设置为“激活”。
 
 {% hint style="info" %}
-This feature is available during from version 60.30-00.
+此功能在版本60.30-00及以上可用。
 {% endhint %}
 
 ![](../_assets/7_3_1_arc_trj_mgr.png)<br>
-*Figure 7.3.1. Real-time Arc trajectory monitoring*
+*图 7.3.1. 实时弧线轨迹监控*
 
-You can monitor the trajectory and welding information in real-time from the `arcon` to the `arcoff` section.
+您可以从`arcon`到`arcoff`部分实时监控轨迹和焊接信息。
 
-Use the arrow keys to move the plane, or press **[Shift] + [+/-]** keys to zomm in or out.
+使用箭头键移动平面，或按**[Shift] + [+/-]**键进行放大或缩小。
 
-The welding angle and push/pull angle are calculated base on the welding direction relative to the welding plane.
+焊接角度和推拉角是根据焊接方向相对于焊接平面计算的。
 
 {% hint style="info" %}
-The welding plane automatically rotates according to the welding trajectory.
+焊接平面会根据焊接轨迹自动旋转。
 {% endhint %}
-
-
-
 [__SOURCE](7_Monitoring/4_arc_monitoring/README.md)
-# 7.4 Arc Monitoring
+# 7.4 电弧监控
 
 {% hint style="info" %}
-This feature is supported in version 70.00-00 and later.  
+此功能在版本70.00-00及更高版本中支持。  
 {% endhint %}
 
-This function allows you to view monitoring features related to arc welding on a single screen.
-It integrates the following features: Arc Welding, Real-time change welding data, Arc sensing and multi-pass, Arc operation information, Arc trajectory monitoring  
+此功能允许您在单个屏幕上查看与电弧焊接相关的监控功能。  
+它集成了以下功能：电弧焊接、实时变化焊接数据、电弧传感和多道工序、电弧操作信息、电弧轨迹监控  
 
-
-To access this function, navigate to `[(right panel) pane layout] - select - arc monitoring`.
-The following sections describe each screen and the available monitoring functions.  
-
-
+要访问此功能，请导航到 `[(right panel) pane layout] - 选择 - 电弧 监控 ([(right panel) pane layout] - select - arc monitoring)`。  
+以下部分描述每个屏幕和可用的监控功能。  
 [__SOURCE](7_Monitoring/4_arc_monitoring/1_arc_welding.md)
-# 7.4.1 Arc Welding
+# 7.4.1 弧焊接
 
 
 When entering the "Arc Monitoring" screen for the first time, this screen is displayed by default.
-To switch to this screen from another screen, click `[F1: Arc Welding]` on the bottom panel.
+To switch to this screen from another screen, click `[F1: 弧 焊接] ([F1: Arc Welding])` on the bottom panel.
 This screen displays the analog and digital signals exchanged with the welder.
 
 ![](../../_assets/7_4_1_1.png)<br>
-*Figure 7.4.1.1. Arc Welding Monitoring*  
+*图 7.4.1.1. 弧焊监控*  
 
-On the "Arc Welding" screen, click the `[F7: Select]` button on the bottom panel to change the panel contents and access the following functions:  
+On the "Arc Welding" screen, click the `[F7: 选择] ([F7: Select])` button on the bottom panel to change the panel contents and access the following functions:  
 
 
-### (1) Welder set.
+### (1) 焊机设置.
 
 ![](../../_assets/7_4_1_2.png)<br>
-*Figure 7.4.1.2. Manual Welder Setup*  
+*图 7.4.1.2. 手动焊机设置*  
 
-Click the `[F1: welder set.]` button on the bottom panel to open the following window.
+Click the `[F1: 焊机 设置.] ([F1: welder set.])` button on the bottom panel to open the following window.
 In this window, you can manually configure the welding machine.
 
 
-### (2) Manual Output
+### (2) 手动输出
 
 ![](../../_assets/7_4_1_3.png)<br>
-*Figure 7.4.1.3. Manual Output*  
+*图 7.4.1.3. 手动输出*  
 
-Select the desired signal from either the analog output singals or digital output signals(e.g. "Stick Check" or "OFF (fb1.12)" as shown in the figure), and then click the `[F2: Manual Output]` button on the bottom panel.
+Select the desired signal from either the analog output signals or digital output signals(e.g. "Stick Check" or "OFF (fb1.12)" as shown in the figure), and then click the `[F2: 手动输出] ([F2: Manual Output])` button on the bottom panel.
 A window will appear where you can configure the selected signal to be output.  
 
 
-### (3) I/O Setup
+### (3) I/O 设置
 
-A wide variety of data is exchanged between the robot controller and the welder in the form of analog and digital signals(refer to `[F2: System] - 5: Initialization - 3: Usage setting - [F2: Welder setting]`).
+A wide variety of data is exchanged between the robot controller and the welder in the form of analog and digital signals(refer to `[F2: 系统] - 5: 初始化 - 3: 用途设置 - [F2: 焊机 设置] ([F2: System] - 5: Initialization - 3: Usage setting - [F2: Welder setting])`).
 However, the signals that operators need to monitor are typically limited.
-Click the `[F3: Set I/O]` button on the bottom panel to open the following window.  
+Click the `[F3: 设置I/O] ([F3: Set I/O])` button on the bottom panel to open the following window.  
 
 ![](../../_assets/7_4_1_4.png)<br>
-*Figure 7.4.1.4. I/O Output Setup*  
+*图 7.4.1.4. I/O 输出设置*  
 
 This window displays all signals exchanged between the robot controller and the welder.
-Select only the required data and click to `OK` to monitor the selected signals only.
-You can also use the `Select All` or `Clear All` buttons at the top to enable or disable all items at once.  
-
+Select only the required data and click to `确定 (OK)` to monitor the selected signals only.
+You can also use the `全选 (Select All)` or `清除所有 (Clear All)` buttons at the top to enable or disable all items at once.  
 [__SOURCE](7_Monitoring/4_arc_monitoring/2_arc_sensing.md)
-# 7.4.2 Arc Sensing
+# 7.4.2 弧感应
 
 
-This screen is displayed when the `[F2: Arc Sensing]` button on the bottom panel is clicked from the "Arc Monitoring" screen.
-For details on the information available on this screen, refer to the following link: [[8.3.5 Arc Sensing Monitoring]](../../8_Application_function/3_Arc_sensing/5_arcsen_monitoring.md)  
-
- 
+当从“弧监控”屏幕点击底部面板上的`[F2: 弧 感应] ([F2: Arc Sensing])`按钮时，将显示此屏幕。
+有关此屏幕上可用信息的详细信息，请参阅以下链接：[[8.3.5 弧感应监控]](../../8_Application_function/3_Arc_sensing/5_arcsen_monitoring.md)  
 [__SOURCE](7_Monitoring/4_arc_monitoring/3_arc_operinfo.md)
-# 7.4.3 Arc Operation Information
+# 7.4.3 弧操作信息
 
 
-This screen is displayed when the `[F3: Arc OperInfo]` button on the bottom panel is clicked from the "Arc Monitoring" screen.
-For details on the information available on this screen, refert to the following link: [[1.3.7 Arc Welding Operation Information]](../../1_Basic_information/3_Convenient_functions/7_operation_info.md)  
-
-
-
+此屏幕在从“弧监控”屏幕中点击底部面板上的`[F3: 弧 操作信息] ([F3: Arc OperInfo])`按钮时显示。  
+有关此屏幕上可用信息的详细信息，请参阅以下链接：[[1.3.7 Arc Welding Operation Information]](../../1_Basic_information/3_Convenient_functions/7_operation_info.md)  
 [__SOURCE](7_Monitoring/4_arc_monitoring/4_arc_trj_monitor.md)
-# 7.4.4 Arc Trajectory Monitoring
+# 7.4.4 弧轨迹监测
 
 
-To use this function, first navigate to `[F2: System] - 4: Application parameter - 2: Arc welding` and set the **"Arc Trajectory monitoring"** to **"Enable"**.
-On the left side, the table data selected from the bottom panel is displayed, and on the right side, the "Arc Trajectory Monitoring" screen is shown.
-This screen provides real-time visualization of the welding trajectory and the torch posture (work angle and push/pull angle) during arc welding.  
-(You can monitor the trajectory and welding information in real time from `arcon` to `arcoff`)
+要使用此功能，首先导航到 `[F2: 系统] - 4: 应用参数 - 2: 弧焊 ([F2: System] - 4: Application parameter - 2: Arc welding)` 并将 **"Arc Trajectory monitoring"** 设置为 **"Enable"**。
+左侧显示从底部面板中选择的表格数据，右侧显示 "Arc Trajectory Monitoring" 屏幕。
+此屏幕提供了弧焊过程中焊接轨迹和焊枪姿态（工作角度和推拉角度）的实时可视化。  
+（您可以实时监控 `arcon` 到 `arcoff` 的轨迹和焊接信息）
 
 
 ![](../../_assets/7_4_4_1.png)<br>
-*Figure 7.4.4.1. Arc Trajectory Monitoring*  
+*图 7.4.4.1. 弧轨迹监测*  
 
-You can adjust the size of the table and canvas by clicking and dragging the center divider.
-(However, one view cannot completely cover the other. If the screen is minimized and then restored to full-screen, the layout will be reset)
-Use the `+/-` key along with the `[shift]` key to zoom in or out.  
-Within the canvas, you can drag to adjust the view position.  
-
-
+您可以通过点击并拖动中间分隔符来调整表格和画布的大小。
+（然而，一个视图不能完全覆盖另一个视图。如果屏幕最小化后再恢复到全屏，布局将被重置）
+使用 `+/-` 键与 `[shift]` 键一起放大或缩小。  
+在画布内，您可以拖动以调整视图位置。  
 [__SOURCE](8_Application_function/README.md)
-# 8. Arc Welding Application Functions
+# 8. 弧焊应用功能
 
-We provide various application features to enhance the quality and stability of arc welding. This section briefly introduces these features. Detailed explanations and applications can be found in separate feature manuals, so please refer to the respective manuals for more in-depth information.
-
+我们提供各种应用功能，以提高弧焊的质量和稳定性。本节简要介绍这些功能。详细的说明和应用可以在单独的功能手册中找到，因此请参考各自的手册以获取更深入的信息。
 [__SOURCE](8_Application_function/1_Arc_cond/README.md)
-# 8.1 Arccond - Arc Welding Condition DB & interpolation
+# 8.1 Arccond - 弧焊条件数据库与插值
 
+焊接条件可以存储在数据库 (DB) 中以供使用或在焊接过程中进行插值。该功能的使用方法如下：
 
-Welding conditions can be stored in a database (DB) for use or interpolated during the welding process.
-The usage of this function is as follows:
+`[F6: cmd. input] - arcweld - arccond` 在 JOB 文件中输入命令。
 
-`[F6: cmd. input] - arcweld - arccond` to enter the command in the JOB file.
-
-The command format is as follows:
-```arccond <interpolation type>, cnd=<condition number>, gap=<gap>, spd=<welding speed>, rd=<wall direction>, ld=<sie direction>, freq=<weaving frequency>, cur=<crruent>, vol=<voltage>```
-
+命令格式如下：
+```arccond <插值类型>, cnd=<条件编号>, gap=<间隙>, spd=<焊接速度>, rd=<壁向>, ld=<丝向>, freq=<编织频率>, cur=<电流>, vol=<电压>```
 
 <br>
 
-- **interpolation type**: D(stepped, immediate application) / L(Linear interpolation)
-- **cnd**: condition number (WDB-welding database- and interpolation conditions can be edited via the properties window)
+- **插值类型**: D(阶梯，立即应用) / L(线性插值)
+- **cnd**: 条件编号 (WDB-焊接数据库-和插值条件可以通过属性窗口进行编辑)
 [__SOURCE](8_Application_function/1_Arc_cond/1_cmd_para.md)
-# 8.1.1 Step Change using Command Factors
+# 8.1.1 使用命令因子的阶梯变化
 
-The stepped change function can be used in the command arguments as follows:
+阶梯变化功能可以在命令参数中如下使用：
 
-| Method | Example |
+| 方法 | 示例 |
 | :--- | :--- |
-| Changing IV(Current, Voltage) |move L, spd=60%, ...<br/>move L, spd=10%, ...   <span style="color: green"> # Weld point(seam) Entry Step </span> <br>    arcon cnd=1  <br>    move L, spd=40cm/min, ... <br>   <b>  arccond D, cur=175, vol=20 </b>  <span style="color: green"> # Change current to 175A, voltage to 20V </span> <br>   move L, spd=30cm/min, ...  <br>    arcof <br>   end |
-| Changing Welding Speed and Weaving Parameter | move L, spd=60%, ...  <br>   move L, spd=10%, ...    <span style="color: green"> # Weld point(seam) Entry Step  </span> <br> weaving on, cnd=1 <br>   arcon cnd=1   move L, spd=40cm/min, ... <br> <b>  arccond D, spd=80, rd=20, ld=10, freq=1.5, cur=175, vol=20 </b> <br> <span style="color: green">  # Change welding speed to 80cm/min, weaving width to 20/10mm, frequency to 1.5HZ, current to 175A, and voltage ot 20V </span> <br>  move L, spd=30cm/min, ...  <br>   weaving off <br>   arcof  <br> end |
+| 改变 IV（电流、电压） |move L, spd=60%, ...<br/>move L, spd=10%, ...   <span style="color: green"> # 焊接点（接缝）进入步骤 </span> <br>    arcon cnd=1  <br>    move L, spd=40cm/min, ... <br>   <b>  arccond D, cur=175, vol=20 </b>  <span style="color: green"> # 将电流改为175A，电压改为20V </span> <br>   move L, spd=30cm/min, ...  <br>    arcof <br>   end |
+| 改变焊接速度和编织参数 | move L, spd=60%, ...  <br>   move L, spd=10%, ...    <span style="color: green"> # 焊接点（接缝）进入步骤  </span> <br> weaving on, cnd=1 <br>   arcon cnd=1   move L, spd=40cm/min, ... <br> <b>  arccond D, spd=80, rd=20, ld=10, freq=1.5, cur=175, vol=20 </b> <br> <span style="color: green">  # 将焊接速度改为80cm/min，编织宽度改为20/10mm，频率改为1.5HZ，电流改为175A，电压改为20V </span> <br>  move L, spd=30cm/min, ...  <br>   weaving off <br>   arcof  <br> end |
 [__SOURCE](8_Application_function/1_Arc_cond/2_wdb_step.md)
-# 8.1.2 Step Change using WDB(Welding DataBase)
+# 8.1.2 使用 WDB（焊接数据库）进行步进变化
 
 ```python
     arccond D, cnd=1
 ```
 
-In the command above, by entering the properties window, you can view the following configuration window.
+在上述命令中，进入属性窗口，您可以查看以下配置窗口。
 
  
 ![](../../_assets/8_1_1.png)<br>
-*Figure 8.1.1. Arc Welding Condition Dialog* 
+*图 8.1.1. 弧焊条件对话框* 
 
 <br>
 
-You can add or delete **cnd**(welding conditions), allowing you to store and use welding conditions in the database as follows:
-    Conditions that can be stored in the DB: welding speed, current, voltage, weaving frequency, weaving width
+您可以添加或删除 **cnd**（焊接条件），允许您将焊接条件存储并在数据库中使用，具体如下：
+可以存储在数据库中的条件：焊接速度、电流、电压、编织频率、编织宽度
 
-Using this, the following JOB configuration can be created:
+利用此功能，可以创建以下 JOB 配置：
 
 ```python
     move L, spd=60%, ...
-    move L, spd=10%, ...	    # Weld point(seam) Entry Step
+    move L, spd=10%, ...	    # 焊点（缝合）进入步骤
     arcon cnd=1
     move L, spd=40cm/min, ...
-    arccond D, cnd=1  	    # Immediately change to Welding DB Condition 1
+    arccond D, cnd=1  	    # 立即更改为焊接数据库条件 1
     move L, spd=30cm/min, ...
     arcof
     end
 ```
 [__SOURCE](8_Application_function/1_Arc_cond/3_wdb_continuous.md)
-# 8.1.3 Continuous Interpolation Change using WDB(Welding DataBase)
+# 8.1.3 使用 WDB (焊接数据库) 进行连续插值变化
 
-
-For example, this function allows for linear interpolation of welding condition(such as current, voltage, welding speed, weaving width, and weaving frequency) while welding a workpiece where the butt gap is 5mm at the start and 25mm at the end.
-In this case, the continuous change of welding conditions (L interpolation) is performed in a linear fashion as shown below.
+例如，该功能允许在焊接工件时对焊接条件（如电流、电压、焊接速度、编织宽度和编织频率）进行线性插值，起始的对接间隙为 5mm，结束时为 25mm。
+在这种情况下，焊接条件的连续变化（L 插值）以如下方式以线性方式进行。
 
  
 ![](../../_assets/8_1_2.png)<br>
-*Figure 8.1.2. Linear Interpolation of Welding Conditions* 
+*图 8.1.2. 焊接条件的线性插值* 
 
 <br>
 
-Using the above items from DB 1 and DB 2, a JOB utilizing continuous interpolation change is as follows: 
+使用来自 DB 1 和 DB 2 的上述项目，利用连续插值变化的 JOB 如下： 
 
 ```python
 move L, spd=60%, ...
-move L, spd=10%, ...	    # Weld point(seam) Entry Step
+move L, spd=10%, ...	    # 焊接点（接缝）进入步骤
 arcon cnd=1
 move L, spd=40cm/min, ...
-arccond L, cnd=1  	    # Continuous interpolation change from Welding DB 1 -> 2
-move L, spd=30cm/min, ...    # In this step, the conditions linearly change from cnd(DB) 1 -> 2
-arccond L, cnd=2  	    # The next step requires arcof
+arccond L, cnd=1  	    # 从焊接数据库 1 -> 2 的连续插值变化
+move L, spd=30cm/min, ...    # 在此步骤中，条件线性变化从 cnd(DB) 1 -> 2
+arccond L, cnd=2  	    # 下一步骤需要 arcof
 arcoff
-move L, spd=10%, ...	    # Weld point(seam) Exit Step
+move L, spd=10%, ...	    # 焊接点（接缝）退出步骤
 end
 ```
 [__SOURCE](8_Application_function/1_Arc_cond/4_interpolation.md)
-# 8.1.4 Changing the welding Speed and Weaving Width Using Interpolation Condition
+# 8.1.4 使用插值条件更改焊接速度和编织宽度
 
-
-This feature is separate from the previously mentioned functionalities. It allows welding conditions to be set based on the reference gap, and then automatically calculates the welding speed and weaving width by measuring the gap at the start and end points through actual touch sensing.  
-By entering the "Gap correction" tab in the properties window of the `arccond` command, you can set speed and width accroding to the gap for each condition.
-In the split window, clicking on "Arc interpolation" will display this setting as a graph.
-
+此功能与之前提到的功能是独立的。它允许根据参考间隙设置焊接条件，然后通过实际触觉传感器在起始点和结束点测量间隙，自动计算焊接速度和编织宽度。  
+通过在`arccond`命令的属性窗口中输入“间隙修正”选项卡，可以根据每个条件的间隙设置速度和宽度。  
+在分割窗口中，单击“弧插值”将以图形形式显示此设置。
 
 ![](../../_assets/8_1_3.png)<br>
-*Figure 8.1.3. Arc Welding Condition(Gap correction) Dialog box* 
+*图 8.1.3. 弧焊接条件（间隙修正）对话框*
 
 ![](../../_assets/8_1_4.png)<br>
-*Figure 8.1.4. Arc Interpolation Monitoring* 
+*图 8.1.4. 弧插值监控*
 
 <br>
 
-The operation of this function is as follows:
+此功能的操作如下：
 
 ![](../../_assets/8_1_5.png)<br>
-*Figure 8.1.5. Welding Condition Interpolation Operation* 
+*图 8.1.5. 焊接条件插值操作*
 
 <br>
- 
 
-The gap-speed graph can be illustrated as follows:  
+间隙-速度图可如下表示：
 
-The gap-spd graph entered in the Gap correction tab of the properties window of the `arccond` command is created.
-At the welding start point, the difference in speed between WDB welding speed and the WDB reference speed (the spd value at the reference gap on the graph) is assumed to be bSpd. The starting speed is then calculated by applying dSpd to the Spd value of the original graph at the current gap.
+在`arccond`命令的属性窗口的间隙修正选项卡中输入的间隙-spd图被创建。  
+在焊接起始点，WDB焊接速度与WDB参考速度之间的速度差（图表上参考间隙的spd值）被假设为bSpd。然后通过将dSpd应用于当前间隙的原始图的Spd值来计算起始速度。
 
-Similarly, at the welding end point, the difference in speed between the WDB welding speed and the WDB reference speed (the spd value at the reference gap on the graph) is assumed to dSpd2. The ending speed is calculated by applying dSpd2 to the Spd value of the original graph at the current gap.
+同样，在焊接结束点，WDB焊接速度与WDB参考速度之间的速度差（图表上参考间隙的spd值）被假设为dSpd2。通过将dSpd2应用于当前间隙的原始图的Spd值来计算结束速度。
 
-As shown in the figure above, the welding speed increases linearly between the two `arccond` commands.
+如上图所示，焊接速度在两个`arccond`命令之间线性增加。
 
-
-An example of the JOB configuration is as follows:
+JOB配置的示例如下：
 
 ```python
     move L, spd=60%, ...
-    move L, spd=10%, ...	    # Weld point(seam) Entry Step
+    move L, spd=10%, ...	    # 焊接点（接缝）入口步骤
     arcon cnd=1
     move L, spd=40cm/min, ...
     arccond L, cnd=1, gap=20  
-    move L, spd=30cm/min, ...    # In this step, welding speed and weaving width change linearly
+    move L, spd=30cm/min, ...    # 在此步骤中，焊接速度和编织宽度线性变化
     arccond L, cnd=2, gap=10   
     arcoff
-    move L, spd=10%, ...	    # Weld point(seam) Exit Step
+    move L, spd=10%, ...	    # 焊接点（接缝）出口步骤
     end
 ```
 [__SOURCE](8_Application_function/2_Touch_sensing/README.md)
-# 8.2	Touch Sensing
+# 8.2	触觉传感
 
+焊接工件由于夹具、定位器或工件安装的误差，并不总是处于固定位置。在这种情况下，可以使用触觉传感来检测焊接起始点、中间点和结束点，从而实现准确焊接。
 
-Welding workpieces are not always in a fixed position due to errors in the jig, positioner, or workpiece mounting.
-In such cases, touch sensing can be used to detect the welding start point, intermediate points, and end points, enabling accurate welding.
+触觉传感功能通过检测工件的位置和焊接的起始、结束或中间点来帮助获取姿态。
 
-The touch sensing func. helps obtain the pose by detecting the position of the workpiece and the welding start, end, or intermediate points.
-
-By recording the reference position using touch sensing, the shift of the workpiece from the reference position can be calculated when the workpiece is loaded.
-When using the master mode, a mster pose can be saved through reference teaching, and the shift amount is automatically calculated via touch sensing during actual operation.
-
+通过使用触觉传感记录参考位置，加载工件时可以计算出工件相对于参考位置的偏移。当使用主模式时，可以通过参考教学保存主姿态，并且在实际操作中，通过触觉传感自动计算偏移量。
 
 ![](../../_assets/8_2_1.png)<br>
-*Figure 8.2.1. Example of Touch Sensing*
+*图 8.2.1. 触觉传感示例*
 
-### (1) Touch Sensing Types
+### (1) 触觉传感类型
 
-The touch sensing supports a total of 5-types, as shown in [Figure 8.2.1] (Butt, Fillet, V-groove, LR Center, and Groove Detections).
+触觉传感支持共计5种类型，如[图 8.2.1]所示（对接焊、角焊、V形槽、LR中心和槽检测）。
 
 ![](../../_assets/8_2_2.png)<br>
-*Figure 8.2.2. Touch Sensing Types*
+*图 8.2.2. 触觉传感类型*
 
-### (2) Touch Sensing Command and Setting Parameters
+### (2) 触觉传感命令和设置参数
 
-The touch sensing command can be recorded by entering `[F6: cmd. input] - arcweld - touchsen` on the TP.
+触觉传感命令可以通过在TP上输入`[F6: cmd. input] - arcweld - touchsen`进行记录。
 
-Assuming the condition 1 set for Fillet, condition 2 set for Butt, and condition 3 for V-groove in the command (where the workpiece type is defined in the properties), the example is as follows:
+假设在命令中条件1设置为角焊，条件2设置为对接焊，条件3设置为V形槽（工件类型在属性中定义），示例如下：
 
 ```python
-    move L,spd=60%,accu=0,tool=0  # Move to the touch sensing position with acc 0
-    var P10=cpo() # Save the current pose to a local variable P10 before touch sensing.
-    touchsen cnd=1, crd="tool_prj", dir=["tf","td"], pose=P10       # Condition 1, tool projection direction, 2-point touch
-    touchsen cnd=1, crd="robot", dir=["+x","-y","-z"], pose=P10     # Condition 1, robot coordinate direction, 3-point touch
-    touchsen cnd=1, crd="tool", dir="+z", pose=P10           # Condition 1, tool coordinate direction, 1-point touch in +Z
-    touchsen cnd=2, crd="tool", dir="+x", lift_up=3, pose=P10, gap=var1 # Condition 2, tool coordinate direction, touch the bottom and rise 3mm
-    touchsen cnd=3, crd="tool", dir="-y", lift_up=5, pose=P10   # Condition 3, tool coordinate direction, touch the bottom and rise 5mm
+    move L,spd=60%,accu=0,tool=0  # 以加速度0移动到触觉传感位置
+    var P10=cpo() # 在触觉传感前将当前姿态保存到局部变量P10。
+    touchsen cnd=1, crd="tool_prj", dir=["tf","td"], pose=P10       # 条件1，工具投影方向，2点触碰
+    touchsen cnd=1, crd="robot", dir=["+x","-y","-z"], pose=P10     # 条件1，机器人坐标方向，3点触碰
+    touchsen cnd=1, crd="tool", dir="+z", pose=P10           # 条件1，工具坐标方向，+Z方向1点触碰
+    touchsen cnd=2, crd="tool", dir="+x", lift_up=3, pose=P10, gap=var1 # 条件2，工具坐标方向，触碰底部并上升3mm
+    touchsen cnd=3, crd="tool", dir="-y", lift_up=5, pose=P10   # 条件3，工具坐标方向，触碰底部并上升5mm
 ```
 
-- **Sensing Distance** : The distance in the sensing direction [mm], and an error occurs if the workpiece is not detected upon reaching this distance.
+- **传感距离** : 在传感方向上的距离[mm]，并且如果到达此距离时未检测到工件，将发生错误。
 
-- **Retreat Distance** : The distance to retreat after the initial sensing in the case of Fillet, and **the distance to raise after touching the bottom in the DetectGroove type**.
+- **退回距离** : 在角焊情况下，初步传感后退回的距离，**触碰底部后的上升距离在槽检测类型中**。
 
-- **Sensing Speed and Retreat Speed** : Specifies the speed during search or retreat.  
+- **传感速度和退回速度** : 指定搜索或退回时的速度。  
 
-- **Detection Type** : Supports sensing during contact and release of contact. Typically, sensing during contact is used, and there is alomost no error.<br/>
-  If the situation requires considering even minor errors caused by wire bending during sensing, only use sensing during retreat when absolutely necessary.
-
+- **检测类型** : 支持接触和释放接触时的传感。通常使用接触时的传感，几乎没有错误。<br/>
+  如果需要考虑因为传感时焊丝弯曲造成的微小误差，只在绝对必要时使用退回时的传感。
 
 <br/>
 
-- **참고**
+- **参考**
 
 <center>
 
-| Sensing Type |	Max Search</br>Directions |	Orthogonal XYZ </br>(All types </br>Supported)	| Tool Coordinate System |	Tool Projection</br>Coordinate System | Other input parameters |
+| 传感类型 | 最大搜索</br>方向 | 正交XYZ </br>（支持所有类型） | 工具坐标系 | 工具投影</br>坐标系 | 其他输入参数 |
 |:---:|	:---: |	:---:	| :---:|	:---: |:---:|
-| Fillet |	3	|O|	O |	O	|	Retreat Distance |
-| Butt	| 1 |	X	|O	|X	|  |
-| VGroove |	1 |	X |	O	|X | |
-| LRCen |	1	|O |	O	|X |  |	
-| DetectGroove |	2 |	O |	O |	O | Proceed Distance 1</br> Retreat Distance 1 </br> criteria |
+| 角焊 |	3	|O|	O |	O	|	退回距离 |
+| 对接焊	| 1 |	X	|O	|X	|  |
+| V形槽 |	1 |	X |	O	|X | |
+| LR中心 |	1	|O |	O	|X |  |	
+| 槽检测 |	2 |	O |	O |	O | 前进距离 1</br> 退回距离 1 </br> 标准 |
 
 </center>
 
-
-In the touch sensing command, pressing on `Property` will bring up a winow as shown in [Figure 8.2.3]  
-You can set conditions such as sensing distance, retreat distance, proceed distance, sensing speed, retreat speed, and detection type (contact,  release of contact), among others.  
-
+在触觉传感命令中，按下`属性 (Property)`将弹出窗口，如[图 8.2.3]所示。  
+您可以设置传感距离、退回距离、前进距离、传感速度、退回速度和检测类型（接触、释放接触）等条件。  
 
 ![](../../_assets/8_2_3.png)<br>
-*Figure 8.2.3. Touch Sensing Condition Edit Screen*
+*图 8.2.3. 触觉传感条件编辑屏幕*
 
 {% hint style="info" %}
-  For detailed instructions on using the command and parameters, please refer to [2.13 touchsen](../../2_Command/13_touchsen.md) <br>
-  This section explains how to use the function.
+  有关命令和参数的详细说明，请参考[2.13 touchsen](../../2_Command/13_touchsen.md) <br>
+  本节解释如何使用该功能。
 {% endhint %}
 
-<!-- - **명령어 사용 예시**
-```python
-    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], pose=<결과포즈 저장변수>, gap=<butt gap 변수>
-    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, pose=<결과포즈 저장변수>, gap=<butt gap 변수>
-    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, mpose=<결과포즈 저장변수>, mshift=<계산된 시프트 변수, gap=butt gap 변수>
-```   -->
-
-<!-- - **파라미터**
-  - 터치센싱 조건번호 (cnd) : cnd=1	
-  - 터치센싱 좌표계 (crd) : "robot", "base", "tool", "tool_prj" 
-  - 센싱 방향 파라미터 (dir) : "+x", ["+x","-z"], [+tx, +tz], ["tf","td"],  
-  - butt, groove 바닥 탐색 후 상승량 [mm] : lift_up=3		
-  - detect groove 탐지 기준 거리 [mm] : criteria=5
-  - 센싱 결과 포즈변수 : pose=var_po10
-  - butt 하단 갭 변수 (소숫점 첫째 자리에서 반올림) : gap=var_gap 
-
-- **참고**  
-  센싱방향(dir)은 작업물 타입에 따라 다음과 같이 지정할 수 있습니다.
-
-  - Fillet	: 최소 1개 ~ 3개 지정
-              +x, -x, +y, -y, +z, -z (crd="robot" 또는 "base")
-              tf, td, tl, tr (crd="tool_prj")
-              +tx, -tx, +ty, -ty, +tz, -tz (crd="tool")
-  - Butt 	: 1개 지정, 하강방향은 +tz 방향
-            +tx, -tx, +ty, -ty, +tz, -tz (crd="tool")
-  - V Groove 	: 1개 지정, 하강방향은 +tz 방향
-                +tx, -tx, +ty, -ty, +tz, -tz (crd="tool")
-  - LRCen 	: 1개 지정
-              +x, -x, +y, -y, +z, -z (crd="robot" 또는 "base")
-              +tx, -tx, +ty, -ty, +tz, -tz (crd="tool")
-  - DetectGroove: 2개 지정 (하강방향, 전진방향 순서)
-                  tf, td, tl, tr (crd="tool_prj")
-                  +tx, -tx, +ty, -ty, +tz, -tz (crd="tool") -->
-
-
-### (3) Detailed Description of Touch Sensing by Sensing Type
+### (3) 触觉传感类型的详细说明
 
 ---
 
-#### [1] Fillet
+#### [1] 角焊
 
 ![](../../_assets/8_2_4.png)<br>
-*Figure 8.2.4. Example of Touch Sensing - Fillet*
+*图 8.2.4. 触觉传感示例 - 角焊*
 
-- Examples of Command
+- 命令示例
 ```python
   touchsen cnd=1, crd="robot", dir=["+x","-y", "-z"], pose=P10
   touchsen cnd=1, crd="tool_prj", dir=["tf", "td"], pose=P10
   touchsen cnd=1, crd="tool", dir=["+z"], pose=P10
 ```  
-  - 1-Point sensing : Only one sensing direction is specified.
-  - 2-Point sensing : Two sensing directions are specified sequentially.
-  - 3-Point sensing : Three sensing directions are specified sequentially.
-- Tool Projection Method (crd="tool_prj") : For convenience, the forward, downward, left, and right directions are determined based on the torch posture.  <br> The directioon can be specified as tf(forward), td(downward), tl(left), tr(right). (tl = RotZ(90) * tf, tr = RotZ(-90) * tf)
-- For workpieces with rotational amounts (RX, RY, RZ), such as tilted Fillets, the sensing direction can be changed using the angle specification option. Please refer to the bottom of the manual for usage.
+  - 1点触碰 : 仅指定一个传感方向。
+  - 2点触碰 : 依次指定两个传感方向。
+  - 3点触碰 : 依次指定三个传感方向。
+- 工具投影方法 (crd="tool_prj") : 出于方便，前、下、左和右方向根据焊枪姿势确定。  <br> 方向可以指定为tf（前），td（下），tl（左），tr（右）。(tl = RotZ(90) * tf, tr = RotZ(-90) * tf)
+- 对于具有旋转量（RX、RY、RZ）的工件，例如倾斜角焊，可以使用角度指定选项更改传感方向。请参见手册底部的使用说明。
 
 ---
 
-#### [2] V Groove
+#### [2] V形槽
 
 ![](../../_assets/8_2_5.png)<br>
-*Figure 8.2.5. Example of Touch Sensing - V Groove*   
+*图 8.2.5. 触觉传感示例 - V形槽*   
 
-- Examples of Command
+- 命令示例
 ```python
-  touchsen cnd=3, crd="tool", dir=[-ty], lift_up=3, pose=P10    # Condition 3, tool coordinate direction
+  touchsen cnd=3, crd="tool", dir=[-ty], lift_up=3, pose=P10    # 条件3，工具坐标方向
 ```  
-  - V-Groove Type can be used for sensing workpieces with a Groove shape. However, it is recommended to teach the tool posture so that it is positioned along the bisector of the angle, similar to the figure above, before starting the sensing.  
-  - The direction parameter corresponds to one direction for the left-right sequence. The downward sequence direction is fixed in the `+z` direction relative to the tool.  
-  - For stable sensing, it is recommended to set the lift-up amount to at least 3mm.  
+  - V型槽类型可用于感测具有槽形状的工件。然而，建议在开始传感之前，先将工具姿态教学，使其沿角的平分线进行定位，类似于上面的图。  
+  - 方向参数对应于左右序列中的一个方向。向下序列方向相对于工具固定在`+z`方向。  
+  - 为了稳定传感，建议将上升量设置为至少3mm。  
 
-- Sensing Sequence  
-  - The sensing sequence proceeds as follows: upper left-right → middle return → bottom → bottom left-right → middle  
+- 传感序列  
+  - 传感序列如下进行：上左-右 → 中间回退 → 底部 → 底部左-右 → 中间  
 
 ![](../../_assets/8_2_6.png)<br>
-*Figure 8.2.6. Touch Sensing Sequence - V-Groove*   
+*图 8.2.6. 触觉传感序列 - V形槽*   
 
 ---
- 
-#### [3] BUTT
+
+#### [3] 对接焊
 
 ![](../../_assets/8_2_7.png)<br>
-*Figure 8.2.7. Example of Touch Sensing - Butt*   
+*图 8.2.7. 触觉传感示例 - 对接焊*   
 
-
-- Examples of Command
+- 命令示例
 ```python
     touchsen cnd=2, crd="tool", dir="+x", lift_up=3, pose=P10, gap=var_gap   
-    # Condition 2, tool coordinate direction, touch the bottom and rise 3mm
+    # 条件2，工具坐标方向，触碰底部并上升3mm
 ```  
-  - Butt Type is recommended to teach the tool posture vertically to the floor surface before starting the sensing, as shown in the figure above.
-  - The direction parameter corresponds to one direction for the left-right sequence. The downward sequence direction is fixed in the `+z` direction relative to the tool.  
-  - After bottom sensing, it is recommended to set the lift-up amount to at least 3mm for stable sensing. The size of the sensed gap may change depending on the lift-up amount.  
+  - 对接焊类型建议在开始传感之前，将工具姿态垂直于地面，如上图所示。
+  - 方向参数对应于左右序列中的一个方向。向下序列方向相对于工具固定在`+z`方向。  
+  - 在底部传感后，建议将上升量设置为至少3mm以确保稳定传感。所感测的间隙大小可能会因上升量的不同而变化。  
 
-- Sensing Sequence
-  - The sensing sequence proceeds as follows: upper left-right → middle return → bottom → bottom left-right → middle  
+- 传感序列
+  - 传感序列如下进行：上左-右 → 中间回退 → 底部 → 底部左-右 → 中间  
 
 ![](../../_assets/8_2_8.png)<br>
-*Figure 8.2.8. Touch Sensing Sequence - Butt*   
+*图 8.2.8. 触觉传感序列 - 对接焊*   
 
+### (4) 传感方向角度变换
 
+在角焊和槽检测类型中支持传感方向的角度变换。通过为传感方向指定一个角度，可以更改搜索过程的方向。在命令中，旋转参数输入为"X30"，"Y-30"，"TL20"等。  
 
-### (4) Sensing Direction Angle Transformation
-
-Angle transformation of the sensing direction is supported in Fillet and Groove Detection types.
-By specifying an angle for the sensing direction, you can change the direction of the search process.
-In the command, the rotation parameter is entered as "X30", "Y-30", "TL20", etc.  
-
-Angle specification rotates the entire search direction by the specified angle along one of the selected axes, either the TL axis or the orthogonal XYZ axes.
-[FIgure 8.2.9] shows an example where the Fillet and Groove detection workpieces are rotated by 30 degrees along the Y-axis or TL axis.
-
+角度指定沿所选轴（TL轴或正交XYZ轴）沿指定角度旋转整个搜索方向。[图 8.2.9]显示了沿Y轴或TL轴旋转30度的角焊和槽检测工件的示例。
 
 ![](../../_assets/8_2_9.png)<br>
-*Figure 8.2.9. Example of Touch Sensing - Angle setting*       
+*图 8.2.9. 触觉传感示例 - 角度设置*       
 
-- Examples of Command
+- 命令示例
 
 ```python
    touchsen cnd=1, crd="robot", dir=["+x","-z"], rotation="Y30", pose=P100
    touchsen cnd=1, crd="robot", dir=["+x","-z"], rotation="TL30", pose=P100
    touchsen cnd=2, crd="tool_prj", dir=["td","tf"], lift_up=5, rotation="Y-30", pose=P100
-   touchsen cnd=2, crd="tool_prj", dir=["td","tf"], rotation="TL-30", pose=P100   # Detect Groove 
+   touchsen cnd=2, crd="tool_prj", dir=["td","tf"], rotation="TL-30", pose=P100   # 检测槽 
 ```
 
-- The angle rotation axes that can be specified depending on the workpiece type and the sensing direction coordinate system designated in the command are as shown in the table below.
+- 根据工件类型和在命令中指定的传感方向坐标系，可以指定的角度旋转轴如下表所示。
 
 <center>
 
-| Sensing Type	| Sensing Direction </br> Coordinate System	| Angle Specification Axis |
+| 传感类型	| 传感方向 </br> 坐标系	| 角度指定轴 |
 |:---:|:---:|:---:|
-|Fillet	| All	| Orthogonal XYZ axes </br> TL axis |
-|Detect Groove |	Tool (crd="tool") </br> Tool Projection (crd="tool_prj") |	Orthogonal XYZ axes </br> TL axis |
+|角焊	| 全部	| 正交XYZ轴 </br> TL轴 |
+|检测槽 |	工具 (crd="tool") </br> 工具投影 (crd="tool_prj") |	正交XYZ轴 </br> TL轴 |
 
 </center>
 
+### (5) 触觉传感中的主/执行模式
 
-### (5) Master/Execution Mode in Touch Sensing
+主模式可以通过用户键开启/关闭。当触觉传感在开启主模式时进行时，可以保存主姿态并用作教学参考。在实际操作中，主模式关闭，并进行触觉传感。在这种情况下，系统根据当前的传感姿态自动计算工件相对于主姿态的偏移量。
 
-The master mode can be turned On/Off using the user key.
-When touch sensing is performed with the master mode On, the master pose can be saved and used as a reference for teaching.  
-During actual operation, the master mode is turned Off, and touch sensing is performed. In this case, the system automatically calculates the shift amount of the workpiece relative to the master pose based on the current sensing pose.  
+在主模式中，所感测的姿态保存在触觉传感命令的`mpose`输入参数指定的变量中。在执行模式（主模式关闭时），当前感测的姿态与主模式下感测的姿态进行比较，并计算偏移量。然后将偏移量记录在`mshift`输入参数指定的变量中。
 
-In master mode, the sensed pose is saved in the variable specified by the `mpose` input parameter of the touch sensing command.
-In execution mode (when master mode is OFF), the current sensed pose is compared with the pose sensed in master mode, and the shift amount is calculated.
-The shift amount is then recorded in the variable specified by the `mshift` input parameter.
-
-
-- Examples of Command
+- 命令示例
 ```python
    var P10=cpo()
    var sft_var1=Shift(0,0,0,0,0,0,"base")
@@ -2843,68 +2626,60 @@ The shift amount is then recorded in the variable specified by the `mshift` inpu
    touchsen cnd=1, crd="robot", dir=["+x","-z"], mpose=P10, mshift=sft_var1
 ```  
 
-- For example, in master mode, the sensed pose is saved in the `P10` pose variable, and in execution mode, when sensing is performed, the shift amount between the master mode pose and the current sensed pose is automatically calculated and stored in the sft_var1 variable.
-
+- 例如，在主模式下，感测的姿态保存在`P10`姿态变量中，在执行模式下，当进行传感时，主模式姿态与当前感测姿态之间的偏移量会自动计算并存储在sft_var1变量中。
 [__SOURCE](8_Application_function/3_Arc_sensing/README.md)
-# 8.3 Arc Sensing and Multi Pass
+# 8.3 弧感应和多次焊接
 
 {% hint style="info" %}
-  - To use this feature, an Arc sensing license is required.<br> Please contact us to purchase and obtain the license.
-  - Additionally, this feature requires **the weaving funtion** to be enabled.<br> Please refer to the weaving section before starting. **[6. Weaving Function](../../6_Weaving_function/README.md)**
+  - 要使用此功能，需要获得弧感应许可证。<br> 请联系我们以购买和获取许可证。
+  - 此外，此功能需要启用 **编织功能**。<br> 在开始之前，请参阅编织部分。 **[6. 编织功能](../../6_Weaving_function/README.md)**
 {% endhint %}
 
-Arc Sensing is a seam tracking feature that can be used for arc welding on thick materials(such as thick plates).
-When using this feature, even if there are seam deviations due to workpiece tolerance or deformation, the welding can be performed accurately.
+弧感应是一种缝合跟踪功能，可用于在厚材料（如厚板）上进行弧焊。当使用此功能时，即使由于工件公差或变形导致缝合偏差，也可以准确地进行焊接。  
 <br>
 
-The typical usage method is as follows: <br>
-1. Teach the reference points (starting point, intermediate points, and endpoint) for the welding area by sensing the seam on the reference workpiece (register the master pose)
-2. Perform seam sensing at the same locations on the actual workpiece (calculate the shift relative to the master pose)
-3. Apply the calculated shift to each point
-4. Use arc sensing for real-time seam tracking during welding
-
+典型的使用方法如下： <br>
+1. 通过感应参考工件上的缝合（注册母体姿态）来教导焊接区域的参考点（起点、中间点和终点） 
+2. 在实际工件的相同位置进行缝合感应（计算相对于母体姿态的偏移） 
+3. 将计算出的偏移应用于每个点 
+4. 在焊接过程中使用弧感应进行实时缝合跟踪
 
 {% hint style="info" %}
-  - Before using this function, it is necessary to first perform Arc Sensing delay time calibration.
-  - Seam sensing refers to the process of finding the starting point, intermediate points, and endpoint of the welding area.
-  - Seam sensing can be performed using touch sensing, LVS seamfinding, LPS(Laser Point Sensing) features.
+  - 在使用此功能之前，必须首先进行弧感应延迟时间校准。
+  - 缝合感应是指找到焊接区域的起点、中间点和终点的过程。
+  - 可以使用触摸感应、LVS 缝合查找、LPS（激光点感应）功能执行缝合感应。
 {% endhint %}
 
-This manual explains the newly added Arc Sensing feature in ${cont_model}.  
-The newly added Arc Sensing feature in ${cont_model} is activated by entering the properties window of the `weaving` command and setting the **'type' in the Arc Sensing (General) tab to 'seam & cur_diff'**.
+本手册解释了 ${cont_model} 中新添加的弧感应功能。  
+在 ${cont_model} 中新增的弧感应功能通过进入 `weaving` 命令的属性窗口，并将弧感应（常规）选项卡中的 **'type' 设置为 'seam & cur_diff'** 来激活。
 
 ---
 
-**Multi-Pass** is a feature used when welding needs to be repeated over multiple passes rather than in a single pass.
-Using this, the first layer (root pass) is welded, and since sensing may be unstable, the tracking trajectory is saved.
-Then, the saved trajectory is shifted to generate two or more passes for welding.  
+**多次焊接** 是一种在焊接需要多次进行而不是单次进行时使用的功能。使用此功能，首先焊接第一层（根焊接），由于感应可能不稳定，因此保存跟踪轨迹。然后，将保存的轨迹移动以生成两个或多个焊接的焊接通道。  
 
-Typically, Arc Sensing is used to perform multi-pass welding, and multi-pass welding is conducted using Arc Sensing.
-
-
+通常，弧感应用于进行多次焊接，多次焊接是使用弧感应进行的。
 [__SOURCE](8_Application_function/3_Arc_sensing/1_arcsen_concept.md)
-# 8.3.1 Arc Sensing Overview
+# 8.3.1 弧感应概述
 
-When weaving during arc welding, the distance between the torch and the base material changes.
-This change in distance causes a variation in wire resistance, which in turn alters the current flowing.
-In other words, by using the current change during the weaving section, the distance to be corrected in the left and right directions of the weaving plane can be calculated, allowing the seam to be tracked.
+在弧焊过程中，当焊枪在焊接时，焊枪与基材之间的距离会变化。
+这种距离的变化会导致电阻的变化，从而改变流动的电流。
+换句话说，通过使用在编织部分的电流变化，可以计算出在编织平面的左右方向上需要进行修正的距离，从而实现焊缝的跟踪。
 
-The height value at the welding start position is used as the reference, and the current value in the middle of the weaving section is used to correct the vertical direction during welding.
-Or, instead of using the starting position current reference value, **the user can directly input a custom current value** as the reference for correction.
+焊接起始位置的高度值作为参考，而编织部分中间的电流值用于在焊接过程中修正垂直方向。
+或者，用户可以直接输入自定义电流值作为修正的参考，而不是使用起始位置电流参考值。
 
-
-<!-- - 좌우 방향 보정 : 좌우 전류차 및 용접선 추출 알고리즘에 의해 로봇이 자동으로 용접선을 추종하여 이동합니다.
-- 상하 방향 보정 : 용접 시작시 높이 (CTWD)를 기준으로하여 이 값을 계속 유지합니다.
-                  만약 용접 도중 높이변화가 필요할 경우 job에 다음 명령어를 이용하여 사용자가 기준 전류값을 입력할 수 있습니다.  -->
+<!-- - 左右方向修正 : 通过左右电流差及焊接线提取算法，机器人自动跟踪焊接线移动。
+- 上下方向修正 : 以焊接开始时的高度 (CTWD) 为基准，持续保持该值。
+                  如果在焊接过程中需要高度变化，用户可以通过以下命令输入基准电流值。  -->
 
 
 ```py
-    move L, spd=30cm/min,accu=3,tool=0  # Entry step
-    move L, spd=30cm/min,accu=3,tool=0  # Welding start step
-    weaving on, cnd=1 # Set the 'Arc Sensing' function to 'Enable' in the [Property] window
+    move L, spd=30cm/min,accu=3,tool=0  # 进入步骤
+    move L, spd=30cm/min,accu=3,tool=0  # 焊接开始步骤
+    weaving on, cnd=1 # 在[属性]窗口中将“弧感应”功能设置为“启用”
     arc on, cnd=1
     move L, spd=30cm/min,accu=3,tool=0
-    _weaving.height_sensing_reference_current=300 # Set the height reference value to 300A
+    _weaving.height_sensing_reference_current=300 # 将高度参考值设置为300A
     move L, spd=30cm/min,accu=3,tool=0
     weaving off
     arc off
@@ -2912,352 +2687,318 @@ Or, instead of using the starting position current reference value, **the user c
 ```  
 
 ![](../../_assets/8_3_1.png)<br>
-*Figure 8.3.1. Arc Sensing Concept*
+*图 8.3.1. 弧感应概念*
 
-As shown in the figure, when the torch is tilted to the left or right, the current weavform changes, and this can be used to track the seam in the left and right directions.
-Additionally, the current at the middle of the weaving section can be used to correct the vertical direction.
-
-
+如图所示，当焊枪向左或向右倾斜时，电流波形会发生变化，这可以用于在左右方向上跟踪焊缝。
+此外，编织部分中间的电流可以用于修正垂直方向。
 [__SOURCE](8_Application_function/3_Arc_sensing/2_arcsen_spec.md)
-# 8.3.2 Arc Sensing Support Specifications
+# 8.3.2 弧感应支持规格
 
+弧感应缝跟踪不支持所有焊接应用。
+对于以下列出的以外的问题，请联系我们获取技术支持。  
 
-The Arc Sensing Seam Tracking does not support all welding applications.
-For any issues beyond the ones listed below, please contact us for technical support.  
+以下规格基于我们公司进行的广泛测试获得的数据。
+（对于超出指定参数的条件，请联系我们进行基于工件和使用条件的验证测试。）  
 
-The specifications below are based on data obtained from extensive testing conducted by our company. 
-(For conditions outside of the specified parameters, please contact us for verification tests based on the workpiece and usage conditions.)  
+### (1) 焊接条件
+  - 焊接方法：CO2, MAG, MIG, FCAW  
+  - 焊丝直径：1.0 ~ 1.6 mm（实心焊丝，药芯焊丝）  
+  - 最大焊接速度：根据焊机特性（10 cm/min ~ 70 cm/min）
+  - 焊接电流：160[A] ~ 600[A]  
 
+### (2) 工件条件
+  - 最小厚度：2t 或更大  
+  - 最大跟踪性能：由灵敏度设置和每秒最大修正距离决定  
+     - 在提高跟踪性能时，可能会发生焊接路径振动，因此需要进行验证测试。  
 
-### (1) Welding Conditions
-  - Welding Methods: CO2, MAG, MIG, FCAW  
-  - Wire Diameter: 1.0 ~ 1.6 mm (Solid wire, Flux-cored wire)  
-  - Maximum Welding Speed: Depending on the welder chaeracteristics (10 cm/min ~ 70 cm/min)
-  - Welding Current: 160[A] ~ 600[A]  
-
-
-### (2) Workpiece Conditions
-  - Minimum Thickness: 2t or greater  
-  - Maximum Tracking Performance: Determined by sensitivity settings and maximum correction distance per second  
-     - When improving tracking performance, welding path vibrations may occur, so verification tests are required.  
-
-### (3) Weaving Conditions  
-  - Weaving Type: Single oscillation, L-type, Triangular
-  - Frequency Range: 0.5 ~ 4.0 Hz(Single oscillation), 0.1 ~ 3.0 Hz(L-type, Triangular)
-  - Amplitude Range: 1.0 X 1.0 mm or more(Single oscillation), 1.5 X 1.5 mm or more(L-type), 3.0 X 3.0 mm or more(Triangular)
-  - Dwell Time: 0.0 ~ 2.0[sec]
+### (3) 编织条件  
+  - 编织类型：单次振荡，L型，三角形
+  - 频率范围：0.5 ~ 4.0 Hz（单次振荡），0.1 ~ 3.0 Hz（L型，三角形）
+  - 振幅范围：1.0 X 1.0 mm 或更多（单次振荡），1.5 X 1.5 mm 或更多（L型），3.0 X 3.0 mm 或更多（三角形）
+  - 停留时间：0.0 ~ 2.0[秒]
 
 {% hint style="info" %}
-  Please check the communication specifications of the welding power source.
-  The communication cycle for welding current and seam tracking data must be 10ms or less(e.g. EWM, Fronius).
-  Arc Sensing guarantees weld seam tracking under stable welding conditions(when the current waveform is stable).
+  请检查焊接电源的通信规格。
+  焊接电流和缝跟踪数据的通信周期必须为10ms或更短（例如，EWM，Fronius）。
+  弧感应保证在稳定焊接条件下（当电流波形稳定时）进行焊缝跟踪。
 {% endhint %}
 
-### (4) Interpolation Type
-  - Linear Interpolation: Available
-  - Circular Interpolation: Available
-  - Positioner Synchronization (Linear): Available
-  - Positioner Synchronization (Circular): Available
+### (4) 插值类型
+  - 线性插值：可用
+  - 圆形插值：可用
+  - 定位器同步（线性）：可用
+  - 定位器同步（圆形）：可用
 
-### (5) Joint Type
-   - Fillet, V-groove  
-   - Maximum Allowable Gap: Depends on weaving width
+### (5) 接头类型
+   - 滴水，V型槽  
+   - 最大允许间隙：取决于编织宽度
 
-### (6) Other Functions
-  - Sensing Trajectory Deviation Limiting Function
-  - Torch Height Setting Function during Sensing
-
+### (6) 其他功能
+  - 感应轨迹偏差限制功能
+  - 感应期间的火焰高度设置功能
 [__SOURCE](8_Application_function/3_Arc_sensing/3_1_arcsen_condition_general.md)
-# 8.3.3.1 Arc Sensing Condition(General)
+# 8.3.3.1 弧传感条件（一般）
 
-
-In the `Weaving` command, clickin on [Properties] opens the Weaving Condition Edit Screen.
-The second tab of this window is where settings related to arc sensing during weaving can be configured, as shown below.  
-
+在`Weaving`命令中，点击[Properties]会打开编织条件编辑屏幕。
+此窗口的第二个标签是可以配置编织期间弧传感相关设置的地方，如下所示。
 
 ![](../../_assets/8_3_2.png)<br>
-*Figure 8.3.2. Arc Sensing Condition(General) Dialog Box*
+*图 8.3.2. 弧传感条件（一般）对话框*
 
-The settings and operation methods for each item are as follows:  
+每个项目的设置和操作方法如下：
 
-### (1) Arc Sensing Activation: <Disable, Enable> 
+### (1) 弧传感激活：<Disable, Enable>
 
-This option allows you to set whether the arc sensing function is enabled or disabled.
-When set to "Enabled", arc sensing tracking will be applied starting from the move command after "arc on" and "weaving" have been executed.
+此选项允许您设置弧传感功能是否启用或禁用。
+设置为"Enabled"时，将从执行"arc on"和"weaving"后的移动命令开始应用弧传感跟踪。
 
-
-### (2) Sensing Type Selection: <Welding Seam, Current Difference, Current Difference + Gap, Welding Seam Estimation & Current Difference>  
+### (2) 传感类型选择：<Welding Seam, Current Difference, Current Difference + Gap, Welding Seam Estimation & Current Difference>
 
 <br/>
 
-```For ${cont_model}, it is recommended to use "Welding Seam Estimation & Current Difference."```<br/>
-The options for Welding Seam, Current Difference, and Current Difference + Gap are the same as for Hi5a, so please refer to the Hi5a controller manual.
+```对于${cont_model}，建议使用"Welding Seam Estimation & Current Difference."```<br/>
+焊接缝、当前差和当前差 + 间隙的选项与Hi5a相同，请参阅Hi5a控制器手册。
 
+### (3) 左/右传感灵敏度：[0 ~ 10]
 
-### (3) Left/Right Sensing Sensitivity: [0 ~ 10]
-
-This setting adjusts the sensitivity for left and right sensing on the weaving plane.<br>
-The default value is 5, which changes the strength of the left/right sensing.<br>
-```When performing delay time calibration, set this to -1.```
-
-{% hint style="info" %}
-  During arc sensing, executing the system variable `weavings_.side_sensing_sensitivity=0` will disable tracking. To enable tracking agian, set this value to a positive number.
-{% endhint %}
-
-
-### (4) Left/Right Sensing Start Cycle: [0 ~ 9]
-
-This setting determines the cycle at which left/right sensing will begin on the weaving plane.<br>
-```For stable operation, set it to 4 or higher.```
-
-
-### (5) Height (Up/Down) Sensing Sensitivity: [0 ~ 10]
-
-This setting adjusts the sensitivity for up and down sensing on the weaving plane.<br>
-The default value is 5, which changes the strength of the up/down sensing.<br>
-```When performing delay time calibration, set this to -1.```
+此设置调整编织平面上的左侧和右侧传感的灵敏度。<br>
+默认值为5，它改变左右传感的强度。<br>
+```执行延迟时间校准时，将其设置为-1。```
 
 {% hint style="info" %}
-  During arc sensing, executing the system variable `weavings_.height_sensing_sensitivity=0` will disable tracking. To enable tracking agian, set this value to a positive number.
+  在弧传感期间，执行系统变量`weavings_.side_sensing_sensitivity=0`将禁用跟踪。要重新启用跟踪，请将此值设置为正数。
 {% endhint %}
 
+### (4) 左/右传感开始周期：[0 ~ 9]
 
-### (6) Height (Up/Down) Sensing Start Cycle: [Left/Right Start Cycle +1 ~ 10]
+此设置确定在编织平面上左/右传感将开始的周期。<br>
+```为了稳定运行，将其设置为4或更高。```
 
-This setting determines the cycle at which up/down sensing will begin on the weaving plane.<br>
-```For stable operation, set it to 4 or higher.```
+### (5) 高度（上下）传感灵敏度：[0 ~ 10]
 
-
-### (7) Hight (Up/Down) Sensing Reference Current: [0 ~ 1000]
-
-This setting determines the reference current for up/down sensing. <br>
-The torch height during arc sensing welding wire tracking is based on this setting.<br>
-```When set to 0, the average value of the initial section current will be used as the reference. (If there is a tack weld at the start of the weld, be cautious as an unintended high initial current may be used as the reference.) ```
+此设置调整编织平面上上下传感的灵敏度。<br>
+默认值为5，它改变上下传感的强度。<br>
+```执行延迟时间校准时，将其设置为-1。```
 
 {% hint style="info" %}
-  When `weavings_.height_sensing_reference_current=200` is executed immediately after `weaving on` and `arc on`, tracking will be maintained while keeping a height of 200A.
+  在弧传感期间，执行系统变量`weavings_.height_sensing_sensitivity=0`将禁用跟踪。要重新启用跟踪，请将此值设置为正数。
 {% endhint %}
 
+### (6) 高度（上下）传感开始周期：[左/右开始周期 +1 ~ 10]
 
-### (8) Real-Time Gap Sensing Sensitivity: [0(disabled) ~ 10]
+此设置确定在编织平面上上下传感将开始的周期。<br>
+```为了稳定运行，将其设置为4或更高。```
 
-<!-- This function automatically adjusts welding speed and weaving based on the gap. When not in use, set it to 0. <br>
-When enabled, this setting adjusts the sensitivity of the width variation. The value should be set according to bead quality and the degree of width variation. -->
+### (7) 高度（上下）传感参考电流：[0 ~ 1000]
 
-Set to 0. (Not Supported)
+此设置确定上下传感的参考电流。<br>
+在弧传感焊接线材跟踪期间，焊枪高度基于此设置。<br>
+```设置为0时，将使用初始部分电流的平均值作为参考。（如果在焊接开始时有点焊，小心因为意外的高初始电流可能被用作参考。）```
 
+{% hint style="info" %}
+  当`weavings_.height_sensing_reference_current=200`在`weaving on`和`arc on`之后立即执行时，将保持跟踪，同时保持200A的高度。
+{% endhint %}
 
-### (9) Real-Time Gap Sensing Resolution: [ ]  
+### (8) 实时间隙传感灵敏度：[0（禁用）~ 10]
 
-### (10) Real-Time Sensing Gap: [ ]  
+<!-- 该功能根据间隙自动调整焊接速度和编织。当不使用时，将其设置为0。<br>
+启用时，此设置调整宽度变化的灵敏度。值应根据焊缝质量和宽度变化的程度进行设置。 -->
 
-### (11) Real-Time Gap Sensing Speed: [ ]  
+设置为0。（不支持）
 
+### (9) 实时间隙传感分辨率：[ ]
 
+### (10) 实时传感间隙：[ ]
+
+### (11) 实时间隙传感速度：[ ]
 [__SOURCE](8_Application_function/3_Arc_sensing/3_2_arcsen_condition_advanced.md)
-# 8.3.3.2 Arc Sensing Condition(Advanced)
+# 8.3.3.2 弧感应条件（高级）
 
+在编织条件编辑屏幕的第三个选项卡中，可以配置高级设置。<br>
 
-In the third tab of the Weaving Condition Edit Screen, advanced settings can be configured.<br>
-
-```It is recommended to use the default values in this tab whenver possible.```
-
+```建议在此选项卡中尽可能使用默认值。```
 
 ![](../../_assets/8_3_3.png)<br>
-*Figure 8.3.3. Arc Sensing Condition(Advanced) Dialog Box*
+*图 8.3.3. 弧感应条件（高级）对话框*
 
+各项的设置和操作方法如下：
 
-The settings and operation methods for each item are as follows:
+### (1) 最大跟踪速度: [0.1~ 20.0] mm/s
 
-### (1) Maximum Tracking Speed: [0.1~ 20.0] mm/s
+此设置定义了在1秒钟内可以跟踪的最大左右/上下距离（或速度）。
 
-This setting defines the maximum left/rgiht/up/down distance (or speed) that can be tracked in 1 second.
+### (2) 跟踪限制距离: [0 ~ 200] mm (0: 禁用)
 
+此设置定义了左右/上下弧感应跟踪距离的限制。  
+如果跟踪超出弧感应设置的限制，将会发生错误并停止操作。
 
-### (2) Tracking Limit Distance: [0 ~ 200] mm (0: Disabled)
+### (3) 计算范围: [1 ~ 100] % (默认: 50%)
 
-This setting defines the limit for the left/right/up/down arc sensing tracking distance.
-If tracking exceeds the limit set by the arc sensing, an error will occur and stop the operation.
+此设置定义了计算左右电流的范围。<br>
+```当编织幅度减小时，将此值设置得更小是有利的。（例如，对于1mm幅度，设置为50%；对于0.5 mm幅度，推荐40%。）```
 
+### (4) 不对称感应比: [-50 ~ 50] %
 
-### (3) Calculation Range: [1 ~ 100] % (default: 50%)
-
-This setting defines the range for calculating the left/right current. <br>
-```As the weaving amplitude decreases, it is advantageous to set this value smaller. (e.g. for 1mm amplitude, set to 50%; for 0.5 mm amplitude, 40% is recommended.)```
-
-
-### (4) Asymmetric Sensing Ratio: [-50 ~ 50] %
-
-This setting defines the asymmetric sensing ratio when the left and right bead widths are different.<br>
-A positive value indicates the right direction when viewed from the back of the torch in the welding direction, and a negative value indicates the left direction.
+此设置定义了在左侧和右侧焊疤宽度不同的情况下的不对称感应比。<br>
+正值表示从焊接方向的火炬后面看是右方向，负值表示左方向。
 
 {% hint style="info" %}
-  During arc sensing, if `weavings_.asymetric_sensing_ratio=10` is executed, asymmetric tracking will occur towards the right, maintaining the right-side current 10A higher.
-  If this value is set to a negative number, asymmetric tracking will occur towards the left.
+  在弧感应期间，如果执行`weavings_.asymetric_sensing_ratio=10`，将向右发生不对称跟踪，保持右侧电流高出10A。  
+  如果此值设置为负数，将向左发生不对称跟踪。
 {% endhint %}
-
 
 ---
 
-### (5) Abnormal Data Handling Method: <Error, Warning, Disable>
+### (5) 异常数据处理方法: <错误, 警告, 禁用>
 
-This setting defines how to handle data when the normal current range, calculated using the "detection margin," exceeds the limit for the "detection time."
+此设置定义了当使用“检测余量”计算的正常电流范围超过“检测时间”的限制时如何处理数据。
 
-- Error: The robot diplays an error and stops.
-- Warning: The robot displays a warning and continues the operation.
-- Disable: The robot continues the operation without any interruption.
+- 错误: 机器人显示错误并停止。  
+- 警告: 机器人显示警告并继续操作。  
+- 禁用: 机器人在没有任何中断的情况下继续操作。  
 
+### (6) 检测余量: [100 ~ 200] %
 
-### (6) Detection Margin: [100 ~ 200] %
-
-This setting defines the margin for determining abnormal current values from the current data. The default value is 150 %.<br>
-As shown in the figure below, the range is based on 'Q1 - 1.5 * IQR' for the lower bound and 'Q3 + 1.5 * IQR' for the upper bound.
-
+此设置定义了从电流数据中确定异常电流值的余量。默认值为150%。<br>
+如下图所示，范围基于“Q1 - 1.5 * IQR”的下限和“Q3 + 1.5 * IQR”的上限。
 
 ![](../../_assets/8_3_4.png)<br>
-*Figure 8.3.4. Abnormal Detection Margin*
+*图 8.3.4. 异常检测余量*
 <br>
 
-### (7) Detection Time: [10 ~ 1000] ms
+### (7) 检测时间: [10 ~ 1000] ms
 
-This setting defines the amount of time allowed for current input that exceeds the abnormal detection margin.<br>
-If the margin is exceeded for a period longer than this time, the robot will operate based on the selected handling method (error, warning, or disable).
+此设置定义了超出异常检测余量的电流输入被允许的时间。<br>
+如果超出余量的时间超过此时间，机器人将根据选定的处理方法（错误、警告或禁用）进行操作。
 
 ---
 
-### (8) Hybrid Mode ```(Welding Seam Estimation + Current Difference)``` <br>
+### (8) 混合模式 ```(焊接缝估计 + 电流差)``` <br>
 
-This setting determines whether the current will be regressed at the end of each weaving half-cycle or at the end of each full weaving cycle.
+此设置决定电流是在每个编织半周期结束时还是在每个完整编织周期结束时进行回归。
 
+### (9) 电流回归误差容忍度 ```(焊接缝估计 + 电流差)``` <br>
 
-### (9) Current Regression Error Tolerance ```(Welding Seam Estimation + Current Difference)``` <br>
+此设置定义了回归过程中可以接受的电流误差。对于较小的编织宽度或轻微改善角度，应选择较小的值。默认值为1A。
 
-This setting defines the acceptable current error during regression. For smaller weaving widths or minor improvement angles, a smaller value should be selected. The default value is 1A.
+### (10) 回归期间的数据采样选项 ```(焊接缝估计 + 电流差)``` <br>
 
-
-### (10) Data Sampling Option during Regression ```(Welding Seam Estimation + Current Difference)``` <br>
-
-This setting defines the method for processing sampled data during regression: Raw, Median, or Average.
+此设置定义了回归过程中对采样数据的处理方法：原始、中位数或平均数。
 
 </br>
-
 [__SOURCE](8_Application_function/3_Arc_sensing/3_3_arcsen_calibration.md)
-# 8.3.3.3 Arc Sensing Calibration
+# 8.3.3.3 弧感应校准
 
-To use the arc sensing function, a calibration process must be completed first.  
-This process calculates the delay time to synchronize the weaving cycle and the current data cycle.
+要使用弧感应功能，必须先完成校准过程。  
+此过程计算延迟时间以同步编织周期和当前数据周期。
 
 {% hint style="info" %}
-  Arc sensing is dependent on welder settings, including welding mdoe, operation mode, Job/Prog number, and synergic code, and thus has a corresponding delay time.<br>
-  Up to 3 calibration data sets can be stored.<br>
-  Example: When the settings are Pulse, Synergic 185, Job 0 (disabled), the corresponding calibration information will be loaded and used during arc sensing.
+  弧感应依赖于焊接机设置，包括焊接模式、操作模式、作业/程序编号和协同代码，因此有相应的延迟时间。<br>
+  最多可以存储3组校准数据。<br>
+  示例：当设置为脉冲、协同185、作业0（禁用）时，相应的校准信息将在弧感应期间加载并使用。
 {% endhint %}
 
-### Calibration Process
+### 校准过程
 
 <br>
 
-#### Preparation: Prepare a flat specimen for bead-on-plate welding.
+#### 准备：准备一个平整的样本进行焊接。
 
-#### Step 1.  
+#### 步骤 1.  
 
-Enter the `[Property]` window of the weaving command and set the wall direction to vertical.
+进入编织命令的 `[Property]` 窗口，并将墙面方向设置为垂直。
 
-#### Step 2.  
+#### 步骤 2.  
 
-Enter the Arc Sensing (General) in the property window of the weaving command, set the type to "Welding Seam Estimation & Current Difference", and set both the left/right and up/down sensitivities to -1.  
+在编织命令的属性窗口中输入弧感应（一般），将类型设置为“焊缝估算与电流差异”，并将左右和上下的灵敏度均设置为 -1。  
 
 
 ![](../../_assets/8_3_5.png)<br>
-*Figure 8.3.5. Arc Sensing Calibration*
+*图 8.3.5. 弧感应校准*
 <br>
 
 
-#### Step 3. 
+#### 步骤 3. 
 
-Create an entry step to approach from the opposite direction of the virtual wall as shown in the figure above, and teach the starting and ending points with a 60 cm gap between them.  
-In this case, keep the torch working angle (Roll angle) consistent within the range of 30 to 45 degrees.
+创建一个入口步骤，从虚拟墙的相反方向接近，如上图所示，并在起始点和结束点之间保持60厘米的间距。  
+在这种情况下，保持焊枪工作角度（滚转角）在30至45度的范围内一致。
 
-#### Step 4.  
+#### 步骤 4.  
 
-Perform the actual arc welding in automatic mode.  
+以自动模式进行实际弧焊。  
 
-#### Step 5.  
+#### 步骤 5.  
 
-Navigate to the delay time table tab in the property window of the weaving command. <br>
-Click on the "Auto Calib" option at the bottom left to check the currently calibrated delay time.
+在编织命令的属性窗口中导航到延迟时间表选项卡。 <br>
+单击左下角的“自动校准”选项以检查当前校准的延迟时间。
 
-#### Step 6.  
+#### 步骤 6.  
 
-Enter the corresponding value into the field for the current weaving frequency (the frequency applied during calibrations).
+将相应值输入到当前编织频率的字段中（在校准期间应用的频率）。
 
-#### Step 7.  
+#### 步骤 7.  
 
-Repeat Steps 2 through 5 for frequencies ranging from 0.5 Hz ~ 3.0 Hz.  
+对频率范围从 0.5 Hz ~ 3.0 Hz 的步骤 2 到 5 进行重复。  
 
 <br>
 
-After completing this process, you can check the arc sensing (delay table tracking gain) results on the forth tab of the weaving condition editing screen.
+完成此过程后，可以在编织条件编辑屏幕的第四个选项卡上检查弧感应（延迟表跟踪增益）的结果。
 
 
 ![](../../_assets/8_3_6.png)<br>
-*Figure 8.3.6. Arc Sensing Condition Tab(Tracking gain) Dialog Box*
+*图 8.3.6. 弧感应条件选项卡（跟踪增益）对话框*
 <br>
 
 
-At this time, the delay time value represents the degree of current lead or lag.
+此时，延迟时间值表示电流的提前或滞后程度。
 
 ![](../../_assets/8_3_6-2.png)<br>
-*Figure 8.3.6-2. Meaning of Arc Sensing Delay Time*
+*图 8.3.6-2. 弧感应延迟时间的意义*
 <br>
 
 
 {% hint style="info" %}
-  The delay time must be within the range of **-40 ~ +40**. The vertical and horizontal tracking gains (mm/A) are recommended to be set within the range of **0.2 ~ 0.5**.
+  延迟时间必须在 **-40 ~ +40** 的范围内。建议将垂直和水平跟踪增益（mm/A）设置在 **0.2 ~ 0.5** 的范围内。
 {% endhint %}
 
 {% hint style="info" %}
-  Once all weaving operations from from 0.5 Hz to 3.0 Hz have been performed, navigate to the "Auto Calib" option at the bottom left of the delay time table tab in the weaving command property window, and click "Apply" to apply all settings in bulk.
+  一旦从 0.5 Hz 到 3.0 Hz 的所有编织操作都已执行，请导航到编织命令属性窗口延迟时间表选项卡左下角的“自动校准”选项，并单击“应用”以批量应用所有设置。
 {% endhint %}
 
-Once the calibration process is completed, change the sensing sensitivity for both vertical/horizontal directions to 5 to enable the arc sensing function.
-
-
+校准过程完成后，将垂直/水平方向的感应灵敏度改为 5，以启用弧感应功能。
 [__SOURCE](8_Application_function/3_Arc_sensing/4_arcsen_command.md)
-# 8.3.4 Setting Weaving and Arc Sensing Conditions Using Commands
+# 8.3.4 使用命令设置编织和弧传感条件
 
-### (1) Necessity of Functionality
+### (1) 功能的必要性
 
-Weaving and arc sensing conditions cannot be automatically adjusted during operation. <br>
-Therefore, the conditions can be modified using commands, and the changes will only be effective within the specific weaving section.  
+编织和弧传感条件在操作期间无法自动调整。 <br>
+因此，可以使用命令修改条件，这些更改只对特定的编织部分有效。  
 
+### (2) 使用命令的方法  
 
-### (2) Method of Using Commands  
+要插入命令，请在手动模式下输入 `[F6: cmd input] - var_io - assignment`。然后，将光标移至左侧变量并选择 `[F3: System Variables] - arcweld - _weaving.{parameter}`，在这里您可以输入所需的值。 <br>
 
-To insert the command, enter `[F6: cmd input] - var_io - assignment` while in manual mode. Then, move the cursor to the left variable and select `[F3: System Variables] - arcweld - _weaving.{parameter}`, where you can input the desired value.  <br>
-
-The entered command will appear in the following format:  
+输入的命令将以以下格式出现：  
 ```e.g. _weaving.frequency=2.0```  
 
-
-- Example)
+- 示例)
 ```py
     weaving on, cnd=1	                # Weaving Command (cmd)
     arcon cnd=1
     move L,S=5mm/s,accu=1,tool=2
-    _weaving.right_distance = 4	        # Set the wall direction dist using a cmd
-    _weaving.left_distance = 3	        # Set the wall direction dist using a cmd
-    MOVE L,S=5mm/s,A=1,T=2	            # parameter will be modified starting from this section
+    _weaving.right_distance = 4	        # 使用命令设置墙壁方向距离
+    _weaving.left_distance = 3	        # 使用命令设置墙壁方向距离
+    MOVE L,S=5mm/s,A=1,T=2	            # 参数将从此部分开始修改
 ```
 
-The input values for each command are restricted within the range of condition settings defined in the condition file.  
-For parameters that are not explicitly specified by the command, the conditions set in the weaving command will be used.  
+每个命令的输入值限制在条件文件定义的条件设置范围内。  
+对于命令未明确指定的参数，将使用在编织命令中设置的条件。  
 
-The applicability of the settings for each element of _weaving to the functionality is as follows:  
+_weaving 的每个元素的设置对功能的适用性如下：  
 
 <br>
 
-| Variable Name | Immediately after Weaving Cmd | Weaving without Arc sensing | Weaving with Arc sensing | Continuous Change of Welding Conditions |
+| 变量名称 | 编织命令之后立即 | 没有弧传感的编织 | 具有弧传感的编织 | 持续变化焊接条件 |
 |-------|-------|-------|-------|-------|
 | weave | O | O | O | O |
 | frequency | O | O | O | O |
@@ -3278,122 +3019,100 @@ The applicability of the settings for each element of _weaving to the functional
 | asymetric_sensing_ratio | O | - | O | O |
 
 
-<!-- ### (3) 위빙 파라미터 명령어 종류 및 내용은 다음 링크를 참고해주세요.
+<!-- ### (3) 编织参数命令种类及内容请参考以下链接。
 
-[로봇언어 HRScript_weaving문](https://hrbook-hrc.web.app/#/view/doc-hrscript/ko/10-etc/3-sysvar/_weaving)   -->
+[机器人语言 HRScript_weaving文](https://hrbook-hrc.web.app/#/view/doc-hrscript/ko/10-etc/3-sysvar/_weaving)   -->
 
 
 
 <!-- 
-(2)에서 설명한 각 파라미터 종류와 설명은 
+(2)中说明的各参数种类和说明是 
 
-weave: 위빙 패턴
+weave: 编织模式
 
-frequency: 위빙 주파수
+frequency: 编织频率
 
-left_distance: 벽방향 거리
+left_distance: 墙壁方向距离
 
-right_distance: 타방향 거리
+right_distance: 另一方向距离
 
-angle: 기본패턴의 각도
+angle: 基本模式的角度
 
-wall_direction: 기본패턴의 벽방향
+wall_direction: 基本模式的墙壁方向
 
-forward_angle: 진행각도
+forward_angle: 前进角度
 
-boundary_limit: 경계제한 사용 여부
+boundary_limit: 是否使用边界限制
 
-segment_time_1: 이동시간 사용 시 각 구간의 시간
+segment_time_1: 使用移动时间时各区间的时间
 
-Dwesegment_delay_1: 이동시간 사용 시 위빙만 정지하는 시간
+segment_delay_1: 使用移动时间时编织仅停止的时间
 
-height_sensing_mode: 아크 센싱 중 상하센싱 실행방법
+height_sensing_mode: 弧传感中上下传感执行方法
 
-side_sensing_sensitivity: 좌우방향 아크 센싱 민감도
+side_sensing_sensitivity: 左右方向弧传感敏感度
 
-height_sensing_sensitivity: 상하방향 아크 센싱 민감도
+height_sensing_sensitivity: 上下方向弧传感敏感度
 
-BaseCur: 상하센싱 기준전류
+BaseCur: 上下传感基准电流
 
-이 값을 설정하여 토치와 모재간 거리를 설정할 수 있습니다. 
-토치와 모재의 거리를 더 멀리 하려면 이 값을 낮추십시오. 
-반대로 토치와 모재를 가까이 하려면 이 값을 높이십시오.
+此值设置可用于设置焊炬和工件之间的距离。 
+要使焊炬和工件之间的距离更远，请降低此值。 
+相反，要使焊炬和工件更近，请提高此值。
 
-StickOut: 아크 센싱 중 상하방향으로 토치를 이동시키기 위한 값. 입력된 mm만큼 토치 높이가 변경됩니다. +값 입력 시 토치와 모재간 거리가 멀어지고 -값 입력 시 토치가 모재와 가까워 집니다.
+StickOut: 在弧传感中上下方向移动焊炬的值。 输入的mm数量将改变焊炬高度。 输入正值时，焊炬和工件之间的距离变远，输入负值时，焊炬与工件之间的距离变近。
 
-asymetric_sensing_ratio: 좌우 비대칭 센싱 비율
+asymetric_sensing_ratio: 左右不对称传感比率
 
  -->
-
 [__SOURCE](8_Application_function/3_Arc_sensing/5_arcsen_monitoring.md)
-# 8.3.5 Arc Sensing Monitoring
+# 8.3.5 弧感测监控
 
-### (1) Monitoring Execution
+### (1) 监控执行
 
-By accessing `[pane layout] - select - arc sensing`, the Arc Sensing Monitoring window will be activated.
-This feature is only available when the Arc Sensing license is valid.
+通过访问 `[pane layout] - 选择 - 电弧传感 ([pane layout] - select - arc sensing)`，将激活弧感测监控窗口。
+此功能仅在弧感测许可证有效时可用。
 
-
-### (2)	Explanation of Monitoring Items
+### (2) 监控项目说明
 
 ![](../../_assets/8_3_7.png)<br>
-*Figure 8.3.7 Arc Sensing Monitoring*
+*图 8.3.7 弧感测监控*
 
-- Left/Right Tracking: Displays the left and right distance to be corrected, calculated based on the tracking speed, distance, and current diffrential in the left-right direction by sensing.
+- 左/右跟踪：基于跟踪速度、距离和左右方向的当前差分，通过感测显示需要修正的左右距离。
 
-- Up/Down Tracking: Displays the up and down distance to be corrected, calculated based on the tracking speed, distance, and welding seam in the up-down direction by sensing.
+- 上/下跟踪：基于跟踪速度、距离和焊接缝的上下方向，通过感测显示需要修正的上下距离。
 
-- XYZ Tracking: Displays the distance tracked so far compared to the original trajectory, in terms of the Base coordinate system's X, Y, and Z directions.
-
-
-<!-- 센싱 데이터
-
-- BC: 상하방향 센싱 기준 전류
-- CC: 상하방향 센싱 용 현재 구간의 중앙 부분 전류.
-- LR: 현재 구간의 위빙 끝 영역 전류
-- WC: 용접기의 용접 전류
-- Mode: 현재 적용 중인 지연시간, 모드 번호
-
-상하방향 기준전류는 사용자가 입력하거나 용접 시작 영역에서 중앙 부분 전류를 일정 구간 동안 평균한 값으로 설정합니다.
-상하방향의 센싱은 기준전류와 현재 측정 전류를 차이를 이용하여 보정할 상하방향 거리를 계산합니다. 따라서 기준 전류를 높이면 토치와 모재가 가까워지고 기준 전류를 낮추면 토치와 모재가 멀어집니다.
-
-위빙 데이터: 현재 위빙폭, 위빙 주파수, 지연시간, 모드 번호를 표시합니다.
-
-멀티패스: 저장된 멀티패스 데이터의 현재/전체 카운트, 시프트 거리, 각도를 표시합니다. -->
-
-
+- XYZ 跟踪：与原始轨迹相比，显示到目前为止跟踪的距离，以基坐标系统的 X、Y 和 Z 方向表示。
 [__SOURCE](8_Application_function/3_Arc_sensing/6_multipass_overview.md)
-# 8.3.6 Multi-pass Overview
+# 8.3.6 多道焊接概述
 
-The multi-pass welding feature is used when the required weld length in thick plate arc welding is too wide to be completed in a single pass, or when the volume to be filled by welding is too large, requiring multiple welding passes.  
+多道焊接功能用于厚板弧焊时，当所需的焊接长度太宽，无法在一个焊道中完成，或者焊接需要填充的体积太大，需进行多次焊接。
 
-Due to the inherent characteristics of arc sensing, the sensing may be unstable except for the root pass, which is the first layer.
-Therefore, only the root pass is tracked using arc sensing.
-The trajectory of this pass is tehn saved, and the stored trajectory is shifted to create passes for the second layer and beyond.  
+由于弧感应的固有特性，除了根焊道（即第一层）外，感应可能不稳定。因此，仅跟踪根焊道的弧感应。该焊道的轨迹随后被保存，存储的轨迹被移动以创建第二层及更高层的焊道。
 
-Since the position of the multi-pass work program is the same as that of the root pass trajectory, it is easy to perform multi-pass welding by simply copying the root pass work program and inserting the multi-pass command.
+由于多道焊接工作程序的位置与根焊道轨迹相同，因此只需复制根焊道工作程序并插入多道焊接命令即可轻松执行多道焊接。
 
 
 ![](../../_assets/8_3_8.png)<br>
-*Figure 8.3.8 Root Pass Arc sensing (left) and Multi-pass welding for 2-3 layers*
+*图 8.3.8 根焊道弧感应（左）和 2-3 层的多道焊接*
 
 ![](../../_assets/8_3_9.png)<br>
-*Figure 8.3.9 Actual Multi-Pass Welding*
+*图 8.3.9 实际多道焊接*
 
-When creating multi-pass beads in a stacked, inclined configuration as shown in Figure 2 above, welding can be performed by modifying only the start and end points of the weld and slightly shifting them.  
-This will result in a stacked configuration as shown below.
+当按上面图 2 所示的叠放倾斜配置创建多道焊缝时，可以通过仅修改焊接的起始点和结束点并稍微偏移它们来进行焊接。  
+这将产生如下所示的重叠配置。
 
 
 ![](../../_assets/8_3_10.png)<br>
-*Figure 8.3.10 Multi-pass Stacked Shape with Inclination*
+*图 8.3.10 带倾斜的多道叠加形状*
 [__SOURCE](8_Application_function/3_Arc_sensing/7_multipass_command.md)
-# 8.3.7 Multi-pass Command
+# 8.3.7 多遍命令
 
 
-### (1) Command
+### (1) 命令
 
-The sensing trajectory can be saved and loaded using the multipass command. 
-This command can be used in three different forms:
+感应轨迹可以使用多遍命令进行保存和加载。 
+该命令可以以三种不同形式使用：
 <br>
 
 ```py
@@ -3402,343 +3121,297 @@ This command can be used in three different forms:
     multipass off
 ```
 
-### (2) Multi-pass Parameters
+### (2) 多遍参数
 
-For detailed information on the multi-pass command parameters, please refer to the following link: <br>
+有关多遍命令参数的详细信息，请参考以下链接: <br>
 [2.11 multipass](../../2_Command/11_multipass.md)
 
 <br>
 
-This section will explain only the following two items:  
+本节将仅解释以下两个项目：  
 
 
-- Left-Right/Up-Down Shift
+- 左右/上下偏移
 
-This sets the distance by which the trajectory is shifted from the original path during multipass reproduction.
-Since the torch weaving is perpendicular to the tool, each shift is set as follows:
-the left/right direction becomes the weaving plane, and the up/down direction becomes the plane perpendicular to the weaving plane.
+这设置了在多遍重现过程中轨迹从原始路径偏移的距离。
+由于喷嘴编织与工具垂直，因此每个偏移设置如下：
+左/右方向成为编织平面，而上下方向成为与编织平面垂直的平面。
 
 ![](../../_assets/8_3_11.png)<br>
-*Figure 8.3.11 Multipass Shift Direction*
+*图 8.3.11 多遍偏移方向*
 
 
-- Angle Shift: TAS, WAS  
+- 角度偏移：TAS, WAS  
 
-When performing multi-pass welding, the torch must be tilted for quality control. This setting is used to define the required tilt.
-The concept of angles for each item is illusatrated in the following figures:  
+在进行多遍焊接时，喷嘴必须倾斜以进行质量控制。此设置用于定义所需的倾斜。
+每个项目的角度概念在以下图中阐明：  
 
 ![](../../_assets/8_3_12.png)<br>
-*Figure 8.3.12 Multipass Angle Shift Concept*
-
+*图 8.3.12 多遍角度偏移概念*
 [__SOURCE](8_Application_function/3_Arc_sensing/8_example_fillet.md)
-# 8.3.8 Fillet Welding Example Using Touch Sensing and Arc Sensing
+# 8.3.8 钢焊接示例使用触觉传感和电弧传感
 
-In general, the Arc Sensing function is used together with the touch sensing function. Touch sensing is used to accurately detect the welding start and end positions, while arc sensing is used to determine the correct welding direciton during movement after welding has started.  
+一般来说，电弧传感功能与触觉传感功能一起使用。触觉传感用于准确检测焊接的起始和结束位置，而电弧传感用于在焊接开始后确定正确的焊接方向。
 
-The first example demonstrates a basic fillet welding operation.
+第一个示例演示了基本的钢焊接操作。
 
-The work sequence is as follows:
+工作顺序如下：
 
-1) Set the weaving conditions, arc sensing conditions, and welding conditions.  
-2) Use touch sensing to search for the welding start position.
-3) Move to a position near the welding end area, and then use touch sensing to search for the welding end position.
-4) Perform the welding operation from the welding start position using the weaving command and the arc welding command.
-
+1) 设置摆动条件、电弧传感条件和焊接条件。  
+2) 使用触觉传感搜索焊接起始位置。  
+3) 移动到接近焊接结束区域的位置，然后使用触觉传感搜索焊接结束位置。  
+4) 从焊接起始位置执行焊接操作，使用摆动命令和电弧焊接命令。  
 
 ![](../../_assets/8_3_13.png)<br>
-*Figure 8.3.13 Fillet Touch Sensing and Arc Sensing*
+*图 8.3.13 钢焊接触觉传感和电弧传感*  
 
+示例程序如下所示。
 
-The example program is shown below.
-
-~~~~~~~Arc sensing program : 0001.JOB~~~~~~~~~~~~~~~ 
-' Arc sensing program  
-S1   move P,spd=60%,accu=3,tool=1              ' 1: Motion start point  
-S2   move L,spd=30%,accu=3,tool=1              ' 2: Touch sensing position for welding end point  
+~~~~~~~电弧传感程序 : 0001.JOB~~~~~~~~~~~~~~~  
+' 电弧传感程序  
+S1   move P,spd=60%,accu=3,tool=1              ' 1: 运动起始点  
+S2   move L,spd=30%,accu=3,tool=1              ' 2: 焊接结束点的触觉传感位置  
      var p10=cpo()  
      var p1=cpo()  
-     touchsen cnd=1,crd="robot", dir=["x","-z"], pose=p10   ' 3: Touch sensing for welding end point. Position stored in P10  
-S3   move L,spd=30%,accu=3,tool=1              ' 4: Touch sensing position for welding start point  
-     touchsen cnd=1,crd="robot",dir=["-x","-z"], pose=p1    ' 5: Touch sensing for welding start point. Position stored in P1  
-S4   move L,p1,spd=20%,accu=3,tool=1            ' 6: Move to welding start point  
-     weaving on, cnd=1                          ' 7: Start weaving and arc sensing  
-     arcon cnd=1                                ' 8: Start welding  
-S5   move L,p10,spd=60cm/min,accu=3,tool=1      ' 9: Move to welding end point  
-     arcoff                                     '10: End welding  
-     weaving off                                '11: End weaving and arc sensing  
-S6   move P,spd=60%,accu=3,tool=1               '12: Motion end point  
+     touchsen cnd=1,crd="robot", dir=["x","-z"], pose=p10   ' 3: 焊接结束点的触觉传感。位置存储在 P10  
+S3   move L,spd=30%,accu=3,tool=1              ' 4: 焊接起始点的触觉传感位置  
+     touchsen cnd=1,crd="robot",dir=["-x","-z"], pose=p1    ' 5: 焊接起始点的触觉传感。位置存储在 P1  
+S4   move L,p1,spd=20%,accu=3,tool=1            ' 6: 移动到焊接起始点  
+     weaving on, cnd=1                          ' 7: 开始摆动和电弧传感  
+     arcon cnd=1                                ' 8: 开始焊接  
+S5   move L,p10,spd=60cm/min,accu=3,tool=1      ' 9: 移动到焊接结束点  
+     arcoff                                     '10: 结束焊接  
+     weaving off                                '11: 结束摆动和电弧传感  
+S6   move P,spd=60%,accu=3,tool=1               '12: 运动结束点  
      END  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 [__SOURCE](8_Application_function/3_Arc_sensing/9_example_butt_gap.md)
-# 8.3.9 Arc Sensing Example : Automatic Weaving Width Setting Using Touch Sensing
+# 8.3.9 弧传感示例：使用触觉传感设置自动织造宽度
 
-
-Create a single job program that can be applied to both workpieces shown below.
+创建一个适用于下面显示的两个工件的单个作业程序。
 
 ![](../../_assets/8_3_14.png)<br>
-*Figure 8.3.14 Butt Joint Workpieces for Touch Sensing and Arc Sensing*
+*图 8.3.14 触觉传感和弧传感的对接接头工件*
 
-Assumed Operating Conditions  
+假定操作条件  
 
-- A process that welds the joint between two workpieces, 180° planar weaving, 
-- Welding travel direction: X+. Touch sensing is performed left and right along the Y direction.
-- Arc Sensing parameter settings are assumed to have been completed in advance.
-- When the gap is 4.0 mm, the welding speed is 7.0mm/sec
-- When the gap is 8.0 mm, the welding speed is 3.5mm/sec
+- 焊接两个工件之间的接头的过程，180° 平面织造，
+- 焊接行程方向：X+。在 Y 方向上进行左右触觉传感。
+- 弧传感参数设置假定已提前完成。
+- 当间隙为 4.0 mm 时，焊接速度为 7.0mm/sec
+- 当间隙为 8.0 mm 时，焊接速度为 3.5mm/sec
 
-The work sequence is as follows:
+工作顺序如下：
 
-1) Using the touch sensing command, measure the weld center position and the gap distance at **the end point** of the butt joint.
-2) Using the touch sensing command, measure the weld center position and the gap distance at **the start point** of the butt joint.
-3) Check whether the gap_var value is within the allowable range. Stop the robot if the gap is outside 2.0 mm to 10.0 mm.
-4) Set half of the measured gap distance as the weaving offset for each side: left (wall side) and right (opposite side).
-5) Calculate the welding speed by interpolation using the speeds at 4.0 mm and 8.0 mm gap. If the gap is less than 4.0 mm, apply a fixed speed of 7.0 mm/s. If the gap exceeds 8.0 mm, apply a fixed speed of 4.0 mm/s.
-6) Automatically apply the calculated weaving width and welding travel speed, and then perform the welding operation.
-7) After completing the operation, return to the original start position.
-
+1) 使用触觉传感命令，在对接接头的 **终点** 处测量焊接中心位置和间隙距离。
+2) 使用触觉传感命令，在对接接头的 **起点** 处测量焊接中心位置和间隙距离。
+3) 检查 gap_var 值是否在允许范围内。如果间隙在 2.0 mm 到 10.0 mm 之外，停止机器人。
+4) 将测得的间隙距离的一半设置为每侧的织造偏移：左侧（墙侧）和右侧（对侧）。
+5) 根据 4.0 mm 和 8.0 mm 间隙处的速度通过插值计算焊接速度。如果间隙小于 4.0 mm，应用固定速度 7.0 mm/s。如果间隙超过 8.0 mm，应用固定速度 4.0 mm/s。
+6) 自动应用计算出的织造宽度和焊接行程速度，然后进行焊接操作。
+7) 操作完成后，返回原始起始位置。
 
 ![](../../_assets/8_3_15.png)<br>
-*Figure 8.3.15 Butt Joint Touch Sensing and Arc Sensing*
+*图 8.3.15 对接接头触觉传感和弧传感*
 
-The example program is shown below.
+示例程序如下所示。
 
-~~~~~~~Arc sensing program: 0002.JOB~~~~~~~~~~~~~~~ 
-     ' Butt joint arc sensing program 
-     ' Condition No. 1: start condition, Condition No. 10: end condition
-S1   move P,spd=60%,accu=3,tool=1              ' 1: Motion start point  
-S2   move L,spd=30%,accu=3,tool=1              ' 2: Touch sensing position for welding end point  
+~~~~~~~弧传感程序: 0002.JOB~~~~~~~~~~~~~~~ 
+     ' 对接接头弧传感程序 
+     ' 条件 No. 1: 起始条件，条件 No. 10: 结束条件
+S1   move P,spd=60%,accu=3,tool=1              ' 1: 动作起点  
+S2   move L,spd=30%,accu=3,tool=1              ' 2: 焊接终点的触觉传感位置  
      var p10=cpo()  
      var p1=cpo()  
      var gap_var1=0  
      var gap_var11=0  
      touchsen cnd=2,crd="tool",dir="+ty",lift_up=5,pose=p10,gap=gap_var11  
-                                                ' 3: Touch sensing for welding end point. Position stored in P10  
-S3   move L,spd=30%,accu=3,tool=1              ' 4: Touch sensing position for welding start point  
+                                                ' 3: 焊接终点的触觉传感。位置存储在 P10  
+S3   move L,spd=30%,accu=3,tool=1              ' 4: 焊接起点的触觉传感位置  
      touchsen cnd=3,crd="+ty",lift_up=5,pose=p1,gap=gap_var1  
-                                                ' 5: Touch sensing for welding start point. Position stored in P1  
+                                                ' 5: 焊接起点的触觉传感。位置存储在 P1  
 
-     ' Calculate welding speed and weaving width according to gap at the start point  
+     ' 根据起点的间隙计算焊接速度和织造宽度  
      var V3=0  
-     IF gap_var1<2.0 OR gap_var1>10.0 THEN      ' Gap out of allowable range  
+     IF gap_var1<2.0 OR gap_var1>10.0 THEN      ' 间隙超出允许范围  
      GOTO *Error  
-     ELSEIF gap_var1<4.0 THEN                   ' If gap ≤ 4 mm, fix speed to 7 mm/s  
-     V3=7.0                                     ' Welding speed at start  
-     ELSEIF gap_var1>8.0 THEN                   ' If gap ≥ 8 mm, fix speed to 4 mm/s  
-     V3=4.0                                     ' Welding speed at start  
-     ELSE                                       ' Linear interpolation for gap range 4-8 mm  
-     V3=(7-3.5)/(4-8)*gap_var1+10.5             ' Linearly interpolated welding speed at start  
+     ELSEIF gap_var1<4.0 THEN                   ' 如果间隙 ≤ 4 mm，则固定速度为 7 mm/s  
+     V3=7.0                                     ' 起始焊接速度  
+     ELSEIF gap_var1>8.0 THEN                   ' 如果间隙 ≥ 8 mm，则固定速度为 4 mm/s  
+     V3=4.0                                     ' 起始焊接速度  
+     ELSE                                       ' 对于间隙范围 4-8 mm 的线性插值  
+     V3=(7-3.5)/(4-8)*gap_var1+10.5             ' 起始焊接速度的线性插值  
      ENDIF  
 
-     var V4=gap_var1/2.0                        ' Left-side weaving width (half of gap)  
-     var V5=gap_var1/2.0                        ' Right-side weaving width (half of gap)  
+     var V4=gap_var1/2.0                        ' 左侧织造宽度（间隙的一半）  
+     var V5=gap_var1/2.0                        ' 右侧织造宽度（间隙的一半）  
 
      '--------------------------------------------------------  
-     ' Calculate welding speed and weaving width according to gap at the end point  
+     ' 根据终点的间隙计算焊接速度和织造宽度  
      var V13=0  
-     IF gap_var11<2.0 OR gap_var11>10.0 THEN    ' Gap out of allowable range  
+     IF gap_var11<2.0 OR gap_var11>10.0 THEN    ' 间隙超出允许范围  
      GOTO *Error  
-     ELSEIF gap_var11<4.0 THEN                  ' If gap ≤ 4 mm, fix speed to 7 mm/s  
-     V13=7.0                                    ' Welding speed at end  
-     ELSEIF gap_var11>8.0 THEN                  ' If gap ≥ 8 mm, fix speed to 4 mm/s  
-     V13=4.0                                    ' Welding speed at end  
-     ELSE                                       ' Linear interpolation for gap range 4-8 mm  
-     V13=(7-3.5)/(4-8)*gap_var11+10.5           ' Linearly interpolated welding speed at end  
+     ELSEIF gap_var11<4.0 THEN                  ' 如果间隙 ≤ 4 mm，则固定速度为 7 mm/s  
+     V13=7.0                                    ' 结束时的焊接速度  
+     ELSEIF gap_var11>8.0 THEN                  ' 如果间隙 ≥ 8 mm，则固定速度为 4 mm/s  
+     V13=4.0                                    ' 结束时的焊接速度  
+     ELSE                                       ' 对于间隙范围 4-8 mm 的线性插值  
+     V13=(7-3.5)/(4-8)*gap_var11+10.5           ' 结束时的焊接速度的线性插值  
      ENDIF  
 
-     var V14=gap_var11/2.0                      ' Left-side weaving width  
-     var V15=gap_var11/2.0                      ' Right-side weaving width  
+     var V14=gap_var11/2.0                      ' 左侧织造宽度  
+     var V15=gap_var11/2.0                      ' 右侧织造宽度  
 
      '---------------------------------------------------------  
-S4   move L,1,S=20%,A=3,T=1                     ' 6: Move to welding start point  
-     weaving on, cnd=2                          ' 7: Start weaving and arc sensing  
-     arcon cnd=2                                ' 8: Start welding  
-     arc_cond L,spd=V3,ld=V4,rd=V5,freq=2       ' 9: Continuous change of welding parameters (start)  
+S4   move L,1,S=20%,A=3,T=1                     ' 6: 移动到焊接起点  
+     weaving on, cnd=2                          ' 7: 开始织造和弧传感  
+     arcon cnd=2                                ' 8: 开始焊接  
+     arc_cond L,spd=V3,ld=V4,rd=V5,freq=2       ' 9: 焊接参数的连续变化（开始）  
 
-S5   move L,p10,spd=60cm/min,accu=3,tool=1      '10: Move to welding end point  
-     arc_cond L,spd=V13,ld=V14,rd=V15,freq=2    '11: Continuous change of welding parameters (end)  
-     arcoff                                     '12: End welding  
-     weaving off                                '13: End weaving and arc sensing  
+S5   move L,p10,spd=60cm/min,accu=3,tool=1      '10: 移动到焊接终点  
+     arc_cond L,spd=V13,ld=V14,rd=V15,freq=2    '11: 焊接参数的连续变化（结束）  
+     arcoff                                     '12: 结束焊接  
+     weaving off                                '13: 结束织造和弧传感  
 
-S6   move P,spd=60%,accu=3,tool=1               '14: Motion end point  
+S6   move P,spd=60%,accu=3,tool=1               '14: 动作终点  
      END  
 
-     *Error                                     '15: Escape routine when gap is out of range  
-     DO200=1                                   '16: Output signal to indicate error  
-     STOP                                      '17: Stop robot  
+     *Error                                     '15: 间隙超出范围时的逃生例程  
+     DO200=1                                   '16: 输出信号指示错误  
+     STOP                                      '17: 停止机器人  
      END  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 [__SOURCE](8_Application_function/4_Height_sensing/README.md)
-# 8.4 Height Sensing
+# 8.4 高度感应
 
+此功能用于机器人工具需要与工件保持恒定距离的情况，例如 TIG 焊接。在 TIG 焊接中，高度与弧长成正比，这就是为什么此功能被称为弧电压控制（Arc Voltage Control，AVC）。与工件的距离由传感器输入的模拟电压、焊接机检测到的弧长修正参数，以及焊接电流或电压值进行调整。
 
-This function is used in cases where the robot tool needs to maintain a constant distance from the workpiece, such as TIG welding. In TIG welding, the height is proportional to the arc length, which is why this function is called Arc Voltage Control(AVC). The distance from the workpiece is adjusted by the analog voltage input from the sensor, a correction parameter for the Arc length detected by the welder, and the welding current or voltage values.
+<!-- 本功能的使用需要将感应功能的数据输入设置为“有效”。 
+有关感应功能的数据输入设置的详细信息，请参考“1.3 弧焊应用条件设置”。 -- ???? -->
 
-<!-- 본 기능의 사용을 위해서는 센싱 기능을 위한 데이터 입력 설정을 '유효'로 선택해야 합니다.
-센싱 기능을 위한 데이터 입력 설정의 세부 내용은 '1.3 Arc 용접 응용 조건 설정'을 참고하여 주십시오.  -- ???? -->
+一旦感应功能输入数据的设置完成，可以通过以下过程使用高度感应功能。
 
-Once the setup for the sensing function input data is complete, the height sensing function can be used through the following procedure.
+### (1) 命令
 
-### (1) Command
+要启动高度感应，使用命令 `height on, cnd=1`。
+命令后面跟着条件编号。共有 8 种高度感应条件。
+要停止高度感应，使用命令 `height off`。
+停止命令不需要任何额外的参数。
 
-To start height sensing, use the command `height on, cnd=1`.
-The command is followed by the condition number. There are a total of 8 height sensing conditions.
-To stop height sensing, use the command `height off`.
-The stop command does not require any additional arguments.
-
-An example of a job program with height sensing commands is as follows:
+带有高度感应命令的作业程序示例如下：
 
 ```python
     S1   move L,spd=100%,accu=1,tool=0
     S2   move L,spd=20%,accu=1,tool=0
     S3   move L,spd=100mm/s,accu=1,tool=0
-         heightsen on, cnd=1		  # Start height sensing
-         arcon cnd=2		       # Start Arc welding
+         heightsen on, cnd=1		  # 启动高度感应
+         arcon cnd=2		       # 启动弧焊接
     S4   move L,spd=10mm/s,accu=1,tool=0
-         arcoff			       # End Arc welding
-         heigghtsen off			  # End height sensing
+         arcoff			       # 结束弧焊接
+         heigghtsen off			  # 结束高度感应
     S5   move L,spd=20%,accu=1,tool=0
          END 
 ```
 
-### (2) Height Sensing Function Operation Sequence
+### (2) 高度感应功能操作顺序
 
-Height sensing begins after the ```arcon``` command is executed. Since the current and voltage are typically unstable at the start of welding, the input data is ignored until they stabilize.
-Once the input data stabilizes, the average is calculated based on the method of setting the reference data. If the user manually enters the reference data, height sensing is performed immediately.  
+高度感应在执行 ```arcon``` 命令后开始。由于电流和电压在焊接开始时通常不稳定，因此在其稳定之前，输入数据将被忽略。
+一旦输入数据稳定，就根据设置参考数据的方法计算平均值。如果用户手动输入参考数据，则立即进行高度感应。
 
-The opration sequence of height sensing is as follows:
+高度感应的操作顺序如下：
 
 <p align="center">
   <img src="../../_assets/8_4_1.png" width="50%"></img>
-  <em><p align="center">Figure 8.4.1. Height Sensing Function Operation Sequence</p></em>
+  <em><p align="center">图 8.4.1. 高度感应功能操作顺序</p></em>
 </p>
-
-
 [__SOURCE](8_Application_function/4_Height_sensing/1_hsen_condition.md)
-# 8.4.1 Height Sensing Condition
+# 8.4.1 高度传感条件
 
+按下 **[Property]** 键在 `heightsen` 命令中访问 "高度传感条件" 设置屏幕。条件设置屏幕如下所示。
 
-Press the **[Property]** key in the `heightsen` command to access the "Heigth Sensing Condition" settings screen. The condition settings screen is shown below.
- 
 ![](../../_assets/8_4_2.png)<br>
-*Figure 8.4.2. Height Sensing Condition Dialog Box*
+*图 8.4.2. 高度传感条件对话框*
 
 ---
 
-Each item's settings and operations are as follows:
+每个项目的设置和操作如下：
 
-### (1) Condition Number: [1 ~ 8]
+### (1) 条件编号: [1 ~ 8]
 
-Set the height sensing condition number.
+设置高度传感条件编号。
 
+### (2) 输入数据类型
 
-### (2) Type of Input Data
+显示输入数据的类型。对于 GMAW，使用焊接电流，而对于 TIG 焊接，使用焊接电压。
 
-Displays the type of input data. For GMAW, welding current is used, while for TIG welding, welding voltage is used.
+### (3) 参考数据设置: <平均输入数据, 用户输入数据>
 
+选择设置参考数据的方法。
+- 平均输入数据 : 根据传感初始参考数据的平均值设置参考数据。
+- 用户输入数据 : 允许用户直接输入参考数据。
 
-### (3) Reference Data Setting: <Average Input Data, User Input Data>
+### (4) 输入数据忽略时间: [0.0 ~ 5.0]
 
-Choose the method for setting the reference data.
-- Average Input Data : Set the reference data based on the average value of the sensing initial reference data.
-- User Input Data : Allow the user to directly enter the reference data.
+在不稳定的初始焊接状态下忽略信号的时间。
+如果使用 "平均输入数据" 设置参考数据，则使用此时间计算指定时间内的参考值。
+如果使用 "用户输入数据"，高度传感立即开始。
 
+### (5) 输入数据平均时间: [0.5 ~ 10.0]
 
-### (4) Input Data Ignore Time: [0.0 ~ 5.0]
+设置平均输入数据以计算传感参考数据的时间。
+当选择 "平均输入数据" 作为参考数据设置方法时，此项目将出现。
+（如果准确的参考高度尚未确定）
 
-The time to ignore signals during the unstable initial welding state.
-If setting reference data with "Average Input Data", this time is used to calculate the reference value using the average over the specified time.
-If using "User Input data", height sensing begins immediately.
+### (6) 参考数据设置: [-500.0 ~ 500.0]
 
+这是用户直接输入高度传感参考值的项目。当选择 "用户输入数据" 设置参考数据时，此项目将出现。
 
-### (5) Input Data Average Time: [0.5 ~ 10.0]
+### (7) 传感系数: [-100.0 ~ 100.0]
 
-Set the time to average the input data to calculate the sensing reference data.
-This item appears when "Average Input Data" is selected for the reference data setting method.
-(if the accurate reference height is not yet determined)
+这是与输入数据差异对应的距离系数。较小的值会导致跟踪更平滑，对输入数据的响应较小，而较大的值会增加跟踪速度，但可能导致沿轨迹的振荡。
 
+### (8) 跟踪速度限制: [0.1 ~ 10.0]
 
-### (6) Reference Data Setting: [-500.0 ~ 500.0]
+根据传感设置每秒的最大跟踪值。较小的值导致跟踪更平滑，而较大的值加快跟踪。
 
-This is the item where the user directly enters the height sensing reference value. This item appears when "User Input Data" is selected for setting the reference data.
+<!-- ### (10) 噪声敏感度  
+    设置输入数据的噪声敏感度。如果被禁用，则为不支持的版本。 -->
 
+### (9) 跟踪限制距离: [-300.0 ~ 0.0] ~ [0.0 ~ 200.0]
 
-### (7) Sensing Coefficient: [-100.0 ~ 100.0]
+设置高度传感的总跟踪距离限制。
 
-This is the distance coefficient corresponding to the difference in the input data. A smaller value results in smoother tracking with less responsiveness to input data, while a larger value increases tracking speed but may cause oscillations along the trajectory.
+### (10) 误差的积分系数: [0.00 ~ 10.00]
 
-
-### (8) Tracking Speed Limit: [0.1 ~ 10.0]
-
-This sets the maximum tracking value per second based on sensing. A smaller value results in smoother tracking, while a larger value speeds up tracking.
-
-
-<!-- ### (10) 노이즈 민감도  
-    입력 데이터의 노이즈에 대한 민감도를 설정합니다. 비활성화 되어 있는 경우 지원하지 않는 버전입니다. -->
-
-### (9) Tracking Limit Distance: [-300.0 ~ 0.0] ~ [0.0 ~ 200.0]
-
-This sets the total tracking distance limit for height sensing.
-
-
-### (10) Integral Coefficient for Error: [0.00 ~ 10.00]
-
-This sets the correction amount for continuous error values in height sensing performance.
-Setting a value greater than 0 improves tracking performance, but if the value is too large, oscillations in the trajectory may occur.
-Start with a very small value and gradually adjust it to an appropriate setting for the field.
-
-
-<!-- 
-### (12) 초기 기준 데이터: [-500.0 ~ 500.0]
-    용접 초반에 별도의 기준 데이터를 적용하려고 할 때 설정합니다. 입력 데이터 무시 시간이 지난 후 '초기설정된 시기준 데이터 적용 시간'에서 설정된 시간동안 이 기준 데이터를 이용하여 높이 센싱이 수행됩니다.
-
-### (13) 초기 기준 데이터 적용 시간: [0.0 ~ 10.0]  
-    초기 기준 데이터로 높이 센싱을 수행할 시간을 설정합니다. 이 시간이 지난 후에는 '기준 데이터 설정' 항목에서 입력한 데이터로 높이센싱이 수행됩니다.
-
-### (14) 입력 데이터 평균 시간: [0.5 ~ 10.0]  
-    기준데이터 설정방법이 Average input data(입력데이터 평균)인 경우 표시되는 항목입니다. 입력 무시시간이 지난 후 기준데이터 계산을 위해 입력데이터를 평균하는 시간입니다.
-
-### (15) 기준 데이터 설정: [-500 ~ 500]  
-    기준데이터 설정방법이 User input data(사용자 입력데이터)인 경우 표시되는 항목입니다. 입력 무시시간이 지난 후 기준데이터 계산을 위해 입력데이터를 평균하는 시간입니다.
-
-### (16) 높이 센싱 계수: [-100.0 ~ 100.0]  
-    데이터 추종량을 계산하는데 사용하는 센싱 계수를 설정합니다. 이 값이 크면 보정할 거리가 증가하므로 추종 속도가 증가하고 진동이 발생할 수 있습니다. 이 값이 작으면 추종 속도가 감소하지만 진동이 작아집니다. 
-    이 값이 0으로 설정되면 높이센싱기능이 동작하지만 위치추종은 수행하지 않고 데이터만 입력 받습니다. 센싱을 위한 기준데이터를 얻기 위한 경우 사용하십시오.
-
-### (17) 센싱에 의한 추종속도 제한치: [0.001 ~ 5.0]  
-    초당 추종 거리 제한치를 설정합니다. 이 값은 로봇의 급격한 추종을 제한하기 위하여 설정합니다. 이 값이 크면 추종 속도가 증가하고 진동이 발생할 수 있습니다. 이 값이 작으면 로봇의 추종가능 거리가 감소하지만 진동이 작아집니다. 
-
-### (18) 높이 센싱 범위: [-300.0 ~ 0.0], [0.0 ~ 200.0]  
-    높이센싱의 총 추종거리 제한치를 설정합니다. -->
-
+设置高度传感性能中连续误差值的修正量。
+设置大于 0 的值可改善跟踪性能，但如果值过大，可能会导致轨迹振荡。
+从非常小的值开始，逐渐调整到适合现场的设置。
 [__SOURCE](8_Application_function/5_LVS_tracking/README.md)
-# 8.5 LVS(Laser Vision Sensor) Seam Finding and Tracking
-
+# 8.5 LVS(激光视觉传感器)缝合查找与追踪
 [__SOURCE](8_Application_function/5_LVS_tracking/1_overall.md)
-# 8.5.1 LVS Overview and Specifications
+# 8.5.1 LVS 概述与规格
 
 {% hint style="info" %}
-This feature is available during from version 60.30-03.
+该功能在版本 60.30-03 中可用。
 {% endhint %}
 
-This function performs real-time compensation for workpiece and jig errors by recognize the welding seam using an LVS(Laser Vision Sensor), thereby enabling seam tracking during welding.
+该功能通过使用 LVS（激光视觉传感器）识别焊缝，实现对工件和夹具误差的实时补偿，从而在焊接过程中进行焊缝追踪。
 
-The LVS must be directly connected to the robot's flange. The sensor detects the welding seam, and the robot's tool tracks the seam in real-time.
+LVS 必须直接连接到机器人的法兰。传感器检测焊缝，机器人的工具实时跟踪焊缝。
 
-In other words, through seam tracking, welding can still be performed even if the position of the welding target changes and deviates from the original reference points.
+换句话说，通过焊缝追踪，即使焊接目标的位置发生变化并偏离原始参考点，焊接仍然可以进行。
 
 
 ![](../../_assets/8_5_1.png)<br>
-*Figure 8.5.1. LVS Seam Tracking Flowchart*
+*图 8.5.1. LVS 焊缝追踪流程图*
 
 </br>
 
-#### Command
+#### 命令
 
-The LVS Seam Finding and Tracking function is executed through the `lvs` command, which can be entered by selecting `[F6: cmd. input] - arcweld - lvs` in the TP.
+LVS 焊缝寻找到追踪功能通过 `lvs` 命令执行，可以通过选择 `[F6: cmd. input] - arcweld - lvs` 来输入。
 
-The structure of the command is as follows:
+命令的结构如下：
 
 ```python
 lvs <function argument> cnd=<condition Number>, seam=<profile number to be sensed position>, sp=<pose variable of the sensed position>, mp=<pose variable of the master reference>, ms=<shift variable of the current sensing position relative to the master>
@@ -3747,9 +3420,9 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
 <table>
   <thead>
     <tr>
-      <th>Major Category</th>
-      <th>Sub Category</th>
-      <th>Meaning</th>
+      <th>主要类别</th>
+      <th>子类别</th>
+      <th>含义</th>
     </tr>
   </thead>
   <tbody>
@@ -3758,340 +3431,338 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
     </tr>
     <tr>
       <td style="text-align:left">laser_on</td>
-      <td style="text-align:left">Turn on the laser.</td>
+      <td style="text-align:left">打开激光。</td>
     </tr>
     <tr>
       <td style="text-align:left">laser_off</td>
-      <td style="text-align:left">Turn off the laser.</td>
+      <td style="text-align:left">关闭激光。</td>
     </tr>
     <tr>
       <td style="text-align:left">seam_find</td>
       <td style="text-align:left">
-        The seam position of the laser currently being sensed by the sensor is stored in the pose variable specified by the 'sp' argument of the command (robot/base coordinate system). <br>
-        Note that the orientation(RX, RY, RZ) is recorded as the tool's orientation at the time the command is executed.
+        传感器当前正在感知的激光焊缝位置被存储在命令的 'sp' 参数指定的位姿变量中（机器人/基坐标系）。 <br>
+        请注意，方向 (RX, RY, RZ) 在执行命令时记录为工具的方向。
       </td>
     </tr>
     <tr>
       <td style="text-align:left">seam_find_p</td>
       <td style="text-align:left">
-        The seam position of the laser currently being sensed by the sensor is stored in the pose variable specified by the 'sp' argument of the command (robot/base coordinate system). <br>
-        Note that the orientation(RX, RY, RZ) remains as the original pose variable, and only the X, Y, and Z values are updated. <br>
-        This is particularly useful when using functions such as 'intersection', where the intersection point is determined using three points to calculate the pose.
+        传感器当前正在感知的激光焊缝位置被存储在命令的 'sp' 参数指定的位姿变量中（机器人/基坐标系）。 <br>
+        请注意，方向 (RX, RY, RZ) 保持为原始位姿变量，仅更新 X、Y 和 Z 值。 <br>
+        在使用如 'intersection' 的函数时，这特别有用，通过三点计算位姿来决定交点。
       </td>
     </tr>
     <tr>
       <td style="text-align:left">auto_calib</td>
       <td style="text-align:left">
-        Performs auto-calibration between TCP and LVS.(refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/3_calibration?cont_model=${cont_model}">LVS Calibration</a>)
+        执行 TCP 和 LVS 之间的自动校准。（参考 <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/zh/8_Application_function/5_LVS_tracking/3_calibration?cont_model=${cont_model}">LVS 校准</a>）
       </td>
     </tr>
     <tr>
       <td style="text-align:left">search</td>
       <td style="text-align:left">
-        The starting point is found while moving in the +ToolX, -ToolX directions, and tracking preparation is performed. <br>
-        The detected starting point is stored in the pose variable specified by the 'sp' argument of the command.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">LVS search func.</a>)
+        在 +ToolX、-ToolX 方向移动时找到起始点，并进行追踪准备。 <br>
+        检测到的起始点存储在命令的 'sp' 参数指定的位姿变量中。
+        （参考 <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/zh/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">LVS 搜索功能</a>）
       </td>
     </tr>
     <tr>
       <td style="text-align:left">step_search</td>
       <td style="text-align:left">
-        The starting point or the start point of a multi-bead is found while moving int the +ToolX, -ToolX directions. <br>
-        The detected starting point is stored in the pose variable specified by the 'sp' argument of the command.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">LVS search func.</a>)
+        在 +ToolX、-ToolX 方向移动时找到起始点或多焊道的起始点。 <br>
+        检测到的起始点存储在命令的 'sp' 参数指定的位姿变量中。
+        （参考 <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/zh/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">LVS 搜索功能</a>）
       </td>
     </tr>
     <tr>
       <td style="text-align:left">track</td>
       <td style="text-align:left">
-        After the search is completed, the 'arcon' and 'weaving on' actions must be performed before executing. <br>
-        Tracking continues until 'arcoff' is encountered.
+        搜索完成后，必须在执行之前先执行 'arcon' 和 'weaving on' 操作。 <br>
+        跟踪将持续进行，直到遇到 'arcoff'。
       </td>
     </tr>
     <tr>
-      <td colspan="2">condition Number</td>
+      <td colspan="2">条件号</td>
       <td>
-        This is the condition number used to apply the the settings configured in the peroperties window of the lvs command. <br>
-        The properties window allows you to set search speed, search distance, queue interval, tracking limit, and sensing coordinate system(robot/base), among others.
+        这是用于应用在 lvs 命令的属性窗口中配置的设置的条件号。 <br>
+        属性窗口允许您设置搜索速度、搜索距离、队列间隔、追踪限制和感知坐标系统（机器人/基），以及其他参数。
       </td>
     </tr>
   <tr>
-      <td colspan="2">profile number to be sensed position</td>
+      <td colspan="2">要感知的位置的配置文件编号</td>
       <td>
-        This refers to the number corresponding to the sensing shape and sensing conditions registered by the user in the LVS controller. 
-        When the command is executed, the LVS controller loads the sensing shape and conditions associated with this number.
+        这指的是用户在 LVS 控制器中注册的与感知形状和感知条件相对应的编号。
+        当执行命令时，LVS 控制器加载与该编号关联的感知形状和条件。
       </td>
     </tr>
     <tr>
-      <td colspan="2">pose variable of the sensed position</td>
+      <td colspan="2">感知位置的位姿变量</td>
       <td>
-        The position corresponding to the current laser location is stored as a pose variable.
+        当前激光位置对应的位置被存储为位姿变量。
       </td>
     </tr>
     <tr>
-      <td colspan="2">pose variable of the master position</td>
+      <td colspan="2">主位置的位姿变量</td>
       <td>
-        This is the reference pose variable registered in master mode.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS Master mode func.</a>)
+        这是在主模式下注册的参考位姿变量。
+        （参考 <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/zh/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS 主模式功能</a>）
       </td>
     </tr>
     <tr>
-      <td colspan="2">shift variable of the current sensing position relative to the master</td>
+      <td colspan="2">当前感知位置相对于主位置的偏移变量</td>
       <td>
-        The shift of the current sensed position relative to the mp(master pose) is stored.
-        (refer to <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/en/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS Master mode func.</a>)
+        当前感知位置相对于 mp（主位姿）的偏移存储。
+        （参考 <a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/zh/8_Application_function/5_LVS_tracking/5_lvs_master_mode?cont_model=${cont_model}">8.5.5 LVS 主模式功能</a>）
       </td>
     </tr>
     <tr>
       <td colspan="2">opt</td>
       <td>
-        When using the auto_calib command, this value should be set to 0.
+        使用 auto_calib 命令时，此值应设置为 0。
       </td>
     </tr>
     <tr>
       <td colspan="2">find_flag</td>
       <td>
-        If a variable is set for this parameter, it will be set to 1 upon successful seam finding, and to 0 without any error if the seam finding fails.
+        如果为此参数设置了变量，则在成功找到焊缝时将其设置为 1，而在焊缝查找失败时将其设置为 0且没有任何错误。
       </td>
     </tr>
   </tbody>
 </table>  
 
 
-The tracking function using the ```lvs``` command can be used as follows:
+使用 ```lvs``` 命令的追踪功能可以如下使用：
 
 
 ![](../../_assets/8_5_2.png)<br>
-*Figure 8.5.2. Teaching Method for LVS Seam Tracking*
+*图 8.5.2. LVS 焊缝追踪的教学方法*
 
 
 ---
 
-#### LVS Function Specifications
+#### LVS 功能规格
 
-* General motion tracking functionality supported (Linear L interpolation, Circular C interpolation, and composite linear and circular segments)
-* Weaving tracking functionality supported (0.5Hz ~ 3Hz)
-* Positioner synchronized tracking functionality supported (SMOV segment)
-* Positioner synchronized + Weaving tracking functionality supported (0.5Hz ~ 3Hz)
+* 支持一般运动追踪功能（线性 L 插值、圆形 C 插值和复合线性与圆形段）
+* 支持织布追踪功能（0.5Hz ~ 3Hz）
+* 支持定位器同步追踪功能（SMOV 段）
+* 支持定位器同步 + 织布追踪功能（0.5Hz ~ 3Hz）
 
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Item</th>
-      <th style="text-align:left">LVS Manufacturer</th>
-      <th style="text-align:left">Repetition Accuracy</th>
-      <th style="text-align:left">Repetition Precision</th>
+      <th style="text-align:left">项目</th>
+      <th style="text-align:left">LVS 制造商</th>
+      <th style="text-align:left">重复精度</th>
+      <th style="text-align:left">重复精密度</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="text-align:left" rowspan="3">seam_find / seam_find_p</td>
       <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
-      <td style="text-align:left">Left/Right : 0.1 mm (Reference +- 30mm height),  0.4mm<br>Height : 0.4mm (Reference +- 30mm height), 2mm<br>Front/Back : 0.4mm (Reference +- 30mm height), 1.5mm</td>
+      <td style="text-align:left">左右 : 0.1 mm (参考 ± 30mm 高度)， 0.4mm<br>高度 : 0.4mm (参考 ± 30mm 高度)， 2mm<br>前后 : 0.4mm (参考 ± 30mm 高度)， 1.5mm</td>
       <td style="text-align:left">0.05 mm</td>
     </tr>
     <tr>
       <td style="text-align:left">OXFORD (OSL-50)</td>
-      <td style="text-align:left">Left/Right : 0.4 mm (Reference +- 30mm height),  0.7mm<br>Height : 0.6mm (Reference +- 30mm height), 3mm<br>Front/Back : 0.6mm (Reference +- 30mm height), 2.5mm</td>
+      <td style="text-align:left">左右 : 0.4 mm (参考 ± 30mm 高度)， 0.7mm<br>高度 : 0.6mm (参考 ± 30mm 高度)， 3mm<br>前后 : 0.6mm (参考 ± 30mm 高度)， 2.5mm</td>
       <td style="text-align:left">0.2 mm</td>
     </tr>
     <tr>
       <td style="text-align:left">Full-v</td>
-      <td style="text-align:left">Left/Right : 0.6 mm (Reference +- 30mm height),  2mm<br>Height : 0.8mm (Reference +- 30mm height), 4.5mm<br>Front/Back : 0.6mm (Reference +- 30mm height), 4mm</td>
+      <td style="text-align:left">左右 : 0.6 mm (参考 ± 30mm 高度)， 2mm<br>高度 : 0.8mm (参考 ± 30mm 高度)， 4.5mm<br>前后 : 0.6mm (参考 ± 30mm 高度)， 4mm</td>
       <td style="text-align:left">0.35 mm</td>
     </tr>
     <tr>
       <td style="text-align:left" rowspan="3">track</td>
       <td style="text-align:left">SCANSONIC (350, 150, 150 advanced)</td>
-      <td style="text-align:left">0.2mm (Linear)<br>0.4mm (weaving)<br>0.25mm (positioner synchronized)<br>0.5mm (weaving + positioner synchronized)</td>
+      <td style="text-align:left">0.2mm (线性)<br>0.4mm (织布)<br>0.25mm (定位器同步)<br>0.5mm (织布 + 定位器同步)</td>
       <td style="text-align:left">0.05 mm</td>
     </tr>
     <tr>
       <td style="text-align:left">OXFORD (OSL-50)</td>
-      <td style="text-align:left">0.3mm (Linear)<br>0.5mm (weaving)<br>0.4mm (positioner synchronized)<br>0.6mm (weaving + positioner synchronized)</td>
+      <td style="text-align:left">0.3mm (线性)<br>0.5mm (织布)<br>0.4mm (定位器同步)<br>0.6mm (织布 + 定位器同步)</td>
       <td style="text-align:left">0.2 mm</td>
     </tr>
     <tr>
       <td style="text-align:left">Full-v</td>
-      <td style="text-align:left">0.3mm (Linear)<br>0.6mm (weaving)<br>0.4mm (positioner synchronized)<br>0.7mm (weaving + positioner synchronized)</td>
+      <td style="text-align:left">0.3mm (线性)<br>0.6mm (织布)<br>0.4mm (定位器同步)<br>0.7mm (织布 + 定位器同步)</td>
       <td style="text-align:left">0.35 mm</td>
     </tr>
   </tbody>
 </table>
 [__SOURCE](8_Application_function/5_LVS_tracking/2_settings.md)
-# 8.5.2 LVS Settings
+# 8.5.2 LVS 设置
 
 
-To use LVS functionality, sensor installation and communication settings are required.
+要使用 LVS 功能，需要传感器安装和通信设置。
 
-Let's now look at the process involved.
+现在让我们看看涉及的过程。
 
-### (1) Mounting the LVS Sensor using the connection bracket
+### (1) 使用连接支架安装 LVS 传感器
 
-The connection bracket can either be designed and used by yourself, or you may receive one from HD Hyundai Robotics or the LVS manufacturer. <br>
+连接支架可以由您自行设计和使用，也可以从 HD Hyundai Robotics 或 LVS 制造商那里获得。 <br>
 
 ![](../../_assets/8_5_3_lvs_mount_setup.png)<br>
-*Figure 8.5.3. LVS Mounting Precautions*
+*图 8.5.3. LVS 安装注意事项*
 
 {% hint style="warning" %}
-  - To achieve repetition accruacy and precision, directly mount the LVS bracket to the robot flange<br>
-  - In other words, install the mechanical assembly as follows: flange - LVS mount, LVS sensor - shock sensor(if used) - torch.
+  - 为实现重复精度和精确度，必须将 LVS 支架直接安装到机器人法兰上<br>
+  - 换句话说，机械装配应如下安装：法兰 - LVS 支架，LVS 传感器 - 冲击传感器（如使用） - 焊枪。
 {% endhint %}
 
-The tool coordinate system should be set as follows: the welding direction opposite to the progress direction should be set as the +Tool X direction, and the wire direction should be set as the +Tool Z direction, as shown in the diagram below.
+工具坐标系应如下设置：焊接方向与进度方向相反应设置为 +Tool X 方向，焊丝方向应设置为 +Tool Z 方向，如下图所示。
 
-The LVS sensor must be installed so that the laser is positioned perpendicular to the welding seam, which is straight (see figure)
-
+LVS 传感器必须安装，以便激光垂直于焊缝，且是直的（见图）
 
 ![](../../_assets/8_5_4.png)<br>
-*Figure 8.5.4. TCP and Sensor Installation, Tool Coordinate System Setup*
+*图 8.5.4. TCP 和传感器安装，工具坐标系设置*
 
 {% hint style="info" %}
-  For instructions on setting the tool coordinate system, refer to the Tool Calibration and Angle Correction Manual(Angle Calibration) section.
+  有关设置工具坐标系的说明，请参阅工具校准和角度校正手册（角度校准）部分。
 {% endhint %}
 
 {% hint style="warning" %}
-  In order to use LVS, the laser should be positioned ahead of the welding direction, and the tool coordinate system must be set as shown in the diagram above.
+  为了使用 LVS，激光应位于焊接方向的前方，并且工具坐标系必须如上图所示进行设置。
 {% endhint %}
 
 ---
 
-### (2) Communication Settings
+### (2) 通信设置
 
-Connect the LVS sensor controller and the robot controller using an Ethernet cable.<br>
-Navigate to `[F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting`.<br>
+使用以太网电缆连接 LVS 传感器控制器和机器人控制器。<br>
+导航到 `[F2: 系统] - 4: 应用参数 - 5: LVS 跟踪 - 1: Envrionment setting ([F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting)`。<br>
 
-In the **[Communication]** tab, configure the following items:
+在 **[通信]** 选项卡中，配置以下项目：
 
-- LVS brand : Scansonic, Oxford (or Meta), Full-v<br>
-- IP Address : Enter the IP address of the sensor controller.
-- Local Port : The port for the robot controller. (For Oxford, 8000)
-- Remote Port : The port for the sensor controller. (For Oxford, 8002)
+- LVS 品牌 : Scansonic, Oxford (或 Meta), Full-v<br>
+- IP 地址 : 输入传感器控制器的 IP 地址。
+- 本地端口 : 机器人控制器的端口。（对于 Oxford, 8000）
+- 远程端口 : 传感器控制器的端口。（对于 Oxford, 8002）
 
-After entering the above information, click **[connect]**. If the status shows "connected," the connection is successfully established.
-
+输入上述信息后，点击 **[connect]**。如果状态显示“已连接”，则连接成功建立。
 
 {% hint style="info" %}
-- [IP Address] : The IP address used for sending data from the LVS controller to the robot controller is set in the LVS controller.
-  - If the settings are incorrect, the connection may fial. In such cases, refer to the LVS manufacturer's manual.
-- [Port] : When selecting a brand, the default values will automatically be applied, so there is no need for the user to modify them.
-  - If the port is incorrect, the connection may fial. In such cases, refer to the LVS manufacturer's manual.
+- [IP 地址] : 用于将数据从 LVS 控制器发送到机器人控制器的 IP 地址在 LVS 控制器中设置。
+  - 如果设置不正确，连接可能会失败。在这种情况下，请参阅 LVS 制造商的手册。
+- [端口] : 选择品牌时，默认值将自动应用，因此用户无需修改它们。
+  - 如果端口不正确，连接可能会失败。在这种情况下，请参阅 LVS 制造商的手册。
 {% endhint %}
 
 ---
 
-### (3) Basic Settings
+### (3) 基本设置
 
-In the **[Tracking]** tab, configure the following items: 
-- P gain : Specifies the intensity with which the TCP tracks to the converted position and orientation.
-- D gain : Specifies the speed at which the TCP responds to the converted position and orientation.
-- Max tracking Distance : Specifies the maximum tracking amount per second in [mm/sec].
+在 **[跟踪]** 选项卡中，配置以下项目： 
+- P 增益 : 指定 TCP 跟踪转换位置和方向的强度。
+- D 增益 : 指定 TCP 对转换位置和方向的响应速度。
+- 最大跟踪距离 : 指定每秒的最大跟踪量以 [mm/sec] 为单位。
 
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Item</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Recommended Settings</th>
+      <th style="text-align:left">项目</th>
+      <th style="text-align:left">说明</th>
+      <th style="text-align:left">推荐设置</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">P, D gain</td>
-      <td style="text-align:left">Specifies the intensity with which the TCP tracks to the converted position and orientation.</td>
+      <td style="text-align:left">P, D 增益</td>
+      <td style="text-align:left">指定 TCP 跟踪转换位置和方向的强度。</td>
       <td style="text-align:left">
-        General tracking (without weaving) : Set within the range 1 ~ 10. <br>
-        Weaving tracking (with weaving) : Use the default value of 10. <br>
-        The default values are P gain: 10 and D gain: 10. Adjust these values to suit the actual workpiece.
+        一般跟踪（不使用编织） : 设置在 1 ~ 10 范围内。 <br>
+        编织跟踪（使用编织） : 使用默认值 10。 <br>
+        默认值为 P 增益：10，D 增益：10。根据实际工件调整这些值。
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Max tracking distance/sec [mm/sec]</td>
-      <td style="text-align:left">Specifies the maximum tracking amount per second in [mm/sec].</td>
+      <td style="text-align:left">每秒最大跟踪距离 [mm/sec]</td>
+      <td style="text-align:left">指定每秒的最大跟踪量，以 [mm/sec] 为单位。</td>
       <td style="text-align:left">
-        Set within the range of 1 to 5. The default value is 10.<br>
-        LVS seam tracking is designed to correct small deviations from the taught trajectory, so setting a larger value is not necessary.
+        设置在 1 到 5 之间。默认值为 10。<br>
+        LVS 焊缝跟踪旨在修正与教导轨迹的微小偏差，因此无需设置更大的值。
       </td>
     </tr>
   </tbody>
 </table>
 
 
-Preferences have been completed through the above process.
+通过上述过程完成了偏好设置。
 
 ---
 
-#### Full-V Sensor Configuration Example
+#### Full-V 传感器配置示例
 
 ![](../../_assets/8_5_5_lvs_setting_fullv_1.png)<br>
-*Figure 8.5.5. Full-V Sensor Connection Settings*
+*图 8.5.5. Full-V 传感器连接设置*
 
-As shown in the figure above, select the LVS brand as FULL, then check the IP address of the LVS sensor in the Full-V softeware.  <br>
-Enter the IP in the `[F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting` window.  <br> Afterward, click the "connect" button at the bottom and verify that the connection status shows.  <br>
-If "disconnected" appears, check the hardware connection and IP address.<br>
+如上图所示，选择 LVS 品牌为 FULL，然后在 Full-V 软件中检查 LVS 传感器的 IP 地址。  <br>
+在 `[F2: 系统] - 4: 应用参数 - 5: LVS 跟踪 - 1: Envrionment setting ([F2: System] - 4: Application parameter - 5: LVS tracking - 1: Envrionment setting)` 窗口中输入 IP。  <br> 然后，点击底部的“connect”按钮，并确认连接状态显示。  <br>
+如果出现“已断开”字样，请检查硬件连接和 IP 地址。<br>
 
-Refer to the manual provided by Full-V and the figure below to register the seam you wish to use in the Full-V software.  
+请参考 Full-V 提供的手册和下图以在 Full-V 软件中注册您希望使用的焊缝。  
 
 
 ![](../../_assets/8_5_6_lvs_setting_fullv_2.png)<br>
-*Figure 8.5.6. Example of Seam Setting in Full-V Software*
+*图 8.5.6. Full-V 软件中焊缝设置示例*
 [__SOURCE](8_Application_function/5_LVS_tracking/3_calibration.md)
-# 8.5.3 LVS Calibration
+# 8.5.3 LVS 校准
 
 
-In order to use the LVS funtionality, calibration between the TCP and sensor coordinate system must be performed first.
+为了使用 LVS 功能，必须首先在 TCP 和传感器坐标系统之间进行校准。
 
-${cont_model} controller supports automatic calibration.
+${cont_model} 控制器支持自动校准。
 
-Let's now look at how to perform automatic calibration between TCP and LVS sensor.
+现在我们来看看如何在 TCP 和 LVS 传感器之间进行自动校准。
 
-### (1) Preparation of Calibration Specimen
+### (1) 校准样本的准备
 
-Prepare a 15 cm long lap joint specimen with a 3 mm step.
+准备一个 15 厘米长的搭接接头样本，步长为 3 毫米。
 
 
 {% hint style="info" %}
-If you wish to use it for testing purpose, please contact us to prepare the calibration specimen.
+如果您希望用于测试，请联系我们准备校准样本。
 {% endhint %}
 
 ---
 
-### (2) Automatic Calibration Teaching
+### (2) 自动校准教学
 
 ![](../../_assets/8_5_7_lvs_autocalib.png)<br>
-*Figure 8.5.7. LVS Auto Calibration*   
+*图 8.5.7. LVS 自动校准*   
 </br>
 
-As shown in the figure above, move the TCP to the reference point of the specimen using the jog function.
+如上图所示，使用走动功能将 TCP 移动到样本的参考点。
 
-The torch orientation should be perpendicular to the specimen (both Roll and Pitch direction should be vertical).
+焊枪的方向应垂直于样本（滚转和俯仰方向都应垂直）。
 
-Position the laser line perpendicular to the edge of the specimen using jog (typically controlled by Tool Z).
+使用走动功能将激光线位置设置为垂直于样本边缘（通常由工具 Z 控制）。
 
-In this state(where the torch is positioned perpendicular to the specimen and the laser line is perpendicular to the edge of the specimen), press **[Record]** to insert the `move` command.
+在此状态下（焊枪位置垂直于样本，激光线垂直于样本边缘），按 **[记录]** 插入 `移动 (move)` 命令。
 
 {% hint style="warning" %}
-- Use a level to precisely align the torch's orientation perpendicular to the calibration specimen.
-- The vertical accuracy of the torch and the accuracy with which the laser line is perpendicular to the edge of the specimen will affect the calibration accuracy.
+- 使用水平尺精确对齐焊枪的方向，使其垂直于校准样本。
+- 焊枪的垂直精度以及激光线与样本边缘垂直的精度将影响校准精度。
 {% endhint %}
 
 
-After inserting `delay 0.5`, input the `lvs` command.
+插入 `delay 0.5` 后，输入 `lvs` 命令。
 
-The seam parameter of the `lvs` command is the number corresponding to the shape and conditions registered in the LVS controller.
+`lvs` 命令的接缝参数是与 LVS 控制器中注册的形状和条件相对应的编号。
 
 {% hint style="info" %}
-For calibration, register the seam as a lap joint in the LVS controller's software.<br>
-Set the registered number in the seam parameter of the lvs command.
+对于校准，请在 LVS 控制器的软件中将接缝注册为搭接接头。<br>
+在 lvs 命令的接缝参数中设置注册的编号。
 {% endhint %}
 
 
-The program written as described is shown below:
+按上述方式编写的程序如下所示：
 
 ```python
-    move L,spd=60%,accu=0,tool=0  # Calibration specimen reference point
+    move L,spd=60%,accu=0,tool=0  # 校准样本参考点
     delay 0.5
     lvs auto_calib, cnd=1, seam=1, sp=p1, opt=0
     end
@@ -4099,82 +3770,82 @@ The program written as described is shown below:
 
 ---
 
-### (3) Preparations
+### (3) 准备工作
 
-Automatic Calibration involves motions such as front/back, left/right, roll direction rotation, and height adjustments, so ensure safety precautions are followed.
+自动校准涉及前后、左右、滚转方向旋转和高度调整等运动，因此确保遵循安全措施。
 
 {% hint style="warning" %}
-* Adjust the LVS settings (exposure time, laser intensity, shape settings) so that the LVS can recognize the seam of the specimen even at higher positions.
-* When the laser is pointing to the flat surface outside the reference point of the specimen, the LVS controller should not be able to recognize the seam.
+* 调整 LVS 设置（曝光时间、激光强度、形状设置），以便 LVS 即使在较高位置也能识别样本的接缝。
+* 当激光指向样本参考点外的平面表面时，LVS 控制器不应能够识别接缝。
 {% endhint %}
 
 
 ---
 
-### (4) Execution
+### (4) 执行
 
-Once calibration is complete, the "comp!" indicator will appear in the 'info' section of the 'LVS tracking' monitoring table.
+一旦校准完成，"comp!" 指示灯将出现在 'LVS 跟踪' 监控表的 '信息' 部分。
 
 ---
 
-### (5) Tool and LVS Calibration Information
+### (5) 工具和 LVS 校准信息
 
-Each tool number has its own LVS calibration, which is useful when using tool changing.
+每个工具编号都有其自身的 LVS 校准，这在使用工具更换时非常有用。
 
-If you perform automatic calibration for tool 0 and want to use tool 1 or tool 2, you will need to perform automatic calibration for those tools as well.
+如果您对工具 0 执行自动校准，并想使用工具 1 或工具 2，您还需要对这些工具执行自动校准。
 
-If you want to use the same tool information but with different numbers, you can enter the following window to copy and apply the calibration information.
+如果您想使用相同的工具信息但编号不同，可以进入以下窗口以复制和应用校准信息。
 
-- Navigate to `[F2: System] - 4: Application parameter - 5: LVS tracking - 2: LVS Calibration`.<br>
+- 导航至 `[F2: 系统] - 4: 应用参数 - 5: LVS 跟踪 - 2: LVS 校准 ([F2: System] - 4: Application parameter - 5: LVS tracking - 2: LVS Calibration)`.<br>
 
 ![](../../_assets/8_5_8_lvs_tool_calibmat.png)<br>
-*Figure 8.5.8. LVS Calibration Information*   
+*图 8.5.8. LVS 校准信息*   
 </br>
 [__SOURCE](8_Application_function/5_LVS_tracking/4_seam_finding.md)
-# 8.5.4 LVS Seam Finding Func.
+# 8.5.4 LVS 接缝查找功能
 
-### (1) Seam Finding Overview
+### (1) 接缝查找概述
 
-This function stores the position sensed by the LVS as a pose, and can be used as a substitute for touch sensing.
+该功能将 LVS 传感器感知到的位置存储为姿态，可以作为接触传感的替代品。
 
 {% hint style="warning" %}
-  If the TCP-LVS sensor calibration has not been performed before using this function, an abnormal pose will be saved.
+  如果在使用此功能之前未对 TCP-LVS 传感器进行校准，将保存异常的姿态。
 {% endhint %}
 
-The command format is as follows:  
-After executing this, as shown below, the position sensed by the LVS will be stored in the po_100 variable.
+命令格式如下：  
+执行该命令后，如下所示，LVS 传感器感知到的位置将存储在 po_100 变量中。
 
 ```python
-  var po_100=cpo()  # The current pose is stored in the variable po_100
-  lvs seam_find, cnd=1, seam=1, sp=po_100 # If there is no variable with the name entered in the sp parameter, it will be automatically declared as a local pose variable.
+  var po_100=cpo()  # 当前姿态存储在变量 po_100 中
+  lvs seam_find, cnd=1, seam=1, sp=po_100 # 如果 sp 参数中没有输入的名称，则将自动声明为局部姿态变量。
 ```
 
 {% hint style="warning" %}
-  If the **sp** parameter is not declared, it will be declared as a local pose. <br>
-  If the **mp** parameter is not declared, it will be declared as a global pose. <br>
-  If the **ms** parameter is not declared, it will be declared as a global shift.
+  如果 **sp** 参数未声明，则将声明为局部姿态。 <br>
+  如果 **mp** 参数未声明，则将声明为全局姿态。 <br>
+  如果 **ms** 参数未声明，则将声明为全局偏移。
 {% endhint %}
 
 
 ![](../../_assets/8_5_9_lvs_seamfind_ex.png)<br>
-*Figure 8.5.9. Pose in the LVS sensing position*   
+*图 8.5.9. LVS 感知位置中的姿态*   
 </br>
 
 {% hint style="info" %}
-  - The orientation of the pose stored in the sp parameter with the **seam_find** command will maintain the tool's orientation (Rx, Ry, Rz) before sensing.
-  - On the other hand, with the **seam_find_p** command, only the position is recorded in the pose stored in the sp parameter.
+  - 使用 **seam_find** 命令存储在 sp 参数中的姿态的方向将保持在感知前的工具方向 (Rx, Ry, Rz)。
+  - 另一方面，使用 **seam_find_p** 命令时，仅记录存储在 sp 参数中的姿态的位置。
 {% endhint %}
 
-* If you want to store only the position in the pose regardless of the pre-sensing orientation, use the following command format.<br>
-This function is useful when you want to record the welding posture in the pose and then make the position (X, Y, Z) correspond to the point sensed by the LVS.
+* 如果您想在姿态中仅存储位置，而不考虑预感知的方向，请使用以下命令格式。<br>
+当您希望记录焊接姿态并使位置 (X, Y, Z) 对应于 LVS 感知到的点时，该功能非常有用。
 
 ```python
 var po_100=cpo()
 lvs seam_find_p, cnd=1, seam=1, sp=po_100
 ```
 
-* The pose shifted in the direction of Tool Y and Tool Z from the sensed position can be calculated as follows. <br>
-This command calculates a pose that has shifted by 10mm in the Tool Y direction and 10mm in the Tool Z direction, based on the tool orientation during sensing.
+* 从感知位置向工具 Y 和工具 Z 方向偏移的姿态可以通过以下方式计算。 <br>
+该命令计算出在感知期间向工具 Y 方向偏移 10mm 和向工具 Z 方向偏移 10mm 的姿态。
 
 ```python
 var po_100=cpo()
@@ -4183,200 +3854,194 @@ lvs seam_find, cnd=1, seam=1, side=10, height=10, sp=po_100
 
 ---
 
-### (2) LVS Seam Finding Retry
+### (2) LVS 接缝查找重试
 
-If the seam cannot be recognized during seam finding, a retry will be performed. 
+如果在接缝查找期间无法识别接缝，则将执行重试。
 
-The number of retries is specified in the **"no of retry"** under the Seam finding option in the LVS command's properties window.
+重试的次数在 LVS 命令属性窗口的接缝查找选项下的 **"no of retry"** 中指定。
 
-If sensing is still impossible after the specified number of retries, an error will occur.
+如果在指定次数的重试后仍然无法感知，将发生错误。
 
-The retry process is performed in the following sequence:
+重试过程按以下顺序进行：
 
 ![](../../_assets/8_5_10_lvs_seamfind_retry.png)<br>
-*Figure 8.5.10. LVS Seam Finding Retry*   
+*图 8.5.10. LVS 接缝查找重试*   
 </br>
 
 {% hint style="warning" %}
-* When using the master-shift function, be aware that retries will cause the position to shift forward and backward(by +ToolX, -ToolX).
+* 使用主偏移功能时，请注意重试会导致位置前后偏移（+ToolX, -ToolX）。
 {% endhint %}
 
 ---
 
-### (3) LVS Seam Finding Monitoring
+### (3) LVS 接缝查找监控
 
-To view the LVS seam finding monitoring screen, click `[pane layout] - select - LVS seamfind` in the TP  
+要查看 LVS 接缝查找监控屏幕，请在 TP 中点击 `[pane layout] - 选择 - LVS 焊缝查找 ([pane layout] - select - LVS seamfind)`  
 
 
 ![](../../_assets/8_5_11_seamfind monitoring.png)<br>
-*Figure 8.5.11. LVS Seam Finding Monitoring*   
+*图 8.5.11. LVS 接缝查找监控*   
 </br>
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Item</th>
-      <th style="text-align:left">Description</th>
+      <th style="text-align:left">项目</th>
+      <th style="text-align:left">描述</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left">Position (X, Y, Z)</td>
+      <td style="text-align:left">位置 (X, Y, Z)</td>
       <td style="text-align:left">
-        Displays the current sensed position (in base coordinates)<br>
-        Spec : The position of the master pose. If not registered, it will display as (-1, -1, -1)<br>
-        Sensing : Current sensed position 
+        显示当前感知的位置（以基坐标表示）<br>
+        规格：母体姿态的位置。如果未注册，将显示为 (-1, -1, -1)<br>
+        感知：当前感知的位置 
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Gap</td>
+      <td style="text-align:left">间隙</td>
       <td style="text-align:left">
-        Spec : Master gap [mm]<br>
-        Sensing : Current sensed gap [mm]
+        规格：母间隙 [mm]<br>
+        感知：当前感知的间隙 [mm]
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Area</td>
+      <td style="text-align:left">面积</td>
       <td style="text-align:left">
-        Internal area width of groove or butt shape [mm^2]<br>
-        Spec : Master area [mm]<br>
-        Sensing : Current sensed area [mm]
+        开口或对接形状的内部区域宽度 [mm^2]<br>
+        规格：母区域 [mm]<br>
+        感知：当前感知的面积 [mm]
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Mismatch</td>
+      <td style="text-align:left">不匹配</td>
       <td style="text-align:left">
-        Mismatch value typically refers to the height difference of the left-right shape.
+        不匹配值通常指左右形状的高度差。
       </td>
     </tr>
   </tbody>
 </table>
 
 {% hint style="info" %}
-  Gap, area, mismatch, and similar values are displayed only for seams supported by the manufacturer's LVS controller.
+  间隙、面积、不匹配等值仅对制造商的 LVS 控制器支持的接缝显示。
 {% endhint %}
 
-If the master pose is registered, you can check the sensing history for the current job by pressing prev or next button.
+如果母体姿态已注册，可以按 prev 或 next 按钮查看当前作业的感知历史。
 
 {% hint style="info" %}
-  For more details on the master mode, please refer to [8.5.5 LVS Master mode func.](./5_lvs_master_mode.md).
+  有关主模式的更多详细信息，请参阅 [8.5.5 LVS 主模式功能](./5_lvs_master_mode.md)。
 {% endhint %}
-
-
 [__SOURCE](8_Application_function/5_LVS_tracking/5_lvs_master_mode.md)
-# 8.5.5 LVS Master Mode Func.
+# 8.5.5 LVS 主模式功能
 
-### (1) Master Mode Overview
+### (1) 主模式概述
 
-The Master Mode function stores a reference position (Master pose) and calculates the shift between the current sensed position and the reference position during actual production.
+主模式功能存储参考位置（主姿态），并在实际生产过程中计算当前感测位置与参考位置之间的偏移。
 
-To enable this functionality, `user key - Master Mode` must be activated to register the reference position(Master pose) in advance.
-
+要启用此功能，必须激活`用户密钥 - 主基准 模式 (user key - Master Mode)`以预先注册参考位置（主姿态）。
 
 ![](../../_assets/8_5_12_lvs_seamfind_mastermode.png)<br>
-*Figure 8.5.12. Example of Master Mode and Actual Motion*   
+*图 8.5.12. 主模式和实际运动的示例*   
 </br>
 
-As shown in the left part of the figure, after activating Master Mode, the Master Pose is saved to the pose variable assigned to the `mp` parameter in the `lvs` command.
+如图左侧所示，在激活主模式后，主姿态保存到分配给`mp`参数的姿态变量中。
 
-Typically, the sensing points are pre-taught, and once Master Mode is activated, the system automatically plays back to the complete the master teaching.
+通常，感测点是预先教学的，一旦激活主模式，系统将自动回放以完成主教学。
 
-In thick welding application, several tens of welding waypoints will typically be registered as Master Poses.
+在厚焊接应用中，通常会注册几十个焊接路径点作为主姿态。
 
-Once the Master Teaching is completed, the Master Mode is turned off. There is no need to turn Master Mode back on after completing the Master Teaching.
+一旦主教学完成，主模式将关闭。完成主教学后无需重新开启主模式。
 
-During production, the robot operates in automatic or remote mode and senses each welding point to calculate the shift.
+在生产过程中，机器人在自动或远程模式下操作，并感测每个焊接点以计算偏移。
 
-At this point, the shift relative to the Master Pose is automatically calculated and stored in the shift variable designated by the `ms` parameter in the `lvs` command.
+此时，相对于主姿态的偏移会被自动计算并存储在`(ms)`参数指定的偏移变量中。
 
-This shift value is then applied to the `tg` parameter in the `move` command to compensate for the shift in the welding position, allowing the welding operation to be carried out accurately.
-
+然后，将该偏移值应用于`tg`参数的`移动 (move)`命令中，以补偿焊接位置的偏移，使焊接操作能够准确进行。
 
 {% hint style="warning" %}
-Important notes when registering master pose.
+注册主姿态时的重要注意事项。
 
-* During the registeration of the Master Pose, ensure that the side and height of the seam sensed by the LVS S/W at the sensing position are both close to 0.
-* By teaching as described above, sensing can be performed stably, and Master Pose management, as well as the detection of any misalignment in the LVS or tool, can be easily recognized.
+* 在主姿态注册期间，确保LVS S/W在感测位置感测到的缝边和高度均接近0。
+* 通过上述教学，可以稳定地进行感测，并且主姿态管理以及LVS或工具中的任何对齐错误都可以轻松识别。
 
 {% endhint %}
 
-
 ![](../../_assets/8_5_13_lvs_seamfind_mastermode_warn.png)<br>
-*Figure 8.5.13. Important Considerations When Registering Master Pose*   
+*图 8.5.13. 注册主姿态时的重要考虑事项*   
 </br>
 
 ---
 
-### (2) Shift Quantity Check Function Relaive to Master Mode
+### (2) 相对于主模式的偏移量检查功能
 
-The shift quantity(in mm) between the current sensed pose and the Master Pose can be checked to verify if it falls within the user-defined range.
+当前感测姿态与主姿态之间的偏移量（以毫米为单位）可以检查，以验证其是否在用户定义的范围内。
 
-To set the range, access the **[property]** window in the lvs command, and enter the desired distance from the reference position in the "distance from reference position" field under the "Seam finding option"(in mm). 
+要设置范围，请访问lvs命令中的**[property]**窗口，并在“缝合查找选项”下的“距离参考位置”字段中输入所需的距离（以毫米为单位）。
 
-If the shift value exceeds the user-defined range during seam finding, an error will occur.
+如果在缝合查找期间偏移值超过用户定义的范围，将会发生错误。
 
 {% hint style="warning" %}
-If the `sp` parameter is not declared, it will be treated as a local pose.<br>
-If the `mp` parameter is not declared, it will be treated as a global pose.<br>
-If the `ms` parameter is not declared, it will be treated as a global pose.
+如果未声明`sp`参数，它将被视为局部姿态。<br>
+如果未声明`mp`参数，它将被视为全局姿态。<br>
+如果未声明`(ms)`参数，它将被视为全局姿态。
 {% endhint %}
 [__SOURCE](8_Application_function/5_LVS_tracking/6_search.md)
-# 8.5.6 LVS Search Func.
+# 8.5.6 LVS 搜索功能
 
-### (1) How to Use the Search Function
+### (1) 如何使用搜索功能
 
-LVS provides a search function, which is used for the following purposes:
+LVS 提供搜索功能，主要用于以下目的：
 
-- `search`: Searches for the starting point end, while the TCP (Tool Center Point) moves to the starting position, stores, the points to be tracked in a buffer at set intervals, preparing for tracking.
-- `step_search`: Used for multi-pass bead detection and step detection
+- `搜索 (search)`：搜索起始点结束，当 TCP (Tool Center Point) 移动到起始位置时，将要跟踪的点以设定的间隔存储在缓冲区中，为跟踪做准备。
+- `step_search`：用于多通道焊缝检测和步骤检测。
 
-When a search is performed, the system searches for the target, and if an invalid point is detected, the most recent valid point is stored as the pose in the `sp` parameter.
+当进行搜索时，系统会搜索目标，如果检测到无效点，最近的有效点会作为姿态存储在 `sp` 参数中。
 
-Subsequently, in order to prepare for tracking, the system stores the points to be followed in a buffer as the TCP moves to the found point.
+随后，为了准备跟踪，系统将要跟踪的点存储在缓冲区中，当 TCP 移动到找到的点时。
 
-By performing the search function, the system becomes ready to perform "seam tracking". 
+通过执行搜索功能，系统准备好执行“缝跟踪”。
 
 {% hint style="info" %}
-  The search process detects invalid seams (when the LVS controller cannot detect a seam) and searches for the starting point.
-  The **search** function finds the start(or end), then moves to that location, storing the points to be tracked in a buffer.
+  搜索过程检测无效的焊缝（当 LVS 控制器无法检测到焊缝时）并搜索起始点。
+  **搜索** 功能找到起点（或终点），然后移动到该位置，存储要跟踪的点在缓冲区中。
 {% endhint %}
 
 
-```search``` function is used as follows:
+```search``` 功能的使用方法如下：
 
 ```python
     move L, spd=60%, accu=0, tool=1
-    delay 0.1 # if the accuracy of the starting position is not 0, it must be inserted.
-    var po_100=cpo() # The current pose is stored in the variable po_100
+    delay 0.1 # 如果起始位置的精确度不是 0，则必须插入。
+    var po_100=cpo() # 当前姿态存储在变量 po_100 中
     lvs search, cnd=1, seam=1, sp=po_100
 ```
 
-To configure the search function, enter **[property]** in the `lvs` command, where the search settings can be adjusted as follows:
-
+要配置搜索功能，请在 `lvs` 命令中输入 **[property]**，搜索设置可以按如下方式进行调整：
 
 ![](../../_assets/8_5_14_lvs_search_setting.png)<br>
-*Figure 8.5.14. lvs search settings*   
+*图 8.5.14. lvs 搜索设置*   
 </br>
 
-| Item | Description |
+| 项目 | 描述 |
 |------|------|
-| function | Set the usage of the search function. <br> 'Disable': The system moves to the laser position of the LVS and stores the target positions in a buffer. <br> 'Enable': The system detects both the starting and ending points in the search direction, then moves to the detected location while storing the target positions in the buffer. |
-| distance | If the search function is set to **enable**, the maximum distance for searching the starting point should be entered [mm]. |
-| direction | 0: Search in the +ToolX direction. <br> 1: Search in the -ToolX direction. |
-| speed | The search speed can be set in mm/sec. |
-| offset | Points found in the direction of the welding line can be shifted by the specified number of mm from the detected position. |
+| function | 设置搜索功能的使用。<br> 'Disable': 系统移动到 LVS 的激光位置并将目标位置存储在缓冲区。<br> 'Enable': 系统在搜索方向上检测起始和结束点，然后移动到检测到的位置，同时将目标位置存储在缓冲区。 |
+| distance | 如果搜索功能设置为 **enable**，则应输入搜索起始点的最大距离 [mm]。 |
+| direction | 0: 在 +ToolX 方向搜索。<br> 1: 在 -ToolX 方向搜索。 |
+| speed | 搜索速度可以设置为 mm/sec。 |
+| offset | 在焊接线方向上找到的点可以从检测到的位置向指定的毫米数偏移。 |
 
 <br>
 
 ![](../../_assets/8_5_15_lvs_search_example.png)<br>
-*Figure 8.5.15. lvs search Example*   
+*图 8.5.15. lvs 搜索示例*   
 </br>
 
-The **search** and **seam tracking** functions can be taught as shown below.
+**搜索** 和 **缝跟踪** 功能可以如下教导。
 
 ```python
     move L, spd=60%, accu=0, tool=1
     delay 0.3
-    var po_100=cpo() # The current pose is stored in the variable po_100
+    var po_100=cpo() # 当前姿态存储在变量 po_100 中
     lvs search, cnd=1, seam=1, sp=po_100
     weavon cnd=1
     arcon cnd=1
@@ -4391,49 +4056,48 @@ The **search** and **seam tracking** functions can be taught as shown below.
 
 ---
 
-### (2) How to Use the Multi-pass Bead Detection Function (step_search) 
+### (2) 如何使用多通道焊缝检测功能 (step_search) 
 
+此功能用于检测多通道焊缝的起始点，其使用方法与 `搜索 (search)` 功能相同。
 
-This function is used to detect the starting point of a multi-pass bead, and its usage is identical to the `search` function.
+在 `lvs` 命令的 **[property]** 窗口中，将功能设置为 "Enable" 并在 "distance" 字段中配置扫描距离。
 
-In the **[property]** window of the `lvs` command, set the function to "Enable" and configure the scan distance in the "distance" field.
-
-It can be used as follows:
+可以如下使用：
 
 ```python
-    move L, spd=60%, accu=0, tool=1 # Set the starting point for the multi-pass bead detection scan.
+    move L, spd=60%, accu=0, tool=1 # 设置多通道焊缝检测扫描的起始点。
     delay 0.3
-    var po_100=cpo() # The current pose is stored in the variable po_100
+    var po_100=cpo() # 当前姿态存储在变量 po_100 中
     lvs step_search, cnd=1, seam=1, sp=po_100
-    move L, tg=po_100, spd=40cm/min, accu=3, tool=1 # Move to the found location.
+    move L, tg=po_100, spd=40cm/min, accu=3, tool=1 # 移动到找到的位置。
     end
 ```
 [__SOURCE](8_Application_function/5_LVS_tracking/7_tracking_monitoring.md)
-# 8.5.7 LVS Tracking Func. and Monitoring
+# 8.5.7 LVS 跟踪功能和监控
 
-### (1) LVS Tracking Overview
+### (1) LVS 跟踪概述
 
-LVS Tracking is a function that compensates for the different between the taught trajectory and the actual welding line.
+LVS 跟踪是一个补偿教学轨迹与实际焊接线之间差异的功能。
 
 {% hint style="warning" %}
-The reference teaching for the base workpiece should be performed with high precision.<br>
-After applying the shift to correct the positioning error of the workpiece, the LVS function should be used.<br>
-For further details, please refer to [8.5.5 LVS Master Mode Func.].
+基准工件的教学应以高精度进行。<br>
+在施加移位以修正工件定位误差后，应使用 LVS 功能。<br>
+有关详细信息，请参阅 [8.5.5 LVS 主模式功能]。
 {% endhint %}
 
-Since the laser is mounted in front of the TCP, a search must be performed first to carry out tracking.
+由于激光装置安装在 TCP 前面，必须先进行搜索以执行跟踪。
 
 {% hint style="info" %}
-  Please refer to the previous section, **[8.5.6 LVS Search Func.]**, for detailed information about the search function.
+请参阅上一部分，**[8.5.6 LVS 搜索功能]**，以获取有关搜索功能的详细信息。
 {% endhint %}
 
 
-The configuration of the lvs command should be set as follows:
+lvs 命令的配置应设置如下：
 
 ```python
     move L, spd=60%, accu=0, tool=1
     delay 0.3
-    var po_100=cpo() # The current pose is stored in the variable po_100
+    var po_100=cpo() # 当前姿态存储在变量 po_100 中
     lvs search, cnd=1, seam=1, sp=po_100
     weavon cnd=1  
     arcon cnd=1
@@ -4446,26 +4110,25 @@ The configuration of the lvs command should be set as follows:
     end
 ```
 
-The processs of executing the search command is illustrated in the following figure (when search is set to valid and direction is set to 0).
-An invalid point is found and stored in the `sp` parameter as the starting point, then the TCP moves to the starting point while filling the data buffer. 
+执行搜索命令的过程如下面的图所示（当搜索设置为有效且方向设置为 0 时）。
+一个无效点被找到并存储在 `sp` 参数中作为起始点，然后 TCP 移动到起始点，同时填充数据缓冲区。
 
 ![](../../_assets/8_5_17.png)<br>
-*Figure 8.5.17. LVS search process*   
+*图 8.5.17. LVS 搜索过程*   
 </br>
 
-### (2) How to Use Tracking with an Offset Value
+### (2) 如何使用带偏移值的跟踪
 
-If you want to track with an offset from the seam (instead of exactly following the welding line), you can specify the offset values for side and height in the `lvs` command in mm units. The offset is applied in the tool coordinate system direction.
-
+如果您想要在接缝上使用偏移进行跟踪（而不是严格跟随焊接线），可以在 `lvs` 命令中以毫米为单位指定侧向和高度的偏移值。该偏移在工具坐标系统方向上应用。
 
 ```python
     move L, spd=60%, accu=0, tool=1
     delay 0.3
-    var po_100=cpo() # The current pose is stored in the variable po_100
+    var po_100=cpo() # 当前姿态存储在变量 po_100 中
     lvs search, cnd=1, seam=1, sp=po_100
     weavon cnd=1  
     arcon cnd=1
-    lvs track, cnd=1, seam=1, sp=po_100, side=5, height=-5 # offset tracking with 5mm in the ToolX, and -5mm in the ToolZ
+    lvs track, cnd=1, seam=1, sp=po_100, side=5, height=-5 # 偏移跟踪在 ToolX 中 5mm，在 ToolZ 中 -5mm
     move L, spd=30cm/min, accu=3, tool=1
     move L, spd=36cm/min, accu=3, tool=1
     move L, spd=40cm/min, accu=3, tool=1
@@ -4475,163 +4138,136 @@ If you want to track with an offset from the seam (instead of exactly following 
 ```
 
 {% hint style="info" %}
-* When using weaving, the stickout length increases depending on the angle and amplitude. To compensate for this, set the height with a negative value during both search and track operations.
+* 使用编织时，突出长度会根据角度和振幅增加。为了补偿这一点，在搜索和跟踪操作期间将高度设置为负值。
 {% endhint %}
 
-### (3) LVS Monitoring
+### (3) LVS 监控
 
 ![](../../_assets/8_5_18_tracking_monitoring.png)<br>
-*Figure 8.5.18. LVS Monitoring*   
+*图 8.5.18. LVS 监控*   
 </br>
 
+LVS 监控可以通过选择 `[pane layout] - 选择 - LVS 跟踪 ([pane layout] - select - LVS tracking)` 来激活。
 
-LVS Monitoring can be activated by selecting `[pane layout] - select - LVS tracking`.
+在监控中，可以检查以下项目：
 
-In the monitoring, the follwing items can be checked:
-
-
-| Item | Description |
+| 项目 | 描述 |
 |------|------|
-| Total Cumulative Compensation<br> (X, Y, Z) | If weaving is not used, this represents the cumulative compensation relative to the base coordinate system. If weaving is used, it refers to the cumulative compensation in the weaving corrdinate syste. |
-| Sensor | qual: Indicates whether the current laser seam sensing is valid or invalid.<br> Y, Z: The position of the currently sensed seam in the sensor image coordinate system(2D). |
-| Tool Tip | The current position of the TCP relative to the base coordinate system. | 
-| Tracking Point | The point that the TCP is currently tracking, relative to the base coordinate system. |
-| Sensing Point | The base coordinate value of the location currently being sensed by the laser. |
-| Buffer Size | The number of points stored in the buffer for tracking. If this value keeps increasing, decreasing, or reaches 0, there may be a problem with tracking, communication, or configuration. |
-| Information | Displays the progress of the auto-calibration and other relevant information. |
-| Real-time Image | Displays the points to be tracked, represented by red circles, that are stored in the buffer. |
-
-
+| 总累计补偿<br> (X, Y, Z) | 如果未使用编织，则此项目表示相对于基准坐标系统的累计补偿。如果使用编织，则表示在编织坐标系统中的累计补偿。 |
+| 传感器 | qual: 指示当前激光接缝感应是否有效或无效。<br> Y, Z: 当前感应接缝在传感器图像坐标系统中的位置（2D）。 |
+| 工具尖端 | TCP 相对于基准坐标系统的当前位置。 | 
+| 跟踪点 | TCP 当前正在跟踪的点，相对于基准坐标系统。 |
+| 感应点 | 当前被激光感测位置的基准坐标值。 |
+| 缓冲区大小 | 存储在用于跟踪的数据缓冲区中的点数。如果该值不断增加、减少或达到 0，则可能存在跟踪、通信或配置的问题。 |
+| 信息 | 显示自动标定的进度和其他相关信息。 |
+| 实时图像 | 显示要跟踪的点，以红色圆圈表示，存储在缓冲区中。 |
 [__SOURCE](8_Application_function/6_Stitch/README.md)
-# 8.6 STITCH Function
+# 8.6 STITCH 功能
 [__SOURCE](8_Application_function/6_Stitch/1_overall_.md)
-# 8.6.1  STITCH Func. Overview
+# 8.6.1  STITCH Func. 概述
 
-Stitch welding is a function where welding is performed intermittently, similar to stitching. In [Figure 8.6.2], stitch welding is performed by setting start and end points on the specimen. In stitch welding, parameters `a` and `b` are set as shown in [Figure 8.6.1] to determine the length of the welding section and the non-welding section, thus forming the stitch pattern.
+缝合焊接是一种间歇性进行焊接的功能，类似于缝纫。在 [Figure 8.6.2] 中，通过在样本上设置起始和结束点来进行缝合焊接。在缝合焊接中，如 [Figure 8.6.1] 所示，参数 ` (a)` 和 ` (b)` 被设置，以确定焊接部分和非焊接部分的长度，从而形成缝合图案。
 
-[Figure 8.6.3] provides a simple explanation of the stitch welding process. Positions from P[1] to P[4] are recorded. In this diagram, stitch welding is performed at the P[2] and P[3] sections, using the commands ```stitch on/off``` and ```arcon/arcoff```.
+[Figure 8.6.3] 提供了缝合焊接过程的简单解释。从 P[1] 到 P[4] 的位置被记录。在此图中，使用命令 ```stitch on/off``` 和 ```arcon/arcoff``` 在 P[2] 和 P[3] 部分进行缝合焊接。
 
 </br>
 
 ![](../../_assets/8_6_1.png)<br>
-*Figure 8.6.1. Stitch Func. basic parameter* 
+*Figure 8.6.1. Stitch Func. 基本参数* 
 
 </br>
 
 
 
 ![](../../_assets/8_6_2.png)<br>
-*Figure 8.6.2. Stitch Welding specimen* 
+*Figure 8.6.2. 缝合焊接样本* 
  
 </br>
 
 
 ![](../../_assets/8_6_3.png)<br>
-*Figure 8.6.3. Stitch Welding Process* 
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
+*Figure 8.6.3. 缝合焊接过程* 
 [__SOURCE](8_Application_function/6_Stitch/2_command.md)
 # 8.6.2 STITCH Func. Command
  
 
 ![](../../_assets/8_6_4.png)<br>
-*Figure 8.6.4. Stitch Command Example*  
+*图 8.6.4. 缝合命令示例*  
 
 
 ```stitch``` Command: 
-After selecting `[F6: cmd.input] - arcweld - stitch` in sequence, choose on/off and press **[ENTER]**.
+在顺序选择 `[F6: 指令输入] - arcweld - stitch ([F6: cmd.input] - arcweld - stitch)` 后，选择开/关并按 **[ENTER]**。
 
 
 {% hint style="warning" %}
 - ```S2 move L, spd=10mm/s, accu=3, tool=1```  
-	- L : Ensure that linear interpolation is selected.  
-	- 200mm/sec : Welding speed - the speed during the ON section of the stitch welding. the unit must be set to mm/sec
-- ```arcon / arcoff``` Use the command together to start welding.
+	- L : 确保选择了线性插值。  
+	- 200mm/sec : 焊接速度 - 在缝合焊接的开机部分的速度。单位必须设置为 mm/sec
+- ```arcon / arcoff``` 一起使用命令开始焊接。
 {% endhint %}
 [__SOURCE](8_Application_function/6_Stitch/3_parameter.md)
-# 8.6.3 STITCH Func. Parameter setting
+# 8.6.3 STITCH Func. 参数设置
 
 
 ![](../../_assets/8_6_5.png)<br>
-*Figure 8.6.5. Stitch Welding Process Profile*
+*图 8.6.5. 缝焊过程剖面*
 
 
-[Figure 8.6.5] illustrates the stitch welding process. Based on this chart, you can configure the options for the `stitch` command.
+[图 8.6.5] 说明了缝焊过程。根据此图表，您可以配置 `stitch` 命令的选项。
 
 ![](../../_assets/8_6_6.png)<br>
-*Figure 8.6.6. Stitch Welding Condition Dialog Box1 (General)*
+*图 8.6.6. 缝焊条件对话框1 (常规)*
 
 ![](../../_assets/8_6_7.png)<br>
-*Figure 8.6.7. Stitch Welding Condition Dialog Box2 (Section)*
+*图 8.6.7. 缝焊条件对话框2 (段落)*
 
 
-[Figure 8.6.6] shows the screen accessed by placing the cursor on the `stitch` command and pressing the `[Property]` button on the left side of the TP screen. [Figure 8.6.7] is accessed by selecting the `[Section]` tab from the previous screen.
-The descriptions of the parameters for each figure are as follows:
+[图 8.6.6] 显示了通过将光标放置在 `stitch` 命令上并按 TP 屏幕左侧的 `[Property]` 按钮访问的屏幕。[图 8.6.7] 是通过从前一个屏幕选择 `[Section]` 标签访问的。
+每个图的参数描述如下：
 
-- Condition Number: Select from the list of conditions on the right
-- Description: Input using the soft keyboard
-- General
-  - (1) On delay Time: The time period during which the welding signal is turned on in advance
-  - (2) Off delay Time: The time period during which the welding signal is turned off in advance
-  - (3) Distance to Start: The length of the speed entry section before the stitch welding starts(On section)
-  - (4) Off Speed: Welding Speed during the non-overlapping (Off) section
+- 条件编号：从右侧的条件列表中选择
+- 描述：使用软键盘输入
+- 常规
+  - (1) 延时开启时间：焊接信号提前开启的时间段
+  - (2) 延时关闭时间：焊接信号提前关闭的时间段
+  - (3) 启动距离：缝焊开始前的速度输入段的长度（开启段）
+  - (4) 关闭速度：非重叠（关闭）段的焊接速度
 
-- Section
-  - (5) Section: Stitch welding condition  <br/>
-    Example. When stitch welding under the conditions of section 1 is performed for the specified count, stitch welding proceeds under the conditions of section 2
-  - (6) On Distance: Length of the welding section
-  - (7) Off Distance: Length of the non-overlapping (Off) section
-  - (8) Count: Number of stitch welding repetitions
-  - (9) On speed: Welding speed during the welding section
+- 段落
+  - (5) 段落：缝焊条件  <br/>
+    示例。当在段落 1 的条件下进行缝焊指定次数后，缝焊将在段落 2 的条件下进行。
+  - (6) 开启距离：焊接段的长度
+  - (7) 关闭距离：非重叠（关闭）段的长度
+  - (8) 次数：缝焊重复的次数
+  - (9) 开启速度：焊接段的焊接速度
 
 {% hint style="warning" %}
-- `(9) on speed`: The speed for the welding (ON) section in the stitch section is set as the step speed.
+- `(9) 开启速度`：缝段中的焊接（开启）段的速度设置为步幅速度。
 {% endhint %}
-
-
 [__SOURCE](8_Application_function/6_Stitch/4_aux_spec.md)
 # 8.6.4 STITCH Func. Additional Specifications
 
-- **Emergency Stop, Restart**  
+- **紧急停止，重启**  
 
-During stitch welding, the process can resume after an emergency stop or playback stop. However, if the controller power is turned off and rebooted, the stitch welding cannot be restarted.
+在缝合焊接过程中，经过紧急停止或回放停止后，工艺可以恢复。然而，如果控制器电源关闭并重启，则无法重新启动缝合焊接。
 [__SOURCE](8_Application_function/7_LPS/README.md)
 # 8.7 LPS(Laser Point Sensing)  
 
 {% hint style="info" %}
-This function is supported in versions 70.00-00 and later.
+此功能在版本70.00-00及更高版本中受支持。
 {% endhint %}
 
-This function is used to achieve effects similar to touch sensing, such as detecting the weld start point, intermediate points, and end point.
-Since touch sensing requires the welding wire to make direct contact with the base material, it takes a longer execution time and may cause interference due to the welding torch.  
+此功能用于实现类似触觉传感的效果，例如检测焊接起点、中间点和终点。  
+由于触觉传感要求焊接电线与基材直接接触，因此执行时间较长，并可能因焊炬而导致干扰。  
 
-To overcome these limitations, the Laser Point Sensing (LPS) function using a 1D-type laser distance sensor is provided.
-By utilizing a laser, sensing time is reduced and interference constraints are minimized, allowing weld points to be detected more easily and quickly under simple conditions.  
+为了克服这些限制，提供了使用1D型激光距离传感器的激光点传感（LPS）功能。  
+通过利用激光，感应时间缩短，干扰约束最小化，使得在简单条件下更容易更快地检测焊点。  
 
-Once the laser sensor is installed on the tool flange equipped with the welding torch using a bracket, and tool-to-sensor calibration is performed once, the pose of the position indicated by the laser can be obtained easily.
-In addition to step detection, the pose of a weld point can be obtained easily regardless of the base material shape, without requiring complex condition settings.
-Similar to touch sensing, Master mode can be used, and when a workpiece is introduced, the amount of shift from the reference position can be calculated automatically.  
+一旦将激光传感器通过支架安装在配备焊炬的工具法兰上，并进行一次工具与传感器的标定，就可以轻松获取激光指示的位置姿态。  
+除了步检测外，焊点的姿态可以轻松获取，无需复杂的条件设置，无论基材形状如何。  
+与触觉传感类似，可以使用主模式，当工件被引入时，可以自动计算与参考位置的偏移量。  
 
-
-In the following sections, you will complete the sensor setup and begin using the LPS function.
-
-
-
+在接下来的部分中，您将完成传感器设置并开始使用LPS功能。
 [__SOURCE](8_Application_function/7_LPS/1_settings.md)
 <script id="page-config" type="application/json">
 {
@@ -4639,229 +4275,220 @@ In the following sections, you will complete the sensor setup and begin using th
 }
 </script>
 
-# 8.7.1 Laser Sensor Setup  
+# 8.7.1 激光传感器设置  
 
 
-To use the LPS function, it is necessary to first install the laser sensor and configure communication specifications and related settings.
+要使用LPS功能，首先需要安装激光传感器，并配置通信规范和相关设置。
 <br/>
 
-### (1) Mounting the Laser Sensor Using a Connection Bracket
+### (1) 使用连接支架安装激光传感器
 
-The connection bracket may be designed and fabricated by the user, or provided by our company or the sensor manufacturer.
+连接支架可以由用户设计和制造，或由我们公司或传感器制造商提供。
 
 ![](../../_assets/8_7_1.png)<br>
-*Figure 8.7.1. Installation of the laser sensor using a bracket*
+*图 8.7.1. 使用支架安装激光传感器*
 
-A laser distance sensor consists of a transmitter and a receiver.
-When the robot is aligned with the arc torch, ensure that the transmitter/receiver of the laser sensor is aligned with the tool-based X direction (refer to the laser manufacturer's specifications).
-In addition, it is recommended to install the sensor on the right side of the tool Y direction (right side when facing the torch).  
+激光距离传感器由发射器和接收器组成。
+当机器人与弧焊枪对齐时，请确保激光传感器的发射器/接收器与基于工具的X方向对齐（请参考激光制造商的规格）。
+此外，建议将传感器安装在工具Y方向的右侧（面向焊枪时的右侧）。  
 
-When the laser is installed and powered on, keeping the distance between the tool tip and the laser point as short as possible is advantageous in terms of interference prevention and CT (Cycle Time).
-Finally, the sensor installation position relative to the tool tip must be suitable for the specifications of the laser sensor being used (measurement range), and should be installed higher than the minimum specified distance.
+安装激光器并通电后，保持工具尖与激光点之间的距离尽可能短，有助于干扰防止和循环时间（CT）。
+最后，传感器安装位置相对于工具尖必须适合所使用的激光传感器的规格（测量范围），并应安装在高于最小规定距离的位置。
 
 
 
 {% hint style="warning" %}
-  It is recommended to mount the sensor bracket directly to the robot flange. In other words, install the mechanical structure in the following order: **Flange - Laser sensor and bracket - Shock sensor - Torch.**
+  建议将传感器支架直接安装到机器人法兰上。换句话说，机械结构的安装顺序为：**法兰 - 激光传感器和支架 - 冲击传感器 - 焊枪。**
 {% endhint %}
 
 
-### (2) Communication Setup
+### (2) 通信设置
 
-The laser sensor can be connected according to its specifications by referring to the following link.
-(Refer to [${cont_model} - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en-${cont_model}/README?cont_model=${cont_model}))
+可以根据激光传感器的规范通过参考以下链接进行连接。
+(参考 [${cont_model} - 工业通信](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/zh-${cont_model}/README?cont_model=${cont_model}))
 
-This page describes examples for selected sensors only.
+本页面仅描述所选传感器的示例。
 
-* Before proceeding with the setup, connect the sensor head, controller, communication unit (if applicable), and SMPS, and then supply power.
-(If the connection order is incorrect, sensing values may not be received. Therefore, ensure that the sensor is connected first during subsequent setups as well.)
+* 在进行设置之前，连接传感器头、控制器、通信单元（如果适用）和SMPS，然后供电。
+（如果连接顺序不正确，则可能无法接收传感值。因此，在后续设置中，请确保首先连接传感器。）
 
 
-#### Serial - Example: Keyence LK-G400
+#### 串行 - 示例：Keyence LK-G400
 
-First, configure the sensor controller settings.
+首先，配置传感器控制器设置。
 
-* Communication Speed Setting (Required)  
-1. Press and hold the `SET` key, then press the `[UP]` key to select `Enu`.
-2. Press the `ENT` key and use the `[RIGHT]` key to select function `A` (RS-232C).
-3. Press the `ENT` key to check the current value (A-b0 to b4; 9600 / 19200 / 38400 / 57600 / 115200).
+* 通信速度设置（必需）  
+1. 按住`SET`键，然后按`[UP]`键选择`Enu`。
+2. 按`ENT`键，使用`[RIGHT]`键选择功能` (A)`（RS-232C）。
+3. 按`ENT`键检查当前值（A-b0到b4；9600 / 19200 / 38400 / 57600 / 115200）。
 
-* Display Unit Setting (Optional)  
-1. Press and hold the `SET` key, then press the `[UP]` key to select `oUt-1`.
-2. Press the `ENT` key and use the `[RIGHT]` key to select function `G`.
-3. Press the `ENT` key and use the `[UP]` key to set the desired number of decimal places (G-0 to ; 0.01, 0.001, ...).
+* 显示单位设置（可选）  
+1. 按住`SET`键，然后按`[UP]`键选择`oUt-1`。
+2. 按`ENT`键，使用`[RIGHT]`键选择功能`G`。
+3. 按`ENT`键并使用`[UP]`键设置所需的小数位数（G-0；0.01, 0.001,...）。
 
-Navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting`.
+导航到`[F2: 系统] - 4: 应用参数 - 6: 激光点传感 - 1: 环境设置 ([F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting)`。
 
 ![](../../_assets/8_7_2.png)<br>
-*Figure 8.7.2. Laser Communication Setup (Keyence LK-G)*
+*图 8.7.2. 激光通信设置（Keyence LK-G）*
 </br>
 
-Select Keyence as the LPS brand to configure the settings.
-Once the setup is complete, verify that the value displayed in the **Sensing Distance (mm)** field matches the output value from the controller.
+选择Keyence作为LPS品牌进行设置。
+设置完成后，验证**传感距离（mm）**字段中显示的值是否与控制器的输出值匹配。
 
 <br/>
 
 
-#### EtherNet/IP - Example: Baumer OM-70
+#### EtherNet/IP - 示例：Baumer OM-70
 
-Connect the sensor to a PC and access the web interface.
-(The default fixed IP address is 192.168.0.250.)
+将传感器连接到PC并访问网页界面。
+（默认固定IP地址为192.168.0.250。）
 
 ![](../../_assets/8_7_3.png)<br>
-*Figure 8.7.3. Baumer Sensor Web Configuration*
+*图 8.7.3. Baumer传感器网页配置*
 </br>  
 
-Navigate to `Device Configuration` tab and set the communication method according to the intended purpose.
-At this time, enable only the method that matches the currently used communication protocol in the Process Interface section.
+导航到`设备配置`选项卡，并根据预期目的设置通信方式。
+此时，仅启用与当前在过程接口部分使用的通信协议相匹配的方法。
 
-If **Ethernet/IP** is used, complete the network settings accordingly. In the ${cont_model}, network ranges 0, 1, and 2 are used by default, so a different range must be assigned. (e.g. 192.168.10.250.)
+如果使用**Ethernet/IP**，请相应地完成网络设置。在${cont_model}中，默认使用网络范围0、1和2，因此必须分配不同的范围。（例如：192.168.10.250。）
 
 ![](../../_assets/8_7_4.png)<br>
-*Figure 8.7.4. Baumer Sensor Network Settings*
+*图 8.7.4. Baumer传感器网络设置*
 </br>   
 
-Afterward, proceed step by step by following the link below.
-Note that Hi6 does not support built-in Ethernet, so a communication card must be used ([Hi6 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en-Hi6/1-cifx-pci-communication/3-cifx-pci-settings-industrial-communication/3-EtherNet-IP/README?cont_model=Hi6)).
-From Hi7 and later, built-in Ethernet is supported, allowing communication to be established using the controller alone ([Hi7 - Industrial Communication](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/en-Hi7/2-ethernet-ip/4-scanner/README?cont_model=Hi7)).
+然后，按以下链接逐步进行。
+请注意，Hi6不支持内置以太网，因此必须使用通信卡（[Hi6 - 工业通信](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/zh-Hi6/1-cifx-pci-communication/3-cifx-pci-settings-industrial-communication/3-EtherNet-IP/README?cont_model=Hi6)）。
+从Hi7及以后，支持内置以太网，允许仅使用控制器建立通信（[Hi7 - 工业通信](https://hrbook-hrc.web.app/#/view/doc-industrial-communication/zh-Hi7/2-ethernet-ip/4-scanner/README?cont_model=Hi7)）。
 
 
 
 ![](../../_assets/8_7_5.png)<br>
-*Figure 8.7.5. Baumer Sensor Signal Assignment*
+*图 8.7.5. Baumer传感器信号分配*
 </br>
 
-Once the above steps are completed, navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting - Signal tab`.
-Configure the input signals for the assigned blocks.
-You can then confirm that the distance (current value) is output as the sensor value. (Additional settings are required if sensor-to-distance mapping is needed.)
+完成上述步骤后，导航到`[F2: 系统] - 4: 应用参数 - 6: 激光点传感 - 1: 环境设置 - 信号选项卡 ([F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting - Signal tab)`。
+配置所分配块的输入信号。
+然后，可以确认距离（当前值）作为传感器值输出。（如果需要传感与距离的映射，则需要额外设置。）
 
 
-#### EtherNet/IP - Example: Keyence IL-300
+#### EtherNet/IP - 示例：Keyence IL-300
 
-* Refer to the manufacturer's manual and our manual to connect the sensor in the same manner as the Baumer sensor.
-As described above, the Ethernet connection method differs depending on whether an Hi6 or Hi7 controller is used.
-
+* 根据制造商手册和我们的手册，以与Baumer传感器相同的方式连接传感器。
+如上所述，Ethernet连接方法取决于使用的是Hi6还是Hi7控制器。
 [__SOURCE](8_Application_function/7_LPS/2_calibration.md)
-# 8.7.2 TCP-Sensor Calibration  
+# 8.7.2 TCP-传感器校准  
 
-
-Before using the LPS function, calibration between the TCP and the sensor must be performed.
-The following section describes how to perform TCP-to-sensor calibration.
-
-<br/>
-
-### (1) Preparation of the Calibration Specimen
-
-When a license is purchased through our company, a calibration specimen for automatic calibration is provided.
+在使用LPS功能之前，必须对TCP和传感器进行校准。  
+以下部分描述如何执行TCP到传感器的校准。
 
 <br/>
 
+### (1) 校准样本的准备  
 
-### (2) Preparation  
+当通过我公司购买许可证时，将提供用于自动校准的校准样本。
 
-Before performing calibration, the tool must be perfectly aligned with the calibration plane.
-Teach the tool manually in the X and Y directions based on the tool coordinate system, and check that the laser output remains constant (with the error kept within 0.5 or less). Adjust the RX and RY values as necessary.  
+<br/>
 
-Once the tool is aligned, position the wire tip at the edge of the calibration plane.
-When teaching in the tool-based X-Y directions, adjust the RZ value so that the laser point moves along the edge corner.  
+### (2) 准备  
+
+在执行校准之前，工具必须与校准平面完美对齐。  
+根据工具坐标系手动教导工具在X和Y方向上的位置，并检查激光输出保持不变（误差保持在0.5或更低）。根据需要调整RX和RY值。  
+
+工具对齐后，将线缆尖端放置在校准平面的边缘。  
+在工具基础的X-Y方向上进行教学时，调整RZ值，使激光点沿着边缘角移动。  
 
 <br/>
 
 ![](../../_assets/8_7_2_1.png)<br>
-*Figure 8.7.2.1 Preparation before calibration*<br/>  
+*图8.7.2.1 校准前的准备*<br/>  
 
-After completing the above steps, all preparations required for performing calibration are complete.
+完成上述步骤后，进行校准所需的所有准备工作已完成。
 
+### (3) 执行自动校准  
 
-### (3) Performing Automatic Calibration
-
-Position the wire tip at one vertex of the calibration plane.
-In addition, ensure that the laser point is located inside the calibration plane.  
+将线缆尖端放置在校准平面的一个顶点。  
+此外，确保激光点位于校准平面内部。  
 
 <br/>
 
 ![](../../_assets/8_7_2_2.png)<br>
-*Figure 8.7.2.2 Start of calibration*<br/>  
+*图8.7.2.2 校准开始*<br/>  
 
-From the lower panel, select `[F6: cmd. input] - arcweld - lps` and insert the following command.
+从下方面板中选择`[F6: cmd. input] - arcweld - lps`并插入以下命令。
 
 ```py
   lps auto_calib, cnd=<Condition Number>, Tx=<Movement Distance in the X-dir based on the tool>, Ty=<Movement Distance in the Y-dir based on the tool
 ```
 
-At this time, the movement distance must be set greater than the distance the laser is required to travel.
-If detection fails within the specified parameters, a calibration error will occur.  
+此时，移动距离必须设置为大于激光所需移动的距离。  
+如果在指定参数内检测失败，将发生校准错误。  
 
-When executed in automatic method, calibration is performed through the following sequence of operations:  
+在自动方式下执行时，校准通过以下操作序列进行：  
 
-1. The laser point moves in the Tx and Ty directions, initially moving toward the tool tip direction.
-2. The robot is lifted in the +Z direction based on the robot coordinate system, and the same process as in Step 1 is performed.
-3. The robot moves downward in the -Z direction based on the robot coordinate system, while interpolation is performed toward the transmitter/receiver direction of the sensor (current bracket specification Tx).  
+1. 激光点向Tx和Ty方向移动，最初朝向工具尖端方向移动。  
+2. 根据机器人坐标系，机器人在+Z方向上抬起，并执行与步骤1相同的过程。  
+3. 根据机器人坐标系，机器人在-Z方向上向下移动，同时向传输/接收器方向进行插值（当前支架规格Tx）。  
 
-Once calibration is fully completed, an execution mark appears on the left side of the step, and all motion stops.  
+校准完全完成后，步骤左侧出现执行标记，所有运动停止。  
 
+### (4) 校准信息  
 
-### (4) Calbration Information
-
-Navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 2: Calibration` to check the calibration results.
-When the value in the **Calibration done** field changes to "2", it indicates that all calibration processes, including interpolation, have been completed.  
-Calibration information is stored per tool number, which is useful when using tool change functions.
-If the tool information is the same but a different tool number is to be used, the calibration data can be copied and reused.
+导航到`[F2: 系统] - 4: 应用参数 - 6: 激光点传感 - 2: 校准 ([F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 2: Calibration)`以检查校准结果。  
+当**校准完成**字段中的值变为“2”时，表示所有校准过程，包括插值，已完成。  
+校准信息是按工具编号存储的，这在使用工具更换功能时非常有用。  
+如果工具信息相同，但要使用不同的工具编号，则可以复制并重用校准数据。
 
 <br/>
 
 ![](../../_assets/8_7_2_3.png)<br>
-*Figure 8.7.2.3 Calibration Result*<br/>  
-
-
-
+*图8.7.2.3 校准结果*<br/>
 [__SOURCE](8_Application_function/7_LPS/3_function.md)
-# 8.7.3 Using the LPS Function  
-
+# 8.7.3 使用 LPS 功能  
 
 {% hint style="warning" %}
-If tool-to-sensor calibration (ref. 8.7.2) has not been performed before using this function, invalid poses may be stored.
+如果在使用此功能之前未执行工具与传感器的校准（参见 8.7.2），可能会存储无效的姿态。
 {% endhint %}
 
-### Property Window
+### 属性窗口
 
-The properties of the LPS command are as follows.  
+LPS 命令的属性如下。  
 <br/>
 
 ![](../../_assets/8_7_3_0.png)<br>
-*Figure 8.7.3.0 LPS Property*<br/>  
+*图 8.7.3.0 LPS 属性*<br/>  
 
-#### Gap Coefficient
+#### 间隙系数
 
-  This parameter is used to detect step differences in **Step mode (stepp)** and allows the user to specify the detected height difference.
-  However, this parameter is not used during the calibration process, as a separate calibration specimen is used.
+此参数用于在 **步进模式 (stepp)** 中检测步骤差异，并允许用户指定检测到的高度差。  
+但是，在校准过程中不使用此参数，因为使用了单独的校准样本。
 
-#### Step Sensitivity
+#### 步骤灵敏度
 
-  This parameter sets the data processing sensitivity based on repeatability.
-  In most cases, users can use the default value, and no additional adjustment is required.
+此参数根据重复性设置数据处理的灵敏度。  
+在大多数情况下，用户可以使用默认值，不需要额外调整。
 
-#### Slope Threshold (Slope Degree)
+#### 倾斜阈值（倾斜度）
 
-  This parameter is used to detect edges.
-  In addition to the step coefficient, it can be configured during tool-to-sensor calibration operations and step detection.
-  Since edges are not always vertical, this parameter allows the system to respond to sloped surfaces.
+此参数用于检测边缘。  
+除了步骤系数外，它可以在工具与传感器的校准操作和步骤检测期间进行配置。  
+由于边缘不总是垂直，因此此参数允许系统对倾斜表面做出响应。
 
-#### Pose Coordinates / Shift Coordinates
+#### 姿态坐标 / 移位坐标
 
-  This setting specifies the coordinate system in which data is stored when each mode is executed.
-  In particular, Shift Coordinates are used when Master mode is enabled.
+此设置指定在执行每个模式时存储数据的坐标系统。  
+特别是，当启用主模式时，会使用移位坐标。
 
 <br/>
 
-### (1) Spot Mode  
+### (1) 点模式  
 
-**Spot mode** is used to verify calibration results or to obtain the pose of the position currently indicated by the laser.  
+**点模式**用于验证校准结果或获取激光当前指示位置的姿态。  
 
 <br/>
 
 ![](../../_assets/8_7_3_1.png)<br>
-*Figure 8.7.3.1 Spot Mode*<br/>  
+*图 8.7.3.1 点模式*<br/>  
 
 ```py
   var p10=cpo()
@@ -4870,22 +4497,22 @@ The properties of the LPS command are as follows.
 ```
 
 {% hint style="warning" %}
-  In this case, only the position is recorded in the pose specified by the sp parameter.
-  The tool orientation (Rx, Ry, Rz) prior to sensing is not preserved.
+在这种情况下，仅在 sp 参数指定的姿态中记录位置。  
+感应前的工具方向 (Rx, Ry, Rz) 不被保留。
 {% endhint %}
 
 <br/>
 
 
-### (2) Step Mode
+### (2) 步骤模式
 
-**Step Mode** is used to detect positions where a height difference occurs on the base material.
-Depending on whether the height difference is lower or higher, the scan direction should be reserved accordingly.  
+**步骤模式**用于检测基材上发生高度差异的位置。  
+根据高度差异的高低，扫描方向应相应保留。  
 
 <br/>
 
 ![](../../_assets/8_7_3_2.png)<br>
-*Figure 8.7.3.2 Step Mode*<br/>  
+*图 8.7.3.2 步骤模式*<br/>  
 
 ```py
   var p10=cpo()
@@ -4893,17 +4520,16 @@ Depending on whether the height difference is lower or higher, the scan directio
   move L,tg=p10,spd=10%,acc=0,tool=0
 ```
 
-
-The system moves by the specified distance in the X or Y direction based on the tool while searching for a step difference.
-If no step is detected within the specified distance, a detection error occurs.  
+系统根据工具在 X 或 Y 方向上以指定距离移动，同时搜索步骤差异。  
+如果在指定距离内未检测到步骤，将发生检测错误。  
 
 <br/>
 
 
-### (3) Scan Mode
+### (3) 扫描模式
 
 ![](../../_assets/8_7_3_3.png)<br>
-*Figure 8.7.3.3 Scan Mode on various geometries*<br/>  
+*图 8.7.3.3 在各种几何形状上进行的扫描模式*<br/>  
 
 ```py
   var p10=cpo()
@@ -4911,38 +4537,35 @@ If no step is detected within the specified distance, a detection error occurs.
   move L,tg=p10,spd=10%,acc=0,tool=0
 ```
 
-Scan mode detects weld points while moving by the specified distance in the X or Y direction based on the tool.
-It can be executed with a single command regardless of the joint geometry, such as fillet, V-groove, or butt joints.
-Detection results can be retrieved via the REST API, or verified by registering and using the application provided by our company.  
+扫描模式在根据工具在 X 或 Y 方向上移动指定距离时检测焊点。  
+不论是圆角、V型槽还是对接接头，都可以通过单个命令执行。  
+检测结果可以通过 REST API 检索，或通过注册并使用我们公司提供的应用程序进行验证。  
 
-For instructions on how to register and use the application, please refer to the following link: [Software Development Kit (SDK)](https://hrbook-hrc.web.app/#/view/doc-hi6-sdk/en/README?cont_model=${cont_model})  
-
+有关注册和使用应用程序的说明，请参阅以下链接：[软件开发工具包 (SDK)](https://hrbook-hrc.web.app/#/view/doc-hi6-sdk/zh/README?cont_model=${cont_model})  
 
 {% hint style="warning" %}
-  Set the movement distance sufficiently to include the weld seam, and ensure that the tool motion is not parallel to the scanned surface.
+将移动距离设置得足够大，以包括焊缝，确保工具运动不与扫描表面平行。
 {% endhint %}  
 
 
-#### (3-1) Monitoring Screen  
+#### (3-1) 监控屏幕  
 
 ![](../../_assets/8_7_3_4.png)<br>
-*Figure 8.7.3.4 LPS Graph*<br/>  
+*图 8.7.3.4 LPS 图表*<br/>  
 
-After registering the application, the monitoring screen can be accessed through the following method: `[Pane layout] - select - LPS Graph` 
+注册应用程序后，可以通过以下方法访问监控屏幕：`[Pane layout] - 选择 - LPS Graph ([Pane layout] - select - LPS Graph)` 
 
 <br/>
 
 ![](../../_assets/8_7_3_5.png)<br>
-*Figure 8.7.3.5 Example screen - V-groove*<br/>  
+*图 8.7.3.5 示例屏幕 - V型槽*<br/>  
 
 ![](../../_assets/8_7_3_6.png)<br>
-*Figure 8.7.3.6 Example screen - Butt joint*<br/>  
+*图 8.7.3.6 示例屏幕 - 对接接头*<br/>  
 
+当执行此功能时，可以如上图所示查看结果。  
+目前提供的屏幕具备以下功能：  
 
-When the function is executed, results can be viewed as shown in the figure above.
-The currently provided screen offers the following features:  
-
-1. The screen can be refreshed by clicking the Refresh button in the upper-left corner.
-2. The numeric value displayed in the upper-right corner represents the real-time output value of the laser sensor.
-3. The calculated weld point is indicated by a red dot.
-
+1. 可以通过点击左上角的刷新按钮刷新屏幕。
+2. 右上角显示的数字值代表激光传感器的实时输出值。
+3. 计算的焊点由红点表示。

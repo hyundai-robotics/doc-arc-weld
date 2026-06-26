@@ -1,10 +1,10 @@
-﻿# 8.3.7 Multi-pass Command
+# 8.3.7 多遍命令
 
 
-### (1) Command
+### (1) 命令
 
-The sensing trajectory can be saved and loaded using the multipass command. 
-This command can be used in three different forms:
+感应轨迹可以使用多遍命令进行保存和加载。 
+该命令可以以三种不同形式使用：
 <br>
 
 ```py
@@ -13,30 +13,30 @@ This command can be used in three different forms:
     multipass off
 ```
 
-### (2) Multi-pass Parameters
+### (2) 多遍参数
 
-For detailed information on the multi-pass command parameters, please refer to the following link: <br>
+有关多遍命令参数的详细信息，请参考以下链接: <br>
 [2.11 multipass](../../2_Command/11_multipass.md)
 
 <br>
 
-This section will explain only the following two items:  
+本节将仅解释以下两个项目：  
 
 
-- Left-Right/Up-Down Shift
+- 左右/上下偏移
 
-This sets the distance by which the trajectory is shifted from the original path during multipass reproduction.
-Since the torch weaving is perpendicular to the tool, each shift is set as follows:
-the left/right direction becomes the weaving plane, and the up/down direction becomes the plane perpendicular to the weaving plane.
+这设置了在多遍重现过程中轨迹从原始路径偏移的距离。
+由于喷嘴编织与工具垂直，因此每个偏移设置如下：
+左/右方向成为编织平面，而上下方向成为与编织平面垂直的平面。
 
 ![](../../_assets/8_3_11.png)<br>
-*Figure 8.3.11 Multipass Shift Direction*
+*图 8.3.11 多遍偏移方向*
 
 
-- Angle Shift: TAS, WAS  
+- 角度偏移：TAS, WAS  
 
-When performing multi-pass welding, the torch must be tilted for quality control. This setting is used to define the required tilt.
-The concept of angles for each item is illusatrated in the following figures:  
+在进行多遍焊接时，喷嘴必须倾斜以进行质量控制。此设置用于定义所需的倾斜。
+每个项目的角度概念在以下图中阐明：  
 
 ![](../../_assets/8_3_12.png)<br>
-*Figure 8.3.12 Multipass Angle Shift Concept*
+*图 8.3.12 多遍角度偏移概念*

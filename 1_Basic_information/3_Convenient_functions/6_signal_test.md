@@ -1,16 +1,14 @@
-﻿# 1.3.6 Arc Welding signal test function
+﻿# 1.3.6 弧焊信号测试功能
 
+弧焊信号测试功能允许您测试关键焊接信号的输入/输出状态并手动释放电线突出。此功能对于检查焊机和通信的状态非常有用，因为它确认特定信号是否正常工作。
 
-The Arc Welding Signal Test function lets you test the input/output status of key welding signals and manually release wire stick-out. This feature is useful for checking the status of welder and communication as it confirms wheter specific signals are operating correctly.
-
-To use this feature, on TP, press `[pane layout] - select - arc welding` sequentially. In the Arc Welding panel, scroll down to see the input/output signal items.
-
+要使用此功能，请在TP上依次按`[pane layout] - 选择 - 弧焊 ([pane layout] - select - arc welding)`。在弧焊面板中，向下滚动以查看输入/输出信号项目。
 
 ![](../../_assets/1_3_3.png)<br>
-*Figure 1.3.3. Arc Welding Monitoring*
+*图 1.3.3. 弧焊监控*
 
-| Item | Description |
+| 项目 | 描述 |
 | ------------- | ---------------------------------------------------------- |
-| **Output Signal** | With the desired output signal selected, click the **[Manual Output]** button to test turnning the signal on/off. |
-| **Input Signal**| You can verify whether input signals are being recieved correctly according to their operation. |
-| **Command Value**| <li>**Manual Wire Stick-out Release**: Select "Stick check" and click the **[Manual Output]** button. </li> <li>**Manual Welder Error Reset**: Select "Welder Error Reset" and click the **[Manual Output]** button. </li>|
+| **输出信号** | 选择所需的输出信号后，单击**[手动输出]**按钮以测试打开/关闭信号。 |
+| **输入信号**| 您可以验证输入信号是否根据其操作正确接收。 |
+| **命令值**| <li>**手动电线突出释放**: 选择“突出检查”，然后单击**[手动输出]**按钮。</li> <li>**手动焊机错误重置**: 选择“焊机错误重置”，然后单击**[手动输出]**按钮。</li>|

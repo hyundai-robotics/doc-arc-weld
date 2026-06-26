@@ -1,8 +1,8 @@
-﻿# 2.9 heightsen on
+# 2.9 heightsen on
 
 ### Description 
 
-```heightsen on``` command starts the height sensing function(AVC, Arc length control).  
+```heightsen on``` 命令启动高度感应功能（AVC，弧长控制）。  
 
 
 ### Syntax
@@ -14,17 +14,15 @@
 
 | Item | Meaning | Remarks |
 | --- | --- | --- |
-| **Condition Number** | The number of the welding condition used to starting Arc Welding and the specific condition (1 ~ 8) | Variable |
+| **Condition Number** | 用于开始弧焊的焊接条件的编号和特定条件 (1 ~ 8) | Variable |
 
 
 ### Example
 
 ```python   
-    heightsen on, cnd=1        # Starts height sensing with condition number 1.
+    heightsen on, cnd=1        # 使用条件编号 1 启动高度感应。
 ```  
 
 
 ### Details
-  Refer to [[8.4 Height Sensing]](../8_Application_function/4_Height_sensing/README.md)
-
-
+  请参阅 [[8.4 Height Sensing]](../8_Application_function/4_Height_sensing/README.md)

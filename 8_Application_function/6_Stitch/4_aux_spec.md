@@ -1,5 +1,5 @@
-﻿# 8.6.4 STITCH Func. Additional Specifications
+# 8.6.4 STITCH Func. Additional Specifications
 
-- **Emergency Stop, Restart**  
+- **紧急停止，重启**  
 
-During stitch welding, the process can resume after an emergency stop or playback stop. However, if the controller power is turned off and rebooted, the stitch welding cannot be restarted.
+在缝合焊接过程中，经过紧急停止或回放停止后，工艺可以恢复。然而，如果控制器电源关闭并重启，则无法重新启动缝合焊接。

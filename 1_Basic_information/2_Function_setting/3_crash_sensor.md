@@ -1,27 +1,27 @@
-﻿# 1.2.3 Collision sensor signal settings
+﻿# 1.2.3 碰撞传感器信号设置
 
-Arc welding robot systems uses a collision sensor to prevent torch deformation. The collision sensor basically uses negative logic to immediately detect issues such as a disconnected sensor cable.
+弧焊机器人系统使用碰撞传感器来防止焊枪变形。碰撞传感器基本上使用负逻辑来立即检测诸如传感器电缆断开等问题。
 
-The setup dialog box is as follows:
+设置对话框如下：
 
-You can configure the collision sensor processing method on `[F2: System] - 1: User Environment`.
+您可以在`[F2: 系统] - 1: 用户环境 ([F2: System] - 1: User Environment)`中配置碰撞传感器处理方法。
 
 
-#### [Collision sensor process]
+#### [碰撞传感器处理]
 | item | Description |
 |------|------|
-|**Emergency Stop**|When a collision sensor signal is input, the robot turns off its motor and performs an emergency stop|
-|**Stop**|When a collision sensor signal is input, the robot keeps its motors On and performs a stop|
+|**紧急停止**|当输入碰撞传感器信号时，机器人将关闭电机并执行紧急停止|
+|**停止**|当输入碰撞传感器信号时，机器人保持电机开启并执行停止|
 
-#### [How to Change Signal Logic]
-If the tool collides and the collision sensor signal turns on, the motor will not turn on. In this case, you need to change the signal logic to negative logic as follows.
+#### [如何更改信号逻辑]
+如果工具发生碰撞且碰撞传感器信号打开，电机将不会启动。在这种情况下，您需要将信号逻辑更改为负逻辑，如下所示。
 
-- `[F2: System] - 2: Control parameter - 2: Input/Output signal setting - 1: Input signal attribute` - Adding a Signal and Checking the Negative Logic Box  
+- `[F2: 系统] - 2: 控制参数 - 2: 输入/输出信号设置 - 1: 输入信号属性 ([F2: System] - 2: Control parameter - 2: Input/Output signal setting - 1: Input signal attribute)` - 添加信号并勾选负逻辑框  
 
 
 ![](../../_assets/1_2_3.png)<br>
-*Figure 1.2.3. How to Change Signal Logic*
+*图 1.2.3. 如何更改信号逻辑*
 
 {% hint style="info" %}
-When you set up a collision sensor in the system's input signal settings, the system will prioritize the input from this signal. Any collision sensor signals received via welder communication will be ignored.
+当您在系统的输入信号设置中设置碰撞传感器时，系统将优先考虑来自此信号的输入。通过焊接机通信接收到的任何碰撞传感器信号将被忽略。
 {% endhint %}

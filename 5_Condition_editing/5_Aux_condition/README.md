@@ -1,5 +1,3 @@
-﻿# 5.5 Welding Auxiliary condition
+# 5.5 焊接辅助条件
 
-
-When the arc welding settings are digital and [Auxiliary condition] tab is pressed in the welding start condition dialog box, the following welding auxiliary condition editing screen appears.
-
+当电弧焊接设置为数字并且在焊接启动条件对话框中按下[Auxiliary condition]选项卡时，以下焊接辅助条件编辑屏幕将出现。

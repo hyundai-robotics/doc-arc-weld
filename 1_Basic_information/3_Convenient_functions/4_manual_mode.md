@@ -1,14 +1,14 @@
-﻿# 1.3.4 Manual Mode Arc Welding
+﻿# 1.3.4 手动模式弧焊
 
-Generally, Arc Welding is only possible when the robot operates in automatic or remote mode.
+一般来说，弧焊只有在机器人运行于自动或远程模式时才可能。
 
-Manual Mode Arc Welding is a function that allows welding even when the robot is in manual mode. This is convenient for repeatedly testing various welding conditions during setup.
+手动模式弧焊是一种允许在机器人处于手动模式时进行焊接的功能。这对于在设置期间反复测试各种焊接条件非常方便。
 
-To use Manual Mode Arc Welding, it should be set as below.
+要使用手动模式弧焊，应按如下设置。
 
- (1) Go to `[F2: System] - 4: Application parameter - 2: Arc welding - Arc welding enable during manual mode` and check enable.
+ (1) 转到 `[F2: 系统] - 4: 应用参数 - 2: 弧焊 - 手动模式下启用弧焊 ([F2: System] - 4: Application parameter - 2: Arc welding - Arc welding enable during manual mode)` 并检查启用。
 
- (2) Set the **[run to(execution unit)] to "End"** (the second menu on the left side of the TP).
+ (2) 将 **[运行到（执行单元）] 设置为 "结束"**（TP左侧的第二个菜单）。
 
- (3) Execute ```arcon``` using step forward.  <br/>
- * NOTE: If the robot stops during welding(before ```arcoff```) due to a paused step forward movement, ```arcon``` won't execute when you step forward again. In this case, the robot will move to the next teaching point without welding.
+ (3) 使用前进步骤执行 ```arcon```。 <br/>
+ * 注意：如果在焊接期间（在 ```arcoff``` 之前）由于暂停的前进运动而导致机器人停止，```arcon``` 在您再次前进时将不会执行。在这种情况下，机器人将移动到下一个教学点而不进行焊接。

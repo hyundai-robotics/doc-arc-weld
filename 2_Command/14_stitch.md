@@ -1,13 +1,13 @@
-﻿# 2.14 stitch
+# 2.14 缝合
 
-### Description 
+### 描述
 
-```stitch``` command performs stitch welding. You can set the stitch conditions by placing the cursor on the command and clicking the **Properties** button.
-After moving to the desired stitch welding position using a `move` command, use stitch together with the `arcon` command.
-When the stitch function is executed, stitch welding starts at the specified position and continues until the stitch operation is completed.  
+```stitch``` 命令执行缝合焊接。您可以通过将光标放在命令上并单击 **属性** 按钮来设置缝合条件。
+在使用 `移动 (move)` 命令移动到所需的缝合焊接位置后，使用 `arcon` 命令一起进行缝合。
+当缝合功能被执行时，缝合焊接从指定位置开始，并持续到缝合操作完成。  
 <br/>
 
-### Syntax
+### 语法
 
 ```python
 stitch on, cnd=<Condition Number>
@@ -15,19 +15,19 @@ stitch off
 ```  
 
 
-### Parameter
+### 参数
 
-| Item | Meaning | Remarks |
+| 项目 | 说明 | 备注 |
 | --- | --- | --- |
-| **Condition number** | Stitch Condition Number (1 ~ 1000) | Variable |
+| **条件编号** | 缝合条件编号 (1 ~ 1000) | 可变 |
 
 
-### Example
+### 示例
 ```python
-   stitch on, cnd=2         #  execute stitch on condition 2
-   stitch off               #  terminate stitch
+   stitch on, cnd=2         #  执行缝合在条件 2
+   stitch off               #  终止缝合
 ```
 
 
-### Details  
-  Refer to [[8.6 STITCH Function]](../8_Application_function/6_Stitch/README.md)
+### 详细信息  
+  请参阅 [[8.6 STITCH Function]](../8_Application_function/6_Stitch/README.md)
