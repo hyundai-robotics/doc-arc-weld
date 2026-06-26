@@ -24,11 +24,11 @@ If the input condition number is "0", welding will proceed with the current weld
 ### (3)	Overlap distance: [ 5 ] mm (Range: 0.0 ~ 99.9)  
 Specifies the length of the overlap (overlap distance) when restarting the welidng. The robot will move back by the specified distance and then resume welding.  
 
-### (4)	Moving Speed: [ 50 ] mm/sec (Range: 1~999)  
+### (4)	Moving Speed: [ 50 ] mm/sec (Range: 1.0~150.0)  
 Specifies the speed at which the torch is moved to the overlap start position.
 This corresponds to the movement speed in the section from ③ to ④ in [figure 5.5.4]  
 
-### (5)	Welding Speed: [ 50 ] cm/min (Range: 1~999)  
+### (5)	Welding Speed: [ 50 ] cm/min (Range: 10.0~999.0)  
 Specifies the robot's speed while performing overlap welding from the start to the end position. This is the speed during the overlap region in section ④ of [Figure 5.5.4].
 
 When an error occurs during welding from the start point to the end point (⑤), and if the overlap condition is semi-automatic, the user must identify the cause of the welding stop and address the error (①).

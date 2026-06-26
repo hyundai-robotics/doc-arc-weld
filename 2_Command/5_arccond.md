@@ -23,8 +23,8 @@ arccond <Interpolation type>, cnd=<Condition Number>, gap=<Gap>, spd=<Welding Sp
 | **Wall Direction**  | Weaving wall direction width for immediate change (1 ~ 50) [mm]| Variable  |
 | **Cross Direction** | Weaving cross direction width for immediate change (1 ~ 50) [mm]  | Variable  |
 | **Weaving Frequency**  | Weaving frequency for immediate change (1 ~ 10) [Hz]  | Variable  |
-| **Current**| Welding current for immediate change (1 ~ 1000) [A]| Variable  |
-| **Voltage**| Welding voltage for immediate change (1 ~ 200) [V] | Variable  |
+| **Current**| Welding current for immediate change  (The range varies depending on the welder settings)| Variable  |
+| **Voltage**| Welding voltage for immediate change  (The range varies depending on the welder settings)| Variable  |
 
 
 ### Example

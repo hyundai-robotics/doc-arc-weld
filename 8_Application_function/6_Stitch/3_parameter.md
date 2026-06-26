@@ -33,16 +33,7 @@ The descriptions of the parameters for each figure are as follows:
   - (8) Count: Number of stitch welding repetitions
   - (9) On speed: Welding speed during the welding section
 
-- Input/Output
-  - (10) Stitch Enable
-  - (11) Equipment Enable
-  - (12) Equipment Output  <br/>
-    → All three parameters must be set to 1 for stitch welding to proceed during playback
-
-
 {% hint style="warning" %}
-- `(6) on dist, (7) off dist, (8) count`: All of these must be entered to set the conditions for section2.
 - `(9) on speed`: The speed for the welding (ON) section in the stitch section is set as the step speed.
-- `(11) Stitch Enable Port, (12) Equipment enable Port, (13) Equipment Output Port`: All must be set to 1 for the stitch welding welding to proceed during playback. If not set, welding will not occur, and only the stitch motion will proceed.
 {% endhint %}
 

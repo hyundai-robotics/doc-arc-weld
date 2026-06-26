@@ -62,7 +62,7 @@ Sets the synergic code to b transmitted to the welder. The code value is configu
 | :---: | :---: | :---: |:---: | :---: |
 | Hyosung | Synergic Code | - |- | 040 |
 | Fronius </br>(Not supported) |-|-|-|-|
-| EWM | JOB Nr.(synergic) | - |- | 185|
+| EWM | Synergic no. | - |- | 185|
 
 </center>
     
@@ -74,23 +74,24 @@ Set the welding current value. This is the current used during the welding proce
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Welding Current | A |0.0 ~ 500.0 | 100 |
-| Fronius | Welding Power | % | 0.0 ~ 100.0 | 10 |
+| Hyosung | Welding Current | A | 40.0 ~ 350.0 | 100.0 |
 | EWM | Wire Feed Speed |  m/min | 0.0 ~ 25.0 | 3.1 |
+| Fronius(TPS) | Welding Power | % | 0.0 ~ 100.0 | 100.0 |
 
 </center>
     
 </br>
 
-### (5)	Welding voltage / Arc length correction  
+### (5)	Welding voltage / Welding voltage Correction / Welding voltage Offset / Arc length correction  
 In digital welding, the welding voltage is often not entered directly, but instead selected automatically based on welding current from the synergic data. If you wish to modify the welding voltage automatically selected by the synergic data, set the offset value for the voltage to be adjusted based on the selected welding voltage.
 <center>
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Welding voltage | % | 50.0 ~ 150.0 | 100 |
-| Fronius | arc length correction | % | -30.0 ~ 30.0 | 0 |
-| EWM | Welding voltage Correction | V | -10.0 ~ 10.0 | 0 |
+| Hyosung(Indiv.) | Welding voltage | V | 10.0 ~ 38.0 | 10.0 |
+| Hyosung(Synergic) | Welding voltage Correction | % | 50.0 ~ 150.0 | 50.0 |
+| EWM | Welding voltage Offset | VP | -10.0 ~ 10.0 | 2.0 |
+| Fronius(TPS) | arc length correction | % | -30.0 ~ 30.0 | 0 |
 </center>
     
 </br>
@@ -115,7 +116,7 @@ Indicates the time waiting for the WCR input. If the WCR signal is not received 
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Common to all welders | WCR Wait Time | sec | 0.0 ~ 10.0 | 2 |
+| Common to all welders | WCR Wait Time | sec | 1.0 ~ 10.0 | 2 |
 
 
 </center>
@@ -153,25 +154,25 @@ This is set as a percent(%) relative to the welding current of the main conditio
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Initial Welding Current | % | 20 ~ 200 | 120 |
+| Hyosung | Initial Welding Current | A | 40.0 ~ 350.0 | 120 |
 | Fronius | Initial Welding Power | % | 20 ~ 200 | 120 |
-| EWM | Initial Wire Feed Speed | % | 20 ~ 200 | 120 |
+| EWM | Initial Wire Feed Speed | m/min | 0.0 ~ 25.0 | 3.72 |
 
 </center>
     
 </br>
 
-### (11) Initial Welding voltage / Arc length correction  
+### (11) Initial Welding voltage / Welding voltage Correction / Arc length correction  
 Sets the welding voltage to be output during the initial condition hold time at the start of arc welding.
 This is set as a correction value relative to the synergic voltage.  
 <center>
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Initial Welding voltage | % | 50.0 ~ 150.0 | 100 |
-| EWM | Initial Welding voltage | V | -10.0 ~ 10.0 | 0 |
-| Fronius | Initial Arc length correction | %| -30.0 ~ 30.0 | 0 |
-
+| Hyosung(Indiv.) | Initial Welding voltage | V | 10.0 ~ 38.0 | 10.0 |
+| Hyosung(Synergic) | Initial Welding voltage Correction | % | 50.0 ~ 150.0 | 50.0 |
+| EWM | Initial Welding voltage Offset | VP | -10.0 ~ 10.0 | 2 |
+| Fronius | Initial Arc Length Correction | %| -30.0 ~ 30.0 | 0 |
 </center>
     
 </br>

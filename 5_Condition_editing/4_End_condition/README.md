@@ -25,21 +25,21 @@ Set the current value to be output during crater treatment. This is set as a per
 
 | supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | End Welding Current | % |10 ~ 100 | 70 |
+| Hyosung | End Welding Current | A |28.0 ~ 350.0 | 28.0 |
+| EWM | End Wire Feed Speed | m/min | 0.0 ~ 25.0 | 2.17 |
 | Fronius | End Welding Power | % | 10 ~ 100 | 70 |
-| EWM | End Wire Feed Speed | m/min | 0.0 ~ 25.0 | 7.0 |
-
 </center>
 
-### (3)	End Welding voltage/ Arc length correction  
+### (3)	End Welding voltage/ Welding voltage corrction / Arc length correction  
 Set the voltage value to be output during crater treatment. The voltage is specified and output according to the set value.
 <center>
 
 | supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | End Welding voltage | % | 50.0 ~ 150.0| 100 |
-| EWM | End Welding voltage | V | -10.0 ~ 10.0 | 0 |
-| Fronius | End Arc length correction |  % | -30.0 ~ 30.0 | 0 |
+| Hyosung(Indiv.) | End welding voltage | V | 10.0 ~ 38.0 | 10.0 |
+| Hyosung(Synergic) | End welding voltage correction | % | 50.0 ~ 150.0 | 50.0 |
+| EWM | End Welding voltage offset | VP | -10.0 ~ 10.0 | 2 |
+| Fronius(TPS) | End Arc length correction |  % | -30.0 ~ 30.0 | 0 |
 
 </center>
 
