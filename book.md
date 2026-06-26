@@ -645,8 +645,8 @@ arccond <Interpolation type>, cnd=<Condition Number>, gap=<Gap>, spd=<Welding Sp
 | **Wall Direction**  | Weaving wall direction width for immediate change (1 ~ 50) [mm]| Variable  |
 | **Cross Direction** | Weaving cross direction width for immediate change (1 ~ 50) [mm]  | Variable  |
 | **Weaving Frequency**  | Weaving frequency for immediate change (1 ~ 10) [Hz]  | Variable  |
-| **Current**| Welding current for immediate change (1 ~ 1000) [A]| Variable  |
-| **Voltage**| Welding voltage for immediate change (1 ~ 200) [V] | Variable  |
+| **Current**| Welding current for immediate change  (The range varies depending on the welder settings)| Variable  |
+| **Voltage**| Welding voltage for immediate change  (The range varies depending on the welder settings)| Variable  |
 
 
 ### Example
@@ -1447,7 +1447,7 @@ Sets the synergic code to b transmitted to the welder. The code value is configu
 | :---: | :---: | :---: |:---: | :---: |
 | Hyosung | Synergic Code | - |- | 040 |
 | Fronius </br>(Not supported) |-|-|-|-|
-| EWM | JOB Nr.(synergic) | - |- | 185|
+| EWM | Synergic no. | - |- | 185|
 
 </center>
     
@@ -1459,23 +1459,24 @@ Set the welding current value. This is the current used during the welding proce
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Welding Current | A |0.0 ~ 500.0 | 100 |
-| Fronius | Welding Power | % | 0.0 ~ 100.0 | 10 |
+| Hyosung | Welding Current | A | 40.0 ~ 350.0 | 100.0 |
 | EWM | Wire Feed Speed |  m/min | 0.0 ~ 25.0 | 3.1 |
+| Fronius(TPS) | Welding Power | % | 0.0 ~ 100.0 | 100.0 |
 
 </center>
     
 </br>
 
-### (5)	Welding voltage / Arc length correction  
+### (5)	Welding voltage / Welding voltage Correction / Welding voltage Offset / Arc length correction  
 In digital welding, the welding voltage is often not entered directly, but instead selected automatically based on welding current from the synergic data. If you wish to modify the welding voltage automatically selected by the synergic data, set the offset value for the voltage to be adjusted based on the selected welding voltage.
 <center>
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Welding voltage | % | 50.0 ~ 150.0 | 100 |
-| Fronius | arc length correction | % | -30.0 ~ 30.0 | 0 |
-| EWM | Welding voltage Correction | V | -10.0 ~ 10.0 | 0 |
+| Hyosung(Indiv.) | Welding voltage | V | 10.0 ~ 38.0 | 10.0 |
+| Hyosung(Synergic) | Welding voltage Correction | % | 50.0 ~ 150.0 | 50.0 |
+| EWM | Welding voltage Offset | VP | -10.0 ~ 10.0 | 2.0 |
+| Fronius(TPS) | arc length correction | % | -30.0 ~ 30.0 | 0 |
 </center>
     
 </br>
@@ -1500,7 +1501,7 @@ Indicates the time waiting for the WCR input. If the WCR signal is not received 
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Common to all welders | WCR Wait Time | sec | 0.0 ~ 10.0 | 2 |
+| Common to all welders | WCR Wait Time | sec | 1.0 ~ 10.0 | 2 |
 
 
 </center>
@@ -1538,25 +1539,25 @@ This is set as a percent(%) relative to the welding current of the main conditio
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Initial Welding Current | % | 20 ~ 200 | 120 |
+| Hyosung | Initial Welding Current | A | 40.0 ~ 350.0 | 120 |
 | Fronius | Initial Welding Power | % | 20 ~ 200 | 120 |
-| EWM | Initial Wire Feed Speed | % | 20 ~ 200 | 120 |
+| EWM | Initial Wire Feed Speed | m/min | 0.0 ~ 25.0 | 3.72 |
 
 </center>
     
 </br>
 
-### (11) Initial Welding voltage / Arc length correction  
+### (11) Initial Welding voltage / Welding voltage Correction / Arc length correction  
 Sets the welding voltage to be output during the initial condition hold time at the start of arc welding.
 This is set as a correction value relative to the synergic voltage.  
 <center>
 
 | Supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | Initial Welding voltage | % | 50.0 ~ 150.0 | 100 |
-| EWM | Initial Welding voltage | V | -10.0 ~ 10.0 | 0 |
-| Fronius | Initial Arc length correction | %| -30.0 ~ 30.0 | 0 |
-
+| Hyosung(Indiv.) | Initial Welding voltage | V | 10.0 ~ 38.0 | 10.0 |
+| Hyosung(Synergic) | Initial Welding voltage Correction | % | 50.0 ~ 150.0 | 50.0 |
+| EWM | Initial Welding voltage Offset | VP | -10.0 ~ 10.0 | 2 |
+| Fronius | Initial Arc Length Correction | %| -30.0 ~ 30.0 | 0 |
 </center>
     
 </br>
@@ -1698,21 +1699,21 @@ Set the current value to be output during crater treatment. This is set as a per
 
 | supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | End Welding Current | % |10 ~ 100 | 70 |
+| Hyosung | End Welding Current | A |28.0 ~ 350.0 | 28.0 |
+| EWM | End Wire Feed Speed | m/min | 0.0 ~ 25.0 | 2.17 |
 | Fronius | End Welding Power | % | 10 ~ 100 | 70 |
-| EWM | End Wire Feed Speed | m/min | 0.0 ~ 25.0 | 7.0 |
-
 </center>
 
-### (3)	End Welding voltage/ Arc length correction  
+### (3)	End Welding voltage/ Welding voltage corrction / Arc length correction  
 Set the voltage value to be output during crater treatment. The voltage is specified and output according to the set value.
 <center>
 
 | supported Welder | Name | Unit | Range | Default |
 | :---: | :---: | :---: |:---: | :---: |
-| Hyosung | End Welding voltage | % | 50.0 ~ 150.0| 100 |
-| EWM | End Welding voltage | V | -10.0 ~ 10.0 | 0 |
-| Fronius | End Arc length correction |  % | -30.0 ~ 30.0 | 0 |
+| Hyosung(Indiv.) | End welding voltage | V | 10.0 ~ 38.0 | 10.0 |
+| Hyosung(Synergic) | End welding voltage correction | % | 50.0 ~ 150.0 | 50.0 |
+| EWM | End Welding voltage offset | VP | -10.0 ~ 10.0 | 2 |
+| Fronius(TPS) | End Arc length correction |  % | -30.0 ~ 30.0 | 0 |
 
 </center>
 
@@ -1840,11 +1841,11 @@ If the input condition number is "0", welding will proceed with the current weld
 ### (3)	Overlap distance: [ 5 ] mm (Range: 0.0 ~ 99.9)  
 Specifies the length of the overlap (overlap distance) when restarting the welidng. The robot will move back by the specified distance and then resume welding.  
 
-### (4)	Moving Speed: [ 50 ] mm/sec (Range: 1~999)  
+### (4)	Moving Speed: [ 50 ] mm/sec (Range: 1.0~150.0)  
 Specifies the speed at which the torch is moved to the overlap start position.
 This corresponds to the movement speed in the section from ③ to ④ in [figure 5.5.4]  
 
-### (5)	Welding Speed: [ 50 ] cm/min (Range: 1~999)  
+### (5)	Welding Speed: [ 50 ] cm/min (Range: 10.0~999.0)  
 Specifies the robot's speed while performing overlap welding from the start to the end position. This is the speed during the overlap region in section ④ of [Figure 5.5.4].
 
 When an error occurs during welding from the start point to the end point (⑤), and if the overlap condition is semi-automatic, the user must identify the cause of the welding stop and address the error (①).
@@ -1972,8 +1973,11 @@ If an auxiliary axis is selected, the auxiliary axis specified in the 'Auxiliary
 
 Set the pattern shape of the weaving as shown in the following figure.
  
-![](../../_assets/6_1_2.png)<br>
+![](../../_assets/6_1_2_1.png)<br>
 *Figure 6.1.2. Weaving Pattern Type*
+
+![](../../_assets/6_1_2_2.png)<br>
+*Figure 6.1.2. Weaving Pattern Type - Down curve*
 
 
 [__SOURCE](6_Weaving_function/1_Weaving_function/3_frequency.md)
@@ -4595,17 +4599,8 @@ The descriptions of the parameters for each figure are as follows:
   - (8) Count: Number of stitch welding repetitions
   - (9) On speed: Welding speed during the welding section
 
-- Input/Output
-  - (10) Stitch Enable
-  - (11) Equipment Enable
-  - (12) Equipment Output  <br/>
-    → All three parameters must be set to 1 for stitch welding to proceed during playback
-
-
 {% hint style="warning" %}
-- `(6) on dist, (7) off dist, (8) count`: All of these must be entered to set the conditions for section2.
 - `(9) on speed`: The speed for the welding (ON) section in the stitch section is set as the step speed.
-- `(11) Stitch Enable Port, (12) Equipment enable Port, (13) Equipment Output Port`: All must be set to 1 for the stitch welding welding to proceed during playback. If not set, welding will not occur, and only the stitch motion will proceed.
 {% endhint %}
 
 
