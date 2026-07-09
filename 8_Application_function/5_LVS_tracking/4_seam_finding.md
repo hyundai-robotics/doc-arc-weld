@@ -53,6 +53,12 @@ var po_100=cpo()
 lvs seam_find, cnd=1, seam=1, side=10, height=10, sp=po_100
 ```
 
+* Seam finding 시 lvs 명령어의 find_flag에 변수를 할당할 경우 성공 시 1, 실패 시 0이 저장됩니다. 실패 시에는 명령어가 실행 완료처리 되므로 주의하십시오. find_flag가 할당되지 않은 경우 실패 시 에러가 발생합니다.
+
+```python
+var f1=0
+lvs seam_find, cnd=1, seam=1, sp=po_100, find_flag=f1
+```
 
 ---
 
