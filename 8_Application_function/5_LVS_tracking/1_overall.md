@@ -23,7 +23,7 @@ The LVS Seam Finding and Tracking function is executed through the `lvs` command
 The structure of the command is as follows:
 
 ```python
-lvs <function argument> cnd=<condition Number>, seam=<profile number to be sensed position>, sp=<pose variable of the sensed position>, mp=<pose variable of the master reference>, ms=<shift variable of the current sensing position relative to the master>
+lvs <function argument> cnd=<condition Number>, seam=<profile number to be sensed position>, sp=<pose variable of the sensed position>, mp=<pose variable of the master reference>, ms=<shift variable of the current sensing position relative to the master>, find_flag=<flag variable>
 ```
 
 <table>
@@ -108,6 +108,7 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
       <td colspan="2">pose variable of the sensed position</td>
       <td>
         The position corresponding to the current laser location is stored as a pose variable.
+        During the execution of the track command, the position where the laser reaches the final welding location is stored as a pose variable.
       </td>
     </tr>
     <tr>
@@ -128,12 +129,21 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
       <td colspan="2">opt</td>
       <td>
         When using the auto_calib command, this value should be set to 0.
+        For Scansonic Full-V LVS, specifying 20 performs precise automatic calibration.
       </td>
     </tr>
     <tr>
       <td colspan="2">find_flag</td>
       <td>
-        If a variable is set for this parameter, it will be set to 1 upon successful seam finding, and to 0 without any error if the seam finding fails.
+        Specifying a variable for this parameter means the following:
+        1. Search
+         1 on success, 0 on failure; a warning is generated upon failure, and the lvs step is marked as completed.
+        2. Seam Finding
+         1 on success, 0 on failure; the lvs step is marked as completed upon failure.
+        3. Scan
+         1 on success, 0 on failure; the lvs step is marked as completed upon failure.
+        4. Tracking
+         The currently tracked step number is saved. This is useful when configuring a restart as a Job.
       </td>
     </tr>
   </tbody>

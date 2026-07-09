@@ -35,11 +35,19 @@ The configuration of the lvs command should be set as follows:
     end
 ```
 
-The processs of executing the search command is illustrated in the following figure (when search is set to valid and direction is set to 0).
-An invalid point is found and stored in the `sp` parameter as the starting point, then the TCP moves to the starting point while filling the data buffer. 
+When the search command is executed, an invalid point is identified as the starting point, saved in sp, and then the data buffer is filled while moving to the starting point.
+
+Afterward, arc welding is performed while tracking the weld line in real time.
 
 ![](../../_assets/8_5_17.png)<br>
-*Figure 8.5.17. LVS search process*   
+*그림 8.5.17. lvs search and tracking process*   
+</br>
+
+The sp of the lvs track command stores the TCP position where the laser can be placed at the last weld location.
+If an error occurs because the LVS fails to recognize the weld line multiple times, you can make it restart as follows.
+
+![](../../_assets/8_5_18.png)<br>
+*그림 8.5.18. Manual restart method for unrecognized seam error*   
 </br>
 
 ### (2) How to Use Tracking with an Offset Value
@@ -69,8 +77,8 @@ If you want to track with an offset from the seam (instead of exactly following 
 
 ### (3) LVS Monitoring
 
-![](../../_assets/8_5_18_tracking_monitoring.png)<br>
-*Figure 8.5.18. LVS Monitoring*   
+![](../../_assets/8_5_19_tracking_monitoring.png)<br>
+*Figure 8.5.19. LVS Monitoring*   
 </br>
 
 

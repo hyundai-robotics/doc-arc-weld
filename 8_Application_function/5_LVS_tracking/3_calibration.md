@@ -1,6 +1,5 @@
 ﻿# 8.5.3 LVS Calibration
 
-
 In order to use the LVS funtionality, calibration between the TCP and sensor coordinate system must be performed first.
 
 ${cont_model} controller supports automatic calibration.
@@ -11,52 +10,52 @@ Let's now look at how to perform automatic calibration between TCP and LVS senso
 
 Prepare a 15 cm long lap joint specimen with a 3 mm step.
 
-
 {% hint style="info" %}
 If you wish to use it for testing purpose, please contact us to prepare the calibration specimen.
 {% endhint %}
 
 ---
-
 ### (2) Automatic Calibration Teaching
+Please refer to the following when teaching.
+
+```python
+move L,spd=60%,accu=0,tool=0  # Calibration specimen reference point location
+delay 0.5
+lvs auto_calib, cnd=1, seam=1, sp=p1, opt=0
+end
+```
+
+{% hint style="info" %}
+For Scansonic Full-V sensors, using opt=20 allows for precise calibration.
+{% endhint %}
+
+Move the TCP to the reference point of the specimen using the jog tool as shown in the figure below. It is recommended to use the Tool coordinate system jog tool during calibration.
+
+As shown in Figures 1 and 2, half of the wire must be positioned so that it reaches the corner of the specimen from each direction.
+
+The torch must be positioned perpendicular to the specimen. (Perpendicular in both roll and pitch directions)
+
+Position the laser line with the jog so that it is perpendicular to the edge of the specimen.
+
+In this state (where the torch is positioned perpendicular to the specimen and the laser line is perpendicular to the edge of the specimen), press **[Record]** to insert the `move` command.
+
+{% hint style="warning" %}
+* Use a spirit level to align the calibration specimen perpendicularly from all directions.
+* The verticality of the torch and the degree to which the laser line is perpendicular to the edge of the specimen affect the calibration accuracy.
+{% endhint %}
+
+Insert `delay 0.5`, then insert the `lvs` command.
+
+The `seam` argument of the `lvs` command is the number for the geometry and condition registered in the LVS controller.
+
+{% hint style="info" %}
+For calibration, register the seam as a Lap joint in the LVS controller software.<br>
+Set the registered number in the seam argument of the lvs command.
+{% endhint %}
 
 ![](../../_assets/8_5_7_lvs_autocalib.png)<br>
 *Figure 8.5.7. LVS Auto Calibration*   
 </br>
-
-As shown in the figure above, move the TCP to the reference point of the specimen using the jog function.
-
-The torch orientation should be perpendicular to the specimen (both Roll and Pitch direction should be vertical).
-
-Position the laser line perpendicular to the edge of the specimen using jog (typically controlled by Tool Z).
-
-In this state(where the torch is positioned perpendicular to the specimen and the laser line is perpendicular to the edge of the specimen), press **[Record]** to insert the `move` command.
-
-{% hint style="warning" %}
-- Use a level to precisely align the torch's orientation perpendicular to the calibration specimen.
-- The vertical accuracy of the torch and the accuracy with which the laser line is perpendicular to the edge of the specimen will affect the calibration accuracy.
-{% endhint %}
-
-
-After inserting `delay 0.5`, input the `lvs` command.
-
-The seam parameter of the `lvs` command is the number corresponding to the shape and conditions registered in the LVS controller.
-
-{% hint style="info" %}
-For calibration, register the seam as a lap joint in the LVS controller's software.<br>
-Set the registered number in the seam parameter of the lvs command.
-{% endhint %}
-
-
-The program written as described is shown below:
-
-```python
-    move L,spd=60%,accu=0,tool=0  # Calibration specimen reference point
-    delay 0.5
-    lvs auto_calib, cnd=1, seam=1, sp=p1, opt=0
-    end
-```
-
 ---
 
 ### (3) Preparations
@@ -68,7 +67,7 @@ Automatic Calibration involves motions such as front/back, left/right, roll dire
 * When the laser is pointing to the flat surface outside the reference point of the specimen, the LVS controller should not be able to recognize the seam.
 {% endhint %}
 
-
+![](../../_assets/8_5_7_lvs_autocalib_2.png)<br>
 ---
 
 ### (4) Execution

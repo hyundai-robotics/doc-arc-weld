@@ -1,31 +1,28 @@
 ﻿# 8.5.6 LVS Search Func.
 
 ### (1) How to Use the Search Function
-
-LVS provides a search function, which is used for the following purposes:
+LVS provides a search function, and searching must precede tracking.
 
 - `search`: Searches for the starting point end, while the TCP (Tool Center Point) moves to the starting position, stores, the points to be tracked in a buffer at set intervals, preparing for tracking.
 - `step_search`: Used for multi-pass bead detection and step detection
 
-When a search is performed, the system searches for the target, and if an invalid point is detected, the most recent valid point is stored as the pose in the `sp` parameter.
+When search is performed, search is executed, and depending on the option, it operates as follows:
 
-Subsequently, in order to prepare for tracking, the system stores the points to be followed in a buffer as the TCP moves to the found point.
+(1) Above Laser
+The TCP moves to the position of the laser, stores tracking points in the buffer, and completes the tracking preparation.
+
+(2) Detect
+It moves by the search distance in the search direction, detects the point where sensing is impossible, and the TCP moves to the position immediately preceding that point, stores tracking points in the buffer, and completes the tracking preparation.
 
 By performing the search function, the system becomes ready to perform "seam tracking". 
 
-{% hint style="info" %}
-  The search process detects invalid seams (when the LVS controller cannot detect a seam) and searches for the starting point.
-  The **search** function finds the start(or end), then moves to that location, storing the points to be tracked in a buffer.
-{% endhint %}
-
-
-```search``` function is used as follows:
+Search is used as follows.
 
 ```python
-    move L, spd=60%, accu=0, tool=1
-    delay 0.1 # if the accuracy of the starting position is not 0, it must be inserted.
-    var po_100=cpo() # The current pose is stored in the variable po_100
-    lvs search, cnd=1, seam=1, sp=po_100
+  move L, spd=60%, accu=0, tool=1
+  delay 0.1 #If the accu at the search start position is not 0, insertion is required.
+  var po_100=cpo() #Stores the current pose in the declared variable po_100.
+  lvs search, cnd=1, seam=1, sp=po_100 #Tracking ready
 ```
 
 To configure the search function, enter **[property]** in the `lvs` command, where the search settings can be adjusted as follows:
@@ -35,19 +32,55 @@ To configure the search function, enter **[property]** in the `lvs` command, whe
 *Figure 8.5.14. lvs search settings*   
 </br>
 
-| Item | Description |
-|------|------|
-| function | Set the usage of the search function. <br> 'Disable': The system moves to the laser position of the LVS and stores the target positions in a buffer. <br> 'Enable': The system detects both the starting and ending points in the search direction, then moves to the detected location while storing the target positions in the buffer. |
-| distance | If the search function is set to **enable**, the maximum distance for searching the starting point should be entered [mm]. |
-| direction | 0: Search in the +ToolX direction. <br> 1: Search in the -ToolX direction. |
-| speed | The search speed can be set in mm/sec. |
-| offset | Points found in the direction of the welding line can be shifted by the specified number of mm from the detected position. |
-
-<br>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Item</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">function</td>
+      <td style="text-align:left">
+        Sets the use of the search function.<br>
+        'Laser Above' : Moves to the laser position of lvs and saves target positions in the buffer.<br>
+        'Detect': After detecting unsensable points in the search direction, move to the position immediately prior to detection and save the target positions in the buffer.
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">distance</td>
+      <td style="text-align:left">
+       Enter the maximum seek distance [mm].
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">direction</td>
+      <td style="text-align:left">
+       0 : Navigates in the +ToolX direction.<br>
+       1 : Navigates in the -ToolX direction.
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">speed</td>
+      <td style="text-align:left">
+        Set the search speed in mm/sec units.
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">offset</td>
+      <td style="text-align:left">
+        You can shift the point found in the direction of the weld line from the search point by a set amount of mm.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ![](../../_assets/8_5_15_lvs_search_example.png)<br>
 *Figure 8.5.15. lvs search Example*   
 </br>
+
+If a variable is assigned to find_flag, 1 is stored on a successful search and 0 on a failed search. Please note that the lvs command is marked as completed if the search fails.
 
 The **search** and **seam tracking** functions can be taught as shown below.
 

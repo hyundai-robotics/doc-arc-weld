@@ -48,6 +48,12 @@ var po_100=cpo()
 lvs seam_find, cnd=1, seam=1, side=10, height=10, sp=po_100
 ```
 
+* When assigning a variable to `find_flag` of the `lvs` command during seam finding, 1 is stored on success and 0 on failure. Please note that the command is treated as completed upon failure. If `find_flag` is not assigned, an error occurs upon failure.
+
+```python
+var f1=0
+lvs seam_find, cnd=1, seam=1, sp=po_100, find_flag=f1
+```
 ---
 
 ### (2) LVS Seam Finding Retry
