@@ -73,7 +73,7 @@ LVS 용접선 찾기 및 추적 기능은 ```lvs``` 명령어를 통해 수행�
     </tr>
     <tr>
       <td style="text-align:left">check_seam</td>
-      <td style="text-align:left">+ToolX, -ToolX 방향으로 이동하면서 opt에 설정된 거리[mm]만큼 인식이 되는 포즈를 sp에 저장합니다.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/ko/8_Application_function/5_LVS_tracking/7_tracking_monitoring?cont_model=${cont_model}">8.5.6 LVS search func.</a>)</td>
+      <td style="text-align:left">+ToolX, -ToolX 방향으로 이동하면서 opt에 설정된 거리[mm]만큼 인식이 되는 포즈를 sp에 저장합니다.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/ko/8_Application_function/5_LVS_tracking/7_tracking_monitoring?cont_model=${cont_model}">8.5.7 LVS tracking func.</a>)</td>
     </tr>
     <tr>
       <td style="text-align:left">track</td>
