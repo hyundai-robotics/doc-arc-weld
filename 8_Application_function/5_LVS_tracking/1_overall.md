@@ -72,6 +72,10 @@ LVS 용접선 찾기 및 추적 기능은 ```lvs``` 명령어를 통해 수행�
       찾은 시작점은 명령어의 sp인자에 지정된 포즈변수에 저장됩니다.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/ko/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">8.5.6 LVS search func.</a>)</td>
     </tr>
     <tr>
+      <td style="text-align:left">check_seam</td>
+      <td style="text-align:left">+ToolX, -ToolX 방향으로 이동하면서 opt에 설정된 거리[mm]만큼 인식이 되는 포즈를 sp에 저장합니다.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/ko/8_Application_function/5_LVS_tracking/7_tracking_monitoring?cont_model=${cont_model}">8.5.6 LVS search func.</a>)</td>
+    </tr>
+    <tr>
       <td style="text-align:left">track</td>
       <td style="text-align:left">search가 완료된 후 arcon 및 weaving on 이 수행된 뒤 실행되어야 합니다.
       arcoff를 만날때 까지 트래킹을 수행합니다.</td>
@@ -122,10 +126,10 @@ LVS 용접선 찾기 및 추적 기능은 ```lvs``` 명령어를 통해 수행�
         성공 시 1, 실패 시 0, 실패 시 경고가 발생하며 lvs 스텝은 실행완료 처리 됩니다.<br>
         2. Seam Finding <br>
         성공 시 1, 실패 시 0, 실패 시 lvs 스텝은 실행완료 처리 됩니다.<br>
-        3. Scan <br>
+        3. Check Seam <br>
         성공 시 1, 실패 시 0, 실패 시 lvs 스텝은 실행완료 처리 됩니다.<br>
         4. Tracking<br>
-        현재 트래킹중인 step 번호가 저장됩니다. 재기동을 Job으로 구성할 경우 유용하게 사용할 수 있습니다.
+        tracking이 시작되고 5mm 이상 진행되면 1로 설정됩니다. tracking 중 일정 구간 이상 LVS가 seam 인식이 불가해지면 발생하는 에러인 E32702가 발생하면 0으로 설정됩니다. (Job에 의한 재기동 시 사용 가능)
       </td>
     </tr>
   </tbody>
