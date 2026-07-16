@@ -1410,8 +1410,8 @@ The contents of common items may vary in name, unit, and range for each welder. 
 
 </br>
 
+### Setting Items
 ---
-
 ### (1)	Condition Number  
 Specifies the welding start condition number to be edited.(Max: 32) 
 
@@ -1614,6 +1614,31 @@ Sets the upper and lower current limits during welding. If the limits are exceed
     
 </br>
     
+### Convenience Features
+---
+Convenience features are provided via the F buttons at the bottom of the settings screen when configuring welding conditions.
+
+- `[F1: Select]`  
+When multiple conditions exist, you can select a specific condition to edit by entering its number.
+
+- `[F2: Initialize]`  
+Resets the welding condition parameters to their default values.
+
+- `[F3: Weld Seq.]`  
+Displays the welding sequence chart while the button is being held down. 
+Pressing this under the 'Start Condition' tab displays the welding start sequence, and pressing it under the 'End Condition' tab displays the welding end sequence.
+
+- `[F4: Conv. Ratio]`  
+This button is activated when a specific item under the initial sequence or end conditions is selected. When you enter a conversion ratio (%), the system automatically calculates and enters the converted value relative to the main condition.
+
+|Reference Value (Main Condition)|Initial Conditions|End Conditions|
+|-|-|-|
+|Welding Current / Welding Power / Wire Feed Speed|Initial Welding Current / Welding Power / Wire Feed Speed|End Welding Current / Welding Power / Wire Feed Speed |
+|Welding Voltage / Welding Voltage Calibration / Arc Length Calibration|Initial Welding Voltage / Welding Voltage Calibration / Arc Length Calibration|End Welding Voltage / Welding Voltage Calibration / Arc Length Calibration|
+
+- `[F5: Synergic Sel.]`  
+This button is displayed if the welding machine supports synergic settings. Clicking this button opens the screen for configuring synergic codes.
+
 </br>
 [__SOURCE](5_Condition_editing/3_Start_condition/1_hyosung.md)
 # 5.3.1 Welding Start condition - Hyosung-only settings
@@ -3741,7 +3766,7 @@ The LVS Seam Finding and Tracking function is executed through the `lvs` command
 The structure of the command is as follows:
 
 ```python
-lvs <function argument> cnd=<condition Number>, seam=<profile number to be sensed position>, sp=<pose variable of the sensed position>, mp=<pose variable of the master reference>, ms=<shift variable of the current sensing position relative to the master>
+lvs <function argument> cnd=<condition Number>, seam=<profile number to be sensed position>, sp=<pose variable of the sensed position>, mp=<pose variable of the master reference>, ms=<shift variable of the current sensing position relative to the master>, find_flag=<flag variable>
 ```
 
 <table>
@@ -3826,6 +3851,7 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
       <td colspan="2">pose variable of the sensed position</td>
       <td>
         The position corresponding to the current laser location is stored as a pose variable.
+        During the execution of the track command, the position where the laser reaches the final welding location is stored as a pose variable.
       </td>
     </tr>
     <tr>
@@ -3846,12 +3872,21 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
       <td colspan="2">opt</td>
       <td>
         When using the auto_calib command, this value should be set to 0.
+        For Scansonic Full-V LVS, specifying 20 performs precise automatic calibration.
       </td>
     </tr>
     <tr>
       <td colspan="2">find_flag</td>
       <td>
-        If a variable is set for this parameter, it will be set to 1 upon successful seam finding, and to 0 without any error if the seam finding fails.
+        Specifying a variable for this parameter means the following:
+        1. Search
+         1 on success, 0 on failure; a warning is generated upon failure, and the lvs step is marked as completed.
+        2. Seam Finding
+         1 on success, 0 on failure; the lvs step is marked as completed upon failure.
+        3. Scan
+         1 on success, 0 on failure; the lvs step is marked as completed upon failure.
+        4. Tracking
+         The currently tracked step number is saved. This is useful when configuring a restart as a Job.
       </td>
     </tr>
   </tbody>
@@ -4040,7 +4075,6 @@ Refer to the manual provided by Full-V and the figure below to register the seam
 [__SOURCE](8_Application_function/5_LVS_tracking/3_calibration.md)
 # 8.5.3 LVS Calibration
 
-
 In order to use the LVS funtionality, calibration between the TCP and sensor coordinate system must be performed first.
 
 ${cont_model} controller supports automatic calibration.
@@ -4051,52 +4085,52 @@ Let's now look at how to perform automatic calibration between TCP and LVS senso
 
 Prepare a 15 cm long lap joint specimen with a 3 mm step.
 
-
 {% hint style="info" %}
 If you wish to use it for testing purpose, please contact us to prepare the calibration specimen.
 {% endhint %}
 
 ---
-
 ### (2) Automatic Calibration Teaching
+Please refer to the following when teaching.
+
+```python
+move L,spd=60%,accu=0,tool=0  # Calibration specimen reference point location
+delay 0.5
+lvs auto_calib, cnd=1, seam=1, sp=p1, opt=0
+end
+```
+
+{% hint style="info" %}
+For Scansonic Full-V sensors, using opt=20 allows for precise calibration.
+{% endhint %}
+
+Move the TCP to the reference point of the specimen using the jog tool as shown in the figure below. It is recommended to use the Tool coordinate system jog tool during calibration.
+
+As shown in Figures 1 and 2, half of the wire must be positioned so that it reaches the corner of the specimen from each direction.
+
+The torch must be positioned perpendicular to the specimen. (Perpendicular in both roll and pitch directions)
+
+Position the laser line with the jog so that it is perpendicular to the edge of the specimen.
+
+In this state (where the torch is positioned perpendicular to the specimen and the laser line is perpendicular to the edge of the specimen), press **[Record]** to insert the `move` command.
+
+{% hint style="warning" %}
+* Use a spirit level to align the calibration specimen perpendicularly from all directions.
+* The verticality of the torch and the degree to which the laser line is perpendicular to the edge of the specimen affect the calibration accuracy.
+{% endhint %}
+
+Insert `delay 0.5`, then insert the `lvs` command.
+
+The `seam` argument of the `lvs` command is the number for the geometry and condition registered in the LVS controller.
+
+{% hint style="info" %}
+For calibration, register the seam as a Lap joint in the LVS controller software.<br>
+Set the registered number in the seam argument of the lvs command.
+{% endhint %}
 
 ![](../../_assets/8_5_7_lvs_autocalib.png)<br>
 *Figure 8.5.7. LVS Auto Calibration*   
 </br>
-
-As shown in the figure above, move the TCP to the reference point of the specimen using the jog function.
-
-The torch orientation should be perpendicular to the specimen (both Roll and Pitch direction should be vertical).
-
-Position the laser line perpendicular to the edge of the specimen using jog (typically controlled by Tool Z).
-
-In this state(where the torch is positioned perpendicular to the specimen and the laser line is perpendicular to the edge of the specimen), press **[Record]** to insert the `move` command.
-
-{% hint style="warning" %}
-- Use a level to precisely align the torch's orientation perpendicular to the calibration specimen.
-- The vertical accuracy of the torch and the accuracy with which the laser line is perpendicular to the edge of the specimen will affect the calibration accuracy.
-{% endhint %}
-
-
-After inserting `delay 0.5`, input the `lvs` command.
-
-The seam parameter of the `lvs` command is the number corresponding to the shape and conditions registered in the LVS controller.
-
-{% hint style="info" %}
-For calibration, register the seam as a lap joint in the LVS controller's software.<br>
-Set the registered number in the seam parameter of the lvs command.
-{% endhint %}
-
-
-The program written as described is shown below:
-
-```python
-    move L,spd=60%,accu=0,tool=0  # Calibration specimen reference point
-    delay 0.5
-    lvs auto_calib, cnd=1, seam=1, sp=p1, opt=0
-    end
-```
-
 ---
 
 ### (3) Preparations
@@ -4108,7 +4142,7 @@ Automatic Calibration involves motions such as front/back, left/right, roll dire
 * When the laser is pointing to the flat surface outside the reference point of the specimen, the LVS controller should not be able to recognize the seam.
 {% endhint %}
 
-
+![](../../_assets/8_5_7_lvs_autocalib_2.png)<br>
 ---
 
 ### (4) Execution
@@ -4181,6 +4215,12 @@ var po_100=cpo()
 lvs seam_find, cnd=1, seam=1, side=10, height=10, sp=po_100
 ```
 
+* When assigning a variable to `find_flag` of the `lvs` command during seam finding, 1 is stored on success and 0 on failure. Please note that the command is treated as completed upon failure. If `find_flag` is not assigned, an error occurs upon failure.
+
+```python
+var f1=0
+lvs seam_find, cnd=1, seam=1, sp=po_100, find_flag=f1
+```
 ---
 
 ### (2) LVS Seam Finding Retry
@@ -4323,31 +4363,28 @@ If the `ms` parameter is not declared, it will be treated as a global pose.
 # 8.5.6 LVS Search Func.
 
 ### (1) How to Use the Search Function
-
-LVS provides a search function, which is used for the following purposes:
+LVS provides a search function, and searching must precede tracking.
 
 - `search`: Searches for the starting point end, while the TCP (Tool Center Point) moves to the starting position, stores, the points to be tracked in a buffer at set intervals, preparing for tracking.
 - `step_search`: Used for multi-pass bead detection and step detection
 
-When a search is performed, the system searches for the target, and if an invalid point is detected, the most recent valid point is stored as the pose in the `sp` parameter.
+When search is performed, search is executed, and depending on the option, it operates as follows:
 
-Subsequently, in order to prepare for tracking, the system stores the points to be followed in a buffer as the TCP moves to the found point.
+(1) Above Laser
+The TCP moves to the position of the laser, stores tracking points in the buffer, and completes the tracking preparation.
+
+(2) Detect
+It moves by the search distance in the search direction, detects the point where sensing is impossible, and the TCP moves to the position immediately preceding that point, stores tracking points in the buffer, and completes the tracking preparation.
 
 By performing the search function, the system becomes ready to perform "seam tracking". 
 
-{% hint style="info" %}
-  The search process detects invalid seams (when the LVS controller cannot detect a seam) and searches for the starting point.
-  The **search** function finds the start(or end), then moves to that location, storing the points to be tracked in a buffer.
-{% endhint %}
-
-
-```search``` function is used as follows:
+Search is used as follows.
 
 ```python
-    move L, spd=60%, accu=0, tool=1
-    delay 0.1 # if the accuracy of the starting position is not 0, it must be inserted.
-    var po_100=cpo() # The current pose is stored in the variable po_100
-    lvs search, cnd=1, seam=1, sp=po_100
+  move L, spd=60%, accu=0, tool=1
+  delay 0.1 #If the accu at the search start position is not 0, insertion is required.
+  var po_100=cpo() #Stores the current pose in the declared variable po_100.
+  lvs search, cnd=1, seam=1, sp=po_100 #Tracking ready
 ```
 
 To configure the search function, enter **[property]** in the `lvs` command, where the search settings can be adjusted as follows:
@@ -4357,19 +4394,55 @@ To configure the search function, enter **[property]** in the `lvs` command, whe
 *Figure 8.5.14. lvs search settings*   
 </br>
 
-| Item | Description |
-|------|------|
-| function | Set the usage of the search function. <br> 'Disable': The system moves to the laser position of the LVS and stores the target positions in a buffer. <br> 'Enable': The system detects both the starting and ending points in the search direction, then moves to the detected location while storing the target positions in the buffer. |
-| distance | If the search function is set to **enable**, the maximum distance for searching the starting point should be entered [mm]. |
-| direction | 0: Search in the +ToolX direction. <br> 1: Search in the -ToolX direction. |
-| speed | The search speed can be set in mm/sec. |
-| offset | Points found in the direction of the welding line can be shifted by the specified number of mm from the detected position. |
-
-<br>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Item</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">function</td>
+      <td style="text-align:left">
+        Sets the use of the search function.<br>
+        'Laser Above' : Moves to the laser position of lvs and saves target positions in the buffer.<br>
+        'Detect': After detecting unsensable points in the search direction, move to the position immediately prior to detection and save the target positions in the buffer.
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">distance</td>
+      <td style="text-align:left">
+       Enter the maximum seek distance [mm].
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">direction</td>
+      <td style="text-align:left">
+       0 : Navigates in the +ToolX direction.<br>
+       1 : Navigates in the -ToolX direction.
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">speed</td>
+      <td style="text-align:left">
+        Set the search speed in mm/sec units.
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">offset</td>
+      <td style="text-align:left">
+        You can shift the point found in the direction of the weld line from the search point by a set amount of mm.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ![](../../_assets/8_5_15_lvs_search_example.png)<br>
 *Figure 8.5.15. lvs search Example*   
 </br>
+
+If a variable is assigned to find_flag, 1 is stored on a successful search and 0 on a failed search. Please note that the lvs command is marked as completed if the search fails.
 
 The **search** and **seam tracking** functions can be taught as shown below.
 
@@ -4446,11 +4519,19 @@ The configuration of the lvs command should be set as follows:
     end
 ```
 
-The processs of executing the search command is illustrated in the following figure (when search is set to valid and direction is set to 0).
-An invalid point is found and stored in the `sp` parameter as the starting point, then the TCP moves to the starting point while filling the data buffer. 
+When the search command is executed, an invalid point is identified as the starting point, saved in sp, and then the data buffer is filled while moving to the starting point.
+
+Afterward, arc welding is performed while tracking the weld line in real time.
 
 ![](../../_assets/8_5_17.png)<br>
-*Figure 8.5.17. LVS search process*   
+*그림 8.5.17. lvs search and tracking process*   
+</br>
+
+The sp of the lvs track command stores the TCP position where the laser can be placed at the last weld location.
+If an error occurs because the LVS fails to recognize the weld line multiple times, you can make it restart as follows.
+
+![](../../_assets/8_5_18.png)<br>
+*그림 8.5.18. Manual restart method for unrecognized seam error*   
 </br>
 
 ### (2) How to Use Tracking with an Offset Value
@@ -4480,8 +4561,8 @@ If you want to track with an offset from the seam (instead of exactly following 
 
 ### (3) LVS Monitoring
 
-![](../../_assets/8_5_18_tracking_monitoring.png)<br>
-*Figure 8.5.18. LVS Monitoring*   
+![](../../_assets/8_5_19_tracking_monitoring.png)<br>
+*Figure 8.5.19. LVS Monitoring*   
 </br>
 
 

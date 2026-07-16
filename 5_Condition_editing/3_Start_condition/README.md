@@ -25,8 +25,8 @@ The contents of common items may vary in name, unit, and range for each welder. 
 
 </br>
 
+### Setting Items
 ---
-
 ### (1)	Condition Number  
 Specifies the welding start condition number to be edited.(Max: 32) 
 
@@ -229,4 +229,29 @@ Sets the upper and lower current limits during welding. If the limits are exceed
     
 </br>
     
+### Convenience Features
+---
+Convenience features are provided via the F buttons at the bottom of the settings screen when configuring welding conditions.
+
+- `[F1: Select]`  
+When multiple conditions exist, you can select a specific condition to edit by entering its number.
+
+- `[F2: Initialize]`  
+Resets the welding condition parameters to their default values.
+
+- `[F3: Weld Seq.]`  
+Displays the welding sequence chart while the button is being held down. 
+Pressing this under the 'Start Condition' tab displays the welding start sequence, and pressing it under the 'End Condition' tab displays the welding end sequence.
+
+- `[F4: Conv. Ratio]`  
+This button is activated when a specific item under the initial sequence or end conditions is selected. When you enter a conversion ratio (%), the system automatically calculates and enters the converted value relative to the main condition.
+
+|Reference Value (Main Condition)|Initial Conditions|End Conditions|
+|-|-|-|
+|Welding Current / Welding Power / Wire Feed Speed|Initial Welding Current / Welding Power / Wire Feed Speed|End Welding Current / Welding Power / Wire Feed Speed |
+|Welding Voltage / Welding Voltage Calibration / Arc Length Calibration|Initial Welding Voltage / Welding Voltage Calibration / Arc Length Calibration|End Welding Voltage / Welding Voltage Calibration / Arc Length Calibration|
+
+- `[F5: Synergic Sel.]`  
+This button is displayed if the welding machine supports synergic settings. Clicking this button opens the screen for configuring synergic codes.
+
 </br>
