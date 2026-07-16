@@ -35,25 +35,40 @@ The configuration of the lvs command should be set as follows:
     end
 ```
 
-When the search command is executed, an invalid point is identified as the starting point, saved in sp, and then the data buffer is filled while moving to the starting point.
+When the search command is executed, it operates as follows depending on the option:
 
-Afterward, arc welding is performed while tracking the weld line in real time.
+(1) Detect: Finds an invalid point as a starting point, saves it to sp, and then fills the data buffer while moving to the starting point.
+
+(2) Above Laser: Fills the data buffer while the TCP moves to the laser position.
+
+After the search, arc welding is performed while tracking the weld line in real time.
 
 ![](../../_assets/8_5_17.png)<br>
 *그림 8.5.17. lvs search and tracking process*   
 </br>
 
-The sp of the lvs track command stores the TCP position where the laser can be placed at the last weld location.
-If an error occurs because the LVS fails to recognize the weld line multiple times, you can make it restart as follows.
+### (2) Teaching method for cases where tracking is interrupted due to an error in a section where the LVS is continuously unable to recognize during welding
+
+The sp of the lvs track command stores the TCP position where the laser can be located at the last welding position.
+
+If an error occurs because the LVS fails to recognize the weld line multiple times, it can be made to restart as follows.
+
+The _lvs.last_tracking_sno system variable stores the step number being tracked.
 
 ![](../../_assets/8_5_18.png)<br>
-*그림 8.5.18. Manual restart method for unrecognized seam error*   
+*Figure 8.5.18. Manual restart method for unrecognized seam error*   
 </br>
 
-### (2) How to Use Tracking with an Offset Value
+You can use the check_seam function to find a section that is recognized more efficiently than the method above.
 
-If you want to track with an offset from the seam (instead of exactly following the welding line), you can specify the offset values for side and height in the `lvs` command in mm units. The offset is applied in the tool coordinate system direction.
+This function finds a recognized point within the distance set in opt and saves it as a pose in sp.
 
+![](../../_assets/8_5_20_check_seam_function.png)<br>
+*Figure 8.5.19. Description of check_seam function*   
+</br>
+
+
+### (3) How to use tracking with specified offset amount
 
 ```python
     move L, spd=60%, accu=0, tool=1
@@ -75,7 +90,11 @@ If you want to track with an offset from the seam (instead of exactly following 
 * When using weaving, the stickout length increases depending on the angle and amplitude. To compensate for this, set the height with a negative value during both search and track operations.
 {% endhint %}
 
-### (3) LVS Monitoring
+### (4) LVS Monitoring
+
+You can switch screens for LVS monitoring by following the sequence `[(Right Panel) Creative Adjustments] - Select - LVS Follow`.
+
+In monitoring, you can check the following items.
 
 ![](../../_assets/8_5_19_tracking_monitoring.png)<br>
 *Figure 8.5.19. LVS Monitoring*   

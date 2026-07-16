@@ -84,6 +84,10 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
       </td>
     </tr>
     <tr>
+      <td style="text-align:left">check_seam</td>
+      <td style="text-align:left">Saves the pose recognized for the distance [mm] set in opt while moving in the +ToolX and -ToolX directions to sp.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/ko/8_Application_function/5_LVS_tracking/7_tracking_monitoring?cont_model=${cont_model}">8.5.6 LVS tracking func.</a>)</td>
+    </tr>
+    <tr>
       <td style="text-align:left">track</td>
       <td style="text-align:left">
         After the search is completed, the 'arcon' and 'weaving on' actions must be performed before executing. <br>
@@ -140,8 +144,8 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
          1 on success, 0 on failure; a warning is generated upon failure, and the lvs step is marked as completed.
         2. Seam Finding
          1 on success, 0 on failure; the lvs step is marked as completed upon failure.
-        3. Scan
-         1 on success, 0 on failure; the lvs step is marked as completed upon failure.
+        3. Check seam
+         It is set to 1 when tracking starts and progresses by 5mm or more. It is set to 0 if error E32702 occurs, which happens when the LVS fails to recognize a seam beyond a certain section during tracking. (Available upon restart by Job)
         4. Tracking
          The currently tracked step number is saved. This is useful when configuring a restart as a Job.
       </td>
