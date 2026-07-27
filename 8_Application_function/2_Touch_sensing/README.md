@@ -15,7 +15,7 @@ When using the master mode, a mster pose can be saved through reference teaching
 
 ### (1) Touch Sensing Types
 
-The touch sensing supports a total of 5-types, as shown in [Figure 8.2.1] (Butt, Fillet, V-groove, LR Center, and Groove Detections).
+The touch sensing supports a total of 6-types, as shown in [Figure 8.2.1] (Butt, Fillet, V-groove, LR Center, Groove Detections, and Single point).
 
 ![](../../_assets/8_2_2.png)<br>
 *Figure 8.2.2. Touch Sensing Types*
@@ -59,7 +59,7 @@ Assuming the condition 1 set for Fillet, condition 2 set for Butt, and condition
 | VGroove |	1 |	X |	O	|X | |
 | LRCen |	1	|O |	O	|X |  |	
 | DetectGroove |	2 |	O |	O |	O | Proceed Distance 1</br> Retreat Distance 1 </br> criteria |
-
+|Single Point|    1 |    O |    O |    O | |
 </center>
 
 
@@ -175,7 +175,14 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 ![](../../_assets/8_2_8.png)<br>
 *Figure 8.2.8. Touch Sensing Sequence - Butt*   
 
+#### [4] Single point
 
+- Examples of Command
+```python
+  touchsen cnd=1, crd="tool", dir="+z", pose=P10
+```  
+  - Senses only in the specified single direction.
+---
 
 ### (4) Sensing Direction Angle Transformation
 

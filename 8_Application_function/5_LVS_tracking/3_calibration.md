@@ -53,9 +53,9 @@ For calibration, register the seam as a Lap joint in the LVS controller software
 Set the registered number in the seam argument of the lvs command.
 {% endhint %}
 
-![](../../_assets/8_5_7_lvs_autocalib.png)<br>
-*Figure 8.5.7. LVS Auto Calibration*   
-</br>
+![](../../_assets/8_5_7_lvs_autocalib.png)  
+*Figure 8.5.7. LVS Auto Calibration*  
+
 ---
 
 ### (3) Preparations
@@ -68,6 +68,7 @@ Automatic Calibration involves motions such as front/back, left/right, roll dire
 {% endhint %}
 
 ![](../../_assets/8_5_7_lvs_autocalib_2.png)<br>
+
 ---
 
 ### (4) Execution

@@ -2653,7 +2653,7 @@ When using the master mode, a mster pose can be saved through reference teaching
 
 ### (1) Touch Sensing Types
 
-The touch sensing supports a total of 5-types, as shown in [Figure 8.2.1] (Butt, Fillet, V-groove, LR Center, and Groove Detections).
+The touch sensing supports a total of 6-types, as shown in [Figure 8.2.1] (Butt, Fillet, V-groove, LR Center, Groove Detections, and Single point).
 
 ![](../../_assets/8_2_2.png)<br>
 *Figure 8.2.2. Touch Sensing Types*
@@ -2697,7 +2697,7 @@ Assuming the condition 1 set for Fillet, condition 2 set for Butt, and condition
 | VGroove |	1 |	X |	O	|X | |
 | LRCen |	1	|O |	O	|X |  |	
 | DetectGroove |	2 |	O |	O |	O | Proceed Distance 1</br> Retreat Distance 1 </br> criteria |
-
+|Single Point|    1 |    O |    O |    O | |
 </center>
 
 
@@ -2813,7 +2813,14 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 ![](../../_assets/8_2_8.png)<br>
 *Figure 8.2.8. Touch Sensing Sequence - Butt*   
 
+#### [4] Single point
 
+- Examples of Command
+```python
+  touchsen cnd=1, crd="tool", dir="+z", pose=P10
+```  
+  - Senses only in the specified single direction.
+---
 
 ### (4) Sensing Direction Angle Transformation
 
@@ -3827,6 +3834,10 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
       </td>
     </tr>
     <tr>
+      <td style="text-align:left">check_seam</td>
+      <td style="text-align:left">Saves the pose recognized for the distance [mm] set in opt while moving in the +ToolX and -ToolX directions to sp.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/ko/8_Application_function/5_LVS_tracking/7_tracking_monitoring?cont_model=${cont_model}">8.5.6 LVS tracking func.</a>)</td>
+    </tr>
+    <tr>
       <td style="text-align:left">track</td>
       <td style="text-align:left">
         After the search is completed, the 'arcon' and 'weaving on' actions must be performed before executing. <br>
@@ -3883,8 +3894,8 @@ lvs <function argument> cnd=<condition Number>, seam=<profile number to be sense
          1 on success, 0 on failure; a warning is generated upon failure, and the lvs step is marked as completed.
         2. Seam Finding
          1 on success, 0 on failure; the lvs step is marked as completed upon failure.
-        3. Scan
-         1 on success, 0 on failure; the lvs step is marked as completed upon failure.
+        3. Check seam
+         It is set to 1 when tracking starts and progresses by 5mm or more. It is set to 0 if error E32702 occurs, which happens when the LVS fails to recognize a seam beyond a certain section during tracking. (Available upon restart by Job)
         4. Tracking
          The currently tracked step number is saved. This is useful when configuring a restart as a Job.
       </td>
@@ -4128,9 +4139,9 @@ For calibration, register the seam as a Lap joint in the LVS controller software
 Set the registered number in the seam argument of the lvs command.
 {% endhint %}
 
-![](../../_assets/8_5_7_lvs_autocalib.png)<br>
-*Figure 8.5.7. LVS Auto Calibration*   
-</br>
+![](../../_assets/8_5_7_lvs_autocalib.png)  
+*Figure 8.5.7. LVS Auto Calibration*  
+
 ---
 
 ### (3) Preparations
@@ -4143,6 +4154,7 @@ Automatic Calibration involves motions such as front/back, left/right, roll dire
 {% endhint %}
 
 ![](../../_assets/8_5_7_lvs_autocalib_2.png)<br>
+
 ---
 
 ### (4) Execution
@@ -4519,25 +4531,40 @@ The configuration of the lvs command should be set as follows:
     end
 ```
 
-When the search command is executed, an invalid point is identified as the starting point, saved in sp, and then the data buffer is filled while moving to the starting point.
+When the search command is executed, it operates as follows depending on the option:
 
-Afterward, arc welding is performed while tracking the weld line in real time.
+(1) Detect: Finds an invalid point as a starting point, saves it to sp, and then fills the data buffer while moving to the starting point.
+
+(2) Above Laser: Fills the data buffer while the TCP moves to the laser position.
+
+After the search, arc welding is performed while tracking the weld line in real time.
 
 ![](../../_assets/8_5_17.png)<br>
 *그림 8.5.17. lvs search and tracking process*   
 </br>
 
-The sp of the lvs track command stores the TCP position where the laser can be placed at the last weld location.
-If an error occurs because the LVS fails to recognize the weld line multiple times, you can make it restart as follows.
+### (2) Teaching method for cases where tracking is interrupted due to an error in a section where the LVS is continuously unable to recognize during welding
+
+The sp of the lvs track command stores the TCP position where the laser can be located at the last welding position.
+
+If an error occurs because the LVS fails to recognize the weld line multiple times, it can be made to restart as follows.
+
+The _lvs.last_tracking_sno system variable stores the step number being tracked.
 
 ![](../../_assets/8_5_18.png)<br>
-*그림 8.5.18. Manual restart method for unrecognized seam error*   
+*Figure 8.5.18. Manual restart method for unrecognized seam error*   
 </br>
 
-### (2) How to Use Tracking with an Offset Value
+You can use the check_seam function to find a section that is recognized more efficiently than the method above.
 
-If you want to track with an offset from the seam (instead of exactly following the welding line), you can specify the offset values for side and height in the `lvs` command in mm units. The offset is applied in the tool coordinate system direction.
+This function finds a recognized point within the distance set in opt and saves it as a pose in sp.
 
+![](../../_assets/8_5_20_check_seam_function.png)<br>
+*Figure 8.5.19. Description of check_seam function*   
+</br>
+
+
+### (3) How to use tracking with specified offset amount
 
 ```python
     move L, spd=60%, accu=0, tool=1
@@ -4559,7 +4586,11 @@ If you want to track with an offset from the seam (instead of exactly following 
 * When using weaving, the stickout length increases depending on the angle and amplitude. To compensate for this, set the height with a negative value during both search and track operations.
 {% endhint %}
 
-### (3) LVS Monitoring
+### (4) LVS Monitoring
+
+You can switch screens for LVS monitoring by following the sequence `[(Right Panel) Creative Adjustments] - Select - LVS Follow`.
+
+In monitoring, you can check the following items.
 
 ![](../../_assets/8_5_19_tracking_monitoring.png)<br>
 *Figure 8.5.19. LVS Monitoring*   
