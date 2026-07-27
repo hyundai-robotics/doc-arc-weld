@@ -2790,7 +2790,7 @@ end
 
 ### (1) 터치센싱 타입
 
-터치센싱은 그림 8.2.1와 같이 총 5가지 타입(버트, 필렛, V그루브, LR센터, 그루브 감지-Detect groove)을 지원합니다.   
+터치센싱은 총 6가지 타입(버트, 필렛, V그루브, LR센터, 그루브 감지-Detect groove, 한 점)을 지원합니다.   
 
 ![](../../_assets/8_2_2.png)<br>
 *그림 8.2.2. 터치센싱 타입*
@@ -2833,7 +2833,7 @@ end
 |VGroove |	1 |	X |	O	|X | |
 |LRCen |	1	|O |	O	|X |  |	
 |DetectGroove|	2 |	O |	O |	O | 진행거리1 </br> 후퇴 거리1 </br> criteria |
-
+|Single Point|	1 |	O |	O |	O | |
 </center>
 
 
@@ -2952,6 +2952,18 @@ end
 *그림 8.2.8. 터치센싱 시퀀스 Butt 타입*   
 
 센싱은 상단 좌우 - 중간 복귀 - 하단 - 하단 좌우 - 중간 으로 진행됩니다.
+
+---
+
+#### [4] 한 점 타입
+
+- 명령어 작성 예시
+```python
+  touchsen cnd=1, crd="tool", dir="+z", pose=P10
+```  
+  - 지정된 단방향으로만 센싱합니다. 
+
+---
 
 
 ### (4) 센싱 방향 각도 변환
@@ -3862,6 +3874,10 @@ LVS 용접선 찾기 및 추적 기능은 ```lvs``` 명령어를 통해 수행�
       찾은 시작점은 명령어의 sp인자에 지정된 포즈변수에 저장됩니다.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/ko/8_Application_function/5_LVS_tracking/6_search?cont_model=${cont_model}">8.5.6 LVS search func.</a>)</td>
     </tr>
     <tr>
+      <td style="text-align:left">check_seam</td>
+      <td style="text-align:left">+ToolX, -ToolX 방향으로 이동하면서 opt에 설정된 거리[mm]만큼 인식이 되는 포즈를 sp에 저장합니다.(<a href="https://hrbook-hrc.web.app/#/view/doc-arc-weld/ko/8_Application_function/5_LVS_tracking/7_tracking_monitoring?cont_model=${cont_model}">8.5.7 LVS tracking func.</a>)</td>
+    </tr>
+    <tr>
       <td style="text-align:left">track</td>
       <td style="text-align:left">search가 완료된 후 arcon 및 weaving on 이 수행된 뒤 실행되어야 합니다.
       arcoff를 만날때 까지 트래킹을 수행합니다.</td>
@@ -3912,10 +3928,10 @@ LVS 용접선 찾기 및 추적 기능은 ```lvs``` 명령어를 통해 수행�
         성공 시 1, 실패 시 0, 실패 시 경고가 발생하며 lvs 스텝은 실행완료 처리 됩니다.<br>
         2. Seam Finding <br>
         성공 시 1, 실패 시 0, 실패 시 lvs 스텝은 실행완료 처리 됩니다.<br>
-        3. Scan <br>
+        3. Check Seam <br>
         성공 시 1, 실패 시 0, 실패 시 lvs 스텝은 실행완료 처리 됩니다.<br>
         4. Tracking<br>
-        현재 트래킹중인 step 번호가 저장됩니다. 재기동을 Job으로 구성할 경우 유용하게 사용할 수 있습니다.
+        tracking이 시작되고 5mm 이상 진행되면 1로 설정됩니다. tracking 중 일정 구간 이상 LVS가 seam 인식이 불가해지면 발생하는 에러인 E32702가 발생하면 0으로 설정됩니다. (Job에 의한 재기동 시 사용 가능)
       </td>
     </tr>
   </tbody>
@@ -4547,25 +4563,37 @@ LVS 명령어 구성은 다음과 같이 설정해야 합니다.
   end
 ```
 
-search 명령어를 수행하면 유효하지 않은 점을 시작점으로 찾아 sp에 저장한 후 시작점으로 이동하면서 데이터 버퍼를 채웁니다.
-그 후 용접선을 실시간 tracking하며 아크용접을 수행합니다.
+search 명령어를 수행하면 옵션에 따라 다음과 같이 동작합니다.
+(1) 검지: 유효하지 않은 점을 시작점으로 찾아 sp에 저장한 후 시작점으로 이동하면서 데이터 버퍼를 채웁니다.
+(2) 레이저 위 : 레이저의 위치로 TCP가 이동하면서 데이터 버퍼를 채웁니다.
+search 후 용접선을 실시간 tracking하며 아크용접을 수행합니다.
 
 ![](../../_assets/8_5_17.png)<br>
 *그림 8.5.17. lvs search 및 tracking 과정*   
 </br>
 
-search 명령어를 수행하면 유효하지 않은 점을 시작점으로 찾아 sp에 저장한 후 시작점으로 이동하면서 데이터 버퍼를 채웁니다.
-그 후 용접선을 실시간 tracking하며 아크용접을 수행합니다.
+### (2) 용접 중 LVS가 계속하여 인식이 불가한 구간에서 에러발생으로 tracking이 중단 될 경우의 티칭방법
 
 lvs track 명령어의 sp에는 마지막 용접위치에 레이저가 위치할 수 있는 TCP위치가 저장됩니다.
+
 LVS가 용접선을 여러번 인식하지 못하여 에러가 발생한 경우 아래와 같이 재기동하도록 만들 수 있습니다.
+
+_lvs.last_tracking_sno 시스템 변수는 트래킹하고 있던 스텝번호를 저장하고 있습니다.
 
 ![](../../_assets/8_5_18.png)<br>
 *그림 8.5.18. Seam 인식 불가에 대한 수동 재기동 방법*   
 </br>
 
+위 방법보다 효율적으로 인식이 잘되는 구간을 찾기 위해 check_seam 기능을 이용할 수 있습니다.
 
-### (2) offset량을 지정한 tracking 사용법
+이 기능은 opt에 설정한 거리만큼 인식이 되는 점을 찾고 sp에 포즈로 저장합니다.
+
+![](../../_assets/8_5_20_check_seam_function.png)<br>
+*그림 8.5.19. check_seam 기능 설명*   
+</br>
+
+
+### (3) offset량을 지정한 tracking 사용법
 
 만약 용접선(seam)을 정확히 추종하는 것이 아닌 좌우 또는 높이 offset을 두고 추종하고자 한다면 `lvs` 명령어의 side와 height에 
 옵셋값을 mm 단위로 지정하면 됩니다. 이 때 옵셋값은 툴좌표계 방향으로 적용됩니다.
@@ -4591,7 +4619,7 @@ end
 {% endhint %}
 
 
-### (3) lvs 모니터링
+### (4) lvs 모니터링
 
 lvs 모니터링은 `[(우측 패널)창조정] - 선택 - LVS 추종` 순서로 진입하여 화면을 전환할 수 있습니다.
 
