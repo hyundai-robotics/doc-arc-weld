@@ -61,7 +61,20 @@ Set the time to continue the shielding gas output even after the arc is turned o
 ### (8)	Crater move time: [ 0 ] sec (Range: 0.0 ~ 10.0) / Crater move distance : [0] mm (Range: 0.0 ~ 100.0)
 During crater treatment, sets the distance the robot will move backward during the DownSlope time and condition hold time. The speed is automatically determined based on the distance and time.
 
-### (9) Auto Stick Release Count : [0] times (Range: 0 to 9) / Condition : [0] (Range: 0 to 32) / Time: [0] sec (Range: 0.0 to 10.0)  
+{% hint style="info" %}
+The weaving function during crater movement is supported on version V70.04.
+{% endhint %}
+
+### (9)	Crater weaving  
+Configure whether or not to perform weaving during crater filling. (Default: Disabled)
+
+### (10) Crater weaving width [%]
+Set the weaving width for crater filling as a percentage of the main condition (100% indicates the same width as the main condition).
+
+### (11) Crater weaving frequency [Hz]
+Set the weaving frequency during crater processing.
+
+### (12) Auto Stick Release Count : [0] times (Range: 0 to 9) / Condition : [0] (Range: 0 to 32) / Time: [0] sec (Range: 0.0 to 10.0)  
 During arc welding, the welding wire may stick to the base material at the end of welding. To prevent this, the welding power source temporarily increases the voltage at the end of welding as an anti-sticking process.
 However, sticking may still occur even after this process. Therefore, the robot controller sends a post-weld sticking detection signal to the welding power source to check whether sticking has occurred.
 The auto stick release function automaticllay performs a burnback release when sticking is detected after welding, allowing the robot to continue operation without stopping.
