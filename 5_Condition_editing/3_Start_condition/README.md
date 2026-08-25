@@ -191,7 +191,7 @@ Sets the time to process the current change between the initial condition and th
 </br>
 
 ### (13) Excess Allowed Time  
-Sets the allowable time for exceeding the welding voltage/current and feed motor current limits. If the welding voltage/current or feed motor current exceeds the limits for longer than this time, a restart will be performed. However, If the restart count is set to 0, an error will be displayed, and the robot will stop. The restart method and restart count, as well as other restart-related features, can be configured in the welding auxiliary conditions. If this time is set to 0 seconds, the arc limits monitoring function will not be used.
+Sets the allowable time for exceeding the welding voltage/current limits. If the welding voltage/current exceeds the limits for longer than this time, a restart will be performed. However, If the restart count is set to 0, an error will be displayed, and the robot will stop. The restart method and restart count, as well as other restart-related features, can be configured in the welding auxiliary conditions. If this time is set to 0 seconds, the arc limits monitoring function will not be used.
 <center>
 
 | Supported Welder | Name | Unit | Range | Default | 

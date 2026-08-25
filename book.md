@@ -1585,7 +1585,7 @@ Sets the time to process the current change between the initial condition and th
 </br>
 
 ### (13) Excess Allowed Time  
-Sets the allowable time for exceeding the welding voltage/current and feed motor current limits. If the welding voltage/current or feed motor current exceeds the limits for longer than this time, a restart will be performed. However, If the restart count is set to 0, an error will be displayed, and the robot will stop. The restart method and restart count, as well as other restart-related features, can be configured in the welding auxiliary conditions. If this time is set to 0 seconds, the arc limits monitoring function will not be used.
+Sets the allowable time for exceeding the welding voltage/current limits. If the welding voltage/current exceeds the limits for longer than this time, a restart will be performed. However, If the restart count is set to 0, an error will be displayed, and the robot will stop. The restart method and restart count, as well as other restart-related features, can be configured in the welding auxiliary conditions. If this time is set to 0 seconds, the arc limits monitoring function will not be used.
 <center>
 
 | Supported Welder | Name | Unit | Range | Default | 
@@ -1723,10 +1723,7 @@ The descriptions for each item are as follows:
 
 </br>
 
-### (1)	Condition Number: [1] (Range: changes not allowed)  
-Displays the welding start condition number. In digital arc welding, the end condition number and start condition number are managed as one. Therefore, to change the end condition number, the start condition number must also be changed.  
-
-### (2)	End Welding Current / Welding Power / Wire Feed Speed  
+### (1)	End Welding Current / Welding Power / Wire Feed Speed  
 Set the current value to be output during crater treatment. This is set as a percentage(%) relative to the current welding conditions (welding current, welding power, and wire feed speed). However, for EWM welders, this is set in m/min, the same as the welding conditions.
 
 <center>
@@ -1738,7 +1735,7 @@ Set the current value to be output during crater treatment. This is set as a per
 | Fronius | End Welding Power | % | 10 ~ 100 | 70 |
 </center>
 
-### (3)	End Welding voltage/ Welding voltage corrction / Arc length correction  
+### (2)	End Welding voltage/ Welding voltage corrction / Arc length correction  
 Set the voltage value to be output during crater treatment. The voltage is specified and output according to the set value.
 <center>
 
@@ -1751,25 +1748,44 @@ Set the voltage value to be output during crater treatment. The voltage is speci
 
 </center>
 
-### (4)	Downslope Time(Crate Time): [0] sec (Range: 0.0 ~ 10.0)  
+### (3)	Downslope Time(Crate Time): [0] sec (Range: 0.0 ~ 10.0)  
 Sets the time for processing the current change between the main condition and the end condition as a slope.
 
 ![](../../_assets/5_4_2.png)<br>
 *Figure 5.4.2. DownSlope Time and Crate Time Chart*
 
-### (5)	Condition Hold time: [1] sec (Range: 0.1 ~ 10.0)   
-Set the time to maintain the output value specified in the 'current ratio' item under the welding end condition.
-
-### (6)	Wire Burnback: [ 0 ] ms (Range: 0.0 ~ 200.0)  
+### (4)	Wire Burnback: [ 0 ] ms (Range: 0.0 ~ 200.0)  
 Configures burnback processing. May vary depending on the welder.
 
-### (7)	Gas Post Flow: [ 0 ] sec (Range: 0.0 ~ 10.0)  
+### (5)	Gas Post Flow: [ 0 ] sec (Range: 0.0 ~ 10.0)  
 Set the time to continue the shielding gas output even after the arc is turned off.
 
-### (8)	Crater move time: [ 0 ] sec (Range: 0.0 ~ 10.0) / Crater move distance : [0] mm (Range: 0.0 ~ 100.0)
+### (6)	Crater move time: [ 0 ] sec (Range: 0.0 ~ 10.0) / Crater move distance : [0] mm (Range: 0.0 ~ 100.0)
 During crater treatment, sets the distance the robot will move backward during the DownSlope time and condition hold time. The speed is automatically determined based on the distance and time.
 
-### (9) Auto Stick Release Count : [0] times (Range: 0 to 9) / Condition : [0] (Range: 0 to 32) / Time: [0] sec (Range: 0.0 to 10.0)  
+{% hint style="info" %}
+The weaving function during crater movement is supported on version V70.04.
+{% endhint %}
+
+### (7)	Crater weaving  
+Configure whether or not to perform weaving during crater filling. (Default: Disabled)
+
+### (8) Crater weaving width [%]
+Set the weaving width for crater filling as a percentage of the main condition (100% indicates the same width as the main condition).
+
+### (9) Crater weaving frequency [Hz]
+Set the weaving frequency during crater processing.
+
+### (10) Crater wire control
+Set whether to retract wire after welding process ended.
+
+### (11) retract time [sec]
+Set the wire retract time after welding process ended.
+
+### (12) retract speed [%]
+Set the wire retract speed after welding process ended.
+
+### (13) Auto Stick Release Count : [0] times (Range: 0 to 9) / Condition : [0] (Range: 0 to 32) / Time: [0] sec (Range: 0.0 to 10.0)  
 During arc welding, the welding wire may stick to the base material at the end of welding. To prevent this, the welding power source temporarily increases the voltage at the end of welding as an anti-sticking process.
 However, sticking may still occur even after this process. Therefore, the robot controller sends a post-weld sticking detection signal to the welding power source to check whether sticking has occurred.
 The auto stick release function automaticllay performs a burnback release when sticking is detected after welding, allowing the robot to continue operation without stopping.
