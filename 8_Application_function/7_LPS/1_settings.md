@@ -96,12 +96,25 @@ From Hi7 and later, built-in Ethernet is supported, allowing communication to be
 *Figure 8.7.5. Baumer Sensor Signal Assignment*
 </br>
 
-Once the above steps are completed, navigate to `[F2: System] - 4: Application Parameters - 6: Laser Point Sensing - 1: Environment Setting - Signal tab`.
-Configure the input signals for the assigned blocks.
-You can then confirm that the distance (current value) is output as the sensor value. (Additional settings are required if sensor-to-distance mapping is needed.)
+The start number assigned to the **Sensor Input Signal** corresponds to the **least significant bit (LSB)**, and higher signal numbers correspond to higher-order bits.
+When the **Sensor Bit Count** is entered, the end signal number is automatically displayed.
+
+**Sensor 1: Distance 1** and **Sensor 2: Distance 2** are used to define two corresponding points between the raw sensor value and the actual distance.
+The value on the left is the floating-point value received through communication, and the value on the right is the corresponding actual distance (mm).
+The current received sensor value is converted to distance by sensor-to-distance mapping by linear interpolation along the line passing through these two points.
+```Distance = Distance 1 + (Distance 2 - Distance 1) / (Sensor 2 - Sensor 1) * (Current Sensor Value - Sensor 1)```  
+
+In particular, when the **Sensor Bit Count** is set to **32** and the sensor transmits the distance value directly as a floating-point value, set **Sensor 1** and **Sensor 2** to the same value (e.g., both to 0).  
+
+In this case, linear interpolation is not performed.
+Instead, the received 32-bit data is interpreted directly as a floating-point value and used as the distance value.
+Therefore, the **Distance 1** and **Distance 2** settings are ignored.  
+
+**Note**: If **Sensor 1** and **Sensor 2** are set to the same value while the **Sensor Bit Count** is set to **16**, the received data is not interpreted as a floating-point value.
+Instead, **Distance 1** is always output regardless of the received sensor value.
 
 
-#### EtherNet/IP - Example: Keyence IL-300
+#### Minimum Communication Requirements
 
-* Refer to the manufacturer's manual and our manual to connect the sensor in the same manner as the Baumer sensor.
-As described above, the Ethernet connection method differs depending on whether an Hi6 or Hi7 controller is used.
+For this function to operate properly, a communication cycle of 5 ms or less is required.
+When using our built-in Ethernet communication, set the **RPI** to **5 ms**.  
