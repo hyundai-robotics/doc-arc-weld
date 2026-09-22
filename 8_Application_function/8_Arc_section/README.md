@@ -1,4 +1,4 @@
-﻿# 8.7 LPS(Laser Point Sensing)  
+﻿# 8.8 Arcsection
 
 {% hint style="info" %}
 해당 기능은 70.04-00 이후 버전에서 지원합니다.
