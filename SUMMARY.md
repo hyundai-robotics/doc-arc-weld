@@ -115,4 +115,6 @@
     * [8.7.1 Laser Sensor Setup](8_Application_function/7_LPS/1_settings.md)
     * [8.7.2 TCP-Sensor Calibration](8_Application_function/7_LPS/2_calibration.md)
     * [8.7.3 Using the LPS Function](8_Application_function/7_LPS/3_function.md)
+  * [8.8 Arcsection Function](8_Application_function/8_Arc_section/README.md)
+  
 
