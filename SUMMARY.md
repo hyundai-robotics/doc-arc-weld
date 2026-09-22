@@ -115,4 +115,6 @@
     * [8.7.1 레이저 센서 기본설정](8_Application_function/7_LPS/1_settings.md)
     * [8.7.2 TCP-센서 캘리브레이션](8_Application_function/7_LPS/2_calibration.md)
     * [8.7.3 lps 기능 사용](8_Application_function/7_LPS/3_function.md)
+  * [8.8 Arcsection 기능](8_Application_function/8_Arc_section/README.md)
+  
 
