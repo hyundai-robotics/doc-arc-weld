@@ -1456,66 +1456,46 @@ stitch off
 
   [8.6 STITCH 기능](../8_Application_function/6_Stitch/README.md) 참고
 
-[__SOURCE](2_Command/15_calcshift.md)
-# 2.15 calshift
+[__SOURCE](2_Command/15_arc_intersect.md)
+# 2.15 arc_intersect
 
 
-### 설명     
-```calshift``` 문은 2개의 포즈변수를 이용해 쉬프트를 계산하는 함수입니다.
-터치센싱으로 저장한 포즈 변수들을 이용해 쉬프트를 계산할 때 많이 사용됩니다.  
+{% hint style="info" %}
+해당 기능은 70.04-00 이후 버전에서 지원합니다.
+{% endhint %}
+
+
+### 설명  
+
+```arc_intersect``` 문은 아크 응용에서 마스터모드/양산모드를 적용하기 위한 명령어입니다. 기존 intersection 함수와 사용 방법은 같고 마스터모드 on/off에 따라 파라미터에 값이 처리됩니다.
 <br/>
 
 
-### 문법
-```python
-<쉬프트변수인자>=calshift(<포즈변수인자1>, <포즈변수인자2>)
-<쉬프트변수인자>=calshift(<포즈변수인자1>, <포즈변수인자2>,"TV")
+### 문법  
+
+```py
+  arc_intersect sp=<저장할 포즈>,crd=<좌표계>,mp=<마스터포즈>,ms=<마스터포즈 대비 시프트>,p1=<직선 참조 포즈1>,p2=<직선 참조 포즈2>,p3=<직선 참조 포즈3>
+  arc_intersect sp=<저장할 포즈>,crd=<좌표계>,mp=<마스터포즈>,ms=<마스터포즈 대비 시프트>,p1=<직선 참조 포즈1>,p2=<직선 참조 포즈2>,p3=<직선 참조 포즈3>,p4=<직선 참조 포즈4>
 ```  
 
 ### 파라미터
 
-<table>
-  <thead>
-    <tr>
-      <th>항목</th>
-      <th>의미</th>
-      <th>기타</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>포즈변수 인자</td>
-      <td>
-        포즈변수를 입력합니다.(1 ~ 9999)
-      </td>
-      <td>포즈변수</td>
-    </tr>
-    <tr>
-      <td>쉬프트변수 인자</td>
-      <td>
-        쉬프트 값을 저장 할 쉬프트 변수를 입력합니다.
-      </td>
-      <td>쉬프트변수</td>
-    </tr>    
-    <tr>
-      <td>TV</td>
-      <td>
-        툴에 수직인 방향으로 쉬프트를 계산합니다.
-      </td>
-      <td>문자열</td>
-    </tr>
-  </tbody>
-</table>   
+| 항목 | 의미 | 기타 |
+| --- | --- | --- |
+| sp | 명령어 수행 시 저장할 포즈 변수 | 포즈변수 |
+| crd | 시프트 변수가 계산될 때 좌표계("base", "robot", "tool") | 문자열 |
+| mp | 마스터모드에서는 sp와 같은 값이 저장되며, 양산모드에서 ms를 계산할 때 사용 | 포즈 변수 |
+| ms | 양산모드에서 사용되는 시프트 변수로, mp와 sp의 차이가 설정된 좌표계로 계산 | 시프트 변수 |
+| p1 ~ p4 | 직선을 만드는 3개 혹은 4개의 점으로 다음 링크를 참고합니다. [로봇언어 intersection 함수](https://hrbook-hrc.web.app/#/view/doc-hrscript/ko/10-etc/2-func/3-intersection?cont_model=${cont_model}) | 포즈 변수 |
 
 ### 사용 예
 ```python
-    move L, spd=30%, ...
-    var pose_1 = cpo()
-    move L, spd=30%, ...
-    var pose_2 = cpo()
-    var sft_1
-    sft_1=calshift(pose_1,pose_2)   
-    # pose_1 - pose_2 의 벡터 쉬프트량을 계산하여 sft_1에 저장
+  lvs seam_find, cnd=1, seam=10, sp=p1  # 찾은 점을 p1에 저장
+  lvs seam_find, cnd=1, seam=10, sp=p2  # 찾은 점을 p2에 저장
+  lvs seam_find, cnd=1, seam=10, sp=p3  # 찾은 점을 p3에 저장
+
+  arc_intersect sp=p10,crd="robot",mp=mp10,ms=ms10,p1=p1,p2=p2,p3=p3
+  # p1~p3로 계산된 점을 p10에 저장, 마스터모드 여부에 따라 mp10 과 ms10 저장
 ```  
   
 [__SOURCE](3_Property/README.md)
@@ -5096,3 +5076,21 @@ LPS 명령어 속성은 다음과 같습니다.
 
 기능을 수행하면 위 이미지와 같이 결과를 확인할 수 있습니다. 현재 제공하는 화면에서는 다음과 같은 기능을 제공합니다.  
 좌측 상단 새로고침 버튼을 눌러 화면을 갱신할 수 있습니다. 우측 상단 숫자는 레이저 센서의 실시간 출력값을 나타냅니다. 빨간색 점을 통해 계산된 용접점을 알 수 있습니다.
+
+[__SOURCE](8_Application_function/8_Arc_section/README.md)
+# 8.8 Arcsection
+
+{% hint style="info" %}
+해당 기능은 70.04-00 이후 버전에서 지원합니다.
+{% endhint %}
+
+arcon과 arcoff 사이 구간에서 특정 길이[mm]를 지정하고 명령어가 실행된 이후부터 그 길이만큼 전류, 전압, 용접속도, 위빙폭, 위빙주파수를 선형보간 (시작값 ~ 끝값)할 때 사용하는 기능입니다.
+
+동작은 다음그림과 같습니다.
+
+![](../../_assets/8_8_1.png)<br>
+*그림 8.8.1 Arcsection 기능 사양*<br/>
+
+arcsection 이 끝나면 해당 요소는 arcoff가 실행되기 전까지 e값을 유지합니다.
+
+arcsection이 끝나기 전 다시 같은 요소의 arcsection을 실행하면 새 요소의 s값으로 값이 변경되며 선형보간됩니다.
