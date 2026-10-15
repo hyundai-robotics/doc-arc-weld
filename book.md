@@ -1223,43 +1223,86 @@ stitch off
 ### Details  
   Refer to [[8.6 STITCH Function]](../8_Application_function/6_Stitch/README.md)
 
-[__SOURCE](2_Command/15_calcshift.md)
-# 2.15 calshift
+[__SOURCE](2_Command/15_arc_intersect.md)
+# 2.15 arc_intersect
+
+
+{% hint style="info" %}
+This feature is supported in versions 70.04-00 and later.
+{% endhint %}
+
 
 ### Description  
 
-```calshift``` command calculates the shift using two Pose variables.
-It is frequently used to calculate shifts based on pose variables saved from touch sensing.  
+The ```arc_intersect``` command is used to apply Master Mode and Production Mode in arc applications. Its usage is identical to that of the existing intersection function. Parameter values are processed according to whether Master Mode is enabled or disabled.
 <br/>
 
 
-### Syntax
+### Syntax  
 
-```python
-<Shift Val>=calshift(<Pose Val 1>, <Pose Val 2>)
-<Shift Val>=calshift(<Pose Val 1>, <Pose Val 2>,"TV")
+```py
+  arc_intersect sp=<Pose to save>,crd=<Coordinate System>,mp=<Master Pose to save in Master Mode>,ms=<Shift Variable Calculated in Production Mode>,p1=<Line Reference Pose1>,p2=<Line Reference Pose2>,p3=<Line Reference Pose3>
+  arc_intersect sp=<Pose to save>,crd=<Coordinate System>,mp=<Master Pose to save in Master Mode>,ms=<Shift Variable Calculated in Production Mode>,p1=<Line Reference Pose1>,p2=<Line Reference Pose2>,p3=<Line Reference Pose3>,p4=<Line Reference Pose4>
 ```  
-
 
 ### Parameter
 
-| Item | Meaning | Remarks |
-| --- | --- | --- |
-| **Shift Variable Input** | Enter the shift variable to store the calculated shift | Shift Variable |
-| **Pose Variable Input** | Enter the pose variable (1 ~ 9999) | Pose Variable |
-| **TV** | Calculates the shift in the direction perpendicular to the tool (1 ~ 9999) | string |
-
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Meaning</th>
+      <th>Remarks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>sp</td>
+      <td>
+        Pose variable used to store the result of the command execution.
+      </td>
+      <td>Pose Variable</td>
+    </tr>
+    <tr>
+      <td>crd</td>
+      <td>
+        Coordinate system used to calculate the shift variable ("base", "robo", "tool")
+      </td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td>mp</td>
+      <td>
+        Stores the same value as sp in Master Mode. Used to calculate ms in Production Mode.
+      </td>
+      <td>Pose Variable</td>
+    </tr>
+    <tr>
+      <td>ms</td>
+      <td>
+        Shift variable used in Production Mode. Represents the difference between mp and sp, calculated in the specified coordinate system.
+      </td>
+      <td>Shift Variable</td>
+    </tr>
+    <tr>
+      <td>p1 ~ p4</td>
+      <td>
+        Reference poses used to define a line. Refer to the link below for details on defining a line using three or four points.
+        [HRScript intersection](https://hrbook-hrc.web.app/#/view/doc-hrscript/en/10-etc/2-func/3-intersection?cont_model=${cont_model})  
+      </td>
+      <td>Pose Variable</td>
+    </tr>
+  </tbody>
+</table>   
 
 ### Example
-
 ```python
-    move L, spd=30%, ...
-    var pose_1 = cpo()
-    move L, spd=30%, ...
-    var pose_2 = cpo()
-    var sft_1
-    sft_1=calshift(pose_1,pose_2)   
-    # calculate the vector shift between pose_1 and pose_2, and store the result in sht_1
+  lvs seam_find, cnd=1, seam=10, sp=p1  # Store the detected point in p1
+  lvs seam_find, cnd=1, seam=10, sp=p2  # Store the detected point in p2
+  lvs seam_find, cnd=1, seam=10, sp=p3  # Store the detected point in p3
+
+  arc_intersect sp=p10,crd="robot",mp=mp10,ms=ms10,p1=p1,p2=p2,p3=p3
+  # Store the point calculated from p1 to p3 in p10, and update mp10 and ms10 according to the Master Mode status.
 ```  
   
 [__SOURCE](3_Property/README.md)
@@ -5096,3 +5139,21 @@ The currently provided screen offers the following features:
 2. The numeric value displayed in the upper-right corner represents the real-time output value of the laser sensor.
 3. The calculated weld point is indicated by a red dot.
 
+
+[__SOURCE](8_Application_function/8_Arc_section/README.md)
+# 8.8 Arcsection
+
+{% hint style="info" %}
+This feature is supported in versions 70.04-00 and later.
+{% endhint %}
+
+This function is used to specify a particular length [mm] between arcon and arcoff, and to linearly interpolate (start value ~ end value) the current, voltage, welding speed, weaving width, and weaving frequency over that length starting from the time the command is executed.
+
+The operation is as shown in the following figure.
+
+![](../../_assets/8_8_1.png)<br>
+*그림 8.8.1 Arcsection 기능 사양*<br/>
+
+When arcsection is finished, the element retains the value of e until arcoff is executed.
+
+If you run arcsection on the same element again before arcsection finishes, the value changes to the new element's s value and is linearly interpolated.
