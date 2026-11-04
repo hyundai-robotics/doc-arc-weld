@@ -79,7 +79,7 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 ```python
     - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], pose=<결과포즈 저장변수>, gap=<butt gap 변수>
     - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, pose=<결과포즈 저장변수>, gap=<butt gap 변수>
-    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, mpose=<결과포즈 저장변수>, mshift=<계산된 시프트 변수, gap=butt gap 변수>
+    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, mp=<결과포즈 저장변수>, ms=<계산된 시프트 변수, gap=butt gap 변수>
 ```   -->
 
 <!-- - **파라미터**
@@ -218,15 +218,14 @@ Angle specification rotates the entire search direction by the specified angle a
 </center>
 
 
-### (5) Master/Execution Mode in Touch Sensing
+### (5) Master Mode/Production Mode in Touch Sensing
 
 The master mode can be turned On/Off using the user key.
 When touch sensing is performed with the master mode On, the master pose can be saved and used as a reference for teaching.  
 During actual operation, the master mode is turned Off, and touch sensing is performed. In this case, the system automatically calculates the shift amount of the workpiece relative to the master pose based on the current sensing pose.  
 
-In master mode, the sensed pose is saved in the variable specified by the `mpose` input parameter of the touch sensing command.
-In execution mode (when master mode is OFF), the current sensed pose is compared with the pose sensed in master mode, and the shift amount is calculated.
-The shift amount is then recorded in the variable specified by the `mshift` input parameter.
+In master mode, the sensed pose is saved in the variable specified by the user through the `mp` input parameter of the touch sensing command.  
+In production mode (when master mode is OFF), the currently sensed pose is compared with the pose sensed in master mode to calculate the shift amount. The calculated shift amount is then stored in the variable specified by the user through the `ms` input parameter.  
 
 
 - Examples of Command
@@ -234,7 +233,7 @@ The shift amount is then recorded in the variable specified by the `mshift` inpu
    var P10=cpo()
    var sft_var1=Shift(0,0,0,0,0,0,"base")
    ....
-   touchsen cnd=1, crd="robot", dir=["+x","-z"], mpose=P10, mshift=sft_var1
+   touchsen cnd=1, crd="robot", dir=["+x","-z"], mp=P10, ms=sft_var1
 ```  
 
-- For example, in master mode, the sensed pose is saved in the `P10` pose variable, and in execution mode, when sensing is performed, the shift amount between the master mode pose and the current sensed pose is automatically calculated and stored in the sft_var1 variable.
+- For example, in master mode, the sensed pose is saved in the `P10` pose variable, and in production mode, when sensing is performed, the shift amount between the master mode pose and the current sensed pose is automatically calculated and stored in the sft_var1 variable.
