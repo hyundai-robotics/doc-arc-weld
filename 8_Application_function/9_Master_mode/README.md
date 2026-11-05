@@ -25,12 +25,13 @@
 | `touchsen` | 터치센싱 | 센싱한 포즈를 기준으로 등록 또는 시프트 계산 |
 | `lvs` | `seam_find`, `seam_find_p`, `intersection`, `step_search` | 검출하거나 계산한 포즈를 기준으로 등록 또는 시프트 계산 |
 | `lps` | `spot`, `stepp`, `scan` | 검출한 포즈를 기준으로 등록 또는 시프트 계산 |
-| `arc_intersect` | 참조 포즈 3개 또는 4개를 이용한 교차점 계산 | 계산한 포즈를 기준으로 등록 또는 시프트 계산 |
+<!-- | `arc_intersect` | 참조 포즈 3개 또는 4개를 이용한 교차점 계산 | 계산한 포즈를 기준으로 등록 또는 시프트 계산 | -->
 
 * 참고  
 `lvs search`, `lvs check_seam`은 `sp`가 필요하지만, 위의 `mp`/`ms` 처리가 적용되는 명령은 아닙니다. `lvs track`의 `sp`는 선택 인자입니다.  
 
-명령어별 상세 사용법은 [2.7 lvs](../../2_Command/7_lvson.md), [2.8 lps](../../2_Command/8_lps.md), [2.13 touchsen](../../2_Command/13_touchsen.md), [2.15 arc_intersect](../../2_Command/15_arc_intersect.md)를 참고하십시오.  
+명령어별 상세 사용법은 [2.7 lvs](../../2_Command/7_lvson.md), [2.8 lps](../../2_Command/8_lps.md), [2.13 touchsen](../../2_Command/13_touchsen.md)를 참고하십시오.
+<!-- , [2.15 arc_intersect](../../2_Command/15_arc_intersect.md)를 참고하십시오.   -->
 
 
 ### (3) 공통 인자 및 변수 생성
@@ -46,7 +47,7 @@
 양산모드에서는 `mp`, `ms`에 지정한 변수가 미리 정의되어 있어야 합니다. 실제 기준 위치가 등록되어 있는지도 확인해야 하며, 단순히 변수를 선언한 것만으로 마스터 티칭을 대신할 수는 없습니다.
 
 {% hint style="warning" %}
-일반적으로 `sp` 인자만 사용하나 마스터모드에서는 `mp`, `ms` 인자를 모두 지정해야 합니다. 다만 `arc_intersect`는 항상 모든 인자를 지정해야 합니다.
+일반적으로 `sp` 인자만 사용하나 마스터모드에서는 `mp`, `ms` 인자를 모두 지정해야 합니다. <!-- 다만 `arc_intersect`는 항상 모든 인자를 지정해야 합니다. -->
 {% endhint %}
 
 

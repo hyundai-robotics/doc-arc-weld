@@ -35,7 +35,7 @@
   * [2.12 posi_calib](2_Command/12_posical.md)
   * [2.13 touchsen](2_Command/13_touchsen.md)
   * [2.14 stitch](2_Command/14_stitch.md)
-  * [2.15 arc_intersect](2_Command/15_arc_intersect.md)
+  <!-- * [2.15 arc_intersect](2_Command/15_arc_intersect.md) -->
   <!-- * [2.15 calshift](2_Command/15_calcshift.md) -->
 * [3. 명령어 속성창](3_Property/README.md)
   * [3.1 개요](3_Property/1_overall.md)
@@ -117,5 +117,6 @@
     * [8.7.2 TCP-센서 캘리브레이션](8_Application_function/7_LPS/2_calibration.md)
     * [8.7.3 lps 기능 사용](8_Application_function/7_LPS/3_function.md)
   * [8.8 Arcsection 기능](8_Application_function/8_Arc_section/README.md)
+  * [8.9 마스터 모드/양산 모드](8_Application_function/9_Master_mode/README.md)
   
 
