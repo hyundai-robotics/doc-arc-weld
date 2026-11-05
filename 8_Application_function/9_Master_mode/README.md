@@ -26,12 +26,13 @@ Only the position components X, Y, and Z are calculated, while the rotation comp
 | `touchsen` | Touch sensing | Registers the sensed pose as the master pose or calculates the shift amount |
 | `lvs` | `seam_find`, `seam_find_p`, `intersection`, `step_search` | Registers the detected or calculated pose as the master pose or calculates the shift amount |
 | `lps` | `spot`, `stepp`, `scan` | Registers the detected pose as the master pose or calculates the shift amount |
-| `arc_intersect` | Intersection calculation using three or four reference poses | Registers the calculated pose as the master pose or calculates the shift amount |
+<!-- | `arc_intersect` | Intersection calculation using three or four reference poses | Registers the calculated pose as the master pose or calculates the shift amount | -->
 
 * Note  
 `lvs search` and `lvs check_seam` require the `sp` parameter, but do not support the `mp`/`ms` processing described above. The `sp` parameter is optional for `lvs track`.  
 
-For detailed usage of each command, refer to [2.7 lvs](../../2_Command/7_lvson.md), [2.8 lps](../../2_Command/8_lps.md), [2.13 touchsen](../../2_Command/13_touchsen.md), and [2.15 arc_intersect](../../2_Command/15_arc_intersect.md).  
+For detailed usage of each command, refer to [2.7 lvs](../../2_Command/7_lvson.md), [2.8 lps](../../2_Command/8_lps.md), [2.13 touchsen](../../2_Command/13_touchsen.md).
+<!-- , and [2.15 arc_intersect](../../2_Command/15_arc_intersect.md).   -->
 
 
 ### (3) Common Parameters and Variable Creation
@@ -49,7 +50,7 @@ In production mode, the variables specified by the `mp` and `ms` parameters must
 
 
 {% hint style="warning" %}
-In general, only the `sp` parameter is used. However, in master mode, both `mp` and `ms` parameters must be specified. For `arc_intersect`, all parameters must always be specified.
+In general, only the `sp` parameter is used. However, in master mode, both `mp` and `ms` parameters must be specified. <!-- For `arc_intersect`, all parameters must always be specified. -->
 {% endhint %}
 
 

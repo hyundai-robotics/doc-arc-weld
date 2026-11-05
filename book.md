@@ -1223,50 +1223,6 @@ stitch off
 ### Details  
   Refer to [[8.6 STITCH Function]](../8_Application_function/6_Stitch/README.md)
 
-[__SOURCE](2_Command/15_arc_intersect.md)
-# 2.15 arc_intersect
-
-
-{% hint style="info" %}
-This feature is supported in versions 70.04-00 and later.
-{% endhint %}
-
-
-### Description  
-
-The ```arc_intersect``` command is used to apply Master Mode and Production Mode in arc applications. Its usage is identical to that of the existing intersection function. Parameter values are processed according to whether Master Mode is enabled or disabled.
-<br/>  
-
-
-### Syntax  
-
-```py
-  arc_intersect sp=<Pose to save>,crd=<Coordinate System>,mp=<Master Pose to save in Master Mode>,ms=<Shift Variable Calculated in Production Mode>,p1=<Line Reference Pose1>,p2=<Line Reference Pose2>,p3=<Line Reference Pose3>
-  arc_intersect sp=<Pose to save>,crd=<Coordinate System>,mp=<Master Pose to save in Master Mode>,ms=<Shift Variable Calculated in Production Mode>,p1=<Line Reference Pose1>,p2=<Line Reference Pose2>,p3=<Line Reference Pose3>,p4=<Line Reference Pose4>
-```  
-
-
-### Parameter
-
-| Item | Meaning | Remarks |
-| --- | --- | --- |
-| sp | Pose variable used to store the result of the command execution. | Pose Variable |
-| crd | Coordinate system used to calculate the shift variable ("base", "robot", "tool") | String |
-| mp | Stores the same value as sp in Master Mode. Used to calculate ms in Production Mode. | Pose Variable |
-| ms | Shift variable used in Production Mode. Represents the difference between mp and sp, calculated in the specified coordinate system. | Shift Variable |
-| p1 ~ p4 | Reference poses used to define a line. Refer to the link below for details on defining a line using three or four points. [HRScript intersection](https://hrbook-hrc.web.app/#/view/doc-hrscript/en/10-etc/2-func/3-intersection?cont_model=${cont_model}) | Pose Variable |  
-
-
-### Example
-```python
-  lvs seam_find, cnd=1, seam=10, sp=p1  # Store the detected point in p1
-  lvs seam_find, cnd=1, seam=10, sp=p2  # Store the detected point in p2
-  lvs seam_find, cnd=1, seam=10, sp=p3  # Store the detected point in p3
-
-  arc_intersect sp=p10,crd="robot",mp=mp10,ms=ms10,p1=p1,p2=p2,p3=p3
-  # Store the point calculated from p1 to p3 in p10, and update mp10 and ms10 according to the Master Mode status.
-```  
-  
 [__SOURCE](3_Property/README.md)
 # 3. Command Property
 [__SOURCE](3_Property/1_overall.md)
@@ -2747,7 +2703,7 @@ You can set conditions such as sensing distance, retreat distance, proceed dista
 ```python
     - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], pose=<결과포즈 저장변수>, gap=<butt gap 변수>
     - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, pose=<결과포즈 저장변수>, gap=<butt gap 변수>
-    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, mpose=<결과포즈 저장변수>, mshift=<계산된 시프트 변수, gap=butt gap 변수>
+    - touchsen cnd=<조건번호>, crd=<좌표계>, dir=[센싱 방향1, 센싱 방향2, 센싱 방향3], rotation=<센싱 방향 각도>, mp=<결과포즈 저장변수>, ms=<계산된 시프트 변수, gap=butt gap 변수>
 ```   -->
 
 <!-- - **파라미터**
@@ -2886,15 +2842,14 @@ Angle specification rotates the entire search direction by the specified angle a
 </center>
 
 
-### (5) Master/Execution Mode in Touch Sensing
+### (5) Master Mode/Production Mode in Touch Sensing
 
 The master mode can be turned On/Off using the user key.
 When touch sensing is performed with the master mode On, the master pose can be saved and used as a reference for teaching.  
 During actual operation, the master mode is turned Off, and touch sensing is performed. In this case, the system automatically calculates the shift amount of the workpiece relative to the master pose based on the current sensing pose.  
 
-In master mode, the sensed pose is saved in the variable specified by the `mpose` input parameter of the touch sensing command.
-In execution mode (when master mode is OFF), the current sensed pose is compared with the pose sensed in master mode, and the shift amount is calculated.
-The shift amount is then recorded in the variable specified by the `mshift` input parameter.
+In master mode, the sensed pose is saved in the variable specified by the user through the `mp` input parameter of the touch sensing command.  
+In production mode (when master mode is OFF), the currently sensed pose is compared with the pose sensed in master mode to calculate the shift amount. The calculated shift amount is then stored in the variable specified by the user through the `ms` input parameter.  
 
 
 - Examples of Command
@@ -2902,10 +2857,10 @@ The shift amount is then recorded in the variable specified by the `mshift` inpu
    var P10=cpo()
    var sft_var1=Shift(0,0,0,0,0,0,"base")
    ....
-   touchsen cnd=1, crd="robot", dir=["+x","-z"], mpose=P10, mshift=sft_var1
+   touchsen cnd=1, crd="robot", dir=["+x","-z"], mp=P10, ms=sft_var1
 ```  
 
-- For example, in master mode, the sensed pose is saved in the `P10` pose variable, and in execution mode, when sensing is performed, the shift amount between the master mode pose and the current sensed pose is automatically calculated and stored in the sft_var1 variable.
+- For example, in master mode, the sensed pose is saved in the `P10` pose variable, and in production mode, when sensing is performed, the shift amount between the master mode pose and the current sensed pose is automatically calculated and stored in the sft_var1 variable.
 
 [__SOURCE](8_Application_function/3_Arc_sensing/README.md)
 # 8.3 Arc Sensing and Multi Pass
@@ -5119,3 +5074,109 @@ The operation is as shown in the following figure.
 When arcsection is finished, the element retains the value of e until arcoff is executed.
 
 If you run arcsection on the same element again before arcsection finishes, the value changes to the new element's s value and is linearly interpolated.
+
+[__SOURCE](8_Application_function/9_Master_mode/README.md)
+# 8.9 Master Mode/Production Mode
+
+### (1) Overview  
+
+The Master/Production mode feature saves the pose obtained from a reference workpiece and compares it with the pose obtained from a production workpiece to calculate the positional difference as a shift amount.  
+
+* **Master Mode (On)**: Senses the reference workpiece and registers the master pose.
+* **Production Mode (Master Mode Off)**: Senses the production workpiece and calculates the shift amount relative to the master pose.  
+
+Master mode can be turned On/Off through **[User Key] - [Master Mode]**.  
+
+| Category | Master Mode (On) | Production Mode (Master Mode Off) |
+| :--- | :--- | :--- |
+| Sensed pose `sp` | Stores the current sensing or calculation result | Stores the current sensing or calculation result |
+| Master pose `mp` | Stores the same result as `sp` to update the reference position | References the registered reference position without updating it |
+| Master shift `ms` | Initializes the shift amount to `0` | Stores the positional difference between the current result and the master pose |
+
+The shift amount is calculated in the direction of **current sensed position - master position** in the specified calculation coordinate system.
+Only the position components X, Y, and Z are calculated, while the rotation components Rx, Ry, and Rz are set to 0. Therefore, this function alone does not compensate for rotational errors of the workpiece.  
+
+
+### (2) Applicable Commands  
+
+| Command | Applicable Function | Result |
+| :--- | :--- | :--- |
+| `touchsen` | Touch sensing | Registers the sensed pose as the master pose or calculates the shift amount |
+| `lvs` | `seam_find`, `seam_find_p`, `intersection`, `step_search` | Registers the detected or calculated pose as the master pose or calculates the shift amount |
+| `lps` | `spot`, `stepp`, `scan` | Registers the detected pose as the master pose or calculates the shift amount |
+<!-- | `arc_intersect` | Intersection calculation using three or four reference poses | Registers the calculated pose as the master pose or calculates the shift amount | -->
+
+* Note  
+`lvs search` and `lvs check_seam` require the `sp` parameter, but do not support the `mp`/`ms` processing described above. The `sp` parameter is optional for `lvs track`.  
+
+For detailed usage of each command, refer to [2.7 lvs](../../2_Command/7_lvson.md), [2.8 lps](../../2_Command/8_lps.md), [2.13 touchsen](../../2_Command/13_touchsen.md).
+<!-- , and [2.15 arc_intersect](../../2_Command/15_arc_intersect.md).   -->
+
+
+### (3) Common Parameters and Variable Creation
+
+| Parameter | Variable Type | Description | If the Specified Variable is Not Defined |
+| :--- | :--- | :--- | :--- |
+| `sp` | Pose | Stores the current sensing or calculation result | Automatically created as a local pose variable |
+| `mp` | Pose | Stores and references the master pose | Automatically created as a global pose variable only in master mode |
+| `ms` | Shift | Stores the shift amount relative to the master pose | Automatically created as a global shift variable only in master mode |
+
+Automatic variable creation is performed **only when a valid variable name is specified in the parameter but the variable has not yet been defined**. Omitting the parameter does not automatically assign a variable name or create a variable.
+If the specified variable is already defined, the existing variable is used. Therefore, make sure that the variable type is appropriate (pose or shift).  
+
+In production mode, the variables specified by the `mp` and `ms` parameters must already be defined. Also, verify that the master pose has been properly registered. Simply declaring the variables does not replace master teaching.  
+
+
+{% hint style="warning" %}
+In general, only the `sp` parameter is used. However, in master mode, both `mp` and `ms` parameters must be specified. <!-- For `arc_intersect`, all parameters must always be specified. -->
+{% endhint %}
+
+
+### (4) Operating Procedure
+
+#### 1. Master Teaching
+
+1. Install the reference workpiece and check the sensor settings, sensing conditions, and calculation coordinate system.
+2. Teach each sensing start position and verify the sensing path.
+3. Set **[User Key] - [Master Mode]** to On.
+4. Execute the sensing commands with the `sp`, `mp`, and `ms` parameters specified.
+5. Verify that the reference pose is stored in `mp` for each sensing point and that `ms` is initialized to 0.
+6. After completing master registration, set master mode to Off.  
+
+#### 2. Production Operation
+
+1. Install the production workpiece and verify that master mode is Off.
+2. Execute the sensing commands using the `mp` and `ms` variables corresponding to the same sensing points used during master teaching.
+3. The current sensing result is stored in `sp`, and the shift amount relative to the master pose is calculated and stored in `ms`.
+4. Verify the calculated shift amount and coordinate system before applying the shift to correct the work path.  
+
+{% hint style="warning" %}
+* If master mode is turned On during production, the master pose will be updated with the sensing result of the current workpiece. Keep master mode Off unless you intend to register a new reference position.
+* Use separate master pose and shift variables for different sensing points. Reusing the same variable will overwrite the results from previous sensing points.
+* If the sensing conditions, tool, or coordinate system have changed, verify the reference position and calculated shift amount before using the existing master pose.
+{% endhint %}
+
+
+### (5) Examples
+
+The following examples demonstrate how to specify the command parameters. Each command assumes that the corresponding sensor and sensing conditions have been configured and that the robot has reached the sensing start position. Before executing the commands, set the conditions, direction, travel distance, and speed appropriate for the actual workpiece.  
+
+```python
+    # Touch sensing
+    touchsen cnd=1,crd="robot",dir="+y",sp=p10,mp=mp10,ms=ms10
+
+    # Master registration/shift calculation using LVS sensing results
+    lvs seam_find,cnd=1,seam=10,sp=p10,mp=mp10,ms=ms10
+
+    # Master registration/shift calculation using LPS sensing results
+    lps scan,cnd=1,Tx=50,spd=10,sp=p20,mp=mp20,ms=ms20
+```  
+
+* To obtain only the sensing pose with Master Mode Off, **omit both `mp` and `ms`**.  
+
+
+### (6) Related Information
+
+* [8.2 Touch Sensing](../2_Touch_sensing/README.md)
+* [8.5.5 LVS Master Mode Func.](../5_LVS_tracking/5_lvs_master_mode.md)
+* [8.7.3 Using the LPS Function](../7_LPS/3_function.md)
